@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Helltrack">
+<meta name="description" content="UCI downhill and enduro race content. No fluff.">
+<title>Helltrack</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --acid: #d4f500;
+    --acid-dim: rgba(212, 245, 0, 0.08);
+    --bg: #111111;
+    --bg-card: #191919;
+    --bg-card-hover: #1e1e1e;
+    --border: #222222;
+    --border-mid: #2a2a2a;
+    --text-primary: #e8e8e0;
+    --text-secondary: #888880;
+    --text-muted: #444440;
+    --pb-orange: #e05a1e;
+    --pb-orange-dim: rgba(224, 90, 30, 0.1);
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  #header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: calc(var(--safe-top) + 14px) 16px 0;
+  }
+
+  #header-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  #logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--acid);
+    line-height: 1;
+  }
+
+  #logo-sub {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 3px;
+    font-weight: 400;
+  }
+
+  #refresh-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  #refresh-btn:hover { color: var(--acid); }
+  #refresh-btn.spinning { animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Tabs ── */
+  #tabs {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #tabs::-webkit-scrollbar { display: none; }
+
+  .tab {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 14px 10px;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tab.active {
+    color: var(--acid);
+    border-bottom-color: var(--acid);
+  }
+  .tab:hover:not(.active) { color: var(--text-secondary); }
+
+  /* ── Feed ── */
+  #feed {
+    padding: 0 0 calc(var(--safe-bottom) + 24px);
+  }
+
+  /* ── Section ── */
+  .section {
+    padding: 20px 16px 4px;
+    animation: fadeUp 0.3s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── Hero card ── */
+  .card-hero {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    display: block;
+  }
+  .card-hero:hover { border-color: var(--border-mid); background: var(--bg-card-hover); }
+  .card-hero:active { opacity: 0.85; }
+
+  .hero-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s;
+  }
+  .hero-thumb img.loading { opacity: 0; }
+  .hero-thumb img.loaded { opacity: 1; }
+
+  .thumb-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161616;
+  }
+  .thumb-placeholder.hidden { display: none; }
+
+  .play-btn-large {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--acid-dim);
+    border: 1.5px solid rgba(212, 245, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .play-icon {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 14px;
+    border-color: transparent transparent transparent var(--acid);
+    margin-left: 3px;
+  }
+  .article-icon {
+    font-size: 28px;
+    color: var(--pb-orange);
+    opacity: 0.6;
+    line-height: 1;
+  }
+
+  .source-pill {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 7px;
+    border-radius: 3px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+  }
+  .source-pill.youtube { color: var(--acid); }
+  .source-pill.pinkbike { color: var(--pb-orange); }
+
+  .hero-body { padding: 10px 12px 13px; }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .meta-source { font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.08em; }
+  .meta-source.youtube { color: rgba(212, 245, 0, 0.5); }
+  .meta-source.pinkbike { color: rgba(224, 90, 30, 0.6); }
+  .meta-dot { width: 2px; height: 2px; border-radius: 50%; background: var(--text-muted); }
+
+  /* ── Compact card ── */
+  .card-row {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+  }
+  .card-row:hover { border-color: var(--border-mid); background: var(--bg-card-hover); }
+  .card-row:active { opacity: 0.85; }
+
+  .row-thumb {
+    width: 88px;
+    min-width: 88px;
+    height: 66px;
+    background: #161616;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .row-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s;
+  }
+  .row-thumb img.loading { opacity: 0; }
+  .row-thumb img.loaded { opacity: 1; }
+
+  .play-btn-small {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--acid-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+  .play-icon-sm {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 9px;
+    border-color: transparent transparent transparent var(--acid);
+    margin-left: 2px;
+  }
+
+  .row-body {
+    padding: 8px 11px;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .row-title {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ── Empty + loading states ── */
+  #loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+    gap: 16px;
+  }
+  .loader-ring {
+    width: 36px;
+    height: 36px;
+    border: 2px solid var(--border-mid);
+    border-top-color: var(--acid);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  .loader-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  #error-state {
+    display: none;
+    padding: 60px 24px;
+    text-align: center;
+  }
+  #error-state p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  #retry-btn {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--acid);
+    background: var(--acid-dim);
+    border: 1px solid rgba(212, 245, 0, 0.2);
+    border-radius: 6px;
+    padding: 8px 20px;
+    cursor: pointer;
+  }
+
+  /* ── Updated timestamp ── */
+  #updated {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 16px;
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <div id="header-top">
+    <div>
+      <div id="logo">Helltrack</div>
+      <div id="logo-sub">UCI Downhill &amp; Enduro</div>
+    </div>
+    <button id="refresh-btn" aria-label="Refresh feed" onclick="loadFeed(true)">↻</button>
+  </div>
+  <div id="tabs"></div>
+</div>
+
+<div id="feed">
+  <div id="loading">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Loading race feed</div>
+  </div>
+  <div id="error-state">
+    <p>Failed to load feed</p>
+    <button id="retry-btn" onclick="loadFeed(true)">Retry</button>
+  </div>
+  <div id="content"></div>
+  <div id="updated"></div>
+</div>
+
+<script>
+const CACHE_URL = 'cache.json'
+const CATEGORY_ICONS = {
+  'race-runs': '🏁',
+  'results':   '🏆',
+  'films':     '🎬',
+  'paddock':   '🎙️',
+  'news':      '📰',
+}
+const CATEGORY_LABELS = {
+  'race-runs': 'Race runs',
+  'results':   'Results',
+  'films':     'Films',
+  'paddock':   'Paddock',
+  'news':      'News',
+}
+
+let data = null
+let activeTab = 'all'
+
+function timeAgo(dateStr) {
+  if (!dateStr) return ''
+  const diff = Date.now() - new Date(dateStr).getTime()
+  const mins = Math.floor(diff / 60000)
+  if (mins < 60) return mins + 'm ago'
+  const hrs = Math.floor(mins / 60)
+  if (hrs < 24) return hrs + 'h ago'
+  const days = Math.floor(hrs / 24)
+  return days + 'd ago'
+}
+
+function sourceClass(item) {
+  return item.source === 'pinkbike' ? 'pinkbike' : 'youtube'
+}
+
+function sourceName(item) {
+  if (item.source === 'pinkbike') return 'Pinkbike'
+  return item.channelName || 'YouTube'
+}
+
+function lazyImg(src, cls) {
+  if (!src) return ''
+  return `<img src="${src}" class="${cls} loading" loading="lazy" onerror="this.parentElement.querySelector('.thumb-placeholder')?.classList.remove('hidden'); this.style.display='none'" onload="this.classList.remove('loading'); this.classList.add('loaded'); this.parentElement.querySelector('.thumb-placeholder')?.classList.add('hidden')">`
+}
+
+function renderHeroCard(item) {
+  const sc = sourceClass(item)
+  const isArticle = item.type === 'article'
+  const url = item.url || '#'
+  return `
+<a class="card-hero" href="${url}" target="_blank" rel="noopener">
+  <div class="hero-thumb">
+    ${lazyImg(item.thumbnail, 'hero-img')}
+    <div class="thumb-placeholder${item.thumbnail ? '' : ''}">
+      ${isArticle
+        ? `<div class="article-icon">≡</div>`
+        : `<div class="play-btn-large"><div class="play-icon"></div></div>`
+      }
+    </div>
+    <div class="source-pill ${sc}">${sourceName(item)}</div>
+  </div>
+  <div class="hero-body">
+    <div class="card-title">${item.title}</div>
+    <div class="card-meta">
+      <span class="meta-source ${sc}">${sourceName(item)}</span>
+      <div class="meta-dot"></div>
+      <span>${timeAgo(item.publishedAt)}</span>
+    </div>
+  </div>
+</a>`
+}
+
+function renderRowCard(item) {
+  const sc = sourceClass(item)
+  const isArticle = item.type === 'article'
+  const url = item.url || '#'
+  return `
+<a class="card-row" href="${url}" target="_blank" rel="noopener">
+  <div class="row-thumb">
+    ${lazyImg(item.thumbnail, 'row-img')}
+    ${isArticle
+      ? `<div class="article-icon" style="font-size:20px">≡</div>`
+      : `<div class="play-btn-small"><div class="play-icon-sm"></div></div>`
+    }
+  </div>
+  <div class="row-body">
+    <div class="row-title">${item.title}</div>
+    <div class="card-meta" style="margin-top:4px">
+      <span class="meta-source ${sc}">${sourceName(item)}</span>
+      <div class="meta-dot"></div>
+      <span>${timeAgo(item.publishedAt)}</span>
+    </div>
+  </div>
+</a>`
+}
+
+function renderCategory(catId, cat, heroFirst = true) {
+  if (!cat.items || !cat.items.length) return ''
+  const label = CATEGORY_LABELS[catId] || cat.label
+  let html = `<div class="section"><div class="section-label">${label}</div>`
+  cat.items.forEach((item, i) => {
+    html += (i === 0 && heroFirst)
+      ? renderHeroCard(item)
+      : renderRowCard(item)
+  })
+  html += '</div>'
+  return html
+}
+
+function renderFeed() {
+  if (!data) return
+  const content = document.getElementById('content')
+  const cats = data.categories || {}
+
+  if (activeTab === 'all') {
+    content.innerHTML = Object.entries(cats)
+      .map(([id, cat]) => renderCategory(id, cat))
+      .join('')
+  } else {
+    const cat = cats[activeTab]
+    if (cat) {
+      content.innerHTML = renderCategory(activeTab, cat)
+    } else {
+      content.innerHTML = `<div style="padding:60px 24px; text-align:center">
+        <p style="font-family:'Barlow Condensed'; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted)">No content in this category</p>
+      </div>`
+    }
+  }
+
+  if (data.builtAt) {
+    const el = document.getElementById('updated')
+    el.textContent = 'Updated ' + timeAgo(data.builtAt)
+  }
+}
+
+function buildTabs() {
+  const tabs = document.getElementById('tabs')
+  const cats = data?.categories || {}
+  const allTabs = [
+    { id: 'all', label: 'All' },
+    ...Object.keys(cats).map(id => ({ id, label: CATEGORY_LABELS[id] || id }))
+  ]
+
+  tabs.innerHTML = allTabs.map(t => `
+    <div class="tab${t.id === activeTab ? ' active' : ''}" data-tab="${t.id}">${t.label}</div>
+  `).join('')
+
+  tabs.querySelectorAll('.tab').forEach(el => {
+    el.addEventListener('click', () => {
+      activeTab = el.dataset.tab
+      tabs.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
+      el.classList.add('active')
+      renderFeed()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    })
+  })
+}
+
+async function loadFeed(force = false) {
+  const btn = document.getElementById('refresh-btn')
+  btn.classList.add('spinning')
+
+  try {
+    const url = force
+      ? CACHE_URL + '?t=' + Date.now()
+      : CACHE_URL
+
+    const res = await fetch(url)
+    if (!res.ok) throw new Error('HTTP ' + res.status)
+    data = await res.json()
+
+    document.getElementById('loading').style.display = 'none'
+    document.getElementById('error-state').style.display = 'none'
+
+    buildTabs()
+    renderFeed()
+  } catch (err) {
+    console.error('Feed load failed:', err)
+    document.getElementById('loading').style.display = 'none'
+    document.getElementById('error-state').style.display = 'block'
+  } finally {
+    btn.classList.remove('spinning')
+  }
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js').catch(console.error)
+}
+
+loadFeed()
+</script>
+</body>
+</html>
