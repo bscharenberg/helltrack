@@ -600,6 +600,21 @@ html, body {
   font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
   color:var(--text-muted);
 }
+
+.rs-session-toggle {
+  display:flex; margin:8px 16px 0;
+  background:var(--bg-card); border:0.5px solid var(--border);
+  border-radius:8px; overflow:hidden;
+}
+.rs-session-btn {
+  flex:1; padding:7px 4px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+  text-align:center; color:var(--text-muted); cursor:pointer;
+  transition: color 0.15s, background 0.15s;
+  -webkit-tap-highlight-color:transparent;
+}
+.rs-session-btn.active { background:var(--acid-dim); color:var(--acid); }
 </style>
 </head>
 <body>
@@ -634,6 +649,11 @@ html, body {
   <div class="rs-gender-toggle">
     <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
     <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
+  </div>
+  <div class="rs-session-toggle" id="rs-session-bar">
+    <div class="rs-session-btn active" data-session="finals" onclick="setSession('finals')">Finals</div>
+    <div class="rs-session-btn" data-session="q1" onclick="setSession('q1')">Qual 1</div>
+    <div class="rs-session-btn" data-session="q2" onclick="setSession('q2')">Qual 2</div>
   </div>
   <div id="rs-content"></div>
 </div>
@@ -687,7 +707,7 @@ const CACHE_URL = 'public/cache.json'
 
 const CAT_LABELS = {
   'race-runs': 'Race runs',
-  'results':   'Results',
+  'results':   'Analysis',
   'films':     'Films',
   'paddock':   'Paddock',
   'news':      'News',
@@ -984,11 +1004,11 @@ function dismissInstall() {
 
 const RESULTS_URL = 'public/results.json'
 let resultsData   = null
-let activeRound   = 0   // index into rounds array
+let activeRound   = 0
 let activeGender  = 'men'
+let activeSession = 'finals'
 
 function formatName(raw) {
-  // "VERMETTE Asa" → "Vermette Asa"
   return raw.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ')
 }
 
@@ -1004,6 +1024,7 @@ function buildRoundBar() {
 function setRound(idx) {
   activeRound = idx
   buildRoundBar()
+  updateSessionBar()
   renderResults()
 }
 
@@ -1011,7 +1032,37 @@ function setGender(g) {
   activeGender = g
   document.getElementById('rs-men-btn').classList.toggle('active', g === 'men')
   document.getElementById('rs-women-btn').classList.toggle('active', g === 'women')
+  updateSessionBar()
   renderResults()
+}
+
+function setSession(s) {
+  activeSession = s
+  document.querySelectorAll('.rs-session-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.session === s)
+  })
+  renderResults()
+}
+
+function sessionKey() {
+  const suffix = activeGender === 'men' ? 'men' : 'women'
+  if (activeSession === 'finals') return `finals-${suffix}`
+  if (activeSession === 'q1')     return `qualifying-1-${suffix}`
+  if (activeSession === 'q2')     return `qualifying-2-${suffix}`
+  return `finals-${suffix}`
+}
+
+function updateSessionBar() {
+  // Show/hide Q1/Q2 pills based on whether data exists for this round
+  const round   = resultsData?.rounds?.[activeRound]
+  const suffix  = activeGender === 'men' ? 'men' : 'women'
+  const hasQ1   = !!(round?.sessions?.[`qualifying-1-${suffix}`]?.length)
+  const hasQ2   = !!(round?.sessions?.[`qualifying-2-${suffix}`]?.length)
+  const bar     = document.getElementById('rs-session-bar')
+  if (bar) {
+    bar.querySelector('[data-session="q1"]').style.display = hasQ1 ? '' : 'none'
+    bar.querySelector('[data-session="q2"]').style.display = hasQ2 ? '' : 'none'
+  }
 }
 
 function renderResults() {
@@ -1022,23 +1073,23 @@ function renderResults() {
     return
   }
 
-  const round    = rounds[activeRound]
-  const finalsKey = activeGender === 'men' ? 'finals-men' : 'finals-women'
-  const finals   = round?.sessions?.[finalsKey] || []
+  const round   = rounds[activeRound]
+  const key     = sessionKey()
+  const session = round?.sessions?.[key] || []
+  const isFinals = activeSession === 'finals'
 
-  if (!finals.length) {
-    el.innerHTML = `<div class="rs-empty">Finals results not yet available</div>`
+  if (!session.length) {
+    el.innerHTML = `<div class="rs-empty">Results not yet available</div>`
     return
   }
 
-  const top5 = finals.slice(0, 5)
-  const rest  = finals.slice(5)
+  const top5 = isFinals ? session.slice(0, 5) : session.slice(0, 3)
+  const rest  = isFinals ? session.slice(5)   : session.slice(3)
 
-  // Top 5 with visual weight
   const top5Html = top5.map(r => {
-    const posClass = `pos-${r.rank}`
+    const posClass = isFinals ? `pos-${r.rank}` : `pos-${r.rank <= 3 ? r.rank : 4}`
     const name     = formatName(r.name)
-    const gap      = r.rank === 1 ? 'Winner' : r.gap || ''
+    const gap      = r.rank === 1 ? 'Fastest' : r.gap || ''
     return `<div class="rs-hero-row ${posClass}">
   <div class="rs-pos-num">${r.rank}</div>
   <div class="rs-rider-info">
@@ -1052,7 +1103,6 @@ function renderResults() {
 </div>`
   }).join('')
 
-  // Full results table from 6th onward
   const tableRows = rest.map(r => {
     const name = formatName(r.name)
     return `<tr>
@@ -1065,11 +1115,14 @@ function renderResults() {
 </tr>`
   }).join('')
 
+  const sessionLabel = activeSession === 'finals' ? 'Finals'
+    : activeSession === 'q1' ? 'Qualifying 1'
+    : 'Qualifying 2'
   const venueDate = new Date(round.date).toLocaleDateString('en-US', { month:'short', day:'numeric' })
 
   el.innerHTML = `
 <div class="rs-section">
-  <div class="rs-section-label">${round.venue} · ${venueDate} · Finals</div>
+  <div class="rs-section-label">${round.venue} · ${venueDate} · ${sessionLabel}</div>
   <div class="rs-top5">${top5Html}</div>
   ${rest.length ? `
   <div class="rs-section-label">Full results</div>
@@ -1084,9 +1137,9 @@ async function loadResults() {
     const res  = await fetch(RESULTS_URL + '?t=' + Date.now())
     if (!res.ok) throw new Error('HTTP ' + res.status)
     resultsData = await res.json()
-    // Default to most recent round
     activeRound = Math.max(0, (resultsData.rounds?.length || 1) - 1)
     buildRoundBar()
+    updateSessionBar()
     renderResults()
   } catch(err) {
     console.error('Results load failed:', err)
