@@ -1,5 +1,7 @@
 # Helltrack
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 > *"Ok dudes, let's walk this sucker."* — Cru Jones, RAD (1986)
 
 A mobile-first PWA that aggregates UCI downhill and enduro race content into one clean, bookmarkable feed. No algorithm. No notifications. No unread count. Just racing.
@@ -115,7 +117,7 @@ YouTube's free tier allows 10,000 API units/day. Helltrack uses the uploads play
 ## Running locally
 
 ```bash
-git clone https://github.com/yourusername/helltrack
+git clone https://github.com/bscharenberg/helltrack
 cd helltrack
 npm install
 
@@ -139,3 +141,9 @@ Built for bike geeks who want the racing without the noise.
 ---
 
 Built by a saddle donkey, for saddle donkeys.
+
+---
+
+*Helltrack is an independent project and is not affiliated with the film Rad, its cast, or any related properties. The name is used in tribute to the culture of the sport.*
+
+*MIT Licensed. © 2026 bscharenberg.*
