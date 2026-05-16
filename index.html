@@ -486,6 +486,16 @@ html, body {
   <div id="updated"></div>
 </div>
 
+<!-- Install banner -->
+<div id="install-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:300; padding:12px 16px calc(var(--safe-bottom) + 12px); background:#191919; border-top:0.5px solid #2a2a2a; align-items:center; gap:12px;">
+  <div style="flex:1">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-primary); margin-bottom:2px">Add to home screen</div>
+    <div style="font-size:11px; color:var(--text-muted)">One tap. Always fresh. No app store.</div>
+  </div>
+  <button id="install-btn" style="font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; background:var(--acid); color:#111; border:none; border-radius:6px; padding:9px 16px; cursor:pointer; white-space:nowrap;">Install</button>
+  <button onclick="dismissInstall()" style="background:none; border:none; color:var(--text-muted); font-size:20px; cursor:pointer; padding:4px; line-height:1;">×</button>
+</div>
+
 <!-- Bottom sheet -->
 <div id="sheet-overlay" onclick="closeSheet()"></div>
 <div id="sheet" role="dialog" aria-modal="true">
@@ -771,6 +781,37 @@ async function loadFeed(force=false) {
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js').catch(console.error)
+}
+
+
+// ── Install banner ──
+let deferredPrompt = null
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault()
+  deferredPrompt = e
+  if (!localStorage.getItem('helltrack-install-dismissed')) {
+    const banner = document.getElementById('install-banner')
+    banner.style.display = 'flex'
+    // push feed up so banner doesn't cover last card
+    document.getElementById('feed').style.paddingBottom = 'calc(var(--safe-bottom) + 90px)'
+  }
+})
+
+document.getElementById('install-btn').addEventListener('click', async () => {
+  if (!deferredPrompt) return
+  deferredPrompt.prompt()
+  const { outcome } = await deferredPrompt.userChoice
+  deferredPrompt = null
+  dismissInstall()
+})
+
+window.addEventListener('appinstalled', () => { dismissInstall() })
+
+function dismissInstall() {
+  document.getElementById('install-banner').style.display = 'none'
+  document.getElementById('feed').style.paddingBottom = ''
+  localStorage.setItem('helltrack-install-dismissed', '1')
 }
 
 loadFeed()
