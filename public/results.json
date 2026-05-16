@@ -1,0 +1,3055 @@
+{
+  "season": 2026,
+  "rounds": [
+    {
+      "venue": "Mona YongPyong",
+      "slug": "race-of-south-korea-2026",
+      "date": "2026-05-01",
+      "round": 1,
+      "fetchedAt": "2026-05-16T19:32:10.776Z",
+      "sessions": {
+        "qualifying-1-women": [
+          {
+            "rank": 1,
+            "bib": 24,
+            "name": "HARNDEN Harriet",
+            "nat": "GBR",
+            "time": "3:23.348",
+            "gap": "+0.000",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 2,
+            "bib": 22,
+            "name": "ROA SANCHEZ Valentina",
+            "nat": "COL",
+            "time": "3:24.246",
+            "gap": "+0.898",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 3,
+            "bib": 9,
+            "name": "SCARSI Gloria",
+            "nat": "ITA",
+            "time": "3:24.409",
+            "gap": "+1.061",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 4,
+            "bib": 7,
+            "name": "NICOLE Myriam",
+            "nat": "FRA",
+            "time": "3:27.583",
+            "gap": "+4.235",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 5,
+            "bib": 8,
+            "name": "BAUMANN Lisa",
+            "nat": "SUI",
+            "time": "3:28.984",
+            "gap": "+5.636",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 6,
+            "bib": 11,
+            "name": "HÖLL Valentina",
+            "nat": "AUT",
+            "time": "3:30.343",
+            "gap": "+6.995",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 7,
+            "bib": 12,
+            "name": "CABIROU Marine",
+            "nat": "FRA",
+            "time": "3:32.167",
+            "gap": "+8.819",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 8,
+            "bib": 2,
+            "name": "NEWKIRK Anna",
+            "nat": "USA",
+            "time": "3:32.976",
+            "gap": "+9.628",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 9,
+            "bib": 16,
+            "name": "HASTINGS Jenna",
+            "nat": "NZL",
+            "time": "3:33.381",
+            "gap": "+10.033",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 10,
+            "bib": 19,
+            "name": "WIDMANN Veronika",
+            "nat": "ITA",
+            "time": "3:33.451",
+            "gap": "+10.103",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 11,
+            "bib": 3,
+            "name": "EARNEST Sacha",
+            "nat": "NZL",
+            "time": "3:34.099",
+            "gap": "+10.751",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 12,
+            "bib": 17,
+            "name": "HEMSTREET Gracey",
+            "nat": "CAN",
+            "time": "3:34.240",
+            "gap": "+10.892",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 13,
+            "bib": 57,
+            "name": "SEAGRAVE Tahnee",
+            "nat": "GBR",
+            "time": "3:35.654",
+            "gap": "+12.306",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 14,
+            "bib": 20,
+            "name": "MELTON Matilda",
+            "nat": "USA",
+            "time": "3:37.036",
+            "gap": "+13.688",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 15,
+            "bib": 25,
+            "name": "RØNNING Frida Helena",
+            "nat": "NOR",
+            "time": "3:37.484",
+            "gap": "+14.136",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 16,
+            "bib": 10,
+            "name": "BOULADOU Lisa",
+            "nat": "FRA",
+            "time": "3:37.984",
+            "gap": "+14.636",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 17,
+            "bib": 23,
+            "name": "BIRCHALL Bellah",
+            "nat": "NZL",
+            "time": "3:41.755",
+            "gap": "+18.407",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 18,
+            "bib": 18,
+            "name": "HASTINGS Kate",
+            "nat": "NZL",
+            "time": "3:43.821",
+            "gap": "+20.473",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 19,
+            "bib": 5,
+            "name": "GALE Phoebe",
+            "nat": "GBR",
+            "time": "3:44.382",
+            "gap": "+21.034",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 20,
+            "bib": 6,
+            "name": "BLEWITT Jess",
+            "nat": "NZL",
+            "time": "3:45.837",
+            "gap": "+22.489",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 21,
+            "bib": 14,
+            "name": "MILLS Sacha",
+            "nat": "AUS",
+            "time": "3:46.830",
+            "gap": "+23.482",
+            "points": 3,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 22,
+            "bib": 26,
+            "name": "AABECH Nellie",
+            "nat": "NOR",
+            "time": "4:07.530",
+            "gap": "+44.182",
+            "points": 4,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 23,
+            "bib": 27,
+            "name": "SUEMASA Mio",
+            "nat": "JPN",
+            "time": "4:55.635",
+            "gap": null,
+            "points": 4,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 24,
+            "bib": 15,
+            "name": "JOHNSET Mille",
+            "nat": "NOR",
+            "time": "4:57.684",
+            "gap": null,
+            "points": 4,
+            "session": "qualifying-1-women"
+          },
+          {
+            "rank": 25,
+            "bib": 21,
+            "name": "HULSEBOSCH Eliana",
+            "nat": "NZL",
+            "time": "7:18.406",
+            "gap": null,
+            "points": 7,
+            "session": "qualifying-1-women"
+          }
+        ],
+        "qualifying-1-men": [
+          {
+            "rank": 1,
+            "bib": 27,
+            "name": "VERMETTE Asa",
+            "nat": "USA",
+            "time": "2:47.859",
+            "gap": "+0.000",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 2,
+            "bib": 4,
+            "name": "PIERRON Amaury",
+            "nat": "FRA",
+            "time": "2:49.151",
+            "gap": "+1.292",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 3,
+            "bib": 54,
+            "name": "MEDCALF Evan",
+            "nat": "USA",
+            "time": "2:50.142",
+            "gap": "+2.283",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 4,
+            "bib": 2,
+            "name": "VERGIER Loris",
+            "nat": "FRA",
+            "time": "2:50.292",
+            "gap": "+2.433",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 5,
+            "bib": 37,
+            "name": "PONTVIANNE Nathan",
+            "nat": "FRA",
+            "time": "2:50.403",
+            "gap": "+2.544",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 6,
+            "bib": 29,
+            "name": "BRUNI Loic",
+            "nat": "FRA",
+            "time": "2:50.535",
+            "gap": "+2.676",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 7,
+            "bib": 25,
+            "name": "MAES Martin",
+            "nat": "BEL",
+            "time": "2:50.631",
+            "gap": "+2.772",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 8,
+            "bib": 6,
+            "name": "GOLDSTONE Jackson",
+            "nat": "CAN",
+            "time": "2:51.012",
+            "gap": "+3.153",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 9,
+            "bib": 9,
+            "name": "COULANGES Benoit",
+            "nat": "FRA",
+            "time": "2:51.270",
+            "gap": "+3.411",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 10,
+            "bib": 41,
+            "name": "ALRAN Till",
+            "nat": "FRA",
+            "time": "2:51.363",
+            "gap": "+3.504",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 11,
+            "bib": 17,
+            "name": "WILLIAMS Jordan",
+            "nat": "GBR",
+            "time": "2:51.898",
+            "gap": "+4.039",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 12,
+            "bib": 99,
+            "name": "ILES Finn",
+            "nat": "CAN",
+            "time": "2:52.534",
+            "gap": "+4.675",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 13,
+            "bib": 48,
+            "name": "DAVIS Oliver",
+            "nat": "AUS",
+            "time": "2:52.706",
+            "gap": "+4.847",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 14,
+            "bib": 66,
+            "name": "KOLB Andreas",
+            "nat": "AUT",
+            "time": "2:52.910",
+            "gap": "+5.051",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 15,
+            "bib": 10,
+            "name": "SHAW Luca",
+            "nat": "USA",
+            "time": "2:52.945",
+            "gap": "+5.086",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 16,
+            "bib": 11,
+            "name": "WILSON Reece",
+            "nat": "GBR",
+            "time": "2:53.320",
+            "gap": "+5.461",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 17,
+            "bib": 18,
+            "name": "MEIER-SMITH Luke",
+            "nat": "AUS",
+            "time": "2:53.696",
+            "gap": "+5.837",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 18,
+            "bib": 47,
+            "name": "ROGGE Antoine",
+            "nat": "FRA",
+            "time": "2:53.993",
+            "gap": "+6.134",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 19,
+            "bib": 36,
+            "name": "HATTON Charlie",
+            "nat": "GBR",
+            "time": "2:54.000",
+            "gap": "+6.141",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 20,
+            "bib": 20,
+            "name": "MAPLES Dylan",
+            "nat": "USA",
+            "time": "2:54.242",
+            "gap": "+6.383",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 21,
+            "bib": 30,
+            "name": "ALRAN Max",
+            "nat": "FRA",
+            "time": "2:54.405",
+            "gap": "+6.546",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 22,
+            "bib": 100,
+            "name": "O CALLAGHAN Oisin",
+            "nat": "IRL",
+            "time": "2:54.928",
+            "gap": "+7.069",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 23,
+            "bib": 21,
+            "name": "ZWAR Oliver",
+            "nat": "SWE",
+            "time": "2:55.030",
+            "gap": "+7.171",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 24,
+            "bib": 33,
+            "name": "PIERRON Antoine",
+            "nat": "FRA",
+            "time": "2:55.076",
+            "gap": "+7.217",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 25,
+            "bib": 38,
+            "name": "WAYMAN Luke",
+            "nat": "NZL",
+            "time": "2:55.097",
+            "gap": "+7.238",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 26,
+            "bib": 60,
+            "name": "KUHN Bodhi",
+            "nat": "CAN",
+            "time": "2:55.356",
+            "gap": "+7.497",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 27,
+            "bib": 62,
+            "name": "KERR Henry",
+            "nat": "IRL",
+            "time": "2:55.395",
+            "gap": "+7.536",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 28,
+            "bib": 53,
+            "name": "HOLGUIN VILLA Sebastian",
+            "nat": "COL",
+            "time": "2:55.881",
+            "gap": "+8.022",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 29,
+            "bib": 50,
+            "name": "RUDE JR Richard",
+            "nat": "USA",
+            "time": "2:55.913",
+            "gap": "+8.054",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 30,
+            "bib": 22,
+            "name": "THIRION Remi",
+            "nat": "FRA",
+            "time": "2:56.036",
+            "gap": "+8.177",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 31,
+            "bib": 19,
+            "name": "HARTENSTERN Max",
+            "nat": "GER",
+            "time": "2:56.108",
+            "gap": "+8.249",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 32,
+            "bib": 79,
+            "name": "GRIFFITHS Oscar",
+            "nat": "GBR",
+            "time": "2:56.173",
+            "gap": "+8.314",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 33,
+            "bib": 75,
+            "name": "DELESALLE Michael",
+            "nat": "CAN",
+            "time": "2:56.367",
+            "gap": "+8.508",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 34,
+            "bib": 59,
+            "name": "KERR Bernard",
+            "nat": "GBR",
+            "time": "2:56.385",
+            "gap": "+8.526",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 35,
+            "bib": 5,
+            "name": "HART Danny",
+            "nat": "GBR",
+            "time": "2:56.418",
+            "gap": "+8.559",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 36,
+            "bib": 43,
+            "name": "MADLEY George",
+            "nat": "GBR",
+            "time": "2:56.715",
+            "gap": "+8.856",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 37,
+            "bib": 46,
+            "name": "VIEIRA Roger",
+            "nat": "BRA",
+            "time": "2:56.733",
+            "gap": "+8.874",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 38,
+            "bib": 45,
+            "name": "BREEDEN Joe",
+            "nat": "GBR",
+            "time": "2:56.890",
+            "gap": "+9.031",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 39,
+            "bib": 51,
+            "name": "DAPRELA Thibaut",
+            "nat": "FRA",
+            "time": "2:57.101",
+            "gap": "+9.242",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 40,
+            "bib": 12,
+            "name": "PINKERTON Kenneth Ryan",
+            "nat": "USA",
+            "time": "2:57.314",
+            "gap": "+9.455",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 41,
+            "bib": 56,
+            "name": "JEWETT Dane",
+            "nat": "CAN",
+            "time": "2:57.445",
+            "gap": "+9.586",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 42,
+            "bib": 15,
+            "name": "WALKER Matt",
+            "nat": "GBR",
+            "time": "2:57.642",
+            "gap": "+9.783",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 43,
+            "bib": 3,
+            "name": "BROSNAN Troy",
+            "nat": "AUS",
+            "time": "2:58.489",
+            "gap": "+10.630",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 44,
+            "bib": 68,
+            "name": "ESTAQUE Thomas",
+            "nat": "FRA",
+            "time": "2:59.088",
+            "gap": "+11.229",
+            "points": 2,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 45,
+            "bib": 65,
+            "name": "VIARDOT Kimi",
+            "nat": "FRA",
+            "time": "3:00.164",
+            "gap": "+12.305",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 46,
+            "bib": 52,
+            "name": "SLOAN Carter",
+            "nat": "AUS",
+            "time": "3:00.323",
+            "gap": "+12.464",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 47,
+            "bib": 57,
+            "name": "BURKE Bode",
+            "nat": "ASA",
+            "time": "3:00.449",
+            "gap": "+12.590",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 48,
+            "bib": 31,
+            "name": "BRADLEY Zac",
+            "nat": "AUS",
+            "time": "3:00.484",
+            "gap": "+12.625",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 49,
+            "bib": 42,
+            "name": "CASTELLANOS LIBERAL Daniel",
+            "nat": "ESP",
+            "time": "3:00.586",
+            "gap": "+12.727",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 50,
+            "bib": 7,
+            "name": "GWIN Aaron",
+            "nat": "USA",
+            "time": "3:00.784",
+            "gap": "+12.925",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 51,
+            "bib": 35,
+            "name": "REVELLI Loris",
+            "nat": "ITA",
+            "time": "3:00.913",
+            "gap": "+13.054",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 52,
+            "bib": 40,
+            "name": "PENE Tuhoto-Ariki",
+            "nat": "NZL",
+            "time": "3:01.146",
+            "gap": "+13.287",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 53,
+            "bib": 26,
+            "name": "CHAPELET Simon",
+            "nat": "FRA",
+            "time": "3:01.261",
+            "gap": "+13.402",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 54,
+            "bib": 76,
+            "name": "STYLIE Seth",
+            "nat": "NZL",
+            "time": "3:01.437",
+            "gap": "+13.578",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 55,
+            "bib": 73,
+            "name": "MCDOWALL Kirk",
+            "nat": "CAN",
+            "time": "3:01.495",
+            "gap": "+13.636",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 56,
+            "bib": 72,
+            "name": "MILLINGTON Joe",
+            "nat": "NZL",
+            "time": "3:02.455",
+            "gap": "+14.596",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 57,
+            "bib": 58,
+            "name": "PIERCY Jack",
+            "nat": "GBR",
+            "time": "3:02.509",
+            "gap": "+14.650",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 58,
+            "bib": 91,
+            "name": "GRIFFITH Ryan",
+            "nat": "CAN",
+            "time": "3:04.655",
+            "gap": "+16.796",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 59,
+            "bib": 32,
+            "name": "CONNELLY Jackson",
+            "nat": "AUS",
+            "time": "3:04.686",
+            "gap": "+16.827",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 60,
+            "bib": 77,
+            "name": "CROFTS Callum",
+            "nat": "AUS",
+            "time": "3:07.009",
+            "gap": "+19.150",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 61,
+            "bib": 82,
+            "name": "PUGH William",
+            "nat": "GBR",
+            "time": "3:07.411",
+            "gap": "+19.552",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 62,
+            "bib": 24,
+            "name": "WAITE Tyler",
+            "nat": "NZL",
+            "time": "3:10.417",
+            "gap": "+22.558",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 63,
+            "bib": 74,
+            "name": "WEINERT Troy",
+            "nat": "AUS",
+            "time": "3:10.527",
+            "gap": "+22.668",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 64,
+            "bib": 92,
+            "name": "JOUVENAL Vincent",
+            "nat": "FRA",
+            "time": "3:11.344",
+            "gap": "+23.485",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 65,
+            "bib": 63,
+            "name": "IKUTA Yuga",
+            "nat": "JPN",
+            "time": "3:13.483",
+            "gap": "+25.624",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 66,
+            "bib": 67,
+            "name": "KUSHIMA Yuki",
+            "nat": "JPN",
+            "time": "3:14.102",
+            "gap": "+26.243",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 67,
+            "bib": 55,
+            "name": "CHIANG Sheng Shan",
+            "nat": "TPE",
+            "time": "3:14.572",
+            "gap": "+26.713",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 68,
+            "bib": 80,
+            "name": "PLATT Dom",
+            "nat": "GBR",
+            "time": "3:15.353",
+            "gap": "+27.494",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 69,
+            "bib": 44,
+            "name": "CRAIK Ethan",
+            "nat": "GBR",
+            "time": "3:17.107",
+            "gap": "+29.248",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 70,
+            "bib": 61,
+            "name": "STANTON Jed",
+            "nat": "AUS",
+            "time": "3:19.603",
+            "gap": "+31.744",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 71,
+            "bib": 84,
+            "name": "TOMLINSON Gavin",
+            "nat": "USA",
+            "time": "3:20.963",
+            "gap": "+33.104",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 72,
+            "bib": 64,
+            "name": "FALQUET Mylann",
+            "nat": "FRA",
+            "time": "3:21.512",
+            "gap": "+33.653",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 73,
+            "bib": 78,
+            "name": "MCELYEA Colin",
+            "nat": "USA",
+            "time": "3:22.526",
+            "gap": "+34.667",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 74,
+            "bib": 89,
+            "name": "BAE Junho",
+            "nat": "KOR",
+            "time": "3:32.396",
+            "gap": "+44.537",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 75,
+            "bib": 49,
+            "name": "APRILIANO Agung Prio",
+            "nat": "INA",
+            "time": "3:33.366",
+            "gap": "+45.507",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 76,
+            "bib": 87,
+            "name": "PARK Jongyun",
+            "nat": "KOR",
+            "time": "3:45.330",
+            "gap": "+57.471",
+            "points": 3,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 77,
+            "bib": 69,
+            "name": "HAGUCHI Tetsuma",
+            "nat": "JPN",
+            "time": "4:06.426",
+            "gap": null,
+            "points": 4,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 78,
+            "bib": 14,
+            "name": "KIEFER Henri",
+            "nat": "GER",
+            "time": "4:12.392",
+            "gap": null,
+            "points": 4,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 79,
+            "bib": 90,
+            "name": "MATUSZNY Marcin",
+            "nat": "POL",
+            "time": "5:09.146",
+            "gap": null,
+            "points": 5,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 80,
+            "bib": 81,
+            "name": "YOUNG Tom",
+            "nat": "AUS",
+            "time": "5:24.955",
+            "gap": null,
+            "points": 5,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 81,
+            "bib": 85,
+            "name": "VINOKUROV Petr",
+            "nat": "AIN",
+            "time": "5:38.837",
+            "gap": null,
+            "points": 5,
+            "session": "qualifying-1-men"
+          },
+          {
+            "rank": 82,
+            "bib": 28,
+            "name": "NORTON Dakotah",
+            "nat": "USA",
+            "time": "7:25.800",
+            "gap": null,
+            "points": 7,
+            "session": "qualifying-1-men"
+          }
+        ],
+        "qualifying-junior-women": [
+          {
+            "rank": 1,
+            "bib": 2,
+            "name": "ZIERL Rosa",
+            "nat": "AUT",
+            "time": "3:26.438",
+            "gap": "+0.000",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 2,
+            "bib": 6,
+            "name": "JENSEN Rosa Marie",
+            "nat": "DEN",
+            "time": "3:26.619",
+            "gap": "+0.181",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 3,
+            "bib": 12,
+            "name": "BOADLE Tilly",
+            "nat": "AUS",
+            "time": "3:30.063",
+            "gap": "+3.625",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 4,
+            "bib": 7,
+            "name": "NEF Gianna",
+            "nat": "SUI",
+            "time": "3:31.213",
+            "gap": "+4.775",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 5,
+            "bib": 4,
+            "name": "FRENER Lina",
+            "nat": "AUT",
+            "time": "3:33.119",
+            "gap": "+6.681",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 6,
+            "bib": 8,
+            "name": "PROULX-ROYDS Tayte",
+            "nat": "CAN",
+            "time": "3:37.513",
+            "gap": "+11.075",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 7,
+            "bib": 5,
+            "name": "DEAVOLL Indy",
+            "nat": "NZL",
+            "time": "3:38.587",
+            "gap": "+12.149",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 8,
+            "bib": 3,
+            "name": "OSTGAARD Aletha",
+            "nat": "USA",
+            "time": "3:44.593",
+            "gap": "+18.155",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 9,
+            "bib": 9,
+            "name": "VLAAR Kiera",
+            "nat": "NZL",
+            "time": "3:53.339",
+            "gap": "+26.901",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 10,
+            "bib": 13,
+            "name": "BRUNO Rebecca",
+            "nat": "ITA",
+            "time": "3:54.354",
+            "gap": "+27.916",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          },
+          {
+            "rank": 11,
+            "bib": 10,
+            "name": "ACHESON Zuri",
+            "nat": "AUS",
+            "time": "3:57.190",
+            "gap": "+30.752",
+            "points": 3,
+            "session": "qualifying-junior-women"
+          }
+        ],
+        "qualifying-junior-men": [
+          {
+            "rank": 1,
+            "bib": 32,
+            "name": "BRIZIN Sacha Gabriel",
+            "nat": "FRA",
+            "time": "2:55.645",
+            "gap": "+0.000",
+            "points": 2,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 2,
+            "bib": 2,
+            "name": "WILLIAMSON Jonty",
+            "nat": "NZL",
+            "time": "2:56.655",
+            "gap": "+1.010",
+            "points": 2,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 3,
+            "bib": 6,
+            "name": "MALLEN Alex",
+            "nat": "USA",
+            "time": "2:57.706",
+            "gap": "+2.061",
+            "points": 2,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 4,
+            "bib": 17,
+            "name": "RUTHERFURD Camden",
+            "nat": "NZL",
+            "time": "2:59.186",
+            "gap": "+3.541",
+            "points": 2,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 5,
+            "bib": 4,
+            "name": "BOATWRIGHT Malik",
+            "nat": "NZL",
+            "time": "2:59.544",
+            "gap": "+3.899",
+            "points": 2,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 6,
+            "bib": 7,
+            "name": "WILSON Ryder",
+            "nat": "CAN",
+            "time": "2:59.919",
+            "gap": "+4.274",
+            "points": 2,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 7,
+            "bib": 24,
+            "name": "STEVENS-MCNAB Sterling",
+            "nat": "NZL",
+            "time": "3:00.525",
+            "gap": "+4.880",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 8,
+            "bib": 46,
+            "name": "BRUNO Thomas",
+            "nat": "ITA",
+            "time": "3:01.922",
+            "gap": "+6.277",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 9,
+            "bib": 34,
+            "name": "RYAN Darragh",
+            "nat": "IRL",
+            "time": "3:02.249",
+            "gap": "+6.604",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 10,
+            "bib": 5,
+            "name": "MALLEN Luke",
+            "nat": "USA",
+            "time": "3:02.569",
+            "gap": "+6.924",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 11,
+            "bib": 13,
+            "name": "SCHNEEBERGER Raoul",
+            "nat": "SUI",
+            "time": "3:02.596",
+            "gap": "+6.951",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 12,
+            "bib": 14,
+            "name": "BINSBERGEN Seppy",
+            "nat": "NZL",
+            "time": "3:03.868",
+            "gap": "+8.223",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 13,
+            "bib": 16,
+            "name": "GRIFFITHS Felix",
+            "nat": "GBR",
+            "time": "3:04.215",
+            "gap": "+8.570",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 14,
+            "bib": 12,
+            "name": "FORLIN Noé",
+            "nat": "SUI",
+            "time": "3:04.927",
+            "gap": "+9.282",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 15,
+            "bib": 33,
+            "name": "BUNDY Cohen",
+            "nat": "USA",
+            "time": "3:05.162",
+            "gap": "+9.517",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 16,
+            "bib": 23,
+            "name": "COUZIN Bryn",
+            "nat": "AUS",
+            "time": "3:05.536",
+            "gap": "+9.891",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 17,
+            "bib": 29,
+            "name": "NISBET Stan",
+            "nat": "GBR",
+            "time": "3:06.104",
+            "gap": "+10.459",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 18,
+            "bib": 26,
+            "name": "GAINEY Slade",
+            "nat": "USA",
+            "time": "3:06.139",
+            "gap": "+10.494",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 19,
+            "bib": 10,
+            "name": "WELLINGS Rhys",
+            "nat": "AUS",
+            "time": "3:07.002",
+            "gap": "+11.357",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 20,
+            "bib": 18,
+            "name": "MILLS Bailey",
+            "nat": "AUS",
+            "time": "3:07.153",
+            "gap": "+11.508",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 21,
+            "bib": 22,
+            "name": "MILNER Noah",
+            "nat": "CAN",
+            "time": "3:07.564",
+            "gap": "+11.919",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 22,
+            "bib": 27,
+            "name": "MCCREDIE Jack",
+            "nat": "CAN",
+            "time": "3:07.781",
+            "gap": "+12.136",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 23,
+            "bib": 15,
+            "name": "LOCK Dexter",
+            "nat": "NZL",
+            "time": "3:07.985",
+            "gap": "+12.340",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 24,
+            "bib": 19,
+            "name": "HENDERSON Kalani",
+            "nat": "NZL",
+            "time": "3:08.157",
+            "gap": "+12.512",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 25,
+            "bib": 11,
+            "name": "GRIP HAGLEV Nicolai",
+            "nat": "NOR",
+            "time": "3:08.488",
+            "gap": "+12.843",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 26,
+            "bib": 21,
+            "name": "HULSEBOSCH Cole",
+            "nat": "NZL",
+            "time": "3:09.245",
+            "gap": "+13.600",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 27,
+            "bib": 28,
+            "name": "GODIN Léo",
+            "nat": "FRA",
+            "time": "3:10.776",
+            "gap": "+15.131",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 28,
+            "bib": 25,
+            "name": "BEST Byron",
+            "nat": "AUS",
+            "time": "3:10.935",
+            "gap": "+15.290",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 29,
+            "bib": 39,
+            "name": "FLETCHER Haydn",
+            "nat": "GBR",
+            "time": "3:11.120",
+            "gap": "+15.475",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 30,
+            "bib": 45,
+            "name": "TSUCHIYA Shouma",
+            "nat": "JPN",
+            "time": "3:14.812",
+            "gap": "+19.167",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 31,
+            "bib": 37,
+            "name": "MURACHELLI Filippo",
+            "nat": "ITA",
+            "time": "3:15.526",
+            "gap": "+19.881",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 32,
+            "bib": 30,
+            "name": "HUDSON Rafe",
+            "nat": "CAN",
+            "time": "3:16.613",
+            "gap": "+20.968",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 33,
+            "bib": 35,
+            "name": "CROSS Rowan",
+            "nat": "GBR",
+            "time": "3:18.659",
+            "gap": "+23.014",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 34,
+            "bib": 38,
+            "name": "KANG Hajoon",
+            "nat": "KOR",
+            "time": "3:32.245",
+            "gap": "+36.600",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 35,
+            "bib": 41,
+            "name": "SUK Minjae",
+            "nat": "KOR",
+            "time": "3:40.731",
+            "gap": "+45.086",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 36,
+            "bib": 47,
+            "name": "SONG Yeonho",
+            "nat": "KOR",
+            "time": "3:42.774",
+            "gap": "+47.129",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 37,
+            "bib": 31,
+            "name": "WHITE Noah",
+            "nat": "AUS",
+            "time": "3:44.421",
+            "gap": "+48.776",
+            "points": 3,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 38,
+            "bib": 42,
+            "name": "LIESHOUT Monte",
+            "nat": "NZL",
+            "time": "4:22.501",
+            "gap": null,
+            "points": 4,
+            "session": "qualifying-junior-men"
+          },
+          {
+            "rank": 39,
+            "bib": 40,
+            "name": "ELLER Lois",
+            "nat": "GER",
+            "time": "5:38.504",
+            "gap": null,
+            "points": 5,
+            "session": "qualifying-junior-men"
+          }
+        ],
+        "qualifying-2-women": [
+          {
+            "rank": 1,
+            "bib": 5,
+            "name": "GALE Phoebe",
+            "nat": "GBR",
+            "time": "3:23.972",
+            "gap": "+0.000",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 2,
+            "bib": 17,
+            "name": "HEMSTREET Gracey",
+            "nat": "CAN",
+            "time": "3:24.917",
+            "gap": "+0.945",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 3,
+            "bib": 57,
+            "name": "SEAGRAVE Tahnee",
+            "nat": "GBR",
+            "time": "3:27.919",
+            "gap": "+3.947",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 4,
+            "bib": 3,
+            "name": "EARNEST Sacha",
+            "nat": "NZL",
+            "time": "3:31.203",
+            "gap": "+7.231",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 5,
+            "bib": 10,
+            "name": "BOULADOU Lisa",
+            "nat": "FRA",
+            "time": "3:31.854",
+            "gap": "+7.882",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 6,
+            "bib": 20,
+            "name": "MELTON Matilda",
+            "nat": "USA",
+            "time": "3:32.592",
+            "gap": "+8.620",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 7,
+            "bib": 96,
+            "name": "HOFFMANN Nina",
+            "nat": "GER",
+            "time": "3:34.590",
+            "gap": "+10.618",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 8,
+            "bib": 14,
+            "name": "MILLS Sacha",
+            "nat": "AUS",
+            "time": "3:39.248",
+            "gap": "+15.276",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 9,
+            "bib": 23,
+            "name": "BIRCHALL Bellah",
+            "nat": "NZL",
+            "time": "3:40.217",
+            "gap": "+16.245",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 10,
+            "bib": 18,
+            "name": "HASTINGS Kate",
+            "nat": "NZL",
+            "time": "3:45.110",
+            "gap": "+21.138",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 11,
+            "bib": 25,
+            "name": "RØNNING Frida Helena",
+            "nat": "NOR",
+            "time": "3:49.753",
+            "gap": "+25.781",
+            "points": 3,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 12,
+            "bib": 21,
+            "name": "HULSEBOSCH Eliana",
+            "nat": "NZL",
+            "time": "4:03.220",
+            "gap": "+39.248",
+            "points": 4,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 13,
+            "bib": 26,
+            "name": "AABECH Nellie",
+            "nat": "NOR",
+            "time": "4:05.999",
+            "gap": "+42.027",
+            "points": 4,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 14,
+            "bib": 6,
+            "name": "BLEWITT Jess",
+            "nat": "NZL",
+            "time": "4:06.211",
+            "gap": "+42.239",
+            "points": 4,
+            "session": "qualifying-2-women"
+          },
+          {
+            "rank": 15,
+            "bib": 27,
+            "name": "SUEMASA Mio",
+            "nat": "JPN",
+            "time": "4:34.187",
+            "gap": null,
+            "points": 4,
+            "session": "qualifying-2-women"
+          }
+        ],
+        "qualifying-2-men": [
+          {
+            "rank": 1,
+            "bib": 57,
+            "name": "BURKE Bode",
+            "nat": "ASA",
+            "time": "2:50.333",
+            "gap": "+0.000",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 2,
+            "bib": 30,
+            "name": "ALRAN Max",
+            "nat": "FRA",
+            "time": "2:50.541",
+            "gap": "+0.208",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 3,
+            "bib": 43,
+            "name": "MADLEY George",
+            "nat": "GBR",
+            "time": "2:51.483",
+            "gap": "+1.150",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 4,
+            "bib": 12,
+            "name": "PINKERTON Kenneth Ryan",
+            "nat": "USA",
+            "time": "2:51.903",
+            "gap": "+1.570",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 5,
+            "bib": 46,
+            "name": "VIEIRA Roger",
+            "nat": "BRA",
+            "time": "2:52.103",
+            "gap": "+1.770",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 6,
+            "bib": 33,
+            "name": "PIERRON Antoine",
+            "nat": "FRA",
+            "time": "2:52.256",
+            "gap": "+1.923",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 7,
+            "bib": 7,
+            "name": "GWIN Aaron",
+            "nat": "USA",
+            "time": "2:53.016",
+            "gap": "+2.683",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 8,
+            "bib": 24,
+            "name": "WAITE Tyler",
+            "nat": "NZL",
+            "time": "2:53.025",
+            "gap": "+2.692",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 9,
+            "bib": 3,
+            "name": "BROSNAN Troy",
+            "nat": "AUS",
+            "time": "2:53.722",
+            "gap": "+3.389",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 10,
+            "bib": 50,
+            "name": "RUDE JR Richard",
+            "nat": "USA",
+            "time": "2:53.771",
+            "gap": "+3.438",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 11,
+            "bib": 28,
+            "name": "NORTON Dakotah",
+            "nat": "USA",
+            "time": "2:53.914",
+            "gap": "+3.581",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 12,
+            "bib": 75,
+            "name": "DELESALLE Michael",
+            "nat": "CAN",
+            "time": "2:54.188",
+            "gap": "+3.855",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 13,
+            "bib": 45,
+            "name": "BREEDEN Joe",
+            "nat": "GBR",
+            "time": "2:54.277",
+            "gap": "+3.944",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 14,
+            "bib": 22,
+            "name": "THIRION Remi",
+            "nat": "FRA",
+            "time": "2:54.423",
+            "gap": "+4.090",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 15,
+            "bib": 40,
+            "name": "PENE Tuhoto-Ariki",
+            "nat": "NZL",
+            "time": "2:54.656",
+            "gap": "+4.323",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 16,
+            "bib": 38,
+            "name": "WAYMAN Luke",
+            "nat": "NZL",
+            "time": "2:54.788",
+            "gap": "+4.455",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 17,
+            "bib": 5,
+            "name": "HART Danny",
+            "nat": "GBR",
+            "time": "2:54.909",
+            "gap": "+4.576",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 18,
+            "bib": 19,
+            "name": "HARTENSTERN Max",
+            "nat": "GER",
+            "time": "2:54.933",
+            "gap": "+4.600",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 19,
+            "bib": 15,
+            "name": "WALKER Matt",
+            "nat": "GBR",
+            "time": "2:55.075",
+            "gap": "+4.742",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 20,
+            "bib": 14,
+            "name": "KIEFER Henri",
+            "nat": "GER",
+            "time": "2:55.503",
+            "gap": "+5.170",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 21,
+            "bib": 62,
+            "name": "KERR Henry",
+            "nat": "IRL",
+            "time": "2:56.298",
+            "gap": "+5.965",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 22,
+            "bib": 79,
+            "name": "GRIFFITHS Oscar",
+            "nat": "GBR",
+            "time": "2:56.715",
+            "gap": "+6.382",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 23,
+            "bib": 35,
+            "name": "REVELLI Loris",
+            "nat": "ITA",
+            "time": "2:56.932",
+            "gap": "+6.599",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 24,
+            "bib": 26,
+            "name": "CHAPELET Simon",
+            "nat": "FRA",
+            "time": "2:57.218",
+            "gap": "+6.885",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 25,
+            "bib": 60,
+            "name": "KUHN Bodhi",
+            "nat": "CAN",
+            "time": "2:57.361",
+            "gap": "+7.028",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 26,
+            "bib": 42,
+            "name": "CASTELLANOS LIBERAL Daniel",
+            "nat": "ESP",
+            "time": "2:57.558",
+            "gap": "+7.225",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 27,
+            "bib": 51,
+            "name": "DAPRELA Thibaut",
+            "nat": "FRA",
+            "time": "2:57.675",
+            "gap": "+7.342",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 28,
+            "bib": 21,
+            "name": "ZWAR Oliver",
+            "nat": "SWE",
+            "time": "2:57.850",
+            "gap": "+7.517",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 29,
+            "bib": 64,
+            "name": "FALQUET Mylann",
+            "nat": "FRA",
+            "time": "2:58.272",
+            "gap": "+7.939",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 30,
+            "bib": 58,
+            "name": "PIERCY Jack",
+            "nat": "GBR",
+            "time": "2:58.380",
+            "gap": "+8.047",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 31,
+            "bib": 65,
+            "name": "VIARDOT Kimi",
+            "nat": "FRA",
+            "time": "2:58.521",
+            "gap": "+8.188",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 32,
+            "bib": 68,
+            "name": "ESTAQUE Thomas",
+            "nat": "FRA",
+            "time": "2:59.038",
+            "gap": "+8.705",
+            "points": 2,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 33,
+            "bib": 76,
+            "name": "STYLIE Seth",
+            "nat": "NZL",
+            "time": "3:00.958",
+            "gap": "+10.625",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 34,
+            "bib": 73,
+            "name": "MCDOWALL Kirk",
+            "nat": "CAN",
+            "time": "3:01.441",
+            "gap": "+11.108",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 35,
+            "bib": 32,
+            "name": "CONNELLY Jackson",
+            "nat": "AUS",
+            "time": "3:02.395",
+            "gap": "+12.062",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 36,
+            "bib": 91,
+            "name": "GRIFFITH Ryan",
+            "nat": "CAN",
+            "time": "3:03.050",
+            "gap": "+12.717",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 37,
+            "bib": 78,
+            "name": "MCELYEA Colin",
+            "nat": "USA",
+            "time": "3:04.188",
+            "gap": "+13.855",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 38,
+            "bib": 31,
+            "name": "BRADLEY Zac",
+            "nat": "AUS",
+            "time": "3:05.151",
+            "gap": "+14.818",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 39,
+            "bib": 82,
+            "name": "PUGH William",
+            "nat": "GBR",
+            "time": "3:06.381",
+            "gap": "+16.048",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 40,
+            "bib": 63,
+            "name": "IKUTA Yuga",
+            "nat": "JPN",
+            "time": "3:07.144",
+            "gap": "+16.811",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 41,
+            "bib": 80,
+            "name": "PLATT Dom",
+            "nat": "GBR",
+            "time": "3:07.479",
+            "gap": "+17.146",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 42,
+            "bib": 74,
+            "name": "WEINERT Troy",
+            "nat": "AUS",
+            "time": "3:08.148",
+            "gap": "+17.815",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 43,
+            "bib": 61,
+            "name": "STANTON Jed",
+            "nat": "AUS",
+            "time": "3:08.272",
+            "gap": "+17.939",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 44,
+            "bib": 92,
+            "name": "JOUVENAL Vincent",
+            "nat": "FRA",
+            "time": "3:08.813",
+            "gap": "+18.480",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 45,
+            "bib": 85,
+            "name": "VINOKUROV Petr",
+            "nat": "AIN",
+            "time": "3:08.957",
+            "gap": "+18.624",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 46,
+            "bib": 55,
+            "name": "CHIANG Sheng Shan",
+            "nat": "TPE",
+            "time": "3:10.807",
+            "gap": "+20.474",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 47,
+            "bib": 72,
+            "name": "MILLINGTON Joe",
+            "nat": "NZL",
+            "time": "3:13.587",
+            "gap": "+23.254",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 48,
+            "bib": 81,
+            "name": "YOUNG Tom",
+            "nat": "AUS",
+            "time": "3:14.665",
+            "gap": "+24.332",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 49,
+            "bib": 77,
+            "name": "CROFTS Callum",
+            "nat": "AUS",
+            "time": "3:16.564",
+            "gap": "+26.231",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 50,
+            "bib": 56,
+            "name": "JEWETT Dane",
+            "nat": "CAN",
+            "time": "3:16.804",
+            "gap": "+26.471",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 51,
+            "bib": 67,
+            "name": "KUSHIMA Yuki",
+            "nat": "JPN",
+            "time": "3:18.191",
+            "gap": "+27.858",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 52,
+            "bib": 53,
+            "name": "HOLGUIN VILLA Sebastian",
+            "nat": "COL",
+            "time": "3:21.435",
+            "gap": "+31.102",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 53,
+            "bib": 49,
+            "name": "APRILIANO Agung Prio",
+            "nat": "INA",
+            "time": "3:24.946",
+            "gap": "+34.613",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 54,
+            "bib": 44,
+            "name": "CRAIK Ethan",
+            "nat": "GBR",
+            "time": "3:28.840",
+            "gap": "+38.507",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 55,
+            "bib": 84,
+            "name": "TOMLINSON Gavin",
+            "nat": "USA",
+            "time": "3:43.274",
+            "gap": "+52.941",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 56,
+            "bib": 87,
+            "name": "PARK Jongyun",
+            "nat": "KOR",
+            "time": "3:47.808",
+            "gap": "+57.475",
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 57,
+            "bib": 52,
+            "name": "SLOAN Carter",
+            "nat": "AUS",
+            "time": "3:52.110",
+            "gap": null,
+            "points": 3,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 58,
+            "bib": 69,
+            "name": "HAGUCHI Tetsuma",
+            "nat": "JPN",
+            "time": "5:20.358",
+            "gap": null,
+            "points": 5,
+            "session": "qualifying-2-men"
+          },
+          {
+            "rank": 59,
+            "bib": 89,
+            "name": "BAE Junho",
+            "nat": "KOR",
+            "time": "9:01.348",
+            "gap": null,
+            "points": 9,
+            "session": "qualifying-2-men"
+          }
+        ],
+        "finals-junior-women": [
+          {
+            "rank": 1,
+            "bib": 3,
+            "name": "OSTGAARD Aletha",
+            "nat": "USA",
+            "time": "3:13.937",
+            "gap": "+0.000",
+            "points": 3,
+            "session": "finals-junior-women"
+          },
+          {
+            "rank": 2,
+            "bib": 2,
+            "name": "ZIERL Rosa",
+            "nat": "AUT",
+            "time": "3:16.342",
+            "gap": "+2.405",
+            "points": 3,
+            "session": "finals-junior-women"
+          },
+          {
+            "rank": 3,
+            "bib": 12,
+            "name": "BOADLE Tilly",
+            "nat": "AUS",
+            "time": "3:19.540",
+            "gap": "+5.603",
+            "points": 3,
+            "session": "finals-junior-women"
+          },
+          {
+            "rank": 4,
+            "bib": 7,
+            "name": "NEF Gianna",
+            "nat": "SUI",
+            "time": "3:20.537",
+            "gap": "+6.600",
+            "points": 3,
+            "session": "finals-junior-women"
+          },
+          {
+            "rank": 5,
+            "bib": 6,
+            "name": "JENSEN Rosa Marie",
+            "nat": "DEN",
+            "time": "3:21.785",
+            "gap": "+7.848",
+            "points": 3,
+            "session": "finals-junior-women"
+          },
+          {
+            "rank": 6,
+            "bib": 4,
+            "name": "FRENER Lina",
+            "nat": "AUT",
+            "time": "3:24.907",
+            "gap": "+10.970",
+            "points": 3,
+            "session": "finals-junior-women"
+          },
+          {
+            "rank": 7,
+            "bib": 5,
+            "name": "DEAVOLL Indy",
+            "nat": "NZL",
+            "time": "3:27.698",
+            "gap": "+13.761",
+            "points": 3,
+            "session": "finals-junior-women"
+          },
+          {
+            "rank": 8,
+            "bib": 9,
+            "name": "VLAAR Kiera",
+            "nat": "NZL",
+            "time": "3:37.059",
+            "gap": "+23.122",
+            "points": 3,
+            "session": "finals-junior-women"
+          },
+          {
+            "rank": 9,
+            "bib": 8,
+            "name": "PROULX-ROYDS Tayte",
+            "nat": "CAN",
+            "time": "3:38.674",
+            "gap": "+24.737",
+            "points": 3,
+            "session": "finals-junior-women"
+          }
+        ],
+        "finals-junior-men": [
+          {
+            "rank": 1,
+            "bib": 2,
+            "name": "WILLIAMSON Jonty",
+            "nat": "NZL",
+            "time": "2:50.589",
+            "gap": "+0.000",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 2,
+            "bib": 4,
+            "name": "BOATWRIGHT Malik",
+            "nat": "NZL",
+            "time": "2:50.863",
+            "gap": "+0.274",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 3,
+            "bib": 32,
+            "name": "BRIZIN Sacha Gabriel",
+            "nat": "FRA",
+            "time": "2:51.224",
+            "gap": "+0.635",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 4,
+            "bib": 17,
+            "name": "RUTHERFURD Camden",
+            "nat": "NZL",
+            "time": "2:51.877",
+            "gap": "+1.288",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 5,
+            "bib": 6,
+            "name": "MALLEN Alex",
+            "nat": "USA",
+            "time": "2:51.881",
+            "gap": "+1.292",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 6,
+            "bib": 16,
+            "name": "GRIFFITHS Felix",
+            "nat": "GBR",
+            "time": "2:52.328",
+            "gap": "+1.739",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 7,
+            "bib": 29,
+            "name": "NISBET Stan",
+            "nat": "GBR",
+            "time": "2:53.245",
+            "gap": "+2.656",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 8,
+            "bib": 12,
+            "name": "FORLIN Noé",
+            "nat": "SUI",
+            "time": "2:53.825",
+            "gap": "+3.236",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 9,
+            "bib": 13,
+            "name": "SCHNEEBERGER Raoul",
+            "nat": "SUI",
+            "time": "2:55.438",
+            "gap": "+4.849",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 10,
+            "bib": 24,
+            "name": "STEVENS-MCNAB Sterling",
+            "nat": "NZL",
+            "time": "2:56.296",
+            "gap": "+5.707",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 11,
+            "bib": 34,
+            "name": "RYAN Darragh",
+            "nat": "IRL",
+            "time": "2:57.278",
+            "gap": "+6.689",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 12,
+            "bib": 14,
+            "name": "BINSBERGEN Seppy",
+            "nat": "NZL",
+            "time": "2:58.158",
+            "gap": "+7.569",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 13,
+            "bib": 46,
+            "name": "BRUNO Thomas",
+            "nat": "ITA",
+            "time": "2:59.378",
+            "gap": "+8.789",
+            "points": 2,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 14,
+            "bib": 18,
+            "name": "MILLS Bailey",
+            "nat": "AUS",
+            "time": "3:02.135",
+            "gap": "+11.546",
+            "points": 3,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 15,
+            "bib": 10,
+            "name": "WELLINGS Rhys",
+            "nat": "AUS",
+            "time": "3:02.245",
+            "gap": "+11.656",
+            "points": 3,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 16,
+            "bib": 23,
+            "name": "COUZIN Bryn",
+            "nat": "AUS",
+            "time": "3:13.116",
+            "gap": "+22.527",
+            "points": 3,
+            "session": "finals-junior-men"
+          },
+          {
+            "rank": 17,
+            "bib": 26,
+            "name": "GAINEY Slade",
+            "nat": "USA",
+            "time": "7:14.150",
+            "gap": null,
+            "points": 7,
+            "session": "finals-junior-men"
+          }
+        ],
+        "finals-women": [
+          {
+            "rank": 1,
+            "bib": 11,
+            "name": "HÖLL Valentina",
+            "nat": "AUT",
+            "time": "3:14.778",
+            "gap": "+0.000",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 2,
+            "bib": 9,
+            "name": "SCARSI Gloria",
+            "nat": "ITA",
+            "time": "3:15.351",
+            "gap": "+0.573",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 3,
+            "bib": 7,
+            "name": "NICOLE Myriam",
+            "nat": "FRA",
+            "time": "3:16.529",
+            "gap": "+1.751",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 4,
+            "bib": 24,
+            "name": "HARNDEN Harriet",
+            "nat": "GBR",
+            "time": "3:16.830",
+            "gap": "+2.052",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 5,
+            "bib": 22,
+            "name": "ROA SANCHEZ Valentina",
+            "nat": "COL",
+            "time": "3:17.264",
+            "gap": "+2.486",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 6,
+            "bib": 3,
+            "name": "EARNEST Sacha",
+            "nat": "NZL",
+            "time": "3:17.409",
+            "gap": "+2.631",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 7,
+            "bib": 17,
+            "name": "HEMSTREET Gracey",
+            "nat": "CAN",
+            "time": "3:17.483",
+            "gap": "+2.705",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 8,
+            "bib": 5,
+            "name": "GALE Phoebe",
+            "nat": "GBR",
+            "time": "3:18.418",
+            "gap": "+3.640",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 9,
+            "bib": 57,
+            "name": "SEAGRAVE Tahnee",
+            "nat": "GBR",
+            "time": "3:23.780",
+            "gap": "+9.002",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 10,
+            "bib": 8,
+            "name": "BAUMANN Lisa",
+            "nat": "SUI",
+            "time": "3:27.281",
+            "gap": "+12.503",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 11,
+            "bib": 10,
+            "name": "BOULADOU Lisa",
+            "nat": "FRA",
+            "time": "3:27.381",
+            "gap": "+12.603",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 12,
+            "bib": 19,
+            "name": "WIDMANN Veronika",
+            "nat": "ITA",
+            "time": "3:28.063",
+            "gap": "+13.285",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 13,
+            "bib": 2,
+            "name": "NEWKIRK Anna",
+            "nat": "USA",
+            "time": "3:37.537",
+            "gap": "+22.759",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 14,
+            "bib": 12,
+            "name": "CABIROU Marine",
+            "nat": "FRA",
+            "time": "3:49.638",
+            "gap": "+34.860",
+            "points": 3,
+            "session": "finals-women"
+          },
+          {
+            "rank": 15,
+            "bib": 16,
+            "name": "HASTINGS Jenna",
+            "nat": "NZL",
+            "time": "3:55.917",
+            "gap": "+41.139",
+            "points": 3,
+            "session": "finals-women"
+          }
+        ],
+        "finals-men": [
+          {
+            "rank": 1,
+            "bib": 27,
+            "name": "VERMETTE Asa",
+            "nat": "USA",
+            "time": "2:43.301",
+            "gap": "+0.000",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 2,
+            "bib": 29,
+            "name": "BRUNI Loic",
+            "nat": "FRA",
+            "time": "2:44.869",
+            "gap": "+1.568",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 3,
+            "bib": 4,
+            "name": "PIERRON Amaury",
+            "nat": "FRA",
+            "time": "2:45.364",
+            "gap": "+2.063",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 4,
+            "bib": 2,
+            "name": "VERGIER Loris",
+            "nat": "FRA",
+            "time": "2:46.492",
+            "gap": "+3.191",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 5,
+            "bib": 37,
+            "name": "PONTVIANNE Nathan",
+            "nat": "FRA",
+            "time": "2:46.557",
+            "gap": "+3.256",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 6,
+            "bib": 41,
+            "name": "ALRAN Till",
+            "nat": "FRA",
+            "time": "2:46.953",
+            "gap": "+3.652",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 7,
+            "bib": 25,
+            "name": "MAES Martin",
+            "nat": "BEL",
+            "time": "2:47.023",
+            "gap": "+3.722",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 8,
+            "bib": 12,
+            "name": "PINKERTON Kenneth Ryan",
+            "nat": "USA",
+            "time": "2:47.578",
+            "gap": "+4.277",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 9,
+            "bib": 30,
+            "name": "ALRAN Max",
+            "nat": "FRA",
+            "time": "2:47.702",
+            "gap": "+4.401",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 10,
+            "bib": 66,
+            "name": "KOLB Andreas",
+            "nat": "AUT",
+            "time": "2:48.167",
+            "gap": "+4.866",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 11,
+            "bib": 9,
+            "name": "COULANGES Benoit",
+            "nat": "FRA",
+            "time": "2:48.298",
+            "gap": "+4.997",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 12,
+            "bib": 33,
+            "name": "PIERRON Antoine",
+            "nat": "FRA",
+            "time": "2:48.440",
+            "gap": "+5.139",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 13,
+            "bib": 54,
+            "name": "MEDCALF Evan",
+            "nat": "USA",
+            "time": "2:48.699",
+            "gap": "+5.398",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 14,
+            "bib": 20,
+            "name": "MAPLES Dylan",
+            "nat": "USA",
+            "time": "2:48.731",
+            "gap": "+5.430",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 15,
+            "bib": 3,
+            "name": "BROSNAN Troy",
+            "nat": "AUS",
+            "time": "2:48.889",
+            "gap": "+5.588",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 16,
+            "bib": 10,
+            "name": "SHAW Luca",
+            "nat": "USA",
+            "time": "2:48.921",
+            "gap": "+5.620",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 17,
+            "bib": 7,
+            "name": "GWIN Aaron",
+            "nat": "USA",
+            "time": "2:48.975",
+            "gap": "+5.674",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 18,
+            "bib": 47,
+            "name": "ROGGE Antoine",
+            "nat": "FRA",
+            "time": "2:49.274",
+            "gap": "+5.973",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 19,
+            "bib": 18,
+            "name": "MEIER-SMITH Luke",
+            "nat": "AUS",
+            "time": "2:50.489",
+            "gap": "+7.188",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 20,
+            "bib": 11,
+            "name": "WILSON Reece",
+            "nat": "GBR",
+            "time": "2:50.647",
+            "gap": "+7.346",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 21,
+            "bib": 46,
+            "name": "VIEIRA Roger",
+            "nat": "BRA",
+            "time": "2:51.071",
+            "gap": "+7.770",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 22,
+            "bib": 50,
+            "name": "RUDE JR Richard",
+            "nat": "USA",
+            "time": "2:51.218",
+            "gap": "+7.917",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 23,
+            "bib": 36,
+            "name": "HATTON Charlie",
+            "nat": "GBR",
+            "time": "2:52.180",
+            "gap": "+8.879",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 24,
+            "bib": 24,
+            "name": "WAITE Tyler",
+            "nat": "NZL",
+            "time": "2:52.850",
+            "gap": "+9.549",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 25,
+            "bib": 43,
+            "name": "MADLEY George",
+            "nat": "GBR",
+            "time": "2:54.739",
+            "gap": "+11.438",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 26,
+            "bib": 6,
+            "name": "GOLDSTONE Jackson",
+            "nat": "CAN",
+            "time": "2:54.883",
+            "gap": "+11.582",
+            "points": 2,
+            "session": "finals-men"
+          },
+          {
+            "rank": 27,
+            "bib": 17,
+            "name": "WILLIAMS Jordan",
+            "nat": "GBR",
+            "time": "3:03.035",
+            "gap": "+19.734",
+            "points": 3,
+            "session": "finals-men"
+          },
+          {
+            "rank": 28,
+            "bib": 57,
+            "name": "BURKE Bode",
+            "nat": "USA",
+            "time": "3:03.264",
+            "gap": "+19.963",
+            "points": 3,
+            "session": "finals-men"
+          },
+          {
+            "rank": 29,
+            "bib": 99,
+            "name": "ILES Finn",
+            "nat": "CAN",
+            "time": "3:17.004",
+            "gap": "+33.703",
+            "points": 3,
+            "session": "finals-men"
+          },
+          {
+            "rank": 30,
+            "bib": 48,
+            "name": "DAVIS Oliver",
+            "nat": "AUS",
+            "time": "3:36.220",
+            "gap": "+52.919",
+            "points": 3,
+            "session": "finals-men"
+          }
+        ]
+      }
+    }
+  ],
+  "lastUpdated": "2026-05-16T19:32:10.780Z"
+}
