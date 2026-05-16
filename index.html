@@ -466,6 +466,140 @@ html, body {
   font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
   border:none; cursor:pointer; margin-top:6px;
 }
+
+/* ── Results tab ── */
+#results-view { display:none; padding:0 0 calc(var(--safe-bottom) + 24px); }
+#results-view.active { display:block; }
+
+.rs-round-bar {
+  display:flex; gap:6px; overflow-x:auto; scrollbar-width:none;
+  -webkit-overflow-scrolling:touch; padding:14px 16px 0;
+}
+.rs-round-bar::-webkit-scrollbar { display:none; }
+.rs-round-pill {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+  padding:5px 12px; border-radius:20px; white-space:nowrap;
+  border:0.5px solid var(--border); color:var(--text-muted);
+  background:var(--bg-card); cursor:pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  -webkit-tap-highlight-color:transparent;
+}
+.rs-round-pill.active {
+  background:var(--acid-dim); border-color:var(--acid-border); color:var(--acid);
+}
+
+.rs-gender-toggle {
+  display:flex; margin:12px 16px 0;
+  background:var(--bg-card); border:0.5px solid var(--border); border-radius:8px; overflow:hidden;
+}
+.rs-gender-btn {
+  flex:1; padding:9px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+  text-align:center; color:var(--text-muted); cursor:pointer;
+  transition: color 0.15s, background 0.15s;
+  -webkit-tap-highlight-color:transparent;
+}
+.rs-gender-btn.active { background:var(--acid-dim); color:var(--acid); }
+
+.rs-section { padding:16px 16px 4px; }
+.rs-section-label {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--text-muted); margin-bottom:12px;
+  display:flex; align-items:center; gap:10px;
+}
+.rs-section-label::after { content:''; flex:1; height:1px; background:var(--border); }
+
+/* Top 5 — visual weight by position */
+.rs-top5 { display:flex; flex-direction:column; gap:6px; margin-bottom:16px; }
+
+.rs-hero-row {
+  display:flex; align-items:center; gap:12px;
+  background:var(--bg-card); border:0.5px solid var(--border);
+  border-radius:10px; padding:12px 14px;
+  position:relative; overflow:hidden;
+}
+.rs-hero-row.pos-1 { border-color:rgba(212,245,0,0.35); background:rgba(212,245,0,0.06); }
+.rs-hero-row.pos-2 { border-color:rgba(192,192,192,0.25); background:rgba(192,192,192,0.04); }
+.rs-hero-row.pos-3 { border-color:rgba(180,120,60,0.25); background:rgba(180,120,60,0.04); }
+.rs-hero-row.pos-4,
+.rs-hero-row.pos-5 { background:var(--bg-card); }
+
+.rs-pos-num {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:28px; font-weight:700; line-height:1;
+  color:var(--text-muted); min-width:28px; text-align:center;
+}
+.pos-1 .rs-pos-num { color:var(--acid); font-size:32px; }
+.pos-2 .rs-pos-num { color:#c0c0c0; }
+.pos-3 .rs-pos-num { color:#b47c3c; }
+
+.rs-rider-info { flex:1; min-width:0; }
+.rs-rider-name {
+  font-size:14px; font-weight:500; color:var(--text-primary);
+  line-height:1.2; margin-bottom:3px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.pos-1 .rs-rider-name { font-size:15px; }
+.rs-rider-nat {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--text-muted);
+}
+
+.rs-time-col { text-align:right; }
+.rs-time {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:14px; font-weight:600; font-variant-numeric:tabular-nums;
+  color:var(--text-primary); line-height:1;
+}
+.pos-1 .rs-time { color:var(--acid); font-size:16px; }
+.rs-gap {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; color:var(--text-muted);
+  font-variant-numeric:tabular-nums; margin-top:3px;
+}
+.pos-1 .rs-gap { color:rgba(212,245,0,0.5); }
+
+/* Full results table */
+.rs-table { width:100%; border-collapse:collapse; }
+.rs-table tr { border-bottom:0.5px solid #1a1a1a; }
+.rs-table tr:last-child { border-bottom:none; }
+.rs-table td { padding:7px 4px; font-size:12px; vertical-align:middle; }
+.rs-td-rank {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:12px; font-weight:600; color:var(--text-muted);
+  width:26px; text-align:center;
+}
+.rs-td-nat {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--text-muted); width:34px;
+}
+.rs-td-name { color:var(--text-primary); font-weight:500; }
+.rs-td-time {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:12px; font-variant-numeric:tabular-nums;
+  color:var(--text-secondary); text-align:right; white-space:nowrap;
+}
+.rs-td-gap {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; font-variant-numeric:tabular-nums;
+  color:var(--text-muted); text-align:right; white-space:nowrap; width:48px;
+}
+.rs-td-pts {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; color:var(--text-muted); text-align:right; width:24px;
+}
+
+.rs-empty {
+  padding:48px 24px; text-align:center;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--text-muted);
+}
 </style>
 </head>
 <body>
@@ -492,6 +626,16 @@ html, body {
   </div>
   <div id="content"></div>
   <div id="updated"></div>
+</div>
+
+<!-- Results tab view -->
+<div id="results-view">
+  <div class="rs-round-bar" id="rs-round-bar"></div>
+  <div class="rs-gender-toggle">
+    <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
+    <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
+  </div>
+  <div id="rs-content"></div>
 </div>
 
 <!-- Install banner -->
@@ -754,14 +898,28 @@ function renderFeed() {
 function buildTabs() {
   const tabs = document.getElementById('tabs')
   const cats = data?.categories || {}
-  const all = [{ id:'all', label:'All' }, ...Object.keys(cats).map(id => ({ id, label: CAT_LABELS[id] || id }))]
+  const all = [
+    { id:'all', label:'All' },
+    ...Object.keys(cats).map(id => ({ id, label: CAT_LABELS[id] || id })),
+    { id:'results', label:'Results' }
+  ]
   tabs.innerHTML = all.map(t => `<div class="tab${t.id===activeTab?' active':''}" data-tab="${t.id}">${t.label}</div>`).join('')
   tabs.querySelectorAll('.tab').forEach(el => {
     el.addEventListener('click', () => {
       activeTab = el.dataset.tab
       tabs.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
       el.classList.add('active')
-      renderFeed()
+
+      if (activeTab === 'results') {
+        document.getElementById('feed').style.display = 'none'
+        document.getElementById('results-view').classList.add('active')
+        if (!resultsData) loadResults()
+      } else {
+        document.getElementById('feed').style.display = 'block'
+        document.getElementById('results-view').classList.remove('active')
+        renderFeed()
+      }
+
       window.scrollTo({ top:0, behavior:'smooth' })
     })
   })
@@ -820,6 +978,121 @@ function dismissInstall() {
   document.getElementById('install-banner').style.display = 'none'
   document.getElementById('feed').style.paddingBottom = ''
   localStorage.setItem('helltrack-install-dismissed', '1')
+}
+
+// ── Results tab ──────────────────────────────────────────────────────────────
+
+const RESULTS_URL = 'public/results.json'
+let resultsData   = null
+let activeRound   = 0   // index into rounds array
+let activeGender  = 'men'
+
+function formatName(raw) {
+  // "VERMETTE Asa" → "Vermette Asa"
+  return raw.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ')
+}
+
+function buildRoundBar() {
+  const bar    = document.getElementById('rs-round-bar')
+  const rounds = resultsData?.rounds || []
+  bar.innerHTML = rounds.map((r, i) => {
+    const label = `R${r.round} · ${r.venue.split(' ')[0]}`
+    return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}" onclick="setRound(${i})">${label}</div>`
+  }).join('')
+}
+
+function setRound(idx) {
+  activeRound = idx
+  buildRoundBar()
+  renderResults()
+}
+
+function setGender(g) {
+  activeGender = g
+  document.getElementById('rs-men-btn').classList.toggle('active', g === 'men')
+  document.getElementById('rs-women-btn').classList.toggle('active', g === 'women')
+  renderResults()
+}
+
+function renderResults() {
+  const el     = document.getElementById('rs-content')
+  const rounds = resultsData?.rounds || []
+  if (!rounds.length) {
+    el.innerHTML = `<div class="rs-empty">No results yet — check back after race weekend</div>`
+    return
+  }
+
+  const round    = rounds[activeRound]
+  const finalsKey = activeGender === 'men' ? 'finals-men' : 'finals-women'
+  const finals   = round?.sessions?.[finalsKey] || []
+
+  if (!finals.length) {
+    el.innerHTML = `<div class="rs-empty">Finals results not yet available</div>`
+    return
+  }
+
+  const top5 = finals.slice(0, 5)
+  const rest  = finals.slice(5)
+
+  // Top 5 with visual weight
+  const top5Html = top5.map(r => {
+    const posClass = `pos-${r.rank}`
+    const name     = formatName(r.name)
+    const gap      = r.rank === 1 ? 'Winner' : r.gap || ''
+    return `<div class="rs-hero-row ${posClass}">
+  <div class="rs-pos-num">${r.rank}</div>
+  <div class="rs-rider-info">
+    <div class="rs-rider-name">${name}</div>
+    <div class="rs-rider-nat">${r.nat || ''}</div>
+  </div>
+  <div class="rs-time-col">
+    <div class="rs-time">${r.time}</div>
+    <div class="rs-gap">${gap}</div>
+  </div>
+</div>`
+  }).join('')
+
+  // Full results table from 6th onward
+  const tableRows = rest.map(r => {
+    const name = formatName(r.name)
+    return `<tr>
+  <td class="rs-td-rank">${r.rank}</td>
+  <td class="rs-td-nat">${r.nat || ''}</td>
+  <td class="rs-td-name">${name}</td>
+  <td class="rs-td-time">${r.time}</td>
+  <td class="rs-td-gap">${r.gap || ''}</td>
+  <td class="rs-td-pts">${r.points || ''}</td>
+</tr>`
+  }).join('')
+
+  const venueDate = new Date(round.date).toLocaleDateString('en-US', { month:'short', day:'numeric' })
+
+  el.innerHTML = `
+<div class="rs-section">
+  <div class="rs-section-label">${round.venue} · ${venueDate} · Finals</div>
+  <div class="rs-top5">${top5Html}</div>
+  ${rest.length ? `
+  <div class="rs-section-label">Full results</div>
+  <table class="rs-table">
+    <tbody>${tableRows}</tbody>
+  </table>` : ''}
+</div>`
+}
+
+async function loadResults() {
+  try {
+    const res  = await fetch(RESULTS_URL + '?t=' + Date.now())
+    if (!res.ok) throw new Error('HTTP ' + res.status)
+    resultsData = await res.json()
+    // Default to most recent round
+    activeRound = Math.max(0, (resultsData.rounds?.length || 1) - 1)
+    buildRoundBar()
+    renderResults()
+  } catch(err) {
+    console.error('Results load failed:', err)
+    document.getElementById('rs-content').innerHTML =
+      `<div class="rs-empty">Results unavailable</div>`
+  }
 }
 
 loadFeed()
