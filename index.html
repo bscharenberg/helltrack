@@ -678,34 +678,34 @@ body { padding-bottom: 0; }
 .nav-btn.active .nav-btn-icon,
 .nav-btn.active .nav-btn-label { color: #d4f500; }
 
-/* Desktop: left sidebar instead of bottom nav */
+/* Desktop: top nav bar instead of bottom nav */
 @media (min-width: 600px) {
   #app-shell {
-    flex-direction: row;
-    max-width: 960px;
-    min-height: 100vh;
+    max-width: 680px;
+    margin: 0 auto;
   }
   #bottom-nav {
-    position: fixed;
-    left: 0; top: 0; bottom: 0; right: auto;
-    width: 64px;
-    flex-direction: column;
+    position: static;
     border-top: none;
-    border-right: 0.5px solid #222;
+    border-bottom: 0.5px solid #222;
     padding-bottom: 0;
-    max-width: 64px;
-    justify-content: flex-start;
-    padding-top: 80px;
-    gap: 4px;
+    max-width: 100%;
+    background: #0d0d0d;
+    order: -1;
   }
-  .nav-btn { flex: 0; padding: 12px 0; width: 100%; border-radius: 0; }
+  .nav-btn {
+    flex-direction: row;
+    gap: 8px;
+    padding: 14px 24px;
+    flex: 0;
+  }
+  .nav-btn-icon { font-size: 18px; }
+  .nav-btn-label { font-size: 11px; letter-spacing: 0.1em; }
   #main-area {
-    margin-left: 64px;
     padding-bottom: 0;
-    max-width: 480px;
   }
   #header {
-    left: 64px;
+    top: 53px;
   }
 }
 </style>
