@@ -616,74 +616,7 @@ html, body {
 }
 .rs-session-btn.active { background:var(--acid-dim); color:var(--acid); }
 
-/* ── Bottom nav (mobile) / Side nav (desktop) ── */
-body { padding-bottom: 0; }
 
-#app-shell {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  max-width: 480px;
-  margin: 0 auto;
-  position: relative;
-}
-
-#main-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 60px; /* space for bottom nav */
-}
-
-#bottom-nav {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 200;
-  background: #111;
-  border-top: 0.5px solid #222;
-  display: flex;
-  max-width: 480px;
-  margin: 0 auto;
-  padding-bottom: var(--safe-bottom);
-}
-
-.nav-btn {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0 8px;
-  gap: 3px;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  border: none;
-  background: none;
-}
-.nav-btn-icon {
-  font-size: 22px;
-  color: #444;
-  line-height: 1;
-  transition: color 0.15s;
-}
-.nav-btn-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #444;
-  transition: color 0.15s;
-}
-.nav-btn.active .nav-btn-icon,
-.nav-btn.active .nav-btn-label { color: #d4f500; }
-
-/* Desktop: top nav bar instead of bottom nav */
-@media (min-width: 600px) {
-  #app-shell {
-    max-width: 680px;
-    margin: 0 auto;
-  }
   #bottom-nav {
     position: static;
     border-top: none;
@@ -712,8 +645,6 @@ body { padding-bottom: 0; }
 </head>
 <body>
 
-<div id="app-shell">
-<div id="main-area">
 <div id="header">
   <div id="header-top">
     <div>
@@ -1015,6 +946,7 @@ function buildTabs() {
   const cats = data?.categories || {}
   const all = [
     { id:'all', label:'All' },
+    { id:'results', label:'Results' },
     ...Object.keys(cats).map(id => ({ id, label: CAT_LABELS[id] || id })),
   ]
   tabs.innerHTML = all.map(t => `<div class="tab${t.id===activeTab?' active':''}" data-tab="${t.id}">${t.label}</div>`).join('')
@@ -1023,7 +955,16 @@ function buildTabs() {
       activeTab = el.dataset.tab
       tabs.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
       el.classList.add('active')
-      renderFeed()
+      if (activeTab === 'results') {
+        document.getElementById('feed').style.display = 'none'
+        document.getElementById('results-view').classList.add('active')
+        if (!resultsData) loadResults()
+        else renderResults()
+      } else {
+        document.getElementById('feed').style.display = 'block'
+        document.getElementById('results-view').classList.remove('active')
+        renderFeed()
+      }
       window.scrollTo({ top:0, behavior:'smooth' })
     })
   })
@@ -1264,31 +1205,6 @@ async function loadResults() {
 }
 
 
-// ── Mode switching ────────────────────────────────────────────────────────────
-let activeMode = 'feed'
-
-function switchMode(mode) {
-  activeMode = mode
-  document.getElementById('nav-feed').classList.toggle('active', mode === 'feed')
-  document.getElementById('nav-results').classList.toggle('active', mode === 'results')
-
-  const feedEl    = document.getElementById('feed')
-  const resultsEl = document.getElementById('results-view')
-
-  if (mode === 'feed') {
-    feedEl.style.display    = 'block'
-    resultsEl.classList.remove('active')
-    // restore active feed tab
-    renderFeed()
-  } else {
-    feedEl.style.display    = 'none'
-    resultsEl.classList.add('active')
-    if (!resultsData) loadResults()
-    else renderResults()
-  }
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
-
 loadFeed()
 </script>
 
@@ -1304,18 +1220,6 @@ loadFeed()
     letter-spacing:0.1em; text-transform:uppercase; color:#555;">Feedback</span>
 </a>
 
-<div id="bottom-nav">
-  <button class="nav-btn active" id="nav-feed" onclick="switchMode('feed')" aria-label="Feed">
-    <i class="ti ti-news nav-btn-icon" aria-hidden="true"></i>
-    <span class="nav-btn-label">Feed</span>
-  </button>
-  <button class="nav-btn" id="nav-results" onclick="switchMode('results')" aria-label="Results">
-    <i class="ti ti-trophy nav-btn-icon" aria-hidden="true"></i>
-    <span class="nav-btn-label">Results</span>
-  </button>
-</div>
-</div>
-</div>
 
 </body>
 </html>
