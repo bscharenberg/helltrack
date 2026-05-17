@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-17T05:28:44.731Z",
-  "totalItems": 73,
+  "builtAt": "2026-05-17T05:30:11.893Z",
+  "totalItems": 75,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -18,6 +18,20 @@
           "publishedAt": "2026-05-04T15:00:38Z",
           "url": "https://www.youtube.com/watch?v=MqeCy3VErWs",
           "score": 16,
+          "category": "race-runs"
+        },
+        {
+          "id": "2I5jOoNRVzs",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "SOUTH KOREA - Vital RAW - World Cup DOWNHILL",
+          "description": "Watch as the world’s best downhillers take on a fresh new track for the opening of the 2026 World Cup season. South Korea is a brand new venue and the terrain is challenging the riders with steep and loose conditions that change between runs as the track gets ridden in. We’re beyond stoked to get racing underway, and we’re equally pumped to have you join us for it!\n\n👕 - Vital Merch - https://merch.vitalmedianet.com/collections/vital-mtb\n⚙️ - Vital MTB Tech Discussions - https://www.vitalmtb.com/forums/VitalMTB/The-Hub,2 \n\n❤️ Follow us on Social ❤️\n✅  Instagram - https://www.instagram.com/vitalmtb/\n✅  Facebook - https://www.facebook.com/VitalMTB\n\n#MTB #bike #mountainbike",
+          "thumbnail": "https://i.ytimg.com/vi/2I5jOoNRVzs/maxresdefault.jpg",
+          "publishedAt": "2026-04-30T11:52:28Z",
+          "url": "https://www.youtube.com/watch?v=2I5jOoNRVzs",
+          "score": 15,
           "category": "race-runs"
         },
         {
@@ -131,20 +145,6 @@
           "url": "https://www.youtube.com/watch?v=dPFs1_6xUj4",
           "score": 11,
           "category": "race-runs"
-        },
-        {
-          "id": "0UyLk73AnIc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "\"This Sport is Savage.\"",
-          "description": "John Lawlor follows three downhill mountain bike racers through the weekend in South Korea at the first UCI World Cup of 2026. Luca Shaw (Canyon Factory Racing), Matt Walker (Trek UnBroken DH) and Remi Thirion (Giant Factory Off-Road), along with their mechanics,  share their moment-by-moment experiences in the midst a high-pressure racing situation.\n\n0:00 - Matt Walker's Setup\n3:25 - Remi Thirion's Setup\n5:49 - Luca Shaw's Setup\n9:19 - First Practice\n13:11 - Qualifying 1\n14:58 - Qualifying 2\n16:38 - Finals",
-          "thumbnail": "https://i.ytimg.com/vi/0UyLk73AnIc/maxresdefault.jpg",
-          "publishedAt": "2026-05-03T16:19:31Z",
-          "url": "https://www.youtube.com/watch?v=0UyLk73AnIc",
-          "score": 11,
-          "category": "race-runs"
         }
       ]
     },
@@ -181,6 +181,20 @@
           "category": "results"
         },
         {
+          "id": "oeD4XWmRv3Y",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
+          "channelName": "Pinkbike",
+          "title": "South Korea World Cup | Day 4 | Inside The Tape",
+          "description": "What a wild day of riding we got to witness on this unique South Korean World Cup DH Track. There's boulders rolling everywhere, the ruts are blowing out and the riders are puzzling hard. Ben and Innes get on track to show you exactly what's going down.\n\nPresented by: 6D Helmets\nhttps://www.6dhelmets.com/collections/bike\n\nPick your favourite riders and compete in our free Fantasy League: https://www.pinkbike.com/contest/fantasy/dh/\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
+          "thumbnail": "https://i.ytimg.com/vi/oeD4XWmRv3Y/maxresdefault.jpg",
+          "publishedAt": "2026-05-01T11:06:59Z",
+          "url": "https://www.youtube.com/watch?v=oeD4XWmRv3Y",
+          "score": 15,
+          "category": "results"
+        },
+        {
           "id": "3NJcvxiKfAU",
           "type": "video",
           "source": "youtube",
@@ -192,20 +206,6 @@
           "publishedAt": "2026-05-11T11:00:06Z",
           "url": "https://www.youtube.com/watch?v=3NJcvxiKfAU",
           "score": 14,
-          "category": "results"
-        },
-        {
-          "id": "oeD4XWmRv3Y",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "South Korea World Cup | Day 4 | Inside The Tape",
-          "description": "What a wild day of riding we got to witness on this unique South Korean World Cup DH Track. There's boulders rolling everywhere, the ruts are blowing out and the riders are puzzling hard. Ben and Innes get on track to show you exactly what's going down.\n\nPresented by: 6D Helmets\nhttps://www.6dhelmets.com/collections/bike\n\nPick your favourite riders and compete in our free Fantasy League: https://www.pinkbike.com/contest/fantasy/dh/\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/oeD4XWmRv3Y/maxresdefault.jpg",
-          "publishedAt": "2026-05-01T11:06:59Z",
-          "url": "https://www.youtube.com/watch?v=oeD4XWmRv3Y",
-          "score": 11,
           "category": "results"
         },
         {
@@ -282,7 +282,7 @@
           "thumbnail": "https://i.ytimg.com/vi/oGrxCpZGbgo/maxresdefault.jpg",
           "publishedAt": "2026-05-03T14:46:26Z",
           "url": "https://www.youtube.com/watch?v=oGrxCpZGbgo",
-          "score": 11,
+          "score": 15,
           "category": "films"
         },
         {
@@ -448,6 +448,20 @@
           "category": "paddock"
         },
         {
+          "id": "s-p58N-Ztb4",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
+          "channelName": "Pinkbike",
+          "title": "World Cup DH Riders Going Too Big | Saturday Sends #73",
+          "description": "Saturday Sends is back! We're relaunching the series with a World Cup Special and a new upload portal for Fails, Sends and Saves. If you have any clips of you hitting corners harder than normal, sending jumps farther than usual or displaying top tier bravery to conquer a new feature then follow the link below to upload.\n\nUpload your sends here 👉 https://www.pinkbike.com/video/saturday-sends/\n\nSupported by 👉 Trailforks Pro: https://b.link/v63weq\nGet unlimited access to all the best mountain biking trails by clicking the link above.\n\nPinkbike Merch  -  https://pinkbike.link/merch\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram -   https://instagram.com/pinkbike  \nFacebook -  https://facebook.com/pinkbikecom",
+          "thumbnail": "https://i.ytimg.com/vi/s-p58N-Ztb4/maxresdefault.jpg",
+          "publishedAt": "2026-04-18T16:01:17Z",
+          "url": "https://www.youtube.com/watch?v=s-p58N-Ztb4",
+          "score": 7,
+          "category": "paddock"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-slip-and-slide-course-preview-for-the-aletsch-enduro-invitational.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -525,6 +539,20 @@
           "category": "news"
         },
         {
+          "id": "R-PbRqIetgY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCgwpS_N4DQDYsip73rsQ6iA",
+          "channelName": "Downtime Podcast",
+          "title": "The Most Important Run from South Korea?",
+          "description": "SPOILER ALERT - World Cup Downhill racing is SICK!!!\n\nHere's my take on the weekend? What do you think?\n\nVideo - Whoop UCI Mountain BIke World Series\n\n#mtbworldcupdh #mtbracing #worldcupdh",
+          "thumbnail": "https://i.ytimg.com/vi/R-PbRqIetgY/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T18:01:36Z",
+          "url": "https://www.youtube.com/watch?v=R-PbRqIetgY",
+          "score": 12,
+          "category": "news"
+        },
+        {
           "id": "Arxt5BxLxj0",
           "type": "video",
           "source": "youtube",
@@ -581,20 +609,6 @@
           "category": "news"
         },
         {
-          "id": "R-PbRqIetgY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCgwpS_N4DQDYsip73rsQ6iA",
-          "channelName": "Downtime Podcast",
-          "title": "The Most Important Run from South Korea?",
-          "description": "SPOILER ALERT - World Cup Downhill racing is SICK!!!\n\nHere's my take on the weekend? What do you think?\n\nVideo - Whoop UCI Mountain BIke World Series\n\n#mtbworldcupdh #mtbracing #worldcupdh",
-          "thumbnail": "https://i.ytimg.com/vi/R-PbRqIetgY/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T18:01:36Z",
-          "url": "https://www.youtube.com/watch?v=R-PbRqIetgY",
-          "score": 8,
-          "category": "news"
-        },
-        {
           "id": "https://www.pinkbike.com/news/s1-racing-without-bike-sponsor-two-weeks-before-enduro-world-cup-start.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -610,17 +624,18 @@
           "category": "news"
         },
         {
-          "id": "uyN6a27-VGE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "How Neko Mulally ensure Asa Vermette can perform 💪",
-          "description": "We can't wait to see what else Frameworks Racing can do this year 🔥",
-          "thumbnail": "https://i.ytimg.com/vi/uyN6a27-VGE/maxresdefault.jpg",
-          "publishedAt": "2026-05-06T16:01:38Z",
-          "url": "https://www.youtube.com/watch?v=uyN6a27-VGE",
-          "score": 6,
+          "id": "https://www.pinkbike.com/news/racing-rumors-leaked-2027-uci-world-cup-dh-xc-enduro-schedule.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Leaked 2027 UCI World Cup Schedule Suggests 10 DH Races and 12 XC Races",
+          "description": "A leaked document from the Italian Cycling Federation reveals a massive calendar for next season.( Photos: 1, Comments: 107 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb22881812/p2pb22881812.jpg",
+          "publishedAt": "Thu, 14 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/racing-rumors-leaked-2027-uci-world-cup-dh-xc-enduro-schedule.html?trk=rss",
+          "categories": [],
+          "score": 7,
           "category": "news"
         }
       ]
