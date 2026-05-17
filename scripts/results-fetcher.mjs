@@ -235,16 +235,19 @@ async function main() {
   try {
     const result = await fetchResults(venueSlug)
 
-    let existing = { season: 2026, rounds: [] }
+    let existing = { lastUpdated: '', seasons: {} }
     if (fs.existsSync(OUTPUT_PATH)) {
-      existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8'))
+      const raw = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8'))
+      existing = raw.seasons ? raw : { lastUpdated: '', seasons: { '2026': { rounds: raw.rounds||[] } } }
     }
 
-    const idx = existing.rounds.findIndex(r => r.slug === venueSlug)
-    if (idx >= 0) existing.rounds[idx] = result
+    if (!existing.seasons['2026']) existing.seasons['2026']={rounds:[]}
+    const rounds=existing.seasons['2026'].rounds
+    const idx=rounds.findIndex(r => r.slug === venueSlug)
+    if (idx >= 0) rounds[idx] = result
     else {
-      existing.rounds.push(result)
-      existing.rounds.sort((a, b) => a.round - b.round)
+      rounds.push(result)
+      rounds.sort((a, b) => a.round - b.round)
     }
     existing.lastUpdated = new Date().toISOString()
 
