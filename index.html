@@ -471,15 +471,9 @@ html, body {
 #results-view { display:none; padding:0 0 calc(var(--safe-bottom) + 24px); }
 #results-view.active { display:block; }
 
-.rs-nav-row {
-  display:flex; gap:6px; overflow-x:auto; scrollbar-width:none;
-  -webkit-overflow-scrolling:touch; padding:12px 16px 0;
-}
-.rs-nav-row::-webkit-scrollbar { display:none; }
-/* keep old name for compat */
 .rs-round-bar {
   display:flex; gap:6px; overflow-x:auto; scrollbar-width:none;
-  -webkit-overflow-scrolling:touch; padding:12px 16px 0;
+  -webkit-overflow-scrolling:touch; padding:14px 16px 0;
 }
 .rs-round-bar::-webkit-scrollbar { display:none; }
 .rs-round-pill {
@@ -496,7 +490,7 @@ html, body {
 }
 
 .rs-gender-toggle {
-  display:flex; margin:12px 16px 0;
+  display:flex; margin:8px 16px 0;
   background:var(--bg-card); border:0.5px solid var(--border); border-radius:8px; overflow:hidden;
 }
 .rs-gender-btn {
@@ -512,8 +506,8 @@ html, body {
 .rs-section { padding:16px 16px 4px; }
 .rs-section-label {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
-  color:#777; margin-bottom:12px;
+  font-size:10px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--text-muted); margin-bottom:12px;
   display:flex; align-items:center; gap:10px;
 }
 .rs-section-label::after { content:''; flex:1; height:1px; background:var(--border); }
@@ -551,8 +545,8 @@ html, body {
 .pos-1 .rs-rider-name { font-size:15px; }
 .rs-rider-nat {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase;
-  color:#666;
+  font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--text-muted);
 }
 
 .rs-time-col { text-align:right; }
@@ -564,7 +558,7 @@ html, body {
 .pos-1 .rs-time { color:var(--acid); font-size:16px; }
 .rs-gap {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px; color:#666;
+  font-size:10px; color:var(--text-muted);
   font-variant-numeric:tabular-nums; margin-top:3px;
 }
 .pos-1 .rs-gap { color:rgba(212,245,0,0.5); }
@@ -573,31 +567,31 @@ html, body {
 .rs-table { width:100%; border-collapse:collapse; }
 .rs-table tr { border-bottom:0.5px solid #1a1a1a; }
 .rs-table tr:last-child { border-bottom:none; }
-.rs-table td { padding:8px 4px; font-size:13px; vertical-align:middle; }
+.rs-table td { padding:7px 4px; font-size:12px; vertical-align:middle; }
 .rs-td-rank {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:13px; font-weight:600; color:#777;
+  font-size:12px; font-weight:600; color:var(--text-muted);
   width:26px; text-align:center;
 }
 .rs-td-nat {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
-  color:#666; width:34px;
+  font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--text-muted); width:34px;
 }
 .rs-td-name { color:var(--text-primary); font-weight:500; }
 .rs-td-time {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:13px; font-variant-numeric:tabular-nums;
-  color:#aaa; text-align:right; white-space:nowrap;
+  font-size:12px; font-variant-numeric:tabular-nums;
+  color:var(--text-secondary); text-align:right; white-space:nowrap;
 }
 .rs-td-gap {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px; font-variant-numeric:tabular-nums;
-  color:#666; text-align:right; white-space:nowrap; width:48px;
+  font-size:10px; font-variant-numeric:tabular-nums;
+  color:var(--text-muted); text-align:right; white-space:nowrap; width:48px;
 }
 .rs-td-pts {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px; color:#666; text-align:right; width:24px;
+  font-size:10px; color:var(--text-muted); text-align:right; width:24px;
 }
 
 .rs-empty {
@@ -608,7 +602,7 @@ html, body {
 }
 
 .rs-session-toggle {
-  display:flex; margin:8px 16px 0;
+  display:flex; margin:6px 16px 8px;
   background:var(--bg-card); border:0.5px solid var(--border);
   border-radius:8px; overflow:hidden;
 }
@@ -623,29 +617,6 @@ html, body {
 .rs-session-btn.active { background:var(--acid-dim); color:var(--acid); }
 
 
-  #bottom-nav {
-    position: static;
-    border-top: none;
-    border-bottom: 0.5px solid #222;
-    padding-bottom: 0;
-    max-width: 100%;
-    background: #0d0d0d;
-    order: -1;
-  }
-  .nav-btn {
-    flex-direction: row;
-    gap: 8px;
-    padding: 14px 24px;
-    flex: 0;
-  }
-  .nav-btn-icon { font-size: 18px; }
-  .nav-btn-label { font-size: 11px; letter-spacing: 0.1em; }
-  #main-area {
-    padding-bottom: 0;
-  }
-  #header {
-    top: 53px;
-  }
 }
 </style>
 </head>
@@ -660,6 +631,20 @@ html, body {
     <button id="refresh-btn" aria-label="Refresh feed" onclick="loadFeed(true)">↻</button>
   </div>
   <div id="tabs"></div>
+  <!-- Results nav rows — shown only when Results tab active -->
+  <div id="results-nav" style="display:none">
+    <div class="rs-nav-row" id="rs-year-bar"></div>
+    <div class="rs-nav-row" id="rs-round-bar"></div>
+    <div class="rs-gender-toggle">
+      <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
+      <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
+    </div>
+    <div class="rs-session-toggle" id="rs-session-bar">
+      <div class="rs-session-btn active" data-session="finals" onclick="setSession('finals')">Finals</div>
+      <div class="rs-session-btn" data-session="q1" onclick="setSession('q1')">Qual 1</div>
+      <div class="rs-session-btn" data-session="q2" onclick="setSession('q2')">Qual 2</div>
+    </div>
+  </div>
 </div>
 
 <div id="feed">
@@ -677,16 +662,11 @@ html, body {
 
 <!-- Results tab view -->
 <div id="results-view">
-  <!-- Row 1: Year selector -->
-  <div class="rs-nav-row" id="rs-year-bar"></div>
-  <!-- Row 2: Venue/Round selector -->
-  <div class="rs-nav-row" id="rs-round-bar"></div>
-  <!-- Row 3: Field selector -->
+  <div class="rs-round-bar" id="rs-round-bar"></div>
   <div class="rs-gender-toggle">
     <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
     <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
   </div>
-  <!-- Row 4: Session selector -->
   <div class="rs-session-toggle" id="rs-session-bar">
     <div class="rs-session-btn active" data-session="finals" onclick="setSession('finals')">Finals</div>
     <div class="rs-session-btn" data-session="q1" onclick="setSession('q1')">Qual 1</div>
@@ -969,11 +949,13 @@ function buildTabs() {
       if (activeTab === 'results') {
         document.getElementById('feed').style.display = 'none'
         document.getElementById('results-view').classList.add('active')
+        document.getElementById('results-nav').style.display = 'block'
         if (!resultsData) loadResults()
         else renderResults()
       } else {
         document.getElementById('feed').style.display = 'block'
         document.getElementById('results-view').classList.remove('active')
+        document.getElementById('results-nav').style.display = 'none'
         renderFeed()
       }
       window.scrollTo({ top:0, behavior:'smooth' })
@@ -1057,26 +1039,20 @@ function currentRounds() {
 
 function buildSeasonBar() {
   const seasons = Object.keys(resultsData?.seasons || {}).sort().reverse()
-
-  // Year row
-  const yearBar = document.getElementById('rs-year-bar')
-  if (yearBar) {
-    yearBar.innerHTML = seasons.map(yr =>
-      `<div class="rs-round-pill${yr === activeSeason ? ' active' : ''}"
-        onclick="setSeason('${yr}')">${yr}</div>`
-    ).join('')
-  }
-
-  // Round/venue row
-  const roundBar = document.getElementById('rs-round-bar')
+  const bar = document.getElementById('rs-round-bar')
+  const seasonPills = seasons.map(yr =>
+    `<div class="rs-round-pill${yr === activeSeason ? ' active' : ''} rs-season-pill"
+      onclick="setSeason('${yr}')">${yr}</div>`
+  ).join('')
   const rounds = currentRounds()
-  roundBar.innerHTML = rounds.map((r, i) => {
+  const roundPills = rounds.map((r, i) => {
     const label = r.type === 'World Championships'
-      ? `Worlds · ${r.venue.split(/[ ,]/)[0]}`
-      : `R${r.round} · ${r.venue.split(/[ ,]/)[0]}`
+      ? `WC · ${r.venue.split(' ')[0]}`
+      : `R${r.round} · ${r.venue.split(' ')[0]}`
     return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}"
       onclick="setRound(${i})">${label}</div>`
   }).join('')
+  bar.innerHTML = `<div style="display:flex;gap:6px;padding-right:8px;border-right:0.5px solid #222;margin-right:2px">${seasonPills}</div>${roundPills}`
 }
 
 function setSeason(yr) {
