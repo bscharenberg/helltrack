@@ -74,8 +74,9 @@ const INCLUDE_KEYWORDS = [
 const EXCLUDE_KEYWORDS = [
   // Wrong disciplines — hard exclude
   { terms: ['xco', 'xcc', 'cross country', 'cross-country', 'bmx', 'road cycling',
-          'mtbws highlights', 'elite xco', 'elite xcc', 'men\'s elite xco',
-          'women\'s elite xco'], weight: 10 },
+          'elite xco', 'elite xcc', "men's elite xco",
+          "women's elite xco"], weight: 15 },
+  { terms: ['mtbws highlights'], weight: 8 },
 
   // Product noise
   { terms: ['product review', 'gear review', 'bike review', 'first look',
