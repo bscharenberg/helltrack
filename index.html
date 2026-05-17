@@ -1102,14 +1102,15 @@ function sessionKey() {
 }
 
 function updateSessionBar() {
-  // Show/hide Q1/Q2 pills based on whether data exists for this round
-  const round   = resultsData?.rounds?.[activeRound]
+  const rounds  = currentRounds()
+  const round   = rounds[activeRound]
   const suffix  = activeGender === 'men' ? 'men' : 'women'
   const hasQ1   = !!(round?.sessions?.[`qualifying-1-${suffix}`]?.length)
   const hasQ2   = !!(round?.sessions?.[`qualifying-2-${suffix}`]?.length)
+  const hasQual = !!(round?.sessions?.[`qualifying-${suffix}`]?.length)
   const bar     = document.getElementById('rs-session-bar')
   if (bar) {
-    bar.querySelector('[data-session="q1"]').style.display = hasQ1 ? '' : 'none'
+    bar.querySelector('[data-session="q1"]').style.display = (hasQ1 || hasQual) ? '' : 'none'
     bar.querySelector('[data-session="q2"]').style.display = hasQ2 ? '' : 'none'
   }
 }
@@ -1142,7 +1143,7 @@ function renderResults() {
   const top5Html = top5.map(r => {
     const posClass = isFinals ? `pos-${r.rank}` : `pos-${r.rank <= 3 ? r.rank : 4}`
     const name     = formatName(r.name)
-    const gap      = r.rank === 1 ? 'Fastest' : r.gap || ''
+    const gap      = r.rank === 1 ? (isFinals ? 'Winner' : 'Fastest') : r.gap || ''
     return `<div class="rs-hero-row ${posClass}">
   <div class="rs-pos-num">${r.rank}</div>
   <div class="rs-rider-info">
