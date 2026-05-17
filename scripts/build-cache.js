@@ -25,7 +25,7 @@ const { filterItems, groupByCategory } = require('./content-filter')
 // ─── Config ───────────────────────────────────────────────────────────────────
 
 const OUTPUT_PATH = path.join(__dirname, '..', 'public', 'cache.json')
-const MAX_ITEMS_PER_CATEGORY = 10   // cap per category so the feed doesn't bloat
+const MAX_ITEMS_PER_CATEGORY = 20   // cap per category so the feed doesn't bloat
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -44,14 +44,20 @@ function deduplicate(items) {
 }
 
 /**
- * Cap each category to MAX_ITEMS_PER_CATEGORY, keeping highest-scored items
+ * Cap each category to MAX_ITEMS_PER_CATEGORY.
+ * Sort by publishedAt newest-first so freshest content always appears at top.
  */
 function capCategories(grouped) {
   const capped = {}
   for (const [key, cat] of Object.entries(grouped)) {
+    const sorted = [...cat.items].sort((a, b) => {
+      const da = a.publishedAt ? new Date(a.publishedAt).getTime() : 0
+      const db = b.publishedAt ? new Date(b.publishedAt).getTime() : 0
+      return db - da   // newest first
+    })
     capped[key] = {
       ...cat,
-      items: cat.items.slice(0, MAX_ITEMS_PER_CATEGORY),
+      items: sorted.slice(0, MAX_ITEMS_PER_CATEGORY),
     }
   }
   return capped
