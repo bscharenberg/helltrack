@@ -43,6 +43,8 @@ const INCLUDE_KEYWORDS = [
   { terms: ['race run', 'qualifying run', 'finals run', 'winning run', 'race day',
             'qual run', 'seeding run', 'full race', 'dhi'], weight: 4 },
   { terms: ['world champs', 'world championship', 'world champion'], weight: 3 },
+  { terms: ['world cup dh', 'world cup downhill', 'uci world cup schedule',
+            'dh world cup schedule', 'world cup enduro'], weight: 4 },
   { terms: ['world cup'], weight: 2 },
   { terms: ['qualifying', 'finals', 'semi final', 'q1', 'q2', 'seeding'], weight: 3 },
   { terms: ['podium', 'race result', 'race winner', 'stage win', 'overall win'], weight: 3 },
