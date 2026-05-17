@@ -10,7 +10,7 @@
 // ─── Tuning constants ────────────────────────────────────────────────────────
 
 const MIN_SCORE = 4        // items scoring below this are dropped
-const BOOST_SCORE = 3      // source boost for trusted channels (modest — exclusions still apply)
+const BOOST_SCORE = 4      // source boost for trusted channels (modest — exclusions still apply)
 const MAX_AGE_DAYS = 30    // items older than this are dropped regardless of score
 
 // ─── Source-level boosts ─────────────────────────────────────────────────────
@@ -35,11 +35,13 @@ const INCLUDE_KEYWORDS = [
   { terms: ['enduro world cup', 'ews', 'enduro world series', 'uci enduro', 'uci edr'], weight: 5 },
   { terms: ['fort william', 'leogang', 'val di sole', 'loudenvielle', 'les gets',
             'champery', 'vallnord', 'snowshoe', 'mont sainte anne', 'lake placid',
-            'bielsko', 'maydena', 'cairns'], weight: 4 },
+            'bielsko', 'maydena', 'cairns', 'south korea', 'yongpyong',
+            'mona yongpyong', 'la thuile', 'pal arinsal', 'lenzerheide',
+            'whistler', 'lake placid'], weight: 4 },
 
   // Race format terms — high confidence
   { terms: ['race run', 'qualifying run', 'finals run', 'winning run', 'race day',
-            'qual run', 'seeding run'], weight: 4 },
+            'qual run', 'seeding run', 'full race', 'dhi'], weight: 4 },
   { terms: ['world champs', 'world championship', 'world champion'], weight: 3 },
   { terms: ['world cup'], weight: 2 },
   { terms: ['qualifying', 'finals', 'semi final', 'q1', 'q2', 'seeding'], weight: 3 },
@@ -48,6 +50,7 @@ const INCLUDE_KEYWORDS = [
   // Key content series
   { terms: ['inside the tape', 'vital raw', 'story of the race', 'wyntv', 'wyn tv',
             'cathro', 'race analysis'], weight: 4 },
+  { terms: ['b line', 'mtbws full race', 'mtbws highlights dhi'], weight: 3 },
   { terms: ['track walk', 'course preview', 'track preview', 'course walk'], weight: 3 },
   { terms: ['ghost mode', 'ghosted', 'split times', 'time analysis'], weight: 3 },
 
@@ -95,7 +98,7 @@ const CATEGORIES = [
     label: 'Race runs',
     keywords: ['race run', 'qualifying run', 'finals run', 'winning run', 'vital raw',
                'qual run', 'seeding run', 'gopro pov', 'pov run', 'full run',
-               'race day', 'finals', 'qualifying'],
+               'full race', 'dhi', 'race day', 'finals', 'qualifying'],
   },
   {
     id: 'results',
@@ -115,7 +118,8 @@ const CATEGORIES = [
     label: 'Paddock',
     keywords: ['podcast', 'interview', 'track walk', 'course preview', 'downtime',
                'just ride', 'rob warner', 'team update', 'bike check', 'rider update',
-               'jack moir', 'bernard kerr', 'moi moi'],
+               'jack moir', 'bernard kerr', 'moi moi', 'b line', 'behind the scenes',
+               'ep1', 'ep2', 'ep3', 'just getting started'],
   },
   {
     id: 'news',
