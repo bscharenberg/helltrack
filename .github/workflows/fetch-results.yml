@@ -1,8 +1,6 @@
 name: Fetch Race Results
 
 on:
-  # Manual trigger — run this after each race weekend
-  # Go to Actions tab → Fetch Race Results → Run workflow → enter venue slug
   workflow_dispatch:
     inputs:
       venue_slug:
@@ -21,27 +19,36 @@ on:
           - whistler-2026
           - lake-placid-2026
 
-  # Automatic triggers — runs Sunday evening after each race
-  # Times are UTC. Races finish ~16:00-17:00 local time.
-  # Running at 20:00 UTC gives 3-4 hours for results to be published.
   schedule:
-    # R2 Loudenvielle — Sun May 31
+    # Each round runs Fri-Sun. We fetch after qualifying (Sat evening) and after finals (Sun evening).
+    # All times UTC. Races typically finish by 17:00 local — 20:00 UTC is safe for most venues.
+
+    # R2 Loudenvielle — Sat May 30 (quali) + Sun May 31 (finals)
+    - cron: '0 20 30 5 *'
     - cron: '0 20 31 5 *'
-    # R3 Leogang — Sun Jun 14
+    # R3 Leogang — Sat Jun 13 + Sun Jun 14
+    - cron: '0 20 13 6 *'
     - cron: '0 20 14 6 *'
-    # R4 Lenzerheide — Sun Jun 21
+    # R4 Lenzerheide — Sat Jun 20 + Sun Jun 21
+    - cron: '0 20 20 6 *'
     - cron: '0 20 21 6 *'
-    # R5 La Thuile — Sun Jul 5
+    # R5 La Thuile — Sat Jul 4 + Sun Jul 5
+    - cron: '0 20 4 7 *'
     - cron: '0 20 5 7 *'
-    # R6 Pal Arinsal — Sun Jul 12
+    # R6 Pal Arinsal — Sat Jul 11 + Sun Jul 12
+    - cron: '0 20 11 7 *'
     - cron: '0 20 12 7 *'
-    # R7 Les Gets — Sun Aug 23
+    # R7 Les Gets — Sat Aug 22 + Sun Aug 23
+    - cron: '0 20 22 8 *'
     - cron: '0 20 23 8 *'
-    # Worlds Val di Sole — Sun Aug 30
+    # Worlds Val di Sole — Sat Aug 29 + Sun Aug 30
+    - cron: '0 20 29 8 *'
     - cron: '0 20 30 8 *'
-    # R8 Whistler — Sun Sep 27
+    # R8 Whistler — Sat Sep 26 + Sun Sep 27
+    - cron: '0 20 26 9 *'
     - cron: '0 20 27 9 *'
-    # R9 Lake Placid — Sun Oct 4
+    # R9 Lake Placid — Sat Oct 3 + Sun Oct 4
+    - cron: '0 20 3 10 *'
     - cron: '0 20 4 10 *'
 
 jobs:
@@ -61,29 +68,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Determine venue slug:
-      # - If triggered manually, use the input
-      # - If triggered by schedule, map the date to the right slug
       - name: Determine venue slug
         id: venue
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "slug=${{ github.event.inputs.venue_slug }}" >> $GITHUB_OUTPUT
           else
-            # Map today's date to venue slug
             MONTH=$(date -u +%m)
             DAY=$(date -u +%d)
             case "${MONTH}-${DAY}" in
-              05-31) echo "slug=loudenvielle-2026" >> $GITHUB_OUTPUT ;;
-              06-14) echo "slug=leogang-2026" >> $GITHUB_OUTPUT ;;
-              06-21) echo "slug=lenzerheide-2026" >> $GITHUB_OUTPUT ;;
-              07-05) echo "slug=la-thuile-2026" >> $GITHUB_OUTPUT ;;
-              07-12) echo "slug=pal-arinsal-2026" >> $GITHUB_OUTPUT ;;
-              08-23) echo "slug=les-gets-2026" >> $GITHUB_OUTPUT ;;
-              08-30) echo "slug=val-di-sole-2026" >> $GITHUB_OUTPUT ;;
-              09-27) echo "slug=whistler-2026" >> $GITHUB_OUTPUT ;;
-              10-04) echo "slug=lake-placid-2026" >> $GITHUB_OUTPUT ;;
-              *)     echo "slug=unknown" >> $GITHUB_OUTPUT ;;
+              05-30|05-31) echo "slug=loudenvielle-2026" >> $GITHUB_OUTPUT ;;
+              06-13|06-14) echo "slug=leogang-2026" >> $GITHUB_OUTPUT ;;
+              06-20|06-21) echo "slug=lenzerheide-2026" >> $GITHUB_OUTPUT ;;
+              07-04|07-05) echo "slug=la-thuile-2026" >> $GITHUB_OUTPUT ;;
+              07-11|07-12) echo "slug=pal-arinsal-2026" >> $GITHUB_OUTPUT ;;
+              08-22|08-23) echo "slug=les-gets-2026" >> $GITHUB_OUTPUT ;;
+              08-29|08-30) echo "slug=val-di-sole-2026" >> $GITHUB_OUTPUT ;;
+              09-26|09-27) echo "slug=whistler-2026" >> $GITHUB_OUTPUT ;;
+              10-03|10-04) echo "slug=lake-placid-2026" >> $GITHUB_OUTPUT ;;
+              *)            echo "slug=unknown" >> $GITHUB_OUTPUT ;;
             esac
           fi
 
