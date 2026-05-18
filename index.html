@@ -471,11 +471,11 @@ html, body {
 #results-view { display:none; padding:0 0 calc(var(--safe-bottom) + 24px); }
 #results-view.active { display:block; }
 
-.rs-round-bar {
+.rs-nav-row, .rs-round-bar {
   display:flex; gap:6px; overflow-x:auto; scrollbar-width:none;
-  -webkit-overflow-scrolling:touch; padding:14px 16px 0;
+  -webkit-overflow-scrolling:touch; padding:8px 16px 0; flex-wrap:nowrap;
 }
-.rs-round-bar::-webkit-scrollbar { display:none; }
+.rs-nav-row::-webkit-scrollbar, .rs-round-bar::-webkit-scrollbar { display:none; }
 .rs-round-pill {
   font-family:'Barlow Condensed',sans-serif;
   font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
@@ -490,7 +490,7 @@ html, body {
 }
 
 .rs-gender-toggle {
-  display:flex; margin:12px 16px 0;
+  display:flex; margin:8px 16px 0;
   background:var(--bg-card); border:0.5px solid var(--border); border-radius:8px; overflow:hidden;
 }
 .rs-gender-btn {
@@ -506,8 +506,8 @@ html, body {
 .rs-section { padding:16px 16px 4px; }
 .rs-section-label {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:10px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
-  color:var(--text-muted); margin-bottom:12px;
+  font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+  color:#777; margin-bottom:12px;
   display:flex; align-items:center; gap:10px;
 }
 .rs-section-label::after { content:''; flex:1; height:1px; background:var(--border); }
@@ -545,8 +545,8 @@ html, body {
 .pos-1 .rs-rider-name { font-size:15px; }
 .rs-rider-nat {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase;
-  color:var(--text-muted);
+  font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase;
+  color:#666;
 }
 
 .rs-time-col { text-align:right; }
@@ -558,7 +558,7 @@ html, body {
 .pos-1 .rs-time { color:var(--acid); font-size:16px; }
 .rs-gap {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:10px; color:var(--text-muted);
+  font-size:11px; color:#666;
   font-variant-numeric:tabular-nums; margin-top:3px;
 }
 .pos-1 .rs-gap { color:rgba(212,245,0,0.5); }
@@ -567,31 +567,31 @@ html, body {
 .rs-table { width:100%; border-collapse:collapse; }
 .rs-table tr { border-bottom:0.5px solid #1a1a1a; }
 .rs-table tr:last-child { border-bottom:none; }
-.rs-table td { padding:7px 4px; font-size:12px; vertical-align:middle; }
+.rs-table td { padding:8px 4px; font-size:13px; vertical-align:middle; }
 .rs-td-rank {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:12px; font-weight:600; color:var(--text-muted);
+  font-size:13px; font-weight:600; color:#777;
   width:26px; text-align:center;
 }
 .rs-td-nat {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
-  color:var(--text-muted); width:34px;
+  font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  color:#666; width:34px;
 }
 .rs-td-name { color:var(--text-primary); font-weight:500; }
 .rs-td-time {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:12px; font-variant-numeric:tabular-nums;
-  color:var(--text-secondary); text-align:right; white-space:nowrap;
+  font-size:13px; font-variant-numeric:tabular-nums;
+  color:#aaa; text-align:right; white-space:nowrap;
 }
 .rs-td-gap {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:10px; font-variant-numeric:tabular-nums;
-  color:var(--text-muted); text-align:right; white-space:nowrap; width:48px;
+  font-size:11px; font-variant-numeric:tabular-nums;
+  color:#666; text-align:right; white-space:nowrap; width:48px;
 }
 .rs-td-pts {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:10px; color:var(--text-muted); text-align:right; width:24px;
+  font-size:11px; color:#666; text-align:right; width:24px;
 }
 
 .rs-empty {
@@ -602,7 +602,7 @@ html, body {
 }
 
 .rs-session-toggle {
-  display:flex; margin:8px 16px 0;
+  display:flex; margin:6px 16px 8px;
   background:var(--bg-card); border:0.5px solid var(--border);
   border-radius:8px; overflow:hidden;
 }
@@ -637,9 +637,6 @@ html, body {
   #main-area {
     padding-bottom: 0;
   }
-  #header {
-    top: 53px;
-  }
 }
 </style>
 </head>
@@ -654,6 +651,19 @@ html, body {
     <button id="refresh-btn" aria-label="Refresh feed" onclick="loadFeed(true)">↻</button>
   </div>
   <div id="tabs"></div>
+  <div id="results-nav" style="display:none; padding-bottom:6px">
+    <div class="rs-nav-row" id="rs-year-bar"></div>
+    <div class="rs-nav-row" id="rs-round-bar"></div>
+    <div class="rs-gender-toggle">
+      <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
+      <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
+    </div>
+    <div class="rs-session-toggle" id="rs-session-bar">
+      <div class="rs-session-btn active" data-session="finals" onclick="setSession('finals')">Finals</div>
+      <div class="rs-session-btn" data-session="q1" onclick="setSession('q1')">Qual 1</div>
+      <div class="rs-session-btn" data-session="q2" onclick="setSession('q2')">Qual 2</div>
+    </div>
+  </div>
 </div>
 
 <div id="feed">
@@ -671,16 +681,6 @@ html, body {
 
 <!-- Results tab view -->
 <div id="results-view">
-  <div class="rs-round-bar" id="rs-round-bar"></div>
-  <div class="rs-gender-toggle">
-    <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
-    <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
-  </div>
-  <div class="rs-session-toggle" id="rs-session-bar">
-    <div class="rs-session-btn active" data-session="finals" onclick="setSession('finals')">Finals</div>
-    <div class="rs-session-btn" data-session="q1" onclick="setSession('q1')">Qual 1</div>
-    <div class="rs-session-btn" data-session="q2" onclick="setSession('q2')">Qual 2</div>
-  </div>
   <div id="rs-content"></div>
 </div>
 
@@ -946,7 +946,7 @@ function buildTabs() {
   const cats = data?.categories || {}
   const all = [
     { id:'all', label:'All' },
-    { id:'results', label:'Results' },
+    { id:'standings', label:'Results' },
     ...Object.keys(cats).map(id => ({ id, label: CAT_LABELS[id] || id })),
   ]
   tabs.innerHTML = all.map(t => `<div class="tab${t.id===activeTab?' active':''}" data-tab="${t.id}">${t.label}</div>`).join('')
@@ -955,14 +955,14 @@ function buildTabs() {
       activeTab = el.dataset.tab
       tabs.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
       el.classList.add('active')
-      if (activeTab === 'results') {
-        document.getElementById('feed').style.display = 'none'
-        document.getElementById('results-view').classList.add('active')
+      const isResults = activeTab === 'standings'
+      document.getElementById('feed').style.display          = isResults ? 'none' : 'block'
+      document.getElementById('results-view').classList.toggle('active', isResults)
+      document.getElementById('results-nav').style.display   = isResults ? 'block' : 'none'
+      if (isResults) {
         if (!resultsData) loadResults()
         else renderResults()
       } else {
-        document.getElementById('feed').style.display = 'block'
-        document.getElementById('results-view').classList.remove('active')
         renderFeed()
       }
       window.scrollTo({ top:0, behavior:'smooth' })
@@ -1046,20 +1046,24 @@ function currentRounds() {
 
 function buildSeasonBar() {
   const seasons = Object.keys(resultsData?.seasons || {}).sort().reverse()
-  const bar = document.getElementById('rs-round-bar')
-  const seasonPills = seasons.map(yr =>
-    `<div class="rs-round-pill${yr === activeSeason ? ' active' : ''} rs-season-pill"
-      onclick="setSeason('${yr}')">${yr}</div>`
-  ).join('')
+  const yearBar  = document.getElementById('rs-year-bar')
+  const roundBar = document.getElementById('rs-round-bar')
+  if (yearBar) {
+    yearBar.innerHTML = seasons.map(yr =>
+      `<div class="rs-round-pill${yr === activeSeason ? ' active' : ''}"
+        onclick="setSeason('${yr}')">${yr}</div>`
+    ).join('')
+  }
   const rounds = currentRounds()
-  const roundPills = rounds.map((r, i) => {
-    const label = r.type === 'World Championships'
-      ? `WC · ${r.venue.split(' ')[0]}`
-      : `R${r.round} · ${r.venue.split(' ')[0]}`
-    return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}"
-      onclick="setRound(${i})">${label}</div>`
-  }).join('')
-  bar.innerHTML = `<div style="display:flex;gap:6px;padding-right:8px;border-right:0.5px solid #222;margin-right:2px">${seasonPills}</div>${roundPills}`
+  if (roundBar) {
+    roundBar.innerHTML = rounds.map((r, i) => {
+      const label = r.type === 'World Championships'
+        ? `Worlds · ${r.venue.split(/[ ,]/)[0]}`
+        : `R${r.round} · ${r.venue.split(/[ ,]/)[0]}`
+      return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}"
+        onclick="setRound(${i})">${label}</div>`
+    }).join('')
+  }
 }
 
 function setSeason(yr) {
@@ -1227,8 +1231,48 @@ function dismissIOSTip() {
 // Show after a short delay so it doesn't compete with page load
 setTimeout(showIOSTip, 3000)
 
+
+// ── iOS install tip ───────────────────────────────────────────────────────────
+function showIOSTip() {
+  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent)
+  const isStandalone = window.navigator.standalone === true
+  const dismissed = localStorage.getItem('helltrack-ios-tip-dismissed')
+  if (isIOS && !isStandalone && !dismissed) {
+    const tip = document.getElementById('ios-install-tip')
+    if (tip) tip.style.display = 'flex'
+  }
+}
+
+function dismissIOSTip() {
+  const tip = document.getElementById('ios-install-tip')
+  if (tip) tip.style.display = 'none'
+  localStorage.setItem('helltrack-ios-tip-dismissed', '1')
+}
+
+setTimeout(showIOSTip, 3000)
+
 loadFeed()
 </script>
+
+<!-- iOS install tip -->
+<div id="ios-install-tip" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:190;
+  background:#191919; border-top:0.5px solid #2a2a2a;
+  padding:12px 16px calc(var(--safe-bottom) + 12px);
+  flex-direction:column; gap:6px;">
+  <div style="display:flex; align-items:center; justify-content:space-between;">
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600;
+        letter-spacing:0.06em; text-transform:uppercase; color:var(--text-primary); margin-bottom:2px;">
+        Add to home screen
+      </div>
+      <div style="font-size:12px; color:var(--text-muted);">
+        Tap <strong style="color:#888">Share</strong> then <strong style="color:#888">Add to Home Screen</strong>
+      </div>
+    </div>
+    <button onclick="dismissIOSTip()" style="background:none; border:none; color:var(--text-muted);
+      font-size:22px; cursor:pointer; padding:4px; line-height:1; flex-shrink:0;">×</button>
+  </div>
+</div>
 
 <!-- iOS install tip -->
 <div id="ios-install-tip" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:190;
