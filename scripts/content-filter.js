@@ -24,6 +24,7 @@ const TRUSTED_SOURCES = new Set([
   'UCCb8I3PHEUFPV0Jds0-_eig',  // Santa Cruz Syndicate
   'UCd77cWCYmO6alSLXXRHMoqw',  // Jack Moir / Moi Moi TV
   'UCOYc6SI_fVrNvoutot7D9IA',  // Bernard Kerr
+  'UCtvJR7iamL8WFAbvpsC2HTw',  // WynTV (Wyn Masters)
 ])
 
 // ─── Keyword scoring ─────────────────────────────────────────────────────────
@@ -37,7 +38,7 @@ const INCLUDE_KEYWORDS = [
             'champery', 'vallnord', 'snowshoe', 'mont sainte anne', 'lake placid',
             'bielsko', 'maydena', 'cairns', 'south korea', 'yongpyong',
             'mona yongpyong', 'la thuile', 'pal arinsal', 'lenzerheide',
-            'whistler', 'lake placid'], weight: 4 },
+            'whistler'], weight: 4 },
 
   // Race format terms — high confidence
   { terms: ['race run', 'qualifying run', 'finals run', 'winning run', 'race day',
@@ -122,7 +123,7 @@ const CATEGORIES = [
     keywords: ['podcast', 'interview', 'track walk', 'course preview', 'downtime',
                'just ride', 'rob warner', 'team update', 'bike check', 'rider update',
                'jack moir', 'bernard kerr', 'moi moi', 'b line', 'behind the scenes',
-               'ep1', 'ep2', 'ep3', 'just getting started'],
+               'just getting started', 'wyntv', 'wyn tv'],
   },
   {
     id: 'news',
