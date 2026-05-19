@@ -954,7 +954,7 @@ function renderFeed() {
 
   let html = '<div style="padding:4px 0">'
   allItems.forEach((item, i) => {
-    html += i === heroIdx ? renderHero(item) : renderRow(item)
+    html += i === heroIdx ? renderHero(item, true) : renderRow(item, true)
   })
   html += '</div>'
 
