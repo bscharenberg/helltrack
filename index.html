@@ -156,12 +156,6 @@ html, body {
   height: 1px;
   background: var(--border);
 }
-.cat-badge {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-  padding: 2px 6px; border-radius: 3px;
-  background: rgba(212,245,0,0.07); color: rgba(212,245,0,0.45);
-}
 
 /* ── Hero card ── */
 .card-hero {
@@ -877,7 +871,7 @@ sheet.addEventListener('touchend', e => {
   if (e.changedTouches[0].clientY - touchStartY > 80) closeSheet()
 }, { passive: true })
 
-function renderHero(item, showBadge) {
+function renderHero(item) {
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
   return `<div class="card-hero" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
@@ -894,13 +888,12 @@ function renderHero(item, showBadge) {
       <span class="meta-source ${sc}">${srcName(item)}</span>
       <div class="meta-dot"></div>
       <span>${timeAgo(item.publishedAt)}</span>
-      ${showBadge && item._catId && CAT_LABELS[item._catId] ? `<div class="meta-dot"></div><span class="cat-badge">${CAT_LABELS[item._catId]}</span>` : ''}
     </div>
   </div>
 </div>`
 }
 
-function renderRow(item, showBadge) {
+function renderRow(item) {
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
   const isPodcast = item.type === 'podcast'
@@ -909,9 +902,6 @@ function renderRow(item, showBadge) {
     : isPodcast
       ? `<div class="podcast-icon-sm">♪</div>`
       : `<div class="play-btn-small"><div class="play-icon-sm"></div></div>`
-  const badge = showBadge && item._catId && CAT_LABELS[item._catId]
-    ? `<div class="meta-dot"></div><span class="cat-badge">${CAT_LABELS[item._catId]}</span>`
-    : ''
   return `<div class="card-row" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
   <div class="row-thumb">
     ${lazyImg(item.thumbnail, 'row-img')}
@@ -923,69 +913,48 @@ function renderRow(item, showBadge) {
       <span class="meta-source ${sc}">${srcName(item)}</span>
       <div class="meta-dot"></div>
       <span>${timeAgo(item.publishedAt)}</span>
-      ${badge}
     </div>
   </div>
 </div>`
 }
 
 let data = null
-let activeTab = 'all'
+let activeTab = 'feed'
 
 function renderFeed() {
   if (!data) return
-  const el   = document.getElementById('content')
+  const content = document.getElementById('content')
   const cats = data.categories || {}
+  let html = ''
 
-  // Collect all items flat with category id attached
-  let allItems = []
-  for (const [id, cat] of Object.entries(cats)) {
-    for (const item of (cat.items || [])) {
-      allItems.push({ ...item, _catId: id })
-    }
+  const entries = activeTab === 'all'
+    ? Object.entries(cats)
+    : Object.entries(cats).filter(([id]) => id === activeTab)
+
+  for (const [id, cat] of entries) {
+    if (!cat.items?.length) continue
+    html += `<div class="section"><div class="section-label">${CAT_LABELS[id] || cat.label}</div>`
+    cat.items.forEach((item, i) => {
+      html += i === 0 ? renderHero(item) : renderRow(item)
+    })
+    html += '</div>'
   }
 
-  // Sort newest first
-  allItems.sort((a, b) => {
-    const da = a.publishedAt ? new Date(a.publishedAt).getTime() : 0
-    const db = b.publishedAt ? new Date(b.publishedAt).getTime() : 0
-    return db - da
-  })
-
-  // Filter by active tab (Results tab handled separately, never reaches here)
-  const filtered = activeTab === 'all'
-    ? allItems
-    : allItems.filter(i => i._catId === activeTab)
-
-  if (!filtered.length) {
-    el.innerHTML = `<div style="padding:60px 24px;text-align:center">
+  if (!html) {
+    html = `<div style="padding:60px 24px;text-align:center">
       <p style="font-family:'Barlow Condensed';font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">No content in this category</p>
     </div>`
-    if (data.builtAt) document.getElementById('updated').textContent = 'Updated ' + timeAgo(data.builtAt)
-    return
   }
 
-  // Hero: first YouTube item (Pinkbike thumbnails too low-res for hero)
-  const heroIdx = filtered.findIndex(i => i.source !== 'pinkbike')
-  const showBadges = activeTab === 'all'
-
-  let html = '<div style="padding:4px 0">'
-  filtered.forEach((item, i) => {
-    html += i === heroIdx ? renderHero(item, showBadges) : renderRow(item, showBadges)
-  })
-  html += '</div>'
-
-  el.innerHTML = html
+  content.innerHTML = html
   if (data.builtAt) document.getElementById('updated').textContent = 'Updated ' + timeAgo(data.builtAt)
 }
 
 function buildTabs() {
   const tabs = document.getElementById('tabs')
-  const cats = data?.categories || {}
   const all = [
-    { id:'all', label:'All' },
+    { id:'feed',      label:'Feed' },
     { id:'standings', label:'Results' },
-    ...Object.keys(cats).map(id => ({ id, label: CAT_LABELS[id] || id })),
   ]
   tabs.innerHTML = all.map(t => `<div class="tab${t.id===activeTab?' active':''}" data-tab="${t.id}">${t.label}</div>`).join('')
   tabs.querySelectorAll('.tab').forEach(el => {
@@ -1269,8 +1238,48 @@ function dismissIOSTip() {
 // Show after a short delay so it doesn't compete with page load
 setTimeout(showIOSTip, 3000)
 
+
+// ── iOS install tip ───────────────────────────────────────────────────────────
+function showIOSTip() {
+  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent)
+  const isStandalone = window.navigator.standalone === true
+  const dismissed = localStorage.getItem('helltrack-ios-tip-dismissed')
+  if (isIOS && !isStandalone && !dismissed) {
+    const tip = document.getElementById('ios-install-tip')
+    if (tip) tip.style.display = 'flex'
+  }
+}
+
+function dismissIOSTip() {
+  const tip = document.getElementById('ios-install-tip')
+  if (tip) tip.style.display = 'none'
+  localStorage.setItem('helltrack-ios-tip-dismissed', '1')
+}
+
+setTimeout(showIOSTip, 3000)
+
 loadFeed()
 </script>
+
+<!-- iOS install tip -->
+<div id="ios-install-tip" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:190;
+  background:#191919; border-top:0.5px solid #2a2a2a;
+  padding:12px 16px calc(var(--safe-bottom) + 12px);
+  flex-direction:column; gap:6px;">
+  <div style="display:flex; align-items:center; justify-content:space-between;">
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600;
+        letter-spacing:0.06em; text-transform:uppercase; color:var(--text-primary); margin-bottom:2px;">
+        Add to home screen
+      </div>
+      <div style="font-size:12px; color:var(--text-muted);">
+        Tap <strong style="color:#888">Share</strong> then <strong style="color:#888">Add to Home Screen</strong>
+      </div>
+    </div>
+    <button onclick="dismissIOSTip()" style="background:none; border:none; color:var(--text-muted);
+      font-size:22px; cursor:pointer; padding:4px; line-height:1; flex-shrink:0;">×</button>
+  </div>
+</div>
 
 <!-- iOS install tip -->
 <div id="ios-install-tip" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:190;
