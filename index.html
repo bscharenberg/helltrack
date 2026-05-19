@@ -178,6 +178,15 @@ html, body {
   position: relative;
   overflow: hidden;
 }
+@media (min-width: 600px) {
+  .hero-thumb {
+    aspect-ratio: unset;
+    max-height: 360px;
+  }
+  .hero-thumb img {
+    max-height: 360px;
+  }
+}
 .hero-thumb img {
   width: 100%; height: 100%;
   object-fit: cover;
