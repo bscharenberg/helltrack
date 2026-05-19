@@ -934,8 +934,11 @@ function renderFeed() {
   for (const [id, cat] of entries) {
     if (!cat.items?.length) continue
     html += `<div class="section"><div class="section-label">${CAT_LABELS[id] || cat.label}</div>`
+
+    // Hero slot: use first YouTube item — Pinkbike thumbnails are too low-res for hero
+    const heroIdx = cat.items.findIndex(i => i.source !== 'pinkbike')
     cat.items.forEach((item, i) => {
-      html += i === 0 ? renderHero(item) : renderRow(item)
+      html += i === heroIdx ? renderHero(item) : renderRow(item)
     })
     html += '</div>'
   }
