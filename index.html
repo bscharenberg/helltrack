@@ -871,7 +871,7 @@ sheet.addEventListener('touchend', e => {
   if (e.changedTouches[0].clientY - touchStartY > 80) closeSheet()
 }, { passive: true })
 
-function renderHero(item) {
+function renderHero(item, showBadge) {
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
   return `<div class="card-hero" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
@@ -888,12 +888,13 @@ function renderHero(item) {
       <span class="meta-source ${sc}">${srcName(item)}</span>
       <div class="meta-dot"></div>
       <span>${timeAgo(item.publishedAt)}</span>
+      ${showBadge && item._catId && CAT_LABELS[item._catId] ? `<div class="meta-dot"></div><span class="cat-badge">${CAT_LABELS[item._catId]}</span>` : ''}
     </div>
   </div>
 </div>`
 }
 
-function renderRow(item) {
+function renderRow(item, showBadge) {
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
   const isPodcast = item.type === 'podcast'
@@ -902,6 +903,9 @@ function renderRow(item) {
     : isPodcast
       ? `<div class="podcast-icon-sm">♪</div>`
       : `<div class="play-btn-small"><div class="play-icon-sm"></div></div>`
+  const badge = showBadge && item._catId && CAT_LABELS[item._catId]
+    ? `<div class="meta-dot"></div><span class="cat-badge">${CAT_LABELS[item._catId]}</span>`
+    : ''
   return `<div class="card-row" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
   <div class="row-thumb">
     ${lazyImg(item.thumbnail, 'row-img')}
@@ -913,6 +917,7 @@ function renderRow(item) {
       <span class="meta-source ${sc}">${srcName(item)}</span>
       <div class="meta-dot"></div>
       <span>${timeAgo(item.publishedAt)}</span>
+      ${badge}
     </div>
   </div>
 </div>`
