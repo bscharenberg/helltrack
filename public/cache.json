@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-17T23:09:39.071Z",
-  "totalItems": 74,
+  "builtAt": "2026-05-19T03:27:16.306Z",
+  "totalItems": 76,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -13,7 +13,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Andreas Kolb's Wild Winning Run POV from the Weissensee DH 2026",
-          "description": "Jump on board with Andreas Kolb for a flat-out finals race run.( Comments: 8 )",
+          "description": "Jump on board with Andreas Kolb for a flat-out finals race run.( Comments: 22 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29730658/p2pb29730658.jpg",
           "publishedAt": "Sun, 17 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/andreas-kolbs-wild-winning-run-pov-from-the-weissensee-dh-2026.html?trk=rss",
@@ -28,7 +28,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Hattie Harnden &amp; Charlie Hatton Win the iXS EDC Round 2 at Fort William",
-          "description": "Riders faced wet weather conditions for finals day in Fort William.( Photos: 15, Comments: 21 )",
+          "description": "Riders faced wet weather conditions for finals day in Fort William.( Photos: 15, Comments: 51 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29730084/p2pb29730084.jpg",
           "publishedAt": "Sun, 17 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/final-results-ixs-edc-2-fort-william-2026.html?trk=rss",
@@ -48,21 +48,6 @@
           "publishedAt": "2026-05-13T17:09:53Z",
           "url": "https://www.youtube.com/watch?v=dPFs1_6xUj4",
           "score": 11,
-          "category": "race-runs"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/tahnee-seagrave-sidelined-4-6-weeks-following-world-cup-crash-in-south-korea.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Tahnee Seagrave Sidelined 4-6 Weeks Following World Cup Crash in South Korea",
-          "description": "A qualifying crash at the season opener aggravated a long-standing elbow injury, putting the FMD Racing star out for at least a month.( Photos: 1, Comments: 22 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29713373/p2pb29713373.jpg",
-          "publishedAt": "Wed, 13 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/tahnee-seagrave-sidelined-4-6-weeks-following-world-cup-crash-in-south-korea.html?trk=rss",
-          "categories": [],
-          "score": 9,
           "category": "race-runs"
         },
         {
@@ -136,6 +121,20 @@
           "category": "race-runs"
         },
         {
+          "id": "HPyqOg7z0Pw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SOUTH KOREA FINALS DAY 2026",
+          "description": "The finals in South Korea didn't fail to provide a lot of action, I caught up with all the riders I could find following an epic race.\n\nVideo by Charlie Coquillard\n\n\nWatch here,\nhttps://watch.ucimtbworldseries.com\n\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/HPyqOg7z0Pw/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T13:46:23Z",
+          "url": "https://www.youtube.com/watch?v=HPyqOg7z0Pw",
+          "score": 15,
+          "category": "race-runs"
+        },
+        {
           "id": "yzFYPuGta7w",
           "type": "video",
           "source": "youtube",
@@ -204,7 +203,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Danny Hart &amp; Hattie Harnden Lead Elite Seeding Results at the iXS EDC #2",
-          "description": "The second stop of the 2026 iXS European Downhill Cup arrives in Fort William with a slightly modified course for this weekend&#039;s racing.( Photos: 13, Comments: 20 )",
+          "description": "The second stop of the 2026 iXS European Downhill Cup arrives in Fort William with a slightly modified course for this weekend&#039;s racing.( Photos: 13, Comments: 23 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29724608/p2pb29724608.jpg",
           "publishedAt": "Sat, 16 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/seeding-results-ixs-edc-2-fort-william-2026.html?trk=rss",
@@ -269,6 +268,20 @@
           "category": "results"
         },
         {
+          "id": "uTh-az8TZ_U",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SOUTH KOREA Q2 RAPID REACTION 2026",
+          "description": "After a rough day ending in hospital yesterday, I was back on site to catch the whole run down of Q2 here in Mona Yongpyong!\n\nWatch the live race tomorrow here, https://watch.ucimtbworldseries.com\n\nVideo by Charlie Coquillard\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/uTh-az8TZ_U/maxresdefault.jpg",
+          "publishedAt": "2026-05-01T12:29:32Z",
+          "url": "https://www.youtube.com/watch?v=uTh-az8TZ_U",
+          "score": 15,
+          "category": "results"
+        },
+        {
           "id": "oeD4XWmRv3Y",
           "type": "video",
           "source": "youtube",
@@ -297,6 +310,20 @@
           "category": "results"
         },
         {
+          "id": "ZouobvGMqMU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SOUTH KOREA WORLD CUP TRACKWALK 2026",
+          "description": "The season is finally upon us and we are out here in Mona Yongpyong for the first round and its set to be a wild one, track walk kicked off today and I caught up with everyone after a long off season!\n\nTune in live here, https://watch.ucimtbworldseries.com\n\nVideo by Charlie Coquillard\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/ZouobvGMqMU/maxresdefault.jpg",
+          "publishedAt": "2026-04-29T09:50:18Z",
+          "url": "https://www.youtube.com/watch?v=ZouobvGMqMU",
+          "score": 17,
+          "category": "results"
+        },
+        {
           "id": "jxWSMFX_-og",
           "type": "video",
           "source": "youtube",
@@ -309,6 +336,34 @@
           "url": "https://www.youtube.com/watch?v=jxWSMFX_-og",
           "score": 6,
           "category": "results"
+        },
+        {
+          "id": "u0NqhFcMICI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SEA OTTER CLASSIC DOWNHILL 2026",
+          "description": "The Sea Otter DH witnessed the first 32inch wheel Downhill win, I caught up with all the riders following my own race!\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/u0NqhFcMICI/maxresdefault.jpg",
+          "publishedAt": "2026-04-20T21:26:34Z",
+          "url": "https://www.youtube.com/watch?v=u0NqhFcMICI",
+          "score": 10,
+          "category": "results"
+        },
+        {
+          "id": "228fFx01oPY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SEA OTTER SLALOM 2026",
+          "description": "I catch the action trackside for the unofficial world champs of slalom here at the Sea Otter Classic on the new raw slalom track.\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/228fFx01oPY/maxresdefault.jpg",
+          "publishedAt": "2026-04-19T06:31:34Z",
+          "url": "https://www.youtube.com/watch?v=228fFx01oPY",
+          "score": 11,
+          "category": "results"
         }
       ]
     },
@@ -316,6 +371,21 @@
       "id": "films",
       "label": "Films",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/video-race-highlights-from-the-ixs-edc-round-2-at-fort-william.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Race Highlights from the iXS EDC Round 2 at Fort William",
+          "description": "Catch up on all the racing action from the second stop of the iXS European Downhill Cup.( Photos: 2, Comments: 12 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29733888/p2pb29733888.jpg",
+          "publishedAt": "Mon, 18 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-race-highlights-from-the-ixs-edc-round-2-at-fort-william.html?trk=rss",
+          "categories": [],
+          "score": 5,
+          "category": "films"
+        },
         {
           "id": "eag7nLqSrdc",
           "type": "video",
@@ -385,7 +455,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Slip &amp; Slide Course Preview for the Aletsch Enduro Invitational",
-          "description": "A stacked lineup of World Cup pros are in Switzerland for some pre-season racing.( Comments: 12 )",
+          "description": "A stacked lineup of World Cup pros are in Switzerland for some pre-season racing.( Comments: 13 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29723039/p2pb29723039.jpg",
           "publishedAt": "Sat, 16 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-slip-and-slide-course-preview-for-the-aletsch-enduro-invitational.html?trk=rss",
@@ -400,7 +470,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Adam Brayton &amp; Sorley Swabey's Fort William Course Preview for the iXS EDC #2",
-          "description": "Adam Brayton and Sorley Swabey check out this weekend&#039;s track at the second stop of the 2026 iXS European Downhill Cup series.( Photos: 3, Comments: 5 )",
+          "description": "Adam Brayton and Sorley Swabey check out this weekend&#039;s track at the second stop of the 2026 iXS European Downhill Cup series.( Photos: 3, Comments: 11 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29718158/p2pb29718158.jpg",
           "publishedAt": "Fri, 15 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/course-preview-adam-brayton-and-sorley-swabey-ride-the-ixs-edc-2-in-fort-william.html?trk=rss",
@@ -505,20 +575,6 @@
           "url": "https://www.youtube.com/watch?v=qx9Wa9FCuIQ",
           "score": 18,
           "category": "paddock"
-        },
-        {
-          "id": "s-p58N-Ztb4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "World Cup DH Riders Going Too Big | Saturday Sends #73",
-          "description": "Saturday Sends is back! We're relaunching the series with a World Cup Special and a new upload portal for Fails, Sends and Saves. If you have any clips of you hitting corners harder than normal, sending jumps farther than usual or displaying top tier bravery to conquer a new feature then follow the link below to upload.\n\nUpload your sends here 👉 https://www.pinkbike.com/video/saturday-sends/\n\nSupported by 👉 Trailforks Pro: https://b.link/v63weq\nGet unlimited access to all the best mountain biking trails by clicking the link above.\n\nPinkbike Merch  -  https://pinkbike.link/merch\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram -   https://instagram.com/pinkbike  \nFacebook -  https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/s-p58N-Ztb4/maxresdefault.jpg",
-          "publishedAt": "2026-04-18T16:01:17Z",
-          "url": "https://www.youtube.com/watch?v=s-p58N-Ztb4",
-          "score": 7,
-          "category": "paddock"
         }
       ]
     },
@@ -526,6 +582,35 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "0CLk9omfn9g",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "IT'S RACE WEEK! 🔥 | Ondřej Cink's Nové Město Rundown! 🇨🇿",
+          "description": "🗓️ 22 - 24 MAY\n\nWho’s stoked for racing to get underway and to see Puck Pieterse and Tom Pidcock back in the mix?! 👀",
+          "thumbnail": "https://i.ytimg.com/vi/0CLk9omfn9g/maxresdefault.jpg",
+          "publishedAt": "2026-05-18T12:00:35Z",
+          "url": "https://www.youtube.com/watch?v=0CLk9omfn9g",
+          "score": 4,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/antidote-solutions-to-debut-the-as05-at-the-loudenvielle-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Antidote Solutions Unveils Wild-Looking AS05 DH Race Bike",
+          "description": "This MotoGP-inspired machine will make its debut at the Loudenvielle DH World Cup underneath Gaëtan Vigé.( Photos: 27, Comments: 108 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29735590/p2pb29735590.jpg",
+          "publishedAt": "Mon, 18 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/antidote-solutions-to-debut-the-as05-at-the-loudenvielle-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 12,
+          "category": "news"
+        },
         {
           "id": "gZB1S8wgW9g",
           "type": "video",
@@ -561,7 +646,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Enduro World Cup Team Left Without Bike Sponsor Two Weeks Before Series Opener",
-          "description": "S1 Racing and Zerode have &quot;mutually agreed to part ways&quot; after &quot;unexpected&quot; delays to frame deliveries.( Photos: 1, Comments: 100 )",
+          "description": "S1 Racing and Zerode have &quot;mutually agreed to part ways&quot; after &quot;unexpected&quot; delays to frame deliveries.( Photos: 1, Comments: 106 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29281160/p2pb29281160.jpg",
           "publishedAt": "Sat, 16 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/s1-racing-without-bike-sponsor-two-weeks-before-enduro-world-cup-start.html?trk=rss",
@@ -591,7 +676,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "13 Cool Jobs in the Mountain Bike Industry Right Now",
-          "description": "Join the crews at Forbidden, OneUp, Propain, and more. New opportunities for engineers, managers, and designers in the world&#039;s best riding hubs.( Photos: 1, Comments: 146 )",
+          "description": "Join the crews at Forbidden, OneUp, Propain, and more. New opportunities for engineers, managers, and designers in the world&#039;s best riding hubs.( Photos: 1, Comments: 156 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26676905/p2pb26676905.jpg",
           "publishedAt": "Fri, 15 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/13-cool-jobs-in-the-mountain-bike-industry-right-now.html?trk=rss",
@@ -614,48 +699,18 @@
           "category": "news"
         },
         {
-          "id": "https://www.pinkbike.com/news/racing-rumors-leaked-2027-uci-world-cup-dh-xc-enduro-schedule.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Leaked 2027 UCI World Cup Schedule Suggests 10 DH Races and 12 XC Races",
-          "description": "A leaked document from the Italian Cycling Federation reveals a massive calendar for next season.( Photos: 1, Comments: 108 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb22881812/p2pb22881812.jpg",
-          "publishedAt": "Thu, 14 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/racing-rumors-leaked-2027-uci-world-cup-dh-xc-enduro-schedule.html?trk=rss",
-          "categories": [],
-          "score": 7,
-          "category": "news"
-        },
-        {
           "id": "https://www.pinkbike.com/news/the-saga-is-complete--richie-rudes-2025-championship-sb160.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Yeti Unveils Richie Rude’s Custom World Championship Yeti SB160",
-          "description": "To celebrate his first-ever Rainbow Jersey, Yeti built Richie a &quot;Star Worlds&quot; inspired galaxy rig to mark the end of an era in Enduro.( Photos: 15, Comments: 90 )",
+          "description": "To celebrate his first-ever Rainbow Jersey, Yeti built Richie a &quot;Star Worlds&quot; inspired galaxy rig to mark the end of an era in Enduro.( Photos: 15, Comments: 93 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29714780/p2pb29714780.jpg",
           "publishedAt": "Thu, 14 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/the-saga-is-complete--richie-rudes-2025-championship-sb160.html?trk=rss",
           "categories": [],
           "score": 6,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/race-ready-for-the-2026-whistler-mountain-bike-park-season.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Race Ready: The 2026 Whistler Mountain Bike Park Season Begins May 15th",
-          "description": "Summer 2026 is shaping up to be one of the most significant seasons in the park’s history( Photos: 5, Comments: 31 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29711580/p2pb29711580.jpg",
-          "publishedAt": "Thu, 14 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/race-ready-for-the-2026-whistler-mountain-bike-park-season.html?trk=rss",
-          "categories": [],
-          "score": 4,
           "category": "news"
         },
         {
