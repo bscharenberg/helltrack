@@ -69,7 +69,7 @@ const INCLUDE_KEYWORDS = [
             'coil shock', 'dh tire', 'dh wheel'], weight: 3 },
 
   // Discipline terms — lower confidence on their own
-  { terms: ['downhill', 'enduro', 'gravity'], weight: 1 },
+  { terms: ['downhill', 'gravity'], weight: 1 },
   { terms: ['dh', 'mtb racing', 'mountain bike racing'], weight: 1 },
 ]
 
@@ -99,6 +99,9 @@ const EXCLUDE_KEYWORDS = [
   // Generic filler from mixed channels
   { terms: ['word association', 'this or that', 'road and xc', 'road cycling legend',
             'rundown!'], weight: 8 },
+
+  // Enduro-specific content (not DH)
+  { terms: ['enduro rider', 'ultimate enduro', 'edr rider', 'enduro world'], weight: 8 },
 
   // Product noise
   { terms: ['product review', 'gear review', 'bike review', 'first look',
