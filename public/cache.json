@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-20T03:02:32.198Z",
-  "totalItems": 64,
+  "builtAt": "2026-05-20T03:48:02.425Z",
+  "totalItems": 79,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -106,20 +106,6 @@
           "category": "race-runs"
         },
         {
-          "id": "HPyqOg7z0Pw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV SOUTH KOREA FINALS DAY 2026",
-          "description": "The finals in South Korea didn't fail to provide a lot of action, I caught up with all the riders I could find following an epic race.\n\nVideo by Charlie Coquillard\n\n\nWatch here,\nhttps://watch.ucimtbworldseries.com\n\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/HPyqOg7z0Pw/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T13:46:23Z",
-          "url": "https://www.youtube.com/watch?v=HPyqOg7z0Pw",
-          "score": 15,
-          "category": "race-runs"
-        },
-        {
           "id": "yzFYPuGta7w",
           "type": "video",
           "source": "youtube",
@@ -131,6 +117,20 @@
           "publishedAt": "2026-05-02T10:01:04Z",
           "url": "https://www.youtube.com/watch?v=yzFYPuGta7w",
           "score": 14,
+          "category": "race-runs"
+        },
+        {
+          "id": "ROQ2tl-yznY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "FOX starts off the 2026 Downhill World Cup Season in South Korea with Asa Vermette – The Setup | FOX",
+          "description": "Episode two of The Setup takes us to Pyeongchang, South Korea for the opening round of the UCI World Series. It’s been more than two decades since the last UCI Downhill World Cup was held in Asia, and with a brand-new venue featuring multiple lines and plenty of variety, riders will have their work cut out for them as they sort out the right setup for this amazingly unpredictable track.\n\nAfter a long offseason, this week feels a bit like a family reunion. Remi catches up with the teams, athletes, and of course the FOX race crew as everyone settles back into race week. From suspension setup, track walk analysis and last-minute bike changes, the pits are full of constant fine-tuning. \n\nOn a fresh track like this, the FOX team is fully locked in to make sure every detail is refine before race runs begin.\n\nHost: Remi Gauvin\nVideo: Brooks Curran\n\n#FOX #RideFox #TheSetup",
+          "thumbnail": "https://i.ytimg.com/vi/ROQ2tl-yznY/sddefault.jpg",
+          "publishedAt": "2026-05-01T19:20:45Z",
+          "url": "https://www.youtube.com/watch?v=ROQ2tl-yznY",
+          "score": 23,
           "category": "race-runs"
         },
         {
@@ -173,6 +173,20 @@
           "publishedAt": "2026-04-26T03:26:03Z",
           "url": "https://www.youtube.com/watch?v=tZHjIb7FTp8",
           "score": 6,
+          "category": "race-runs"
+        },
+        {
+          "id": "EdbJla44XeI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Testing with Jackson Goldstone ahead of the 2026 DH World Cup - The Setup | FOX",
+          "description": "Welcome to The Setup, where FOX takes you inside the moments that matter before riders drop in. Hosted by Rémi Gauvin, and following FOX's World Cup Downhill athletes, each episode breaks down the decisions, adjustments, and teamwork that go into performing at the highest level.\n \nFrom track walk, to practice laps to final tweaks, The Setup connects the dots between rider feedback, suspension performance, and race-day execution. With input from athletes, mechanics, and FOX Race department and engineers, you’ll see how World Cup teams push for perfect balance in the harshest conditions.\n \nTo kick things off, we caught up with Jackson Goldstone on one of Vancouver’s most iconic downhill training zones, Cypress Mountain on the North Shore, as he prepared for round one of the World Cup in South Korea.\n\nNew episodes drop ahead of World Cup DH finals.\n\nHost: Remi Gauvin (https://www.instagram.com/remi.the.semi/)\nVideo: Brooks Curran (https://www.instagram.com/brookscurran/)",
+          "thumbnail": "https://i.ytimg.com/vi/EdbJla44XeI/maxresdefault.jpg",
+          "publishedAt": "2026-04-24T15:44:46Z",
+          "url": "https://www.youtube.com/watch?v=EdbJla44XeI",
+          "score": 29,
           "category": "race-runs"
         }
       ]
@@ -238,20 +252,6 @@
           "category": "results"
         },
         {
-          "id": "uTh-az8TZ_U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV SOUTH KOREA Q2 RAPID REACTION 2026",
-          "description": "After a rough day ending in hospital yesterday, I was back on site to catch the whole run down of Q2 here in Mona Yongpyong!\n\nWatch the live race tomorrow here, https://watch.ucimtbworldseries.com\n\nVideo by Charlie Coquillard\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/uTh-az8TZ_U/maxresdefault.jpg",
-          "publishedAt": "2026-05-01T12:29:32Z",
-          "url": "https://www.youtube.com/watch?v=uTh-az8TZ_U",
-          "score": 15,
-          "category": "results"
-        },
-        {
           "id": "oeD4XWmRv3Y",
           "type": "video",
           "source": "youtube",
@@ -280,20 +280,6 @@
           "category": "results"
         },
         {
-          "id": "ZouobvGMqMU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV SOUTH KOREA WORLD CUP TRACKWALK 2026",
-          "description": "The season is finally upon us and we are out here in Mona Yongpyong for the first round and its set to be a wild one, track walk kicked off today and I caught up with everyone after a long off season!\n\nTune in live here, https://watch.ucimtbworldseries.com\n\nVideo by Charlie Coquillard\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/ZouobvGMqMU/maxresdefault.jpg",
-          "publishedAt": "2026-04-29T09:50:18Z",
-          "url": "https://www.youtube.com/watch?v=ZouobvGMqMU",
-          "score": 17,
-          "category": "results"
-        },
-        {
           "id": "jxWSMFX_-og",
           "type": "video",
           "source": "youtube",
@@ -308,17 +294,17 @@
           "category": "results"
         },
         {
-          "id": "u0NqhFcMICI",
+          "id": "Pvo_-6_nU-4",
           "type": "video",
           "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV SEA OTTER CLASSIC DOWNHILL 2026",
-          "description": "The Sea Otter DH witnessed the first 32inch wheel Downhill win, I caught up with all the riders following my own race!\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/u0NqhFcMICI/maxresdefault.jpg",
-          "publishedAt": "2026-04-20T21:26:34Z",
-          "url": "https://www.youtube.com/watch?v=u0NqhFcMICI",
-          "score": 10,
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "THE SEARCH FOR MILLISECONDS FULL FILM | FOX",
+          "description": "Starring Jackson Goldstone and produced in collaboration with Anthill Films, The Search for Milliseconds documents the dramatic journey of the youngest rider in history to claim the UCI Downhill Elite overall title. \n\nFrom pre-season testing to start gate tension, the film follows Jackson and his support team as they hunt for every millisecond that can make or break a champion.",
+          "thumbnail": "https://i.ytimg.com/vi/Pvo_-6_nU-4/maxresdefault.jpg",
+          "publishedAt": "2026-04-21T21:27:57Z",
+          "url": "https://www.youtube.com/watch?v=Pvo_-6_nU-4",
+          "score": 15,
           "category": "results"
         }
       ]
@@ -495,6 +481,34 @@
       "label": "News",
       "items": [
         {
+          "id": "ED_8f95VKbw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Fox 36 SL - The Lightest 36 EVER!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/ED_8f95VKbw/maxresdefault.jpg",
+          "publishedAt": "2026-05-19T22:59:14Z",
+          "url": "https://www.youtube.com/watch?v=ED_8f95VKbw",
+          "score": 4,
+          "category": "news"
+        },
+        {
+          "id": "sE8IAE9VPfo",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Track Secrets.. Remi and Jordi discuss Setup for South Korea DH!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/sE8IAE9VPfo/maxresdefault.jpg",
+          "publishedAt": "2026-05-19T22:37:00Z",
+          "url": "https://www.youtube.com/watch?v=sE8IAE9VPfo",
+          "score": 9,
+          "category": "news"
+        },
+        {
           "id": "5RPA-N0cRl0",
           "type": "video",
           "source": "youtube",
@@ -515,7 +529,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Antidote Solutions Unveils Wild-Looking AS05 DH Race Bike",
-          "description": "This MotoGP-inspired machine will make its debut at the Loudenvielle DH World Cup underneath Gaëtan Vigé.( Photos: 27, Comments: 157 )",
+          "description": "This MotoGP-inspired machine will make its debut at the Loudenvielle DH World Cup underneath Gaëtan Vigé.( Photos: 27, Comments: 161 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29735590/p2pb29735590.jpg",
           "publishedAt": "Mon, 18 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/antidote-solutions-to-debut-the-as05-at-the-loudenvielle-world-cup.html?trk=rss",
@@ -545,12 +559,40 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "13 Cool Jobs in the Mountain Bike Industry Right Now",
-          "description": "Join the crews at Forbidden, OneUp, Propain, and more. New opportunities for engineers, managers, and designers in the world&#039;s best riding hubs.( Photos: 1, Comments: 161 )",
+          "description": "Join the crews at Forbidden, OneUp, Propain, and more. New opportunities for engineers, managers, and designers in the world&#039;s best riding hubs.( Photos: 1, Comments: 162 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26676905/p2pb26676905.jpg",
           "publishedAt": "Fri, 15 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/13-cool-jobs-in-the-mountain-bike-industry-right-now.html?trk=rss",
           "categories": [],
           "score": 5,
+          "category": "news"
+        },
+        {
+          "id": "ieSj80k89UM",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "FOX Live Stream",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/ieSj80k89UM/maxresdefault_live.jpg",
+          "publishedAt": "2026-05-14T18:51:45Z",
+          "url": "https://www.youtube.com/watch?v=ieSj80k89UM",
+          "score": 4,
+          "category": "news"
+        },
+        {
+          "id": "30htE25XlxE",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Your Bike. Your Choice. Your Trail.",
+          "description": "Whatever bike you ride, or approach you take to Trail riding, FOX has the combination of suspension components that lets you get the most out every moment, and every ride.",
+          "thumbnail": "https://i.ytimg.com/vi/30htE25XlxE/maxresdefault.jpg",
+          "publishedAt": "2026-05-13T15:58:24Z",
+          "url": "https://www.youtube.com/watch?v=30htE25XlxE",
+          "score": 4,
           "category": "news"
         },
         {
@@ -579,6 +621,20 @@
           "publishedAt": "2026-05-12T16:00:21Z",
           "url": "https://www.youtube.com/watch?v=72PzAuIpGaQ",
           "score": 7,
+          "category": "news"
+        },
+        {
+          "id": "KwEASm46CSw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Testing with FOX Factory teams ahead of DH World Cup round 1 in South Korea!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/KwEASm46CSw/maxresdefault.jpg",
+          "publishedAt": "2026-05-11T22:52:26Z",
+          "url": "https://www.youtube.com/watch?v=KwEASm46CSw",
+          "score": 16,
           "category": "news"
         },
         {
@@ -705,76 +761,6 @@
           "publishedAt": "2026-05-05T16:00:30Z",
           "url": "https://www.youtube.com/watch?v=DOXVDNxsKRY",
           "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "Q1akaWqc7og",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "What does Asa Vermette do after winning a race? 🥇",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/Q1akaWqc7og/maxresdefault.jpg",
-          "publishedAt": "2026-05-05T15:00:43Z",
-          "url": "https://www.youtube.com/watch?v=Q1akaWqc7og",
-          "score": 4,
-          "category": "news"
-        },
-        {
-          "id": "l5Bbcfkh39U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "One of the rarest race bikes in the world 🔥",
-          "description": "🎥 Race Bikes with Ric McLaughlin - Episode 8\n\n📺 WATCH NOW 👀Eurosport / TNT Sports\n\n*Check local listing*",
-          "thumbnail": "https://i.ytimg.com/vi/l5Bbcfkh39U/maxresdefault.jpg",
-          "publishedAt": "2026-05-04T17:00:56Z",
-          "url": "https://www.youtube.com/watch?v=l5Bbcfkh39U",
-          "score": 4,
-          "category": "news"
-        },
-        {
-          "id": "aJFnrAH5vr0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCd77cWCYmO6alSLXXRHMoqw",
-          "channelName": "Jack Moir",
-          "title": "Metal Monday on the new Frameworks enduro rig! ⚡️",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/aJFnrAH5vr0/maxresdefault.jpg",
-          "publishedAt": "2026-05-04T08:11:40Z",
-          "url": "https://www.youtube.com/watch?v=aJFnrAH5vr0",
-          "score": 4,
-          "category": "news"
-        },
-        {
-          "id": "PsKS88h2b6U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "The moment Dario Lillo secured the win 🥇",
-          "description": "It was carnage on track but Dario dominated throughout 🔥",
-          "thumbnail": "https://i.ytimg.com/vi/PsKS88h2b6U/maxresdefault.jpg",
-          "publishedAt": "2026-05-03T13:22:51Z",
-          "url": "https://www.youtube.com/watch?v=PsKS88h2b6U",
-          "score": 4,
-          "category": "news"
-        },
-        {
-          "id": "RuK8kbx47TY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Chain problems for Treudler 😖",
-          "description": "The mud is causing all sorts of problems as conditions dry out and the dirt builds up ⚙️",
-          "thumbnail": "https://i.ytimg.com/vi/RuK8kbx47TY/maxresdefault.jpg",
-          "publishedAt": "2026-05-03T07:27:07Z",
-          "url": "https://www.youtube.com/watch?v=RuK8kbx47TY",
-          "score": 4,
           "category": "news"
         }
       ]
