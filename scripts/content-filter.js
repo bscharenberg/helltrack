@@ -15,14 +15,13 @@ const MAX_AGE_DAYS = 30    // items older than this are dropped regardless of sc
 
 // ─── Source-level boosts ─────────────────────────────────────────────────────
 // Channels where almost everything is race-relevant get a flat score bonus.
-// Boost is intentionally modest — a vlog from Jack Moir's channel still fails
+// Boost is intentionally modest — exclusions still apply for non-DH content
 // if it matches lifestyle exclusions.
 
 const TRUSTED_SOURCES = new Set([
   'UCuuLS5B9JraqXiKfYPIBNEw',  // Sleeper Collective
   'UCWS4nfoou79mwo9nHew49fA',  // WHOOP UCI MTB World Series
   'UCCb8I3PHEUFPV0Jds0-_eig',  // Santa Cruz Syndicate
-  'UCd77cWCYmO6alSLXXRHMoqw',  // Jack Moir / Moi Moi TV
   'UCOYc6SI_fVrNvoutot7D9IA',  // Bernard Kerr
   'UCtvJR7iamL8WFAbvpsC2HTw',  // WynTV (Wyn Masters)
   'UCN_B2-bdBtmAq-5TOEU63nQ',  // Fox Factory
