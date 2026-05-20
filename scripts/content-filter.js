@@ -64,6 +64,10 @@ const INCLUDE_KEYWORDS = [
             'richie rude', 'isabeau courdurier', 'morgane charre',
             'greg minnaar', 'aaron gwin', 'neko mulally'], weight: 2 },
 
+  // Equipment / bike news — DH specific
+  { terms: ['dh bike', 'dh race bike', 'downhill bike', 'dh frame', 'dh fork',
+            'coil shock', 'dh tire', 'dh wheel'], weight: 3 },
+
   // Discipline terms — lower confidence on their own
   { terms: ['downhill', 'enduro', 'gravity'], weight: 1 },
   { terms: ['dh', 'mtb racing', 'mountain bike racing'], weight: 1 },
@@ -78,6 +82,23 @@ const EXCLUDE_KEYWORDS = [
           'elite xco', 'elite xcc', "men's elite xco",
           "women's elite xco"], weight: 15 },
   { terms: ['mtbws highlights'], weight: 8 },
+
+  // XCO venues — never DH content
+  { terms: ['nove mesto', 'nové město', 'nové mesto', 'albstadt', 'lenzerheide xco',
+            'snowshoe xco', 'mont sainte anne xco'], weight: 10 },
+
+  // XCO/road rider names — these people don't race DH
+  { terms: ['peter sagan', 'mathieu van der poel', 'tom pidcock', 'nino schurter',
+            'ondrej cink', 'ondřej cink', 'jordan sarrou', 'victor koretzky',
+            'pauline ferrand prevot', 'loana lecomte'], weight: 10 },
+
+  // Enduro/freeride series — not DH world cup
+  { terms: ['ixs edc', 'ixs european', 'enduro world series', 'ewsr',
+            'crankworx slopestyle', 'rampage', 'redbull rampage'], weight: 6 },
+
+  // Generic filler from mixed channels
+  { terms: ['word association', 'this or that', 'road and xc', 'road cycling legend',
+            'rundown!'], weight: 8 },
 
   // Product noise
   { terms: ['product review', 'gear review', 'bike review', 'first look',
