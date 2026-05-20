@@ -25,6 +25,7 @@ const TRUSTED_SOURCES = new Set([
   'UCd77cWCYmO6alSLXXRHMoqw',  // Jack Moir / Moi Moi TV
   'UCOYc6SI_fVrNvoutot7D9IA',  // Bernard Kerr
   'UCtvJR7iamL8WFAbvpsC2HTw',  // WynTV (Wyn Masters)
+  'UCN_B2-bdBtmAq-5TOEU63nQ',  // Fox Factory
 ])
 
 // ─── Keyword scoring ─────────────────────────────────────────────────────────
@@ -54,6 +55,7 @@ const INCLUDE_KEYWORDS = [
   { terms: ['inside the tape', 'vital raw', 'story of the race', 'wyntv', 'wyn tv',
             'cathro', 'race analysis'], weight: 4 },
   { terms: ['b line', 'mtbws full race', 'mtbws highlights dhi'], weight: 3 },
+  { terms: ['anthill films', 'anthill', 'milliseconds'], weight: 3 },
   { terms: ['track walk', 'course preview', 'track preview', 'course walk'], weight: 3 },
   { terms: ['ghost mode', 'ghosted', 'split times', 'time analysis'], weight: 3 },
 
@@ -110,7 +112,9 @@ const EXCLUDE_KEYWORDS = [
 
   // Lifestyle noise
   { terms: ['vlog', 'day in my life', 'morning routine', 'my setup',
-            'trail ride', 'local trails', 'bikepacking', 'touring'], weight: 4 },
+            'trail ride', 'local trails', 'bikepacking', 'touring',
+            'ride your trail', 'trail suspension', 'suspension overview',
+            'suspension walkthrough'], weight: 6 },
 
   // Ski / snow content (Commencal posts ski content)
   { terms: ['skiing', 'snowboard', 'ski', 'snow park'], weight: 6 },

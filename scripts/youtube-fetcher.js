@@ -15,27 +15,19 @@ const BASE    = 'https://www.googleapis.com/youtube/v3'
 // ─── Channel list ─────────────────────────────────────────────────────────────
 
 const CHANNELS = [
-  // Core race coverage
   { id: 'UCWS4nfoou79mwo9nHew49fA', name: 'UCI MTB World Series' },
   { id: 'UC2GIHZpQiJy-8286f4lj_cg', name: 'Pinkbike' },
-  { id: 'UCcX5xwMOCt92bi0dmspMFQw', name: 'Vital MTB' },
-
-  // Paddock / rider content — trusted, high signal
-  { id: 'UCtvJR7iamL8WFAbvpsC2HTw', name: 'WynTV' },           // Wyn Masters — track walks, paddock
+  { id: 'UCXqlds5f7B2OOs9vQuevl4A', name: 'Red Bull Bike' },
+  { id: 'UCqhnX4jA0A5paNd1v-zEysw', name: 'GoPro Bike' },
   { id: 'UCuuLS5B9JraqXiKfYPIBNEw', name: 'Sleeper Collective' },
   { id: 'UCd77cWCYmO6alSLXXRHMoqw', name: 'Jack Moir' },
   { id: 'UCOYc6SI_fVrNvoutot7D9IA', name: 'Bernard Kerr' },
-
-  // Factory teams
   { id: 'UCCb8I3PHEUFPV0Jds0-_eig', name: 'Santa Cruz Syndicate' },
   { id: 'UCPUGv78-mvU6gaFBgjY67vA', name: 'Commencal' },
-
-  // Broad MTB / action sports
-  { id: 'UCXqlds5f7B2OOs9vQuevl4A', name: 'Red Bull Bike' },
-  { id: 'UCqhnX4jA0A5paNd1v-zEysw', name: 'GoPro Bike' },
-
-  // Podcasts / long-form
+  { id: 'UCcX5xwMOCt92bi0dmspMFQw', name: 'Vital MTB' },
   { id: 'UCgwpS_N4DQDYsip73rsQ6iA', name: 'Downtime Podcast' },
+  { id: 'UCN_B2-bdBtmAq-5TOEU63nQ', name: 'Fox Factory' },
+  { id: 'UCiCWNsaEx9swRaCe55XMAuw', name: 'Frameworks Bicycles' },
 ]
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
