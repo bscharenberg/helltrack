@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-05-18
+**Last updated**: 2026-05-19
 
 ## Current State: LIVE ✅
 - helltrack.app is live with HTTPS
@@ -12,6 +12,7 @@
 - Nav simplified to FEED / RESULTS only
 - Subhead updated to "DOWNHILL RACING"
 - Scope decision made: Helltrack = DOWNHILL RACING (not enduro, not freeride, not XCO)
+- Content filter tightened: XCO and enduro terms removed/reweighted
 
 ---
 
@@ -52,6 +53,7 @@ Prereq: Helltrack brand cleaned up to "DOWNHILL RACING" first. No enduro languag
 
 ### Content & Data
 - XCO filtering fixed (weight 15 + mtbws highlights -8)
+- XCO and enduro content filter audit complete (Cink, Sagan, iXS EDC no longer passing)
 - South Korea / YongPyong venue keywords
 - B Line + UCI DHI highlights surfacing
 - MTBWS DHI highlights scoring fixed
@@ -67,33 +69,50 @@ Prereq: Helltrack brand cleaned up to "DOWNHILL RACING" first. No enduro languag
 
 | Priority | # | Item | Size | Description |
 |---|---|---|---|---|
-| 1 | 21 | Audit content filter for enduro/XCO | S | XCO and enduro content still leaking through. Ondřej Cink/Nové Město (XCO), Peter Sagan (XC/road), iXS EDC enduro content all appearing in feed. Tighten XCO exclusions, add enduro venue exclusions, check why trusted channel boost is letting non-DH content through. Rebuild cache after. |
-| 2 | 22 | Add non-UCI DH event sources | M | Hardline, urban DH (Taxco, Val Gardena street), other competitive timed DH. Identify YouTube channels and add to fetcher. |
-| 3 | 7 | Real PWA icon | S | Replace placeholder HT icon with something authentic. Midjourney prompt ready: "app icon, DH mountain bike start gate, flat design, acid yellow on black, minimal, bold, 512x512, no text". Need 192x192 and 512x512 PNG. |
-| 4 | 5 | Rootsandrain historical data 2015-2023 | L | Scrape and integrate 9 years of World Cup DH results into results.json. Scraper exists at scripts/rootsandrain_pull.py. Needs data cleaning and merging into multi-season structure. |
-| 5 | 15 | Full historical results 1990s+ | L | Extends #5 back to ~1991 using Roots and Rain. Do after #5 is clean and merged. Biggest lift is data cleaning. |
-| 6 | 10 | Season standings | M | Aggregate points across rounds for overall championship standings. Points already in results.json per result. |
-| 7 | 16 | Split times frontend | M | Show sector splits per rider in results table. Two candidate approaches — decide at build time: A) tap row to expand splits inline below rider, B) sector leader badges showing fastest split holder per sector. Mobile first, don't touch table layout. |
-| 8 | 8 | Rider search | M | Search by rider name across all results.json data. Shows career results table: venue, year, session, rank, time, gap. Data already structured for this. |
-| 9 | 9 | Rider comparison | M | Two rider searches side by side, same career results data in dual columns. Depends on #8. |
-| 10 | 13 | Rider profiles tab | M | Curated static list of ~50-80 elite men/women riders with Instagram permalinks. Research to find handles is the work — code is trivial. Static JSON, no scraping. |
-| 11 | 14 | Where to watch / live streams | M | Official stream links broken out by geo. Plus a guide on how to research unofficial/pirate streams yourself — no direct links, just instructions. |
-| 12 | 17 | Data viz / splits analysis | XL | Someday/maybe. Sector-by-sector gap charts, where races are won and lost. Depends on #16 being solid first. |
-| 13 | 12 | Merch | L | Trademark situation needs navigating. William Allen owns HELLTRACK for live events/merch (IC 016, 025, 041). App/software use is clear. Contact larryaaa2000@yahoo.com or design around with "Helltrack.app" branding. |
+| 1 | 23 | Expand DH content sources | M | Add Fox Factory and Frameworks Bicycles YouTube channels. Research complete — see details below. Need channel IDs then hand to build chat. |
+| 2 | 7 | Real PWA icon | S | Replace placeholder HT icon with something authentic. Midjourney prompt ready: "app icon, DH mountain bike start gate, flat design, acid yellow on black, minimal, bold, 512x512, no text". Need 192x192 and 512x512 PNG. |
+| 3 | 5 | Rootsandrain historical data 2015-2023 | L | Scrape and integrate 9 years of World Cup DH results into results.json. Scraper exists at scripts/rootsandrain_pull.py. Needs data cleaning and merging into multi-season structure. |
+| 4 | 15 | Full historical results 1990s+ | L | Extends #5 back to ~1991 using Roots and Rain. Do after #5 is clean and merged. Biggest lift is data cleaning. |
+| 5 | 10 | Season standings | M | Aggregate points across rounds for overall championship standings. Points already in results.json per result. |
+| 6 | 16 | Split times frontend | M | Show sector splits per rider in results table. Two candidate approaches — decide at build time: A) tap row to expand splits inline below rider, B) sector leader badges showing fastest split holder per sector. Mobile first, don't touch table layout. |
+| 7 | 8 | Rider search | M | Search by rider name across all results.json data. Shows career results table: venue, year, session, rank, time, gap. Data already structured for this. |
+| 8 | 9 | Rider comparison | M | Two rider searches side by side, same career results data in dual columns. Depends on #8. |
+| 9 | 13 | Rider profiles tab | M | Curated static list of ~50-80 elite men/women riders with Instagram permalinks. Research to find handles is the work — code is trivial. Static JSON, no scraping. |
+| 10 | 14 | Where to watch / live streams | M | Official stream links broken out by geo. Plus a guide on how to research unofficial/pirate streams yourself — no direct links, just instructions. |
+| 11 | 17 | Data viz / splits analysis | XL | Someday/maybe. Sector-by-sector gap charts, where races are won and lost. Depends on #16 being solid first. |
+| 12 | 12 | Merch | L | Trademark situation needs navigating. William Allen owns HELLTRACK for live events/merch (IC 016, 025, 041). App/software use is clear. Contact larryaaa2000@yahoo.com or design around with "Helltrack.app" branding. |
 
 ---
 
 ## Backlog Item Details
 
-### #21 — Content filter audit
-- Known leaks as of 2026-05-18:
-  - "IT'S RACE WEEK! Ondřej Cink's Nové Město Rundown" — XCO rider, XCO venue, passing via UCI trusted channel boost
-  - "This or that with Road and XC legend Peter Sagan" — explicitly XC/road
-  - iXS EDC Round 2 Fort William — enduro circuit content
-- Likely cause: trusted channel boost (4pts) overpowering weak XCO/enduro exclusions for non-DHI content
-- Approach: paste content-filter.js into build chat, test scoring on known bad items, tighten exclusions
-- Rebuild cache after every change
-- XCO exclude weight must overpower sum of all possible boosts for trusted channels
+### #23 — Expand DH content sources
+**Research complete as of 2026-05-19. Channels to add:**
+
+| Channel | Handle | Boost? | Notes |
+|---|---|---|---|
+| Fox Factory | @FOXFACTORY | Yes — BOOST_SCORE | ~70% relevant, active, DH race coverage + athlete content |
+| Frameworks Bicycles | @FrameworksBicycles | No — let filter decide | Low post frequency, ~1/3 relevant, DH-specific when they do post |
+
+**Channels researched and rejected:**
+- Rob Warner — 1/6 relevant, tricky titles, too much noise
+- Canyon Collective — nothing relevant in 11 months
+- Trek Factory Racing — only 2 relevant videos in 2 months, too low volume
+- Monster Energy Pro Downhill Series — US regional racing, not core audience
+- Ben Cathro / Inside the Tape — already coming through Pinkbike channel
+- Vital MTB — already in fetcher
+
+**Still needed:** Channel IDs for Fox Factory and Frameworks. Get from YouTube page console:
+```javascript
+document.querySelector('meta[itemprop="identifier"]').content
+```
+
+**Build instructions:**
+1. Add both channels to CHANNELS array in `scripts/youtube-fetcher.js`
+2. Fox Factory gets BOOST_SCORE in content-filter.js trusted list
+3. Test scoring on known titles from each channel before committing
+4. Rebuild cache: `node scripts/build-cache.js`
+5. Validate feed — confirm good content surfacing, no noise
 
 ### #5 — Rootsandrain historical data 2015-2023
 - Known series URLs:
