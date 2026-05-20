@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-20T03:48:02.425Z",
-  "totalItems": 79,
+  "builtAt": "2026-05-20T03:52:54.458Z",
+  "totalItems": 80,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -103,6 +103,20 @@
           "publishedAt": "2026-05-03T16:19:31Z",
           "url": "https://www.youtube.com/watch?v=0UyLk73AnIc",
           "score": 11,
+          "category": "race-runs"
+        },
+        {
+          "id": "HPyqOg7z0Pw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SOUTH KOREA FINALS DAY 2026",
+          "description": "The finals in South Korea didn't fail to provide a lot of action, I caught up with all the riders I could find following an epic race.\n\nVideo by Charlie Coquillard\n\n\nWatch here,\nhttps://watch.ucimtbworldseries.com\n\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/HPyqOg7z0Pw/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T13:46:23Z",
+          "url": "https://www.youtube.com/watch?v=HPyqOg7z0Pw",
+          "score": 15,
           "category": "race-runs"
         },
         {
@@ -252,6 +266,20 @@
           "category": "results"
         },
         {
+          "id": "uTh-az8TZ_U",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SOUTH KOREA Q2 RAPID REACTION 2026",
+          "description": "After a rough day ending in hospital yesterday, I was back on site to catch the whole run down of Q2 here in Mona Yongpyong!\n\nWatch the live race tomorrow here, https://watch.ucimtbworldseries.com\n\nVideo by Charlie Coquillard\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/uTh-az8TZ_U/maxresdefault.jpg",
+          "publishedAt": "2026-05-01T12:29:32Z",
+          "url": "https://www.youtube.com/watch?v=uTh-az8TZ_U",
+          "score": 15,
+          "category": "results"
+        },
+        {
           "id": "oeD4XWmRv3Y",
           "type": "video",
           "source": "youtube",
@@ -280,6 +308,20 @@
           "category": "results"
         },
         {
+          "id": "ZouobvGMqMU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SOUTH KOREA WORLD CUP TRACKWALK 2026",
+          "description": "The season is finally upon us and we are out here in Mona Yongpyong for the first round and its set to be a wild one, track walk kicked off today and I caught up with everyone after a long off season!\n\nTune in live here, https://watch.ucimtbworldseries.com\n\nVideo by Charlie Coquillard\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/ZouobvGMqMU/maxresdefault.jpg",
+          "publishedAt": "2026-04-29T09:50:18Z",
+          "url": "https://www.youtube.com/watch?v=ZouobvGMqMU",
+          "score": 17,
+          "category": "results"
+        },
+        {
           "id": "jxWSMFX_-og",
           "type": "video",
           "source": "youtube",
@@ -305,6 +347,20 @@
           "publishedAt": "2026-04-21T21:27:57Z",
           "url": "https://www.youtube.com/watch?v=Pvo_-6_nU-4",
           "score": 15,
+          "category": "results"
+        },
+        {
+          "id": "u0NqhFcMICI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SEA OTTER CLASSIC DOWNHILL 2026",
+          "description": "The Sea Otter DH witnessed the first 32inch wheel Downhill win, I caught up with all the riders following my own race!\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/u0NqhFcMICI/maxresdefault.jpg",
+          "publishedAt": "2026-04-20T21:26:34Z",
+          "url": "https://www.youtube.com/watch?v=u0NqhFcMICI",
+          "score": 10,
           "category": "results"
         }
       ]
