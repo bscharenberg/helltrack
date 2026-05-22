@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-22T03:35:30.451Z",
-  "totalItems": 78,
+  "builtAt": "2026-05-22T03:42:55.624Z",
+  "totalItems": 74,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -620,20 +620,6 @@
           "category": "news"
         },
         {
-          "id": "ED_8f95VKbw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Fox 36 SL - The Lightest 36 EVER!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/ED_8f95VKbw/maxresdefault.jpg",
-          "publishedAt": "2026-05-19T22:59:14Z",
-          "url": "https://www.youtube.com/watch?v=ED_8f95VKbw",
-          "score": 4,
-          "category": "news"
-        },
-        {
           "id": "sE8IAE9VPfo",
           "type": "video",
           "source": "youtube",
@@ -687,20 +673,6 @@
           "thumbnail": "https://i.ytimg.com/vi/ieSj80k89UM/maxresdefault_live.jpg",
           "publishedAt": "2026-05-14T18:51:45Z",
           "url": "https://www.youtube.com/watch?v=ieSj80k89UM",
-          "score": 4,
-          "category": "news"
-        },
-        {
-          "id": "30htE25XlxE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Your Bike. Your Choice. Your Trail.",
-          "description": "Whatever bike you ride, or approach you take to Trail riding, FOX has the combination of suspension components that lets you get the most out every moment, and every ride.",
-          "thumbnail": "https://i.ytimg.com/vi/30htE25XlxE/maxresdefault.jpg",
-          "publishedAt": "2026-05-13T15:58:24Z",
-          "url": "https://www.youtube.com/watch?v=30htE25XlxE",
           "score": 4,
           "category": "news"
         },
@@ -772,6 +744,34 @@
           "publishedAt": "2026-05-07T17:01:10Z",
           "url": "https://www.youtube.com/watch?v=okZSOl-JVXs",
           "score": 5,
+          "category": "news"
+        },
+        {
+          "id": "fg8U6SerbAg",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Asa Vermette made history in Mona YongPyong 🇰🇷",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/fg8U6SerbAg/maxresdefault.jpg",
+          "publishedAt": "2026-05-07T15:01:12Z",
+          "url": "https://www.youtube.com/watch?v=fg8U6SerbAg",
+          "score": 8,
+          "category": "news"
+        },
+        {
+          "id": "uCawIife92g",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "It's a full team effort to race 💪",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/uCawIife92g/maxresdefault.jpg",
+          "publishedAt": "2026-05-07T07:00:55Z",
+          "url": "https://www.youtube.com/watch?v=uCawIife92g",
+          "score": 4,
           "category": "news"
         }
       ]
