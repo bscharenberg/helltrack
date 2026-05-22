@@ -67,7 +67,7 @@ const INCLUDE_KEYWORDS = [
 
   // Equipment / bike news — DH specific
   { terms: ['dh bike', 'dh race bike', 'downhill bike', 'dh frame', 'dh fork',
-            'coil shock', 'dh tire', 'dh wheel'], weight: 3 },
+            'coil shock', 'dh tire', 'dh wheel', 'fox 40'], weight: 3 },
 
   // Discipline terms — lower confidence on their own
   { terms: ['downhill', 'gravity'], weight: 1 },
@@ -100,6 +100,15 @@ const EXCLUDE_KEYWORDS = [
   // Generic filler from mixed channels
   { terms: ['word association', 'this or that', 'road and xc', 'road cycling legend',
             'rundown!'], weight: 8 },
+
+  // Fork/suspension product content (not DH race relevant)
+  { terms: ['fox 36', 'fox 34', 'fox 32', 'fox 38', 'lightest ever', 'sl fork',
+            'trail fork', 'all mountain fork'], weight: 6 },
+
+  // Generic lifestyle/marketing from mixed channels
+  { terms: ['your bike', 'your choice', 'your trail', 'post race celebrations',
+            'cool jobs', 'introduced mountain biking', 'mountain biking to the world',
+            'meet the team', 'behind the brand'], weight: 6 },
 
   // Enduro-specific content (not DH)
   { terms: ['enduro rider', 'ultimate enduro', 'edr rider', 'enduro world'], weight: 8 },
