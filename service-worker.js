@@ -25,7 +25,7 @@ self.addEventListener('fetch', event => {
   const url = new URL(event.request.url)
 
   // cache.json: network first, fall back to cache
-  if (url.pathname.endsWith('cache.json')) {
+  if (url.pathname.endsWith('cache.json') || url.pathname.endsWith('riders.json')) {
     event.respondWith(
       fetch(event.request)
         .then(res => {
