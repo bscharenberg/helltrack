@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-22T08:27:16.013Z",
-  "totalItems": 74,
+  "builtAt": "2026-05-22T11:50:47.490Z",
+  "totalItems": 76,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -313,6 +313,20 @@
       "label": "Films",
       "items": [
         {
+          "id": "GA-ENY1ZNCY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Elite Racing Comes With A LOT Of Pressure 👀",
+          "description": "With Elite racing comes a lot of pressure but here’s an insight on how Cannondale Factory Racing manage it 💪\n\nWant to know more about what goes on behind the scenes at Cannondale Factory Racing?\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
+          "thumbnail": "https://i.ytimg.com/vi/GA-ENY1ZNCY/maxresdefault.jpg",
+          "publishedAt": "2026-05-22T10:26:51Z",
+          "url": "https://www.youtube.com/watch?v=GA-ENY1ZNCY",
+          "score": 4,
+          "category": "films"
+        },
+        {
           "id": "x9iyIAbUGA0",
           "type": "video",
           "source": "youtube",
@@ -493,6 +507,21 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-good-times-and-gnarly-trails-at-the-aletsch-enduro-invitational.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Good Times &amp; Gnarly Trails at the Aletsch Enduro Invitational",
+          "description": "Top World Cup racers tackled trails at last year&#039;s World Champs venue for a pre-season test.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29751889/p2pb29751889.jpg",
+          "publishedAt": "Fri, 22 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-good-times-and-gnarly-trails-at-the-aletsch-enduro-invitational.html?trk=rss",
+          "categories": [],
+          "score": 5,
+          "category": "news"
+        },
+        {
           "id": "BDb0KMIc9qw",
           "type": "video",
           "source": "youtube",
@@ -541,7 +570,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "What Are People Riding in the Whistler Bike Park in 2026? - Annual Opening Day Survey",
-          "description": "A snapshot of the bikes and equipment used by the hearty souls who braved the cold, rainy weather on opening day.( Photos: 24, Comments: 118 )",
+          "description": "A snapshot of the bikes and equipment used by the hearty souls who braved the cold, rainy weather on opening day.( Photos: 24, Comments: 122 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb18959948/p2pb18959948.jpg",
           "publishedAt": "Thu, 21 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/2026-whistler-opening-day-survey.html?trk=rss",
@@ -758,20 +787,6 @@
           "publishedAt": "2026-05-07T15:01:12Z",
           "url": "https://www.youtube.com/watch?v=fg8U6SerbAg",
           "score": 8,
-          "category": "news"
-        },
-        {
-          "id": "uCawIife92g",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "It's a full team effort to race 💪",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/uCawIife92g/maxresdefault.jpg",
-          "publishedAt": "2026-05-07T07:00:55Z",
-          "url": "https://www.youtube.com/watch?v=uCawIife92g",
-          "score": 4,
           "category": "news"
         }
       ]
