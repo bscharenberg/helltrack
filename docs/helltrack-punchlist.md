@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-05-19
+**Last updated**: 2026-05-21
 
 ## Current State: LIVE ✅
 - helltrack.app is live with HTTPS
@@ -13,6 +13,10 @@
 - Subhead updated to "DOWNHILL RACING"
 - Scope decision made: Helltrack = DOWNHILL RACING (not enduro, not freeride, not XCO)
 - Content filter tightened: XCO and enduro terms removed/reweighted
+- Fox Factory + Frameworks Bicycles channels added to pipeline
+- Fox Factory channel ID: UCN_B2-bdBtmAq-5TOEU63nQ (trusted/boosted)
+- Frameworks Bicycles channel ID: UCiCWNsaEx9swRaCe55XMAuw (filter decides)
+- ⚠️ Known bug: service worker serving stale cache.json — fix in progress (#25)
 
 ---
 
@@ -35,6 +39,7 @@ Prereq: Helltrack brand cleaned up to "DOWNHILL RACING" first. No enduro languag
 - PDF parser working (ChronoRace format, all sessions)
 - 2024+2025 historical data from downhillr .rda files
 - GitHub Action for results-fetcher (race weekend auto-trigger)
+- Fox Factory + Frameworks Bicycles channels added (#23)
 
 ### Frontend & UI
 - Results tab with multi-season UI
@@ -53,7 +58,7 @@ Prereq: Helltrack brand cleaned up to "DOWNHILL RACING" first. No enduro languag
 
 ### Content & Data
 - XCO filtering fixed (weight 15 + mtbws highlights -8)
-- XCO and enduro content filter audit complete (Cink, Sagan, iXS EDC no longer passing)
+- XCO and enduro content filter audit complete — #21 (Cink, Sagan, iXS EDC no longer passing)
 - South Korea / YongPyong venue keywords
 - B Line + UCI DHI highlights surfacing
 - MTBWS DHI highlights scoring fixed
@@ -69,50 +74,65 @@ Prereq: Helltrack brand cleaned up to "DOWNHILL RACING" first. No enduro languag
 
 | Priority | # | Item | Size | Description |
 |---|---|---|---|---|
-| 1 | 23 | Expand DH content sources | M | Add Fox Factory and Frameworks Bicycles YouTube channels. Research complete — see details below. Need channel IDs then hand to build chat. |
-| 2 | 7 | Real PWA icon | S | Replace placeholder HT icon with something authentic. Midjourney prompt ready: "app icon, DH mountain bike start gate, flat design, acid yellow on black, minimal, bold, 512x512, no text". Need 192x192 and 512x512 PNG. |
-| 3 | 5 | Rootsandrain historical data 2015-2023 | L | Scrape and integrate 9 years of World Cup DH results into results.json. Scraper exists at scripts/rootsandrain_pull.py. Needs data cleaning and merging into multi-season structure. |
-| 4 | 15 | Full historical results 1990s+ | L | Extends #5 back to ~1991 using Roots and Rain. Do after #5 is clean and merged. Biggest lift is data cleaning. |
-| 5 | 10 | Season standings | M | Aggregate points across rounds for overall championship standings. Points already in results.json per result. |
-| 6 | 16 | Split times frontend | M | Show sector splits per rider in results table. Two candidate approaches — decide at build time: A) tap row to expand splits inline below rider, B) sector leader badges showing fastest split holder per sector. Mobile first, don't touch table layout. |
-| 7 | 8 | Rider search | M | Search by rider name across all results.json data. Shows career results table: venue, year, session, rank, time, gap. Data already structured for this. |
-| 8 | 9 | Rider comparison | M | Two rider searches side by side, same career results data in dual columns. Depends on #8. |
-| 9 | 13 | Rider profiles tab | M | Curated static list of ~50-80 elite men/women riders with Instagram permalinks. Research to find handles is the work — code is trivial. Static JSON, no scraping. |
-| 10 | 14 | Where to watch / live streams | M | Official stream links broken out by geo. Plus a guide on how to research unofficial/pirate streams yourself — no direct links, just instructions. |
-| 11 | 17 | Data viz / splits analysis | XL | Someday/maybe. Sector-by-sector gap charts, where races are won and lost. Depends on #16 being solid first. |
-| 12 | 12 | Merch | L | Trademark situation needs navigating. William Allen owns HELLTRACK for live events/merch (IC 016, 025, 041). App/software use is clear. Contact larryaaa2000@yahoo.com or design around with "Helltrack.app" branding. |
+| 1 | 25 | Service worker serving stale feed | S | SW is cache-first for cache.json — feed never updates for returning visitors. Fix SW to network-first + wire refresh button to force-fetch and re-render. |
+| 2 | 24 | Content filter round 2 | S | Enduro builder series, product content, lifestyle noise still passing. Known bad items identified. See details below. |
+| 3 | 7 | Real PWA icon | S | Replace placeholder HT icon with something authentic. Midjourney prompt ready: "app icon, DH mountain bike start gate, flat design, acid yellow on black, minimal, bold, 512x512, no text". Need 192x192 and 512x512 PNG. |
+| 4 | 5 | Rootsandrain historical data 2015-2023 | L | Scrape and integrate 9 years of World Cup DH results into results.json. Scraper exists at scripts/rootsandrain_pull.py. Needs data cleaning and merging into multi-season structure. |
+| 5 | 15 | Full historical results 1990s+ | L | Extends #5 back to ~1991 using Roots and Rain. Do after #5 is clean and merged. Biggest lift is data cleaning. |
+| 6 | 10 | Season standings | M | Aggregate points across rounds for overall championship standings. Points already in results.json per result. |
+| 7 | 16 | Split times frontend | M | Show sector splits per rider in results table. Two candidate approaches — decide at build time: A) tap row to expand splits inline below rider, B) sector leader badges showing fastest split holder per sector. Mobile first, don't touch table layout. |
+| 8 | 8 | Rider search | M | Search by rider name across all results.json data. Shows career results table: venue, year, session, rank, time, gap. Data already structured for this. |
+| 9 | 9 | Rider comparison | M | Two rider searches side by side, same career results data in dual columns. Depends on #8. |
+| 10 | 13 | Rider profiles tab | M | Curated static list of ~50-80 elite men/women riders with Instagram permalinks. Research to find handles is the work — code is trivial. Static JSON, no scraping. |
+| 11 | 14 | Where to watch / live streams | M | Official stream links broken out by geo. Plus a guide on how to research unofficial/pirate streams yourself — no direct links, just instructions. |
+| 12 | 17 | Data viz / splits analysis | XL | Someday/maybe. Sector-by-sector gap charts, where races are won and lost. Depends on #16 being solid first. |
+| 13 | 12 | Merch | L | Trademark situation needs navigating. William Allen owns HELLTRACK for live events/merch (IC 016, 025, 041). App/software use is clear. Contact larryaaa2000@yahoo.com or design around with "Helltrack.app" branding. |
 
 ---
 
 ## Backlog Item Details
 
-### #23 — Expand DH content sources
-**Research complete as of 2026-05-19. Channels to add:**
+### #25 — Service worker serving stale feed
+**Diagnosis confirmed 2026-05-21:**
+- GitHub Actions running clean and green (cache.json updating hourly on server)
+- Cache-busted fetch returns `2026-05-20T03:52:54.458Z` — yesterday morning
+- SW is intercepting cache.json fetch and serving stale cached version
 
-| Channel | Handle | Boost? | Notes |
-|---|---|---|---|
-| Fox Factory | @FOXFACTORY | Yes — BOOST_SCORE | ~70% relevant, active, DH race coverage + athlete content |
-| Frameworks Bicycles | @FrameworksBicycles | No — let filter decide | Low post frequency, ~1/3 relevant, DH-specific when they do post |
+**Fix:**
+1. `service-worker.js` — change cache.json fetch strategy from cache-first to network-first (fetch from network, fall back to cache only if offline)
+2. `index.html` — wire the existing refresh button (top-right ↺ icon) to force-fetch cache.json with a cache-buster, re-render the feed, and spin the icon while loading
 
-**Channels researched and rejected:**
-- Rob Warner — 1/6 relevant, tricky titles, too much noise
-- Canyon Collective — nothing relevant in 11 months
-- Trek Factory Racing — only 2 relevant videos in 2 months, too low volume
-- Monster Energy Pro Downhill Series — US regional racing, not core audience
-- Ben Cathro / Inside the Tape — already coming through Pinkbike channel
-- Vital MTB — already in fetcher
+**Files needed from Bryon:** `service-worker.js`, `index.html`
 
-**Still needed:** Channel IDs for Fox Factory and Frameworks. Get from YouTube page console:
-```javascript
-document.querySelector('meta[itemprop="identifier"]').content
-```
+**Done when:** Feed shows content built within the last hour on a fresh visit. Refresh button fetches and re-renders visibly.
 
-**Build instructions:**
-1. Add both channels to CHANNELS array in `scripts/youtube-fetcher.js`
-2. Fox Factory gets BOOST_SCORE in content-filter.js trusted list
-3. Test scoring on known titles from each channel before committing
-4. Rebuild cache: `node scripts/build-cache.js`
-5. Validate feed — confirm good content surfacing, no noise
+### #24 — Content filter round 2
+**Known bad items still passing as of 2026-05-19:**
+- "Building the ultimate Enduro rider with Simona Kuchyňková" — enduro exclude not matching
+- "Building the ultimate Enduro rider with Charlie Murray" — enduro exclude not matching
+- "Building the ultimate Enduro rider with Dan Booker" — enduro exclude not matching
+- "Fox 36 SL - The Lightest 36 EVER!" — trail fork product content, no DH signal
+- "13 Cool Jobs in the Mountain Bike Industry Right Now" — industry lifestyle noise
+- "Your Bike. Your Choice. Your Trail." — generic lifestyle, no DH signal
+- "Two different approaches to post race celebrations from Charlie Aldridge and Luca Martin" — vague, passes on athlete name recognition probably
+- "How Specialized introduced mountain biking to the world" — history/marketing
+
+**Approach:**
+1. Paste current `content-filter.js` into chat first — don't assume what's in it
+2. Score each known bad item to see why it's passing
+3. Add targeted excludes: "enduro rider", "your trail", "cool jobs", "introduced mountain biking"
+4. Test all known good DH items still pass after changes
+5. Rebuild cache and validate live feed
+
+**Constraints:**
+- XCO exclude weight must always overpower sum of all possible boosts for trusted channels
+- Do not touch MIN_SCORE or BOOST_SCORE values
+- Test before every commit — never change filter and commit blind
+- Rebuild cache after every filter change: `node scripts/build-cache.js`
+
+**Files touched:** `scripts/content-filter.js`, then rebuild `public/cache.json`
+
+**Done when:** All known bad items score below 4 and are dropped. Known good DH items still pass. Live feed shows no enduro or lifestyle noise.
 
 ### #5 — Rootsandrain historical data 2015-2023
 - Known series URLs:
