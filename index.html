@@ -269,6 +269,7 @@ html, body {
   transition: border-color 0.15s, background 0.15s;
   -webkit-tap-highlight-color: transparent;
 }
+.card-row.seen, .card-hero.seen { opacity: 0.45; transition: opacity 0.3s; }
 .card-row:hover { border-color: var(--border-mid); background: var(--bg-card-hover); }
 .card-row:active { opacity: 0.85; }
 .row-thumb {
@@ -853,6 +854,7 @@ function openSheet(item) {
   const cta = document.getElementById('sheet-cta')
   cta.textContent = ctaLabel(item)
   cta.href = item.url || '#'
+  cta.onclick = () => { markSeen(item.url); applySeenState() }
 
   // Open
   document.getElementById('sheet-overlay').classList.add('open')
@@ -880,7 +882,7 @@ sheet.addEventListener('touchend', e => {
 function renderHero(item, showBadge) {
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
-  return `<div class="card-hero" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
+  return `<div class="card-hero" data-url="${item.url || ''}" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
   <div class="hero-thumb">
     ${lazyImg(item.thumbnail, 'hero-img')}
     <div class="thumb-placeholder${item.thumbnail ? '' : ''}">
@@ -912,7 +914,7 @@ function renderRow(item, showBadge) {
   const badge = showBadge && item._catId && CAT_LABELS[item._catId]
     ? `<div class="meta-dot"></div><span class="cat-badge">${CAT_LABELS[item._catId]}</span>`
     : ''
-  return `<div class="card-row" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
+  return `<div class="card-row" data-url="${item.url || ''}" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
   <div class="row-thumb">
     ${lazyImg(item.thumbnail, 'row-img')}
     ${thumbContent}
@@ -971,6 +973,7 @@ function renderFeed() {
 
   el.innerHTML = html
   if (data.builtAt) document.getElementById('updated').textContent = 'Updated ' + timeAgo(data.builtAt)
+  applySeenState()
 }
 
 function buildTabs() {
@@ -1280,6 +1283,31 @@ function dismissIOSTip() {
 }
 
 setTimeout(showIOSTip, 3000)
+
+
+// ── Seen / watched state ──────────────────────────────────────────────────────
+const SEEN_KEY = 'helltrack_seen'
+
+function getSeenURLs() {
+  try { return new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || '[]')) }
+  catch { return new Set() }
+}
+
+function markSeen(url) {
+  if (!url) return
+  const seen = getSeenURLs()
+  seen.add(url)
+  try { localStorage.setItem(SEEN_KEY, JSON.stringify([...seen])) }
+  catch {}
+}
+
+function applySeenState() {
+  const seen = getSeenURLs()
+  document.querySelectorAll('.card-row, .card-hero').forEach(card => {
+    const url = card.dataset.url
+    if (url && seen.has(url)) card.classList.add('seen')
+  })
+}
 
 loadFeed()
 </script>
