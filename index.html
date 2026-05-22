@@ -724,6 +724,12 @@ html, body {
   </div>
   <div id="tabs"></div>
   <div id="riders-nav" style="display:none; padding-bottom:4px">
+    <div class="rs-gender-toggle">
+      <div class="rs-gender-btn active" id="rd-men-btn" onclick="setRiderGender('men')">Elite Men</div>
+      <div class="rs-gender-btn" id="rd-women-btn" onclick="setRiderGender('women')">Elite Women</div>
+    </div>
+  </div>
+  <div id="riders-nav" style="display:none; padding-bottom:4px">
     <div style="padding:8px 16px 0">
       <div style="position:relative">
         <input id="rider-search" type="search" placeholder="Search riders..."
@@ -1419,6 +1425,25 @@ function setRiderGender(g) {
 function renderRiders() {
   const el = document.getElementById('riders-content')
   if (!ridersData) { el.innerHTML = '<div class="rs-empty">Loading...</div>'; return }
+
+  // Search mode — flat list across both genders
+  if (riderSearchQuery) {
+    const q = riderSearchQuery
+    const men   = (ridersData.men   || []).map(r => ({...r, _gender:'Men'}))
+    const women = (ridersData.women || []).map(r => ({...r, _gender:'Women'}))
+    const results = [...men, ...women].filter(r => r.name.toLowerCase().includes(q))
+    if (!results.length) {
+      el.innerHTML = `<div class="rs-empty">No riders matching "${q}"</div>`
+      return
+    }
+    el.innerHTML = '<div class="riders-grid">' + results.map(r => {
+      const gender = `<div class="rider-gender-label">${r._gender}</div>`
+      if (r.instagram) return `<a class="rider-card" href="${r.instagram}" target="_blank" rel="noopener"><div class="rider-flag">${r.flag}</div><div class="rider-name">${r.name}</div>${gender}<div class="rider-ig">Instagram</div></a>`
+      return `<div class="rider-card"><div class="rider-flag">${r.flag}</div><div class="rider-name">${r.name}</div>${gender}</div>`
+    }).join('') + '</div>'
+    return
+  }
+
   const riders = ridersData[activeRiderGender] || []
   if (!riders.length) { el.innerHTML = '<div class="rs-empty">No riders found</div>'; return }
 
