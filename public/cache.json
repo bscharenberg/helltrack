@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-22T17:14:20.913Z",
-  "totalItems": 75,
+  "builtAt": "2026-05-22T19:59:06.084Z",
+  "totalItems": 73,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -32,20 +32,6 @@
           "publishedAt": "2026-05-10T21:43:12Z",
           "url": "https://www.youtube.com/watch?v=dmS8_-UCJ00",
           "score": 13,
-          "category": "race-runs"
-        },
-        {
-          "id": "ZGrRzJ9lZt0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "A Start To The Season Like Never Before! | The B Line | WHOOP UCI MTB World Series 2026",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com\n\nChapters:\n00:00 Intro\n00:22 Highlights\n01:45 Myriam Nicole\n03:11 Finn Iles\n04:38 Aletha Ostgaard and Sacha Earnest\n06:03 Valentina Höll\n06:35 Aaron Gwin\n07:19 Loïc Bruni\n08:22 Amaury Pierron\n09:49 Madigan Munro and Gwen Gibson",
-          "thumbnail": "https://i.ytimg.com/vi/ZGrRzJ9lZt0/maxresdefault.jpg",
-          "publishedAt": "2026-05-05T15:25:17Z",
-          "url": "https://www.youtube.com/watch?v=ZGrRzJ9lZt0",
-          "score": 7,
           "category": "race-runs"
         },
         {
@@ -493,6 +479,20 @@
       "label": "News",
       "items": [
         {
+          "id": "yj3RIaz-oLo",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Things have been heating up in today's practice 🔥",
+          "description": "Things have been heating up in today's practice 🔥\n\nWe can't wait to see the elite racing get underway! 🇨🇿",
+          "thumbnail": "https://i.ytimg.com/vi/yj3RIaz-oLo/maxresdefault.jpg",
+          "publishedAt": "2026-05-22T18:30:46Z",
+          "url": "https://www.youtube.com/watch?v=yj3RIaz-oLo",
+          "score": 4,
+          "category": "news"
+        },
+        {
           "id": "YtZfynEJfFA",
           "type": "video",
           "source": "youtube",
@@ -570,7 +570,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "What Are People Riding in the Whistler Bike Park in 2026? - Annual Opening Day Survey",
-          "description": "A snapshot of the bikes and equipment used by the hearty souls who braved the cold, rainy weather on opening day.( Photos: 24, Comments: 129 )",
+          "description": "A snapshot of the bikes and equipment used by the hearty souls who braved the cold, rainy weather on opening day.( Photos: 24, Comments: 132 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb18959948/p2pb18959948.jpg",
           "publishedAt": "Thu, 21 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/2026-whistler-opening-day-survey.html?trk=rss",
@@ -758,20 +758,6 @@
           "publishedAt": "2026-05-07T17:01:10Z",
           "url": "https://www.youtube.com/watch?v=okZSOl-JVXs",
           "score": 5,
-          "category": "news"
-        },
-        {
-          "id": "fg8U6SerbAg",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Asa Vermette made history in Mona YongPyong 🇰🇷",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/fg8U6SerbAg/maxresdefault.jpg",
-          "publishedAt": "2026-05-07T15:01:12Z",
-          "url": "https://www.youtube.com/watch?v=fg8U6SerbAg",
-          "score": 8,
           "category": "news"
         }
       ]
