@@ -704,6 +704,12 @@ html, body {
   gap: 3px;
 }
 .rider-ig svg { width:10px; height:10px; fill:currentColor; }
+
+.rider-gender-label {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(212,245,0,0.5); margin-top: 2px;
+}
 </style>
 </head>
 <body>
@@ -721,6 +727,31 @@ html, body {
     <div class="rs-gender-toggle">
       <div class="rs-gender-btn active" id="rd-men-btn" onclick="setRiderGender('men')">Elite Men</div>
       <div class="rs-gender-btn" id="rd-women-btn" onclick="setRiderGender('women')">Elite Women</div>
+    </div>
+  </div>
+  <div id="riders-nav" style="display:none; padding-bottom:4px">
+    <div style="padding:8px 16px 0">
+      <div style="position:relative">
+        <input id="rider-search" type="search" placeholder="Search riders..."
+          oninput="onRiderSearch(this.value)"
+          style="width:100%; box-sizing:border-box;
+            background:#1a1a1a; border:0.5px solid #2a2a2a; border-radius:8px;
+            color:var(--text-primary); font-family:'Barlow Condensed',sans-serif;
+            font-size:14px; letter-spacing:0.04em; padding:10px 36px 10px 12px;
+            outline:none; -webkit-appearance:none; appearance:none;"
+          onfocus="this.style.borderColor='#d4f500'"
+          onblur="this.style.borderColor='#2a2a2a'">
+        <button onclick="clearRiderSearch()"
+          style="position:absolute; right:8px; top:50%; transform:translateY(-50%);
+            background:none; border:none; color:#555; font-size:18px; cursor:pointer;
+            padding:4px; line-height:1; display:none;" id="rider-search-clear">x</button>
+      </div>
+    </div>
+    <div id="riders-gender-toggle">
+      <div class="rs-gender-toggle" style="margin:8px 16px 0">
+        <div class="rs-gender-btn active" id="rd-men-btn" onclick="setRiderGender('men')">Elite Men</div>
+        <div class="rs-gender-btn" id="rd-women-btn" onclick="setRiderGender('women')">Elite Women</div>
+      </div>
     </div>
   </div>
   <div id="results-nav" style="display:none; padding-bottom:6px">
@@ -1426,6 +1457,25 @@ async function loadRiders() {
     document.getElementById('riders-content').innerHTML =
       '<div class="rs-empty">Riders unavailable</div>'
   }
+}
+
+
+// -- Rider search
+let riderSearchQuery = ''
+
+function onRiderSearch(val) {
+  riderSearchQuery = val.trim().toLowerCase()
+  var clearBtn = document.getElementById('rider-search-clear')
+  var toggle   = document.getElementById('riders-gender-toggle')
+  if (clearBtn) clearBtn.style.display = riderSearchQuery ? 'block' : 'none'
+  if (toggle)   toggle.style.display   = riderSearchQuery ? 'none'  : 'block'
+  renderRiders()
+}
+
+function clearRiderSearch() {
+  var input = document.getElementById('rider-search')
+  if (input) input.value = ''
+  onRiderSearch('')
 }
 
 loadFeed()
