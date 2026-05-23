@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-23T11:18:47.328Z",
-  "totalItems": 69,
+  "builtAt": "2026-05-23T13:53:34.629Z",
+  "totalItems": 66,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -375,20 +375,6 @@
           "category": "paddock"
         },
         {
-          "id": "iRALdvd9Z6w",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "It's tight competition between Sacha Earnest and Aletha Ostgaard 😅",
-          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
-          "thumbnail": "https://i.ytimg.com/vi/iRALdvd9Z6w/maxresdefault.jpg",
-          "publishedAt": "2026-05-08T11:01:15Z",
-          "url": "https://www.youtube.com/watch?v=iRALdvd9Z6w",
-          "score": 11,
-          "category": "paddock"
-        },
-        {
           "id": "3nHqF7Xqrb8",
           "type": "video",
           "source": "youtube",
@@ -464,6 +450,21 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/video-matthew-fairbrothers-fastest-known-time-attempt-across-the-length-of-south-korea.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Matthew Fairbrother's Fastest Known Time Attempt Across the Length of South Korea",
+          "description": "Matthew Fairbrother attempts to set the new FKT on a 600km route between Seoul and Busan.( Comments: 5 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29757137/p2pb29757137.jpg",
+          "publishedAt": "Sat, 23 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-matthew-fairbrothers-fastest-known-time-attempt-across-the-length-of-south-korea.html?trk=rss",
+          "categories": [],
+          "score": 4,
+          "category": "news"
+        },
         {
           "id": "https://www.pinkbike.com/news/video-yoann-barelli-guides-you-down-whistlers-out-there-trail.html?trk=rss",
           "type": "article",
@@ -731,20 +732,6 @@
           "publishedAt": "2026-05-11T22:52:26Z",
           "url": "https://www.youtube.com/watch?v=KwEASm46CSw",
           "score": 16,
-          "category": "news"
-        },
-        {
-          "id": "LDwFk7YwZe8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "ACTION - Monster PRO DOWNHILL, Mountain Creek - #USDH",
-          "description": "Bikes and bodies try to survive the rocks at Mountain Creek Bike Park during practice for the 2026 @prodownhillseries DH race!",
-          "thumbnail": "https://i.ytimg.com/vi/LDwFk7YwZe8/maxresdefault.jpg",
-          "publishedAt": "2026-05-08T05:29:43Z",
-          "url": "https://www.youtube.com/watch?v=LDwFk7YwZe8",
-          "score": 5,
           "category": "news"
         }
       ]
