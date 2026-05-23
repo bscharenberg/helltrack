@@ -1533,6 +1533,16 @@ function isRiderSaved(name) {
   return getMyRiders().some(r => r.name === name)
 }
 
+function toggleRiderBtn(btn) {
+  const r = {
+    name:      btn.dataset.name,
+    nat:       btn.dataset.nat,
+    flag:      btn.dataset.flag,
+    instagram: btn.dataset.ig || null,
+  }
+  toggleRider(r)
+}
+
 function toggleRider(r) {
   const saved = getMyRiders()
   const idx = saved.findIndex(s => s.name === r.name)
@@ -1593,13 +1603,17 @@ function bookmarkSVG(filled) {
 
 function riderCardHTML(r) {
   const saved = isRiderSaved(r.name)
-  const rJson = JSON.stringify({name:r.name,nat:r.nat,flag:r.flag,instagram:r.instagram}).replace(/'/g,"\'")
   const igZone = r.instagram
     ? `<a class="rider-zone-ig" href="${r.instagram}" target="_blank" rel="noopener">${igSVG}</a>`
     : `<div class="rider-zone-ig" style="opacity:0.2">${igSVG}</div>`
   const genderLabel = r._gender ? `<div class="rider-gender-label">${r._gender}</div>` : ''
+  // Store rider data on the button via data attributes to avoid JSON/quote escaping issues
+  const escapedName = r.name.replace(/"/g, '&quot;')
+  const escapedIg   = (r.instagram || '').replace(/"/g, '&quot;')
   return `<div class="rider-card${saved ? ' saved' : ''}">
-    <button class="rider-zone-bookmark" onclick="toggleRider(${rJson})">${bookmarkSVG(saved)}</button>
+    <button class="rider-zone-bookmark"
+      data-name="${escapedName}" data-nat="${r.nat}" data-flag="${r.flag}" data-ig="${escapedIg}"
+      onclick="toggleRiderBtn(this)">${bookmarkSVG(saved)}</button>
     <div class="rider-zone-info">
       <div class="rider-flag">${r.flag}</div>
       <div class="rider-name">${r.name}</div>
