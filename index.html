@@ -710,6 +710,91 @@ html, body {
   font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
   color: rgba(212,245,0,0.5); margin-top: 2px;
 }
+
+/* ── My Riders strip ── */
+#my-riders-section {
+  padding: 12px 16px 0;
+}
+.my-riders-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 10px;
+}
+.my-riders-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.my-riders-empty {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-muted); padding-bottom: 4px;
+}
+.my-riders-chips {
+  display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
+  padding-bottom: 4px; -webkit-overflow-scrolling: touch;
+}
+.my-riders-chips::-webkit-scrollbar { display: none; }
+.rider-chip {
+  display: flex; align-items: center; gap: 5px;
+  background: rgba(212,245,0,0.08); border: 0.5px solid rgba(212,245,0,0.25);
+  border-radius: 8px; padding: 6px 8px; white-space: nowrap;
+  text-decoration: none; flex-shrink: 0; position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+.rider-chip-flag { font-size: 14px; line-height: 1; }
+.rider-chip-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #d4f500;
+}
+.rider-chip-remove {
+  background: none; border: none; color: #555; font-size: 14px;
+  cursor: pointer; padding: 0 0 0 4px; line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+.rider-chip-remove:hover { color: #d4f500; }
+
+/* ── Rider card — three zones ── */
+.rider-card {
+  background: var(--bg-card);
+  border: 0.5px solid #222;
+  border-radius: 10px;
+  display: flex; align-items: center;
+  overflow: hidden; transition: border-color 0.15s, background 0.15s;
+}
+.rider-card.saved {
+  border-color: rgba(212,245,0,0.25);
+  background: rgba(212,245,0,0.05);
+}
+.rider-zone-bookmark {
+  width: 44px; min-width: 44px; height: 100%; min-height: 72px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border-right: 0.5px solid #222;
+  -webkit-tap-highlight-color: transparent; background: none; border-top: none; border-bottom: none; border-left: none;
+}
+.rider-zone-bookmark svg { width: 18px; height: 18px; }
+.rider-zone-info {
+  flex: 1; padding: 10px 8px;
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px;
+}
+.rider-zone-ig {
+  width: 44px; min-width: 44px; min-height: 72px;
+  display: flex; align-items: center; justify-content: center;
+  border-left: 0.5px solid #222; text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.rider-zone-ig svg { width: 18px; height: 18px; fill: #555; transition: fill 0.15s; }
+.rider-zone-ig:hover svg { fill: #d4f500; }
+
+/* ── Toast ── */
+#riders-toast {
+  position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: #1a1a1a; border: 0.5px solid rgba(212,245,0,0.3);
+  border-radius: 8px; padding: 8px 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #d4f500; opacity: 0; pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s; z-index: 300;
+}
+#riders-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
@@ -783,8 +868,13 @@ html, body {
 
 <!-- Riders tab view -->
 <div id="riders-view">
+  <div id="my-riders-section">
+    <div class="my-riders-label">My Riders</div>
+    <div id="my-riders-strip"></div>
+  </div>
   <div id="riders-content"></div>
 </div>
+<div id="riders-toast">MY RIDERS FULL</div>
 
 <!-- Install banner -->
 <div id="install-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:300; padding:12px 16px calc(var(--safe-bottom) + 12px); background:#191919; border-top:0.5px solid #2a2a2a; align-items:center; gap:12px;">
@@ -1426,11 +1516,105 @@ function setRiderGender(g) {
   renderRiders()
 }
 
+// ── My Riders storage ────────────────────────────────────────────────────────
+const MY_RIDERS_KEY = 'helltrack_myriders'
+const MY_RIDERS_MAX = 6
+
+function getMyRiders() {
+  try { return JSON.parse(localStorage.getItem(MY_RIDERS_KEY) || '[]') }
+  catch { return [] }
+}
+
+function saveMyRiders(arr) {
+  try { localStorage.setItem(MY_RIDERS_KEY, JSON.stringify(arr)) } catch {}
+}
+
+function isRiderSaved(name) {
+  return getMyRiders().some(r => r.name === name)
+}
+
+function toggleRider(r) {
+  const saved = getMyRiders()
+  const idx = saved.findIndex(s => s.name === r.name)
+  if (idx >= 0) {
+    saved.splice(idx, 1)
+    saveMyRiders(saved)
+  } else {
+    if (saved.length >= MY_RIDERS_MAX) {
+      showRiderToast()
+      return
+    }
+    saved.push({ name: r.name, nat: r.nat, flag: r.flag, instagram: r.instagram })
+    saveMyRiders(saved)
+  }
+  renderMyRiders()
+  renderRiders()
+}
+
+function removeMyRider(name) {
+  const saved = getMyRiders().filter(r => r.name !== name)
+  saveMyRiders(saved)
+  renderMyRiders()
+  renderRiders()
+}
+
+function showRiderToast() {
+  const t = document.getElementById('riders-toast')
+  if (!t) return
+  t.classList.add('show')
+  setTimeout(() => t.classList.remove('show'), 1800)
+}
+
+function renderMyRiders() {
+  const strip = document.getElementById('my-riders-strip')
+  if (!strip) return
+  const saved = getMyRiders()
+  if (!saved.length) {
+    strip.innerHTML = `<div class="my-riders-empty">Save up to 6 riders for quick access to their IG profiles</div>`
+    return
+  }
+  strip.innerHTML = `<div class="my-riders-chips">` + saved.map(r => `
+    <a class="rider-chip" href="${r.instagram || '#'}" target="_blank" rel="noopener" onclick="${r.instagram ? '' : 'event.preventDefault()'}">
+      <span class="rider-chip-flag">${r.flag}</span>
+      <span class="rider-chip-name">${r.name.split(' ').slice(-1)[0].toUpperCase()}</span>
+    </a>
+    <button class="rider-chip-remove" onclick="event.preventDefault();event.stopPropagation();removeMyRider('${r.name.replace(/'/g,"\'")}')">✕</button>
+  `).join('') + `</div>`
+}
+
+// ── Rider card SVGs ───────────────────────────────────────────────────────────
+const igSVG = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`
+
+function bookmarkSVG(filled) {
+  return filled
+    ? `<svg viewBox="0 0 24 24" fill="#d4f500" xmlns="http://www.w3.org/2000/svg"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>`
+    : `<svg viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>`
+}
+
+function riderCardHTML(r) {
+  const saved = isRiderSaved(r.name)
+  const rJson = JSON.stringify({name:r.name,nat:r.nat,flag:r.flag,instagram:r.instagram}).replace(/'/g,"\'")
+  const igZone = r.instagram
+    ? `<a class="rider-zone-ig" href="${r.instagram}" target="_blank" rel="noopener">${igSVG}</a>`
+    : `<div class="rider-zone-ig" style="opacity:0.2">${igSVG}</div>`
+  const genderLabel = r._gender ? `<div class="rider-gender-label">${r._gender}</div>` : ''
+  return `<div class="rider-card${saved ? ' saved' : ''}">
+    <button class="rider-zone-bookmark" onclick="toggleRider(${rJson})">${bookmarkSVG(saved)}</button>
+    <div class="rider-zone-info">
+      <div class="rider-flag">${r.flag}</div>
+      <div class="rider-name">${r.name}</div>
+      ${genderLabel}
+    </div>
+    ${igZone}
+  </div>`
+}
+
 function renderRiders() {
   const el = document.getElementById('riders-content')
   if (!ridersData) { el.innerHTML = '<div class="rs-empty">Loading...</div>'; return }
 
-  // Search mode — flat list across both genders
+  renderMyRiders()
+
   if (riderSearchQuery) {
     const q = riderSearchQuery
     const men   = (ridersData.men   || []).map(r => ({...r, _gender:'Men'}))
@@ -1440,33 +1624,13 @@ function renderRiders() {
       el.innerHTML = `<div class="rs-empty">No riders matching "${q}"</div>`
       return
     }
-    el.innerHTML = '<div class="riders-grid">' + results.map(r => {
-      const gender = `<div class="rider-gender-label">${r._gender}</div>`
-      if (r.instagram) return `<a class="rider-card" href="${r.instagram}" target="_blank" rel="noopener"><div class="rider-flag">${r.flag}</div><div class="rider-name">${r.name}</div>${gender}<div class="rider-ig">Instagram</div></a>`
-      return `<div class="rider-card"><div class="rider-flag">${r.flag}</div><div class="rider-name">${r.name}</div>${gender}</div>`
-    }).join('') + '</div>'
+    el.innerHTML = '<div class="riders-grid">' + results.map(r => riderCardHTML(r)).join('') + '</div>'
     return
   }
 
   const riders = ridersData[activeRiderGender] || []
   if (!riders.length) { el.innerHTML = '<div class="rs-empty">No riders found</div>'; return }
-
-  el.innerHTML = '<div class="riders-grid">' + riders.map(r => {
-    const igIcon = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`
-
-    if (r.instagram) {
-      return `<a class="rider-card" href="${r.instagram}" target="_blank" rel="noopener">
-        <div class="rider-flag">${r.flag}</div>
-        <div class="rider-name">${r.name}</div>
-        <div class="rider-ig">${igIcon} Instagram</div>
-      </a>`
-    } else {
-      return `<div class="rider-card">
-        <div class="rider-flag">${r.flag}</div>
-        <div class="rider-name">${r.name}</div>
-      </div>`
-    }
-  }).join('') + '</div>'
+  el.innerHTML = '<div class="riders-grid">' + riders.map(r => riderCardHTML(r)).join('') + '</div>'
 }
 
 async function loadRiders() {
