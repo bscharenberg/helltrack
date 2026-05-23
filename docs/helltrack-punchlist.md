@@ -10,7 +10,8 @@
 - Fox Factory channel ID: UCN_B2-bdBtmAq-5TOEU63nQ (trusted/boosted)
 - Frameworks Bicycles channel ID: UCiCWNsaEx9swRaCe55XMAuw (filter decides)
 - Jack Moir removed from channels (enduro, not DH)
-- Feed is clean: 74 items, filter running correctly
+- Content filter clean: UCI channel de-trusted, enduro/XCO excludes solid, category routing fixed
+- Feed routing correct: News 1 item, Paddock 16 items, all DHI content passing
 - Flat chronological feed with category badges on cards
 - Nav: FEED / RESULTS / RIDERS
 - Subhead: "DOWNHILL RACING"
@@ -19,7 +20,6 @@
 - riders.csv source of truth in scripts/, build-riders.js script added
 - PWA icon: handed off to designer (192x192 + 512x512 PNG needed)
 - ⚠️ Security hardening needed before weekend launch — see #29
-- ⚠️ UCI channel still leaking XCO/enduro content — see #31
 
 ---
 
@@ -32,14 +32,14 @@ Prereq: Helltrack brand cleaned up to "DOWNHILL RACING" first. No enduro languag
 
 ## Design Decisions
 
-### Helltrack = UCI DH only
-**Scope is locked.** Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride, no XCO, no trail riding, no road, no BMX. This applies to:
+### Helltrack = UCI DH only (locked May 23, 2026)
+Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride, no slopestyle, no XCO, no trail riding, no road, no BMX. This applies to:
 - Content filter: any non-DH content must be excluded regardless of source
 - Results data: DH World Cup and World Championships only — no enduro results
 - Riders tab: UCI DH license holders only
 - Future features: all scoped to DH
 
-If a channel posts mixed content (e.g. UCI MTB World Series), only DHI content passes. The exclude weight for XCO and enduro must always overpower the trusted channel boost.
+If a channel posts mixed content (e.g. UCI MTB World Series), only DHI content passes. The exclude weight for XCO and enduro must always overpower any positive signals.
 
 ### Aesthetic
 - Dark #111 background, acid yellow #d4f500 accent
@@ -96,9 +96,17 @@ If a channel posts mixed content (e.g. UCI MTB World Series), only DHI content p
 - XCO filtering fixed (weight 15 + mtbws highlights -8)
 - XCO and enduro content filter audit complete — #21 (Cink, Sagan, iXS EDC no longer passing)
 - Content filter round 2 — lifestyle, product, enduro noise removed (#24)
+- Content filter rounds 3-5 — full scope lockdown (#31) ✅
+  - UCI MTB World Series removed from TRUSTED_SOURCES
+  - Venue keyword weight dropped 4→2
+  - Enduro terms flipped from INCLUDE (+5) to EXCLUDE (-8)
+  - Added elite dhi/junior dhi as include terms at weight +10
+  - Category routing fixed: News 20→1, Paddock 2→16
+  - All UCI XCO/enduro/lifestyle drops cleanly
+  - All DHI highlights, full races, junior races pass and route correctly
 - South Korea / YongPyong venue keywords
 - B Line + UCI DHI highlights surfacing
-- MTBWS DHI highlights scoring fixed
+- MTBWS DHI highlights scoring fixed ✅
 - Category item limit bumped 10→20
 - Feedback button → Google Form → Google Sheet
 - Google Analytics (G-4EY22R6D2H)
@@ -114,24 +122,25 @@ If a channel posts mixed content (e.g. UCI MTB World Series), only DHI content p
 | Priority | # | Item | Size | Description |
 |---|---|---|---|---|
 | 1 | 26 | Loudenvielle R2 results | S | Race weekend May 28. Run results-fetcher.mjs after finals. Slug: loudenvielle-2026. |
-| 2 | 29 | Security hardening | M | Pre-launch checklist. API key restriction, secret rotation, robots.txt, Cloudflare hardening, 2FA, quota alerts. See docs/helltrack-security.md. |
-| 3 | 31 | Content filter round 3 (bug) | S | UCI channel still leaking XCO/enduro. Known fix: remove "enduro world cup" from INCLUDE_KEYWORDS. Dedicated build chat, upload content-filter.js first. |
-| 4 | 33 | Passive click signal via GA4 | S | Fire card_open GA event on bottom sheet open. 3 lines of JS. Builds engagement signal for future filter tuning. |
+| 2 | 29 | Security hardening | M | Pre-launch checklist. See docs/helltrack-security.md. |
+| 3 | 35 | Rename Paddock → Pits | XS | Display label only. Internal key stays `paddock`. Two-line change in index.html and content-filter.js. |
+| 4 | 33 | Passive click signal via GA4 | S | Fire card_open GA event on bottom sheet open. 3 lines of JS. |
 | 5 | 28b | Rider search | S | Search field at top of Riders tab, filters list as you type. Stage 2 of #28. |
 | 6 | 28c | Fantasy team picker | M | Pick up to 6 riders, localStorage, bubbles to top. Stage 3 of #28. |
 | 7 | 32 | Email subscriber list + franchise waitlist | S | 32a: Helltrack update list (Kit.com). 32b: Franchise interest waitlist by discipline. |
 | 8 | 30 | Teams tab | M | New tab: factory teams with IG links + roster. Needs scoping — see details below. |
 | 9 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
-| 10 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH World Cup results only — no enduro. Scraper exists at scripts/rootsandrain_pull.py. |
+| 10 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH World Cup only — no enduro. Scraper exists at scripts/rootsandrain_pull.py. |
 | 11 | 15 | Full historical results 1990s+ | L | Extends #5 back to ~1991. Do after #5 is clean and merged. |
 | 12 | 10 | Season standings | M | Aggregate points across rounds for overall championship standings. |
 | 13 | 16 | Split times frontend | M | Show sector splits per rider in results table. Mobile first. |
 | 14 | 8 | Rider search in results | M | Search by rider name across all results.json. Career results table. |
 | 15 | 9 | Rider comparison | M | Two rider searches side by side. Depends on #8. |
-| 16 | 33b | Thumbs-down feedback button | S | "Not relevant" button on bottom sheet fires GA event. Aggregate monthly to find exclude terms. Depends on #33. |
-| 17 | 14 | Where to watch / live streams | M | Official stream links by geo + guide for finding unofficial streams. |
-| 18 | 17 | Data viz / splits analysis | XL | Someday/maybe. Sector-by-sector gap charts. Depends on #16. |
-| 19 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com or design around "Helltrack.app" branding. |
+| 16 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
+| 17 | 34 | Rider name signals in content filter | S | Use riders.csv to generate +3 keyword boosts at build time. Deferred until post-Loudenvielle data in. |
+| 18 | 14 | Where to watch / live streams | M | Official stream links by geo + guide for unofficial streams. |
+| 19 | 17 | Data viz / splits analysis | XL | Someday/maybe. Sector-by-sector gap charts. Depends on #16. |
+| 20 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com or design around "Helltrack.app" branding. |
 
 ---
 
@@ -163,44 +172,11 @@ Summary:
 - Set YouTube API quota alert at 80% in Google Cloud Console
 - Add Worker referrer check to RSS proxy + results Worker
 
-### #31 — Content filter round 3 (bug)
-**Symptom**: UCI MTB World Series YouTube channel still surfacing XCO and enduro content.
-**Known specific fix**: Remove `'enduro world cup'` from `INCLUDE_KEYWORDS` (currently weighted +5 — should never have been there).
-**Approach**:
-- Start dedicated build chat, upload `scripts/content-filter.js` first
-- Score known bad items before changing anything
-- Remove "enduro world cup" from includes, confirm XCO/enduro exclude weights still dominate
-- Test all known good DH items still pass after changes
-- Rebuild cache and validate live feed
-
-**Score bad items first:**
-```bash
-node -e "
-const {scoreItem} = require('./scripts/content-filter.js');
-const bad = [
-  {title: 'IT\'S RACE WEEK! Ondrej Cink', channelId: 'UCWS4nfoou79mwo9nHew49fA'},
-  {title: 'Building the ultimate Enduro rider with Simona Kuchynkova', channelId: 'UCWS4nfoou79mwo9nHew49fA'},
-  {title: 'Building the ultimate Enduro rider with Charlie Murray', channelId: 'UCWS4nfoou79mwo9nHew49fA'},
-];
-bad.forEach(i => console.log(scoreItem(i), '|', i.title));
-"
-```
-
-**Confirm good items still pass:**
-```bash
-node -e "
-const {scoreItem} = require('./scripts/content-filter.js');
-const good = [
-  {title: 'MTBWS HIGHLIGHTS DHI Men Elite 2026', channelId: 'UCWS4nfoou79mwo9nHew49fA'},
-  {title: 'Track Secrets.. Remi and Jordi discuss Setup for South Korea DH!', channelId: 'UCN_B2-bdBtmAq-5TOEU63nQ'},
-  {title: 'Andreas Kolb Wild Winning Run POV', channelId: 'UCuGFMHThJdIwJRWHFN9lNvA'},
-  {title: 'Asa Vermette Race Run South Korea', channelId: 'UCiCWNsaEx9swRaCe55XMAuw'},
-];
-good.forEach(i => console.log(scoreItem(i), '|', i.title));
-"
-```
-
-**Constraints**: Do not touch MIN_SCORE or BOOST_SCORE. XCO exclude weight must always overpower sum of all possible boosts.
+### #35 — Rename Paddock → Pits
+- Change display label from "Paddock" to "Pits" in `index.html` and `content-filter.js`
+- Internal category key stays `paddock` throughout — do not rename the key
+- Add a comment at both change points: `// display label is "Pits" — internal key stays 'paddock'`
+- Two-line change, low risk
 
 ### #33 — Passive click signal via GA4
 **File needed**: `index.html` — find bottom sheet open handler, add 3 lines.
@@ -218,7 +194,7 @@ gtag('event', 'card_open', {
 
 ### #33b — Thumbs-down feedback button (depends on #33)
 - Small "not relevant" button on bottom sheet
-- One tap fires GA event: `gtag('event', 'card_thumbsdown', { video_id, channel, category, score })`
+- One tap fires: `gtag('event', 'card_thumbsdown', { video_id, channel, category, score })`
 - No backend — GA is the database
 - Review monthly, use to identify new exclude terms for content filter
 
@@ -257,6 +233,12 @@ gtag('event', 'card_open', {
 - Waiting on: 192x192.png and 512x512.png
 - When received: drop both into repo root
 - `git add icon-192.png icon-512.png && git commit -m 'new PWA icon' && git pull --rebase origin main && git push`
+
+### #34 — Rider name signals in content filter
+- Use `scripts/riders.csv` to generate a list of rider last names as +3 include keywords at build time
+- Inject into `INCLUDE_KEYWORDS` dynamically in `build-cache.js` or `content-filter.js`
+- Deferred until post-Loudenvielle — evaluate feed quality with current filter first
+- If implemented: last names only (not full names), weight +3, no impact on XCO/enduro excludes
 
 ### Riders roster maintenance
 - Source of truth: `scripts/riders.csv`
