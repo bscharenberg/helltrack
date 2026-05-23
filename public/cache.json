@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-23T06:40:45.780Z",
-  "totalItems": 72,
+  "builtAt": "2026-05-23T09:07:17.839Z",
+  "totalItems": 73,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -479,6 +479,21 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-yoann-barelli-guides-you-down-whistlers-out-there-trail.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Yoann Barelli Guides You Down Whistler's Out There Trail",
+          "description": "Yoann Barelli is back with a guide about trail riding fundamentals on Whistler&#039;s Out There trail.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29756852/p2pb29756852.jpg",
+          "publishedAt": "Sat, 23 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-yoann-barelli-guides-you-down-whistlers-out-there-trail.html?trk=rss",
+          "categories": [],
+          "score": 4,
+          "category": "news"
+        },
+        {
           "id": "yj3RIaz-oLo",
           "type": "video",
           "source": "youtube",
@@ -513,7 +528,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Good Times &amp; Gnarly Trails at the Aletsch Enduro Invitational",
-          "description": "Top World Cup racers tackled trails at last year&#039;s World Champs venue for a pre-season test.( Comments: 2 )",
+          "description": "Top World Cup racers tackled trails at last year&#039;s World Champs venue for a pre-season test.( Comments: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29751889/p2pb29751889.jpg",
           "publishedAt": "Fri, 22 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-good-times-and-gnarly-trails-at-the-aletsch-enduro-invitational.html?trk=rss",
@@ -743,20 +758,6 @@
           "thumbnail": "https://i.ytimg.com/vi/LDwFk7YwZe8/maxresdefault.jpg",
           "publishedAt": "2026-05-08T05:29:43Z",
           "url": "https://www.youtube.com/watch?v=LDwFk7YwZe8",
-          "score": 5,
-          "category": "news"
-        },
-        {
-          "id": "okZSOl-JVXs",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "How Specialized are working to stay at the pinnacle of downhill racing 💪",
-          "description": "🎥 Race Bikes with Ric McLaughlin - Episode 8\n\n📺 WATCH NOW 👀 Eurosport / TNT Sports\n\n*Check local listing*",
-          "thumbnail": "https://i.ytimg.com/vi/okZSOl-JVXs/maxresdefault.jpg",
-          "publishedAt": "2026-05-07T17:01:10Z",
-          "url": "https://www.youtube.com/watch?v=okZSOl-JVXs",
           "score": 5,
           "category": "news"
         }
