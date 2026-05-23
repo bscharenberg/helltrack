@@ -172,7 +172,9 @@ async function fetchResults(venueSlug) {
   console.log(`\n🏁 Fetching results for: ${venueSlug}\n`)
 
   console.log('📡 Calling results Worker...')
-  const workerRes = await fetch(`${RESULTS_WORKER}/?venue=${venueSlug}`)
+  const workerRes = await fetch(`${RESULTS_WORKER}/?venue=${venueSlug}`, {
+    headers: { 'X-Helltrack-Token': process.env.HELLTRACK_TOKEN || '' }
+  })
   if (!workerRes.ok) throw new Error(`Worker returned ${workerRes.status}`)
   const { pdfUrls, venue: venueName, date } = await workerRes.json()
   console.log(`  → ${pdfUrls.length} PDF URLs`)
