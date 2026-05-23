@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-23T09:07:17.839Z",
-  "totalItems": 73,
+  "builtAt": "2026-05-23T11:18:47.328Z",
+  "totalItems": 69,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -403,20 +403,6 @@
           "category": "paddock"
         },
         {
-          "id": "1FCUrDR13mw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "The effect of a fresh downhill track in Mona YongPyong 🇰🇷",
-          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
-          "thumbnail": "https://i.ytimg.com/vi/1FCUrDR13mw/maxresdefault.jpg",
-          "publishedAt": "2026-05-06T14:00:02Z",
-          "url": "https://www.youtube.com/watch?v=1FCUrDR13mw",
-          "score": 12,
-          "category": "paddock"
-        },
-        {
           "id": "DxCsAY_Ogbk",
           "type": "video",
           "source": "youtube",
@@ -485,7 +471,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Yoann Barelli Guides You Down Whistler's Out There Trail",
-          "description": "Yoann Barelli is back with a guide about trail riding fundamentals on Whistler&#039;s Out There trail.",
+          "description": "Yoann Barelli is back with a guide about trail riding fundamentals on Whistler&#039;s Out There trail.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29756852/p2pb29756852.jpg",
           "publishedAt": "Sat, 23 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-yoann-barelli-guides-you-down-whistlers-out-there-trail.html?trk=rss",
@@ -500,7 +486,7 @@
           "channelId": "UCWS4nfoou79mwo9nHew49fA",
           "channelName": "UCI MTB World Series",
           "title": "Things have been heating up in today's practice 🔥",
-          "description": "Things have been heating up in today's practice 🔥\n\nWe can't wait to see the elite racing get underway! 🇨🇿",
+          "description": "We can't wait to see the elite racing get underway! 🇨🇿",
           "thumbnail": "https://i.ytimg.com/vi/yj3RIaz-oLo/maxresdefault.jpg",
           "publishedAt": "2026-05-22T18:30:46Z",
           "url": "https://www.youtube.com/watch?v=yj3RIaz-oLo",
@@ -585,7 +571,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "What Are People Riding in the Whistler Bike Park in 2026? - Annual Opening Day Survey",
-          "description": "A snapshot of the bikes and equipment used by the hearty souls who braved the cold, rainy weather on opening day.( Photos: 24, Comments: 135 )",
+          "description": "A snapshot of the bikes and equipment used by the hearty souls who braved the cold, rainy weather on opening day.( Photos: 24, Comments: 136 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb18959948/p2pb18959948.jpg",
           "publishedAt": "Thu, 21 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/2026-whistler-opening-day-survey.html?trk=rss",
