@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-05-22T23:11:05.145Z",
+  "builtAt": "2026-05-23T03:57:05.084Z",
   "totalItems": 72,
   "categories": {
     "race-runs": {
@@ -346,6 +346,20 @@
       "id": "paddock",
       "label": "Paddock",
       "items": [
+        {
+          "id": "9Hnyq2DS5VQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "UncChats - HARD MTB LEAGUE",
+          "description": "Seeding day at the 2026 @HARDMTBLEAGUE was a banger! Dust, slams, blasting, bashing and roosting all in a day's work for riders in attendance. Luca Cometti gets the lowdown on how things went.\n\nInterviews\n0:00 - Tegan Cruz\n1:20 - Kailey Skelton\n3:08 - Eddie Reynolds\n5:23 - Alyana Van Horn\n7:07 - Lucas Dedora\n8:53 - Ffion Pickstock & Maddie Lloyd\n10:07 - Phil Atwill\n12:12 - Max Clark\n13:55 - Nik Nestoroff\n15:39 - Braydon Bringhurst",
+          "thumbnail": "https://i.ytimg.com/vi/9Hnyq2DS5VQ/maxresdefault.jpg",
+          "publishedAt": "2026-05-23T01:24:25Z",
+          "url": "https://www.youtube.com/watch?v=9Hnyq2DS5VQ",
+          "score": 8,
+          "category": "paddock"
+        },
         {
           "id": "uvVz5XjczfI",
           "type": "video",
