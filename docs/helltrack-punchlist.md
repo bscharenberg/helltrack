@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-05-22
+**Last updated**: 2026-05-23
 
 ## Current State: LIVE ✅
 - helltrack.app is live with HTTPS
@@ -27,6 +27,35 @@
 Helltrack is the template for a family of discipline-specific racing apps. Each follows the same curation model — one clean destination for fans of that discipline, zero noise. Potential franchise: Downhill Racing (Helltrack), Enduro Racing, XCO Racing, BMX Racing, etc.
 
 Prereq: Helltrack brand cleaned up to "DOWNHILL RACING" first. No enduro language, no scope creep. Sharp identity is what makes the franchise model credible.
+
+---
+
+## Design Decisions
+
+### Helltrack = UCI DH only
+**Scope is locked.** Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride, no XCO, no trail riding, no road, no BMX. This applies to:
+- Content filter: any non-DH content must be excluded regardless of source
+- Results data: DH World Cup and World Championships only — no enduro results
+- Riders tab: UCI DH license holders only
+- Future features: all scoped to DH
+
+If a channel posts mixed content (e.g. UCI MTB World Series), only DHI content passes. The exclude weight for XCO and enduro must always overpower the trusted channel boost.
+
+### Aesthetic
+- Dark #111 background, acid yellow #d4f500 accent
+- Barlow Condensed typography, bold, all caps for labels
+- Timing-screen / race-plate energy — not lifestyle, not outdoor adventure
+- Mobile-first, full-width on desktop, no artificial constraints
+
+### Feed philosophy
+- "Newspaper not an inbox" — no unread state, no notification pressure
+- Flat chronological feed with category badges
+- MAX_AGE_DAYS=30 — no backlog, always fresh
+
+### Navigation
+- Top tab bar only — no sidebar, no bottom nav
+- Tabs: FEED / RESULTS / RIDERS (+ TEAMS when built)
+- Results nav rows sticky in header, hidden on other tabs
 
 ---
 
@@ -86,21 +115,23 @@ Prereq: Helltrack brand cleaned up to "DOWNHILL RACING" first. No enduro languag
 |---|---|---|---|---|
 | 1 | 26 | Loudenvielle R2 results | S | Race weekend May 28. Run results-fetcher.mjs after finals. Slug: loudenvielle-2026. |
 | 2 | 29 | Security hardening | M | Pre-launch checklist. API key restriction, secret rotation, robots.txt, Cloudflare hardening, 2FA, quota alerts. See docs/helltrack-security.md. |
-| 3 | 31 | Content filter round 3 (bug) | S | UCI channel still leaking XCO and enduro content. Start dedicated build chat, upload content-filter.js first. Score known bad items before changing anything. |
-| 4 | 28b | Rider search | S | Search field at top of Riders tab, filters list as you type. Stage 2 of #28. |
-| 5 | 28c | Fantasy team picker | M | Pick up to 6 riders, localStorage, bubbles to top. Stage 3 of #28. |
-| 6 | 32 | Email subscriber list + franchise waitlist | S | 32a: Helltrack update list (Kit.com, free tier, linked from app). 32b: Franchise interest waitlist by discipline (Enduro/XCO/BMX/Road). Same tool, two forms. |
-| 7 | 30 | Teams tab | M | New tab: factory teams with IG links + roster under each team. Needs scoping — see details below. |
-| 8 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
-| 9 | 5 | Rootsandrain historical data 2015-2023 | L | Scrape and integrate 9 years of World Cup DH results into results.json. |
-| 10 | 15 | Full historical results 1990s+ | L | Extends #5 back to ~1991. Do after #5 is clean and merged. |
-| 11 | 10 | Season standings | M | Aggregate points across rounds for overall championship standings. |
-| 12 | 16 | Split times frontend | M | Show sector splits per rider in results table. Mobile first. |
-| 13 | 8 | Rider search in results | M | Search by rider name across all results.json. Career results table. |
-| 14 | 9 | Rider comparison | M | Two rider searches side by side. Depends on #8. |
-| 15 | 14 | Where to watch / live streams | M | Official stream links by geo + guide for finding unofficial streams. |
-| 16 | 17 | Data viz / splits analysis | XL | Someday/maybe. Sector-by-sector gap charts. Depends on #16. |
-| 17 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com or design around "Helltrack.app" branding. |
+| 3 | 31 | Content filter round 3 (bug) | S | UCI channel still leaking XCO/enduro. Known fix: remove "enduro world cup" from INCLUDE_KEYWORDS. Dedicated build chat, upload content-filter.js first. |
+| 4 | 33 | Passive click signal via GA4 | S | Fire card_open GA event on bottom sheet open. 3 lines of JS. Builds engagement signal for future filter tuning. |
+| 5 | 28b | Rider search | S | Search field at top of Riders tab, filters list as you type. Stage 2 of #28. |
+| 6 | 28c | Fantasy team picker | M | Pick up to 6 riders, localStorage, bubbles to top. Stage 3 of #28. |
+| 7 | 32 | Email subscriber list + franchise waitlist | S | 32a: Helltrack update list (Kit.com). 32b: Franchise interest waitlist by discipline. |
+| 8 | 30 | Teams tab | M | New tab: factory teams with IG links + roster. Needs scoping — see details below. |
+| 9 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
+| 10 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH World Cup results only — no enduro. Scraper exists at scripts/rootsandrain_pull.py. |
+| 11 | 15 | Full historical results 1990s+ | L | Extends #5 back to ~1991. Do after #5 is clean and merged. |
+| 12 | 10 | Season standings | M | Aggregate points across rounds for overall championship standings. |
+| 13 | 16 | Split times frontend | M | Show sector splits per rider in results table. Mobile first. |
+| 14 | 8 | Rider search in results | M | Search by rider name across all results.json. Career results table. |
+| 15 | 9 | Rider comparison | M | Two rider searches side by side. Depends on #8. |
+| 16 | 33b | Thumbs-down feedback button | S | "Not relevant" button on bottom sheet fires GA event. Aggregate monthly to find exclude terms. Depends on #33. |
+| 17 | 14 | Where to watch / live streams | M | Official stream links by geo + guide for finding unofficial streams. |
+| 18 | 17 | Data viz / splits analysis | XL | Someday/maybe. Sector-by-sector gap charts. Depends on #16. |
+| 19 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com or design around "Helltrack.app" branding. |
 
 ---
 
@@ -133,15 +164,63 @@ Summary:
 - Add Worker referrer check to RSS proxy + results Worker
 
 ### #31 — Content filter round 3 (bug)
-**Symptom**: UCI MTB World Series YouTube channel still surfacing XCO and enduro content despite previous filter fixes.
+**Symptom**: UCI MTB World Series YouTube channel still surfacing XCO and enduro content.
+**Known specific fix**: Remove `'enduro world cup'` from `INCLUDE_KEYWORDS` (currently weighted +5 — should never have been there).
 **Approach**:
-- Start a dedicated build chat for this
-- Upload `scripts/content-filter.js` as first step
-- Score each known bad item before changing anything
-- Identify why each is passing — trusted channel boost overpowering excludes?
-- Add targeted excludes, test all known good DH items still pass
+- Start dedicated build chat, upload `scripts/content-filter.js` first
+- Score known bad items before changing anything
+- Remove "enduro world cup" from includes, confirm XCO/enduro exclude weights still dominate
+- Test all known good DH items still pass after changes
 - Rebuild cache and validate live feed
-**Constraints**: XCO exclude weight must always overpower sum of all possible boosts. Do not touch MIN_SCORE or BOOST_SCORE.
+
+**Score bad items first:**
+```bash
+node -e "
+const {scoreItem} = require('./scripts/content-filter.js');
+const bad = [
+  {title: 'IT\'S RACE WEEK! Ondrej Cink', channelId: 'UCWS4nfoou79mwo9nHew49fA'},
+  {title: 'Building the ultimate Enduro rider with Simona Kuchynkova', channelId: 'UCWS4nfoou79mwo9nHew49fA'},
+  {title: 'Building the ultimate Enduro rider with Charlie Murray', channelId: 'UCWS4nfoou79mwo9nHew49fA'},
+];
+bad.forEach(i => console.log(scoreItem(i), '|', i.title));
+"
+```
+
+**Confirm good items still pass:**
+```bash
+node -e "
+const {scoreItem} = require('./scripts/content-filter.js');
+const good = [
+  {title: 'MTBWS HIGHLIGHTS DHI Men Elite 2026', channelId: 'UCWS4nfoou79mwo9nHew49fA'},
+  {title: 'Track Secrets.. Remi and Jordi discuss Setup for South Korea DH!', channelId: 'UCN_B2-bdBtmAq-5TOEU63nQ'},
+  {title: 'Andreas Kolb Wild Winning Run POV', channelId: 'UCuGFMHThJdIwJRWHFN9lNvA'},
+  {title: 'Asa Vermette Race Run South Korea', channelId: 'UCiCWNsaEx9swRaCe55XMAuw'},
+];
+good.forEach(i => console.log(scoreItem(i), '|', i.title));
+"
+```
+
+**Constraints**: Do not touch MIN_SCORE or BOOST_SCORE. XCO exclude weight must always overpower sum of all possible boosts.
+
+### #33 — Passive click signal via GA4
+**File needed**: `index.html` — find bottom sheet open handler, add 3 lines.
+
+```javascript
+gtag('event', 'card_open', {
+  video_id: item.id,
+  channel: item.channelName,
+  category: item.category,
+  score: item.score
+});
+```
+
+**Done when**: `card_open` events appear in GA4 Realtime when tapping cards on helltrack.app.
+
+### #33b — Thumbs-down feedback button (depends on #33)
+- Small "not relevant" button on bottom sheet
+- One tap fires GA event: `gtag('event', 'card_thumbsdown', { video_id, channel, category, score })`
+- No backend — GA is the database
+- Review monthly, use to identify new exclude terms for content filter
 
 ### #28b — Rider search
 - Search input at top of Riders tab, above Men/Women toggle
@@ -161,17 +240,17 @@ Summary:
 - Works across Men and Women
 
 ### #32 — Email subscriber list + franchise waitlist
-- **32a**: Helltrack update list — Kit.com (free tier), simple form, linked from helltrack.app. For users who want to know when new features ship.
-- **32b**: Franchise interest waitlist — separate Kit.com form with discipline selector (Enduro / XCO / BMX / Road). Captures demand signal before building anything new.
-- Both are Kit.com hosted forms — no backend needed, no build chat required
-- helltrack.app just needs a small "Stay in the loop" link or button pointing to the form
+- **32a**: Helltrack update list — Kit.com (free tier), linked from helltrack.app
+- **32b**: Franchise interest waitlist — discipline selector (Enduro / XCO / BMX / Road)
+- Both Kit.com hosted — no backend, no build chat needed
+- helltrack.app needs a small "Stay in the loop" link pointing to the form
 
 ### #30 — Teams tab
 **Needs scoping before building. Open questions:**
-- Team data source: scrape from results.json (changes year to year) or static teams.json curated manually?
+- Team data source: from results.json (changes year to year) or static teams.json?
 - Scope: factory teams only or all teams including privateers?
-- Nav position: FEED / RESULTS / RIDERS / TEAMS or different?
-- Rider-team linkage: show current team based on most recent result, or manually curated?
+- Nav position: FEED / RESULTS / RIDERS / TEAMS?
+- Rider-team linkage: most recent result or manually curated?
 
 ### #7 — PWA icon
 - Handed off to designer
@@ -185,6 +264,7 @@ Summary:
 - `git add scripts/riders.csv public/riders.json && git commit -m 'update riders roster'`
 
 ### #5 — Rootsandrain historical data 2015-2023
+**Scope: UCI DH World Cup only — no enduro results.**
 - Known series URLs:
   - 2025: rootsandrain.com/series2028/2025-whoop-uci-world-cup-dh/
   - 2024: rootsandrain.com/series1831/2024-uci-world-cup-dh/
