@@ -946,6 +946,16 @@ function openSheet(item) {
   document.getElementById('sheet-overlay').classList.add('open')
   document.getElementById('sheet').classList.add('open')
   document.body.style.overflow = 'hidden'
+
+  // GA4 — passive click signal
+  if (typeof gtag === 'function') {
+    gtag('event', 'card_open', {
+      video_id:  item.id,
+      channel:   item.channelName,
+      category:  item.category,
+      score:     item.score,
+    })
+  }
 }
 
 function closeSheet() {
