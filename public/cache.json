@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-05-23T16:57:56.067Z",
+  "builtAt": "2026-05-23T17:02:35.172Z",
   "totalItems": 40,
   "categories": {
     "race-runs": {
@@ -18,6 +18,20 @@
           "publishedAt": "2026-05-13T17:09:53Z",
           "url": "https://www.youtube.com/watch?v=dPFs1_6xUj4",
           "score": 9,
+          "category": "race-runs"
+        },
+        {
+          "id": "LDwFk7YwZe8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "ACTION - Monster PRO DOWNHILL, Mountain Creek - #USDH",
+          "description": "Bikes and bodies try to survive the rocks at Mountain Creek Bike Park during practice for the 2026 @prodownhillseries DH race!",
+          "thumbnail": "https://i.ytimg.com/vi/LDwFk7YwZe8/maxresdefault.jpg",
+          "publishedAt": "2026-05-08T05:29:43Z",
+          "url": "https://www.youtube.com/watch?v=LDwFk7YwZe8",
+          "score": 5,
           "category": "race-runs"
         },
         {
@@ -297,6 +311,34 @@
           "url": "https://www.youtube.com/watch?v=8gzphlqeY6o",
           "score": 7,
           "category": "films"
+        },
+        {
+          "id": "4ixuqUTsvxU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Jackson Goldstone shredding his local tracks in The Setup!",
+          "description": "Watch our first episode of The Setup on our channel!",
+          "thumbnail": "https://i.ytimg.com/vi/4ixuqUTsvxU/maxresdefault.jpg",
+          "publishedAt": "2026-04-26T21:41:01Z",
+          "url": "https://www.youtube.com/watch?v=4ixuqUTsvxU",
+          "score": 6,
+          "category": "films"
+        },
+        {
+          "id": "5H_rgndVi8I",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "LAST LAPS SHREDDING LLANGOLLEN",
+          "description": "We've come back to a OG spot to get some lasgt laps in before South Korea, it's been a crazy few weeks training lets go!\n\nHead to https://betterhelp.com/BernardKerr for 10% off your first month of therapy with our paid partner, BetterHelp. Make your mental health and growth a positive focus this year.\n\nShot on #dji \n\n#dji #mtb #bikepark #downhill #pivot #bksport #wales",
+          "thumbnail": "https://i.ytimg.com/vi/5H_rgndVi8I/maxresdefault.jpg",
+          "publishedAt": "2026-04-26T13:41:26Z",
+          "url": "https://www.youtube.com/watch?v=5H_rgndVi8I",
+          "score": 7,
+          "category": "films"
         }
       ]
     },
@@ -316,6 +358,48 @@
           "publishedAt": "2026-05-21T20:43:36Z",
           "url": "https://www.youtube.com/watch?v=BDb0KMIc9qw",
           "score": 8,
+          "category": "paddock"
+        },
+        {
+          "id": "sE8IAE9VPfo",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Track Secrets.. Remi and Jordi discuss Setup for South Korea DH!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/sE8IAE9VPfo/maxresdefault.jpg",
+          "publishedAt": "2026-05-19T22:37:00Z",
+          "url": "https://www.youtube.com/watch?v=sE8IAE9VPfo",
+          "score": 7,
+          "category": "paddock"
+        },
+        {
+          "id": "PSN60yKfYjU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "Frameworks 32-Inch-Wheeled DH Bike EXPLAINED",
+          "description": "Neko Mulally is tested out a 32\" front wheel on his downhill bike at the  @prodownhillseries  at Mountain Creek. He's running a custom-made FOX 40 fork that's been extended to fit the wheel along with a custom frame to help sort out geometry and axle-to-crown height. His rear wheel remains 27.5\".",
+          "thumbnail": "https://i.ytimg.com/vi/PSN60yKfYjU/maxresdefault.jpg",
+          "publishedAt": "2026-05-12T20:22:43Z",
+          "url": "https://www.youtube.com/watch?v=PSN60yKfYjU",
+          "score": 7,
+          "category": "paddock"
+        },
+        {
+          "id": "KwEASm46CSw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Testing with FOX Factory teams ahead of DH World Cup round 1 in South Korea!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/KwEASm46CSw/maxresdefault.jpg",
+          "publishedAt": "2026-05-11T22:52:26Z",
+          "url": "https://www.youtube.com/watch?v=KwEASm46CSw",
+          "score": 14,
           "category": "paddock"
         },
         {
@@ -445,20 +529,6 @@
           "category": "paddock"
         },
         {
-          "id": "4ixuqUTsvxU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Jackson Goldstone shredding his local tracks in The Setup!",
-          "description": "Watch our first episode of The Setup on our channel!",
-          "thumbnail": "https://i.ytimg.com/vi/4ixuqUTsvxU/maxresdefault.jpg",
-          "publishedAt": "2026-04-26T21:41:01Z",
-          "url": "https://www.youtube.com/watch?v=4ixuqUTsvxU",
-          "score": 6,
-          "category": "paddock"
-        },
-        {
           "id": "L3T5RC-BzNM",
           "type": "video",
           "source": "youtube",
@@ -485,6 +555,20 @@
           "url": "https://www.youtube.com/watch?v=7LklEguNMJA",
           "score": 6,
           "category": "paddock"
+        },
+        {
+          "id": "gE1t8yEdwug",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "FIRST RIDE ON THE NEW FOX 40'S AT DYFI BIKE PARK!",
+          "description": "We're back in Wales testing out the new Fox 40's and we're letting you in on how we set up the forks for my riding. The new Fox addition feels amazing and I cant wait to get them to World cup!\n\nhttps://ridefox.com/pages/fox-40\n\nShot on @DJI & @Sony \n\n#dji #mtb #bikepark #bksport #mountainbiking #fox #wales #shimano",
+          "thumbnail": "https://i.ytimg.com/vi/gE1t8yEdwug/maxresdefault.jpg",
+          "publishedAt": "2026-04-24T11:11:25Z",
+          "url": "https://www.youtube.com/watch?v=gE1t8yEdwug",
+          "score": 9,
+          "category": "paddock"
         }
       ]
     },
@@ -504,90 +588,6 @@
           "publishedAt": "2026-05-21T20:36:15Z",
           "url": "https://www.youtube.com/watch?v=iBdwYWRGpTw",
           "score": 4,
-          "category": "news"
-        },
-        {
-          "id": "sE8IAE9VPfo",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Track Secrets.. Remi and Jordi discuss Setup for South Korea DH!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/sE8IAE9VPfo/maxresdefault.jpg",
-          "publishedAt": "2026-05-19T22:37:00Z",
-          "url": "https://www.youtube.com/watch?v=sE8IAE9VPfo",
-          "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "PSN60yKfYjU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "Frameworks 32-Inch-Wheeled DH Bike EXPLAINED",
-          "description": "Neko Mulally is tested out a 32\" front wheel on his downhill bike at the  @prodownhillseries  at Mountain Creek. He's running a custom-made FOX 40 fork that's been extended to fit the wheel along with a custom frame to help sort out geometry and axle-to-crown height. His rear wheel remains 27.5\".",
-          "thumbnail": "https://i.ytimg.com/vi/PSN60yKfYjU/maxresdefault.jpg",
-          "publishedAt": "2026-05-12T20:22:43Z",
-          "url": "https://www.youtube.com/watch?v=PSN60yKfYjU",
-          "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "KwEASm46CSw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Testing with FOX Factory teams ahead of DH World Cup round 1 in South Korea!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/KwEASm46CSw/maxresdefault.jpg",
-          "publishedAt": "2026-05-11T22:52:26Z",
-          "url": "https://www.youtube.com/watch?v=KwEASm46CSw",
-          "score": 14,
-          "category": "news"
-        },
-        {
-          "id": "LDwFk7YwZe8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "ACTION - Monster PRO DOWNHILL, Mountain Creek - #USDH",
-          "description": "Bikes and bodies try to survive the rocks at Mountain Creek Bike Park during practice for the 2026 @prodownhillseries DH race!",
-          "thumbnail": "https://i.ytimg.com/vi/LDwFk7YwZe8/maxresdefault.jpg",
-          "publishedAt": "2026-05-08T05:29:43Z",
-          "url": "https://www.youtube.com/watch?v=LDwFk7YwZe8",
-          "score": 5,
-          "category": "news"
-        },
-        {
-          "id": "5H_rgndVi8I",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "LAST LAPS SHREDDING LLANGOLLEN",
-          "description": "We've come back to a OG spot to get some lasgt laps in before South Korea, it's been a crazy few weeks training lets go!\n\nHead to https://betterhelp.com/BernardKerr for 10% off your first month of therapy with our paid partner, BetterHelp. Make your mental health and growth a positive focus this year.\n\nShot on #dji \n\n#dji #mtb #bikepark #downhill #pivot #bksport #wales",
-          "thumbnail": "https://i.ytimg.com/vi/5H_rgndVi8I/maxresdefault.jpg",
-          "publishedAt": "2026-04-26T13:41:26Z",
-          "url": "https://www.youtube.com/watch?v=5H_rgndVi8I",
-          "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "gE1t8yEdwug",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "FIRST RIDE ON THE NEW FOX 40'S AT DYFI BIKE PARK!",
-          "description": "We're back in Wales testing out the new Fox 40's and we're letting you in on how we set up the forks for my riding. The new Fox addition feels amazing and I cant wait to get them to World cup!\n\nhttps://ridefox.com/pages/fox-40\n\nShot on @DJI & @Sony \n\n#dji #mtb #bikepark #bksport #mountainbiking #fox #wales #shimano",
-          "thumbnail": "https://i.ytimg.com/vi/gE1t8yEdwug/maxresdefault.jpg",
-          "publishedAt": "2026-04-24T11:11:25Z",
-          "url": "https://www.youtube.com/watch?v=gE1t8yEdwug",
-          "score": 9,
           "category": "news"
         }
       ]

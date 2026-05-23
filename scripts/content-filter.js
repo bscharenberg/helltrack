@@ -158,7 +158,8 @@ const CATEGORIES = [
     label: 'Race runs',
     keywords: ['race run', 'qualifying run', 'finals run', 'winning run', 'vital raw',
                'qual run', 'seeding run', 'gopro pov', 'pov run', 'full run',
-               'full race', 'dhi', 'race day', 'finals', 'qualifying'],
+               'full race', 'dhi', 'race day', 'finals', 'qualifying',
+               'pro downhill', 'usdh'],
   },
   {
     id: 'results',
@@ -173,7 +174,8 @@ const CATEGORIES = [
     id: 'films',
     label: 'Films',
     keywords: ['sleeper', 'film', 'edit', 'season recap', 'highlights',
-               'behind the scenes', 'team video', 'race edit'],
+               'behind the scenes', 'team video', 'race edit', 'last laps',
+               'shredding'],
   },
   {
     id: 'paddock',
@@ -183,7 +185,8 @@ const CATEGORIES = [
                'jack moir', 'bernard kerr', 'moi moi', 'b line', 'behind the scenes',
                'just getting started', 'wyntv', 'wyn tv', 'pit bits',
                'first practice', 'we have landed', 'first impressions',
-               'quick chat', 'track conditions', 'the setup'],
+               'quick chat', 'track conditions', 'the setup', 'track secrets',
+               'fox 40', 'first ride', 'testing with'],
   },
   {
     id: 'news',
