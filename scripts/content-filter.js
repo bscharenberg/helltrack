@@ -37,9 +37,17 @@ const INCLUDE_KEYWORDS = [
   // Race events — very high confidence
   { terms: ['dh world cup', 'downhill world cup', 'uci dh', 'uci downhill'], weight: 5 },
 
-  // Venues — medium confidence (venue alone is not enough to pass MIN_SCORE=4)
-  // Weight is 2 so a venue hit requires at least one other signal to reach 4.
-  // This prevents trail rides and surveys that mention a venue from passing.
+  // UCI channel DHI title patterns — high weight to overcome mtbws highlights penalty
+  // Titles: "MTBWS HIGHLIGHTS 🇰🇷 Women's Elite DHI | 2026 Mona YongPyong"
+  // "elite dhi" and "junior dhi" are unambiguous DHI signals — XCC/XCO can never match
+  { terms: ['elite dhi', 'junior dhi', 'mtbws full race'], weight: 10 },
+
+  // Downhill season recaps from UCI channel
+  { terms: ['downhill season recap', 'dh season recap'], weight: 5 },
+
+  // Venues — weight 2 so venue alone cannot pass MIN_SCORE=4.
+  // Requires at least one other signal to reach threshold.
+  // Prevents trail rides, surveys, and FKT articles that mention venues from passing.
   { terms: ['fort william', 'leogang', 'val di sole', 'loudenvielle', 'les gets',
             'champery', 'vallnord', 'snowshoe', 'mont sainte anne', 'lake placid',
             'bielsko', 'maydena', 'cairns', 'south korea', 'yongpyong',
@@ -54,17 +62,17 @@ const INCLUDE_KEYWORDS = [
             'dh world cup schedule'], weight: 4 },
   { terms: ['world cup'], weight: 2 },
   { terms: ['qualifying', 'finals', 'semi final', 'q1', 'q2', 'seeding'], weight: 3 },
-  { terms: ['podium', 'race result', 'race winner', 'stage win', 'overall win'], weight: 3 },
+  { terms: ['podium', 'race result', 'race winner', 'stage win', 'overall win',
+            'wins in', 'qualifies first'], weight: 3 },
 
   // Key content series
   { terms: ['inside the tape', 'vital raw', 'story of the race', 'wyntv', 'wyn tv',
             'cathro', 'race analysis'], weight: 4 },
-  // 'mtbws highlights' gets -8 from exclude list, 'dhi' gets +4 — the combo
-  // needs an explicit positive override so DHI highlight reels pass.
-  { terms: ['b line', 'mtbws full race', 'mtbws highlights dhi'], weight: 10 },
+  { terms: ['b line', 'mtbws highlights dhi'], weight: 3 },
   { terms: ['anthill films', 'anthill', 'milliseconds'], weight: 3 },
   { terms: ['track walk', 'course preview', 'track preview', 'course walk'], weight: 3 },
   { terms: ['ghost mode', 'ghosted', 'split times', 'time analysis'], weight: 3 },
+  { terms: ['pit bits'], weight: 3 },
 
   // Rider names — medium confidence (riders do more than race)
   { terms: ['jackson goldstone', 'loic bruni', 'finn iles', 'reece wilson',
@@ -93,11 +101,12 @@ const EXCLUDE_KEYWORDS = [
   { terms: ['mtbws highlights'], weight: 8 },
 
   // Enduro — out of scope for Helltrack (DH only)
-  // Former include terms flipped to excludes
   { terms: ['enduro world cup', 'ews', 'enduro world series', 'uci enduro', 'uci edr',
             'world cup enduro', 'ewsr', 'ixs edc', 'ixs european'], weight: 8 },
   { terms: ['enduro rider', 'ultimate enduro', 'edr rider', 'enduro world',
-            'enduro series', 'enduro race'], weight: 8 },
+            'enduro series', 'enduro race', 'enduro invitational'], weight: 8 },
+  // Bare 'enduro' — lower weight so it can be overridden by strong DH signals
+  { terms: ['enduro'], weight: 4 },
 
   // XCO venues — never DH content
   { terms: ['nove mesto', 'nové město', 'nové mesto', 'albstadt', 'lenzerheide xco',
@@ -134,7 +143,7 @@ const EXCLUDE_KEYWORDS = [
   { terms: ['vlog', 'day in my life', 'morning routine', 'my setup',
             'trail ride', 'local trails', 'bikepacking', 'touring',
             'ride your trail', 'trail suspension', 'suspension overview',
-            'suspension walkthrough'], weight: 6 },
+            'suspension walkthrough', 'live stream'], weight: 6 },
 
   // Ski / snow content (Commencal posts ski content)
   { terms: ['skiing', 'snowboard', 'ski', 'snow park'], weight: 6 },
@@ -156,7 +165,9 @@ const CATEGORIES = [
     label: 'Results',
     keywords: ['result', 'podium', 'winner', 'standings', 'overall', 'race report',
                'split times', 'race analysis', 'story of the race', 'ghost mode',
-               'inside the tape', 'cathro', 'wyntv', 'wyn tv'],
+               'inside the tape', 'cathro', 'wyntv', 'wyn tv',
+               'wins in', 'qualifies first', 'most important run',
+               'season recap', 'rapid reaction'],
   },
   {
     id: 'films',
@@ -170,7 +181,9 @@ const CATEGORIES = [
     keywords: ['podcast', 'interview', 'track walk', 'course preview', 'downtime',
                'just ride', 'rob warner', 'team update', 'bike check', 'rider update',
                'jack moir', 'bernard kerr', 'moi moi', 'b line', 'behind the scenes',
-               'just getting started', 'wyntv', 'wyn tv'],
+               'just getting started', 'wyntv', 'wyn tv', 'pit bits',
+               'first practice', 'we have landed', 'first impressions',
+               'quick chat', 'track conditions', 'the setup'],
   },
   {
     id: 'news',
