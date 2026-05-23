@@ -179,7 +179,7 @@ const CATEGORIES = [
   },
   {
     id: 'paddock',
-    label: 'Paddock',
+    label: 'Pits',  // display label is 'Pits' — internal key stays 'paddock'
     keywords: ['podcast', 'interview', 'track walk', 'course preview', 'downtime',
                'just ride', 'rob warner', 'team update', 'bike check', 'rider update',
                'jack moir', 'bernard kerr', 'moi moi', 'b line', 'behind the scenes',
