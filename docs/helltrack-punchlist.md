@@ -91,6 +91,7 @@ If a channel posts mixed content (e.g. UCI MTB World Series), only DHI content p
 - Subhead updated to "DOWNHILL RACING"
 - Seen/watched state on feed cards — dims at 45% opacity after Watch/Read clicked (#27)
 - Riders tab — 154 men, 62 women, IG outbound links, Men/Women toggle (#28 Stage 1)
+- Rider search — search field filters list as you type, gender label in results (#28b Stage 2) ✅
 
 ### Content & Data
 - XCO filtering fixed (weight 15 + mtbws highlights -8)
@@ -125,8 +126,8 @@ If a channel posts mixed content (e.g. UCI MTB World Series), only DHI content p
 | 2 | 29 | Security hardening | M | Pre-launch checklist. See docs/helltrack-security.md. |
 | 3 | 35 | Rename Paddock → Pits | XS | Display label only. Internal key stays `paddock`. Two-line change in index.html and content-filter.js. |
 | 4 | 33 | Passive click signal via GA4 | S | Fire card_open GA event on bottom sheet open. 3 lines of JS. |
-| 5 | 28b | Rider search | S | Search field at top of Riders tab, filters list as you type. Stage 2 of #28. |
-| 6 | 28c | Fantasy team picker | M | Pick up to 6 riders, localStorage, bubbles to top. Stage 3 of #28. |
+| 5 | 28c | Fantasy team picker | M | Pick up to 6 riders, localStorage, bubbles to top. Stage 3 of #28. |
+| 6 | 32 | Email subscriber list + franchise waitlist | S | 32a: Helltrack update list (Kit.com). 32b: Franchise interest waitlist by discipline. |
 | 7 | 32 | Email subscriber list + franchise waitlist | S | 32a: Helltrack update list (Kit.com). 32b: Franchise interest waitlist by discipline. |
 | 8 | 30 | Teams tab | M | New tab: factory teams with IG links + roster. Needs scoping — see details below. |
 | 9 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
@@ -197,15 +198,6 @@ gtag('event', 'card_open', {
 - One tap fires: `gtag('event', 'card_thumbsdown', { video_id, channel, category, score })`
 - No backend — GA is the database
 - Review monthly, use to identify new exclude terms for content filter
-
-### #28b — Rider search
-- Search input at top of Riders tab, above Men/Women toggle
-- Filters both lists simultaneously as user types
-- Case-insensitive match on name
-- When search active: hide toggle, show flat list with gender label per card
-- Clear button (×) inside input to reset
-- Placeholder: "Search riders..."
-- Min 44px height tap target on mobile
 
 ### #28c — Fantasy team picker
 - Pick up to 6 riders from Riders tab
