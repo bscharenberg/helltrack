@@ -39,6 +39,7 @@ const CHANNELS = [
 
   // Podcasts / long-form
   { id: 'UCgwpS_N4DQDYsip73rsQ6iA', name: 'Downtime Podcast' },
+  { id: 'UCUjYvTWqwm7x6LU8uGLvdxQ', name: 'Just Ride' },
 ]
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────

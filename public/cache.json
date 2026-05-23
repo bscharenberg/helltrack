@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-23T17:11:36.659Z",
-  "totalItems": 40,
+  "builtAt": "2026-05-23T17:40:37.975Z",
+  "totalItems": 39,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -18,6 +18,20 @@
           "publishedAt": "2026-05-13T17:09:53Z",
           "url": "https://www.youtube.com/watch?v=dPFs1_6xUj4",
           "score": 9,
+          "category": "race-runs"
+        },
+        {
+          "id": "V248jH-wOIs",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "Greg Minnaar On Why Some Riders NEVER Reach the Top | Just Ride",
+          "description": "In this episode of Just Ride, Rob Warner and Eliot Jackson sit down with Greg Minnaar to talk about life after racing, building a modern World Cup downhill team, and what it really takes to stay competitive at the highest level of the sport.\n\nFrom bike setup and rider development to data analysis, team structure, and managing pressure, Greg shares how downhill racing has evolved over the years and how teams are constantly searching for new ways to gain an edge. He also opens up about transitioning from athlete to team director and helping guide the next generation of riders.\n\nThe conversation dives deep into World Cup racing, Hardline, the future of downhill MTB, legendary rivalries, and the mindset behind one of the most successful careers the sport has ever seen.\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSpotify link: https://open.spotify.com/episode/2lGiOLESWzZKHwYoBrH2y0?si=748fbed21f6446d6\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#mtb #redbull #justride\n\n00:00 - Intro\n00:45 - Greg Minnaar’s New Role After Downhill Racing\n01:26 - How a World Cup DH Team Actually Works\n03:23 - Why Pro Downhill Teams Became More Professional\n06:13 - How Teams Help Riders Perform Better in DH Racing\n07:13 - Why Greg Minnaar Never Truly Dominated DH Racing\n08:29 - What Happens Behind the Scenes of a DH Team\n10:12 - How Greg Minnaar Helps Riders Handle Pressure\n12:11 - How Teams Find Future DH World Cup Riders\n13:43 - How Great DH Teams Build Winning Riders\n16:14 - How Pro Riders Set Up DH Bikes\n18:31 - What Honda Taught Greg Minnaar About Bike Setup\n19:36 - How Data Is Used in Modern Downhill Racing\n22:15 - What DH Teams Learn From Bike Telemetry Data\n24:10 - How Riders React to Coaching and Bike Changes\n25:28 - Why Team Pressure Feels Different From Racing\n27:06 - How DH Riders Choose Fast Lines on Track\n29:15 - Why Modern DH Riders Need More Team Support\n30:40 - Why World Cup DH Practice Is Harder Now\n32:32 - How DH Teams Compete Against Specialized & Commencal\n35:02 - How Adidas Joined Greg Minnaar’s DH Team\n37:21 - How Teams Recruit Future Downhill Riders\n39:16 - Why Greg Minnaar Has Mixed Feelings About Hardline\n41:40 - Why American Downhill Racing Is Growing Again\n43:00 - What the Future of Downhill Racing Looks Like\n44:01 - Why Modern DH Racing Is Faster Than Ever\n46:31 - Greg Minnaar on Life After Racing\n48:30 - Why Building a Winning DH Team Is So Hard\n49:16 - Greg Minnaar’s Most Legendary World Championship Win\n52:14 - What Makes Greg Minnaar So Respected in DH Racing",
+          "thumbnail": "https://i.ytimg.com/vi/V248jH-wOIs/maxresdefault.jpg",
+          "publishedAt": "2026-05-12T14:00:54Z",
+          "url": "https://www.youtube.com/watch?v=V248jH-wOIs",
+          "score": 6,
           "category": "race-runs"
         },
         {
@@ -152,20 +166,6 @@
       "id": "results",
       "label": "Results",
       "items": [
-        {
-          "id": "3NJcvxiKfAU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "He crashed but still podiumed?! 🤯",
-          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
-          "thumbnail": "https://i.ytimg.com/vi/3NJcvxiKfAU/maxresdefault.jpg",
-          "publishedAt": "2026-05-11T11:00:06Z",
-          "url": "https://www.youtube.com/watch?v=3NJcvxiKfAU",
-          "score": 8,
-          "category": "results"
-        },
         {
           "id": "lgeLUxN7EGY",
           "type": "video",
@@ -400,20 +400,6 @@
           "publishedAt": "2026-05-11T22:52:26Z",
           "url": "https://www.youtube.com/watch?v=KwEASm46CSw",
           "score": 14,
-          "category": "paddock"
-        },
-        {
-          "id": "uvVz5XjczfI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Asa Vermette was only 15 when he first beat Aaron Gwin 🤯",
-          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
-          "thumbnail": "https://i.ytimg.com/vi/uvVz5XjczfI/maxresdefault.jpg",
-          "publishedAt": "2026-05-10T11:01:21Z",
-          "url": "https://www.youtube.com/watch?v=uvVz5XjczfI",
-          "score": 7,
           "category": "paddock"
         },
         {
