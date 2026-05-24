@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-05-23T22:01:20.139Z",
+  "builtAt": "2026-05-24T00:07:21.532Z",
   "totalItems": 39,
   "categories": {
     "race-runs": {
@@ -344,7 +344,7 @@
     },
     "paddock": {
       "id": "paddock",
-      "label": "Paddock",
+      "label": "Pits",
       "items": [
         {
           "id": "BDb0KMIc9qw",
