@@ -12,7 +12,7 @@
 
 // ─── Tuning constants ────────────────────────────────────────────────────────
 
-const MIN_SCORE = 4        // items scoring below this are dropped
+const MIN_SCORE = 6        // items scoring below this are dropped
 const BOOST_SCORE = 4      // source boost for trusted channels
 const MAX_AGE_DAYS = 30    // items older than this are dropped regardless of score
 
