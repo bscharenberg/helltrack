@@ -799,6 +799,25 @@ html, body {
   transition: opacity 0.2s, transform 0.2s; z-index: 300;
 }
 #riders-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ── Email signup section ── */
+.signup-section {
+  padding: 32px 16px;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  margin: 8px 0;
+}
+.signup-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 2rem;
+  color: #d4f500; text-transform: uppercase;
+  letter-spacing: 0.05em; margin: 0 0 8px 0;
+}
+.signup-subhead {
+  color: #888;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem; margin: 0 0 24px 0;
+}
 </style>
 </head>
 <body>
@@ -866,6 +885,12 @@ html, body {
     <button id="retry-btn" onclick="loadFeed(true)">Retry</button>
   </div>
   <div id="content"></div>
+  <div class="signup-section">
+    <h2 class="signup-headline">Make the Cut</h2>
+    <p class="signup-subhead">Be first to know when new features and race content drop.</p>
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script><form action="https://app.kit.com/forms/9481228/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9481228" data-uid="513bdca50f" data-format="inline" data-version="5" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"></div><div class="formkit-field"><div role="button" tabindex="0"><fieldset data-group="checkboxes" class="formkit-3413" group="field" type="Custom" order="2" save_as="Tag"><legend style="color: rgb(255, 255, 255); font-weight: 700;">What are you interested in?</legend><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773114" type="checkbox" name="tags[]" value="19773114"><label for="tag-3413-19773114">Downhill Racing (Helltrack)</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773117" type="checkbox" name="tags[]" value="19773117"><label for="tag-3413-19773117">Enduro</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773118" type="checkbox" name="tags[]" value="19773118"><label for="tag-3413-19773118">XCO</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773119" type="checkbox" name="tags[]" value="19773119"><label for="tag-3413-19773119">BMX</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773120" type="checkbox" name="tags[]" value="19773120"><label for="tag-3413-19773120">Road</label></div></fieldset></div></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">MAKE THE CUT</span></button></div></div></form>
+  </div>
+
   <div id="updated"></div>
 </div>
 
