@@ -668,17 +668,16 @@ html, body {
 
 .rider-card {
   background: var(--bg-card);
-  border: 0.5px solid var(--border);
+  border: 0.5px solid #222;
   border-radius: 10px;
-  padding: 12px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  text-align: center;
-  text-decoration: none;
-  transition: border-color 0.15s;
+  display: flex; flex-direction: row; align-items: stretch;
+  overflow: hidden; height: 52px;
+  transition: border-color 0.15s, background 0.15s;
   -webkit-tap-highlight-color: transparent;
+}
+.rider-card.saved {
+  border-color: rgba(212,245,0,0.25);
+  background: rgba(212,245,0,0.05);
 }
 .rider-card:hover { border-color: rgba(212,245,0,0.3); }
 
