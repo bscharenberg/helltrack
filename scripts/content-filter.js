@@ -67,7 +67,7 @@ const INCLUDE_KEYWORDS = [
 
   // Key content series
   { terms: ['inside the tape', 'vital raw', 'story of the race', 'wyntv', 'wyn tv',
-            'cathro', 'race analysis'], weight: 4 },
+            'cathro', 'race analysis'], weight: 6 },
   { terms: ['b line', 'mtbws highlights dhi'], weight: 3 },
   { terms: ['anthill films', 'anthill', 'milliseconds'], weight: 3 },
   { terms: ['track walk', 'course preview', 'track preview', 'course walk'], weight: 3 },
@@ -264,7 +264,11 @@ function filterItems(items) {
   for (const item of items) {
     if (!isRecent(item)) continue
     const score = scoreItem(item)
-    if (score >= MIN_SCORE) {
+    // Untrusted channels (no source boost) must score higher to pass —
+    // their description boilerplate can inflate scores with DH keywords
+    // even on XCO/lifestyle content. Trusted channels need MIN_SCORE.
+    const threshold = TRUSTED_SOURCES.has(item.channelId) ? MIN_SCORE : MIN_SCORE + 4
+    if (score >= threshold) {
       results.push({ ...item, score, category: categorise(item) })
     }
   }
