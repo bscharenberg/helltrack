@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-24T05:07:21.621Z",
-  "totalItems": 39,
+  "builtAt": "2026-05-24T06:15:25.083Z",
+  "totalItems": 54,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -49,6 +49,20 @@
           "category": "race-runs"
         },
         {
+          "id": "MqeCy3VErWs",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "First UCI DHI Elite World Cup + first win = insane 🤯",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/MqeCy3VErWs/maxresdefault.jpg",
+          "publishedAt": "2026-05-04T15:00:38Z",
+          "url": "https://www.youtube.com/watch?v=MqeCy3VErWs",
+          "score": 12,
+          "category": "race-runs"
+        },
+        {
           "id": "0UyLk73AnIc",
           "type": "video",
           "source": "youtube",
@@ -77,6 +91,20 @@
           "category": "race-runs"
         },
         {
+          "id": "z6N02V0Uk08",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A moment Asa Vermette will never forget! 💥",
+          "description": "Crossing the line to take the win in his first ever Elite UCI DHI appearance 🥇",
+          "thumbnail": "https://i.ytimg.com/vi/z6N02V0Uk08/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T12:59:26Z",
+          "url": "https://www.youtube.com/watch?v=z6N02V0Uk08",
+          "score": 10,
+          "category": "race-runs"
+        },
+        {
           "id": "yzFYPuGta7w",
           "type": "video",
           "source": "youtube",
@@ -88,6 +116,104 @@
           "publishedAt": "2026-05-02T10:01:04Z",
           "url": "https://www.youtube.com/watch?v=yzFYPuGta7w",
           "score": 12,
+          "category": "race-runs"
+        },
+        {
+          "id": "X3wGQ52Ket8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Asa kept his word 👊🫡",
+          "description": "Asa kept his word 👊🫡\n\nAt the end of the 2025 season, Asa Vermette promised to hit the Men’s Elite DHI World Cup swinging in 2026, and he definitely delivered 👀",
+          "thumbnail": "https://i.ytimg.com/vi/X3wGQ52Ket8/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T08:01:58Z",
+          "url": "https://www.youtube.com/watch?v=X3wGQ52Ket8",
+          "score": 17,
+          "category": "race-runs"
+        },
+        {
+          "id": "iRVQ6Fls5-8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A dream debut 🤯",
+          "description": "A dream debut 🤯\n\nAsa Vermette absolutely crushed his debut elite DHI run to beat Loïc Bruni 💨",
+          "thumbnail": "https://i.ytimg.com/vi/iRVQ6Fls5-8/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T07:18:18Z",
+          "url": "https://www.youtube.com/watch?v=iRVQ6Fls5-8",
+          "score": 15,
+          "category": "race-runs"
+        },
+        {
+          "id": "Z_a0h4QTYgg",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Disaster for Jackson Goldstone!",
+          "description": "The 2025 overall leader goes down mid race run 💥\n\n🏁 Men’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/Z_a0h4QTYgg/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T06:40:16Z",
+          "url": "https://www.youtube.com/watch?v=Z_a0h4QTYgg",
+          "score": 14,
+          "category": "race-runs"
+        },
+        {
+          "id": "zqizn32xvrc",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "YOUR Women Elite DHI Winner in Mona YongPyong 🇰🇷💪🥇",
+          "description": "YOUR Women Elite DHI Winner in Mona YongPyong 🇰🇷💪🥇\n\nVali Höll 🤩\n\n🏁 Women’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/zqizn32xvrc/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T05:45:06Z",
+          "url": "https://www.youtube.com/watch?v=zqizn32xvrc",
+          "score": 24,
+          "category": "race-runs"
+        },
+        {
+          "id": "UXeNai1JMs4",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Clean and smooth 😎",
+          "description": "Clean and smooth 😎\n\nSacha Earnestt goes fastest and into the hot seat 🙌\n\n📍Mona YongPyong 🏁 Women’s Elite DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/UXeNai1JMs4/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T04:37:37Z",
+          "url": "https://www.youtube.com/watch?v=UXeNai1JMs4",
+          "score": 19,
+          "category": "race-runs"
+        },
+        {
+          "id": "hUE5YXT-zh0",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A huge save 🤯",
+          "description": "A huge save 🤯\n\nFelix Griffiths saves a big one to go into the hotseat in the Men's Junior DHI 💨",
+          "thumbnail": "https://i.ytimg.com/vi/hUE5YXT-zh0/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T03:25:57Z",
+          "url": "https://www.youtube.com/watch?v=hUE5YXT-zh0",
+          "score": 15,
+          "category": "race-runs"
+        },
+        {
+          "id": "8bUrGqngZrM",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A powerful performance from Ostgaard 👊",
+          "description": "A powerful performance from Ostgaard 👊\n\nAletha Ostgaard takes the win in Mona Yongpyong, with nobody able to match the young American’s pace from top to bottom 🤩\n\nTop 3 ⏱️\n\n1. Aletha Ostgaard – 3:13.937\n2. Rosa Zierl +2.405\n3. Tilly Boadle +5.603\n\n📍Mona YongPyong 🏁 Women’s Junior DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/8bUrGqngZrM/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T03:08:41Z",
+          "url": "https://www.youtube.com/watch?v=8bUrGqngZrM",
+          "score": 19,
           "category": "race-runs"
         },
         {
@@ -166,6 +292,34 @@
       "id": "results",
       "label": "Results",
       "items": [
+        {
+          "id": "3NJcvxiKfAU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "He crashed but still podiumed?! 🤯",
+          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
+          "thumbnail": "https://i.ytimg.com/vi/3NJcvxiKfAU/maxresdefault.jpg",
+          "publishedAt": "2026-05-11T11:00:06Z",
+          "url": "https://www.youtube.com/watch?v=3NJcvxiKfAU",
+          "score": 8,
+          "category": "results"
+        },
+        {
+          "id": "yBJffk_RiE4",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "What a day for Madigan Munro achieving her first ever Elite UCI World Cup podium! 🥉",
+          "description": "Now it's time for ice cream 🍨😅",
+          "thumbnail": "https://i.ytimg.com/vi/yBJffk_RiE4/maxresdefault.jpg",
+          "publishedAt": "2026-05-03T12:11:11Z",
+          "url": "https://www.youtube.com/watch?v=yBJffk_RiE4",
+          "score": 5,
+          "category": "results"
+        },
         {
           "id": "lgeLUxN7EGY",
           "type": "video",
@@ -403,6 +557,48 @@
           "category": "paddock"
         },
         {
+          "id": "uvVz5XjczfI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Asa Vermette was only 15 when he first beat Aaron Gwin 🤯",
+          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
+          "thumbnail": "https://i.ytimg.com/vi/uvVz5XjczfI/maxresdefault.jpg",
+          "publishedAt": "2026-05-10T11:01:21Z",
+          "url": "https://www.youtube.com/watch?v=uvVz5XjczfI",
+          "score": 7,
+          "category": "paddock"
+        },
+        {
+          "id": "iRALdvd9Z6w",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "It's tight competition between Sacha Earnest and Aletha Ostgaard 😅",
+          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
+          "thumbnail": "https://i.ytimg.com/vi/iRALdvd9Z6w/maxresdefault.jpg",
+          "publishedAt": "2026-05-08T11:01:15Z",
+          "url": "https://www.youtube.com/watch?v=iRALdvd9Z6w",
+          "score": 5,
+          "category": "paddock"
+        },
+        {
+          "id": "1FCUrDR13mw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "The effect of a fresh downhill track in Mona YongPyong 🇰🇷",
+          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
+          "thumbnail": "https://i.ytimg.com/vi/1FCUrDR13mw/maxresdefault.jpg",
+          "publishedAt": "2026-05-06T14:00:02Z",
+          "url": "https://www.youtube.com/watch?v=1FCUrDR13mw",
+          "score": 6,
+          "category": "paddock"
+        },
+        {
           "id": "Auwg7htuKnI",
           "type": "video",
           "source": "youtube",
@@ -574,6 +770,20 @@
           "publishedAt": "2026-05-21T20:36:15Z",
           "url": "https://www.youtube.com/watch?v=iBdwYWRGpTw",
           "score": 4,
+          "category": "news"
+        },
+        {
+          "id": "lFmEpMzkvk4",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Pure quality 🤩",
+          "description": "Pure quality 🤩\n\nWorld champion Vali Höll shows her class to take the hot seat in Mona Yongpyong 💥",
+          "thumbnail": "https://i.ytimg.com/vi/lFmEpMzkvk4/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T04:49:14Z",
+          "url": "https://www.youtube.com/watch?v=lFmEpMzkvk4",
+          "score": 5,
           "category": "news"
         }
       ]

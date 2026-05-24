@@ -48,13 +48,14 @@ function uploadsPlaylistId(channelId) {
   return 'UU' + channelId.slice(2)
 }
 
-async function fetchPlaylistPage(playlistId) {
+async function fetchPlaylistPage(playlistId, pageToken = null) {
   const params = new URLSearchParams({
     part:       'snippet',
     playlistId,
     maxResults: 50,
     key:        API_KEY,
   })
+  if (pageToken) params.set('pageToken', pageToken)
 
   const url = `${BASE}/playlistItems?${params}`
   const res = await fetch(url)
@@ -65,6 +66,24 @@ async function fetchPlaylistPage(playlistId) {
   }
 
   return res.json()
+}
+
+// Fetch multiple pages for high-volume channels.
+// UCI posts XCO shorts constantly which pushes DHI highlights off page 1.
+// 3 pages = up to 150 videos, enough to always reach DHI content.
+async function fetchPlaylistPages(playlistId, maxPages = 1) {
+  const allItems = []
+  let pageToken = null
+
+  for (let page = 0; page < maxPages; page++) {
+    const data = await fetchPlaylistPage(playlistId, pageToken)
+    allItems.push(...(data.items || []))
+    pageToken = data.nextPageToken
+    if (!pageToken) break   // no more pages
+    await new Promise(r => setTimeout(r, 200))
+  }
+
+  return { items: allItems }
 }
 
 function normaliseItem(snippet, channelId, channelName) {
@@ -101,7 +120,9 @@ async function fetchYouTube() {
     try {
       console.log(`  Fetching ${channel.name}...`)
       const playlistId = uploadsPlaylistId(channel.id)
-      const data = await fetchPlaylistPage(playlistId)
+      // UCI posts XCO shorts heavily — paginate 3 pages to reach DHI highlights
+      const maxPages = channel.id === 'UCWS4nfoou79mwo9nHew49fA' ? 3 : 1
+      const data = await fetchPlaylistPages(playlistId, maxPages)
 
       const items = (data.items || [])
         .map(item => normaliseItem(item.snippet, channel.id, channel.name))
