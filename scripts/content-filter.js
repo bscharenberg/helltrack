@@ -94,28 +94,29 @@ const INCLUDE_KEYWORDS = [
 // Any match subtracts from score. Hard excludes use high weights.
 
 const EXCLUDE_KEYWORDS = [
-  // Wrong disciplines — hard exclude
+  // Wrong disciplines — hard exclude (titleOnly: checked against title only,
+  // not description — UCI boilerplate descriptions mention XCO/XCC on all videos)
   { terms: ['xco', 'xcc', 'cross country', 'cross-country', 'bmx', 'road cycling',
             'elite xco', 'elite xcc', "men's elite xco",
-            "women's elite xco"], weight: 15 },
-  { terms: ['mtbws highlights'], weight: 8 },
+            "women's elite xco"], weight: 15, titleOnly: true },
+  { terms: ['mtbws highlights'], weight: 8, titleOnly: true },
 
   // Enduro — out of scope for Helltrack (DH only)
   { terms: ['enduro world cup', 'ews', 'enduro world series', 'uci enduro', 'uci edr',
-            'world cup enduro', 'ewsr', 'ixs edc', 'ixs european'], weight: 8 },
+            'world cup enduro', 'ewsr', 'ixs edc', 'ixs european'], weight: 8, titleOnly: true },
   { terms: ['enduro rider', 'ultimate enduro', 'edr rider', 'enduro world',
-            'enduro series', 'enduro race', 'enduro invitational'], weight: 8 },
+            'enduro series', 'enduro race', 'enduro invitational'], weight: 8, titleOnly: true },
   // Bare 'enduro' — lower weight so it can be overridden by strong DH signals
-  { terms: ['enduro'], weight: 4 },
+  { terms: ['enduro'], weight: 4, titleOnly: true },
 
-  // XCO venues — never DH content
+  // XCO venues — never DH content (title only — venue names appear in descriptions too)
   { terms: ['nove mesto', 'nové město', 'nové mesto', 'albstadt', 'lenzerheide xco',
-            'snowshoe xco', 'mont sainte anne xco'], weight: 10 },
+            'snowshoe xco', 'mont sainte anne xco'], weight: 10, titleOnly: true },
 
-  // XCO/road rider names
+  // XCO/road rider names (title only)
   { terms: ['peter sagan', 'mathieu van der poel', 'tom pidcock', 'nino schurter',
             'ondrej cink', 'ondřej cink', 'jordan sarrou', 'victor koretzky',
-            'pauline ferrand prevot', 'loana lecomte'], weight: 10 },
+            'pauline ferrand prevot', 'loana lecomte'], weight: 10, titleOnly: true },
 
   // Freeride / slopestyle — not DH world cup
   { terms: ['crankworx slopestyle', 'rampage', 'redbull rampage',
@@ -211,7 +212,8 @@ function isRecent(item) {
 }
 
 function scoreItem(item) {
-  const text = normalise([item.title, item.description, item.tags?.join(' ')].join(' '))
+  const text      = normalise([item.title, item.description, item.tags?.join(' ')].join(' '))
+  const titleOnly = normalise(item.title)
   let score = 0
 
   if (item.channelId && TRUSTED_SOURCES.has(item.channelId)) {
@@ -228,8 +230,12 @@ function scoreItem(item) {
   }
 
   for (const rule of EXCLUDE_KEYWORDS) {
+    // Hard discipline excludes (xco, xcc, cross-country, enduro terms) are checked
+    // against title only — UCI boilerplate descriptions list all disciplines including
+    // XCO/XCC on every video, which would wrongly penalise DHI highlights.
+    const matchText = rule.titleOnly ? titleOnly : text
     for (const term of rule.terms) {
-      if (text.includes(term)) {
+      if (matchText.includes(term)) {
         score -= rule.weight
         break
       }
