@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-24T10:46:46.627Z",
-  "totalItems": 51,
+  "builtAt": "2026-05-24T12:05:19.902Z",
+  "totalItems": 50,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -680,20 +680,6 @@
           "publishedAt": "2026-04-24T15:45:03Z",
           "url": "https://www.youtube.com/watch?v=7LklEguNMJA",
           "score": 6,
-          "category": "paddock"
-        },
-        {
-          "id": "gE1t8yEdwug",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "FIRST RIDE ON THE NEW FOX 40'S AT DYFI BIKE PARK!",
-          "description": "We're back in Wales testing out the new Fox 40's and we're letting you in on how we set up the forks for my riding. The new Fox addition feels amazing and I cant wait to get them to World cup!\n\nhttps://ridefox.com/pages/fox-40\n\nShot on @DJI & @Sony \n\n#dji #mtb #bikepark #bksport #mountainbiking #fox #wales #shimano",
-          "thumbnail": "https://i.ytimg.com/vi/gE1t8yEdwug/maxresdefault.jpg",
-          "publishedAt": "2026-04-24T11:11:25Z",
-          "url": "https://www.youtube.com/watch?v=gE1t8yEdwug",
-          "score": 9,
           "category": "paddock"
         }
       ]
