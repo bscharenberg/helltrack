@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-24T12:05:19.902Z",
-  "totalItems": 50,
+  "builtAt": "2026-05-24T14:40:38.362Z",
+  "totalItems": 49,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -259,20 +259,6 @@
           "category": "race-runs"
         },
         {
-          "id": "p3f2XLZ1I40",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "2025 Downhill Season Recap | WHOOP UCI MTB World Series",
-          "description": "The 2025 UCI Downhill World Cup season didn’t pretend to be anything other than chaos and drama, steep tracks, varied conditions, and races decided by the smallest margins.\n\nThe rivalries carried it. Vali Höll vs Gracey Hemstreet was all-out, while Jackson Goldstone vs Loïc Bruni felt like watching two different generations of rider collide, raw speed against absolute control.\n\nThe 2026 season is here! Same names, new contenders, faster tracks, and still just one run to get it right.\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/p3f2XLZ1I40/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T00:30:01Z",
-          "url": "https://www.youtube.com/watch?v=p3f2XLZ1I40",
-          "score": 20,
-          "category": "race-runs"
-        },
-        {
           "id": "ROQ2tl-yznY",
           "type": "video",
           "source": "youtube",
@@ -284,6 +270,20 @@
           "publishedAt": "2026-05-01T19:20:45Z",
           "url": "https://www.youtube.com/watch?v=ROQ2tl-yznY",
           "score": 21,
+          "category": "race-runs"
+        },
+        {
+          "id": "3pj6nlH-Ufg",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "SOUTH KOREA WORLD CUP WHOS QUALIFYING?!",
+          "description": "Qualifying day has been crazy with so many unpredictable results! Overall I'm happy for the team and hyped to see what will happen tomorrow. Lets go team!\n\nShot on @sony & @dji\n\n#dji #mtb #bksport #downhill #pivot #mountainbike #worldcup #southkorea #sony #fx6",
+          "thumbnail": "https://i.ytimg.com/vi/3pj6nlH-Ufg/maxresdefault.jpg",
+          "publishedAt": "2026-05-01T12:43:12Z",
+          "url": "https://www.youtube.com/watch?v=3pj6nlH-Ufg",
+          "score": 12,
           "category": "race-runs"
         }
       ]
