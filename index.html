@@ -875,7 +875,7 @@ html, body {
 </div>
 
 <!-- Riders tab view -->
-<div id="riders-view">
+<div id="riders-view" style="display:none">
   <div id="riders-content"></div>
 </div>
 <div id="riders-toast">MY RIDERS FULL</div>
@@ -1185,7 +1185,7 @@ function buildTabs() {
       document.getElementById('feed').style.display                    = isFeed    ? 'block' : 'none'
       document.getElementById('results-view').classList.toggle('active', isResults)
       document.getElementById('results-nav').style.display             = isResults ? 'block' : 'none'
-      document.getElementById('riders-view').classList.toggle('active', isRiders)
+      document.getElementById('riders-view').style.display              = isRiders  ? 'block' : 'none'
       document.getElementById('riders-nav').style.display              = isRiders  ? 'block' : 'none'
       if (isResults) {
         if (!resultsData) loadResults()
@@ -1683,8 +1683,6 @@ function clearRiderSearch() {
   onRiderSearch('')
 }
 
-document.getElementById('riders-view').style.display = 'none'
-document.getElementById('riders-nav').style.display = 'none'
 loadFeed()
 </script>
 
