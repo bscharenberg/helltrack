@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-24T16:07:29.140Z",
-  "totalItems": 45,
+  "builtAt": "2026-05-24T18:03:54.920Z",
+  "totalItems": 43,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -214,20 +214,6 @@
           "publishedAt": "2026-05-02T05:45:06Z",
           "url": "https://www.youtube.com/watch?v=zqizn32xvrc",
           "score": 24,
-          "category": "race-runs"
-        },
-        {
-          "id": "UXeNai1JMs4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Clean and smooth 😎",
-          "description": "Clean and smooth 😎\n\nSacha Earnestt goes fastest and into the hot seat 🙌\n\n📍Mona YongPyong 🏁 Women’s Elite DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/UXeNai1JMs4/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T04:37:37Z",
-          "url": "https://www.youtube.com/watch?v=UXeNai1JMs4",
-          "score": 19,
           "category": "race-runs"
         },
         {
@@ -638,20 +624,6 @@
           "publishedAt": "2026-04-28T09:22:18Z",
           "url": "https://www.youtube.com/watch?v=dd5W6qZ8Afo",
           "score": 7,
-          "category": "paddock"
-        },
-        {
-          "id": "L3T5RC-BzNM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "The Setup! Quick pre-season chat with Jackson Goldstone on Cypress Mountain!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/L3T5RC-BzNM/maxresdefault.jpg",
-          "publishedAt": "2026-04-24T17:21:35Z",
-          "url": "https://www.youtube.com/watch?v=L3T5RC-BzNM",
-          "score": 6,
           "category": "paddock"
         }
       ]
