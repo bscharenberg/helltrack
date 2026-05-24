@@ -734,16 +734,16 @@ html, body {
 }
 .my-riders-chips::-webkit-scrollbar { display: none; }
 .rider-chip {
-  display: flex; align-items: center; gap: 5px;
-  background: rgba(212,245,0,0.08); border: 0.5px solid rgba(212,245,0,0.25);
-  border-radius: 8px; padding: 6px 8px; white-space: nowrap;
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(212,245,0,0.1); border: 1px solid rgba(212,245,0,0.3);
+  border-radius: 8px; padding: 8px 12px; white-space: nowrap;
   text-decoration: none; flex-shrink: 0; position: relative;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; min-height: 40px;
 }
-.rider-chip-flag { font-size: 14px; line-height: 1; }
+.rider-chip-flag { font-size: 16px; line-height: 1; }
 .rider-chip-name {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   color: #d4f500;
 }
 .rider-chip-remove {
@@ -758,27 +758,30 @@ html, body {
   background: var(--bg-card);
   border: 0.5px solid #222;
   border-radius: 10px;
-  display: flex; align-items: center;
+  display: flex; align-items: stretch;
   overflow: hidden; transition: border-color 0.15s, background 0.15s;
-  min-height: 56px;
+  height: 52px;
 }
 .rider-card.saved {
   border-color: rgba(212,245,0,0.25);
   background: rgba(212,245,0,0.05);
 }
 .rider-zone-bookmark {
-  width: 44px; min-width: 44px; align-self: stretch;
+  width: 44px; min-width: 44px;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; border-right: 0.5px solid #222;
-  -webkit-tap-highlight-color: transparent; background: none; border-top: none; border-bottom: none; border-left: none;
+  -webkit-tap-highlight-color: transparent;
+  background: none; border-top: none; border-bottom: none; border-left: none;
+  flex-shrink: 0;
 }
 .rider-zone-bookmark svg { width: 18px; height: 18px; }
 .rider-zone-info {
-  flex: 1; padding: 8px 12px;
+  flex: 1; padding: 0 12px;
   display: flex; flex-direction: row; align-items: center; gap: 10px;
+  min-width: 0;
 }
 .rider-zone-ig {
-  width: 44px; min-width: 44px; align-self: stretch;
+  width: 44px; min-width: 44px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   border-left: 0.5px solid #222; text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -834,6 +837,10 @@ html, body {
         <div class="rs-gender-btn" id="rd-women-btn" onclick="setRiderGender('women')">Elite Women</div>
       </div>
     </div>
+    <div id="my-riders-section" style="padding:8px 16px 4px">
+      <div class="my-riders-label">My Riders</div>
+      <div id="my-riders-strip"></div>
+    </div>
   </div>
   <div id="results-nav" style="display:none; padding-bottom:6px">
     <div class="rs-nav-row" id="rs-year-bar"></div>
@@ -870,10 +877,6 @@ html, body {
 
 <!-- Riders tab view -->
 <div id="riders-view">
-  <div id="my-riders-section">
-    <div class="my-riders-label">My Riders</div>
-    <div id="my-riders-strip"></div>
-  </div>
   <div id="riders-content"></div>
 </div>
 <div id="riders-toast">MY RIDERS FULL</div>
