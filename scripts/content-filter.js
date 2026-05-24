@@ -268,7 +268,14 @@ function filterItems(items) {
     // Untrusted channels (no source boost) must score higher to pass —
     // their description boilerplate can inflate scores with DH keywords
     // even on XCO/lifestyle content. Trusted channels need MIN_SCORE.
-    const threshold = TRUSTED_SOURCES.has(item.channelId) ? MIN_SCORE : MIN_SCORE + 4
+    // Trusted YouTube channels: MIN_SCORE
+    // RSS articles (channelId null): MIN_SCORE — descriptions are article summaries,
+    //   not boilerplate, so no inflation risk
+    // Untrusted YouTube channels (UCI, Pinkbike YT, Vital etc): MIN_SCORE + 4
+    //   Their boilerplate descriptions mention XCO/XCC/DHI on every video
+    const isRSS     = !item.channelId
+    const isTrusted = item.channelId && TRUSTED_SOURCES.has(item.channelId)
+    const threshold = (isRSS || isTrusted) ? MIN_SCORE : MIN_SCORE + 4
     if (score >= threshold) {
       results.push({ ...item, score, category: categorise(item) })
     }
