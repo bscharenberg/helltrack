@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-24T06:44:18.480Z",
-  "totalItems": 49,
+  "builtAt": "2026-05-24T06:58:07.729Z",
+  "totalItems": 51,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -17,7 +17,7 @@
           "thumbnail": "https://i.ytimg.com/vi/V248jH-wOIs/maxresdefault.jpg",
           "publishedAt": "2026-05-12T14:00:54Z",
           "url": "https://www.youtube.com/watch?v=V248jH-wOIs",
-          "score": 21,
+          "score": 25,
           "category": "race-runs"
         },
         {
@@ -459,6 +459,20 @@
       "label": "Pits",
       "items": [
         {
+          "id": "gP-9bIP5DSY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "Aaron Gwin Was BUILT Different 👀  #mtb",
+          "description": "In this episode of Just Ride, Rob Warner and Eliot Jackson sit down with Greg Minnaar to talk about life after racing, building a modern World Cup downhill team, and what it really takes to stay competitive at the highest level of the sport.\n\nFrom bike setup and rider development to data analysis, team structure, and managing pressure, Greg shares how downhill racing has evolved over the years and how teams are constantly searching for new ways to gain an edge. He also opens up about transitioning from athlete to team director and helping guide the next generation of riders.\n\nThe conversation dives deep into World Cup racing, Hardline, the future of downhill MTB, legendary rivalries, and the mindset behind one of the most successful careers the sport has ever seen.\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSpotify link: https://open.spotify.com/episode/2lGiOLESWzZKHwYoBrH2y0?si=748fbed21f6446d6\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#redbull #justride",
+          "thumbnail": "https://i.ytimg.com/vi/gP-9bIP5DSY/maxresdefault.jpg",
+          "publishedAt": "2026-05-22T11:16:44Z",
+          "url": "https://www.youtube.com/watch?v=gP-9bIP5DSY",
+          "score": 13,
+          "category": "paddock"
+        },
+        {
           "id": "BDb0KMIc9qw",
           "type": "video",
           "source": "youtube",
@@ -484,6 +498,20 @@
           "publishedAt": "2026-05-19T22:37:00Z",
           "url": "https://www.youtube.com/watch?v=sE8IAE9VPfo",
           "score": 7,
+          "category": "paddock"
+        },
+        {
+          "id": "jKUZfCCx70w",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "The quickest MTB coaching sesh of all time!!! 😂🤌 #mtb",
+          "description": "In this episode of Just Ride, Rob Warner and Eliot Jackson sit down with Greg Minnaar to talk about life after racing, building a modern World Cup downhill team, and what it really takes to stay competitive at the highest level of the sport.\n\nFrom bike setup and rider development to data analysis, team structure, and managing pressure, Greg shares how downhill racing has evolved over the years and how teams are constantly searching for new ways to gain an edge. He also opens up about transitioning from athlete to team director and helping guide the next generation of riders.\n\nThe conversation dives deep into World Cup racing, Hardline, the future of downhill MTB, legendary rivalries, and the mindset behind one of the most successful careers the sport has ever seen.\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSpotify link: https://open.spotify.com/episode/2lGiOLESWzZKHwYoBrH2y0?si=748fbed21f6446d6\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#redbull #justride",
+          "thumbnail": "https://i.ytimg.com/vi/jKUZfCCx70w/maxresdefault.jpg",
+          "publishedAt": "2026-05-13T14:00:57Z",
+          "url": "https://www.youtube.com/watch?v=jKUZfCCx70w",
+          "score": 13,
           "category": "paddock"
         },
         {

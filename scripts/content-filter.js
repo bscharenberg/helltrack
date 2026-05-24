@@ -28,6 +28,7 @@ const TRUSTED_SOURCES = new Set([
   'UCOYc6SI_fVrNvoutot7D9IA',  // Bernard Kerr
   'UCtvJR7iamL8WFAbvpsC2HTw',  // WynTV (Wyn Masters)
   'UCN_B2-bdBtmAq-5TOEU63nQ',  // Fox Factory
+  'UCUjYvTWqwm7x6LU8uGLvdxQ',  // Just Ride
 ])
 
 // ─── Keyword scoring ─────────────────────────────────────────────────────────
