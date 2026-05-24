@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-24T14:40:38.362Z",
-  "totalItems": 49,
+  "builtAt": "2026-05-24T16:07:29.140Z",
+  "totalItems": 45,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -231,34 +231,6 @@
           "category": "race-runs"
         },
         {
-          "id": "hUE5YXT-zh0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "A huge save 🤯",
-          "description": "A huge save 🤯\n\nFelix Griffiths saves a big one to go into the hotseat in the Men's Junior DHI 💨",
-          "thumbnail": "https://i.ytimg.com/vi/hUE5YXT-zh0/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T03:25:57Z",
-          "url": "https://www.youtube.com/watch?v=hUE5YXT-zh0",
-          "score": 15,
-          "category": "race-runs"
-        },
-        {
-          "id": "8bUrGqngZrM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "A powerful performance from Ostgaard 👊",
-          "description": "A powerful performance from Ostgaard 👊\n\nAletha Ostgaard takes the win in Mona Yongpyong, with nobody able to match the young American’s pace from top to bottom 🤩\n\nTop 3 ⏱️\n\n1. Aletha Ostgaard – 3:13.937\n2. Rosa Zierl +2.405\n3. Tilly Boadle +5.603\n\n📍Mona YongPyong 🏁 Women’s Junior DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/8bUrGqngZrM/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T03:08:41Z",
-          "url": "https://www.youtube.com/watch?v=8bUrGqngZrM",
-          "score": 19,
-          "category": "race-runs"
-        },
-        {
           "id": "ROQ2tl-yznY",
           "type": "video",
           "source": "youtube",
@@ -284,6 +256,20 @@
           "publishedAt": "2026-05-01T12:43:12Z",
           "url": "https://www.youtube.com/watch?v=3pj6nlH-Ufg",
           "score": 12,
+          "category": "race-runs"
+        },
+        {
+          "id": "2I5jOoNRVzs",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "SOUTH KOREA - Vital RAW - World Cup DOWNHILL",
+          "description": "Watch as the world’s best downhillers take on a fresh new track for the opening of the 2026 World Cup season. South Korea is a brand new venue and the terrain is challenging the riders with steep and loose conditions that change between runs as the track gets ridden in. We’re beyond stoked to get racing underway, and we’re equally pumped to have you join us for it!\n\n👕 - Vital Merch - https://merch.vitalmedianet.com/collections/vital-mtb\n⚙️ - Vital MTB Tech Discussions - https://www.vitalmtb.com/forums/VitalMTB/The-Hub,2 \n\n❤️ Follow us on Social ❤️\n✅  Instagram - https://www.instagram.com/vitalmtb/\n✅  Facebook - https://www.facebook.com/VitalMTB\n\n#MTB #bike #mountainbike",
+          "thumbnail": "https://i.ytimg.com/vi/2I5jOoNRVzs/maxresdefault.jpg",
+          "publishedAt": "2026-04-30T11:52:28Z",
+          "url": "https://www.youtube.com/watch?v=2I5jOoNRVzs",
+          "score": 15,
           "category": "race-runs"
         }
       ]
@@ -665,20 +651,6 @@
           "thumbnail": "https://i.ytimg.com/vi/L3T5RC-BzNM/maxresdefault.jpg",
           "publishedAt": "2026-04-24T17:21:35Z",
           "url": "https://www.youtube.com/watch?v=L3T5RC-BzNM",
-          "score": 6,
-          "category": "paddock"
-        },
-        {
-          "id": "7LklEguNMJA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "The Setup with Jackson Goldstone is LIVE! Preseason testing with the FOX crew",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/7LklEguNMJA/maxresdefault.jpg",
-          "publishedAt": "2026-04-24T15:45:03Z",
-          "url": "https://www.youtube.com/watch?v=7LklEguNMJA",
           "score": 6,
           "category": "paddock"
         }
