@@ -1395,7 +1395,9 @@ function currentRounds() {
 }
 
 function buildSeasonBar() {
-  const seasons = Object.keys(resultsData?.seasons || {}).sort().reverse()
+  const seasons = Object.keys(resultsData?.seasons || {}).filter(yr => {
+    const s = resultsData.seasons[yr]; return s.rounds && s.rounds.length > 0;
+  }).sort().reverse()
   const yearBar  = document.getElementById('rs-year-bar')
   const roundBar = document.getElementById('rs-round-bar')
   if (yearBar) {
@@ -1545,7 +1547,9 @@ async function loadResults() {
     const res  = await fetch(RESULTS_URL + '?t=' + Date.now())
     if (!res.ok) throw new Error('HTTP ' + res.status)
     resultsData = await res.json()
-    const seasons = Object.keys(resultsData?.seasons || {}).sort()
+    const seasons = Object.keys(resultsData?.seasons || {}).filter(yr => {
+      const s = resultsData.seasons[yr]; return s.rounds && s.rounds.length > 0;
+    }).sort()
     activeSeason  = seasons[seasons.length - 1] || '2026'
     const rounds  = currentRounds()
     activeRound   = Math.max(0, rounds.length - 1)
