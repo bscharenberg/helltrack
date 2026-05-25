@@ -1,11 +1,39 @@
 {
-  "builtAt": "2026-05-25T10:24:13.773Z",
-  "totalItems": 43,
+  "builtAt": "2026-05-25T14:14:12.285Z",
+  "totalItems": 44,
   "categories": {
     "race-runs": {
       "id": "race-runs",
       "label": "Race runs",
       "items": [
+        {
+          "id": "S6bKxLZbOWk",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Gracey Hemstreet's unbelievable winning run from 2025 🔥",
+          "description": "From deep in the red 🔴 to deep in the green 🟢\n\nGracey Hemstreet's unbelievable winning run from last year 🔥\n\nWe can't wait to see what happens this year!\n\n📍2025 Loudenvielle – Peyragudes presented by FACOM 🏁 Women’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/S6bKxLZbOWk/maxresdefault.jpg",
+          "publishedAt": "2026-05-25T13:02:11Z",
+          "url": "https://www.youtube.com/watch?v=S6bKxLZbOWk",
+          "score": 14,
+          "category": "race-runs"
+        },
+        {
+          "id": "hqH1FHjaCKQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Jackson Goldstone's Incredible Winning Run In Loudenvielle – Peyragudes presented by FACOM 🤩",
+          "description": "Who remembers this incredible run from Jackson Goldstone? 🤩\n\nIn 2025 he took the win in Loudenvielle – Peyragudes presented by FACOM 🥇\n\nWho will come out on top this year? 👀\n\n📍2025 Loudenvielle – Peyragudes presented by FACOM 🏁 Men’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/hqH1FHjaCKQ/maxresdefault.jpg",
+          "publishedAt": "2026-05-25T11:00:13Z",
+          "url": "https://www.youtube.com/watch?v=hqH1FHjaCKQ",
+          "score": 16,
+          "category": "race-runs"
+        },
         {
           "id": "V248jH-wOIs",
           "type": "video",
@@ -200,20 +228,6 @@
           "publishedAt": "2026-05-02T06:40:16Z",
           "url": "https://www.youtube.com/watch?v=Z_a0h4QTYgg",
           "score": 14,
-          "category": "race-runs"
-        },
-        {
-          "id": "zqizn32xvrc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "YOUR Women Elite DHI Winner in Mona YongPyong 🇰🇷💪🥇",
-          "description": "YOUR Women Elite DHI Winner in Mona YongPyong 🇰🇷💪🥇\n\nVali Höll 🤩\n\n🏁 Women’s Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/zqizn32xvrc/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T05:45:06Z",
-          "url": "https://www.youtube.com/watch?v=zqizn32xvrc",
-          "score": 24,
           "category": "race-runs"
         },
         {
