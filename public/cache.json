@@ -1,11 +1,25 @@
 {
-  "builtAt": "2026-05-25T17:11:21.966Z",
-  "totalItems": 44,
+  "builtAt": "2026-05-25T19:51:46.207Z",
+  "totalItems": 45,
   "categories": {
     "race-runs": {
       "id": "race-runs",
       "label": "Race runs",
       "items": [
+        {
+          "id": "PPn5_bt-eG0",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Reclaiming the Top Step... 🥇 | THE B LINE | WHOOP UCI MTB World Series",
+          "description": "A race week for the history books, nestled in the rolling hills of Nové Město na Moravě. From dominant returns to emotional comebacks, the UCI Cross-country Olympic and Short Track World Cups delivered storyline after storyline at one of the sport’s true calendar classics.\n\nLaura Stigger and Sina Frei join Ashleigh Wilmot to break down the weekend, reflect on their journeys back to the top step, and dive into the career paths that shaped the Specialized pairing into two of the sport’s biggest names.\n\n⏰ Timestamps ⏰\n0:00 - Intro\n0:21 - Headlines\n2:10 - Laura Stigger & Sina Frei\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/PPn5_bt-eG0/maxresdefault.jpg",
+          "publishedAt": "2026-05-25T19:24:42Z",
+          "url": "https://www.youtube.com/watch?v=PPn5_bt-eG0",
+          "score": 11,
+          "category": "race-runs"
+        },
         {
           "id": "S6bKxLZbOWk",
           "type": "video",
