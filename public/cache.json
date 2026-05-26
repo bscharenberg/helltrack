@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-26T04:14:17.967Z",
-  "totalItems": 45,
+  "builtAt": "2026-05-26T08:37:52.592Z",
+  "totalItems": 44,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -228,20 +228,6 @@
           "publishedAt": "2026-05-02T07:18:18Z",
           "url": "https://www.youtube.com/watch?v=iRVQ6Fls5-8",
           "score": 15,
-          "category": "race-runs"
-        },
-        {
-          "id": "Z_a0h4QTYgg",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Disaster for Jackson Goldstone!",
-          "description": "The 2025 overall leader goes down mid race run 💥\n\n🏁 Men’s Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/Z_a0h4QTYgg/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T06:40:16Z",
-          "url": "https://www.youtube.com/watch?v=Z_a0h4QTYgg",
-          "score": 14,
           "category": "race-runs"
         },
         {
