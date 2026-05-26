@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-26T16:43:53.377Z",
-  "totalItems": 46,
+  "builtAt": "2026-05-26T16:48:57.736Z",
+  "totalItems": 47,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -674,6 +674,21 @@
           "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-2-2026-loudenvielle-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 10,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-phil-atwill-breaks-down-his-heavy-hard-mtb-league-wipeout.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Phil Atwill Breaks Down His Heavy Hard MTB League Wipeout",
+          "description": "&quot;I got humbled hard.&quot; The World Cup downhill specialist shares the practice crash details that cut his Boise campaign short.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29772980/p2pb29772980.jpg",
+          "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-phil-atwill-breaks-down-his-heavy-hard-mtb-league-wipeout.html?trk=rss",
+          "categories": [],
+          "score": 7,
           "category": "news"
         }
       ]
