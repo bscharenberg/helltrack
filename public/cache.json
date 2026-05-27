@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-27T16:41:56.833Z",
-  "totalItems": 45,
+  "builtAt": "2026-05-27T19:30:05.320Z",
+  "totalItems": 46,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -203,20 +203,6 @@
           "category": "race-runs"
         },
         {
-          "id": "X3wGQ52Ket8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Asa kept his word 👊🫡",
-          "description": "Asa kept his word 👊🫡\n\nAt the end of the 2025 season, Asa Vermette promised to hit the Men’s Elite DHI World Cup swinging in 2026, and he definitely delivered 👀",
-          "thumbnail": "https://i.ytimg.com/vi/X3wGQ52Ket8/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T08:01:58Z",
-          "url": "https://www.youtube.com/watch?v=X3wGQ52Ket8",
-          "score": 17,
-          "category": "race-runs"
-        },
-        {
           "id": "ROQ2tl-yznY",
           "type": "video",
           "source": "youtube",
@@ -264,6 +250,35 @@
       "id": "results",
       "label": "Results",
       "items": [
+        {
+          "id": "Wikjjb8m-OY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
+          "channelName": "Pinkbike",
+          "title": "Time To Go Racing In Loudenvielle! - Up To Speed - Pre Race",
+          "description": "Ben Cathro is here to inform you of who to watch out for at the second round of the UCI Downhill Mountain Bike World Cup Series. All from the comfort of Pinkbike HQ.\n\nPlay the Pinkbike DH Fantasy League here - https://www.pinkbike.com/contest/fantasy/dh/\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
+          "thumbnail": "https://i.ytimg.com/vi/Wikjjb8m-OY/maxresdefault.jpg",
+          "publishedAt": "2026-05-27T18:00:37Z",
+          "url": "https://www.youtube.com/watch?v=Wikjjb8m-OY",
+          "score": 19,
+          "category": "results"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-loudenvielle-will-tell-us-if-korea-was-a-fluke--up-to-speed-with-ben-cathro.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Loudenvielle Will Tell Us If Korea Was a Fluke | Up To Speed with Ben Cathro",
+          "description": "Downhill World Cup round two heads to the brutal steeps of France, where Ben Cathro breaks down track conditions, gearbox bikes, and looming storms.( Comments: 2 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29777932/p2pb29777932.jpg",
+          "publishedAt": "Wed, 27 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-loudenvielle-will-tell-us-if-korea-was-a-fluke--up-to-speed-with-ben-cathro.html?trk=rss",
+          "categories": [],
+          "score": 18,
+          "category": "results"
+        },
         {
           "id": "lgeLUxN7EGY",
           "type": "video",
