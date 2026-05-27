@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-28T00:05:32.844Z",
-  "totalItems": 45,
+  "builtAt": "2026-05-27T22:51:47.179Z",
+  "totalItems": 52,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -31,7 +31,7 @@
           "thumbnail": "https://i.ytimg.com/vi/S6bKxLZbOWk/maxresdefault.jpg",
           "publishedAt": "2026-05-25T13:02:11Z",
           "url": "https://www.youtube.com/watch?v=S6bKxLZbOWk",
-          "score": 14,
+          "score": 20,
           "category": "race-runs"
         },
         {
@@ -45,7 +45,7 @@
           "thumbnail": "https://i.ytimg.com/vi/hqH1FHjaCKQ/maxresdefault.jpg",
           "publishedAt": "2026-05-25T11:00:13Z",
           "url": "https://www.youtube.com/watch?v=hqH1FHjaCKQ",
-          "score": 16,
+          "score": 20,
           "category": "race-runs"
         },
         {
@@ -59,7 +59,35 @@
           "thumbnail": "https://i.ytimg.com/vi/V248jH-wOIs/maxresdefault.jpg",
           "publishedAt": "2026-05-12T14:00:54Z",
           "url": "https://www.youtube.com/watch?v=V248jH-wOIs",
-          "score": 25,
+          "score": 31,
+          "category": "race-runs"
+        },
+        {
+          "id": "dmS8_-UCJ00",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "\"Winning's Pretty Fun\" - RACE DAY - Monster Pro DH Mountain Creek #UncChats",
+          "description": "Slippery, muddy goodness at the @prodownhillseries Mountain Creek made for a hectic race day! Luca Cometti gets the post-race interviews with the pros!\n\n0:00 - Intro\n0:37 - Tyler Wagner\n1:20 - Kailey Skelton\n3:15 - Alex Mallen\n4:11 - Ryder Lawrence\n5:01 - Nik Nestoroff\n5:59 - Raina Logar\n6:43 - Dylan Conte\n7:38 - Evan Medcalf\n8:48 - Zanna Logar\n9:44 - Camilo Sanchez\n10:32 - Dakotah Norton\n12:10 - Nate Kitchen\n14:41 - John Hall, Intense TM\n16:43 - Dante Silva\n18:50 - Andrew Driscoll\n20:08 - Cole Suetos\n20:56 - Muffin\n22:21 - JT Fisher\n23:23 - Ainsley Wolf\n24:33 - Alyana Van Horn\n25:28 - Frida Ronning\n26:18 - Taylor Ostgaard\n27:56 - Neko Mulally",
+          "thumbnail": "https://i.ytimg.com/vi/dmS8_-UCJ00/maxresdefault.jpg",
+          "publishedAt": "2026-05-10T21:43:12Z",
+          "url": "https://www.youtube.com/watch?v=dmS8_-UCJ00",
+          "score": 12,
+          "category": "race-runs"
+        },
+        {
+          "id": "3nHqF7Xqrb8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "\"The Rain Should Make It Interesting\"",
+          "description": "Luca Cometti uncs it up at the @prodownhillseries at Mountain Creek, New Jersey during track walk. #usdh \n\nInterviews\n0:00 - Intro, Dante Silva\n2:56 - Tyler Ervin\n5:04 - Wood Chips, Nate Kitchen\n6:53 - Chris Grice\n7:43 - Mikey Delesalle\n9:36 - Kailey Skelton\n11:14 - Dakotah Norton\n15:01 - Neko Mulally\n18:17 - Dylan Conte\n21:38 - Maylei Leaneagh\n22:55 - Fred LaRiviere\n24:20 - Alex Mallen\n26:13 - Tegan Cruz\n28:16 - Nik Nestoroff",
+          "thumbnail": "https://i.ytimg.com/vi/3nHqF7Xqrb8/maxresdefault.jpg",
+          "publishedAt": "2026-05-07T03:45:34Z",
+          "url": "https://www.youtube.com/watch?v=3nHqF7Xqrb8",
+          "score": 11,
           "category": "race-runs"
         },
         {
@@ -73,7 +101,7 @@
           "thumbnail": "https://i.ytimg.com/vi/ZGrRzJ9lZt0/maxresdefault.jpg",
           "publishedAt": "2026-05-05T15:25:17Z",
           "url": "https://www.youtube.com/watch?v=ZGrRzJ9lZt0",
-          "score": 13,
+          "score": 17,
           "category": "race-runs"
         },
         {
@@ -105,6 +133,20 @@
           "category": "race-runs"
         },
         {
+          "id": "0UyLk73AnIc",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "\"This Sport is Savage.\"",
+          "description": "John Lawlor follows three downhill mountain bike racers through the weekend in South Korea at the first UCI World Cup of 2026. Luca Shaw (Canyon Factory Racing), Matt Walker (Trek UnBroken DH) and Remi Thirion (Giant Factory Off-Road), along with their mechanics,  share their moment-by-moment experiences in the midst a high-pressure racing situation.\n\n0:00 - Matt Walker's Setup\n3:25 - Remi Thirion's Setup\n5:49 - Luca Shaw's Setup\n9:19 - First Practice\n13:11 - Qualifying 1\n14:58 - Qualifying 2\n16:38 - Finals",
+          "thumbnail": "https://i.ytimg.com/vi/0UyLk73AnIc/maxresdefault.jpg",
+          "publishedAt": "2026-05-03T16:19:31Z",
+          "url": "https://www.youtube.com/watch?v=0UyLk73AnIc",
+          "score": 15,
+          "category": "race-runs"
+        },
+        {
           "id": "HPyqOg7z0Pw",
           "type": "video",
           "source": "youtube",
@@ -129,7 +171,7 @@
           "thumbnail": "https://i.ytimg.com/vi/z6N02V0Uk08/maxresdefault.jpg",
           "publishedAt": "2026-05-02T12:59:26Z",
           "url": "https://www.youtube.com/watch?v=z6N02V0Uk08",
-          "score": 10,
+          "score": 16,
           "category": "race-runs"
         },
         {
@@ -199,7 +241,7 @@
           "thumbnail": "https://i.ytimg.com/vi/ROQ2tl-yznY/sddefault.jpg",
           "publishedAt": "2026-05-01T19:20:45Z",
           "url": "https://www.youtube.com/watch?v=ROQ2tl-yznY",
-          "score": 21,
+          "score": 27,
           "category": "race-runs"
         },
         {
@@ -257,7 +299,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Loudenvielle Will Tell Us If Korea Was a Fluke | Up To Speed with Ben Cathro",
-          "description": "Downhill World Cup round two heads to the brutal steeps of France, where Ben Cathro breaks down track conditions, gearbox bikes, and looming storms.( Comments: 11 )",
+          "description": "Downhill World Cup round two heads to the brutal steeps of France, where Ben Cathro breaks down track conditions, gearbox bikes, and looming storms.( Comments: 8 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29777932/p2pb29777932.jpg",
           "publishedAt": "Wed, 27 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-loudenvielle-will-tell-us-if-korea-was-a-fluke--up-to-speed-with-ben-cathro.html?trk=rss",
@@ -290,7 +332,7 @@
           "thumbnail": "https://i.ytimg.com/vi/coFA1oqBgCg/maxresdefault.jpg",
           "publishedAt": "2026-05-02T21:22:50Z",
           "url": "https://www.youtube.com/watch?v=coFA1oqBgCg",
-          "score": 9,
+          "score": 15,
           "category": "results"
         },
         {
@@ -346,7 +388,7 @@
           "thumbnail": "https://i.ytimg.com/vi/FsTCN4qKy4k/maxresdefault.jpg",
           "publishedAt": "2026-05-01T09:06:57Z",
           "url": "https://www.youtube.com/watch?v=FsTCN4qKy4k",
-          "score": 11,
+          "score": 17,
           "category": "results"
         },
         {
@@ -414,7 +456,7 @@
           "thumbnail": "https://i.ytimg.com/vi/25sJHyhfCVg/maxresdefault.jpg",
           "publishedAt": "2026-05-26T15:22:21Z",
           "url": "https://www.youtube.com/watch?v=25sJHyhfCVg",
-          "score": 17,
+          "score": 27,
           "category": "paddock"
         },
         {
@@ -428,7 +470,7 @@
           "thumbnail": "https://i.ytimg.com/vi/gP-9bIP5DSY/maxresdefault.jpg",
           "publishedAt": "2026-05-22T11:16:44Z",
           "url": "https://www.youtube.com/watch?v=gP-9bIP5DSY",
-          "score": 13,
+          "score": 25,
           "category": "paddock"
         },
         {
@@ -470,7 +512,21 @@
           "thumbnail": "https://i.ytimg.com/vi/jKUZfCCx70w/maxresdefault.jpg",
           "publishedAt": "2026-05-13T14:00:57Z",
           "url": "https://www.youtube.com/watch?v=jKUZfCCx70w",
-          "score": 13,
+          "score": 19,
+          "category": "paddock"
+        },
+        {
+          "id": "PSN60yKfYjU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "Frameworks 32-Inch-Wheeled DH Bike EXPLAINED",
+          "description": "Neko Mulally is tested out a 32\" front wheel on his downhill bike at the  @prodownhillseries  at Mountain Creek. He's running a custom-made FOX 40 fork that's been extended to fit the wheel along with a custom frame to help sort out geometry and axle-to-crown height. His rear wheel remains 27.5\".",
+          "thumbnail": "https://i.ytimg.com/vi/PSN60yKfYjU/maxresdefault.jpg",
+          "publishedAt": "2026-05-12T20:22:43Z",
+          "url": "https://www.youtube.com/watch?v=PSN60yKfYjU",
+          "score": 11,
           "category": "paddock"
         },
         {
@@ -485,6 +541,20 @@
           "publishedAt": "2026-05-11T22:52:26Z",
           "url": "https://www.youtube.com/watch?v=KwEASm46CSw",
           "score": 14,
+          "category": "paddock"
+        },
+        {
+          "id": "uvVz5XjczfI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Asa Vermette was only 15 when he first beat Aaron Gwin 🤯",
+          "description": "🎥 The B Line - Mona YongPyong, South Korea 🇰🇷\n\n👀 WATCH NOW on the WHOOP UCI MTB World Series YouTube Channel",
+          "thumbnail": "https://i.ytimg.com/vi/uvVz5XjczfI/maxresdefault.jpg",
+          "publishedAt": "2026-05-10T11:01:21Z",
+          "url": "https://www.youtube.com/watch?v=uvVz5XjczfI",
+          "score": 11,
           "category": "paddock"
         },
         {
@@ -526,7 +596,7 @@
           "thumbnail": "https://i.ytimg.com/vi/5Vaw_fivu9E/maxresdefault.jpg",
           "publishedAt": "2026-04-30T21:36:50Z",
           "url": "https://www.youtube.com/watch?v=5Vaw_fivu9E",
-          "score": 8,
+          "score": 12,
           "category": "paddock"
         },
         {
@@ -626,7 +696,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Loudenvielle DH World Cup Preview: Who’s Racing, How to Watch &amp; What to Expect",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in France.( Photos: 7, Comments: 69 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in France.( Photos: 7, Comments: 67 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb28245672/p2pb28245672.jpg",
           "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/loudenvielle-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
@@ -662,6 +732,36 @@
           "url": "https://www.pinkbike.com/news/video-phil-atwill-breaks-down-his-heavy-hard-mtb-league-wipeout.html?trk=rss",
           "categories": [],
           "score": 7,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-a-week-of-riding-testing-and-development-with-laurie-greenland.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Inside Laurie Greenland's Forbidden Testing Block On Vancouver Island",
+          "description": "Greenland teams up with Forbidden to shake down a custom, telemetry-backed DH mule.( Photos: 8, Comments: 23 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29760946/p2pb29760946.jpg",
+          "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-a-week-of-riding-testing-and-development-with-laurie-greenland.html?trk=rss",
+          "categories": [],
+          "score": 7,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-neko-mulally-testing-the-frameworks-32-mega-mullet.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Neko Mulally Testing the Frameworks 32\" Mega Mullet",
+          "description": "It&#039;s great seeing small companies getting creative in the search for speed.( Comments: 97 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29773047/p2pb29773047.jpg",
+          "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-neko-mulally-testing-the-frameworks-32-mega-mullet.html?trk=rss",
+          "categories": [],
+          "score": 6,
           "category": "news"
         }
       ]

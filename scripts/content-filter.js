@@ -70,17 +70,28 @@ const INCLUDE_KEYWORDS = [
   { terms: ['inside the tape', 'vital raw', 'story of the race', 'wyntv', 'wyn tv',
             'cathro', 'race analysis'], weight: 6 },
   { terms: ['b line', 'mtbws highlights dhi'], weight: 3 },
+  { terms: ['red bull hardline', 'hardline'], weight: 6 },
   { terms: ['anthill films', 'anthill', 'milliseconds'], weight: 3 },
   { terms: ['track walk', 'course preview', 'track preview', 'course walk'], weight: 3 },
   { terms: ['ghost mode', 'ghosted', 'split times', 'time analysis'], weight: 3 },
   { terms: ['pit bits'], weight: 3 },
 
-  // Rider names — medium confidence (riders do more than race)
-  { terms: ['jackson goldstone', 'loic bruni', 'finn iles', 'reece wilson',
-            'nina hoffmann', 'laurie greenland', 'jordan williams',
-            'jack moir', 'bernard kerr', 'wyn masters', 'ben cathro',
-            'richie rude', 'isabeau courdurier', 'morgane charre',
-            'greg minnaar', 'aaron gwin', 'neko mulally'], weight: 2 },
+  // DH-only WC athletes — pass on name alone (these riders only race DH)
+  { terms: ['loic bruni', 'jackson goldstone', 'finn iles', 'reece wilson',
+            'nina hoffmann', 'vali holl', 'valentina holl', 'marine cabirou',
+            'amaury pierron', 'thibaut daprela', 'gracey hemstreet',
+            'myriam nicole', 'tahnee seagrave', 'camille balanche',
+            'monika hrastnik', 'eleonora farina',
+            'luca shaw', 'matt walker', 'andreas kolb', 'jordan williams',
+            'laurie greenland', 'dakotah norton', 'asa vermette',
+            'benoit coulanges', 'luke meier-smith', 'luke meier smith',
+            'max alran', 'till alran', 'loris vergier',
+            'ryan pinkerton', 'ronan dunne',
+            'aaron gwin', 'neko mulally'], weight: 6 },
+  // Paddock/media/legends — post mixed content, need supporting signal
+  { terms: ['greg minnaar', 'bernard kerr', 'wyn masters', 'ben cathro',
+            'jack moir', 'richie rude', 'isabeau courdurier',
+            'morgane charre'], weight: 2 },
 
   // Equipment — DH specific
   { terms: ['dh bike', 'dh race bike', 'downhill bike', 'dh frame', 'dh fork',
