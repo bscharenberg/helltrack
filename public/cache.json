@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-27T08:43:13.437Z",
-  "totalItems": 46,
+  "builtAt": "2026-05-27T12:27:24.594Z",
+  "totalItems": 45,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -214,20 +214,6 @@
           "publishedAt": "2026-05-02T08:01:58Z",
           "url": "https://www.youtube.com/watch?v=X3wGQ52Ket8",
           "score": 17,
-          "category": "race-runs"
-        },
-        {
-          "id": "iRVQ6Fls5-8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "A dream debut 🤯",
-          "description": "A dream debut 🤯\n\nAsa Vermette absolutely crushed his debut elite DHI run to beat Loïc Bruni 💨",
-          "thumbnail": "https://i.ytimg.com/vi/iRVQ6Fls5-8/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T07:18:18Z",
-          "url": "https://www.youtube.com/watch?v=iRVQ6Fls5-8",
-          "score": 15,
           "category": "race-runs"
         },
         {
@@ -639,7 +625,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Loudenvielle DH World Cup Preview: Who’s Racing, How to Watch &amp; What to Expect",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in France.( Photos: 7, Comments: 62 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in France.( Photos: 7, Comments: 65 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb28245672/p2pb28245672.jpg",
           "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/loudenvielle-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
