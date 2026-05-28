@@ -1,11 +1,26 @@
 {
-  "builtAt": "2026-05-28T10:19:06.882Z",
+  "builtAt": "2026-05-28T14:42:32.672Z",
   "totalItems": 51,
   "categories": {
     "race-runs": {
       "id": "race-runs",
       "label": "Race runs",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/whos-racing-this-weekend-loudenvielle-dh-world-cup-start-list.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Who's Racing This Weekend? - Loudenvielle DH World Cup Start List",
+          "description": "233 riders are confirmed to be on the start line for qualifying at the 2026 Loudenvielle downhill World Cup.( Photos: 1, Comments: 5 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb21149893/p2pb21149893.jpg",
+          "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/whos-racing-this-weekend-loudenvielle-dh-world-cup-start-list.html?trk=rss",
+          "categories": [],
+          "score": 14,
+          "category": "race-runs"
+        },
         {
           "id": "PPn5_bt-eG0",
           "type": "video",
@@ -189,34 +204,6 @@
           "category": "race-runs"
         },
         {
-          "id": "DB8x99L1ZaY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "MTBWS HIGHLIGHTS 🇰🇷 Women's Elite DHI | 2026 Mona YongPyong",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/DB8x99L1ZaY/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T08:28:41Z",
-          "url": "https://www.youtube.com/watch?v=DB8x99L1ZaY",
-          "score": 12,
-          "category": "race-runs"
-        },
-        {
-          "id": "FN_Ebmo0LJs",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "MTBWS HIGHLIGHTS 🇰🇷 Men's Elite DHI | 2026 Mona YongPyong",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/FN_Ebmo0LJs/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T08:27:46Z",
-          "url": "https://www.youtube.com/watch?v=FN_Ebmo0LJs",
-          "score": 12,
-          "category": "race-runs"
-        },
-        {
           "id": "ROQ2tl-yznY",
           "type": "video",
           "source": "youtube",
@@ -285,7 +272,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Loudenvielle Will Tell Us If Korea Was a Fluke | Up To Speed with Ben Cathro",
-          "description": "Downhill World Cup round two heads to the brutal steeps of France, where Ben Cathro breaks down track conditions, gearbox bikes, and looming storms.( Comments: 23 )",
+          "description": "Downhill World Cup round two heads to the brutal steeps of France, where Ben Cathro breaks down track conditions, gearbox bikes, and looming storms.( Comments: 27 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29777932/p2pb29777932.jpg",
           "publishedAt": "Wed, 27 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-loudenvielle-will-tell-us-if-korea-was-a-fluke--up-to-speed-with-ben-cathro.html?trk=rss",
@@ -411,6 +398,21 @@
       "id": "films",
       "label": "Films",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/video-fast-laps-and-loose-riding-with-the-norco-race-division-in-andorra.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Fast Laps &amp; Loose Riding with the Norco Race Division in Andorra",
+          "description": "It&#039;s always great to watch Greg Minnaar shredding a downhill bike.( Comments: 1 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29780803/p2pb29780803.jpg",
+          "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-fast-laps-and-loose-riding-with-the-norco-race-division-in-andorra.html?trk=rss",
+          "categories": [],
+          "score": 6,
+          "category": "films"
+        },
         {
           "id": "oGrxCpZGbgo",
           "type": "video",
@@ -668,7 +670,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Finn Iles' High Speed Antics on the Old Andorra World Cup Track",
-          "description": "Finn Iles is looking fast ahead of this week&#039;s World Cup racing in Loudenvielle.( Comments: 5 )",
+          "description": "Finn Iles is looking fast ahead of this week&#039;s World Cup racing in Loudenvielle.( Comments: 10 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29780574/p2pb29780574.jpg",
           "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-finn-iles-high-speed-antics-on-the-old-andorra-world-cup-track.html?trk=rss",
@@ -743,7 +745,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Neko Mulally Testing the Frameworks 32\" Mega Mullet",
-          "description": "It&#039;s great seeing small companies getting creative in the search for speed.( Comments: 102 )",
+          "description": "It&#039;s great seeing small companies getting creative in the search for speed.( Comments: 108 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29773047/p2pb29773047.jpg",
           "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-neko-mulally-testing-the-frameworks-32-mega-mullet.html?trk=rss",
