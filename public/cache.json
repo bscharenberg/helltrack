@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-28T05:14:47.494Z",
-  "totalItems": 52,
+  "builtAt": "2026-05-28T10:19:06.882Z",
+  "totalItems": 51,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -217,20 +217,6 @@
           "category": "race-runs"
         },
         {
-          "id": "mGh9017Ni-E",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "MTBWS FULL RACE 🇰🇷 Women's Junior DHI | 2026 Mona YongPyong",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/mGh9017Ni-E/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T08:21:22Z",
-          "url": "https://www.youtube.com/watch?v=mGh9017Ni-E",
-          "score": 20,
-          "category": "race-runs"
-        },
-        {
           "id": "ROQ2tl-yznY",
           "type": "video",
           "source": "youtube",
@@ -299,7 +285,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Loudenvielle Will Tell Us If Korea Was a Fluke | Up To Speed with Ben Cathro",
-          "description": "Downhill World Cup round two heads to the brutal steeps of France, where Ben Cathro breaks down track conditions, gearbox bikes, and looming storms.( Comments: 19 )",
+          "description": "Downhill World Cup round two heads to the brutal steeps of France, where Ben Cathro breaks down track conditions, gearbox bikes, and looming storms.( Comments: 23 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29777932/p2pb29777932.jpg",
           "publishedAt": "Wed, 27 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-loudenvielle-will-tell-us-if-korea-was-a-fluke--up-to-speed-with-ben-cathro.html?trk=rss",
@@ -668,20 +654,6 @@
           "url": "https://www.youtube.com/watch?v=qx9Wa9FCuIQ",
           "score": 11,
           "category": "paddock"
-        },
-        {
-          "id": "dd5W6qZ8Afo",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "SOUTH KOREA WE HAVE LANDED!!",
-          "description": "New country, new culture and new trail. We have landed in Seoul, South Korea for the first time and we're kicking it off with some local laps! \n\nShot on a Dadcam and #dji \n\n#dji #mtb #bikepark #bksport #downhill #pivot #travel",
-          "thumbnail": "https://i.ytimg.com/vi/dd5W6qZ8Afo/maxresdefault.jpg",
-          "publishedAt": "2026-04-28T09:22:18Z",
-          "url": "https://www.youtube.com/watch?v=dd5W6qZ8Afo",
-          "score": 7,
-          "category": "paddock"
         }
       ]
     },
@@ -690,13 +662,28 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-finn-iles-high-speed-antics-on-the-old-andorra-world-cup-track.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Finn Iles' High Speed Antics on the Old Andorra World Cup Track",
+          "description": "Finn Iles is looking fast ahead of this week&#039;s World Cup racing in Loudenvielle.( Comments: 5 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29780574/p2pb29780574.jpg",
+          "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-finn-iles-high-speed-antics-on-the-old-andorra-world-cup-track.html?trk=rss",
+          "categories": [],
+          "score": 10,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/loudenvielle-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Loudenvielle DH World Cup Preview: Who’s Racing, How to Watch &amp; What to Expect",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in France.( Photos: 7, Comments: 69 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in France.( Photos: 7, Comments: 70 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb28245672/p2pb28245672.jpg",
           "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/loudenvielle-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
@@ -726,7 +713,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Phil Atwill Breaks Down His Heavy Hard MTB League Wipeout",
-          "description": "&quot;I got humbled hard.&quot; The World Cup downhill specialist shares the practice crash details that cut his Boise campaign short.( Comments: 5 )",
+          "description": "&quot;I got humbled hard.&quot; The World Cup downhill specialist shares the practice crash details that cut his Boise campaign short.( Comments: 7 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29772980/p2pb29772980.jpg",
           "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-phil-atwill-breaks-down-his-heavy-hard-mtb-league-wipeout.html?trk=rss",
@@ -756,7 +743,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Neko Mulally Testing the Frameworks 32\" Mega Mullet",
-          "description": "It&#039;s great seeing small companies getting creative in the search for speed.( Comments: 99 )",
+          "description": "It&#039;s great seeing small companies getting creative in the search for speed.( Comments: 102 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29773047/p2pb29773047.jpg",
           "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-neko-mulally-testing-the-frameworks-32-mega-mullet.html?trk=rss",
