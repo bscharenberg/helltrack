@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-29T08:47:56.719Z",
-  "totalItems": 53,
+  "builtAt": "2026-05-29T12:23:16.758Z",
+  "totalItems": 51,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -41,7 +41,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Who's Racing This Weekend? - Loudenvielle DH World Cup Start List",
-          "description": "233 riders are confirmed to be on the start line for qualifying at the 2026 Loudenvielle downhill World Cup.( Photos: 1, Comments: 24 )",
+          "description": "233 riders are confirmed to be on the start line for qualifying at the 2026 Loudenvielle downhill World Cup.( Photos: 1, Comments: 25 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb21149893/p2pb21149893.jpg",
           "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/whos-racing-this-weekend-loudenvielle-dh-world-cup-start-list.html?trk=rss",
@@ -272,7 +272,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV Track Walk - Loudenvielle DH World Cup 2026",
-          "description": "Wyn catches up with riders as they check out this year&#039;s World Cup track in Loudenvielle.",
+          "description": "Wyn catches up with riders as they check out this year&#039;s World Cup track in Loudenvielle.( Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29784585/p2pb29784585.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-wyntv-track-walk-loudenvielle-dh-world-cup-2026.html?trk=rss",
@@ -420,20 +420,6 @@
           "url": "https://www.youtube.com/watch?v=zJHwOPrgxLw",
           "score": 18,
           "category": "results"
-        },
-        {
-          "id": "ZouobvGMqMU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV SOUTH KOREA WORLD CUP TRACKWALK 2026",
-          "description": "The season is finally upon us and we are out here in Mona Yongpyong for the first round and its set to be a wild one, track walk kicked off today and I caught up with everyone after a long off season!\n\nTune in live here, https://watch.ucimtbworldseries.com\n\nVideo by Charlie Coquillard\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/ZouobvGMqMU/maxresdefault.jpg",
-          "publishedAt": "2026-04-29T09:50:18Z",
-          "url": "https://www.youtube.com/watch?v=ZouobvGMqMU",
-          "score": 17,
-          "category": "results"
         }
       ]
     },
@@ -497,7 +483,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Measuring the Loudenvielle DH Gaps During Track Walk",
-          "description": "It&#039;s time to get the tape measure out.( Comments: 11 )",
+          "description": "It&#039;s time to get the tape measure out.( Comments: 13 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29782113/p2pb29782113.jpg",
           "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/track-walk-and-measuring-the-loudenvielle-gaps.html?trk=rss",
@@ -672,34 +658,6 @@
           "url": "https://www.youtube.com/watch?v=Arxt5BxLxj0",
           "score": 9,
           "category": "paddock"
-        },
-        {
-          "id": "pTnQ5zb2bLA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "SOUTH KOREA DH TRACK FIRST IMPRESSIONS! 🇰🇷",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/pTnQ5zb2bLA/maxresdefault.jpg",
-          "publishedAt": "2026-04-29T11:32:41Z",
-          "url": "https://www.youtube.com/watch?v=pTnQ5zb2bLA",
-          "score": 7,
-          "category": "paddock"
-        },
-        {
-          "id": "xDq9pkteOdo",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "HOW GNARLY IS THE SOUTH KOREA WORLD CUP TRACK?!",
-          "description": "We are hyped! There's been such a massive build up for this race, it's so exciting to see a fresh track on the World Cup circuit! Who know's what we'll be in for! Here's a full track track walk from top to botton, lets go!!!\n\nShot on @Sony \n\n#mtb #bksport #downhill #pivot",
-          "thumbnail": "https://i.ytimg.com/vi/xDq9pkteOdo/maxresdefault.jpg",
-          "publishedAt": "2026-04-29T10:02:49Z",
-          "url": "https://www.youtube.com/watch?v=xDq9pkteOdo",
-          "score": 12,
-          "category": "paddock"
         }
       ]
     },
@@ -714,7 +672,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Tech Video: A Deep Dive into Antidote Solutions' Insane Telemetry-Backed Gearbox DH Bike | Loudenvielle DH World Cup",
-          "description": "We corner the designers at Antidote Solutions to figure out the methodology behind their telemetry-heavy, high-pivot World Cup downhill monster.( Comments: 37 )",
+          "description": "We corner the designers at Antidote Solutions to figure out the methodology behind their telemetry-heavy, high-pivot World Cup downhill monster.( Comments: 41 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29782018/p2pb29782018.jpg",
           "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/tech-video-a-deep-dive-into-antidotes-insane-telemetry-backed-gearbox-dh-bike--loudenvielle-dh-world-cup.html?trk=rss",
@@ -729,7 +687,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Spotted: Prototype Manitou Dorado With New Crown &amp; Unidentified Socked Object - 2026 Loudenvielle DH World Cup",
-          "description": "Reece Wilson&#039;s Gamux continues to be the most interesting bike at the World Cup( Photos: 8, Comments: 62 )",
+          "description": "Reece Wilson&#039;s Gamux continues to be the most interesting bike at the World Cup( Photos: 8, Comments: 65 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29781426/p2pb29781426.jpg",
           "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/spotted-prototype-manitou-dorado-with-new-crown-and-unidentified-socked-object-2026-loudenvielle-dh-world-cup.html?trk=rss",
@@ -744,7 +702,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Downhill Tech Randoms: Loudenvielle DH World Cup 2026",
-          "description": "Lots of prototype kit getting put through the wringer this weekend.( Photos: 38, Comments: 43 )",
+          "description": "Lots of prototype kit getting put through the wringer this weekend.( Photos: 38, Comments: 47 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29781040/p2pb29781040.jpg",
           "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/dh-tech-randoms-loudenvielle-dh-world-cup-2026.html?trk=rss",
@@ -774,12 +732,27 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Peak Bike Season Is Here: Chatting About World Cup Racing, New Product Launches, &amp; Listener Questions",
-          "description": "Dario, Kaz, and Matt go over everything from World Cup DH picks to travel tips.( Comments: 4 )",
+          "description": "Dario, Kaz, and Matt go over everything from World Cup DH picks to travel tips.( Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29773434/p2pb29773434.jpg",
           "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/peak-bike-season-is-here-chatting-about-world-cup-racing-new-product-launches-and-listener-questions.html?trk=rss",
           "categories": [],
           "score": 7,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-2-2026-loudenvielle-dh-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "LAST CHANCE: Build Your Team Ahead of Round 2 - 2026 Loudenvielle DH World Cup",
+          "description": "It&#039;s time to start building your team for round two of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 9 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
+          "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-2-2026-loudenvielle-dh-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 10,
           "category": "news"
         }
       ]
