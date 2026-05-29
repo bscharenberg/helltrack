@@ -35,7 +35,7 @@ const CHANNELS = [
 
   // Broad MTB / action sports
   { id: 'UCXqlds5f7B2OOs9vQuevl4A', name: 'Red Bull Bike' },
-  { id: 'UCqhnX4jA0A5paNd1v-zEysw', name: 'GoPro Bike' },
+  { id: 'UC-oqtSrbAwCIB98RZfsdreA', name: 'GoPro Bike' },
 
   // Podcasts / long-form
   { id: 'UCgwpS_N4DQDYsip73rsQ6iA', name: 'Downtime Podcast' },
