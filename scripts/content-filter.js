@@ -172,7 +172,8 @@ const CATEGORIES = [
     keywords: ['race run', 'qualifying run', 'finals run', 'winning run', 'vital raw',
                'qual run', 'seeding run', 'gopro pov', 'pov run', 'full run',
                'full race', 'dhi', 'race day', 'finals', 'qualifying',
-               'pro downhill', 'usdh'],
+               'pro downhill', 'usdh', 'practice lap', 'practice laps',
+               'practice crash', 'practice run'],
   },
   {
     id: 'results',
@@ -181,7 +182,7 @@ const CATEGORIES = [
                'split times', 'race analysis', 'story of the race', 'ghost mode',
                'inside the tape', 'cathro', 'wyntv', 'wyn tv',
                'wins in', 'qualifies first', 'most important run',
-               'season recap', 'rapid reaction'],
+               'season recap', 'rapid reaction', 'takes the win', 'takes the lead'],
   },
   {
     id: 'films',
@@ -199,7 +200,9 @@ const CATEGORIES = [
                'just getting started', 'wyntv', 'wyn tv', 'pit bits',
                'first practice', 'we have landed', 'first impressions',
                'quick chat', 'track conditions', 'the setup', 'track secrets',
-               'fox 40', 'first ride', 'testing with'],
+               'fox 40', 'first ride', 'testing with',
+               'spotted:', 'tech randoms', 'tech video', 'deep dive',
+               'prototype', 'chatting about', 'bike check'],
   },
   {
     id: 'news',
