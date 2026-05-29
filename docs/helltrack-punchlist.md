@@ -1,20 +1,22 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-05-25
+**Last updated**: 2026-05-28
 
-## Current State: LIVE ✅
+## Current State: LIVE ✅ — LAUNCHED
 - helltrack.app is live with HTTPS
+- Announced on Pinkbike, Reddit, and DMs to key people (Martin Whiteley etc.)
 - Hourly cache refresh running clean
-- Results tab with 2025-2026 data (2024 dropped — bad source data, re-import deferred to #36b)
+- Results tab with 2025-2026 data (men + women elite, all rounds)
+- 2024 data dropped — bad source data, re-import deferred (#36b)
 - Fox Factory + Frameworks Bicycles channels in pipeline
 - Jack Moir removed from channels (enduro, not DH)
-- Content filter clean: enduro/XCO excludes solid, category routing correct
+- Content filter clean and tuned through multiple rounds
 - Nav: FEED / RESULTS / RIDERS
 - Subhead: "DOWNHILL RACING"
 - Seen/watched state on cards
 - Riders tab live — 154 men, 62 women, IG links, search, My Riders
-- Email signup form embedded (Make the Cut / Kit.com)
-- Security hardened ✅
+- Email signup live (Make the Cut / Kit.com) — welcome email sending from hello@helltrack.app
+- Security hardened and re-verified pre-launch ✅
 - GA card_open tracking live
 - PWA icon: handed off to designer
 
@@ -58,14 +60,15 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 - Cloudflare Worker proxy for Pinkbike RSS
 - Cloudflare Workers Paid + Browser Rendering for UCI results
 - PDF parser working (ChronoRace format, all sessions)
-- 2025 historical data clean and live
+- 2025 historical data clean and live (men + women elite, all rounds)
 - GitHub Action for results-fetcher (race weekend auto-trigger)
 - Fox Factory + Frameworks Bicycles channels added (#23)
 - Jack Moir removed from channels (enduro content)
 - Hourly cache refresh bug fixed (#25)
 - build-riders.js script added
-- Security hardening complete (#29)
-- Custom license file updated May 24
+- Security hardening complete (#29) — re-verified pre-launch
+- Custom license file updated
+- Kit.com email signup live — welcome email from hello@helltrack.app
 
 ### Frontend & UI
 - Results tab with multi-season UI
@@ -85,17 +88,19 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 - Paddock renamed to Pits (#35) ✅
 - GA card_open event tracking (#33) ✅
 - Email signup form embedded mid-feed (#32) ✅
+- Dynamic season pills — only shows years with data (#36a) ✅
 
 ### Content & Data
 - XCO filtering fixed
 - Content filter rounds 1-5 complete
-- Content filter additional tuning May 24
+- Content filter further tuned May 28 — DH-specific rider content from Pinkbike and YouTube surfacing correctly
 - South Korea / YongPyong venue keywords
 - MTBWS DHI highlights scoring fixed
 - Category item limit bumped 10→20
 - Feedback button → Google Form → Google Sheet
 - Google Analytics live
 - 217 rider roster compiled, IG handles researched
+- 2025 women's elite results fixed — all rounds verified ✅
 - 2024 bad data removed — re-import deferred (#36b)
 
 ---
@@ -104,21 +109,21 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 
 | Priority | # | Item | Size | Description |
 |---|---|---|---|---|
-| 1 | 36a | Dynamic season pills | XS | Only show season pills for years with data. Build chat tonight before launch. |
-| 2 | 26 | Loudenvielle R2 results | S | Race weekend May 28. Run results-fetcher.mjs after finals. Slug: loudenvielle-2026. |
-| 3 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
-| 4 | 36b | 2024 results proper fix | M | Re-fetch from UCI PDFs. See details below. Deferred until after launch. |
+| 1 | 26 | Loudenvielle R2 results | S | Race day today May 28. Run results-fetcher.mjs after finals. Slug: loudenvielle-2026. |
+| 2 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
+| 3 | 38 | Deep link sharing | M | Share button generates helltrack.app/?v=[id]. Opens app with card sheet open. Growth mechanic. |
+| 4 | 36b | 2024 results proper fix | M | Re-fetch from UCI PDFs. See details below. |
 | 5 | 30 | Teams tab | M | Needs scoping. See details below. |
-| 6 | 37 | Hub tab | M | Links to teams, how to watch, Pinkbike, UCI, commentators, influencers. Name TBD. |
+| 6 | 37 | Hub tab | M | Links to teams, how to watch, Pinkbike, UCI, commentators. Name TBD. |
 | 7 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
 | 8 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
 | 9 | 10 | Season standings | M | Aggregate points across rounds. Already in results.json. |
 | 10 | 16 | Split times frontend | M | Sector splits per rider. Mobile first. |
 | 11 | 8 | Rider search in results | M | Career results table by rider name. |
 | 12 | 9 | Rider comparison | M | Two riders side by side. Depends on #8. |
-| 13 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. Link from helltrack.app. |
+| 13 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. |
 | 14 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
-| 15 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred until post-Loudenvielle. |
+| 15 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
 | 16 | 14 | Where to watch / live streams | M | Official stream links by geo + guide. |
 | 17 | 17 | Data viz / splits analysis | XL | Someday. Sector gap charts. Depends on #16. |
 | 18 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com. |
@@ -127,11 +132,8 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 
 ## Backlog Item Details
 
-### #36a — Dynamic season pills
-Only render season pills for years that have rounds with data in results.json. Default to highest available year. No code change needed when 2024 data returns — it appears automatically.
-
 ### #26 — Loudenvielle R2 results
-**Race weekend: May 28, 2026**
+**Race day: May 28, 2026**
 ```bash
 cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 node scripts/results-fetcher.mjs loudenvielle-2026
@@ -139,6 +141,7 @@ git add public/results.json
 git commit -m 'add results - Round 2 Loudenvielle'
 git pull --rebase origin main && git push
 ```
+Run after finals are posted on ucimtbworldseries.com (usually a few hours after the race).
 
 ### #36b — 2024 results proper fix
 **Root cause**: `.rda` import via `rootsandrain_pull.py` pulled semi-finals as finals for at least Fort William, Bielsko-Biała, Les Gets. Women's data absent entirely.
@@ -148,16 +151,14 @@ git pull --rebase origin main && git push
 - (b) Use ChronoRace blob storage directly: `chronorace.blob.core.windows.net/webresources/20240519_dhi/`
 - (c) Fold into Rootsandrain historical import (#5)
 
-**Also needed**: Verify season pill hides 2024 until data returns (handled by #36a).
+**Also needed**: Season pill hides 2024 until data returns (handled by #36a already).
 
-### #5 — Rootsandrain historical data 2015-2023
-**Scope: UCI DH World Cup only — no enduro.**
-**Source of truth**: UCI official PDFs (2019+), Rootsandrain (2015-2018)
-- 2023: rootsandrain.com/series1622/2023-uci-world-cup-dh/
-- 2022: rootsandrain.com/series1464/2022-mercedes-benz-uci-world-cup-dh/
-- 2019-2021: series IDs still needed
-- Existing scraper: scripts/rootsandrain_pull.py
-- Reference: github.com/nathantomczyk/world_cup_downhill_data_science
+### #38 — Deep link sharing
+- Share button on bottom sheet generates `helltrack.app/?v=[video_id]` URL
+- On app load: check for `?v=` param — if found, locate item in cache and open its bottom sheet
+- Graceful fallback: if item not in cache (aged out), just open app normally
+- On mobile: triggers native share sheet with deep link URL
+- Growth mechanic — shared links bring new users directly into the app
 
 ### #30 — Teams tab
 **Needs scoping. Open questions:**
@@ -182,6 +183,15 @@ git pull --rebase origin main && git push
 ### Riders roster maintenance
 - Source of truth: `scripts/riders.csv`
 - To update: edit CSV, run `node scripts/build-riders.js`, commit both files
+
+### #5 — Rootsandrain historical data 2015-2023
+**Scope: UCI DH World Cup only — no enduro.**
+**Source of truth**: UCI official PDFs (2019+), Rootsandrain (2015-2018)
+- 2023: rootsandrain.com/series1622/2023-uci-world-cup-dh/
+- 2022: rootsandrain.com/series1464/2022-mercedes-benz-uci-world-cup-dh/
+- 2019-2021: series IDs still needed
+- Existing scraper: scripts/rootsandrain_pull.py
+- Reference: github.com/nathantomczyk/world_cup_downhill_data_science
 
 ### #16 — Split times frontend
 - Data exists in results.json (s1-s4 per rider)
