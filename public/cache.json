@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-05-29T23:23:44.213Z",
+  "builtAt": "2026-05-30T04:05:07.856Z",
   "totalItems": 74,
   "categories": {
     "race-runs": {
@@ -126,7 +126,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Mille Johnset Shares Footage of HUGE Practice Crash at Loudenvielle DH World Cup",
-          "description": "It&#039;s great to hear that Mille Johnset was able to walk away from this one.( Photos: 1, Comments: 34 )",
+          "description": "It&#039;s great to hear that Mille Johnset was able to walk away from this one.( Photos: 1, Comments: 37 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29785570/p2pb29785570.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/mille-johnset-shares-footage-of-huge-practice-crash-at-loudenvielle-dh-world-cup.html?trk=rss",
@@ -146,21 +146,6 @@
           "publishedAt": "2026-05-28T18:59:07Z",
           "url": "https://www.youtube.com/watch?v=FSxVL0CUyN4",
           "score": 18,
-          "category": "race-runs"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/whos-racing-this-weekend-loudenvielle-dh-world-cup-start-list.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Who's Racing This Weekend? - Loudenvielle DH World Cup Start List",
-          "description": "233 riders are confirmed to be on the start line for qualifying at the 2026 Loudenvielle downhill World Cup.( Photos: 1, Comments: 26 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb21149893/p2pb21149893.jpg",
-          "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/whos-racing-this-weekend-loudenvielle-dh-world-cup-start-list.html?trk=rss",
-          "categories": [],
-          "score": 14,
           "category": "race-runs"
         },
         {
@@ -288,6 +273,20 @@
           "url": "https://www.youtube.com/watch?v=MqeCy3VErWs",
           "score": 12,
           "category": "race-runs"
+        },
+        {
+          "id": "3HrEMDt3wGs",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "MTBWS TOP 6 MOMENTS Mona YongPyong 2026 | WHOOP UCI MTB World Series",
+          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/3HrEMDt3wGs/maxresdefault.jpg",
+          "publishedAt": "2026-05-04T10:24:33Z",
+          "url": "https://www.youtube.com/watch?v=3HrEMDt3wGs",
+          "score": 10,
+          "category": "race-runs"
         }
       ]
     },
@@ -331,7 +330,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Results: Gracey Hemstreet &amp; Loris Vergier Lead Timed Training at the Loudenvielle DH World Cup",
-          "description": "The flat-out and loose Loudenvielle course produced some interesting results in timed training.( Photos: 1, Comments: 41 )",
+          "description": "The flat-out and loose Loudenvielle course produced some interesting results in timed training.( Photos: 1, Comments: 42 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/results-gracey-hemstreet-and-loris-vergier-lead-timed-training-at-the-loudenvielle-dh-world-cup.html?trk=rss",
@@ -346,7 +345,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "WynTV: 'On track with Gary' at Loudenvielle DH World Cup",
-          "description": "Wyn doing Wyn things around the race track.( Comments: 8 )",
+          "description": "Wyn doing Wyn things around the race track.( Comments: 10 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29786788/p2pb29786788.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-wyntv-on-track-with-gary-loudenvielle-day-1.html?trk=rss",
@@ -555,12 +554,27 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Spotted: Mid-Pivot Nukeproof Dissent DH Prototype - 2026 Loudenvielle DH World Cup",
-          "description": "Nukeproof is developing a new downhill bike with a rearward axle path( Photos: 6, Comments: 13 )",
+          "description": "Nukeproof is developing a new downhill bike with a rearward axle path( Photos: 6, Comments: 14 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29781216/p2pb29781216.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/spotted-mid-pivot-nukeproof-dissent-dh-prototype-2026-loudenvielle-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 14,
+          "category": "paddock"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-2026-loudenvielle-dh-world-cup-course-preview2.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: 2026 Loudenvielle DH World Cup Course Preview",
+          "description": "Hopefully you like dust..( Photos: 1, Comments: 3 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29789053/p2pb29789053.jpg",
+          "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-2026-loudenvielle-dh-world-cup-course-preview2.html?trk=rss",
+          "categories": [],
+          "score": 13,
           "category": "paddock"
         },
         {
@@ -570,7 +584,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Downhill Tech Randoms II: Loudenvielle DH World Cup 2026",
-          "description": "Another lap of the pits, checking out the latest race tech being ridden at the Loudenvielle World Cup.( Photos: 40, Comments: 26 )",
+          "description": "Another lap of the pits, checking out the latest race tech being ridden at the Loudenvielle World Cup.( Photos: 40, Comments: 27 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29784905/p2pb29784905.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/downhill-tech-randoms-ii-loudenvielle-dh-world-cup-2026.html?trk=rss",
@@ -659,7 +673,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Measuring the Loudenvielle DH Gaps During Track Walk",
-          "description": "It&#039;s time to get the tape measure out.( Comments: 13 )",
+          "description": "It&#039;s time to get the tape measure out.( Comments: 14 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29782113/p2pb29782113.jpg",
           "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/track-walk-and-measuring-the-loudenvielle-gaps.html?trk=rss",
@@ -792,20 +806,6 @@
           "url": "https://www.youtube.com/watch?v=Auwg7htuKnI",
           "score": 7,
           "category": "paddock"
-        },
-        {
-          "id": "C0gqWqFQ0k4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "The Setup: South Korea Downhill World Cup is LIVE!🇰🇷",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/C0gqWqFQ0k4/maxresdefault.jpg",
-          "publishedAt": "2026-05-01T19:24:33Z",
-          "url": "https://www.youtube.com/watch?v=C0gqWqFQ0k4",
-          "score": 14,
-          "category": "paddock"
         }
       ]
     },
@@ -834,7 +834,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Loic Bruni Will Not Race at the Loudenvielle DH World Cup",
-          "description": "It&#039;s been announced that Loic Bruni is out of this weekend&#039;s racing after a huge crash in Timed Training.( Photos: 1, Comments: 33 )",
+          "description": "It&#039;s been announced that Loic Bruni is out of this weekend&#039;s racing after a huge crash in Timed Training.( Photos: 1, Comments: 43 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29655175/p2pb29655175.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/loic-bruni-will-not-race-at-the-loudenvielle-dh-world-cup.html?trk=rss",
@@ -849,7 +849,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Photo Epic: High-Speed First Laps at the Loudenvielle DH World Cup",
-          "description": "The first day of riding in Loudenvielle saw racers get to grips with the flat-out loose conditions.( Photos: 70, Comments: 6 )",
+          "description": "The first day of riding in Loudenvielle saw racers get to grips with the flat-out loose conditions.( Photos: 70, Comments: 12 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29788284/p2pb29788284.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/photo-epic-high-speed-first-laps-at-the-loudenvielle-dh-world-cup.html?trk=rss",
