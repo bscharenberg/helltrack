@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-30T20:12:40.161Z",
-  "totalItems": 74,
+  "builtAt": "2026-05-30T22:05:34.291Z",
+  "totalItems": 73,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -49,13 +49,28 @@
           "category": "race-runs"
         },
         {
+          "id": "https://www.pinkbike.com/news/loic-bruni-shares-update-after-practice-crash-at-the-loudenvielle-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Loic Bruni Shares Update After Practice Crash at the Loudenvielle World Cup",
+          "description": "Loic Bruni speaks to Dan Wolfe about his weekend-ending crash at the Loudenvielle downhill World Cup.( Comments: 4 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29793205/p2pb29793205.jpg",
+          "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/loic-bruni-shares-update-after-practice-crash-at-the-loudenvielle-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 16,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/downhill-tech-randoms-iii-loudenvielle-dh-world-cup-2026.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Downhill Tech Randoms III: Loudenvielle DH World Cup 2026",
-          "description": "A quick trip around the pits before riders dropped in for qualifying at the Loudenvielle downhill World Cup.( Photos: 43, Comments: 31 )",
+          "description": "A quick trip around the pits before riders dropped in for qualifying at the Loudenvielle downhill World Cup.( Photos: 43, Comments: 35 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29790311/p2pb29790311.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/downhill-tech-randoms-iii-loudenvielle-dh-world-cup-2026.html?trk=rss",
@@ -94,13 +109,28 @@
           "category": "race-runs"
         },
         {
+          "id": "https://www.pinkbike.com/news/what-we-learned-from-the-qualifying-carnage-at-the-loudenvielle-dh-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "What We Learned From the Qualifying Carnage at the Loudenvielle DH World Cup",
+          "description": "As riders prepare for finals, here are a few things we spotted from the sidelines during qualifying.( Photos: 5, Comments: 8 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29792936/p2pb29792936.jpg",
+          "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/what-we-learned-from-the-qualifying-carnage-at-the-loudenvielle-dh-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 13,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/results-elite-q2-qualifying-at-the-loudenvielle-dh-world-cup.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Results: Elite Q2 Qualifying at the Loudenvielle DH World Cup",
-          "description": "Nail-biting last-chance qualifying action from Loudenvielle.( Photos: 3, Comments: 121 )",
+          "description": "Nail-biting last-chance qualifying action from Loudenvielle.( Photos: 3, Comments: 127 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/results-elite-q2-qualifying-at-the-loudenvielle-dh-world-cup.html?trk=rss",
@@ -228,7 +258,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Mille Johnset Shares Footage of HUGE Practice Crash at Loudenvielle DH World Cup",
-          "description": "It&#039;s great to hear that Mille Johnset was able to walk away from this one.( Photos: 1, Comments: 42 )",
+          "description": "It&#039;s great to hear that Mille Johnset was able to walk away from this one.( Photos: 1, Comments: 44 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29785570/p2pb29785570.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/mille-johnset-shares-footage-of-huge-practice-crash-at-loudenvielle-dh-world-cup.html?trk=rss",
@@ -263,34 +293,6 @@
           "url": "https://www.youtube.com/watch?v=PPn5_bt-eG0",
           "score": 11,
           "category": "race-runs"
-        },
-        {
-          "id": "S6bKxLZbOWk",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Gracey Hemstreet's unbelievable winning run from 2025 🔥",
-          "description": "From deep in the red 🔴 to deep in the green 🟢\n\nWe can't wait to see what happens this year!\n\n📍2025 Loudenvielle – Peyragudes presented by FACOM 🏁 Women’s Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/S6bKxLZbOWk/maxresdefault.jpg",
-          "publishedAt": "2026-05-25T13:02:11Z",
-          "url": "https://www.youtube.com/watch?v=S6bKxLZbOWk",
-          "score": 20,
-          "category": "race-runs"
-        },
-        {
-          "id": "hqH1FHjaCKQ",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Jackson Goldstone's Incredible Winning Run In Loudenvielle – Peyragudes presented by FACOM 🤩",
-          "description": "Who remembers this incredible run from Jackson Goldstone? 🤩\n\nIn 2025 he took the win in Loudenvielle – Peyragudes presented by FACOM 🥇\n\nWho will come out on top this year? 👀\n\n📍2025 Loudenvielle – Peyragudes presented by FACOM 🏁 Men’s Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/hqH1FHjaCKQ/maxresdefault.jpg",
-          "publishedAt": "2026-05-25T11:00:13Z",
-          "url": "https://www.youtube.com/watch?v=hqH1FHjaCKQ",
-          "score": 20,
-          "category": "race-runs"
         }
       ]
     },
@@ -313,6 +315,21 @@
           "category": "results"
         },
         {
+          "id": "https://www.pinkbike.com/news/video-the-dusty-track-caused-problems--inside-the-tape-2026-loudenvielle-dh-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: The Dusty Track Caused Problems | Inside The Tape 2026 Loudenvielle DH World Cup",
+          "description": "Ben and Innes break down the super interesting racing so far this week in Loudenvielle.( Photos: 1, Comments: 3 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29792995/p2pb29792995.jpg",
+          "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-the-dusty-track-caused-problems--inside-the-tape-2026-loudenvielle-dh-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 16,
+          "category": "results"
+        },
+        {
           "id": "0S51rpCcLZc",
           "type": "video",
           "source": "youtube",
@@ -324,21 +341,6 @@
           "publishedAt": "2026-05-29T17:42:19Z",
           "url": "https://www.youtube.com/watch?v=0S51rpCcLZc",
           "score": 8,
-          "category": "results"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-wyntv-track-walk-loudenvielle-dh-world-cup-2026.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: WynTV Track Walk - Loudenvielle DH World Cup 2026",
-          "description": "Wyn catches up with riders as they check out this year&#039;s World Cup track in Loudenvielle.( Comments: 13 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29784585/p2pb29784585.jpg",
-          "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/video-wyntv-track-walk-loudenvielle-dh-world-cup-2026.html?trk=rss",
-          "categories": [],
-          "score": 19,
           "category": "results"
         },
         {
@@ -588,7 +590,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Downhill Tech Randoms II: Loudenvielle DH World Cup 2026",
-          "description": "Another lap of the pits, checking out the latest race tech being ridden at the Loudenvielle World Cup.( Photos: 40, Comments: 31 )",
+          "description": "Another lap of the pits, checking out the latest race tech being ridden at the Loudenvielle World Cup.( Photos: 40, Comments: 32 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29784905/p2pb29784905.jpg",
           "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/downhill-tech-randoms-ii-loudenvielle-dh-world-cup-2026.html?trk=rss",
@@ -608,21 +610,6 @@
           "publishedAt": "2026-05-28T17:30:14Z",
           "url": "https://www.youtube.com/watch?v=N7AUuPFz14w",
           "score": 14,
-          "category": "paddock"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/tech-video-a-deep-dive-into-antidotes-insane-telemetry-backed-gearbox-dh-bike--loudenvielle-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Tech Video: A Deep Dive into Antidote Solutions' Insane Telemetry-Backed Gearbox DH Bike | Loudenvielle DH World Cup",
-          "description": "We corner the designers at Antidote Solutions to figure out the methodology behind their telemetry-heavy, high-pivot World Cup downhill monster.( Comments: 50 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29782018/p2pb29782018.jpg",
-          "publishedAt": "Thu, 28 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/tech-video-a-deep-dive-into-antidotes-insane-telemetry-backed-gearbox-dh-bike--loudenvielle-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 18,
           "category": "paddock"
         },
         {
@@ -764,20 +751,6 @@
           "url": "https://www.youtube.com/watch?v=C0gqWqFQ0k4",
           "score": 14,
           "category": "paddock"
-        },
-        {
-          "id": "5Vaw_fivu9E",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Quick chat with Jackson Goldstone in South Korea!🇰🇷",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/5Vaw_fivu9E/maxresdefault.jpg",
-          "publishedAt": "2026-04-30T21:36:50Z",
-          "url": "https://www.youtube.com/watch?v=5Vaw_fivu9E",
-          "score": 12,
-          "category": "paddock"
         }
       ]
     },
@@ -792,7 +765,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Jackson Goldstone Shares Why he was Disqualified at the Loudenvielle World Cup",
-          "description": "Goldstone said he is &quot;speechless&quot; as he will be sat on the sidelines for this weekend&#039;s racing in Loudenvielle.( Comments: 79 )",
+          "description": "Goldstone said he is &quot;speechless&quot; as he will be sat on the sidelines for this weekend&#039;s racing in Loudenvielle.( Comments: 86 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29791724/p2pb29791724.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/jackson-goldstone-shares-why-he-was-disqualified-at-the-loudenvielle-world-cup.html?trk=rss",
@@ -871,21 +844,6 @@
           "publishedAt": "2026-05-27T21:57:38Z",
           "url": "https://www.youtube.com/watch?v=QesUJfPWoE8",
           "score": 6,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-2-2026-loudenvielle-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "LAST CHANCE: Build Your Team Ahead of Round 2 - 2026 Loudenvielle DH World Cup",
-          "description": "It&#039;s time to start building your team for round two of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 10 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
-          "publishedAt": "Tue, 26 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-2-2026-loudenvielle-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 10,
           "category": "news"
         }
       ]
