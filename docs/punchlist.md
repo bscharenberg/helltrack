@@ -4,18 +4,19 @@
 
 ## Current State: LIVE ✅ — LAUNCHED
 - helltrack.app is live with HTTPS
-- Announced on Pinkbike, Reddit, and DMs to key people (Martin Whiteley etc.)
+- Launched — announced on Pinkbike, Reddit, and DMs to key people (Martin Whiteley etc.)
 - Hourly cache refresh running clean
 - Results tab with 2025-2026 data (men + women elite, all rounds)
+- 2025 women's elite results fixed — all rounds verified ✅
 - 2024 data dropped — bad source data, re-import deferred (#36b)
 - Fox Factory + Frameworks Bicycles channels in pipeline
 - Jack Moir removed from channels (enduro, not DH)
-- Content filter clean and tuned through multiple rounds
+- Content filter clean and tuned through multiple rounds — further tuned May 28
 - Nav: FEED / RESULTS / RIDERS
 - Subhead: "DOWNHILL RACING"
 - Seen/watched state on cards
 - Riders tab live — 154 men, 62 women, IG links, search, My Riders
-- Email signup live (Make the Cut / Kit.com) — welcome email sending from hello@helltrack.app
+- Email signup live (Make the Cut / Kit.com) — Kit.com welcome email sending from hello@helltrack.app
 - Security hardened and re-verified pre-launch ✅
 - GA card_open tracking live
 - PWA icon: handed off to designer
@@ -89,6 +90,7 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 - GA card_open event tracking (#33) ✅
 - Email signup form embedded mid-feed (#32) ✅
 - Dynamic season pills — only shows years with data (#36a) ✅
+- My Riders — save/filter riders from Riders tab (#28c) ✅
 
 ### Content & Data
 - XCO filtering fixed
@@ -109,24 +111,25 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 
 | Priority | # | Item | Size | Description |
 |---|---|---|---|---|
-| 1 | 26 | Loudenvielle R2 results | S | Race day today May 28. Run results-fetcher.mjs after finals. Slug: loudenvielle-2026. |
+| 1 | 26 | Loudenvielle R2 results | S | Race day May 28. Run results-fetcher.mjs after finals. Slug: loudenvielle-2026. |
 | 2 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
 | 3 | 38 | Deep link sharing | M | Share button generates helltrack.app/?v=[id]. Opens app with card sheet open. Growth mechanic. |
-| 4 | 36b | 2024 results proper fix | M | Re-fetch from UCI PDFs. See details below. |
-| 5 | 30 | Teams tab | M | Needs scoping. See details below. |
-| 6 | 37 | Hub tab | M | Links to teams, how to watch, Pinkbike, UCI, commentators. Name TBD. |
-| 7 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
-| 8 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
-| 9 | 10 | Season standings | M | Aggregate points across rounds. Already in results.json. |
-| 10 | 16 | Split times frontend | M | Sector splits per rider. Mobile first. |
-| 11 | 8 | Rider search in results | M | Career results table by rider name. |
-| 12 | 9 | Rider comparison | M | Two riders side by side. Depends on #8. |
-| 13 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. |
-| 14 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
-| 15 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
-| 16 | 14 | Where to watch / live streams | M | Official stream links by geo + guide. |
-| 17 | 17 | Data viz / splits analysis | XL | Someday. Sector gap charts. Depends on #16. |
-| 18 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com. |
+| 4 | 39 | Polling results fetcher | M | Poll every 30 min during race windows. Results land within 30 min of UCI posting. See details below. |
+| 5 | 37 | Pits tab | M | New tab: PITS. Sections: How to Watch, Teams, Media, UCI Official. See details below. |
+| 6 | 36b | 2024 results proper fix | M | Re-fetch from UCI PDFs. See details below. |
+| 7 | 30 | Teams tab | M | Absorbed into #37 Pits tab — remove this item. |
+| 8 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
+| 9 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
+| 10 | 10 | Season standings | M | Aggregate points across rounds. Already in results.json. |
+| 11 | 16 | Split times frontend | M | Sector splits per rider. Mobile first. |
+| 12 | 8 | Rider search in results | M | Career results table by rider name. |
+| 13 | 9 | Rider comparison | M | Two riders side by side. Depends on #8. |
+| 14 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. |
+| 15 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
+| 16 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
+| 17 | 14 | Where to watch | M | Absorbed into #37 Pits tab. |
+| 18 | 17 | Data viz / splits analysis | XL | Someday. Sector gap charts. Depends on #16. |
+| 19 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com. |
 
 ---
 
@@ -160,6 +163,18 @@ Run after finals are posted on ucimtbworldseries.com (usually a few hours after 
 - On mobile: triggers native share sheet with deep link URL
 - Growth mechanic — shared links bring new users directly into the app
 
+### #39 — Polling results fetcher for race-day freshness
+**Goal**: Results land within 30 minutes of UCI posting — beats every other fan site.
+**Logic**:
+- Replace the single 8pm UTC cron per race day with `*/30` polling during the race window for each venue (approx 10:00–18:00 UTC for European rounds, adjusted per timezone)
+- Add a guard in `results-fetcher.mjs` or the workflow: if `results.json` already has finals data for that slug, skip the fetch and don't commit
+- Confirm the fetcher exits cleanly with no spurious commit when PDFs aren't posted yet (already returns 0 results — verify this)
+- Keep `workflow_dispatch` manual trigger as-is for overrides
+
+**Files**: `.github/workflows/fetch-results.yml`, possibly a small guard in `scripts/results-fetcher.mjs`
+
+**Done when**: On a race Sunday, results.json is updated within 30 minutes of ChronoRace PDFs appearing on ucimtbworldseries.com, with no spurious commits on polling runs that find nothing new.
+
 ### #30 — Teams tab
 **Needs scoping. Open questions:**
 - Team data source: results.json (changes yearly) or static teams.json?
@@ -167,13 +182,33 @@ Run after finals are posted on ucimtbworldseries.com (usually a few hours after 
 - Nav position: FEED / RESULTS / RIDERS / TEAMS?
 - Rider-team linkage: most recent result or manually curated?
 
-### #37 — Hub tab (name TBD)
-- Links to factory team IG profiles
-- How to watch races (official streams by geo)
-- Links to Pinkbike, UCI, key commentator accounts
-- DH influencer accounts
-- Semi-static content, updated per season
-- Name options: HUB, PIT BOARD, RESOURCES — TBD
+### #37 — Pits tab
+**Nav label**: PITS (short, fits mobile). Full nav becomes: FEED / RESULTS / RIDERS / PITS.
+**Sections inside the tab:**
+1. **How to Watch** — geography-organized streaming options. Pulled from `public/watch.json`. Updated once per season, no deploy needed beyond cache.
+2. **Teams** — factory teams with IG + YouTube links. Pulled from `public/directory.json`.
+3. **Media** — Pinkbike, Vital, Fast as French, WynTV, Martin Whiteley, Inside the Tape. Same file.
+4. **UCI Official** — results page, calendar, athlete database. Same file.
+**Riders NOT included** — Riders tab stays separate at top-level nav. Too valuable and interactive to bury.
+**Data files to create:**
+- `public/watch.json` — structure:
+```json
+{
+  "lastUpdated": "2026-03-01",
+  "regions": [
+    {
+      "region": "North America",
+      "options": [
+        { "name": "Red Bull TV", "url": "...", "cost": "free", "notes": "Best free option" },
+        { "name": "FloBikes", "url": "...", "cost": "subscription", "notes": "Most reliable" }
+      ]
+    }
+  ]
+}
+```
+- `public/directory.json` — teams + media links, semi-static, update per season
+**Maintenance**: `watch.json` updated once per season. `directory.json` updated when teams change rosters or new media channels emerge.
+**Done when**: PITS tab renders with all 4 sections, outbound links work, how-to-watch organized by geography.
 
 ### #7 — PWA icon
 - Handed off to designer

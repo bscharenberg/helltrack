@@ -155,7 +155,7 @@ function parseResults(rawText, session) {
     const after       = segment.slice(finishTime.idx + time.length, finishTime.idx + time.length + 80)
     const gapMatch    = after.match(/\+(\d+\.\d{3})/)
     const gap         = gapMatch ? '+' + gapMatch[1] : (row.rank === 1 ? '+0.000' : null)
-    const pointsMatch = after.match(/\b(200|160|150|140|130|120|110|100|95|90|85|80|75|70|65|60|55|50|45|40|36|32|28|24|20|18|17|16|15|14|13|12|11|10|9|8|7|6|5|4|3|2|1)\b/)
+    const pointsMatch = after.match(/\b(250|210|180|160|150|140|125|120|110|95|90|80|75|71|70|68|65|63|60|58|56|54|52|50|48|46|44|42|40|38|36|35|34|32|30|28|26|24|22|20|18|16|14|12|10|8|6|5|4|3|2|1)\b/)
     const points      = pointsMatch ? parseInt(pointsMatch[1]) : null
 
     if (results.find(res => res.rank === row.rank)) continue
@@ -246,6 +246,13 @@ async function main() {
     if (!existing.seasons['2026']) existing.seasons['2026']={rounds:[]}
     const rounds=existing.seasons['2026'].rounds
     const idx=rounds.findIndex(r => r.slug === venueSlug)
+
+    // Don't overwrite existing data with an empty fetch
+    if (Object.keys(result.sessions).length === 0 && idx >= 0 && Object.keys(rounds[idx].sessions||{}).length > 0) {
+      console.log('\n⚠️  0 sessions fetched — keeping existing data to avoid data loss.')
+      process.exit(0)
+    }
+
     if (idx >= 0) rounds[idx] = result
     else {
       rounds.push(result)

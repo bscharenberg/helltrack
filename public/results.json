@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-30T20:42:06.629Z",
+  "lastUpdated": "2026-05-30T21:47:26.696Z",
   "seasons": {
     "2025": {
       "rounds": [
@@ -28656,7 +28656,7 @@
                 "nat": "AUT",
                 "time": "3:14.778",
                 "gap": "+0.000",
-                "points": 3,
+                "points": 250,
                 "session": "finals-women"
               },
               {
@@ -28666,7 +28666,7 @@
                 "nat": "ITA",
                 "time": "3:15.351",
                 "gap": "+0.573",
-                "points": 3,
+                "points": 210,
                 "session": "finals-women"
               },
               {
@@ -28676,7 +28676,7 @@
                 "nat": "FRA",
                 "time": "3:16.529",
                 "gap": "+1.751",
-                "points": 3,
+                "points": 180,
                 "session": "finals-women"
               },
               {
@@ -28686,7 +28686,7 @@
                 "nat": "GBR",
                 "time": "3:16.830",
                 "gap": "+2.052",
-                "points": 3,
+                "points": 160,
                 "session": "finals-women"
               },
               {
@@ -28696,7 +28696,7 @@
                 "nat": "COL",
                 "time": "3:17.264",
                 "gap": "+2.486",
-                "points": 3,
+                "points": 140,
                 "session": "finals-women"
               },
               {
@@ -28706,7 +28706,7 @@
                 "nat": "NZL",
                 "time": "3:17.409",
                 "gap": "+2.631",
-                "points": 3,
+                "points": 125,
                 "session": "finals-women"
               },
               {
@@ -28716,7 +28716,7 @@
                 "nat": "CAN",
                 "time": "3:17.483",
                 "gap": "+2.705",
-                "points": 3,
+                "points": 110,
                 "session": "finals-women"
               },
               {
@@ -28726,7 +28726,7 @@
                 "nat": "GBR",
                 "time": "3:18.418",
                 "gap": "+3.640",
-                "points": 3,
+                "points": 95,
                 "session": "finals-women"
               },
               {
@@ -28736,7 +28736,7 @@
                 "nat": "GBR",
                 "time": "3:23.780",
                 "gap": "+9.002",
-                "points": 3,
+                "points": 80,
                 "session": "finals-women"
               },
               {
@@ -28746,7 +28746,7 @@
                 "nat": "SUI",
                 "time": "3:27.281",
                 "gap": "+12.503",
-                "points": 3,
+                "points": 75,
                 "session": "finals-women"
               },
               {
@@ -28756,7 +28756,7 @@
                 "nat": "FRA",
                 "time": "3:27.381",
                 "gap": "+12.603",
-                "points": 3,
+                "points": 71,
                 "session": "finals-women"
               },
               {
@@ -28766,7 +28766,7 @@
                 "nat": "ITA",
                 "time": "3:28.063",
                 "gap": "+13.285",
-                "points": 3,
+                "points": 68,
                 "session": "finals-women"
               },
               {
@@ -28776,7 +28776,7 @@
                 "nat": "USA",
                 "time": "3:37.537",
                 "gap": "+22.759",
-                "points": 3,
+                "points": 65,
                 "session": "finals-women"
               },
               {
@@ -28786,7 +28786,7 @@
                 "nat": "FRA",
                 "time": "3:49.638",
                 "gap": "+34.860",
-                "points": 3,
+                "points": 63,
                 "session": "finals-women"
               },
               {
@@ -28796,7 +28796,7 @@
                 "nat": "NZL",
                 "time": "3:55.917",
                 "gap": "+41.139",
-                "points": 3,
+                "points": 60,
                 "session": "finals-women"
               }
             ],
@@ -28808,7 +28808,7 @@
                 "nat": "USA",
                 "time": "2:43.301",
                 "gap": "+0.000",
-                "points": 2,
+                "points": 250,
                 "session": "finals-men"
               },
               {
@@ -28818,7 +28818,7 @@
                 "nat": "FRA",
                 "time": "2:44.869",
                 "gap": "+1.568",
-                "points": 2,
+                "points": 210,
                 "session": "finals-men"
               },
               {
@@ -28828,7 +28828,7 @@
                 "nat": "FRA",
                 "time": "2:45.364",
                 "gap": "+2.063",
-                "points": 2,
+                "points": 180,
                 "session": "finals-men"
               },
               {
@@ -28838,7 +28838,7 @@
                 "nat": "FRA",
                 "time": "2:46.492",
                 "gap": "+3.191",
-                "points": 2,
+                "points": 160,
                 "session": "finals-men"
               },
               {
@@ -28848,7 +28848,7 @@
                 "nat": "FRA",
                 "time": "2:46.557",
                 "gap": "+3.256",
-                "points": 2,
+                "points": 140,
                 "session": "finals-men"
               },
               {
@@ -28858,7 +28858,7 @@
                 "nat": "FRA",
                 "time": "2:46.953",
                 "gap": "+3.652",
-                "points": 2,
+                "points": 125,
                 "session": "finals-men"
               },
               {
@@ -28868,7 +28868,7 @@
                 "nat": "BEL",
                 "time": "2:47.023",
                 "gap": "+3.722",
-                "points": 2,
+                "points": 110,
                 "session": "finals-men"
               },
               {
@@ -28878,7 +28878,7 @@
                 "nat": "USA",
                 "time": "2:47.578",
                 "gap": "+4.277",
-                "points": 2,
+                "points": 95,
                 "session": "finals-men"
               },
               {
@@ -28888,7 +28888,7 @@
                 "nat": "FRA",
                 "time": "2:47.702",
                 "gap": "+4.401",
-                "points": 2,
+                "points": 80,
                 "session": "finals-men"
               },
               {
@@ -28898,7 +28898,7 @@
                 "nat": "AUT",
                 "time": "2:48.167",
                 "gap": "+4.866",
-                "points": 2,
+                "points": 75,
                 "session": "finals-men"
               },
               {
@@ -28908,7 +28908,7 @@
                 "nat": "FRA",
                 "time": "2:48.298",
                 "gap": "+4.997",
-                "points": 2,
+                "points": 71,
                 "session": "finals-men"
               },
               {
@@ -28918,7 +28918,7 @@
                 "nat": "FRA",
                 "time": "2:48.440",
                 "gap": "+5.139",
-                "points": 2,
+                "points": 68,
                 "session": "finals-men"
               },
               {
@@ -28928,7 +28928,7 @@
                 "nat": "USA",
                 "time": "2:48.699",
                 "gap": "+5.398",
-                "points": 2,
+                "points": 65,
                 "session": "finals-men"
               },
               {
@@ -28938,7 +28938,7 @@
                 "nat": "USA",
                 "time": "2:48.731",
                 "gap": "+5.430",
-                "points": 2,
+                "points": 63,
                 "session": "finals-men"
               },
               {
@@ -28948,7 +28948,7 @@
                 "nat": "AUS",
                 "time": "2:48.889",
                 "gap": "+5.588",
-                "points": 2,
+                "points": 60,
                 "session": "finals-men"
               },
               {
@@ -28958,7 +28958,7 @@
                 "nat": "USA",
                 "time": "2:48.921",
                 "gap": "+5.620",
-                "points": 2,
+                "points": 58,
                 "session": "finals-men"
               },
               {
@@ -28968,7 +28968,7 @@
                 "nat": "USA",
                 "time": "2:48.975",
                 "gap": "+5.674",
-                "points": 2,
+                "points": 56,
                 "session": "finals-men"
               },
               {
@@ -28978,7 +28978,7 @@
                 "nat": "FRA",
                 "time": "2:49.274",
                 "gap": "+5.973",
-                "points": 2,
+                "points": 54,
                 "session": "finals-men"
               },
               {
@@ -28988,7 +28988,7 @@
                 "nat": "AUS",
                 "time": "2:50.489",
                 "gap": "+7.188",
-                "points": 2,
+                "points": 52,
                 "session": "finals-men"
               },
               {
@@ -28998,7 +28998,7 @@
                 "nat": "GBR",
                 "time": "2:50.647",
                 "gap": "+7.346",
-                "points": 2,
+                "points": 50,
                 "session": "finals-men"
               },
               {
@@ -29008,7 +29008,7 @@
                 "nat": "BRA",
                 "time": "2:51.071",
                 "gap": "+7.770",
-                "points": 2,
+                "points": 48,
                 "session": "finals-men"
               },
               {
@@ -29018,7 +29018,7 @@
                 "nat": "USA",
                 "time": "2:51.218",
                 "gap": "+7.917",
-                "points": 2,
+                "points": 46,
                 "session": "finals-men"
               },
               {
@@ -29028,7 +29028,7 @@
                 "nat": "GBR",
                 "time": "2:52.180",
                 "gap": "+8.879",
-                "points": 2,
+                "points": 44,
                 "session": "finals-men"
               },
               {
@@ -29038,7 +29038,7 @@
                 "nat": "NZL",
                 "time": "2:52.850",
                 "gap": "+9.549",
-                "points": 2,
+                "points": 42,
                 "session": "finals-men"
               },
               {
@@ -29048,7 +29048,7 @@
                 "nat": "GBR",
                 "time": "2:54.739",
                 "gap": "+11.438",
-                "points": 2,
+                "points": 40,
                 "session": "finals-men"
               },
               {
@@ -29058,7 +29058,7 @@
                 "nat": "CAN",
                 "time": "2:54.883",
                 "gap": "+11.582",
-                "points": 2,
+                "points": 38,
                 "session": "finals-men"
               },
               {
@@ -29068,7 +29068,7 @@
                 "nat": "GBR",
                 "time": "3:03.035",
                 "gap": "+19.734",
-                "points": 3,
+                "points": 36,
                 "session": "finals-men"
               },
               {
@@ -29078,7 +29078,7 @@
                 "nat": "USA",
                 "time": "3:03.264",
                 "gap": "+19.963",
-                "points": 3,
+                "points": 34,
                 "session": "finals-men"
               },
               {
@@ -29088,7 +29088,7 @@
                 "nat": "CAN",
                 "time": "3:17.004",
                 "gap": "+33.703",
-                "points": 3,
+                "points": 32,
                 "session": "finals-men"
               },
               {
@@ -29098,7 +29098,7 @@
                 "nat": "AUS",
                 "time": "3:36.220",
                 "gap": "+52.919",
-                "points": 3,
+                "points": 30,
                 "session": "finals-men"
               }
             ]
@@ -29109,7 +29109,7 @@
           "slug": "loudenvielle-2026",
           "date": "2026-05-28",
           "round": 2,
-          "fetchedAt": "2026-05-30T20:42:06.613Z",
+          "fetchedAt": "2026-05-30T21:47:26.688Z",
           "sessions": {}
         }
       ]

@@ -631,6 +631,15 @@ html, body {
   -webkit-tap-highlight-color:transparent;
 }
 .rs-session-btn.active { background:var(--acid-dim); color:var(--acid); }
+.rs-view-toggle { display:flex; gap:6px; padding:6px 16px 0; }
+.rs-view-btn {
+  font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:0.08em; text-transform:uppercase;
+  padding:5px 14px; border-radius:20px; cursor:pointer; border:none;
+  background:var(--bg-card); color:var(--text-muted);
+  -webkit-tap-highlight-color:transparent;
+}
+.rs-view-btn.active { background:var(--acid-dim); color:var(--acid); }
 
 
   #bottom-nav {
@@ -960,6 +969,10 @@ html, body {
     <div class="rs-gender-toggle">
       <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
       <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
+    </div>
+    <div class="rs-view-toggle" id="rs-view-bar">
+      <div class="rs-view-btn active" data-view="results" onclick="setResultsView('results')">Results</div>
+      <div class="rs-view-btn" data-view="standings" onclick="setResultsView('standings')">Standings</div>
     </div>
     <div class="rs-session-toggle" id="rs-session-bar">
       <div class="rs-session-btn active" data-session="finals" onclick="setSession('finals')">Finals</div>
@@ -1383,6 +1396,7 @@ let activeSeason  = '2026'
 let activeRound   = 0
 let activeGender  = 'men'
 let activeSession = 'finals'
+let activeView    = 'results'
 
 function formatName(raw) {
   return raw.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ')
@@ -1449,6 +1463,81 @@ function setSession(s) {
   renderResults()
 }
 
+function setResultsView(v) {
+  activeView = v
+  document.querySelectorAll('.rs-view-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.view === v)
+  })
+  const isStandings = v === 'standings'
+  document.getElementById('rs-round-bar').style.display  = isStandings ? 'none' : ''
+  document.getElementById('rs-session-bar').style.display = isStandings ? 'none' : ''
+  renderResults()
+}
+
+function computeStandings(season, gender) {
+  const rounds = resultsData?.seasons?.[season]?.rounds || []
+  const key = `finals-${gender}`
+  const map = {}
+  rounds.forEach((round, roundIdx) => {
+    const session = round.sessions?.[key] || []
+    session.forEach(r => {
+      const pts = r.points ?? null
+      if (pts === null) return
+      if (!map[r.name]) map[r.name] = { name: r.name, nat: r.nat || '', points: 0, rounds: 0, lastRank: 999 }
+      map[r.name].points += pts
+      map[r.name].rounds++
+      if (roundIdx === rounds.length - 1) map[r.name].lastRank = r.rank
+    })
+  })
+  return Object.values(map)
+    .sort((a, b) => b.points !== a.points ? b.points - a.points : a.lastRank - b.lastRank)
+    .map((r, i) => ({ ...r, rank: i + 1 }))
+}
+
+function renderStandings() {
+  const el = document.getElementById('rs-content')
+  const riders = computeStandings(activeSeason, activeGender)
+  if (!riders.length) {
+    el.innerHTML = `<div class="rs-empty">No standings data yet</div>`
+    return
+  }
+  const podium = riders.slice(0, 3)
+  const rest   = riders.slice(3)
+  const podiumHtml = podium.map(r => {
+    const name = formatName(r.name)
+    return `<div class="rs-hero-row pos-${r.rank}">
+  <div class="rs-pos-num">${r.rank}</div>
+  <div class="rs-rider-info">
+    <div class="rs-rider-name">${name}</div>
+    <div class="rs-rider-nat">${r.nat}</div>
+  </div>
+  <div class="rs-time-col">
+    <div class="rs-time">${r.points} pts</div>
+    <div class="rs-gap">${r.rounds} round${r.rounds !== 1 ? 's' : ''}</div>
+  </div>
+</div>`
+  }).join('')
+  const tableRows = rest.map(r => {
+    const name = formatName(r.name)
+    return `<tr>
+  <td class="rs-td-rank">${r.rank}</td>
+  <td class="rs-td-nat">${r.nat}</td>
+  <td class="rs-td-name">${name}</td>
+  <td class="rs-td-pts">${r.points}</td>
+  <td class="rs-td-time" style="color:var(--text-muted);font-size:11px">${r.rounds}r</td>
+</tr>`
+  }).join('')
+  const genderLabel = activeGender === 'men' ? 'Elite Men' : 'Elite Women'
+  el.innerHTML = `
+<div class="rs-section">
+  <div class="rs-section-label">${activeSeason} · ${genderLabel} · Championship Standings</div>
+  <div class="rs-top5">${podiumHtml}</div>
+  ${rest.length ? `
+  <div class="rs-section-label">Full standings</div>
+  <table class="rs-table"><tbody>${tableRows}</tbody></table>` : ''}
+</div>`
+}
+
 function sessionKey() {
   const suffix = activeGender === 'men' ? 'men' : 'women'
   if (activeSession === 'finals') return `finals-${suffix}`
@@ -1472,6 +1561,7 @@ function updateSessionBar() {
 }
 
 function renderResults() {
+  if (activeView === 'standings') { renderStandings(); return }
   const el     = document.getElementById('rs-content')
   const rounds = currentRounds()
   if (!rounds.length) {
