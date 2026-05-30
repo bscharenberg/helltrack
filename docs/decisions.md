@@ -98,7 +98,7 @@
 ### MIN_SCORE = 4 is correct
 - With BOOST_SCORE = 4 for trusted channels, a trusted channel video needs 0 additional keyword matches
 - Non-trusted sources need at least 4 points from keywords alone
-- This correctly lets Jack Moir / Bernard Kerr vlogs through while filtering noise from GoPro etc.
+- This correctly lets Bernard Kerr vlogs through while filtering noise from GoPro etc.
 
 ### Category key 'results' in cache.json is "Analysis" in the UI
 - The content filter assigns category id `results` to Ben Cathro / Inside the Tape / analysis content
@@ -113,9 +113,10 @@
 ### "MTBWS HIGHLIGHTS" pattern
 - The UCI channel posts: "MTBWS HIGHLIGHTS 🇰🇷 [Gender] Elite [XCO/DHI] | [Year] [Venue]"
 - XCO highlights should be filtered; DHI highlights should pass
-- Current solution: "mtbws highlights" gets -8, "dhi" gets +4, "xco" gets -15
-- Net for DHI highlights: 4(trusted) + 4(dhi) - 8(mtbws highlights) = 0 — FAILS
-- Fix needed: add 'mtbws highlights dhi' as a positive term to counteract
+- Solution: "mtbws highlights" gets -8, "dhi" gets +4, "xco" gets -15
+- Added 'mtbws highlights dhi' as a positive term (+8) to counteract the penalty
+- Net for DHI highlights: 4(trusted) + 4(dhi) - 8(mtbws highlights) + 8(mtbws highlights dhi) = 8 ✅
+- Net for XCO highlights: 4(trusted) - 8(mtbws highlights) - 15(xco) = -19 — correctly dropped ✅
 
 ## Design Decisions
 
@@ -142,10 +143,11 @@
 
 ## Deployment Learnings
 
-### Always `git pull --rebase origin main && git push`
+### Always stash before pull: `git stash && git pull --rebase origin main && git stash pop && git push`
 - GitHub Actions commits cache.json every hour
 - Straight `git push` fails if Action ran between your last pull and push
-- `git pull --rebase` is the safe pattern every time
+- Plain `git pull --rebase` also fails if you have uncommitted changes — stash first
+- Pattern: stash → pull --rebase → pop → push
 
 ### Service worker caches aggressively
 - After pushing new cache.json, browser may serve old version for minutes
@@ -180,12 +182,12 @@
 - Comparison view: two rider searches side by side
 - Deferred until 3+ rounds of 2026 data available
 
-### iOS install prompt
-- `beforeinstallprompt` only fires on Android Chrome
-- iOS Safari requires manual: Share → Add to Home Screen
-- Need a small banner or instructions for iOS users
+### iOS install prompt ✅
+- Implemented as one-time banner for iOS Safari users
+- Detects iOS via userAgent, shows Share → Add to Home Screen instructions
+- Dismissal stored in localStorage
 
 ### Content categories — potential future additions
-- WynTV (Wyn Masters) — not currently in channel list
+- WynTV (Wyn Masters) — ✅ added (UCtvJR7iamL8WFAbvpsC2HTw)
 - Roots and Rain results — structured results data
 - Martin Whiteley (@captain23mw) — stats/historical context

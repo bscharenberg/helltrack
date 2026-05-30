@@ -8,7 +8,7 @@ cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 node scripts/build-cache.js
 git add public/cache.json
 git commit -m 'rebuild cache'
-git pull --rebase origin main && git push
+git stash && git pull --rebase origin main && git stash pop && git push
 ```
 
 ### Fetch results for a race round
@@ -17,7 +17,7 @@ cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 node scripts/results-fetcher.mjs race-of-south-korea-2026
 git add public/results.json
 git commit -m 'add results - Round 1 South Korea'
-git pull --rebase origin main && git push
+git stash && git pull --rebase origin main && git stash pop && git push
 ```
 
 ### Deploy frontend changes
@@ -25,7 +25,16 @@ git pull --rebase origin main && git push
 cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 git add index.html
 git commit -m 'describe change'
-git pull --rebase origin main && git push
+git stash && git pull --rebase origin main && git stash pop && git push
+```
+
+### Rebuild riders data
+```bash
+cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
+node scripts/build-riders.js
+git add scripts/riders.csv public/riders.json
+git commit -m 'update riders roster'
+git stash && git pull --rebase origin main && git stash pop && git push
 ```
 
 ### Deploy Cloudflare Worker (results scraper)
@@ -60,9 +69,10 @@ fetch('public/cache.json?t=' + Date.now()).then(r => r.json()).then(d => {
 2. Cmd+Shift+R (hard refresh)
 
 ## Git Workflow Rules
-- **Always** use `git pull --rebase origin main && git push` — never plain `git push`
+- **Always** use `git stash && git pull --rebase origin main && git stash pop && git push` — never plain `git push`
 - **Always** use single quotes for commit messages: `git commit -m 'message'`
-- GitHub Actions commits cache.json every hour — your push will fail without rebase
+- GitHub Actions commits cache.json every hour — stash first or the rebase will fail on local changes
+- cache.json conflicts during rebase: `git checkout --theirs public/cache.json && git add public/cache.json`
 
 ## File Locations
 | File | Location | Purpose |
@@ -77,6 +87,9 @@ fetch('public/cache.json?t=' + Date.now()).then(r => r.json()).then(d => {
 | Results fetcher | /scripts/results-fetcher.mjs | PDF parser (ESM) |
 | Worker source | /helltrack-results/src/index.js | Cloudflare Worker |
 | Worker config | /helltrack-results/wrangler.jsonc | Worker deployment config |
+| Rider roster CSV | /scripts/riders.csv | Source of truth for riders |
+| Rider builder | /scripts/build-riders.js | Generates riders.json from CSV |
+| Riders data | /public/riders.json | Generated rider data |
 | Env vars | /.env | API keys (not committed) |
 
 ## Environment Variables
@@ -101,6 +114,12 @@ Also set as GitHub Secrets for Actions.
 | R9 | Lake Placid | 2026-10-02 | lake-placid-2026 |
 
 ## Debugging Tips
+
+### cache.json conflict during rebase
+```bash
+git checkout --theirs public/cache.json && git add public/cache.json
+```
+Then continue: `git rebase --continue` or `git stash pop && git push`
 
 ### "nothing to commit" when you expect changes
 - Run `git diff scripts/content-filter.js` — if empty, the file matches the repo

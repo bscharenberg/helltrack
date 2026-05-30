@@ -4,7 +4,7 @@
 - **App name**: Helltrack
 - **Tagline**: "Me, I ride for me." — Cru Jones, RAD (1986)
 - **Domain**: helltrack.app (registered Porkbun, ~$15/yr renewal)
-- **Purpose**: UCI downhill and enduro race content aggregator + historical results database
+- **Purpose**: UCI downhill race content aggregator + historical results database
 - **GitHub**: github.com/bscharenberg/helltrack
 - **Local path**: ~/Documents/Bryon Knowledge Base/Helltrack/
 
@@ -21,7 +21,7 @@
 ## Content Pipeline
 
 ### Sources
-- **11 YouTube channels** via uploads playlist API (1 unit/channel vs 100 for search.list)
+- **13 YouTube channels** via uploads playlist API (1 unit/channel vs 100 for search.list)
 - **Pinkbike RSS** via Cloudflare Worker proxy (direct fetch returns 403)
 
 ### YouTube Channels
@@ -32,9 +32,11 @@
 | Red Bull Bike | UCblfuW_4rakIf2h6aqoNnkQ |
 | GoPro Bike | UCqhnX4ZMpkCyozvguSEMtxg |
 | Sleeper Collective | UCuuLS5B9JraqXiKfYPIBNEw |
-| Jack Moir | UCd77cWCYmO6alSLXXRHMoqw |
 | Bernard Kerr | UCOYc6SI_fVrNvoutot7D9IA |
 | Santa Cruz Syndicate | UCCb8I3PHEUFPV0Jds0-_eig |
+| WynTV | UCtvJR7iamL8WFAbvpsC2HTw |
+| Fox Factory | UCN_B2-bdBtmAq-5TOEU63nQ |
+| Frameworks Bicycles | UCiCWNsaEx9swRaCe55XMAuw |
 | Commencal | (in fetcher) |
 | Vital MTB | (in fetcher) |
 | Downtime Podcast | (in fetcher) |
@@ -49,8 +51,9 @@
 
 ### GitHub Actions
 - **refresh.yml** — hourly cron, runs build-cache.js, commits cache.json
+- **fetch-results.yml** — race weekend auto-trigger (Sat+Sun), runs results-fetcher.mjs
 - Uses secrets: YOUTUBE_API_KEY, PINKBIKE_PROXY
-- Quota: ~264 units/day of 10,000 limit
+- Quota: ~264 units/day (13 channels × ~1 unit × 24 runs) of 10,000 limit
 
 ## Results Pipeline
 
@@ -92,7 +95,7 @@ Generated hourly by GitHub Actions. Structure:
     "race-runs": { "id": "race-runs", "label": "Race runs", "items": [...] },
     "results": { ... },
     "films": { ... },
-    "paddock": { ... },
+    "pits": { ... },
     "news": { ... }
   }
 }
@@ -123,7 +126,7 @@ Each result: rank, bib, name, nat, team, time, gap, points, splits{s1-s4}, dnf/d
 - Mobile-first, max-width implied by content
 
 ### Navigation
-- Horizontal scrolling tab bar: All | Results | Race runs | Analysis | Films | Paddock | News
+- Horizontal scrolling tab bar: All | Results | Race runs | Analysis | Films | Pits | News
 - "Results" tab (internally id='standings' to avoid collision with feed category id='results')
 - Results nav: 4 sticky rows in header (Year | Venue | Elite Men/Women | Finals/Q1/Q2)
 - Results nav hidden by default, shown only when Results tab active
@@ -141,6 +144,16 @@ Each result: rank, bib, name, nat, team, time, gap, points, splits{s1-s4}, dnf/d
 - Session toggle: Finals | Qual 1 | Qual 2 (Q2 hidden if no data)
 - Top 5 with visual weight: gold/silver/bronze for 1-3, elevated for 4-5, table from 6
 - Name formatting: "VERMETTE ASA" → "Vermette Asa"
+
+### public/riders.json
+Generated from scripts/riders.csv by build-riders.js. Structure:
+```json
+{
+  "men": [ { "name": "...", "nat": "...", "team": "...", "ig": "..." }, ... ],
+  "women": [ ... ]
+}
+```
+Source of truth: scripts/riders.csv — edit CSV, run `node scripts/build-riders.js`, commit both.
 
 ## Other PWA Files (root folder)
 - `manifest.json` — start_url: "/", scope: "/"

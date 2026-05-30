@@ -1,18 +1,18 @@
 # Claude Project Instructions — Helltrack
 
 ## What This Project Is
-Helltrack (helltrack.app) is a UCI downhill and enduro race content aggregator and historical results database built by Bryon Scharenberg. It's a PWA (Progressive Web App) that pulls from YouTube channels and Pinkbike RSS, filters to DH/enduro content, and displays a clean card-based feed. It also has a Results tab with historical UCI DH race data going back to 2024 (expanding to 2015+).
+Helltrack (helltrack.app) is a UCI downhill race content aggregator and historical results database built by Bryon Scharenberg. It's a PWA (Progressive Web App) that pulls from YouTube channels and Pinkbike RSS, filters to DH/enduro content, and displays a clean card-based feed. It also has a Results tab with UCI DH race data (2025–2026 live; 2024 deferred; expanding to 2015+ eventually).
 
 **This is a hobby project** — Bryon builds and maintains it himself. Keep suggestions practical, avoid over-engineering, and prioritize simplicity and maintainability over cleverness.
 
 ## Key Files to Load Into This Project
-Load these files from the Helltrack knowledge base:
-1. `helltrack-architecture.md` — full system architecture reference
-2. `helltrack-decisions.md` — what worked, what didn't, lessons learned
-3. `helltrack-punchlist.md` — current state and todo list
-4. `helltrack-dev-workflow.md` — commands and processes
+Reference docs live in the repo at `docs/`:
+1. `docs/architecture.md` — full system architecture reference
+2. `docs/decisions.md` — what worked, what didn't, lessons learned
+3. `docs/punchlist.md` — current state and todo list (most frequently updated)
+4. `docs/dev-workflow.md` — commands and processes
 
-When Bryon uploads a file to the chat (index.html, content-filter.js, etc.) treat it as the current live version.
+When Bryon uploads a file to the chat (index.html, content-filter.js, etc.) treat it as the current live version on disk.
 
 ## Bryon's Working Style
 - Builds in sessions, often late at night
@@ -58,7 +58,7 @@ When Bryon uploads a file to the chat (index.html, content-filter.js, etc.) trea
 - **CI/CD**: GitHub Actions (hourly cache refresh)
 - **Hosting**: GitHub Pages (helltrack.app via Cloudflare DNS)
 - **Workers**: Cloudflare Workers (RSS proxy + results scraper)
-- **Data**: cache.json (content feed) + results.json (race results)
+- **Data**: cache.json (content feed) + results.json (race results) + riders.json (rider roster)
 
 ## Things That Are Intentionally Simple
 - No framework (React, Vue, etc.) — vanilla JS only
@@ -69,12 +69,15 @@ When Bryon uploads a file to the chat (index.html, content-filter.js, etc.) trea
 
 ## Known Gotchas
 - Git commit messages must use SINGLE QUOTES on Mac (smart quotes break shell)
-- Always `git pull --rebase origin main && git push` — never plain push
+- Always `git stash && git pull --rebase origin main && git stash pop && git push` — never plain push
+- cache.json conflicts during rebase: `git checkout --theirs public/cache.json && git add public/cache.json`
 - Results tab id is 'standings' internally (not 'results') to avoid collision with feed category key
 - pdfjs-dist needs `.mjs` extension and Uint8Array not Buffer
 - UCI IDs in PDFs are 10-11 digits (not always 10)
 - Service worker caches aggressively — unregister in DevTools for fresh testing
 - Category 'results' in cache.json displays as 'Analysis' in the UI
+- `riders-view` must have `style="display:none"` on the HTML element (not just CSS class)
+- Kit.com form embed must be static HTML in body — never inject via JS template literals (backticks/quotes break it)
 
 ## Bryon's Preferences
 - Prefers mockups/previews before building complex UI changes
