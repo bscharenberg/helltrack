@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-31T20:16:54.088Z",
-  "totalItems": 97,
+  "builtAt": "2026-05-31T22:05:57.932Z",
+  "totalItems": 99,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -663,6 +663,34 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "aWyuyfJpMYg",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Gracey Hemstreet and Remi Gauvin discuss bike setup in Loudenvielle!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/aWyuyfJpMYg/maxresdefault.jpg",
+          "publishedAt": "2026-05-31T20:53:12Z",
+          "url": "https://www.youtube.com/watch?v=aWyuyfJpMYg",
+          "score": 12,
+          "category": "news"
+        },
+        {
+          "id": "Of7Mb42bKOk",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Neko Mulally discusses Asa Vermette's bike set up in Loudenvielle",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/Of7Mb42bKOk/maxresdefault.jpg",
+          "publishedAt": "2026-05-31T20:50:54Z",
+          "url": "https://www.youtube.com/watch?v=Of7Mb42bKOk",
+          "score": 12,
+          "category": "news"
+        },
         {
           "id": "https://www.pinkbike.com/news/jackson-goldstone-shares-why-he-was-disqualified-at-the-loudenvielle-world-cup.html?trk=rss",
           "type": "article",
