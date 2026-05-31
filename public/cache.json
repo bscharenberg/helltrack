@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-05-31T05:23:57.409Z",
-  "totalItems": 70,
+  "builtAt": "2026-05-31T08:56:47.473Z",
+  "totalItems": 77,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -77,13 +77,42 @@
           "category": "race-runs"
         },
         {
+          "id": "JuR0ER6qF-w",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV “On Track with Gary” LOUDENVIELLE DAY 2",
+          "description": "Day two on track with Gary, for the pre qualifying practice here in Loudenvielle!\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/checkout?s=674\n2.                      “I have a voucher”: WYN30",
+          "thumbnail": "https://i.ytimg.com/vi/JuR0ER6qF-w/sddefault.jpg",
+          "publishedAt": "2026-05-30T11:57:36Z",
+          "url": "https://www.youtube.com/watch?v=JuR0ER6qF-w",
+          "score": 11,
+          "category": "race-runs"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-wyntv-loudenvielle-q2-rapid-reaction.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "WynTV Q2 Rapid Reactions at the 2026 Loudenvielle DH World Cup",
+          "description": "Wyn chats with riders after the chaos of qualifying day at the Loudenvielle downhill World Cup.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29794782/p2pb29794782.jpg",
+          "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-wyntv-loudenvielle-q2-rapid-reaction.html?trk=rss",
+          "categories": [],
+          "score": 20,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/loic-bruni-shares-update-after-practice-crash-at-the-loudenvielle-world-cup.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Loic Bruni Shares Update After Practice Crash at the Loudenvielle World Cup",
-          "description": "Loic Bruni speaks to Dan Wolfe about his weekend-ending crash at the Loudenvielle downhill World Cup.( Comments: 16 )",
+          "description": "Loic Bruni speaks to Dan Wolfe about his weekend-ending crash at the Loudenvielle downhill World Cup.( Comments: 17 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29793205/p2pb29793205.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/loic-bruni-shares-update-after-practice-crash-at-the-loudenvielle-world-cup.html?trk=rss",
@@ -98,7 +127,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Downhill Tech Randoms III: Loudenvielle DH World Cup 2026",
-          "description": "A quick trip around the pits before riders dropped in for qualifying at the Loudenvielle downhill World Cup.( Photos: 43, Comments: 42 )",
+          "description": "A quick trip around the pits before riders dropped in for qualifying at the Loudenvielle downhill World Cup.( Photos: 43, Comments: 43 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29790311/p2pb29790311.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/downhill-tech-randoms-iii-loudenvielle-dh-world-cup-2026.html?trk=rss",
@@ -143,7 +172,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "What We Learned From the Qualifying Carnage at the Loudenvielle DH World Cup",
-          "description": "As riders prepare for finals, here are a few things we spotted from the sidelines during qualifying.( Photos: 5, Comments: 19 )",
+          "description": "As riders prepare for finals, here are a few things we spotted from the sidelines during qualifying.( Photos: 5, Comments: 27 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29792936/p2pb29792936.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/what-we-learned-from-the-qualifying-carnage-at-the-loudenvielle-dh-world-cup.html?trk=rss",
@@ -158,12 +187,27 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Results: Elite Q2 Qualifying at the Loudenvielle DH World Cup",
-          "description": "Nail-biting last-chance qualifying action from Loudenvielle.( Photos: 3, Comments: 135 )",
+          "description": "Nail-biting last-chance qualifying action from Loudenvielle.( Photos: 3, Comments: 136 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/results-elite-q2-qualifying-at-the-loudenvielle-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 13,
+          "category": "race-runs"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-the-setup-gracey-hemstreet-and-asa-vermette-take-on-loudenvielle.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: The Setup - Gracey Hemstreet &amp; Asa Vermette Take On Loudenvielle",
+          "description": "Behind the scenes with Gracey and Asa as they prepare for finals day in Loudenvielle.( Photos: 3, Comments: 1 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29794669/p2pb29794669.jpg",
+          "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/video-the-setup-gracey-hemstreet-and-asa-vermette-take-on-loudenvielle.html?trk=rss",
+          "categories": [],
+          "score": 11,
           "category": "race-runs"
         },
         {
@@ -249,50 +293,6 @@
           "url": "https://www.youtube.com/watch?v=R4OAuTzl8a0",
           "score": 11,
           "category": "race-runs"
-        },
-        {
-          "id": "Q-htgUjJigY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "The TOP 5 features YOU need to know on the 2026 Loudenvielle-Peyragudes UCI DHI World Cup track! 🫵🇫🇷",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/Q-htgUjJigY/maxresdefault.jpg",
-          "publishedAt": "2026-05-29T08:00:36Z",
-          "url": "https://www.youtube.com/watch?v=Q-htgUjJigY",
-          "score": 14,
-          "category": "race-runs"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-jackson-goldstones-practice-lap-pov-from-the-loudenvielle-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Jackson Goldstone's Practice Lap POV from the Loudenvielle DH World Cup",
-          "description": "Join Jackson Goldstone for a fast and fun practice lap of this week&#039;s World Cup course in Loudenvielle.( Comments: 27 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29785210/p2pb29785210.jpg",
-          "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/video-jackson-goldstones-practice-lap-pov-from-the-loudenvielle-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 16,
-          "category": "race-runs"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/mille-johnset-shares-footage-of-huge-practice-crash-at-loudenvielle-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Mille Johnset Shares Footage of HUGE Practice Crash at Loudenvielle DH World Cup",
-          "description": "It&#039;s great to hear that Mille Johnset was able to walk away from this one.( Photos: 1, Comments: 45 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29785570/p2pb29785570.jpg",
-          "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/mille-johnset-shares-footage-of-huge-practice-crash-at-loudenvielle-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 10,
-          "category": "race-runs"
         }
       ]
     },
@@ -315,18 +315,46 @@
           "category": "results"
         },
         {
+          "id": "MjVXZTFkOhY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV LOUDENVIELLE Q2 RAPID REACTION",
+          "description": "I caught up with everyone I could find following a wild Q2 session here in Loudenvielle! \n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/MjVXZTFkOhY/maxresdefault.jpg",
+          "publishedAt": "2026-05-30T18:25:56Z",
+          "url": "https://www.youtube.com/watch?v=MjVXZTFkOhY",
+          "score": 15,
+          "category": "results"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-the-dusty-track-caused-problems--inside-the-tape-2026-loudenvielle-dh-world-cup.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: The Dusty Track Caused Problems | Inside The Tape 2026 Loudenvielle DH World Cup",
-          "description": "Ben and Innes break down the super interesting racing so far this week in Loudenvielle.( Photos: 1, Comments: 11 )",
+          "description": "Ben and Innes break down the super interesting racing so far this week in Loudenvielle.( Photos: 1, Comments: 17 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29792995/p2pb29792995.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-the-dusty-track-caused-problems--inside-the-tape-2026-loudenvielle-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 16,
+          "category": "results"
+        },
+        {
+          "id": "0S51rpCcLZc",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV \"ON TRACK WITH GARY\" LOUDENVIELLE DAY ONE!",
+          "description": "I got my back side trackside to witness all the action and the lack of traction here for timed training in Loudenvielle!\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/checkout?s=674\n2.                      “I have a voucher”: WYN30\n\n\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/0S51rpCcLZc/maxresdefault.jpg",
+          "publishedAt": "2026-05-29T17:42:19Z",
+          "url": "https://www.youtube.com/watch?v=0S51rpCcLZc",
+          "score": 8,
           "category": "results"
         },
         {
@@ -357,6 +385,20 @@
           "url": "https://www.pinkbike.com/news/video-wyntv-on-track-with-gary-loudenvielle-day-1.html?trk=rss",
           "categories": [],
           "score": 16,
+          "category": "results"
+        },
+        {
+          "id": "GD4un0QDuiI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV LOUDENVIELLE TRACKWALK 2026",
+          "description": "It was a scorcher for trackwalk today in Loudenvielle, I caught up with all the riders I could find ahead of some wild racing this weekend!\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/checkout?s=674\n2.                      “I have a voucher”: WYN30\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/GD4un0QDuiI/maxresdefault.jpg",
+          "publishedAt": "2026-05-28T21:00:59Z",
+          "url": "https://www.youtube.com/watch?v=GD4un0QDuiI",
+          "score": 8,
           "category": "results"
         },
         {
@@ -402,6 +444,20 @@
           "category": "results"
         },
         {
+          "id": "R-PbRqIetgY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCgwpS_N4DQDYsip73rsQ6iA",
+          "channelName": "Downtime Podcast",
+          "title": "The Most Important Run from South Korea?",
+          "description": "SPOILER ALERT - World Cup Downhill racing is SICK!!!\n\nHere's my take on the weekend? What do you think?\n\nVideo - Whoop UCI Mountain BIke World Series\n\n#mtbworldcupdh #mtbracing #worldcupdh",
+          "thumbnail": "https://i.ytimg.com/vi/R-PbRqIetgY/maxresdefault.jpg",
+          "publishedAt": "2026-05-02T18:01:36Z",
+          "url": "https://www.youtube.com/watch?v=R-PbRqIetgY",
+          "score": 10,
+          "category": "results"
+        },
+        {
           "id": "3JEub4o23fE",
           "type": "video",
           "source": "youtube",
@@ -413,6 +469,20 @@
           "publishedAt": "2026-05-02T16:22:45Z",
           "url": "https://www.youtube.com/watch?v=3JEub4o23fE",
           "score": 10,
+          "category": "results"
+        },
+        {
+          "id": "uTh-az8TZ_U",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SOUTH KOREA Q2 RAPID REACTION 2026",
+          "description": "After a rough day ending in hospital yesterday, I was back on site to catch the whole run down of Q2 here in Mona Yongpyong!\n\nWatch the live race tomorrow here, https://watch.ucimtbworldseries.com\n\nVideo by Charlie Coquillard\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/uTh-az8TZ_U/maxresdefault.jpg",
+          "publishedAt": "2026-05-01T12:29:32Z",
+          "url": "https://www.youtube.com/watch?v=uTh-az8TZ_U",
+          "score": 15,
           "category": "results"
         },
         {
@@ -539,21 +609,6 @@
           "url": "https://www.pinkbike.com/news/video-2026-loudenvielle-dh-world-cup-course-preview2.html?trk=rss",
           "categories": [],
           "score": 13,
-          "category": "paddock"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/downhill-tech-randoms-ii-loudenvielle-dh-world-cup-2026.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Downhill Tech Randoms II: Loudenvielle DH World Cup 2026",
-          "description": "Another lap of the pits, checking out the latest race tech being ridden at the Loudenvielle World Cup.( Photos: 40, Comments: 32 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29784905/p2pb29784905.jpg",
-          "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/downhill-tech-randoms-ii-loudenvielle-dh-world-cup-2026.html?trk=rss",
-          "categories": [],
-          "score": 11,
           "category": "paddock"
         },
         {
