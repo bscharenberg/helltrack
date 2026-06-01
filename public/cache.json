@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-01T12:44:06.738Z",
-  "totalItems": 100,
+  "builtAt": "2026-06-01T18:43:52.625Z",
+  "totalItems": 97,
   "categories": {
     "race-runs": {
       "id": "race-runs",
@@ -13,7 +13,7 @@
           "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
           "channelName": "WynTV",
           "title": "WYNTV WILD LOUDENVIELLE FINALS DAY",
-          "description": "The Loudenvielle Finals was a wild one, I caught up with everyone following another epic French race!\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/c...\n2.                      “I have a voucher”: WYN30\n\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "description": "The Loudenvielle Finals was a wild one, I caught up with everyone following another epic French race!\n\nYou can support myself and the Privateer Project by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/c...\n2.                      “I have a voucher”: WYN30\n\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
           "thumbnail": "https://i.ytimg.com/vi/7ALmLtSJQ2E/maxresdefault.jpg",
           "publishedAt": "2026-06-01T11:05:43Z",
           "url": "https://www.youtube.com/watch?v=7ALmLtSJQ2E",
@@ -27,12 +27,27 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV Finals Day - Loudenvielle DH World Cup 2026",
-          "description": "Rider interviews with Wyn after the wild Loudenvielle downhill World Cup finals.",
+          "description": "Rider interviews with Wyn after the wild Loudenvielle downhill World Cup finals.( Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29800888/p2pb29800888.jpg",
           "publishedAt": "Mon, 1 Jun 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/video-wyntv-finals-day-loudenvielle-dh-world-cup-2026.html?trk=rss",
           "categories": [],
           "score": 20,
+          "category": "race-runs"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/photo-epic-crashes-and-breakthrough-wins-at-the-thrilling-loudenvielle-dh-world-cup-finals.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Photo Epic: Crashes &amp; Breakthrough Wins at the Thrilling Loudenvielle DH World Cup Finals",
+          "description": "The 2026 season continued to deliver climactic racing at the second stop of the series in Loudenvielle.( Photos: 64, Comments: 13 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29801033/p2pb29801033.jpg",
+          "publishedAt": "Mon, 1 Jun 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/photo-epic-crashes-and-breakthrough-wins-at-the-thrilling-loudenvielle-dh-world-cup-finals.html?trk=rss",
+          "categories": [],
+          "score": 13,
           "category": "race-runs"
         },
         {
@@ -272,20 +287,6 @@
           "url": "https://www.youtube.com/watch?v=hCoD7jFZrjU",
           "score": 14,
           "category": "race-runs"
-        },
-        {
-          "id": "zueOusipKr8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "A close call with a winning run today for Myriam Nicole! The French fans loved to see it! 🇫🇷🔥",
-          "description": "📍Loudenvielle - Peyragudes presented by FACOM 🏁 Women’s Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/zueOusipKr8/maxresdefault.jpg",
-          "publishedAt": "2026-05-31T12:43:48Z",
-          "url": "https://www.youtube.com/watch?v=zueOusipKr8",
-          "score": 20,
-          "category": "race-runs"
         }
       ]
     },
@@ -294,13 +295,42 @@
       "label": "Results",
       "items": [
         {
+          "id": "zXJ8iGQQn2U",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
+          "channelName": "Pinkbike",
+          "title": "30% Of Racers Hit The Deck | Story Of The Race | Loudenvielle - Day 4",
+          "description": "That was quite possibly the dustiest race we've ever experienced. Loudenvielle round 2 of the Downhill MTB World Cup was one for the record books with new winners, a crazy amount of mistakes and always great racing. Ben fires up the ghost machine for a janky yet insightful comparison.\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
+          "thumbnail": "https://i.ytimg.com/vi/zXJ8iGQQn2U/maxresdefault.jpg",
+          "publishedAt": "2026-06-01T18:13:27Z",
+          "url": "https://www.youtube.com/watch?v=zXJ8iGQQn2U",
+          "score": 12,
+          "category": "results"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/30-of-racers-hit-the-deck--story-of-the-race--loudenvielle-world-cup-dh-2026.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "30% Of Racers Hit The Deck | Story Of The Race | Loudenvielle DH World Cup 2026",
+          "description": "Ben Cathro fires up the ghost machine to compare lines, analyze massive mistakes, and break down a historic Round 2 of the Downhill World Cup.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29802487/p2pb29802487.jpg",
+          "publishedAt": "Mon, 1 Jun 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/30-of-racers-hit-the-deck--story-of-the-race--loudenvielle-world-cup-dh-2026.html?trk=rss",
+          "categories": [],
+          "score": 19,
+          "category": "results"
+        },
+        {
           "id": "https://www.pinkbike.com/news/race-analysis-high-drama-and-breakout-performances-at-the-2026-loudenvielle-dh-world-cup.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Race Analysis: High-Drama &amp; Breakout Performances at the 2026 Loudenvielle DH World Cup",
-          "description": "Digging into the numbers from the exhilarating race action at the 2026 Loudenvielle downhill World Cup.( Photos: 4, Comments: 57 )",
+          "description": "Digging into the numbers from the exhilarating race action at the 2026 Loudenvielle downhill World Cup.( Photos: 4, Comments: 64 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29796292/p2pb29796292.jpg",
           "publishedAt": "Sun, 31 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/race-analysis-high-drama-and-breakout-performances-at-the-2026-loudenvielle-dh-world-cup.html?trk=rss",
@@ -315,7 +345,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Round 2 Fantasy DH League Results - 2026 Loudenvielle DH World Cup",
-          "description": "The results are in for the second round of Pinkbike&#039;s DH Fantasy League.( Photos: 3, Comments: 29 )",
+          "description": "The results are in for the second round of Pinkbike&#039;s DH Fantasy League.( Photos: 3, Comments: 36 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
           "publishedAt": "Sun, 31 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/round-2-fantasy-dh-league-results-2026-loudenvielle-dh-world-cup.html?trk=rss",
@@ -435,34 +465,6 @@
           "url": "https://www.youtube.com/watch?v=coFA1oqBgCg",
           "score": 15,
           "category": "results"
-        },
-        {
-          "id": "R-PbRqIetgY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCgwpS_N4DQDYsip73rsQ6iA",
-          "channelName": "Downtime Podcast",
-          "title": "The Most Important Run from South Korea?",
-          "description": "SPOILER ALERT - World Cup Downhill racing is SICK!!!\n\nHere's my take on the weekend? What do you think?\n\nVideo - Whoop UCI Mountain BIke World Series\n\n#mtbworldcupdh #mtbracing #worldcupdh",
-          "thumbnail": "https://i.ytimg.com/vi/R-PbRqIetgY/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T18:01:36Z",
-          "url": "https://www.youtube.com/watch?v=R-PbRqIetgY",
-          "score": 10,
-          "category": "results"
-        },
-        {
-          "id": "3JEub4o23fE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Vali Höll Takes the Win in South Korea - '26 UCI DH MTB World Cup",
-          "description": "Shot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/3JEub4o23fE/maxresdefault.jpg",
-          "publishedAt": "2026-05-02T16:22:45Z",
-          "url": "https://www.youtube.com/watch?v=3JEub4o23fE",
-          "score": 10,
-          "category": "results"
         }
       ]
     },
@@ -491,13 +493,27 @@
       "label": "Pits",
       "items": [
         {
+          "id": "muPLRYwKgiU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "Aaron Gwin Wanted IN 👀🔥 #hardline #mtb #shorts",
+          "description": "In this episode of Just Ride, Rob Warner and Eliot Jackson sit down with Neko Mulally to talk about building Frameworks Racing from the ground up, from homemade bike prototypes to one of the most talked-about teams in downhill mountain biking.\n\nNeko shares the story behind signing Asa Vermette, bringing Aaron Gwin onto the team, developing World Cup race bikes, and creating a team culture built around trust, performance, and progression. The conversation dives into bike setup, rider development, Hardline, American downhill racing, and what it really takes to compete at the highest level.\n\nThey also discuss the future of Frameworks, growing the sport in the U.S., and why simplicity, confidence, and passion still matter in modern downhill MTB.\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!",
+          "thumbnail": "https://i.ytimg.com/vi/muPLRYwKgiU/maxresdefault.jpg",
+          "publishedAt": "2026-06-01T14:00:02Z",
+          "url": "https://www.youtube.com/watch?v=muPLRYwKgiU",
+          "score": 19,
+          "category": "paddock"
+        },
+        {
           "id": "https://www.pinkbike.com/news/bike-check-andi-kolbs-custom-xl-santa-cruz-v10-2026-loudenvielle-dh-world-cup.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Bike Check: Andi Kolb's Custom XL Santa Cruz V10 - 2026 Loudenvielle DH World Cup",
-          "description": "Only Andi Kolb gets an MX V10 in XL( Photos: 12, Comments: 19 )",
+          "description": "Only Andi Kolb gets an MX V10 in XL( Photos: 12, Comments: 57 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29800431/p2pb29800431.jpg",
           "publishedAt": "Mon, 1 Jun 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/bike-check-andi-kolbs-custom-xl-santa-cruz-v10-2026-loudenvielle-dh-world-cup.html?trk=rss",
@@ -545,21 +561,6 @@
           "publishedAt": "2026-05-29T13:59:49Z",
           "url": "https://www.youtube.com/watch?v=vPRetXZRU_c",
           "score": 17,
-          "category": "paddock"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-2026-loudenvielle-dh-world-cup-course-preview2.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: 2026 Loudenvielle DH World Cup Course Preview",
-          "description": "Hopefully you like dust..( Photos: 1, Comments: 17 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29789053/p2pb29789053.jpg",
-          "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/video-2026-loudenvielle-dh-world-cup-course-preview2.html?trk=rss",
-          "categories": [],
-          "score": 13,
           "category": "paddock"
         },
         {
@@ -695,6 +696,36 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/average-rider-vs-loudenvielles-dusty-dh-world-cup-track.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Average Rider VS Loudenvielle's Dusty DH World Cup Track",
+          "description": "Charlie is joined by Jack Piercy for a lap of this year&#039;s Loudenvielle downhill World Cup course.( Comments: 11 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29801519/p2pb29801519.jpg",
+          "publishedAt": "Mon, 1 Jun 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/average-rider-vs-loudenvielles-dusty-dh-world-cup-track.html?trk=rss",
+          "categories": [],
+          "score": 11,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/4-things-we-learned-from-the-loudenvielle-dh-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "4 Things We Learned from the Loudenvielle DH World Cup",
+          "description": "A 12-year win drought is over, an incredible comeback and more things we spotted from the sidelines in Loudenvielle.( Photos: 5, Comments: 7 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29802356/p2pb29802356.jpg",
+          "publishedAt": "Mon, 1 Jun 2026 00:00:00 PDT",
+          "url": "https://www.pinkbike.com/news/4-things-we-learned-from-the-loudenvielle-dh-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 10,
+          "category": "news"
+        },
+        {
           "id": "aWyuyfJpMYg",
           "type": "video",
           "source": "youtube",
@@ -729,7 +760,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Jackson Goldstone Shares Why he was Disqualified at the Loudenvielle World Cup",
-          "description": "Goldstone said he is &quot;speechless&quot; as he will be sat on the sidelines for this weekend&#039;s racing in Loudenvielle.( Comments: 116 )",
+          "description": "Goldstone said he is &quot;speechless&quot; as he will be sat on the sidelines for this weekend&#039;s racing in Loudenvielle.( Comments: 117 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29791724/p2pb29791724.jpg",
           "publishedAt": "Sat, 30 May 2026 00:00:00 PDT",
           "url": "https://www.pinkbike.com/news/jackson-goldstone-shares-why-he-was-disqualified-at-the-loudenvielle-world-cup.html?trk=rss",
@@ -749,21 +780,6 @@
           "publishedAt": "2026-05-29T22:59:49Z",
           "url": "https://www.youtube.com/watch?v=s6_WE4P6P6Y",
           "score": 12,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/photo-epic-high-speed-first-laps-at-the-loudenvielle-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Photo Epic: High-Speed First Laps at the Loudenvielle DH World Cup",
-          "description": "The first day of riding in Loudenvielle saw racers get to grips with the flat-out loose conditions.( Photos: 70, Comments: 20 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29788112/p2pb29788112.jpg",
-          "publishedAt": "Fri, 29 May 2026 00:00:00 PDT",
-          "url": "https://www.pinkbike.com/news/photo-epic-high-speed-first-laps-at-the-loudenvielle-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 10,
           "category": "news"
         },
         {
