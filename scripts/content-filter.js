@@ -167,6 +167,11 @@ const EXCLUDE_KEYWORDS = [
 
 const CATEGORIES = [
   {
+    id: 'shorts',
+    label: 'Shorts',
+    keywords: [],
+  },
+  {
     id: 'race-runs',
     label: 'Race runs',
     keywords: ['race run', 'qualifying run', 'finals run', 'winning run', 'vital raw',
@@ -264,6 +269,7 @@ function categorise(item) {
   const text = normalise([item.title, item.description].join(' '))
 
   for (const category of CATEGORIES) {
+    if (category.id === 'shorts') continue  // shorts are assigned explicitly, not by keyword
     if (category.keywords.length === 0) return category.id
     for (const kw of category.keywords) {
       if (text.includes(kw)) return category.id
@@ -291,7 +297,12 @@ function filterItems(items) {
     const isTrusted = item.channelId && TRUSTED_SOURCES.has(item.channelId)
     const threshold = (isRSS || isTrusted) ? MIN_SCORE : MIN_SCORE + 4
     if (score >= threshold) {
-      results.push({ ...item, score, category: categorise(item) })
+      const isUCIShort = item.channelId === 'UCWS4nfoou79mwo9nHew49fA'
+        && item.thumbnailHeight
+        && item.thumbnailWidth
+        && item.thumbnailHeight > item.thumbnailWidth
+      const category = isUCIShort ? 'shorts' : categorise(item)
+      results.push({ ...item, score, category })
     }
   }
 

@@ -101,7 +101,9 @@ function normaliseItem(snippet, channelId, channelName) {
     channelName,
     title:       snippet.title || '',
     description: snippet.description || '',
-    thumbnail:   thumb?.url || null,
+    thumbnail:       thumb?.url    || null,
+    thumbnailWidth:  thumb?.width  || null,
+    thumbnailHeight: thumb?.height || null,
     publishedAt: snippet.publishedAt || null,
     url:         snippet.resourceId?.videoId
                    ? `https://www.youtube.com/watch?v=${snippet.resourceId.videoId}`
