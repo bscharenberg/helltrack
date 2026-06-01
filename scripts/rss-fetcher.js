@@ -58,7 +58,27 @@ async function parseRSS091(xmlText, feed) {
   const items = channel.ITEM || []
   console.log(`    → parsing ${items.length} raw items`)
 
-  return items.map(item => {
+  // Normalize date-only timestamps (e.g. Pinkbike always publishes 00:00:00).
+  // Push them to 23:59 of their day minus a per-item offset so they sort to
+  // the top of their day and preserve RSS feed order (newest item first).
+  function normalizePubDate(pubDate, index) {
+    if (!pubDate || !/\b00:00:00\b/.test(pubDate)) return pubDate
+    const d = new Date(pubDate)
+    if (isNaN(d.getTime())) return pubDate
+    const now = new Date()
+    // Compare calendar dates in UTC (midnight PDT = 07:00 UTC, still same UTC date)
+    const itemDay  = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())
+    const todayDay = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate())
+    if (itemDay >= todayDay) {
+      // Today: stamp at cache-build time so article appears fresh, preserve RSS order
+      return new Date(now.getTime() - index * 60000).toISOString()
+    } else {
+      // Past day: push to 23:59 of that UTC day, preserve RSS order within the day
+      return new Date(itemDay + (23 * 3600 + 59 * 60 - index * 60) * 1000).toISOString()
+    }
+  }
+
+  return items.map((item, index) => {
     const description = getString(item.DESCRIPTION?.[0])
     const title       = getString(item.TITLE?.[0])
     const link        = getString(item.LINK?.[0])
@@ -74,7 +94,7 @@ async function parseRSS091(xmlText, feed) {
       title:       stripHtml(title),
       description: stripHtml(description),
       thumbnail:   extractThumbnail(description),
-      publishedAt: pubDate || null,
+      publishedAt: normalizePubDate(pubDate, index),
       url:         link || null,
       categories:  [],
     }
