@@ -48,6 +48,38 @@ function uploadsPlaylistId(channelId) {
   return 'UU' + channelId.slice(2)
 }
 
+// Batch-fetch video durations via videos.list (1 API unit per 50 videos).
+// Used to detect UCI Shorts — the playlistItems API always returns landscape
+// maxresdefault thumbnails regardless of whether the video is a Short.
+async function fetchVideoDurations(videoIds) {
+  const durations = {}
+  for (let i = 0; i < videoIds.length; i += 50) {
+    const batch  = videoIds.slice(i, i + 50)
+    const params = new URLSearchParams({ part: 'contentDetails', id: batch.join(','), key: API_KEY })
+    try {
+      const res  = await fetch(`${BASE}/videos?${params}`)
+      if (!res.ok) continue
+      const data = await res.json()
+      for (const item of (data.items || [])) {
+        durations[item.id] = item.contentDetails?.duration || null
+      }
+    } catch (e) { /* ignore — non-fatal */ }
+    await new Promise(r => setTimeout(r, 200))
+  }
+  return durations
+}
+
+function isShortDuration(isoDuration) {
+  // ISO 8601: PT30S, PT1M, PT1M30S — Shorts are ≤60 s
+  if (!isoDuration) return false
+  const m = isoDuration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/)
+  if (!m) return false
+  const total = (parseInt(m[1] || 0) * 3600)
+              + (parseInt(m[2] || 0) * 60)
+              +  parseInt(m[3] || 0)
+  return total > 0 && total <= 60
+}
+
 async function fetchPlaylistPage(playlistId, pageToken = null) {
   const params = new URLSearchParams({
     part:       'snippet',
@@ -126,13 +158,28 @@ async function fetchYouTube() {
       const maxPages = channel.id === 'UCWS4nfoou79mwo9nHew49fA' ? 3 : 1
       const data = await fetchPlaylistPages(playlistId, maxPages)
 
-      const items = (data.items || [])
+      let items = (data.items || [])
         .map(item => normaliseItem(item.snippet, channel.id, channel.name))
         .filter(i =>
           i.id &&
           i.title !== '[Private video]' &&
           i.title !== '[Deleted video]'
         )
+
+      // UCI: fetch durations to identify Shorts (≤60 s).
+      // The playlistItems API always returns landscape thumbnails — the only
+      // reliable way to detect portrait Shorts is via contentDetails.duration.
+      if (channel.id === 'UCWS4nfoou79mwo9nHew49fA') {
+        const ids       = items.map(i => i.id).filter(Boolean)
+        const durations = await fetchVideoDurations(ids)
+        let shortCount  = 0
+        items = items.map(item => {
+          const short = item.id ? isShortDuration(durations[item.id]) : false
+          if (short) shortCount++
+          return { ...item, isShort: short }
+        })
+        console.log(`    → ${shortCount} Shorts detected (duration ≤60 s)`)
+      }
 
       console.log(`    → ${items.length} videos`)
       allItems.push(...items)

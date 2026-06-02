@@ -297,10 +297,9 @@ function filterItems(items) {
     const isTrusted = item.channelId && TRUSTED_SOURCES.has(item.channelId)
     const threshold = (isRSS || isTrusted) ? MIN_SCORE : MIN_SCORE + 4
     if (score >= threshold) {
-      const isUCIShort = item.channelId === 'UCWS4nfoou79mwo9nHew49fA'
-        && item.thumbnailHeight
-        && item.thumbnailWidth
-        && item.thumbnailHeight > item.thumbnailWidth
+      // Shorts detection: youtube-fetcher marks UCI videos ≤60 s with isShort:true.
+      // Thumbnail dimensions cannot be used — the API always returns landscape maxresdefault.
+      const isUCIShort = item.channelId === 'UCWS4nfoou79mwo9nHew49fA' && item.isShort === true
       const category = isUCIShort ? 'shorts' : categorise(item)
       results.push({ ...item, score, category })
     }
