@@ -95,8 +95,6 @@ jobs:
 
       - name: Fetch and parse results
         if: steps.venue.outputs.slug != 'unknown'
-        env:
-          HELLTRACK_TOKEN: ${{ secrets.HELLTRACK_TOKEN }}
         run: node scripts/results-fetcher.mjs ${{ steps.venue.outputs.slug }}
 
       - name: Commit updated results
