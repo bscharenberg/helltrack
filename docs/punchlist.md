@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-05-28
+**Last updated**: 2026-06-01
 
 ## Current State: LIVE ✅ — LAUNCHED
 - helltrack.app is live with HTTPS
@@ -20,6 +20,7 @@
 - Security hardened and re-verified pre-launch ✅
 - GA card_open tracking live
 - PWA icon: handed off to designer
+- **Results fetcher migrated to UCI JSON API** — no more PDFs, Worker retired, no auth needed. 6 sessions/venue (finals + Q1 + Q2, men + women elite). Points come directly from API.
 
 ---
 
@@ -104,6 +105,10 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 - 217 rider roster compiled, IG handles researched
 - 2025 women's elite results fixed — all rounds verified ✅
 - 2024 bad data removed — re-import deferred (#36b)
+- Results fetcher migrated to UCI JSON API — no PDFs, no Worker (#40 in progress)
+- Loudenvielle R2 results fetched and live (#26) ✅
+- Season standings live in Results tab (#10) ✅
+- UCI Shorts Strip — horizontal scroll strip of portrait clips ✅
 
 ---
 
@@ -111,12 +116,12 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 
 | Priority | # | Item | Size | Description |
 |---|---|---|---|---|
-| 1 | 26 | Loudenvielle R2 results | S | Race day May 28. Run results-fetcher.mjs after finals. Slug: loudenvielle-2026. |
-| 2 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
-| 3 | 38 | Deep link sharing | M | Share button generates helltrack.app/?v=[id]. Opens app with card sheet open. Growth mechanic. |
-| 4 | 39 | Polling results fetcher | M | Poll every 30 min during race windows. Results land within 30 min of UCI posting. See details below. |
+| 1 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
+| 2 | 38 | Deep link sharing | M | Share button generates helltrack.app/?v=[id]. Opens app with card sheet open. Growth mechanic. |
+| 3 | 39 | Polling results fetcher | M | Poll every 30 min during race windows. Results land within 30 min of UCI posting. See details below. |
+| 4 | 40 | Cleanup: retired PDF deps + Worker | S | Remove pdfjs-dist + node-fetch from package.json. Delete helltrack-results Worker. See details below. |
 | 5 | 37 | Pits tab | M | New tab: PITS. Sections: How to Watch, Teams, Media, UCI Official. See details below. |
-| 6 | 36b | 2024 results proper fix | M | Re-fetch from UCI PDFs. See details below. |
+| 6 | 36b | 2024 results proper fix | M | Re-fetch via UCI JSON API (slug pattern same as 2026). See details below. |
 | 7 | 30 | Teams tab | M | Absorbed into #37 Pits tab — remove this item. |
 | 8 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
 | 9 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
@@ -135,6 +140,25 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 
 ## Backlog Item Details
 
+### #40 — Cleanup: retired PDF deps + Worker
+**Context**: results-fetcher.mjs was rewritten to use the UCI JSON API directly. `pdfjs-dist` and `node-fetch` are now unused but still in package.json. The Cloudflare `helltrack-results` Worker is no longer called by anything.
+
+**Steps**:
+1. Remove unused packages:
+   ```bash
+   cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
+   npm uninstall pdfjs-dist node-fetch
+   git add package.json package-lock.json
+   git commit -m 'chore: remove pdfjs-dist and node-fetch (Worker retired)'
+   git stash && git pull --rebase origin main && git stash pop && git push
+   ```
+2. Delete the `helltrack-results` Cloudflare Worker (dashboard.cloudflare.com → Workers → helltrack-results → Delete). The RSS proxy Worker (`helltrack-rss`) stays — still needed for Pinkbike.
+3. If `helltrack-results` was the only reason for the Cloudflare Workers Paid plan, downgrade to Free (Workers Free handles the RSS proxy well within limits).
+
+**Done when**: `npm ci` in GitHub Actions no longer installs pdfjs-dist, helltrack-results Worker is deleted, Cloudflare plan is appropriate.
+
+---
+
 ### #26 — Loudenvielle R2 results
 **Race day: May 28, 2026**
 ```bash
@@ -149,10 +173,11 @@ Run after finals are posted on ucimtbworldseries.com (usually a few hours after 
 ### #36b — 2024 results proper fix
 **Root cause**: `.rda` import via `rootsandrain_pull.py` pulled semi-finals as finals for at least Fort William, Bielsko-Biała, Les Gets. Women's data absent entirely.
 
-**Fix options:**
-- (a) Update Worker to scrape per-session raceCategory URLs: `ucimtbworldseries.com/results/raceCategory/uci-dhi-world-cup-[venue]-men-elite-dhi-finals/2024`
-- (b) Use ChronoRace blob storage directly: `chronorace.blob.core.windows.net/webresources/20240519_dhi/`
-- (c) Fold into Rootsandrain historical import (#5)
+**Fix** (updated — no longer needs PDFs or Worker): Use the UCI JSON API directly. The slug pattern is the same as 2026 but with `2024-` prefix. Add a `CALENDAR_2024` array to `results-fetcher.mjs` and run per venue. E.g.:
+```
+node scripts/results-fetcher.mjs fort-william-2024
+```
+Verify slugs work before adding all venues (UCI may use different venue names for 2024).
 
 **Also needed**: Season pill hides 2024 until data returns (handled by #36a already).
 
@@ -167,13 +192,13 @@ Run after finals are posted on ucimtbworldseries.com (usually a few hours after 
 **Goal**: Results land within 30 minutes of UCI posting — beats every other fan site.
 **Logic**:
 - Replace the single 8pm UTC cron per race day with `*/30` polling during the race window for each venue (approx 10:00–18:00 UTC for European rounds, adjusted per timezone)
-- Add a guard in `results-fetcher.mjs` or the workflow: if `results.json` already has finals data for that slug, skip the fetch and don't commit
-- Confirm the fetcher exits cleanly with no spurious commit when PDFs aren't posted yet (already returns 0 results — verify this)
+- Add a guard in `results-fetcher.mjs` or the workflow: if `results.json` already has finals data for that slug, skip the fetch and don't commit (guard for 0 sessions already exists — extend it to check for finals specifically)
+- The new JSON API fetcher returns 0 sessions cleanly when results aren't posted yet (verified)
 - Keep `workflow_dispatch` manual trigger as-is for overrides
 
 **Files**: `.github/workflows/fetch-results.yml`, possibly a small guard in `scripts/results-fetcher.mjs`
 
-**Done when**: On a race Sunday, results.json is updated within 30 minutes of ChronoRace PDFs appearing on ucimtbworldseries.com, with no spurious commits on polling runs that find nothing new.
+**Done when**: On a race Sunday, results.json is updated within 30 minutes of UCI posting, with no spurious commits on polling runs that find nothing new.
 
 ### #30 — Teams tab
 **Needs scoping. Open questions:**
