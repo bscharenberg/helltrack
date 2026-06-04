@@ -906,6 +906,72 @@ html, body {
 }
 #riders-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+/* ── Pits tab ── */
+#pits-view { display:none; padding:0 0 calc(var(--safe-bottom) + 24px); }
+
+.pits-section { padding: 20px 16px 4px; }
+
+.pits-section-header {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.pits-section-header::after { content:''; flex:1; height:1px; background:var(--border); }
+
+.watch-card {
+  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 10px;
+  padding: 11px 14px; margin-bottom: 8px;
+}
+.watch-region {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--acid); margin-bottom: 4px;
+}
+.watch-options { font-size: 13px; color: var(--text-primary); line-height: 1.5; }
+.watch-callout {
+  font-size: 12px; color: var(--text-muted); line-height: 1.55;
+  padding: 10px 14px; margin-bottom: 8px;
+  background: rgba(255,255,255,0.02); border: 0.5px solid var(--border); border-radius: 8px;
+}
+.watch-more {
+  display: inline-block; margin-top: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--acid); text-decoration: none;
+}
+
+.team-card {
+  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 10px;
+  padding: 11px 14px; margin-bottom: 8px;
+}
+.team-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--text-primary); margin-bottom: 4px;
+}
+.team-riders { font-size: 12px; color: var(--text-muted); line-height: 1.45; }
+
+.pits-link {
+  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 10px;
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; margin-bottom: 8px;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.pits-link:hover { border-color: var(--border-mid); background: var(--bg-card-hover); }
+.pits-link:active { opacity: 0.8; }
+.pits-link-body { flex: 1; min-width: 0; }
+.pits-link-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--text-primary); margin-bottom: 2px;
+}
+.pits-link-desc { font-size: 12px; color: var(--text-muted); }
+.pits-link-arrow { color: var(--text-muted); font-size: 14px; flex-shrink: 0; }
+
 /* ── Email signup section ── */
 .signup-section {
   padding: 32px 16px;
@@ -1108,6 +1174,59 @@ html, body {
   <div id="riders-content"></div>
 </div>
 <div id="riders-toast">MY RIDERS FULL</div>
+
+<!-- Pits tab -->
+<div id="pits-view" style="display:none">
+
+  <!-- HOW TO WATCH -->
+  <div class="pits-section">
+    <div class="pits-section-header">How to Watch</div>
+    <div class="watch-card"><div class="watch-region">USA</div><div class="watch-options">HBO Max (Standard tier or above) · FloSports ($30/mo or $120/yr)</div></div>
+    <div class="watch-card"><div class="watch-region">Canada</div><div class="watch-options">FloSports</div></div>
+    <div class="watch-card"><div class="watch-region">UK</div><div class="watch-options">TNT Sports (~£30/mo, or ~£20 on EE mobile)</div></div>
+    <div class="watch-card"><div class="watch-region">Europe</div><div class="watch-options">HBO Max + Eurosport (~€5–8/mo depending on country)</div></div>
+    <div class="watch-card"><div class="watch-region">Australia</div><div class="watch-options">Stan Sport</div></div>
+    <div class="watch-card"><div class="watch-region">Everywhere</div><div class="watch-options">MTBWS TV direct at <a href="https://watch.ucimtbworldseries.com" target="_blank" rel="noopener" style="color:var(--acid);text-decoration:none">watch.ucimtbworldseries.com</a></div></div>
+    <div class="watch-callout">Cheapest paid option: subscribe to MTBWS TV directly at watch.ucimtbworldseries.com — pricing varies by region, significantly cheaper in some countries.</div>
+    <div class="watch-callout">Free highlights posted after each race on the UCI MTB World Series YouTube channel.</div>
+    <a href="https://www.ucimtbworldseries.com/where-to-watch" target="_blank" rel="noopener" class="watch-more">Full broadcaster list by country →</a>
+  </div>
+
+  <!-- TEAMS -->
+  <div class="pits-section">
+    <div class="pits-section-header">Teams</div>
+    <div id="pits-teams"><div style="color:var(--text-muted);font-size:12px;padding:4px 0">Loading…</div></div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="pits-section">
+    <div class="pits-section-header">Media</div>
+    <a class="pits-link" href="https://www.pinkbike.com" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Pinkbike</div><div class="pits-link-desc">World's largest MTB media site</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.vitalmtb.com" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Vital MTB</div><div class="pits-link-desc">Race coverage and deep tech</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.youtube.com/@FastAsFrench" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Fast as French</div><div class="pits-link-desc">French DH YouTube channel</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.youtube.com/@SleeperCollective" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Sleeper Collective</div><div class="pits-link-desc">Independent race film crew</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.youtube.com/@WynTV" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">WynTV</div><div class="pits-link-desc">Wyn Masters, paddock access</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.youtube.com/@BenCathro" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Ben Cathro</div><div class="pits-link-desc">Inside the Tape analysis</div></div><span class="pits-link-arrow">↗</span></a>
+  </div>
+
+  <!-- PODCASTS -->
+  <div class="pits-section">
+    <div class="pits-section-header">Podcasts</div>
+    <a class="pits-link" href="https://www.redbull.com/just-ride" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Just Ride</div><div class="pits-link-desc">Rob Warner + Eliot Jackson · Red Bull · also on Apple &amp; Spotify</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.downtimepodcast.com" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Downtime Podcast</div><div class="pits-link-desc">Long-form DH interviews</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.vitalmtb.com/podcast" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">The Inside Line</div><div class="pits-link-desc">Vital MTB · Schroeder + Spomer</div></div><span class="pits-link-arrow">↗</span></a>
+  </div>
+
+  <!-- UCI OFFICIAL -->
+  <div class="pits-section">
+    <div class="pits-section-header">UCI Official</div>
+    <a class="pits-link" href="https://www.ucimtbworldseries.com/results" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Race Results</div><div class="pits-link-desc">ucimtbworldseries.com/results</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.ucimtbworldseries.com/calendar" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Race Calendar</div><div class="pits-link-desc">ucimtbworldseries.com/calendar</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.ucimtbworldseries.com/athletes" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Athlete Database</div><div class="pits-link-desc">ucimtbworldseries.com/athletes</div></div><span class="pits-link-arrow">↗</span></a>
+    <a class="pits-link" href="https://www.ucimtbworldseries.com/where-to-watch" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Where to Watch</div><div class="pits-link-desc">ucimtbworldseries.com/where-to-watch</div></div><span class="pits-link-arrow">↗</span></a>
+  </div>
+
+</div>
 
 <!-- Install banner -->
 <div id="install-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:300; padding:12px 16px calc(var(--safe-bottom) + 12px); background:#191919; border-top:0.5px solid #2a2a2a; align-items:center; gap:12px;">
@@ -1470,6 +1589,7 @@ function buildTabs() {
     { id:'feed',      label:'Feed' },
     { id:'standings', label:'Results' },
     { id:'riders',    label:'Riders' },
+    { id:'pits',      label:'Pits' },
   ]
   tabs.innerHTML = all.map(t => `<div class="tab${t.id===activeTab?' active':''}" data-tab="${t.id}">${t.label}</div>`).join('')
   tabs.querySelectorAll('.tab').forEach(el => {
@@ -1479,18 +1599,22 @@ function buildTabs() {
       el.classList.add('active')
       const isResults = activeTab === 'standings'
       const isRiders  = activeTab === 'riders'
-      const isFeed    = !isResults && !isRiders
-      document.getElementById('feed').style.display                    = isFeed    ? 'block' : 'none'
+      const isPits    = activeTab === 'pits'
+      const isFeed    = !isResults && !isRiders && !isPits
+      document.getElementById('feed').style.display                     = isFeed    ? 'block' : 'none'
       document.getElementById('results-view').classList.toggle('active', isResults)
-      document.getElementById('results-nav').style.display             = isResults ? 'block' : 'none'
+      document.getElementById('results-nav').style.display              = isResults ? 'block' : 'none'
       document.getElementById('riders-view').style.display              = isRiders  ? 'block' : 'none'
-      document.getElementById('riders-nav').style.display              = isRiders  ? 'block' : 'none'
+      document.getElementById('riders-nav').style.display               = isRiders  ? 'block' : 'none'
+      document.getElementById('pits-view').style.display                = isPits    ? 'block' : 'none'
       if (isResults) {
         if (!resultsData) loadResults()
         else renderResults()
       } else if (isRiders) {
         if (!ridersData) loadRiders()
         else renderRiders()
+      } else if (isPits) {
+        loadPits()
       } else {
         renderFeed()
       }
@@ -2042,6 +2166,35 @@ async function loadRiders() {
     document.getElementById('riders-content').innerHTML =
       '<div class="rs-empty">Riders unavailable</div>'
   }
+}
+
+// ── Pits tab ──────────────────────────────────────────────────────────────────
+
+const TEAMS_URL = 'public/teams.json'
+let teamsData   = null
+
+async function loadPits() {
+  if (teamsData) { renderPitsTeams(); return }
+  try {
+    const res = await fetch(TEAMS_URL + '?t=' + Date.now())
+    if (!res.ok) throw new Error('HTTP ' + res.status)
+    teamsData = await res.json()
+    renderPitsTeams()
+  } catch(err) {
+    console.error('Teams load failed:', err)
+    document.getElementById('pits-teams').innerHTML =
+      '<div style="color:var(--text-muted);font-size:12px;padding:4px 0">Teams unavailable</div>'
+  }
+}
+
+function renderPitsTeams() {
+  const el = document.getElementById('pits-teams')
+  if (!teamsData || !el) return
+  el.innerHTML = teamsData.map(team => `
+    <div class="team-card">
+      <div class="team-name">${team.name}</div>
+      <div class="team-riders">${team.riders.join(' · ')}</div>
+    </div>`).join('')
 }
 
 
