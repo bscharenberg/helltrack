@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-04T14:08:25.264Z",
-  "totalItems": 82,
+  "builtAt": "2026-06-04T17:48:30.259Z",
+  "totalItems": 83,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -387,21 +387,6 @@
           "category": "race-runs"
         },
         {
-          "id": "https://www.pinkbike.com/news/photo-epic-crashes-and-breakthrough-wins-at-the-thrilling-loudenvielle-dh-world-cup-finals.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Photo Epic: Crashes &amp; Breakthrough Wins at the Thrilling Loudenvielle DH World Cup Finals",
-          "description": "The 2026 season continued to deliver climactic racing at the second stop of the series in Loudenvielle.( Photos: 64, Comments: 29 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29801033/p2pb29801033.jpg",
-          "publishedAt": "2026-06-01T23:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/photo-epic-crashes-and-breakthrough-wins-at-the-thrilling-loudenvielle-dh-world-cup-finals.html?trk=rss",
-          "categories": [],
-          "score": 13,
-          "category": "race-runs"
-        },
-        {
           "id": "5r69Z-ubYqY",
           "type": "video",
           "source": "youtube",
@@ -678,6 +663,22 @@
           "url": "https://www.youtube.com/watch?v=JJ7LnB8r3pw",
           "score": 17,
           "category": "race-runs"
+        },
+        {
+          "id": "JuR0ER6qF-w",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV “On Track with Gary” LOUDENVIELLE DAY 2",
+          "description": "Day two on track with Gary, for the pre qualifying practice here in Loudenvielle!\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/checkout?s=674\n2.                      “I have a voucher”: WYN30",
+          "thumbnail": "https://i.ytimg.com/vi/JuR0ER6qF-w/sddefault.jpg",
+          "thumbnailWidth": 640,
+          "thumbnailHeight": 480,
+          "publishedAt": "2026-05-30T11:57:36Z",
+          "url": "https://www.youtube.com/watch?v=JuR0ER6qF-w",
+          "score": 11,
+          "category": "race-runs"
         }
       ]
     },
@@ -686,15 +687,30 @@
       "label": "Results",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-how-geometry-has-finally-made-knee-pads-comfortable-explain-explore-with-ben-cathro.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: How Koroyd Geometry Has Finally Made Knee Pads Comfortable - Explain Explore with Ben Cathro",
+          "description": "Best known for their helmet tech, Koroyd&#039;s knee pad insert is the company&#039;s first move into body protection.( Photos: 7, Comments: 14 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29815242/p2pb29815242.jpg",
+          "publishedAt": "2026-06-04T17:47:30.236Z",
+          "url": "https://www.pinkbike.com/news/video-how-geometry-has-finally-made-knee-pads-comfortable-explain-explore-with-ben-cathro.html?trk=rss",
+          "categories": [],
+          "score": 8,
+          "category": "results"
+        },
+        {
           "id": "https://www.pinkbike.com/news/30-of-racers-hit-the-deck--story-of-the-race--loudenvielle-world-cup-dh-2026.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "30% Of Racers Hit The Deck at the 2026 Loudenvielle DH World Cup - Story Of The Race",
-          "description": "Ben Cathro fires up the ghost machine to compare lines, analyze massive mistakes, and break down a historic Round 2 of the Downhill World Cup.( Comments: 59 )",
+          "description": "Ben Cathro fires up the ghost machine to compare lines, analyze massive mistakes, and break down a historic Round 2 of the Downhill World Cup.( Comments: 60 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29802487/p2pb29802487.jpg",
-          "publishedAt": "2026-06-01T23:37:00.000Z",
+          "publishedAt": "2026-06-01T23:32:00.000Z",
           "url": "https://www.pinkbike.com/news/30-of-racers-hit-the-deck--story-of-the-race--loudenvielle-world-cup-dh-2026.html?trk=rss",
           "categories": [],
           "score": 19,
@@ -803,21 +819,6 @@
       "label": "Films",
       "items": [
         {
-          "id": "https://www.pinkbike.com/news/video-sleeper-shreddit-from-the-loudenvielle-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Sleeper Shreddit from the Loudenvielle DH World Cup",
-          "description": "Kick start your week with the Sleeper Shreddit from the 2026 Loudenvielle downhill World Cup.( Comments: 61 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29803058/p2pb29803058.jpg",
-          "publishedAt": "2026-06-01T23:34:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-sleeper-shreddit-from-the-loudenvielle-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 11,
-          "category": "films"
-        },
-        {
           "id": "QOKkFBhNAAM",
           "type": "video",
           "source": "youtube",
@@ -840,15 +841,31 @@
       "label": "Pits",
       "items": [
         {
+          "id": "KhLio3O7i9Q",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "Your Mid-Week MTB Decompression - Vital’s ‘bikes: unaffiliated’ Podcast",
+          "description": "👕 - Vital Merch - https://merch.vitalmedianet.com/collections/vital-mtb\n⚙️ - Vital MTB Tech Discussions - https://www.vitalmtb.com/forums/VitalMTB/The-Hub,2 \n\nJoin us on an unscripted, unaffiliated podcast journey where we discuss various hot takes from the Loudenvielle DH World Cup, risk vs. reward in DH racing, the Hot Laps event in Washington, how to hit berms better, why Enduro World Cups are dying a slow death and why that doesn’t actually matter for the sport of enduro, and a bunch of other MTB-related nonsense. Enjoy! \n\nBikes' Unaffiliated forum conversation - https://www.vitalmtb.com/forums/hub/vitals-bikes-unaffiliated-podcast-community-conversation\n\n❤️ Follow us on Social ❤️\n✅  Instagram - https://www.instagram.com/vitalmtb/\n✅  Facebook - https://www.facebook.com/VitalMTB\n\n#MTB #bike #mountainbike",
+          "thumbnail": "https://i.ytimg.com/vi/KhLio3O7i9Q/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-04T15:09:16Z",
+          "url": "https://www.youtube.com/watch?v=KhLio3O7i9Q",
+          "score": 10,
+          "category": "paddock"
+        },
+        {
           "id": "https://www.pinkbike.com/news/interview-nick-lester-on-dh-world-cups-data-acquisition-and-mass-damper-testing.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Interview: Nick Lester on DH World Cups, Data Acquisition, &amp; Mass Damper Testing",
-          "description": "As well as a closer look at Nick&#039;s heavily damped Gamux Sego.( Photos: 18, Comments: 33 )",
+          "description": "As well as a closer look at Nick&#039;s heavily damped Gamux Sego.( Photos: 18, Comments: 36 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29752385/p2pb29752385.jpg",
-          "publishedAt": "2026-06-03T23:54:00.000Z",
+          "publishedAt": "2026-06-03T23:49:00.000Z",
           "url": "https://www.pinkbike.com/news/interview-nick-lester-on-dh-world-cups-data-acquisition-and-mass-damper-testing.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -1069,15 +1086,30 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/commenting-on-world-cup-dh-commentary-specializeds-new-demo-and-the-dh-bar-end-trend.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Commenting on World Cup DH Commentary, Specialized's New Demo, &amp; The DH Bar End Trend",
+          "description": "Hot (and not-so-hot) takes on the latest mountain bike news and tech.( Comments: 25 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29744391/p2pb29744391.jpg",
+          "publishedAt": "2026-06-04T17:46:30.236Z",
+          "url": "https://www.pinkbike.com/news/commenting-on-world-cup-dh-commentary-specializeds-new-demo-and-the-dh-bar-end-trend.html?trk=rss",
+          "categories": [],
+          "score": 7,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/4-things-we-learned-from-the-loudenvielle-dh-world-cup.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "4 Things We Learned from the Loudenvielle DH World Cup",
-          "description": "A 12-year win drought is over, an incredible comeback and more things we spotted from the sidelines in Loudenvielle.( Photos: 5, Comments: 69 )",
+          "description": "A 12-year win drought is over, an incredible comeback and more things we spotted from the sidelines in Loudenvielle.( Photos: 5, Comments: 70 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29802356/p2pb29802356.jpg",
-          "publishedAt": "2026-06-01T23:35:00.000Z",
+          "publishedAt": "2026-06-01T23:30:00.000Z",
           "url": "https://www.pinkbike.com/news/4-things-we-learned-from-the-loudenvielle-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 10,
