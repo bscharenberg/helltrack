@@ -1384,8 +1384,8 @@ function renderFeed() {
     return
   }
 
-  // Hero: first YouTube item (Pinkbike thumbnails too low-res for hero)
-  const heroIdx = allItems.findIndex(i => i.source !== 'pinkbike')
+  // Hero: first longform YouTube item — Pinkbike too low-res, shorts never hero
+  const heroIdx = allItems.findIndex(i => i.source !== 'pinkbike' && i._catId !== 'shorts')
   // Shorts strip injects after item index 2 (the 3rd item)
   const stripAfter = 2
 

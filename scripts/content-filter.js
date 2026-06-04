@@ -297,10 +297,14 @@ function filterItems(items) {
     const isTrusted = item.channelId && TRUSTED_SOURCES.has(item.channelId)
     const threshold = (isRSS || isTrusted) ? MIN_SCORE : MIN_SCORE + 4
     if (score >= threshold) {
-      // Shorts detection: youtube-fetcher marks UCI videos ≤60 s with isShort:true.
-      // Thumbnail dimensions cannot be used — the API always returns landscape maxresdefault.
-      const isUCIShort = item.channelId === 'UCWS4nfoou79mwo9nHew49fA' && item.isShort === true
-      const category = isUCIShort ? 'shorts' : categorise(item)
+      // Shorts detection — two complementary signals:
+      // 1. UCI channel: duration-based (youtube-fetcher sets isShort:true for ≤60 s).
+      //    UCI always returns landscape maxresdefault thumbnails so aspect ratio is useless there.
+      // 2. All other channels: portrait thumbnail (height > width).
+      //    When maxres is absent the API falls back to standard/high which CAN be portrait for Shorts.
+      const isShort = item.isShort === true
+        || (item.thumbnailHeight && item.thumbnailWidth && item.thumbnailHeight > item.thumbnailWidth)
+      const category = isShort ? 'shorts' : categorise(item)
       results.push({ ...item, score, category })
     }
   }

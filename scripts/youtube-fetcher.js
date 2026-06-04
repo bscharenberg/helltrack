@@ -166,10 +166,11 @@ async function fetchYouTube() {
           i.title !== '[Deleted video]'
         )
 
-      // UCI: fetch durations to identify Shorts (≤60 s).
-      // The playlistItems API always returns landscape thumbnails — the only
-      // reliable way to detect portrait Shorts is via contentDetails.duration.
-      if (channel.id === 'UCWS4nfoou79mwo9nHew49fA') {
+      // Fetch durations for all channels to identify Shorts (≤60 s).
+      // YouTube always returns landscape maxresdefault thumbnails regardless of
+      // video orientation, so aspect ratio alone cannot detect Shorts reliably.
+      // Cost: 1 API unit per 50 videos — negligible vs the 10k daily quota.
+      {
         const ids       = items.map(i => i.id).filter(Boolean)
         const durations = await fetchVideoDurations(ids)
         let shortCount  = 0
@@ -178,7 +179,7 @@ async function fetchYouTube() {
           if (short) shortCount++
           return { ...item, isShort: short }
         })
-        console.log(`    → ${shortCount} Shorts detected (duration ≤60 s)`)
+        if (shortCount > 0) console.log(`    → ${shortCount} Shorts (≤60 s)`)
       }
 
       console.log(`    → ${items.length} videos`)
