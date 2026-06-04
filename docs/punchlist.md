@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-06-01
+**Last updated**: 2026-06-04
 
 ## Current State: LIVE ✅ — LAUNCHED
 - helltrack.app is live with HTTPS
@@ -109,6 +109,8 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 - Loudenvielle R2 results fetched and live (#26) ✅
 - Season standings live in Results tab (#10) ✅
 - UCI Shorts Strip — horizontal scroll strip of portrait clips ✅
+- Shorts detection extended to all channels (duration-based via videos.list) ✅
+- Font sizes bumped — tabs 11→14px, metadata 11→13px, badges 9→11px, section labels 10→13px ✅
 
 ---
 
@@ -122,19 +124,16 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 | 4 | 40 | Cleanup: retired PDF deps + Worker | S | Remove pdfjs-dist + node-fetch from package.json. Delete helltrack-results Worker. See details below. |
 | 5 | 37 | Pits tab | M | New tab: PITS. Sections: How to Watch, Teams, Media, UCI Official. See details below. |
 | 6 | 36b | 2024 results proper fix | M | Re-fetch via UCI JSON API (slug pattern same as 2026). See details below. |
-| 7 | 30 | Teams tab | M | Absorbed into #37 Pits tab — remove this item. |
-| 8 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
-| 9 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
-| 10 | 10 | Season standings | M | Aggregate points across rounds. Already in results.json. |
-| 11 | 16 | Split times frontend | M | Sector splits per rider. Mobile first. |
-| 12 | 8 | Rider search in results | M | Career results table by rider name. |
-| 13 | 9 | Rider comparison | M | Two riders side by side. Depends on #8. |
-| 14 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. |
-| 15 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
-| 16 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
-| 17 | 14 | Where to watch | M | Absorbed into #37 Pits tab. |
-| 18 | 17 | Data viz / splits analysis | XL | Someday. Sector gap charts. Depends on #16. |
-| 19 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com. |
+| 7 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
+| 8 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
+| 9 | 16 | Split times frontend | M | Sector splits per rider. Mobile first. |
+| 10 | 8 | Rider search in results | M | Career results table by rider name. |
+| 11 | 9 | Rider comparison | M | Two riders side by side. Depends on #8. |
+| 12 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. |
+| 13 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
+| 14 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
+| 15 | 17 | Data viz / splits analysis | XL | Someday. Sector gap charts. Depends on #16. |
+| 16 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com. |
 
 ---
 
@@ -158,17 +157,6 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 **Done when**: `npm ci` in GitHub Actions no longer installs pdfjs-dist, helltrack-results Worker is deleted, Cloudflare plan is appropriate.
 
 ---
-
-### #26 — Loudenvielle R2 results
-**Race day: May 28, 2026**
-```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
-node scripts/results-fetcher.mjs loudenvielle-2026
-git add public/results.json
-git commit -m 'add results - Round 2 Loudenvielle'
-git pull --rebase origin main && git push
-```
-Run after finals are posted on ucimtbworldseries.com (usually a few hours after the race).
 
 ### #36b — 2024 results proper fix
 **Root cause**: `.rda` import via `rootsandrain_pull.py` pulled semi-finals as finals for at least Fort William, Bielsko-Biała, Les Gets. Women's data absent entirely.
@@ -199,13 +187,6 @@ Verify slugs work before adding all venues (UCI may use different venue names fo
 **Files**: `.github/workflows/fetch-results.yml`, possibly a small guard in `scripts/results-fetcher.mjs`
 
 **Done when**: On a race Sunday, results.json is updated within 30 minutes of UCI posting, with no spurious commits on polling runs that find nothing new.
-
-### #30 — Teams tab
-**Needs scoping. Open questions:**
-- Team data source: results.json (changes yearly) or static teams.json?
-- Scope: factory teams only or all teams?
-- Nav position: FEED / RESULTS / RIDERS / TEAMS?
-- Rider-team linkage: most recent result or manually curated?
 
 ### #37 — Pits tab
 **Nav label**: PITS (short, fits mobile). Full nav becomes: FEED / RESULTS / RIDERS / PITS.
