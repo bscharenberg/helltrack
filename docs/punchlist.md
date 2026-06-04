@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-06-04
+**Last updated**: 2026-06-05
 
 ## Current State: LIVE ✅ — LAUNCHED
 - helltrack.app is live with HTTPS
@@ -105,12 +105,15 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 - 217 rider roster compiled, IG handles researched
 - 2025 women's elite results fixed — all rounds verified ✅
 - 2024 bad data removed — re-import deferred (#36b)
-- Results fetcher migrated to UCI JSON API — no PDFs, no Worker (#40 in progress)
+- Results fetcher migrated to UCI JSON API — no PDFs, no Worker ✅
 - Loudenvielle R2 results fetched and live (#26) ✅
 - Season standings live in Results tab (#10) ✅
 - UCI Shorts Strip — horizontal scroll strip of portrait clips ✅
 - Shorts detection extended to all channels (duration-based via videos.list) ✅
 - Font sizes bumped — tabs 11→14px, metadata 11→13px, badges 9→11px, section labels 10→13px ✅
+- Deep link sharing live — Web Share API on mobile, clipboard fallback on desktop (#38) ✅
+- 30-min results polling on race days, finals guard prevents spurious commits (#39) ✅
+- Dead deps removed, helltrack-results Worker deleted, Cloudflare downgraded to Free (#40) ✅
 
 ---
 
@@ -119,44 +122,22 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 | Priority | # | Item | Size | Description |
 |---|---|---|---|---|
 | 1 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
-| 2 | 38 | Deep link sharing | M | Share button generates helltrack.app/?v=[id]. Opens app with card sheet open. Growth mechanic. |
-| 3 | 39 | Polling results fetcher | M | Poll every 30 min during race windows. Results land within 30 min of UCI posting. See details below. |
-| 4 | 40 | Cleanup: retired PDF deps + Worker | S | Remove pdfjs-dist + node-fetch from package.json. Delete helltrack-results Worker. See details below. |
-| 5 | 37 | Pits tab | M | New tab: PITS. Sections: How to Watch, Teams, Media, UCI Official. See details below. |
-| 6 | 36b | 2024 results proper fix | M | Re-fetch via UCI JSON API (slug pattern same as 2026). See details below. |
-| 7 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
-| 8 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
-| 9 | 16 | Split times frontend | M | Sector splits per rider. Mobile first. |
-| 10 | 8 | Rider search in results | M | Career results table by rider name. |
-| 11 | 9 | Rider comparison | M | Two riders side by side. Depends on #8. |
-| 12 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. |
-| 13 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
-| 14 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
-| 15 | 17 | Data viz / splits analysis | XL | Someday. Sector gap charts. Depends on #16. |
-| 16 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com. |
+| 2 | 37 | Pits tab | M | New tab: PITS. Sections: How to Watch, Teams, Media, UCI Official. See details below. |
+| 3 | 36b | 2024 results proper fix | M | Re-fetch via UCI JSON API (slug pattern same as 2026). See details below. |
+| 4 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
+| 5 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
+| 6 | 16 | Split times frontend | M | Sector splits per rider. Mobile first. |
+| 7 | 8 | Rider search in results | M | Career results table by rider name. |
+| 8 | 9 | Rider comparison | M | Two riders side by side. Depends on #8. |
+| 9 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. |
+| 10 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
+| 11 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
+| 12 | 17 | Data viz / splits analysis | XL | Someday. Sector gap charts. Depends on #16. |
+| 13 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com. |
 
 ---
 
 ## Backlog Item Details
-
-### #40 — Cleanup: retired PDF deps + Worker
-**Context**: results-fetcher.mjs was rewritten to use the UCI JSON API directly. `pdfjs-dist` and `node-fetch` are now unused but still in package.json. The Cloudflare `helltrack-results` Worker is no longer called by anything.
-
-**Steps**:
-1. Remove unused packages:
-   ```bash
-   cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
-   npm uninstall pdfjs-dist node-fetch
-   git add package.json package-lock.json
-   git commit -m 'chore: remove pdfjs-dist and node-fetch (Worker retired)'
-   git stash && git pull --rebase origin main && git stash pop && git push
-   ```
-2. Delete the `helltrack-results` Cloudflare Worker (dashboard.cloudflare.com → Workers → helltrack-results → Delete). The RSS proxy Worker (`helltrack-rss`) stays — still needed for Pinkbike.
-3. If `helltrack-results` was the only reason for the Cloudflare Workers Paid plan, downgrade to Free (Workers Free handles the RSS proxy well within limits).
-
-**Done when**: `npm ci` in GitHub Actions no longer installs pdfjs-dist, helltrack-results Worker is deleted, Cloudflare plan is appropriate.
-
----
 
 ### #36b — 2024 results proper fix
 **Root cause**: `.rda` import via `rootsandrain_pull.py` pulled semi-finals as finals for at least Fort William, Bielsko-Biała, Les Gets. Women's data absent entirely.
@@ -168,25 +149,6 @@ node scripts/results-fetcher.mjs fort-william-2024
 Verify slugs work before adding all venues (UCI may use different venue names for 2024).
 
 **Also needed**: Season pill hides 2024 until data returns (handled by #36a already).
-
-### #38 — Deep link sharing
-- Share button on bottom sheet generates `helltrack.app/?v=[video_id]` URL
-- On app load: check for `?v=` param — if found, locate item in cache and open its bottom sheet
-- Graceful fallback: if item not in cache (aged out), just open app normally
-- On mobile: triggers native share sheet with deep link URL
-- Growth mechanic — shared links bring new users directly into the app
-
-### #39 — Polling results fetcher for race-day freshness
-**Goal**: Results land within 30 minutes of UCI posting — beats every other fan site.
-**Logic**:
-- Replace the single 8pm UTC cron per race day with `*/30` polling during the race window for each venue (approx 10:00–18:00 UTC for European rounds, adjusted per timezone)
-- Add a guard in `results-fetcher.mjs` or the workflow: if `results.json` already has finals data for that slug, skip the fetch and don't commit (guard for 0 sessions already exists — extend it to check for finals specifically)
-- The new JSON API fetcher returns 0 sessions cleanly when results aren't posted yet (verified)
-- Keep `workflow_dispatch` manual trigger as-is for overrides
-
-**Files**: `.github/workflows/fetch-results.yml`, possibly a small guard in `scripts/results-fetcher.mjs`
-
-**Done when**: On a race Sunday, results.json is updated within 30 minutes of UCI posting, with no spurious commits on polling runs that find nothing new.
 
 ### #37 — Pits tab
 **Nav label**: PITS (short, fits mobile). Full nav becomes: FEED / RESULTS / RIDERS / PITS.
