@@ -546,6 +546,30 @@ html, body {
 }
 #sheet-cta:active { opacity:0.85; }
 
+#sheet-share {
+  display:block; width:100%;
+  padding:12px;
+  background:none;
+  color: var(--text-secondary);
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:13px; letter-spacing:0.12em; text-transform:uppercase;
+  border:0.5px solid var(--border); border-radius:8px;
+  cursor:pointer; margin-top:8px;
+  transition: opacity 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+#sheet-share:active { opacity:0.7; }
+#sheet-share-confirm {
+  display:block; text-align:center;
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+  color: var(--acid);
+  margin-top:6px;
+  opacity:0;
+  transition: opacity 0.3s;
+  pointer-events:none;
+}
+
 #sheet-dismiss {
   display:block; width:100%;
   padding:12px;
@@ -1125,6 +1149,8 @@ html, body {
       </div>
     </div>
     <a id="sheet-cta" href="#" target="_blank" rel="noopener">Watch on YouTube</a>
+    <button id="sheet-share" onclick="shareItem()">Share</button>
+    <span id="sheet-share-confirm"></span>
     <button id="sheet-dismiss" onclick="closeSheet()">Dismiss</button>
   </div>
 </div>
@@ -1263,6 +1289,37 @@ function closeSheet() {
   document.getElementById('sheet').classList.remove('open')
   document.body.style.overflow = ''
   activeItem = null
+}
+
+function shareItem() {
+  if (!activeItem || !activeItem.url) return
+  const deepLink = 'https://helltrack.app/?v=' + encodeURIComponent(activeItem.url)
+  if (navigator.share) {
+    navigator.share({ title: activeItem.title, url: deepLink }).catch(() => {})
+  } else {
+    navigator.clipboard.writeText(deepLink).then(() => {
+      const el = document.getElementById('sheet-share-confirm')
+      el.textContent = 'Link copied'
+      el.style.opacity = '1'
+      setTimeout(() => { el.style.opacity = '0' }, 2000)
+    }).catch(() => {})
+  }
+}
+
+function handleDeepLink() {
+  const v = new URLSearchParams(window.location.search).get('v')
+  if (!v || !data) return
+  // Clean the URL immediately so refresh doesn't re-open the sheet
+  history.replaceState({}, '', '/')
+  // Search all categories (including shorts) for a matching item
+  const cats = data.categories || {}
+  let found = null
+  for (const cat of Object.values(cats)) {
+    found = (cat.items || []).find(i => i.url === v)
+    if (found) break
+  }
+  if (found) openSheet(found)
+  // If not found (aged out of cache), silently ignore — app loads normally
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet() })
@@ -1453,6 +1510,7 @@ async function loadFeed(force=false) {
     document.getElementById('error-state').style.display = 'none'
     buildTabs()
     renderFeed()
+    handleDeepLink()
   } catch(err) {
     console.error(err)
     document.getElementById('loading').style.display = 'none'
