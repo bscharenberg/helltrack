@@ -20,36 +20,9 @@ on:
           - lake-placid-2026
 
   schedule:
-    # Each round runs Fri-Sun. We fetch after qualifying (Sat evening) and after finals (Sun evening).
-    # All times UTC. Races typically finish by 17:00 local — 20:00 UTC is safe for most venues.
-
-    # R2 Loudenvielle — Sat May 30 (quali) + Sun May 31 (finals)
-    - cron: '0 20 30 5 *'
-    - cron: '0 20 31 5 *'
-    # R3 Leogang — Sat Jun 13 + Sun Jun 14
-    - cron: '0 20 13 6 *'
-    - cron: '0 20 14 6 *'
-    # R4 Lenzerheide — Sat Jun 20 + Sun Jun 21
-    - cron: '0 20 20 6 *'
-    - cron: '0 20 21 6 *'
-    # R5 La Thuile — Sat Jul 4 + Sun Jul 5
-    - cron: '0 20 4 7 *'
-    - cron: '0 20 5 7 *'
-    # R6 Pal Arinsal — Sat Jul 11 + Sun Jul 12
-    - cron: '0 20 11 7 *'
-    - cron: '0 20 12 7 *'
-    # R7 Les Gets — Sat Aug 22 + Sun Aug 23
-    - cron: '0 20 22 8 *'
-    - cron: '0 20 23 8 *'
-    # Worlds Val di Sole — Sat Aug 29 + Sun Aug 30
-    - cron: '0 20 29 8 *'
-    - cron: '0 20 30 8 *'
-    # R8 Whistler — Sat Sep 26 + Sun Sep 27
-    - cron: '0 20 26 9 *'
-    - cron: '0 20 27 9 *'
-    # R9 Lake Placid — Sat Oct 3 + Sun Oct 4
-    - cron: '0 20 3 10 *'
-    - cron: '0 20 4 10 *'
+    # Poll every 30 minutes. The date check below gates on race days only —
+    # non-race-day runs exit after the first step (no checkout, no npm ci).
+    - cron: '*/30 * * * *'
 
 permissions:
   contents: write
@@ -59,39 +32,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
       - name: Determine venue slug
         id: venue
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "slug=${{ github.event.inputs.venue_slug }}" >> $GITHUB_OUTPUT
           else
-            MONTH=$(date -u +%m)
-            DAY=$(date -u +%d)
-            case "${MONTH}-${DAY}" in
-              05-30|05-31) echo "slug=loudenvielle-2026" >> $GITHUB_OUTPUT ;;
-              06-13|06-14) echo "slug=leogang-2026" >> $GITHUB_OUTPUT ;;
-              06-20|06-21) echo "slug=lenzerheide-2026" >> $GITHUB_OUTPUT ;;
-              07-04|07-05) echo "slug=la-thuile-2026" >> $GITHUB_OUTPUT ;;
-              07-11|07-12) echo "slug=pal-arinsal-2026" >> $GITHUB_OUTPUT ;;
-              08-22|08-23) echo "slug=les-gets-2026" >> $GITHUB_OUTPUT ;;
-              08-29|08-30) echo "slug=val-di-sole-2026" >> $GITHUB_OUTPUT ;;
-              09-26|09-27) echo "slug=whistler-2026" >> $GITHUB_OUTPUT ;;
-              10-03|10-04) echo "slug=lake-placid-2026" >> $GITHUB_OUTPUT ;;
-              *)            echo "slug=unknown" >> $GITHUB_OUTPUT ;;
+            case "$(date -u +%m-%d)" in
+              06-13|06-14) echo "slug=leogang-2026"      >> $GITHUB_OUTPUT ;;
+              06-20|06-21) echo "slug=lenzerheide-2026"  >> $GITHUB_OUTPUT ;;
+              07-04|07-05) echo "slug=la-thuile-2026"    >> $GITHUB_OUTPUT ;;
+              07-11|07-12) echo "slug=pal-arinsal-2026"  >> $GITHUB_OUTPUT ;;
+              08-22|08-23) echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;
+              08-29|08-30) echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;
+              09-26|09-27) echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;
+              10-03|10-04) echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;
+              *)            echo "slug=unknown"           >> $GITHUB_OUTPUT ;;
             esac
           fi
+
+      # All remaining steps are skipped on non-race days (slug=unknown).
+      # This keeps the 30-min polling cost to a single shell command on idle days.
+
+      - name: Checkout repo
+        if: steps.venue.outputs.slug != 'unknown'
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        if: steps.venue.outputs.slug != 'unknown'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        if: steps.venue.outputs.slug != 'unknown'
+        run: npm ci
 
       - name: Fetch and parse results
         if: steps.venue.outputs.slug != 'unknown'

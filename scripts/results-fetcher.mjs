@@ -150,6 +150,15 @@ async function main() {
     if (!existing.seasons['2026']) existing.seasons['2026'] = { rounds: [] }
     const rounds = existing.seasons['2026'].rounds
     const idx    = rounds.findIndex(r => r.slug === venueSlug)
+    const existingRound = idx >= 0 ? rounds[idx] : null
+
+    // Guard: finals already written — skip to avoid spurious commits on polling runs.
+    // Once finals-men exists with results, the data is complete for this round.
+    if (existingRound?.sessions?.['finals-men']?.length > 0
+        && result.sessions?.['finals-men']?.length > 0) {
+      console.log(`\n✅ Finals already present for ${venueSlug} — no changes to write.`)
+      process.exit(0)
+    }
 
     // Guard: don't overwrite existing data with empty result
     if (Object.keys(result.sessions).length === 0 && idx >= 0 && Object.keys(rounds[idx].sessions || {}).length > 0) {
