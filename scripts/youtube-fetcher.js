@@ -7,7 +7,6 @@
  */
 
 require('dotenv').config()
-const fetch = require('node-fetch')   // node-fetch v2 — works with require()
 
 const API_KEY = process.env.YOUTUBE_API_KEY
 const BASE    = 'https://www.googleapis.com/youtube/v3'
