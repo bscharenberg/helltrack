@@ -342,7 +342,7 @@ html, body {
   transition: border-color 0.15s, background 0.15s;
   -webkit-tap-highlight-color: transparent;
 }
-.card-row.seen, .card-hero.seen { opacity: 0.45; transition: opacity 0.3s; }
+.card-row.seen, .card-hero.seen, .short-card.seen { opacity: 0.45; transition: opacity 0.3s; }
 .card-row:hover { border-color: var(--border-mid); background: var(--bg-card-hover); }
 .card-row:active { opacity: 0.85; }
 .row-thumb {
@@ -1487,7 +1487,7 @@ function renderShortsStrip(items) {
            onerror="this.style.display='none'"
            onload="this.classList.remove('loading');this.classList.add('loaded')">`
       : ''
-    return `<div class="short-card" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
+    return `<div class="short-card" data-url="${item.url || ''}" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
       ${thumb}
       <div class="short-card-overlay">
         <div class="short-card-source">${srcName(item)}</div>
@@ -1978,7 +1978,7 @@ function markSeen(url) {
 
 function applySeenState() {
   const seen = getSeenURLs()
-  document.querySelectorAll('.card-row, .card-hero').forEach(card => {
+  document.querySelectorAll('.card-row, .card-hero, .short-card').forEach(card => {
     const url = card.dataset.url
     if (url && seen.has(url)) card.classList.add('seen')
   })
