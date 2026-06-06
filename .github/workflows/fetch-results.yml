@@ -20,8 +20,12 @@ on:
           - lake-placid-2026
 
   schedule:
-    # Poll every 30 minutes. The date check below gates on race days only —
-    # non-race-day runs exit after the first step (no checkout, no npm ci).
+    # Targeted runs: fire immediately after each session wraps (UTC).
+    # Leogang (Europe/Vienna = UTC+2 in June):
+    - cron: '30 14 12 6 *'   # Leogang qualifying  — after Q2 Women (~16:30 Vienna)
+    - cron: '30 13 13 6 *'   # Leogang finals      — after Women Elite (~15:30 Vienna)
+    # Fallback: poll every 30 min on race days. Date check below gates on race days
+    # only — non-race-day runs exit after the first step (no checkout, no npm ci).
     - cron: '*/30 * * * *'
 
 permissions:
@@ -39,7 +43,7 @@ jobs:
             echo "slug=${{ github.event.inputs.venue_slug }}" >> $GITHUB_OUTPUT
           else
             case "$(date -u +%m-%d)" in
-              06-13|06-14) echo "slug=leogang-2026"      >> $GITHUB_OUTPUT ;;
+              06-12|06-13) echo "slug=leogang-2026"      >> $GITHUB_OUTPUT ;;
               06-20|06-21) echo "slug=lenzerheide-2026"  >> $GITHUB_OUTPUT ;;
               07-04|07-05) echo "slug=la-thuile-2026"    >> $GITHUB_OUTPUT ;;
               07-11|07-12) echo "slug=pal-arinsal-2026"  >> $GITHUB_OUTPUT ;;

@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-06-05
+**Last updated**: 2026-06-05 (session 2)
 
 ## Current State: LIVE ✅ — LAUNCHED
 - helltrack.app is live with HTTPS
@@ -21,6 +21,10 @@
 - GA card_open tracking live
 - PWA icon: handed off to designer
 - **Results fetcher migrated to UCI JSON API** — no more PDFs, Worker retired, no auth needed. 6 sessions/venue (finals + Q1 + Q2, men + women elite). Points come directly from API.
+- Pits tab live — TEAMS / MEDIA / PODCASTS / UCI / WATCH pill nav, real broadcaster data in watch.json, factory teams + media + podcasts in directory.json
+- Seen/dim state extended to Shorts strip (#40b)
+- Content filter: ben cathro dropped from +6 rule → knee pad product articles no longer pass
+- Results fetcher workflow: Leogang dates corrected (06-12/06-13), targeted crons added for post-session timing
 
 ---
 
@@ -122,16 +126,15 @@ Helltrack covers UCI Downhill racing exclusively — no EWS/enduro, no freeride,
 | Priority | # | Item | Size | Description |
 |---|---|---|---|---|
 | 1 | 7 | Real PWA icon | S | Handed off to designer. Waiting on 192x192.png and 512x512.png. |
-| 2 | 37 | Pits tab | M | New tab: PITS. Sections: How to Watch, Teams, Media, UCI Official. See details below. |
-| 3 | 36b | 2024 results proper fix | M | Re-fetch via UCI JSON API (slug pattern same as 2026). See details below. |
+| 2 | 36b | 2024 results proper fix | M | Re-fetch via UCI JSON API (slug pattern same as 2026). See details below. |
+| 3 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Race weekend = best feedback signal. |
 | 4 | 5 | Rootsandrain historical data 2015-2023 | L | UCI DH only. Scraper exists. See details below. |
 | 5 | 15 | Full historical results 1990s+ | L | Extends #5. Do after #5 clean. |
 | 6 | 16 | Split times frontend | M | Sector splits per rider. Mobile first. |
 | 7 | 8 | Rider search in results | M | Career results table by rider name. |
 | 8 | 9 | Rider comparison | M | Two riders side by side. Depends on #8. |
 | 9 | 32b | Franchise waitlist page | S | Dedicated Kit.com page for Enduro/XCO/BMX/Road interest. |
-| 10 | 33b | Thumbs-down feedback button | S | "Not relevant" on bottom sheet fires GA event. Depends on #33. |
-| 11 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
+| 10 | 34 | Rider name signals in content filter | S | Use riders.csv for +3 keyword boosts. Deferred. |
 | 12 | 17 | Data viz / splits analysis | XL | Someday. Sector gap charts. Depends on #16. |
 | 13 | 12 | Merch | L | Trademark situation. Contact larryaaa2000@yahoo.com. |
 
