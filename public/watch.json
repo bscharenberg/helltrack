@@ -1,0 +1,25 @@
+{
+  "lastUpdated": "2026-05-28",
+  "regions": [
+    {
+      "region": "North America",
+      "options": [
+        { "name": "Red Bull TV", "url": "https://www.redbull.com/tv", "cost": "free", "notes": "Best free option" },
+        { "name": "FloBikes", "url": "https://www.flobikes.com", "cost": "subscription", "notes": "Most reliable stream" }
+      ]
+    },
+    {
+      "region": "Europe",
+      "options": [
+        { "name": "Red Bull TV", "url": "https://www.redbull.com/tv", "cost": "free", "notes": "Free, works well" },
+        { "name": "UCI MTB App", "url": "https://www.ucimtbworldseries.com", "cost": "subscription", "notes": "Official — mixed reviews" }
+      ]
+    },
+    {
+      "region": "Australia / NZ",
+      "options": [
+        { "name": "Red Bull TV", "url": "https://www.redbull.com/tv", "cost": "free", "notes": "" }
+      ]
+    }
+  ]
+}

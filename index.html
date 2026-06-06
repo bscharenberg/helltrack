@@ -909,68 +909,78 @@ html, body {
 /* ── Pits tab ── */
 #pits-view { display:none; padding:0 0 calc(var(--safe-bottom) + 24px); }
 
-.pits-section { padding: 20px 16px 4px; }
+.pits-pills {
+  display:flex; gap:6px; overflow-x:auto; padding:10px 16px 6px;
+  scrollbar-width:none; -ms-overflow-style:none;
+}
+.pits-pills::-webkit-scrollbar { display:none; }
+.pits-pill {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+  padding:6px 14px; border-radius:20px; border:none; cursor:pointer; white-space:nowrap;
+  background:var(--bg-card); color:var(--text-muted);
+  -webkit-tap-highlight-color:transparent; transition:background 0.15s, color 0.15s;
+}
+.pits-pill.active { background:var(--acid-dim); color:var(--acid); }
 
-.pits-section-header {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-  display: flex; align-items: center; gap: 10px;
-}
-.pits-section-header::after { content:''; flex:1; height:1px; background:var(--border); }
+.pits-panel { padding:8px 16px 4px; display:none; }
+.pits-panel.active { display:block; }
 
-.watch-card {
-  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 10px;
-  padding: 11px 14px; margin-bottom: 8px;
+.pits-label {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--text-secondary); margin-bottom:10px;
+  display:flex; align-items:center; gap:10px;
 }
-.watch-region {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--acid); margin-bottom: 4px;
-}
-.watch-options { font-size: 13px; color: var(--text-primary); line-height: 1.5; }
-.watch-callout {
-  font-size: 12px; color: var(--text-muted); line-height: 1.55;
-  padding: 10px 14px; margin-bottom: 8px;
-  background: rgba(255,255,255,0.02); border: 0.5px solid var(--border); border-radius: 8px;
-}
-.watch-more {
-  display: inline-block; margin-top: 4px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--acid); text-decoration: none;
+.pits-label::after { content:''; flex:1; height:1px; background:var(--border); }
+
+.pits-region-label {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--acid); padding:10px 0 5px;
 }
 
-.team-card {
-  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 10px;
-  padding: 11px 14px; margin-bottom: 8px;
+.pits-row {
+  background:var(--bg-card); border:0.5px solid var(--border); border-radius:10px;
+  display:flex; align-items:center; padding:11px 12px; margin-bottom:6px;
+  text-decoration:none; -webkit-tap-highlight-color:transparent;
+  transition:border-color 0.15s;
 }
-.team-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
-  color: var(--text-primary); margin-bottom: 4px;
+.pits-row:hover { border-color:var(--border-mid); }
+.pits-row:active { opacity:0.8; }
+.pits-row-body { flex:1; min-width:0; }
+.pits-row-name {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:14px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;
+  color:var(--text-primary);
 }
-.team-riders { font-size: 12px; color: var(--text-muted); line-height: 1.45; }
+.pits-row-desc { font-size:12px; color:var(--text-muted); margin-top:1px; }
+.pits-row-icons { display:flex; gap:6px; align-items:center; margin-left:8px; flex-shrink:0; }
 
-.pits-link {
-  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 10px;
-  display: flex; align-items: center; gap: 12px;
-  padding: 12px 14px; margin-bottom: 8px;
-  text-decoration: none;
-  transition: border-color 0.15s, background 0.15s;
-  -webkit-tap-highlight-color: transparent;
+.pits-icon-btn {
+  width:32px; height:32px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,0.05); text-decoration:none; flex-shrink:0;
+  -webkit-tap-highlight-color:transparent; transition:background 0.15s;
 }
-.pits-link:hover { border-color: var(--border-mid); background: var(--bg-card-hover); }
-.pits-link:active { opacity: 0.8; }
-.pits-link-body { flex: 1; min-width: 0; }
-.pits-link-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
-  color: var(--text-primary); margin-bottom: 2px;
+.pits-icon-btn:hover { background:rgba(255,255,255,0.1); }
+.pits-icon-btn svg { width:15px; height:15px; }
+
+.pits-play-btn {
+  width:36px; height:36px; border-radius:50%; flex-shrink:0; margin-right:4px;
+  background:var(--acid-dim); border:1px solid var(--acid-border);
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none; -webkit-tap-highlight-color:transparent;
 }
-.pits-link-desc { font-size: 12px; color: var(--text-muted); }
-.pits-link-arrow { color: var(--text-muted); font-size: 14px; flex-shrink: 0; }
+.pits-play-btn svg { width:13px; height:13px; fill:var(--acid); margin-left:2px; }
+
+.watch-badge {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+  padding:2px 7px; border-radius:3px; flex-shrink:0;
+}
+.watch-badge.free { background:rgba(74,222,128,0.15); color:#4ade80; }
+.watch-badge.paid { background:rgba(251,146,60,0.15); color:#fb923c; }
 
 /* ── Email signup section ── */
 .signup-section {
@@ -1177,54 +1187,18 @@ html, body {
 
 <!-- Pits tab -->
 <div id="pits-view" style="display:none">
-
-  <!-- HOW TO WATCH -->
-  <div class="pits-section">
-    <div class="pits-section-header">How to Watch</div>
-    <div class="watch-card"><div class="watch-region">USA</div><div class="watch-options">HBO Max (Standard tier or above) · FloSports ($30/mo or $120/yr)</div></div>
-    <div class="watch-card"><div class="watch-region">Canada</div><div class="watch-options">FloSports</div></div>
-    <div class="watch-card"><div class="watch-region">UK</div><div class="watch-options">TNT Sports (~£30/mo, or ~£20 on EE mobile)</div></div>
-    <div class="watch-card"><div class="watch-region">Europe</div><div class="watch-options">HBO Max + Eurosport (~€5–8/mo depending on country)</div></div>
-    <div class="watch-card"><div class="watch-region">Australia</div><div class="watch-options">Stan Sport</div></div>
-    <div class="watch-card"><div class="watch-region">Everywhere</div><div class="watch-options">MTBWS TV direct at <a href="https://watch.ucimtbworldseries.com" target="_blank" rel="noopener" style="color:var(--acid);text-decoration:none">watch.ucimtbworldseries.com</a></div></div>
-    <div class="watch-callout">Cheapest paid option: subscribe to MTBWS TV directly at watch.ucimtbworldseries.com — pricing varies by region, significantly cheaper in some countries.</div>
-    <div class="watch-callout">Free highlights posted after each race on the UCI MTB World Series YouTube channel.</div>
-    <a href="https://www.ucimtbworldseries.com/where-to-watch" target="_blank" rel="noopener" class="watch-more">Full broadcaster list by country →</a>
+  <div class="pits-pills">
+    <button class="pits-pill active" onclick="setPitsPill('watch',this)">Watch</button>
+    <button class="pits-pill" onclick="setPitsPill('teams',this)">Teams</button>
+    <button class="pits-pill" onclick="setPitsPill('media',this)">Media</button>
+    <button class="pits-pill" onclick="setPitsPill('podcasts',this)">Podcasts</button>
+    <button class="pits-pill" onclick="setPitsPill('uci',this)">UCI</button>
   </div>
-
-  <!-- TEAMS -->
-  <div class="pits-section">
-    <div class="pits-section-header">Teams</div>
-    <div id="pits-teams"><div style="color:var(--text-muted);font-size:12px;padding:4px 0">Loading…</div></div>
-  </div>
-
-  <!-- MEDIA -->
-  <div class="pits-section">
-    <div class="pits-section-header">Media</div>
-    <a class="pits-link" href="https://www.pinkbike.com" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Pinkbike</div><div class="pits-link-desc">World's largest MTB media site</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.vitalmtb.com" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Vital MTB</div><div class="pits-link-desc">Race coverage and deep tech</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.youtube.com/@FastAsFrench" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Fast as French</div><div class="pits-link-desc">French DH YouTube channel</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.youtube.com/@Sleeper.collective/videos" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Sleeper Collective</div><div class="pits-link-desc">Independent race film crew</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.youtube.com/@wyntv6148" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">WynTV</div><div class="pits-link-desc">Wyn Masters, paddock access</div></div><span class="pits-link-arrow">↗</span></a>
-  </div>
-
-  <!-- PODCASTS -->
-  <div class="pits-section">
-    <div class="pits-section-header">Podcasts</div>
-    <a class="pits-link" href="https://www.redbull.com/us-en/podcast-shows/just-ride" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Just Ride</div><div class="pits-link-desc">Rob Warner + Eliot Jackson · Red Bull · also on Apple &amp; Spotify</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.downtimepodcast.com" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Downtime Podcast</div><div class="pits-link-desc">Long-form DH interviews</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.vitalmtb.com/tags/the_inside_line_vital_feature" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">The Inside Line</div><div class="pits-link-desc">Vital MTB · Schroeder + Spomer</div></div><span class="pits-link-arrow">↗</span></a>
-  </div>
-
-  <!-- UCI OFFICIAL -->
-  <div class="pits-section">
-    <div class="pits-section-header">UCI Official</div>
-    <a class="pits-link" href="https://www.ucimtbworldseries.com/results" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Race Results</div><div class="pits-link-desc">ucimtbworldseries.com/results</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.ucimtbworldseries.com/calendar" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Race Calendar</div><div class="pits-link-desc">ucimtbworldseries.com/calendar</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.ucimtbworldseries.com/athletes" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Athlete Database</div><div class="pits-link-desc">ucimtbworldseries.com/athletes</div></div><span class="pits-link-arrow">↗</span></a>
-    <a class="pits-link" href="https://www.ucimtbworldseries.com/where-to-watch" target="_blank" rel="noopener"><div class="pits-link-body"><div class="pits-link-name">Where to Watch</div><div class="pits-link-desc">ucimtbworldseries.com/where-to-watch</div></div><span class="pits-link-arrow">↗</span></a>
-  </div>
-
+  <div id="pits-panel-watch"    class="pits-panel active"></div>
+  <div id="pits-panel-teams"    class="pits-panel"></div>
+  <div id="pits-panel-media"    class="pits-panel"></div>
+  <div id="pits-panel-podcasts" class="pits-panel"></div>
+  <div id="pits-panel-uci"      class="pits-panel"></div>
 </div>
 
 <!-- Install banner -->
@@ -2169,31 +2143,109 @@ async function loadRiders() {
 
 // ── Pits tab ──────────────────────────────────────────────────────────────────
 
-const TEAMS_URL = 'public/teams.json'
-let teamsData   = null
+const DIRECTORY_URL = 'public/directory.json'
+const WATCH_URL     = 'public/watch.json'
+let dirData         = null
+let watchData       = null
+
+const PITS_ICONS = {
+  instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>`,
+  youtube:   `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.7-.8-1.6-.8-2-.9C16.7 5 12 5 12 5s-4.7 0-7 .1c-.4.1-1.3.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.7.2 3.3.2 3.3s.2 1.4.8 2c.7.8 1.8.8 2.2.9C6.7 19 12 19 12 19s4.7 0 7-.1c.4-.1 1.3-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.5C22 9.6 21.8 8 21.8 8zm-11.8 7V9l5.5 3-5.5 3z"/></svg>`,
+  website:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`,
+  spotify:   `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36a.63.63 0 01-.86.21c-2.36-1.44-5.33-1.77-8.83-.97a.627.627 0 01-.28-1.22c3.83-.87 7.11-.5 9.76 1.12.3.18.39.57.21.86zm1.24-2.76a.78.78 0 01-1.07.26C13.86 11.92 9.75 11.44 6.56 12.41a.782.782 0 01-.47-1.49c3.65-1.14 8.18-.59 11.32 1.27.38.23.5.72.27 1.08l-.8.33zm.11-2.87c-3.24-1.93-8.59-2.1-11.68-1.16a.937.937 0 11-.54-1.8c3.55-1.08 9.44-.87 13.17 1.34a.937.937 0 01-.95 1.62z"/></svg>`,
+}
+
+function pitsIcon(type) { return PITS_ICONS[type] || PITS_ICONS.website }
+
+function setPitsPill(panel, btn) {
+  document.querySelectorAll('.pits-pill').forEach(p => p.classList.remove('active'))
+  document.querySelectorAll('.pits-panel').forEach(p => p.classList.remove('active'))
+  btn.classList.add('active')
+  document.getElementById('pits-panel-' + panel).classList.add('active')
+}
 
 async function loadPits() {
-  if (teamsData) { renderPitsTeams(); return }
-  try {
-    const res = await fetch(TEAMS_URL + '?t=' + Date.now())
-    if (!res.ok) throw new Error('HTTP ' + res.status)
-    teamsData = await res.json()
-    renderPitsTeams()
-  } catch(err) {
-    console.error('Teams load failed:', err)
-    document.getElementById('pits-teams').innerHTML =
-      '<div style="color:var(--text-muted);font-size:12px;padding:4px 0">Teams unavailable</div>'
+  const [d, w] = await Promise.all([
+    dirData   ? Promise.resolve(dirData)   : fetch(DIRECTORY_URL + '?t=' + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
+    watchData ? Promise.resolve(watchData) : fetch(WATCH_URL     + '?t=' + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
+  ])
+  if (d) dirData   = d
+  if (w) watchData = w
+  renderPitsWatch()
+  renderPitsTeams()
+  renderPitsMedia()
+  renderPitsPodcasts()
+  renderPitsUCI()
+}
+
+function renderPitsWatch() {
+  const el = document.getElementById('pits-panel-watch')
+  if (!el) return
+  let html = '<div class="pits-label">How to Watch</div>'
+  if (!watchData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
+  for (const region of watchData.regions) {
+    html += `<div class="pits-region-label">${region.region}</div>`
+    for (const opt of region.options) {
+      const badge = `<span class="watch-badge ${opt.cost === 'free' ? 'free' : 'paid'}">${opt.cost === 'free' ? 'Free' : 'Paid'}</span>`
+      const notes = opt.notes ? `<div class="pits-row-desc">${opt.notes}</div>` : ''
+      html += `<a class="pits-row" href="${opt.url}" target="_blank" rel="noopener"><div class="pits-row-body"><div class="pits-row-name">${opt.name}</div>${notes}</div>${badge}</a>`
+    }
   }
+  el.innerHTML = html
 }
 
 function renderPitsTeams() {
-  const el = document.getElementById('pits-teams')
-  if (!teamsData || !el) return
-  el.innerHTML = teamsData.map(team => `
-    <div class="team-card">
-      <div class="team-name">${team.name}</div>
-      <div class="team-riders">${team.riders.join(' · ')}</div>
-    </div>`).join('')
+  const el = document.getElementById('pits-panel-teams')
+  if (!el) return
+  let html = '<div class="pits-label">Teams</div>'
+  if (!dirData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
+  for (const t of dirData.teams) {
+    const pri = t.primary  ? `<a class="pits-icon-btn" href="${t.primary.url}"  target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(t.primary.icon)}</a>`  : ''
+    const sec = t.secondary ? `<a class="pits-icon-btn" href="${t.secondary.url}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(t.secondary.icon)}</a>` : ''
+    html += `<div class="pits-row"><div class="pits-row-body"><div class="pits-row-name">${t.name}</div></div><div class="pits-row-icons">${pri}${sec}</div></div>`
+  }
+  el.innerHTML = html
+}
+
+function renderPitsMedia() {
+  const el = document.getElementById('pits-panel-media')
+  if (!el) return
+  let html = '<div class="pits-label">Media</div>'
+  if (!dirData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
+  for (const m of dirData.media) {
+    const pri = m.primary  ? `<a class="pits-icon-btn" href="${m.primary.url}"  target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(m.primary.icon)}</a>`  : ''
+    const sec = m.secondary ? `<a class="pits-icon-btn" href="${m.secondary.url}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(m.secondary.icon)}</a>` : ''
+    const desc = m.description ? `<div class="pits-row-desc">${m.description}</div>` : ''
+    html += `<div class="pits-row"><div class="pits-row-body"><div class="pits-row-name">${m.name}</div>${desc}</div><div class="pits-row-icons">${pri}${sec}</div></div>`
+  }
+  el.innerHTML = html
+}
+
+function renderPitsPodcasts() {
+  const el = document.getElementById('pits-panel-podcasts')
+  if (!el) return
+  let html = '<div class="pits-label">Podcasts</div>'
+  if (!dirData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
+  for (const p of dirData.podcasts) {
+    const playUrl = p.primary?.url || '#'
+    const desc    = p.description ? `<div class="pits-row-desc">${p.description}</div>` : ''
+    const spotify = p.secondary?.icon === 'spotify'
+      ? `<a class="pits-icon-btn" href="${p.secondary.url}" target="_blank" rel="noopener" style="color:#1db954">${pitsIcon('spotify')}</a>` : ''
+    html += `<div class="pits-row"><a class="pits-play-btn" href="${playUrl}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="var(--acid)"/></svg></a><div class="pits-row-body"><div class="pits-row-name">${p.name}</div>${desc}</div><div class="pits-row-icons">${spotify}</div></div>`
+  }
+  el.innerHTML = html
+}
+
+function renderPitsUCI() {
+  const el = document.getElementById('pits-panel-uci')
+  if (!el) return
+  let html = '<div class="pits-label">UCI Official</div>'
+  if (!dirData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
+  for (const u of dirData.uci) {
+    const desc = u.description ? `<div class="pits-row-desc">${u.description}</div>` : ''
+    html += `<a class="pits-row" href="${u.url}" target="_blank" rel="noopener"><div class="pits-row-body"><div class="pits-row-name">${u.name}</div>${desc}</div><div class="pits-row-icons"><span class="pits-icon-btn" style="color:var(--text-muted)">${pitsIcon('website')}</span></div></a>`
+  }
+  el.innerHTML = html
 }
 
 
