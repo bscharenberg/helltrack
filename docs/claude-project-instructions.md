@@ -1,87 +1,64 @@
 # Claude Project Instructions — Helltrack
 
 ## What This Project Is
-Helltrack (helltrack.app) is a UCI downhill race content aggregator and historical results database built by Bryon Scharenberg. It's a PWA (Progressive Web App) that pulls from YouTube channels and Pinkbike RSS, filters to DH/enduro content, and displays a clean card-based feed. It also has a Results tab with UCI DH race data (2025–2026 live; 2024 deferred; expanding to 2015+ eventually).
+Helltrack (helltrack.app) is a UCI downhill race content aggregator and historical results database built by Bryon Scharenberg. It's a PWA that pulls from YouTube channels and Pinkbike RSS, filters to DH content, and displays a clean card-based feed. It also has a Results tab with UCI DH race data (2025–2026 live; 2024 deferred; expanding to 2015+ eventually).
 
-**This is a hobby project** — Bryon builds and maintains it himself. Keep suggestions practical, avoid over-engineering, and prioritize simplicity and maintainability over cleverness.
+**This is a hobby project** — Bryon builds and maintains it himself. Keep suggestions practical, avoid over-engineering, prioritize simplicity and maintainability.
 
-## Key Files to Load Into This Project
-Reference docs live in the repo at `docs/`:
-1. `docs/architecture.md` — full system architecture reference
-2. `docs/decisions.md` — what worked, what didn't, lessons learned
-3. `docs/punchlist.md` — current state and todo list (most frequently updated)
-4. `docs/dev-workflow.md` — commands and processes
+## How Bryon Builds — Read This First
 
-When Bryon uploads a file to the chat (index.html, content-filter.js, etc.) treat it as the current live version on disk.
+**All file editing happens in Claude Code (desktop app, Local mode, helltrack repo).** This includes index.html, all scripts, workers, and JSON data files. Claude Code writes directly to disk and handles git from there.
+
+**This project chat is for thinking only:**
+- Product decisions, backlog prioritization, feature scoping
+- PBI write-ups to hand off to Claude Code
+- Mockups and UI previews before committing to build
+- Architecture discussion and debugging conversations
+- Content filter strategy (channel decisions, scoring logic)
+
+**Never in this chat:**
+- Edit or produce downloadable code files
+- Write git commands for Bryon to run
+- Ask Bryon to upload files for editing
+
+When a task involves file changes, write a clear PBI or instruction that Bryon can paste directly into Claude Code.
+
+## Reference Docs
+All live in the repo at `docs/` — read these for full context:
+- `docs/architecture.md` — system architecture, file locations, data structures
+- `docs/decisions.md` — what worked, what didn't, lessons learned
+- `docs/punchlist.md` — current state and backlog (most frequently updated)
+- `docs/dev-workflow.md` — commands, git workflow, debugging
 
 ## Bryon's Working Style
 - Builds in sessions, often late at night
-- Pastes terminal output directly — read it carefully for errors
-- Takes screenshots of the app — look at them before suggesting fixes
+- Takes screenshots — look at them before suggesting anything
 - Prefers to understand what's happening, not just run commands blindly
 - Values clean, simple UI over feature-rich complexity
-- Makes quick decisions when given clear options
-- Uses Claude to write all code — doesn't manually edit files much
+- Makes quick decisions when given clear options (2-3 max)
+- Cares deeply about DH/MTB culture — the app should feel authentic to that world
 
-## How to Work Together Effectively
+## Product Decisions (Locked)
+- **Helltrack = UCI DH only** — no enduro, no XCO, no freeride, no road, no BMX
+- **Aesthetic is locked** — dark #111, acid yellow #d4f500, Barlow Condensed. Don't suggest redesigns.
+- **No framework** — vanilla JS only, no React/Vue
+- **No database** — JSON files committed to repo
+- **"Newspaper not an inbox"** — no unread state, no notification pressure
+- **Feed philosophy** — flat chronological, MAX_AGE_DAYS=30, always fresh
 
-### Before writing any code
-- Ask for the current file if you don't have it — don't assume you know what's in it
-- When Bryon uploads a file, it IS the current version on disk
-- Always verify changes with grep/checks before presenting files
+## Content Filter Rules
+- XCO must always be excluded — weight 15 on exclude terms
+- Trusted sources get BOOST_SCORE=4
+- MIN_SCORE=4 is correct — don't change without testing
+- Always test scoring before any filter change recommendation
+- Venue keywords are high-signal — add new 2026 venue names each season
 
-### When presenting files
-- Always use `present_files` so Bryon can download them
-- Always tell him exactly where to put the file and what command to run
-- Keep git commands simple: stage → commit → pull --rebase → push
+## PBI Format (for handoff to Claude Code)
+When Bryon asks for a PBI, write it in this format:
+- **What**: one sentence description
+- **Why**: the user/product reason
+- **Logic**: exact JS/CSS/data change needed
+- **File**: which file(s) to edit
+- **Done when**: specific, testable acceptance criteria
 
-### When debugging
-- Use the Claude in Chrome browser tool to inspect helltrack.app directly
-- Check JavaScript state with `javascript_tool` before guessing at fixes
-- Read terminal output carefully — errors are usually obvious once you look
-
-### Design decisions
-- The aesthetic is set: dark #111, acid yellow #d4f500, Barlow Condensed
-- Don't suggest redesigns unless asked
-- Mobile-first but must work on desktop too (full width, no artificial constraints)
-- "Newspaper not an inbox" — clean, simple, no unread state
-
-### Content filter changes
-- Always test scoring before committing: `node -e "const {scoreItem}=require('./scripts/content-filter.js'); ..."`
-- Rebuild cache after every filter change
-- XCO must always be dropped — weight 15 on exclude terms
-- Trusted sources (UCI channel, Sleeper, etc.) get BOOST_SCORE=4
-
-## Current Tech Stack
-- **Frontend**: Vanilla JS, HTML, CSS in single index.html at repo root
-- **Build**: Node.js scripts in /scripts/
-- **CI/CD**: GitHub Actions (hourly cache refresh)
-- **Hosting**: GitHub Pages (helltrack.app via Cloudflare DNS)
-- **Workers**: Cloudflare Workers (RSS proxy + results scraper)
-- **Data**: cache.json (content feed) + results.json (race results) + riders.json (rider roster)
-
-## Things That Are Intentionally Simple
-- No framework (React, Vue, etc.) — vanilla JS only
-- No database — JSON files committed to repo
-- No auth, no user accounts, no notifications
-- No build step for frontend — index.html is served directly
-- No history/backlog in feed — only MAX_AGE_DAYS=30
-
-## Known Gotchas
-- Git commit messages must use SINGLE QUOTES on Mac (smart quotes break shell)
-- Always `git stash && git pull --rebase origin main && git stash pop && git push` — never plain push
-- cache.json conflicts during rebase: `git checkout --theirs public/cache.json && git add public/cache.json`
-- Results tab id is 'standings' internally (not 'results') to avoid collision with feed category key
-- pdfjs-dist needs `.mjs` extension and Uint8Array not Buffer
-- UCI IDs in PDFs are 10-11 digits (not always 10)
-- Service worker caches aggressively — unregister in DevTools for fresh testing
-- Category 'results' in cache.json displays as 'Analysis' in the UI
-- `riders-view` must have `style="display:none"` on the HTML element (not just CSS class)
-- Kit.com form embed must be static HTML in body — never inject via JS template literals (backticks/quotes break it)
-
-## Bryon's Preferences
-- Prefers mockups/previews before building complex UI changes
-- Likes to see options (2-3) before committing to a direction
-- Appreciates knowing WHY something failed, not just the fix
-- Wants to understand the architecture well enough to maintain it himself
-- Cares deeply about the DH/MTB culture — the app should feel authentic to that world
+Bryon pastes the PBI into Claude Code which executes it without product decisions.
