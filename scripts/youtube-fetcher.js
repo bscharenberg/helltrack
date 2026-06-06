@@ -68,15 +68,18 @@ async function fetchVideoDurations(videoIds) {
   return durations
 }
 
-function isShortDuration(isoDuration) {
-  // ISO 8601: PT30S, PT1M, PT1M30S — Shorts are ≤60 s
+function isShortDuration(isoDuration, channelId) {
+  // ISO 8601: PT30S, PT1M, PT1M30S
+  // UCI channel uses vertical-format social clips up to ~3 min — raise threshold.
+  // All other channels: standard 60 s YouTube Shorts limit.
   if (!isoDuration) return false
   const m = isoDuration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/)
   if (!m) return false
   const total = (parseInt(m[1] || 0) * 3600)
               + (parseInt(m[2] || 0) * 60)
               +  parseInt(m[3] || 0)
-  return total > 0 && total <= 60
+  const threshold = channelId === 'UCWS4nfoou79mwo9nHew49fA' ? 180 : 60
+  return total > 0 && total <= threshold
 }
 
 async function fetchPlaylistPage(playlistId, pageToken = null) {
@@ -174,11 +177,11 @@ async function fetchYouTube() {
         const durations = await fetchVideoDurations(ids)
         let shortCount  = 0
         items = items.map(item => {
-          const short = item.id ? isShortDuration(durations[item.id]) : false
+          const short = item.id ? isShortDuration(durations[item.id], item.channelId) : false
           if (short) shortCount++
           return { ...item, isShort: short }
         })
-        if (shortCount > 0) console.log(`    → ${shortCount} Shorts (≤60 s)`)
+        if (shortCount > 0) console.log(`    → ${shortCount} Shorts (≤60 s / UCI ≤180 s)`)
       }
 
       console.log(`    → ${items.length} videos`)
