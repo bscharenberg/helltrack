@@ -68,7 +68,7 @@ const INCLUDE_KEYWORDS = [
 
   // Key content series
   { terms: ['inside the tape', 'vital raw', 'story of the race', 'wyntv', 'wyn tv',
-            'cathro', 'race analysis'], weight: 6 },
+            'race analysis'], weight: 6 },
   { terms: ['b line', 'mtbws highlights dhi'], weight: 3 },
   { terms: ['red bull hardline', 'hardline'], weight: 6 },
   { terms: ['anthill films', 'anthill', 'milliseconds'], weight: 3 },

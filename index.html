@@ -917,7 +917,7 @@ html, body {
 .pits-pill {
   font-family:'Barlow Condensed',sans-serif;
   font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
-  padding:6px 14px; border-radius:20px; border:none; cursor:pointer; white-space:nowrap;
+  padding:6px 14px; border-radius:2px; border:none; cursor:pointer; white-space:nowrap;
   background:var(--bg-card); color:var(--text-muted);
   -webkit-tap-highlight-color:transparent; transition:background 0.15s, color 0.15s;
 }
@@ -979,8 +979,8 @@ html, body {
   font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
   padding:2px 7px; border-radius:3px; flex-shrink:0;
 }
-.watch-badge.free { background:rgba(74,222,128,0.15); color:#4ade80; }
-.watch-badge.paid { background:rgba(251,146,60,0.15); color:#fb923c; }
+.watch-badge.free { background:transparent; color:#d4f500; border:1px solid #d4f500; }
+.watch-badge.paid { background:transparent; color:#888; border:1px solid #888; }
 
 /* ── Email signup section ── */
 .signup-section {
@@ -2230,7 +2230,7 @@ function renderPitsPodcasts() {
     const playUrl = p.primary?.url || '#'
     const desc    = p.description ? `<div class="pits-row-desc">${p.description}</div>` : ''
     const spotify = p.secondary?.icon === 'spotify'
-      ? `<a class="pits-icon-btn" href="${p.secondary.url}" target="_blank" rel="noopener" style="color:#1db954">${pitsIcon('spotify')}</a>` : ''
+      ? `<a class="pits-icon-btn" href="${p.secondary.url}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon('spotify')}</a>` : ''
     html += `<div class="pits-row"><a class="pits-play-btn" href="${playUrl}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="var(--acid)"/></svg></a><div class="pits-row-body"><div class="pits-row-name">${p.name}</div>${desc}</div><div class="pits-row-icons">${spotify}</div></div>`
   }
   el.innerHTML = html
