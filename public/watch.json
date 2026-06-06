@@ -2,23 +2,46 @@
   "lastUpdated": "2026-05-28",
   "regions": [
     {
-      "region": "North America",
+      "region": "United States",
       "options": [
-        { "name": "Red Bull TV", "url": "https://www.redbull.com/tv", "cost": "free", "notes": "Best free option" },
-        { "name": "FloBikes", "url": "https://www.flobikes.com", "cost": "subscription", "notes": "Most reliable stream" }
+        { "name": "HBO Max", "url": "https://www.max.com", "cost": "subscription", "notes": "Standard tier or above required" },
+        { "name": "FloSports", "url": "https://www.flosports.tv", "cost": "subscription", "notes": "$30/mo or $120/yr" },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — qualifying included" }
+      ]
+    },
+    {
+      "region": "Canada",
+      "options": [
+        { "name": "FloSports", "url": "https://www.flosports.tv", "cost": "subscription", "notes": "~$30 CAD/mo" },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream" }
+      ]
+    },
+    {
+      "region": "United Kingdom",
+      "options": [
+        { "name": "TNT Sports", "url": "https://www.tntsports.co.uk", "cost": "subscription", "notes": "~£30/mo. EE mobile customers ~£20/mo" },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream" }
       ]
     },
     {
       "region": "Europe",
       "options": [
-        { "name": "Red Bull TV", "url": "https://www.redbull.com/tv", "cost": "free", "notes": "Free, works well" },
-        { "name": "UCI MTB App", "url": "https://www.ucimtbworldseries.com", "cost": "subscription", "notes": "Official — mixed reviews" }
+        { "name": "HBO Max + Eurosport", "url": "https://www.max.com", "cost": "subscription", "notes": "~€5–8/mo depending on country" },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream" }
       ]
     },
     {
-      "region": "Australia / NZ",
+      "region": "Australia",
       "options": [
-        { "name": "Red Bull TV", "url": "https://www.redbull.com/tv", "cost": "free", "notes": "" }
+        { "name": "Stan Sport", "url": "https://www.stan.com.au/sport", "cost": "subscription", "notes": "~$44 AUD/mo" },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — cheaper via VPN to lower-cost region" }
+      ]
+    },
+    {
+      "region": "Everywhere",
+      "options": [
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream. Pricing varies by region — significantly cheaper in some countries" },
+        { "name": "UCI MTB World Series YouTube", "url": "https://www.youtube.com/@UCIMTBWorldSeries", "cost": "free", "notes": "Free highlights after each race. Not live." }
       ]
     }
   ]
