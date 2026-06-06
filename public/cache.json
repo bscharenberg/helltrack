@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-06T07:50:26.106Z",
-  "totalItems": 81,
+  "builtAt": "2026-06-06T10:13:01.771Z",
+  "totalItems": 82,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -853,7 +853,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Interview: Nick Lester on DH World Cups, Data Acquisition, &amp; Mass Damper Testing",
-          "description": "As well as a closer look at Nick&#039;s heavily damped Gamux Sego.( Photos: 18, Comments: 57 )",
+          "description": "As well as a closer look at Nick&#039;s heavily damped Gamux Sego.( Photos: 18, Comments: 59 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29752385/p2pb29752385.jpg",
           "publishedAt": "2026-06-03T23:38:00.000Z",
           "url": "https://www.pinkbike.com/news/interview-nick-lester-on-dh-world-cups-data-acquisition-and-mass-damper-testing.html?trk=rss",
@@ -952,6 +952,23 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "x30Aeh9H1S4",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A moment Asa Vermette will never forget 🥇🔥",
+          "description": "A moment Asa Vermette will never forget 🥇🔥\n\nHere’s the story behind his first ever Elite UCI Downhill World Cup win 🇰🇷",
+          "thumbnail": "https://i.ytimg.com/vi/x30Aeh9H1S4/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-06T09:00:48Z",
+          "url": "https://www.youtube.com/watch?v=x30Aeh9H1S4",
+          "isShort": false,
+          "score": 14,
+          "category": "news"
+        },
         {
           "id": "https://www.pinkbike.com/news/commenting-on-world-cup-dh-commentary-specializeds-new-demo-and-the-dh-bar-end-trend.html?trk=rss",
           "type": "article",
