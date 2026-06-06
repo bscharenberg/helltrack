@@ -1,46 +1,52 @@
 {
-  "lastUpdated": "2026-05-28",
+  "lastUpdated": "2026-06-05",
   "regions": [
     {
       "region": "United States",
       "options": [
-        { "name": "HBO Max", "url": "https://www.max.com", "cost": "subscription", "notes": "Standard tier or above required" },
-        { "name": "FloSports", "url": "https://www.flosports.tv", "cost": "subscription", "notes": "$30/mo or $120/yr" },
-        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — qualifying included" }
+        { "name": "HBO Max", "url": "https://www.max.com", "cost": "subscription", "notes": "Standard or Premium tier required. Basic tier does not include races. HBO Max bundled with Disney+ does not include races." },
+        { "name": "FloSports", "url": "https://www.flosports.tv", "cost": "subscription", "notes": "$30/mo or $144/yr" },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — includes qualifying. Use code ASA20 for 20% off." }
       ]
     },
     {
       "region": "Canada",
       "options": [
-        { "name": "FloSports", "url": "https://www.flosports.tv", "cost": "subscription", "notes": "~$30 CAD/mo" },
-        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream" }
+        { "name": "FloSports", "url": "https://www.flosports.tv", "cost": "subscription", "notes": "~$50 CAD/mo" },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — includes qualifying. Use code ASA20 for 20% off." }
       ]
     },
     {
       "region": "United Kingdom",
       "options": [
-        { "name": "TNT Sports", "url": "https://www.tntsports.co.uk", "cost": "subscription", "notes": "~£30/mo. EE mobile customers ~£20/mo" },
-        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream" }
+        { "name": "TNT Sports", "url": "https://www.tntsports.co.uk", "cost": "subscription", "notes": "~£30/mo. EE mobile customers ~£20/mo. NowTV HBO Max does not include sport." },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — includes qualifying. Use code ASA20 for 20% off." }
       ]
     },
     {
       "region": "Europe",
       "options": [
-        { "name": "HBO Max + Eurosport", "url": "https://www.max.com", "cost": "subscription", "notes": "~€5–8/mo depending on country" },
-        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream" }
+        { "name": "HBO Max + Eurosport", "url": "https://www.max.com", "cost": "subscription", "notes": "~€5–8/mo depending on country. France: €15/mo (€10 base + €5 sport). L'Equipe free delayed broadcast available in France." },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — includes qualifying. Use code ASA20 for 20% off." }
       ]
     },
     {
       "region": "Australia",
       "options": [
-        { "name": "Stan Sport", "url": "https://www.stan.com.au/sport", "cost": "subscription", "notes": "~$44 AUD/mo" },
-        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — cheaper via VPN to lower-cost region" }
+        { "name": "Stan", "url": "https://www.stan.com.au/sport", "cost": "subscription", "notes": "~$44 AUD/mo. Tip: threaten to cancel and they may offer 3 months at half price." },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream — ~$10 AUD/mo via VPN to Brazil. Use code ASA20 for 20% off." }
+      ]
+    },
+    {
+      "region": "New Zealand",
+      "options": [
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream. Use code ASA20 for 20% off." }
       ]
     },
     {
       "region": "Everywhere",
       "options": [
-        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream. Pricing varies by region — significantly cheaper in some countries" },
+        { "name": "MTBWS TV", "url": "https://watch.ucimtbworldseries.com", "cost": "subscription", "notes": "Official UCI stream available worldwide. Pricing varies significantly by region — can be much cheaper than local options. Use code ASA20 for 20% off." },
         { "name": "UCI MTB World Series YouTube", "url": "https://www.youtube.com/@UCIMTBWorldSeries", "cost": "free", "notes": "Free highlights after each race. Not live." }
       ]
     }
