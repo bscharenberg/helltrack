@@ -4,7 +4,7 @@
 
 ### YouTube API: uploads playlist over search.list
 - **Decision**: Use uploads playlist endpoint (1 unit/channel) not search.list (100 units/channel)
-- **Why**: With 11 channels, search.list would cost 1,100 units/hourly run = 26,400/day, blowing the 10,000/day free quota instantly
+- **Why**: With 14 channels, search.list would cost 1,400+ units/hourly run = 33,600/day, blowing the 10,000/day free quota instantly
 - **How**: Each channel has an uploads playlist ID = channel ID with UC→UU prefix swap
 
 ### Cloudflare Worker for Pinkbike RSS
@@ -13,37 +13,23 @@
 - **Worker URL**: helltrack-rss.scharenbergs.workers.dev/?url=[encoded_url]
 - **Important**: Worker has an allowlist — must add new domains explicitly
 
-### node-fetch v2 for CommonJS compatibility
-- **Problem**: node-fetch v3+ is ESM only, breaks require() in build scripts
-- **Solution**: Always use node-fetch@2 for CJS scripts
+### Node 18+ native fetch — node-fetch no longer needed
+- Node 18+ includes `fetch` globally — no package required
+- `node-fetch` has been removed from dependencies
+- All scripts use native `fetch` directly
+- Note: node-fetch@2 was previously used for CommonJS compatibility; if ever rolling back to older Node, use node-fetch@2 (not v3+ which is ESM-only)
 
-### pdfjs-dist for ChronoRace PDF parsing
-- **Why pdfjs not pdf-parse**: pdf-parse has Node 24 compatibility issues, quirky exports
-- **Import**: Must use ESM (`import * as pdfjsLib from './node_modules/pdfjs-dist/legacy/build/pdf.mjs'`)
-- **Script extension**: Must be `.mjs` to use ESM imports
-- **Data type**: pdfjs requires `new Uint8Array(arrayBuffer)` not `Buffer`
-- **Text duplication**: pdfjs renders each glyph multiple times — consecutive dedup on split tokens
+### UCI JSON API for results (replaced PDF pipeline)
+- **Decision**: Fetch race results from the UCI JSON API directly instead of parsing ChronoRace PDFs
+- **Why**: The API returns clean structured JSON — no PDF download, no text extraction, no decompression, no name-deduplication hacks
+- **Architecture**: results-fetcher.mjs POSTs to `https://www.ucimtbworldseries.com/api/race-results` with `{"slug": "2026-{venue}-{gender}-elite-dhi-{session}"}` — no auth needed
+- **Consequence**: helltrack-results Worker (Browser Rendering) was retired and deleted, Cloudflare Workers Paid plan downgraded to free ($5/mo saved)
+- **Historical data caveat**: The UCI API only covers recent seasons. 2024 data was imported from downhillr .rda files. 2015–2023 is a future backlog item.
 
-### UCI ID as PDF row anchor
-- **Problem**: ChronoRace PDFs have names repeated 4x, inconsistent spacing, mixed case
-- **Solution**: UCI ID (10-11 digit number) is unique per rider per row — use as anchor, extract name/rank before it, times/gap/points after it
-- **Gotcha**: UCI IDs are 10 OR 11 digits — regex must be `\d{10,11}` not `\d{10}`
-
-### Finish time = largest time in row
-- **Problem**: Each row has 4 split times then finish time, all in M:SS.mmm format
-- **Solution**: Finish time is always the LARGEST value — reduce by `secs` comparison
-- **Don't**: Try to filter by "time > 1 minute" — sector 3 splits can also exceed 1 minute
-
-### Cloudflare Browser Rendering for UCI results page
-- **Problem**: ucimtbworldseries.com/results/[slug] is JavaScript-rendered — raw fetch gets no PDF links
-- **Solution**: Cloudflare Workers Paid ($5/mo) + Browser Rendering API + @cloudflare/puppeteer
-- **Architecture split**: Worker only scrapes PDF URLs (fast, no CPU limit hit), GitHub Actions downloads and parses PDFs (no CPU limit)
-- **Why split**: Parsing 11 PDFs in one Worker request hits Cloudflare CPU time limit (Error 1102)
-
-### pyreadr for downhillr .rda files
-- **Problem**: downhillr historical data is in R's binary .rda format
-- **Solution**: `pip install pyreadr` reads .rda without R installed
-- **Usage**: `pyreadr.read_r(path)` returns dict, first value is the DataFrame
+### downhillr .rda files for 2024 historical data
+- **Problem**: 2024 results needed before the UCI API approach was in place
+- **Solution**: `pyreadr.read_r(path)` reads R's binary .rda format without R installed — returns dict, first value is DataFrame
+- **Caveat**: Some results may be inaccurate (e.g. wrong P1 found at Bielsko-Biała) — manual verification needed
 
 ### Tab ID collision bug
 - **Problem**: Feed category for Ben Cathro / analysis content has internal key `results` in cache.json. Adding a Results tab with `id:'results'` caused Analysis tab to trigger the results view.
@@ -60,50 +46,72 @@
 - **Solution**: XCO exclude weight raised to 15, "mtbws highlights" (without dhi) gets -8 separately
 - **Lesson**: When a trusted channel posts mixed content, the exclude weight must exceed the sum of ALL possible boosts for that channel
 
+### Shorts detection — duration-based, not thumbnail aspect ratio
+- **Problem**: YouTube Shorts were appearing in the main feed and claiming the hero position
+- **Attempted**: Thumbnail aspect ratio (thumbnailHeight > thumbnailWidth) — doesn't work because YouTube always returns landscape `maxresdefault.jpg` (1280×720) for ALL videos including Shorts
+- **Solution**: Duration-based detection via `videos.list` with `contentDetails` part — ISO 8601 duration ≤60s = Short. Applied to all channels after each channel fetch in `youtube-fetcher.js`
+- **Secondary signal**: Portrait thumbnail (height > width) kept as fallback for any non-YouTube sources where aspect ratio may be reliable
+- **Additional fix**: Hero card logic skips Shorts; `applySeenState()` covers `.short-card` elements
+
+### Kit.com embed must be static HTML
+- **Problem**: Kit.com embed contains its own `<script>` tag and inline styles with quotes
+- **Solution**: Must go as static HTML in the body — never inject via JS template literals (backticks/quotes in the embed break JS strings)
+- **Placement**: After ~20 feed cards (mid-feed, not bottom) via insertion at render time
+
+### PITS tab static data approach
+- **Decision**: PITS tab data (teams, media, podcasts, UCI links) lives in `public/directory.json` and `public/watch.json` — fetched at runtime, not hardcoded in HTML
+- **Why**: JSON is easier to update per season without touching index.html; teams/streaming options change annually
+- **Exception**: Media and UCI sections are small enough to inline in HTML if needed, but JSON keeps it consistent
+
 ## What Didn't Work
 
 ### Sidebar nav on desktop
 - **Tried**: Left sidebar with Feed/Results icons for desktop (≥600px)
-- **Problem**: Two items in a 64px sidebar looks sparse and broken. The labels "FEED" and "RESULTS" floating on the left edge feels undesigned.
-- **Decision**: Reverted to full-width top tab bar for both mobile and desktop. Simple is better.
+- **Problem**: Two items in a 64px sidebar looks sparse and broken. Labels floating on the left edge feel undesigned.
+- **Decision**: Reverted to full-width top tab bar for both mobile and desktop.
 
 ### Bottom nav with app-shell wrapper
-- **Tried**: Fixed bottom tab bar (Feed/Results) wrapping entire content in #app-shell and #main-area divs
-- **Problem**: Introduced multiple bugs — sticky header positioning broke (top:53px leaked), results nav showed on all tabs, Analysis showed results content
-- **Decision**: Stripped all of it. Results tab in the horizontal scrolling tab bar, second position after All.
-- **Lesson**: Don't add structural wrapper divs unless absolutely necessary. CSS layout changes cascade in unexpected ways.
+- **Tried**: Fixed bottom tab bar wrapping entire content in #app-shell and #main-area divs
+- **Problem**: Multiple bugs — sticky header positioning broke, results nav showed on all tabs, Analysis showed results content
+- **Decision**: Stripped all of it. Tab bar stays at top.
+- **Lesson**: Don't add structural wrapper divs. CSS layout changes cascade in unexpected ways.
 
 ### PDF text extraction without pdfjs
 - **Tried**: Raw byte extraction of PDF text (BT/ET markers, Tj/TJ operators)
 - **Problem**: ChronoRace PDFs use Flate/zlib compression on content streams — raw text extraction finds nothing
-- **Solution**: pdfjs-dist handles decompression properly
+- **Solution at the time**: pdfjs-dist handles decompression. Now moot — switched to UCI JSON API.
 
-### Parsing PDF by rank number regex
-- **Tried**: Matching "1." or "P 2." rank patterns in text
-- **Problem**: The repeated name text (4x) confused the lazy quantifier in the name capture group. The `/` in team names like "COMMENCAL/MUC-OFF" wasn't matched by `[\w\s\-'.]+?`
-- **Solution**: Use UCI ID as anchor instead — it's unique, unambiguous, always present
-
-### Puppeteer on GitHub Actions for UCI scraping
-- **Considered**: Running Puppeteer headlessly in GitHub Actions CI to scrape ucimtbworldseries.com
-- **Problems**: 30-60s spin-up time, Puppeteer in CI is flaky, silent failures
-- **Decision**: Cloudflare Browser Rendering is purpose-built for this, more reliable, $5/mo
+### Cloudflare Browser Rendering for results (retired)
+- **Was**: Cloudflare Worker with Puppeteer scraped ucimtbworldseries.com/results/[slug] for PDF URLs, then results-fetcher.mjs downloaded and parsed the PDFs
+- **Why retired**: UCI JSON API provides the same data more cleanly with no infrastructure cost
+- **Consequence**: helltrack-results Worker deleted, Workers Paid plan cancelled
 
 ### PyPDF/pdf-parse for PDF parsing
 - **Tried**: pdf-parse npm package
-- **Problem**: Node 24 compatibility issues, quirky exports (not a function error)
-- **Solution**: pdfjs-dist
+- **Problem**: Node 24 compatibility issues, quirky exports
+- **Solution at the time**: pdfjs-dist. Now moot — no PDFs in the pipeline.
+
+### Puppeteer on GitHub Actions for UCI scraping
+- **Considered**: Running Puppeteer headlessly in GitHub Actions CI
+- **Problems**: 30-60s spin-up time, flaky in CI, silent failures
+- **Decision**: Cloudflare Browser Rendering instead. Then later retired entirely in favor of the JSON API.
 
 ## Content Filter Learnings
 
-### MIN_SCORE = 4 is correct
-- With BOOST_SCORE = 4 for trusted channels, a trusted channel video needs 0 additional keyword matches
-- Non-trusted sources need at least 4 points from keywords alone
-- This correctly lets Bernard Kerr vlogs through while filtering noise from GoPro etc.
+### MIN_SCORE = 6 with tiered thresholds
+- Base threshold: `MIN_SCORE = 6`
+- Trusted YouTube channels and RSS articles: threshold = 6
+- Untrusted YouTube channels (UCI, Pinkbike YT, Vital etc): threshold = 10 (MIN_SCORE + 4)
+- Rationale: untrusted channels have boilerplate descriptions that mention all disciplines — inflation risk is higher
 
 ### Category key 'results' in cache.json is "Analysis" in the UI
 - The content filter assigns category id `results` to Ben Cathro / Inside the Tape / analysis content
 - The UI label is "Analysis" (changed from "Results" to avoid confusion with the Results data tab)
 - DO NOT rename the category key in cache.json — it would break the filter
+
+### Category tags are display-only
+- Category badges appear on feed cards (~70% accuracy) but there is no filtering by category in the UI
+- Feed is flat chronological; badges are informational only
 
 ### Venue keywords matter more than discipline
 - Adding "south korea" and "yongpyong" to venue list immediately unlocked a flood of relevant content
@@ -118,6 +126,11 @@
 - Net for DHI highlights: 4(trusted) + 4(dhi) - 8(mtbws highlights) + 8(mtbws highlights dhi) = 8 ✅
 - Net for XCO highlights: 4(trusted) - 8(mtbws highlights) - 15(xco) = -19 — correctly dropped ✅
 
+### Paddock/media figure keyword weights
+- High-profile DH-only athletes (Bruni, Goldstone, Holl, etc.): weight 6 — passes on name alone
+- Paddock figures / legends who post mixed content (Cathro, Minnaar, Kerr, Wyn Masters): weight 2 — requires supporting DH signal to pass
+- Ben Cathro was briefly in the +6 rule — caused knee pad product articles to pass (score 8 for RSS). Fixed by moving to +2 only.
+
 ## Design Decisions
 
 ### Option A (dark, acid yellow) was the right aesthetic
@@ -128,66 +141,69 @@
 ### Top 5 with visual weight (not top 3)
 - UCI honors top 3 podium officially
 - Riders culturally recognize top 5 as significant
-- Design: 1-3 get gold/silver/bronze treatment, 4-5 get elevated card style
-- 6+ go in the full results table below
+- Design: 1-3 get gold/silver/bronze treatment, 4-5 get elevated card style, 6+ in full table
 
 ### Names formatted as "Vermette Asa" not "VERMETTE ASA"
-- ChronoRace PDFs store names in ALL CAPS
+- Race result data stores names in ALL CAPS
 - formatName() converts: split on space, capitalize first letter, lowercase rest
-- Edge cases: compound names, accents — acceptable for now
 
 ### Results nav: 4 rows is correct for long-term
 - Year → Venue → Field → Session hierarchy supports going back to 1991
 - Combining Year + Venue in one scrolling row gets unwieldy at 200+ venues
 - Keep them separate even though it looks like a lot of chrome right now
 
+### Rounded pills over sharp corners
+- Results selectors and sub-tabs use rounded pills
+- Sharp corners were tested and feel like form elements/tables, not navigation
+- The timing-screen energy comes from palette and typography, not corner radius
+
+### FREE/PAID badges in PITS → WATCH
+- FREE badge: `background: transparent; border: 1px solid #d4f500; color: #d4f500` — earns the acid accent
+- PAID badge: `background: transparent; border: 1px solid #888; color: #888` — muted, factual, no alarm
+
 ## Deployment Learnings
 
-### Always stash before pull: `git stash && git pull --rebase origin main && git stash pop && git push`
+### Always stash before pull
 - GitHub Actions commits cache.json every hour
 - Straight `git push` fails if Action ran between your last pull and push
-- Plain `git pull --rebase` also fails if you have uncommitted changes — stash first
-- Pattern: stash → pull --rebase → pop → push
+- Pattern: `git stash && git pull --rebase origin main && git stash pop && git push`
+
+### cache.json conflicts during rebase
+- Frequent — Actions commits cache.json while you're working
+- Resolution: `git checkout --theirs public/cache.json && git add public/cache.json`
+- Then continue: `git rebase --continue` or `git stash pop && git push`
 
 ### Service worker caches aggressively
-- After pushing new cache.json, browser may serve old version for minutes
+- After pushing changes, browser may serve old version for minutes
 - Hard refresh (Cmd+Shift+R) forces network fetch
 - For testing: unregister service workers in DevTools → Application → Service Workers
 
-### GitHub Pages serves from /public folder on main branch
-- The folder picker in GitHub Pages settings sometimes fails to show /public
-- If it doesn't appear, the root (/) setting with index.html at root works fine
-- We moved all PWA files (index.html, manifest.json, service-worker.js, icons) to repo root
-
-### Manifest start_url must match actual URL
-- During GitHub Pages era: `/helltrack/`
-- After custom domain: `/`
-- Service worker scope must match
-
 ### Smart quotes break git commit -m
-- Always use single quotes for commit messages in terminal: `git commit -m 'message'`
-- macOS autocorrects to smart quotes in some contexts, which breaks the shell string
+- Always use single quotes: `git commit -m 'message'`
+- macOS autocorrects to smart quotes in some contexts, breaking the shell string
+
+### cp to deploy silently fails
+- The `cp ~/Downloads/file.js scripts/file.js` pattern silently fails on this machine
+- Always edit files directly on disk using Python string replace in Claude Code
 
 ## Things to Research/Consider Later
 
-### Rootsandrain historical data (2015-2023)
+### Historical data (2015–2023)
+- downhillr .rda files available for some years; rootsandrain.com is another source
 - Series URLs confirmed: 2025=series2028, 2024=series1831, 2023=series1622, 2022=series1464
-- Existing Python scraper in scripts/rootsandrain_pull.py
-- Venue-page approach preferred: rootsandrain.com/venue69/leogang/ shows all years
+- Rootsandrain venue-page approach: rootsandrain.com/venue69/leogang/ shows all years
 - Nathan Tomczyk's repo has a proven BS4 scraper: github.com/nathantomczyk/world_cup_downhill_data_science
+- 2019-2021 series IDs still need to be identified
+- The UCI JSON API may cover some historical seasons — worth checking API depth before scraping
 
 ### Rider search / history view
-- data is already structured for it (results.json has rider name/nat per result)
+- Data is already structured for it (results.json has rider name/nat per result)
 - Filter all rounds for a rider name match, show rank/time/gap at each venue
 - Comparison view: two rider searches side by side
-- Deferred until 3+ rounds of 2026 data available
+- Deferred until more rounds of data are available
 
-### iOS install prompt ✅
-- Implemented as one-time banner for iOS Safari users
-- Detects iOS via userAgent, shows Share → Add to Home Screen instructions
-- Dismissal stored in localStorage
-
-### Content categories — potential future additions
-- WynTV (Wyn Masters) — ✅ added (UCtvJR7iamL8WFAbvpsC2HTw)
-- Roots and Rain results — structured results data
-- Martin Whiteley (@captain23mw) — stats/historical context
+### Franchise model
+- Core pipeline is mostly config: channel list, keyword weights, venue slugs, results source
+- Strongest candidate after DH: Helltrack Enduro (EWS, adjacent culture)
+- Prerequisite: prove retention on DH first before expanding
+- Decision criteria: returning users week-over-week across multiple race rounds in GA

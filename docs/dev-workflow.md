@@ -14,11 +14,13 @@ git stash && git pull --rebase origin main && git stash pop && git push
 ### Fetch results for a race round
 ```bash
 cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
-node scripts/results-fetcher.mjs race-of-south-korea-2026
+node scripts/results-fetcher.mjs leogang-2026
 git add public/results.json
-git commit -m 'add results - Round 1 South Korea'
+git commit -m 'results: leogang-2026'
 git stash && git pull --rebase origin main && git stash pop && git push
 ```
+
+Results come from the UCI JSON API directly — no Cloudflare Worker or PDF parsing involved.
 
 ### Deploy frontend changes
 ```bash
@@ -37,20 +39,16 @@ git commit -m 'update riders roster'
 git stash && git pull --rebase origin main && git stash pop && git push
 ```
 
-### Deploy Cloudflare Worker (results scraper)
-```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack/helltrack-results
-npm run deploy
-```
-
 ### Test content filter scoring
 ```bash
 cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 node -e "
 const {scoreItem, categorise} = require('./scripts/content-filter.js');
-const item = {title: 'YOUR TITLE HERE', description: '', channelId: 'UCWS4nfoou79mwo9nHew49fA'};
+const item = {title: 'YOUR TITLE HERE', description: '', channelId: null};
 const score = scoreItem(item);
-console.log('Score:', score, '| Category:', score >= 4 ? categorise(item) : 'DROPPED');
+const threshold = item.channelId ? 10 : 6;  // untrusted YT=10, RSS/trusted=6
+console.log('Score:', score, '| Threshold:', threshold, '| Passes?', score >= threshold);
+if (score >= threshold) console.log('Category:', categorise(item));
 "
 ```
 
@@ -80,16 +78,16 @@ fetch('public/cache.json?t=' + Date.now()).then(r => r.json()).then(d => {
 | PWA app | /index.html (root) | Main frontend |
 | Feed data | /public/cache.json | Generated hourly |
 | Results data | /public/results.json | Race results database |
+| Riders data | /public/riders.json | Generated from CSV |
+| Directory data | /public/directory.json | PITS tab — teams, media, podcasts, UCI |
+| Watch data | /public/watch.json | PITS → WATCH streaming options (update per season) |
 | Content filter | /scripts/content-filter.js | Scoring + categorisation |
 | Cache builder | /scripts/build-cache.js | Orchestrates fetch+filter |
 | YouTube fetcher | /scripts/youtube-fetcher.js | YouTube API calls |
 | RSS fetcher | /scripts/rss-fetcher.js | Pinkbike RSS |
-| Results fetcher | /scripts/results-fetcher.mjs | PDF parser (ESM) |
-| Worker source | /helltrack-results/src/index.js | Cloudflare Worker |
-| Worker config | /helltrack-results/wrangler.jsonc | Worker deployment config |
+| Results fetcher | /scripts/results-fetcher.mjs | UCI JSON API fetcher (ESM) |
 | Rider roster CSV | /scripts/riders.csv | Source of truth for riders |
 | Rider builder | /scripts/build-riders.js | Generates riders.json from CSV |
-| Riders data | /public/riders.json | Generated rider data |
 | Env vars | /.env | API keys (not committed) |
 
 ## Environment Variables
@@ -113,6 +111,13 @@ Also set as GitHub Secrets for Actions.
 | R8 | Whistler | 2026-09-25 | whistler-2026 |
 | R9 | Lake Placid | 2026-10-02 | lake-placid-2026 |
 
+**When to run results-fetcher:**
+- After Q2 wraps on qualifying day (~1hr after last session)
+- After Women Elite finals on race day (~1hr after finish)
+- Run once per day — fetcher pulls all available sessions in one go
+- Leogang R3: workflow has targeted crons at 14:30 UTC June 12 (qualifying) and 13:30 UTC June 13 (finals)
+- Can also trigger manually via GitHub Actions → workflow_dispatch with any venue slug
+
 ## Debugging Tips
 
 ### cache.json conflict during rebase
@@ -135,7 +140,11 @@ Then continue: `git rebase --continue` or `git stash pop && git push`
 - Should be 'none' on feed tabs, 'block' on Results tab
 - Check for `activeTab === 'standings'` in buildTabs (not 'results')
 
-### PDF parsing returns 0 results
-- Run debug: `node scripts/debug-pdf.js` with a known PDF URL
-- Check: UCI IDs in text (should be 10-11 digit numbers)
-- Check: time format matches M:SS.mmm (not H:MM:SS which is XCO)
+### Shorts appearing in main feed
+- Duration-based detection: youtube-fetcher.js calls videos.list with contentDetails, sets `isShort: true` for ≤60s
+- Check `isShortDuration()` in youtube-fetcher.js and `isShort` handling in content-filter.js
+
+### Service worker caching stale content
+- Unregister in DevTools → Application → Service Workers
+- Service worker is currently at `helltrack-v2`
+- Bump the version string in service-worker.js when you need browsers to pick up new files
