@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-07T14:11:11.747Z",
-  "totalItems": 83,
+  "builtAt": "2026-06-07T16:23:52.672Z",
+  "totalItems": 82,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -359,9 +359,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Asa Vermette's Finals Crash POV from the Loudenvielle DH World Cup",
-          "description": "See where it all went wrong for Asa Vermette during finals at the Loudenvielle downhill World Cup.( Comments: 68 )",
+          "description": "See where it all went wrong for Asa Vermette during finals at the Loudenvielle downhill World Cup.( Comments: 70 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29824401/p2pb29824401.jpg",
-          "publishedAt": "2026-06-06T23:55:00.000Z",
+          "publishedAt": "2026-06-06T23:54:00.000Z",
           "url": "https://www.pinkbike.com/news/video-asa-vermettes-finals-crash-pov-from-the-loudenvielle-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 20,
@@ -845,21 +845,6 @@
           "category": "paddock"
         },
         {
-          "id": "https://www.pinkbike.com/news/interview-nick-lester-on-dh-world-cups-data-acquisition-and-mass-damper-testing.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Interview: Nick Lester on DH World Cups, Data Acquisition, &amp; Mass Damper Testing",
-          "description": "As well as a closer look at Nick&#039;s heavily damped Gamux Sego.( Photos: 18, Comments: 61 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29752385/p2pb29752385.jpg",
-          "publishedAt": "2026-06-03T23:30:00.000Z",
-          "url": "https://www.pinkbike.com/news/interview-nick-lester-on-dh-world-cups-data-acquisition-and-mass-damper-testing.html?trk=rss",
-          "categories": [],
-          "score": 8,
-          "category": "paddock"
-        },
-        {
           "id": "vPRetXZRU_c",
           "type": "video",
           "source": "youtube",
@@ -957,9 +942,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Luke Meier-Smith &amp; Dane Jewett's Rapid Schladming DH Laps",
-          "description": "Luke Meier-Smith and Dane Jewett send some fast laps ahead of next week&#039;s Leogang downhill World Cup.",
+          "description": "Luke Meier-Smith and Dane Jewett send some fast laps ahead of next week&#039;s Leogang downhill World Cup.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29829382/p2pb29829382.jpg",
-          "publishedAt": "2026-06-07T14:09:11.719Z",
+          "publishedAt": "2026-06-07T16:20:52.647Z",
           "url": "https://www.pinkbike.com/news/video-luke-meier-smith-and-dane-jewetts-rapid-schladming-dh-laps.html?trk=rss",
           "categories": [],
           "score": 17,
@@ -974,7 +959,7 @@
           "title": "Commenting on World Cup DH Commentary, Specialized's New Demo, &amp; The DH Bar End Trend",
           "description": "Hot (and not-so-hot) takes on the latest mountain bike news and tech.( Comments: 79 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29744391/p2pb29744391.jpg",
-          "publishedAt": "2026-06-04T23:38:00.000Z",
+          "publishedAt": "2026-06-04T23:37:00.000Z",
           "url": "https://www.pinkbike.com/news/commenting-on-world-cup-dh-commentary-specializeds-new-demo-and-the-dh-bar-end-trend.html?trk=rss",
           "categories": [],
           "score": 7,
