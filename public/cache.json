@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-07T18:11:11.213Z",
-  "totalItems": 82,
+  "builtAt": "2026-06-07T20:19:21.839Z",
+  "totalItems": 83,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -359,7 +359,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Asa Vermette's Finals Crash POV from the Loudenvielle DH World Cup",
-          "description": "See where it all went wrong for Asa Vermette during finals at the Loudenvielle downhill World Cup.( Comments: 70 )",
+          "description": "See where it all went wrong for Asa Vermette during finals at the Loudenvielle downhill World Cup.( Comments: 72 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29824401/p2pb29824401.jpg",
           "publishedAt": "2026-06-06T23:53:00.000Z",
           "url": "https://www.pinkbike.com/news/video-asa-vermettes-finals-crash-pov-from-the-loudenvielle-dh-world-cup.html?trk=rss",
@@ -942,12 +942,29 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Luke Meier-Smith &amp; Dane Jewett's Rapid Schladming DH Laps",
-          "description": "Luke Meier-Smith and Dane Jewett send some fast laps ahead of next week&#039;s Leogang downhill World Cup.( Comments: 3 )",
+          "description": "Luke Meier-Smith and Dane Jewett send some fast laps ahead of next week&#039;s Leogang downhill World Cup.( Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29829382/p2pb29829382.jpg",
-          "publishedAt": "2026-06-07T18:07:11.189Z",
+          "publishedAt": "2026-06-07T20:15:21.815Z",
           "url": "https://www.pinkbike.com/news/video-luke-meier-smith-and-dane-jewetts-rapid-schladming-dh-laps.html?trk=rss",
           "categories": [],
           "score": 17,
+          "category": "news"
+        },
+        {
+          "id": "isKmcuW9iQQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "SCHLADMING WORLD CUP WEEK ?!",
+          "description": "Schladming Bikepark is the holy grail of amazing berms and the biggest smiles you can get on a full blown dh race bike...it has endless grip support and youre just on rails! Come along for a sick day with the squad!\n\nThank you for having us Bike park Schladming!\n\nAnd bike camp Schladming for camping and truck parking!\n\n#bksport #ladaman",
+          "thumbnail": "https://i.ytimg.com/vi/isKmcuW9iQQ/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-07T19:42:19Z",
+          "url": "https://www.youtube.com/watch?v=isKmcuW9iQQ",
+          "isShort": false,
+          "score": 10,
           "category": "news"
         },
         {
