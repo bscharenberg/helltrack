@@ -475,6 +475,11 @@ html, body {
 }
 .sheet-play-tri { width:0; height:0; border-style:solid; border-width:10px 0 10px 17px; border-color:transparent transparent transparent var(--acid); margin-left:3px; }
 
+#sheet-yt-player, #sheet-yt-player iframe {
+  width:100% !important; height:100% !important;
+  display:block; border:0;
+}
+
 .sheet-body { padding: 14px 16px 0; }
 
 .sheet-badges {
@@ -545,6 +550,21 @@ html, body {
   transition: opacity 0.15s;
 }
 #sheet-cta:active { opacity:0.85; }
+
+#sheet-yt-link {
+  display:block; width:100%;
+  padding:10px;
+  margin-bottom:8px;
+  background:none;
+  color: var(--text-secondary);
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:12px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+  border:0.5px solid var(--border); border-radius:8px;
+  cursor:pointer; text-align:center; text-decoration:none;
+  transition: opacity 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+#sheet-yt-link:active { opacity:0.7; }
 
 #sheet-share {
   display:block; width:100%;
@@ -1240,6 +1260,7 @@ html, body {
         <div class="venue-label">Format</div>
       </div>
     </div>
+    <a id="sheet-yt-link" href="#" target="_blank" rel="noopener" style="display:none">Open in YouTube →</a>
     <a id="sheet-cta" href="#" target="_blank" rel="noopener">Watch on YouTube</a>
     <button id="sheet-share" onclick="shareItem()">Share</button>
     <span id="sheet-share-confirm"></span>
@@ -1316,20 +1337,111 @@ function lazyImg(src, cls) {
 }
 
 let activeItem = null
+let ytPlayer = null
+let ytApiState = 'unloaded' // 'unloaded' | 'loading' | 'ready'
+let ytApiCallbacks = []
+
+// Extract a YouTube video ID for source==='youtube' items.
+// item.id is already the video ID for our YouTube fetcher output, but fall
+// back to parsing the url (watch?v=, youtu.be/, embed/) for safety.
+function getYouTubeId(item) {
+  if (item.source !== 'youtube') return null
+  if (item.id) return item.id
+  if (!item.url) return null
+  const m = item.url.match(/(?:v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{11})/)
+  return m ? m[1] : null
+}
+
+// Lazily load the YouTube IFrame Player API (needed to detect embed-disabled
+// videos via the onError event — plain <iframe> never fires a JS error for that).
+function loadYouTubeAPI(callback) {
+  if (ytApiState === 'ready') { callback(); return }
+  ytApiCallbacks.push(callback)
+  if (ytApiState === 'unloaded') {
+    ytApiState = 'loading'
+    const tag = document.createElement('script')
+    tag.src = 'https://www.youtube.com/iframe_api'
+    document.head.appendChild(tag)
+    window.onYouTubeIframeAPIReady = () => {
+      ytApiState = 'ready'
+      ytApiCallbacks.forEach(cb => cb())
+      ytApiCallbacks = []
+    }
+  }
+}
+
+// Render the in-app YouTube player into #sheet-thumb. Falls back to the
+// thumbnail + "Watch on YouTube" CTA if embedding is disabled for the video.
+function renderYouTubePlayer(thumbEl, videoId, item) {
+  thumbEl.innerHTML = `<div id="sheet-yt-player"></div>`
+  loadYouTubeAPI(() => {
+    // Sheet may have closed or moved on to a different item while the API loaded
+    if (!activeItem || activeItem.id !== item.id) return
+    if (!document.getElementById('sheet-yt-player')) return
+    if (ytPlayer) { try { ytPlayer.destroy() } catch (e) {} ytPlayer = null }
+    ytPlayer = new YT.Player('sheet-yt-player', {
+      videoId,
+      playerVars: { autoplay: 0, rel: 0, modestbranding: 1 },
+      events: {
+        onError: () => fallbackToCTA(item),
+      },
+    })
+  })
+}
+
+// Restore the static thumbnail + primary CTA — used when embedding is disabled.
+function fallbackToCTA(item) {
+  if (ytPlayer) { try { ytPlayer.destroy() } catch (e) {} ytPlayer = null }
+  const thumbEl = document.getElementById('sheet-thumb')
+  const isArticle = item.type === 'article'
+  const isPodcast = item.type === 'podcast'
+  if (item.thumbnail) {
+    thumbEl.innerHTML = `${lazyImg(item.thumbnail, 'sheet-img')}
+      ${!isArticle && !isPodcast ? `<div class="sheet-play-center"><div class="sheet-play-tri"></div></div>` : ''}`
+  } else {
+    thumbEl.innerHTML = `<div style="font-size:48px;opacity:0.3">${isArticle ? '≡' : isPodcast ? '♪' : '▶'}</div>`
+  }
+  document.getElementById('sheet-yt-link').style.display = 'none'
+  const cta = document.getElementById('sheet-cta')
+  cta.style.display = 'block'
+  cta.textContent = ctaLabel(item)
+  cta.href = item.url || '#'
+}
 
 function openSheet(item) {
   activeItem = item
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
   const isPodcast = item.type === 'podcast'
+  const videoId = getYouTubeId(item)
 
-  // Thumb
+  // Thumb / in-app player
   const thumbEl = document.getElementById('sheet-thumb')
-  if (item.thumbnail) {
-    thumbEl.innerHTML = `${lazyImg(item.thumbnail, 'sheet-img')}
-      ${!isArticle && !isPodcast ? `<div class="sheet-play-center"><div class="sheet-play-tri"></div></div>` : ''}`
+  const ytLink = document.getElementById('sheet-yt-link')
+  const cta = document.getElementById('sheet-cta')
+
+  if (videoId) {
+    renderYouTubePlayer(thumbEl, videoId, item)
+    ytLink.href = item.url || '#'
+    ytLink.style.display = 'block'
+    ytLink.onclick = () => { markSeen(item.url); applySeenState() }
+    cta.style.display = 'none'
+    // Opening the in-app player is the primary engagement now — mark seen immediately.
+    markSeen(item.url)
+    applySeenState()
   } else {
-    thumbEl.innerHTML = `<div style="font-size:48px;opacity:0.3">${isArticle ? '≡' : isPodcast ? '♪' : '▶'}</div>`
+    if (ytPlayer) { try { ytPlayer.destroy() } catch (e) {} ytPlayer = null }
+    if (item.thumbnail) {
+      thumbEl.innerHTML = `${lazyImg(item.thumbnail, 'sheet-img')}
+        ${!isArticle && !isPodcast ? `<div class="sheet-play-center"><div class="sheet-play-tri"></div></div>` : ''}`
+    } else {
+      thumbEl.innerHTML = `<div style="font-size:48px;opacity:0.3">${isArticle ? '≡' : isPodcast ? '♪' : '▶'}</div>`
+    }
+    ytLink.style.display = 'none'
+    cta.style.display = 'block'
+    cta.textContent = ctaLabel(item)
+    cta.href = item.url || '#'
+    cta.onclick = () => { markSeen(item.url); applySeenState() }
   }
 
   // Badges
@@ -1354,12 +1466,6 @@ function openSheet(item) {
     venueEl.style.display = 'none'
   }
 
-  // CTA
-  const cta = document.getElementById('sheet-cta')
-  cta.textContent = ctaLabel(item)
-  cta.href = item.url || '#'
-  cta.onclick = () => { markSeen(item.url); applySeenState() }
-
   // Open
   document.getElementById('sheet-overlay').classList.add('open')
   document.getElementById('sheet').classList.add('open')
@@ -1381,6 +1487,7 @@ function closeSheet() {
   document.getElementById('sheet').classList.remove('open')
   document.body.style.overflow = ''
   activeItem = null
+  if (ytPlayer) { try { ytPlayer.destroy() } catch (e) {} ytPlayer = null }
 }
 
 function shareItem() {
