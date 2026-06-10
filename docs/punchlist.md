@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-06-05
+**Last updated**: 2026-06-09
 
 ## Current State: LIVE ✅
 - helltrack.app live with HTTPS, FEED / RESULTS / RIDERS / PITS navigation
@@ -45,6 +45,7 @@
 - Email hello@helltrack.app via Cloudflare routing + Kit sending domain
 - Kit.com welcome automation (fires immediately on signup)
 - Deep link sharing — Web Share API on mobile, clipboard fallback on desktop (#38)
+- In-app YouTube player in bottom sheet — embedded iframe via YouTube IFrame Player API, "Open in YouTube →" secondary link, falls back to "Watch on YouTube" CTA if embedding is disabled (#40)
 
 ### Content & Data
 - XCO filtering fixed (weight 15 + mtbws highlights -8)
