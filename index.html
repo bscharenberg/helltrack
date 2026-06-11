@@ -700,6 +700,8 @@ html, body {
 .rs-table { width:100%; border-collapse:collapse; }
 .rs-table tr { border-bottom:0.5px solid #1a1a1a; }
 .rs-table tr:last-child { border-bottom:none; }
+.rs-row-dnf { opacity:0.5; }
+.rs-row-dnf .rs-td-rank { font-size:11px; letter-spacing:0.05em; }
 .rs-table td { padding:8px 4px; font-size:13px; vertical-align:middle; }
 .rs-td-rank {
   font-family:'Barlow Condensed',sans-serif;
@@ -1958,29 +1960,31 @@ function renderResults() {
   const rest  = isFinals ? session.slice(5)   : session.slice(3)
 
   const top5Html = top5.map(r => {
-    const posClass = isFinals ? `pos-${r.rank}` : `pos-${r.rank <= 3 ? r.rank : 4}`
+    const status   = r.dnf ? 'DNF' : r.dsq ? 'DSQ' : r.dns ? 'DNS' : null
+    const posClass = isFinals ? `pos-${r.rank || 'x'}` : `pos-${r.rank && r.rank <= 3 ? r.rank : 4}`
     const name     = formatName(r.name)
-    const gap      = r.rank === 1 ? (isFinals ? 'Winner' : 'Fastest') : r.gap || ''
+    const gap      = status ? '' : (r.rank === 1 ? (isFinals ? 'Winner' : 'Fastest') : r.gap || '')
     return `<div class="rs-hero-row ${posClass}">
-  <div class="rs-pos-num">${r.rank}</div>
+  <div class="rs-pos-num">${status || r.rank}</div>
   <div class="rs-rider-info">
     <div class="rs-rider-name">${name}</div>
     <div class="rs-rider-nat">${r.nat || ''}</div>
   </div>
   <div class="rs-time-col">
-    <div class="rs-time">${r.time}</div>
+    <div class="rs-time">${status ? '—' : r.time}</div>
     <div class="rs-gap">${gap}</div>
   </div>
 </div>`
   }).join('')
 
   const tableRows = rest.map(r => {
+    const status = r.dnf ? 'DNF' : r.dsq ? 'DSQ' : r.dns ? 'DNS' : null
     const name = formatName(r.name)
-    return `<tr>
-  <td class="rs-td-rank">${r.rank}</td>
+    return `<tr${status ? ' class="rs-row-dnf"' : ''}>
+  <td class="rs-td-rank">${status || r.rank}</td>
   <td class="rs-td-nat">${r.nat || ''}</td>
   <td class="rs-td-name">${name}</td>
-  <td class="rs-td-time">${r.time}</td>
+  <td class="rs-td-time">${status ? '—' : r.time}</td>
   <td class="rs-td-gap">${r.gap || ''}</td>
   <td class="rs-td-pts">${r.points || ''}</td>
 </tr>`

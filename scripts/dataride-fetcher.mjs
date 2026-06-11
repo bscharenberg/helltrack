@@ -166,21 +166,29 @@ function fmtGap(sec) {
 
 function normalizeResultRow(row) {
   const rankNum = Number(row.RankNumber ?? row.Rank)
-  const irm = (row.Irm || '').trim() || null       // DNF / DNS / DSQ / etc.
+  const irm = (row.Irm || '').trim().toUpperCase() || null   // DNF / DNS / DSQ
   const { name, wasAmbiguous } = canonName(row.DisplayName || row.IndividualDisplayName || '')
   const secs = timeToSeconds(row.ResultValue)
-  return {
+  const out = {
     rank:   Number.isFinite(rankNum) && rankNum > 0 ? rankNum : null,
     name,
     nat:    (row.NationName || '').trim() || null,
     team:   (row.TeamName || '').trim() || null,
     time:   fmtTime(secs) || (row.ResultValue || '').trim() || null,
-    points: Number.isFinite(Number(row.PointPcR)) ? Number(row.PointPcR) : null,
-    irm,
+    gap:    null,
+    points: row.PointPcR != null ? Number(row.PointPcR) : null,
     bib:    (row.Bib || '').trim() || null,
     _secs:  secs,
+    _sortOrder: Number(row.SortOrder ?? 0) || 0,
     _ambiguousName: wasAmbiguous || undefined,
   }
+  // Riders who started but didn't finish/were disqualified/didn't start: keep them, listed
+  // at the bottom with no finish number — same convention as the existing live-data schema
+  // (rank: null + boolean flag), so the spirit of "everyone who lined up" is preserved.
+  if (irm === 'DNF') out.dnf = true
+  else if (irm === 'DSQ') out.dsq = true
+  else if (irm === 'DNS') out.dns = true
+  return out
 }
 
 // ─── Assemble one season → round objects in Helltrack schema ──────────────────
@@ -221,21 +229,26 @@ async function fetchSeason(year, { onLog = () => {} } = {}) {
       const events = asRows(await getEvents(race.Id))
       const ev = events[0]
       if (!ev || !ev.EventId) continue
-      const rows = asRows(await getResults(ev.EventId))
-        .map(normalizeResultRow)
-        .filter(r => r.rank != null)            // drop DNF/DNS/DSQ from ranked list (irm captured separately if needed)
-        .sort((a, b) => a.rank - b.rank)
-      if (!rows.length) continue
+      const allRows  = asRows(await getResults(ev.EventId)).map(normalizeResultRow)
+      const ranked   = allRows.filter(r => r.rank != null).sort((a, b) => a.rank - b.rank)
+      const unranked = allRows.filter(r => r.rank == null).sort((a, b) => a._sortOrder - b._sortOrder)
+      if (!ranked.length) continue
 
       // compute gap vs winner (using parsed seconds captured during normalize)
-      const winSec = rows[0]._secs
-      for (const r of rows) {
+      const winSec = ranked[0]._secs
+      for (const r of ranked) {
         r.gap = (winSec != null && r._secs != null && r.rank !== 1) ? fmtGap(r._secs - winSec) : null
+      }
+      // DNF/DSQ/DNS riders go at the bottom, in their original (sort-order) position, with
+      // no finish number — they rode (or were entered), so they belong in the record.
+      const sessionRows = [...ranked, ...unranked]
+      for (const r of sessionRows) {
         if (r._ambiguousName) review.push(r.name)
         delete r._ambiguousName
         delete r._secs
+        delete r._sortOrder
       }
-      sessions[key] = rows
+      sessions[key] = sessionRows
       if (key.startsWith('finals')) finalsDate = jsonDate(race.MandatoryDate) || jsonDate(comp.EndDate) || finalsDate
     }
     if (!Object.keys(sessions).length) continue
