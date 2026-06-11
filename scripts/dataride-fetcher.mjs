@@ -245,7 +245,9 @@ async function fetchSeason(year, { onLog = () => {} } = {}) {
       round:     isWorlds ? null : (roundOf.get(comp.CompetitionId) ?? null),
       eventType: isWorlds ? 'world-championship' : 'world-cup',
       venue:     venue.name,
-      slug:      `${venue.slug}-${year}`,
+      // Worlds gets a distinct slug so it never collides with a World Cup round at the
+      // same venue/year (e.g. Val di Sole has hosted both).
+      slug:      isWorlds ? `${venue.slug}-wch-${year}` : `${venue.slug}-${year}`,
       country:   venue.country || comp.CountryIsoCode3 || null,
       date:      finalsDate || jsonDate(comp.StartDate),
       source:    'dataride',
