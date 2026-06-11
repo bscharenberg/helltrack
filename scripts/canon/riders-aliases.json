@@ -2,7 +2,7 @@
   "_comment": "Explicit name overrides. Key = any raw/variant spelling (case-insensitive, whitespace-collapsed) OR the algorithm's canonical output. Value = canonical 'Given Family' display name. Add entries here when the parser in canon.mjs gets a name wrong (accents DataRide drops, nobiliary particles, Mc/Mac casing, apostrophe casing, spelling changes across seasons, nicknames). Grown during ingestion as mismatches surface.",
 
   "Loic Bruni": "Loïc Bruni",
-  "Loris Vergier": "Loris Vergier",
   "Lachlan Stevens-Mcnab": "Lachlan Stevens-McNab",
-  "Luke Meier-Smith": "Luke Meier-Smith"
+  "Oisin O Callaghan": "Oisin O'Callaghan",
+  "_apostrophe_note": "DataRide stores some apostrophe surnames with a space (O'Callaghan → 'O CALLAGHAN'). Sweep for these during ingestion and add per name."
 }
