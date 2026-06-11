@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-10T22:11:10.033Z",
-  "totalItems": 94,
+  "builtAt": "2026-06-11T00:23:11.516Z",
+  "totalItems": 93,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -705,9 +705,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV Trackwalk Leogang World Cup 2026",
-          "description": "It was a wet and wild track walk in Leogang.( Comments: 2 )",
+          "description": "It was a wet and wild track walk in Leogang.( Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29846807/p2pb29846807.jpg",
-          "publishedAt": "2026-06-10T22:08:10.009Z",
+          "publishedAt": "2026-06-10T23:56:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-trackwalk-leogang-world-cup-2026.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -1011,23 +1011,6 @@
           "isShort": false,
           "score": 11,
           "category": "paddock"
-        },
-        {
-          "id": "KwEASm46CSw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Testing with FOX Factory teams ahead of DH World Cup round 1 in South Korea!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/KwEASm46CSw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-05-11T22:52:26Z",
-          "url": "https://www.youtube.com/watch?v=KwEASm46CSw",
-          "isShort": false,
-          "score": 14,
-          "category": "paddock"
         }
       ]
     },
@@ -1074,7 +1057,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Leogang DH World Cup Preview: Who’s Racing, How to Watch &amp; What to Expect",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in Austria.( Photos: 7, Comments: 85 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in Austria.( Photos: 7, Comments: 86 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb28274712/p2pb28274712.jpg",
           "publishedAt": "2026-06-09T23:44:00.000Z",
           "url": "https://www.pinkbike.com/news/leogang-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
