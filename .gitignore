@@ -2,3 +2,9 @@
 node_modules/
 .DS_Store
 helltrack-results/
+.claude/
+
+# Historical backfill intermediates — regenerable, not committed.
+# data/raw/    = cached raw UCI DataRide JSON (re-fetched if absent)
+# data/staging = per-season normalized output before merge into public/results.json
+data/
