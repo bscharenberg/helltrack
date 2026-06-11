@@ -4,5 +4,6 @@
   "Loic Bruni": "Loïc Bruni",
   "Lachlan Stevens-Mcnab": "Lachlan Stevens-McNab",
   "Oisin O Callaghan": "Oisin O'Callaghan",
+  "DU PLESSIS J P": "J.P. du Plessis",
   "_apostrophe_note": "DataRide stores some apostrophe surnames with a space (O'Callaghan → 'O CALLAGHAN'). Sweep for these during ingestion and add per name."
 }

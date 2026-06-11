@@ -272,6 +272,17 @@ async function fetchSeason(year, { onLog = () => {} } = {}) {
     onLog(`  ✓ ${(isWorlds ? 'WC' : 'R' + roundOf.get(comp.CompetitionId)).padEnd(4)} ${venue.name.padEnd(20)} ${Object.keys(sessions).join(', ')}`)
   }
 
+  // Disambiguate slug collisions — e.g. 2021 had two World Cup rounds at Snowshoe
+  // (double-header). Without this, the second merge would overwrite the first.
+  const slugCounts = {}
+  for (const r of rounds) slugCounts[r.slug] = (slugCounts[r.slug] || 0) + 1
+  for (const r of rounds) {
+    if (slugCounts[r.slug] > 1) {
+      r.slug += r.round != null ? `-r${r.round}` : '-wch2'
+      onLog(`  ⚠ slug collision resolved → ${r.slug}`)
+    }
+  }
+
   if (review.length) onLog(`  ⚠ ${review.length} ambiguous-cased names flagged for canon review: ${[...new Set(review)].slice(0,10).join('; ')}`)
   return { year: String(year), rounds, reviewNames: [...new Set(review)] }
 }

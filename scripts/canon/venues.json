@@ -37,11 +37,23 @@
   "andorra la vella":    { "name": "Vallnord",            "slug": "vallnord",            "country": "AND" },
   "mona yongpyong":      { "name": "Mona YongPyong",      "slug": "mona-yongpyong",      "country": "KOR" },
   "yongpyong":           { "name": "Mona YongPyong",      "slug": "mona-yongpyong",      "country": "KOR" },
+  "lourdes":             { "name": "Lourdes",             "slug": "lourdes",             "country": "FRA" },
+  "lousa":               { "name": "Lousã",               "slug": "lousa",               "country": "POR" },
+  "losinj":              { "name": "Lošinj",              "slug": "losinj",              "country": "CRO" },
+  "méribel":             { "name": "Méribel",             "slug": "meribel",             "country": "FRA" },
+  "meribel":             { "name": "Méribel",             "slug": "meribel",             "country": "FRA" },
+  "val d'isère":         { "name": "Val d'Isère",         "slug": "val-d-isere",         "country": "FRA" },
+  "val d'isere":         { "name": "Val d'Isère",         "slug": "val-d-isere",         "country": "FRA" },
+  "canberra":            { "name": "Canberra",            "slug": "canberra",            "country": "AUS" },
 
   "_region_comment":     "DataRide Race.Venue sometimes carries a region rather than the venue name. These map region/locality strings to the canonical DH venue. Add per-season as they surface.",
   "haute-savoie":        { "name": "Les Gets",            "slug": "les-gets",            "country": "FRA" },
   "valais":              { "name": "Champéry",            "slug": "champery",            "country": "SUI" },
   "salzburgerland":      { "name": "Leogang",             "slug": "leogang",             "country": "AUT" },
   "saalfelden leogang":  { "name": "Leogang",             "slug": "leogang",             "country": "AUT" },
-  "szczyrk":             { "name": "Bielsko-Biała",       "slug": "bielsko-biala",       "country": "POL" }
+  "szczyrk":             { "name": "Bielsko-Biała",       "slug": "bielsko-biala",       "country": "POL" },
+  "les portes du soleil":{ "name": "Les Gets",            "slug": "les-gets",            "country": "FRA" },
+
+  "_event_comment":      "DataRide sometimes carries the host CITY of a multi-discipline World Championships rather than the actual DH venue. Verified per-edition (web search), not guessable from substrings alone.",
+  "glasgow":             { "name": "Fort William",        "slug": "fort-william",        "country": "GBR" }
 }
