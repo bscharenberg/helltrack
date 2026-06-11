@@ -1796,7 +1796,7 @@ function buildSeasonBar() {
   const rounds = currentRounds()
   if (roundBar) {
     roundBar.innerHTML = rounds.map((r, i) => {
-      const label = r.type === 'World Championships'
+      const label = (r.eventType === 'world-championship' || r.type === 'World Championships')
         ? `Worlds · ${r.venue.split(/[ ,]/)[0]}`
         : `R${r.round} · ${r.venue.split(/[ ,]/)[0]}`
       return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}"
