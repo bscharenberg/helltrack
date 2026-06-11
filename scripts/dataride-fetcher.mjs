@@ -9,9 +9,10 @@
  * Filters to Elite DHI, World Cup (ClassCode CDM) + World Championships (ClassCode CM).
  *
  * Usage:
- *   node scripts/dataride-fetcher.mjs <year>            # fetch + normalize → staging file (NO merge)
- *   node scripts/dataride-fetcher.mjs <year> --merge    # also merge into public/results.json
- *   node scripts/dataride-fetcher.mjs 2025 --validate    # fetch + diff against existing results.json
+ *   node scripts/dataride-fetcher.mjs <year>                   # fetch + normalize → staging file (NO merge)
+ *   node scripts/dataride-fetcher.mjs <year> --merge           # upsert rounds (by slug) into public/results.json
+ *   node scripts/dataride-fetcher.mjs <year> --replace-season  # replace ALL of a season's rounds with DataRide's
+ *   node scripts/dataride-fetcher.mjs 2025 --validate           # fetch + diff against existing results.json
  *
  * Raw API responses are cached under data/raw/dataride/ so re-runs never re-hit the UCI API.
  */
@@ -279,8 +280,9 @@ async function fetchSeason(year, { onLog = () => {} } = {}) {
 async function main() {
   const year = process.argv[2]
   const merge    = process.argv.includes('--merge')
+  const replace  = process.argv.includes('--replace-season')
   const validate = process.argv.includes('--validate')
-  if (!year) { console.log('Usage: node scripts/dataride-fetcher.mjs <year> [--merge|--validate]'); process.exit(0) }
+  if (!year) { console.log('Usage: node scripts/dataride-fetcher.mjs <year> [--merge|--replace-season|--validate]'); process.exit(0) }
 
   const { rounds, reviewNames } = await fetchSeason(year, { onLog: s => console.log(s) })
   console.log(`\n${year}: ${rounds.length} rounds assembled`)
@@ -292,7 +294,7 @@ async function main() {
   if (reviewNames.length) console.log(`review names: ${reviewNames.join('; ')}`)
 
   if (validate) await validateAgainstExisting(year, rounds)
-  if (merge)    mergeIntoResults(year, rounds)
+  if (merge || replace) mergeIntoResults(year, rounds, { replace })
 }
 
 // Diff DataRide finals winners/podiums vs what's already in results.json (correctness check).
@@ -314,21 +316,29 @@ async function validateAgainstExisting(year, rounds) {
   }
 }
 
-function mergeIntoResults(year, rounds) {
+function mergeIntoResults(year, rounds, { replace = false } = {}) {
   const data = fs.existsSync(RESULTS_PATH)
     ? JSON.parse(fs.readFileSync(RESULTS_PATH, 'utf8'))
     : { lastUpdated: '', seasons: {} }
   if (!data.seasons) data.seasons = {}
   if (!data.seasons[year]) data.seasons[year] = { rounds: [] }
-  const target = data.seasons[year].rounds
-  for (const r of rounds) {
-    const idx = target.findIndex(x => x.slug === r.slug)
-    if (idx >= 0) target[idx] = r; else target.push(r)
+
+  if (replace) {
+    const before = data.seasons[year].rounds.length
+    data.seasons[year].rounds = [...rounds]
+    console.log(`\n♻️  replaced season ${year}: ${before} existing round(s) → ${rounds.length} from DataRide`)
+  } else {
+    const target = data.seasons[year].rounds
+    for (const r of rounds) {
+      const idx = target.findIndex(x => x.slug === r.slug)
+      if (idx >= 0) target[idx] = r; else target.push(r)
+    }
+    console.log(`\n✅ merged ${rounds.length} ${year} round(s) into public/results.json (${target.length} total)`)
   }
-  target.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
+
+  data.seasons[year].rounds.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
   data.lastUpdated = new Date().toISOString()
   fs.writeFileSync(RESULTS_PATH, JSON.stringify(data, null, 2))
-  console.log(`\n✅ merged ${rounds.length} ${year} rounds into public/results.json`)
 }
 
 export { fetchSeason }
