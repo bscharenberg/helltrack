@@ -1,11 +1,13 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-06-09
+**Last updated**: 2026-06-10
 
 ## Current State: LIVE ✅
 - helltrack.app live with HTTPS, FEED / RESULTS / RIDERS / PITS navigation
 - Hourly cache refresh running clean
-- Results data: 2025–2026 via UCI JSON API, 2024 via downhillr .rda import
+- Results data: 2025–2026 via UCI JSON API (replaced/corrected), 2009–2024 backfilled via
+  UCI DataRide JSON API (16 seasons, see `docs/historical-data.md` §7/§9). DNF/DSQ/DNS riders
+  kept and listed last with no finish number.
 - Shorts strip in feed with duration-based detection (≤60s); seen/dim state on all cards
 - PITS tab with TEAMS / MEDIA / PODCASTS / UCI / WATCH sub-tabs; real broadcaster data in watch.json
 - Email list via Kit.com (hello@helltrack.app)
@@ -69,17 +71,20 @@
 | # | Item | Size | Priority | Description |
 |---|---|---|---|---|
 | 7 | Real PWA icon | S | Low | Replace placeholder HT icon. Need 192×192 and 512×512 PNG from designer. |
-| 36b | 2024 results quality pass | S | Medium | Re-fetch 2024 data via UCI JSON API to replace .rda import. Verify winner accuracy (Bielsko-Biała 2024 men P1 flagged as wrong). Combine with #34 audit. |
-| 34 | Results data accuracy audit | M | Medium | Verify all 2024 round winners against authoritative sources. |
-| 5 | Historical results 2015–2023 | L | Low | Scrape and integrate 9 years of World Cup DH results. rootsandrain.com or downhillr .rda. Existing scraper at scripts/rootsandrain_pull.py. Series IDs: 2023=series1622, 2022=series1464; 2019–2021 IDs unknown. Check UCI JSON API depth before scraping. |
-| 8 | Rider search in results | M | Low | Filter results.json for a rider name, show rank/time/gap across all rounds. Deferred until more data. |
+| 36b | 2024 results quality pass | S | Medium | ~~Re-fetch 2024 data via UCI JSON API~~ — done as part of the 2009–2024 DataRide backfill (2026-06-10). Bielsko-Biała 2024 winner now sourced from DataRide; re-verify against #34. |
+| 34 | Results data accuracy audit | M | Medium | Verify all 2024 round winners against authoritative sources. Podiums spot-checked against known history during the DataRide backfill (all seasons 2009-2024) — looked correct, but a formal audit hasn't been done. |
+| 5 | ~~Historical results 2015–2023~~ | — | Done | ~~Scrape and integrate~~ — superseded by the 2009–2024 UCI DataRide backfill (2026-06-10). See `docs/historical-data.md` §7/§9. |
+| 37 | results.json file size (8.0 MB) | M | Medium | After the 2009–2024 backfill, results.json grew from ~150 KB to 8.0 MB. Decide: split into `results-<year>.json` lazy-loaded per season, or keep monolithic. See `docs/historical-data.md` §8. |
+| 38 | 2023–2024 finals-women possibly truncated | M | Medium | Most 2023–2024 World Cup rounds show only ~10–13 finals-women rows (vs ~15–18 in 2021–22, ~32–40 at Worlds), with no DNF/DSQ/DNS entries. DataRide's own Results endpoint returns only those rows — unclear if this is a DataRide data gap (need PDF supplement) or a real 2023+ format change (smaller finals fields at regular rounds). Needs research before deciding on a fix. See `docs/historical-data.md` §9. |
+| 39 | 2022 Lenzerheide missing qualifying-men | S | Low | DataRide has no Men Elite qualifying race for this competition. Likely a genuine source gap; no known fix. See `docs/historical-data.md` §9. |
+| 8 | Rider search in results | M | Low | Filter results.json for a rider name, show rank/time/gap across all rounds. Now has 16 years of data to work with. |
 | 9 | Rider comparison | M | Low | Two rider searches side by side. Depends on #8. |
 | 10 | Season standings / points table | M | Low | Points per round already in results.json. Aggregate into standings view by season. |
 | 33b | ~~Thumbs-down filter feedback~~ | — | Dropped | Filter is clean enough. GA card_open provides sufficient signal. |
 
 ### Notes on backlog items
-- **#36b / #34**: Combine these — audit 2024 winners, re-fetch from UCI API where it covers 2024, manually correct anything it doesn't.
-- **#5 (historical data)**: The UCI JSON API may cover some historical seasons — check API depth first before scraping rootsandrain.
+- **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
+- **#37/#38/#39**: Surfaced by the 2009–2024 DataRide backfill completeness audit (2026-06-10) — see `docs/historical-data.md` §9 for full detail.
 
 ---
 
