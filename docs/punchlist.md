@@ -49,6 +49,7 @@
 - Kit.com welcome automation (fires immediately on signup)
 - Deep link sharing — Web Share API on mobile, clipboard fallback on desktop (#38)
 - In-app YouTube player in bottom sheet — embedded iframe via YouTube IFrame Player API, "Open in YouTube →" secondary link, falls back to "Watch on YouTube" CTA if embedding is disabled (#40)
+- Rider search view in RESULTS tab — diacritic-normalized lookup across all seasons, picker for ambiguous matches, full history table (#8)
 
 ### Content & Data
 - XCO filtering fixed (weight 15 + mtbws highlights -8)
@@ -79,8 +80,8 @@
 | 37 | results.json file size (8.0 MB) | M | Medium | After the 2009–2024 backfill, results.json grew from ~150 KB to 8.0 MB. Decide: split into `results-<year>.json` lazy-loaded per season, or keep monolithic. See `docs/historical-data.md` §8. |
 | 38 | 2023–2024 finals-women possibly truncated | M | Medium | Most 2023–2024 World Cup rounds show only ~10–13 finals-women rows (vs ~15–18 in 2021–22, ~32–40 at Worlds), with no DNF/DSQ/DNS entries. DataRide's own Results endpoint returns only those rows — unclear if this is a DataRide data gap (need PDF supplement) or a real 2023+ format change (smaller finals fields at regular rounds). Needs research before deciding on a fix. See `docs/historical-data.md` §9. |
 | 39 | 2022 Lenzerheide missing qualifying-men | S | Low | DataRide has no Men Elite qualifying race for this competition. Likely a genuine source gap; no known fix. See `docs/historical-data.md` §9. |
-| 8 | Rider search in results | M | Low | Filter results.json for a rider name, show rank/time/gap across all rounds. Now has 16 years of data to work with. |
-| 9 | Rider comparison | M | Low | Two rider searches side by side. Depends on #8. |
+| 8 | ~~Rider search in results~~ | — | Done | ~~Filter results.json for a rider name, show rank/time/gap across all rounds~~ — new "Search" sub-view in RESULTS tab, diacritic-normalized lookup across all 16 seasons, picker for ambiguous matches, full history table sorted most recent first (2026-06-12, `69d5bc1`). |
+| 9 | Rider comparison | M | Low | Two rider searches side by side. Depends on #8 (done). |
 | 10 | Season standings / points table | M | Low | Points per round already in results.json. Aggregate into standings view by season. |
 | 33b | ~~Thumbs-down filter feedback~~ | — | Dropped | Filter is clean enough. GA card_open provides sufficient signal. |
 
