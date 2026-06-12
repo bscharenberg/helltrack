@@ -1155,6 +1155,13 @@ html, body {
   box-shadow: none !important;
   margin-top: 16px !important;
 }
+
+/* ── iOS install tip ── */
+@keyframes ios-tip-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(5px); }
+}
+#ios-tip-arrow { animation: ios-tip-bounce 1.4s ease-in-out infinite; }
 </style>
 </head>
 <body>
@@ -2215,43 +2222,37 @@ async function loadResults() {
 
 
 // ── iOS install tip ───────────────────────────────────────────────────────────
+const visitCount = Number(localStorage.getItem('helltrack-visit-count') || '0') + 1
+localStorage.setItem('helltrack-visit-count', String(visitCount))
+
 function showIOSTip() {
-  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent)
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const isStandalone = window.navigator.standalone === true
-  const dismissed = localStorage.getItem('helltrack-ios-tip-dismissed')
-  if (isIOS && !isStandalone && !dismissed) {
-    const tip = document.getElementById('ios-install-tip')
-    if (tip) tip.style.display = 'flex'
+  const dismissed = localStorage.getItem('hideInstallPrompt')
+  if (!isIOS || isStandalone || dismissed || visitCount < 2) return
+
+  const isSafari = !/CriOS|FxiOS/.test(navigator.userAgent)
+  const body  = document.getElementById('ios-tip-body')
+  const arrow = document.getElementById('ios-tip-arrow')
+  if (isSafari) {
+    body.innerHTML = `Tap the <strong style="color:#888">Share</strong> icon below, then <strong style="color:#888">Add to Home Screen</strong>`
+    arrow.style.display = 'block'
+  } else {
+    body.textContent = 'Open in Safari to add Helltrack to your home screen'
+    arrow.style.display = 'none'
   }
+
+  const tip = document.getElementById('ios-install-tip')
+  if (tip) tip.style.display = 'flex'
 }
 
 function dismissIOSTip() {
   const tip = document.getElementById('ios-install-tip')
   if (tip) tip.style.display = 'none'
-  localStorage.setItem('helltrack-ios-tip-dismissed', '1')
+  localStorage.setItem('hideInstallPrompt', '1')
 }
 
 // Show after a short delay so it doesn't compete with page load
-setTimeout(showIOSTip, 3000)
-
-
-// ── iOS install tip ───────────────────────────────────────────────────────────
-function showIOSTip() {
-  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent)
-  const isStandalone = window.navigator.standalone === true
-  const dismissed = localStorage.getItem('helltrack-ios-tip-dismissed')
-  if (isIOS && !isStandalone && !dismissed) {
-    const tip = document.getElementById('ios-install-tip')
-    if (tip) tip.style.display = 'flex'
-  }
-}
-
-function dismissIOSTip() {
-  const tip = document.getElementById('ios-install-tip')
-  if (tip) tip.style.display = 'none'
-  localStorage.setItem('helltrack-ios-tip-dismissed', '1')
-}
-
 setTimeout(showIOSTip, 3000)
 
 
@@ -2574,35 +2575,16 @@ loadFeed()
     <div>
       <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600;
         letter-spacing:0.06em; text-transform:uppercase; color:var(--text-primary); margin-bottom:2px;">
-        Add to home screen
+        Install Helltrack
       </div>
-      <div style="font-size:12px; color:var(--text-muted);">
-        Tap <strong style="color:#888">Share</strong> then <strong style="color:#888">Add to Home Screen</strong>
-      </div>
-    </div>
-    <button onclick="dismissIOSTip()" style="background:none; border:none; color:var(--text-muted);
-      font-size:22px; cursor:pointer; padding:4px; line-height:1; flex-shrink:0;">×</button>
-  </div>
-</div>
-
-<!-- iOS install tip -->
-<div id="ios-install-tip" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:190;
-  background:#191919; border-top:0.5px solid #2a2a2a;
-  padding:12px 16px calc(var(--safe-bottom) + 12px);
-  flex-direction:column; gap:6px;">
-  <div style="display:flex; align-items:center; justify-content:space-between;">
-    <div>
-      <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600;
-        letter-spacing:0.06em; text-transform:uppercase; color:var(--text-primary); margin-bottom:2px;">
-        Add to home screen
-      </div>
-      <div style="font-size:12px; color:var(--text-muted);">
-        Tap <strong style="color:#888">Share</strong> then <strong style="color:#888">Add to Home Screen</strong>
+      <div id="ios-tip-body" style="font-size:12px; color:var(--text-muted);">
+        Tap the <strong style="color:#888">Share</strong> icon below, then <strong style="color:#888">Add to Home Screen</strong>
       </div>
     </div>
     <button onclick="dismissIOSTip()" style="background:none; border:none; color:var(--text-muted);
       font-size:22px; cursor:pointer; padding:4px; line-height:1; flex-shrink:0;">×</button>
   </div>
+  <div id="ios-tip-arrow" style="display:none; text-align:center; color:var(--acid); font-size:18px;">&darr;</div>
 </div>
 
 <!-- Feedback button -->
