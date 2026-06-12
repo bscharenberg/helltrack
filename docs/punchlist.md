@@ -1,6 +1,6 @@
 # Helltrack — Product Backlog & Punch List
 
-**Last updated**: 2026-06-10
+**Last updated**: 2026-06-12
 
 ## Current State: LIVE ✅
 - helltrack.app live with HTTPS, FEED / RESULTS / RIDERS / PITS navigation
@@ -13,6 +13,7 @@
 - Email list via Kit.com (hello@helltrack.app)
 - R1 South Korea and R2 Loudenvielle results live
 - Results fetcher workflow: targeted crons for Leogang (14:30 UTC June 12 qualifying, 13:30 UTC June 13 finals)
+- Branding finalized: chainsaw icon (192×192/512×512), header icon + white wordmark lockup, OG/Twitter share card and meta tags live
 
 ---
 
@@ -70,7 +71,8 @@
 
 | # | Item | Size | Priority | Description |
 |---|---|---|---|---|
-| 7 | Real PWA icon | S | Low | Replace placeholder HT icon. Need 192×192 and 512×512 PNG from designer. |
+| 7 | ~~Real PWA icon~~ | — | Done | ~~Replace placeholder HT icon~~ — replaced with chainsaw logo (icon-192.png/icon-512.png, #d4f500), header updated to icon + white wordmark lockup, OG/Twitter meta tags added (2026-06-12). |
+| 41 | Dynamic OG image for video shares (Cloudflare Worker) | S | Low | Static `og:image` can't differ between homepage and `?v=` video shares. Worker (same pattern as helltrack-rss) checks for `?v=` param: if present, injects that video's YouTube thumbnail (`maxresdefault.jpg`, fallback `hqdefault.jpg`) as `og:image` (+ optionally `og:title`); if absent, serves the static brand card. Needs route binding on helltrack.app domain (not just workers.dev). Est. ~1 hour. Build when share volume justifies it. |
 | 36b | 2024 results quality pass | S | Medium | ~~Re-fetch 2024 data via UCI JSON API~~ — done as part of the 2009–2024 DataRide backfill (2026-06-10). Bielsko-Biała 2024 winner now sourced from DataRide; re-verify against #34. |
 | 34 | Results data accuracy audit | M | Medium | Verify all 2024 round winners against authoritative sources. Podiums spot-checked against known history during the DataRide backfill (all seasons 2009-2024) — looked correct, but a formal audit hasn't been done. |
 | 5 | ~~Historical results 2015–2023~~ | — | Done | ~~Scrape and integrate~~ — superseded by the 2009–2024 UCI DataRide backfill (2026-06-10). See `docs/historical-data.md` §7/§9. |
@@ -85,6 +87,39 @@
 ### Notes on backlog items
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
 - **#37/#38/#39**: Surfaced by the 2009–2024 DataRide backfill completeness audit (2026-06-10) — see `docs/historical-data.md` §9 for full detail.
+- **#41**: Confirm `maxresdefault.jpg` exists for most videos before building — falls back to `hqdefault.jpg` if not.
+
+---
+
+## Pending PBIs — wordmark/icon batch (queued, model: Sonnet)
+
+Written 2026-06-12, not yet built. PBI 1 (OG image swap) supersedes the generated `og-image.png` — designer's final file is a straight drop-in, no code change.
+
+**PBI 1 — Swap OG share image**
+- **What**: Replace generated OG image with designer's final version (chainsaw-as-T lockup)
+- **Logic**: Replace `/og-image.png` in repo root with the new file. No code change — meta tags already point to this filename. Confirm file is 1200×630 before swapping.
+- **File**: `/og-image.png`
+- **Done when**: opengraph.xyz shows the new card; raw URL `helltrack.app/og-image.png` loads the new image
+
+**PBI 2 — Header icon to rounded-corner version**
+- **What**: Swap the header app icon to the rounded-corner variant
+- **Logic**: In `index.html` header, replace icon source with the rounded-corner green chainsaw asset. Recolor to `#d4f500` if source is still `#ceff00`. Keep size 40px. Do NOT change the PWA home-screen icons (`icon-192.png`/`icon-512.png`) — those stay square-source for the iOS mask.
+- **File**: `/index.html` (header), icon asset
+- **Done when**: Header shows rounded-corner chainsaw; home-screen PWA icon unchanged
+
+**PBI 3 — Replace header wordmark text with SVG wordmark**
+- **What**: Replace Barlow Condensed "HELLTRACK" header text with the designer's SVG wordmark
+- **Logic**:
+  1. Replace the "HELLTRACK" text element in the header with inline SVG (or `<img>`) of `HT-Wordmark.svg`
+  2. Confirm SVG fill is white `#ffffff`, accent `#d4f500`
+  3. Add `alt="Helltrack"` (if `<img>`) or `role="img"` + `aria-label="Helltrack"` + `<title>Helltrack</title>` (if inline SVG)
+  4. Constrain by height (~26–28px) so it scales cleanly; width auto
+  5. Keep "DOWNHILL RACING" subtext below in muted gray
+  6. Bump service worker cache `helltrack-v3` → `helltrack-v4`
+- **File**: `/index.html` (header markup + styles), `service-worker.js`, wordmark SVG
+- **Done when**: Header shows SVG wordmark (crisp at all densities) next to rounded icon, subtext unchanged, screen reader announces "Helltrack"
+
+**Flag to eyeball after PBI 3**: the icon and the wordmark both contain a chainsaw — check the header live with both side by side. If redundant, drop the separate icon and let the wordmark carry the header alone.
 
 ---
 
