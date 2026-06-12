@@ -78,6 +78,12 @@
       "description": "Paddock access",
       "primary": { "url": "https://www.youtube.com/@wyntv6148", "icon": "youtube" },
       "secondary": null
+    },
+    {
+      "name": "Rob Warner",
+      "description": "The voice of DH — commentary and stories",
+      "primary": { "url": "https://www.instagram.com/robwarner970", "icon": "instagram" },
+      "secondary": { "url": "https://www.youtube.com/channel/UCi955Vn7JGqz30PlaMi-QfA", "icon": "youtube" }
     }
   ],
   "podcasts": [
@@ -92,6 +98,12 @@
       "description": "DH racing deep dives",
       "primary": { "url": "https://www.youtube.com/downtimemountainbikepodcast", "icon": "youtube" },
       "secondary": { "url": "https://open.spotify.com/show/3wr0yy2aq2ZoAPz5537zFW", "icon": "spotify" }
+    },
+    {
+      "name": "The Ride Companion",
+      "description": "Olly Wilkins + Davi Birks — DH riders and guests",
+      "primary": { "url": "https://www.youtube.com/@TheRideCompanion", "icon": "youtube" },
+      "secondary": { "url": "https://open.spotify.com/show/66evYlliy7rOpMgvABeBgw", "icon": "spotify" }
     }
   ],
   "uci": [
