@@ -91,35 +91,14 @@
 
 ---
 
-## Pending PBIs — wordmark/icon batch (queued, model: Sonnet)
+## Wordmark/icon batch — done (2026-06-12)
 
-Written 2026-06-12, not yet built. PBI 1 (OG image swap) supersedes the generated `og-image.png` — designer's final file is a straight drop-in, no code change.
+All three PBIs shipped:
+- **PBI 1** — `/og-image.png` swapped to designer's final chainsaw-as-T HELLTRACK lockup (1200×630). (`944819f`)
+- **PBI 2** — Header icon swapped to rounded-corner chainsaw, recolored `#ceff00`→`#d4f500`, 40px, PWA home-screen icons (`icon-192.png`/`icon-512.png`) untouched. New asset `icon-round-192.png`. (`c179996`)
+- **PBI 3** — Header "HELLTRACK" text replaced with inline SVG wordmark (white `#ffffff`, 26px height, `role="img"`/`aria-label`/`<title>` for a11y), subtext unchanged, SW cache bumped `helltrack-v3`→`helltrack-v4`. (`2416bfe`)
 
-**PBI 1 — Swap OG share image**
-- **What**: Replace generated OG image with designer's final version (chainsaw-as-T lockup)
-- **Logic**: Replace `/og-image.png` in repo root with the new file. No code change — meta tags already point to this filename. Confirm file is 1200×630 before swapping.
-- **File**: `/og-image.png`
-- **Done when**: opengraph.xyz shows the new card; raw URL `helltrack.app/og-image.png` loads the new image
-
-**PBI 2 — Header icon to rounded-corner version**
-- **What**: Swap the header app icon to the rounded-corner variant
-- **Logic**: In `index.html` header, replace icon source with the rounded-corner green chainsaw asset. Recolor to `#d4f500` if source is still `#ceff00`. Keep size 40px. Do NOT change the PWA home-screen icons (`icon-192.png`/`icon-512.png`) — those stay square-source for the iOS mask.
-- **File**: `/index.html` (header), icon asset
-- **Done when**: Header shows rounded-corner chainsaw; home-screen PWA icon unchanged
-
-**PBI 3 — Replace header wordmark text with SVG wordmark**
-- **What**: Replace Barlow Condensed "HELLTRACK" header text with the designer's SVG wordmark
-- **Logic**:
-  1. Replace the "HELLTRACK" text element in the header with inline SVG (or `<img>`) of `HT-Wordmark.svg`
-  2. Confirm SVG fill is white `#ffffff`, accent `#d4f500`
-  3. Add `alt="Helltrack"` (if `<img>`) or `role="img"` + `aria-label="Helltrack"` + `<title>Helltrack</title>` (if inline SVG)
-  4. Constrain by height (~26–28px) so it scales cleanly; width auto
-  5. Keep "DOWNHILL RACING" subtext below in muted gray
-  6. Bump service worker cache `helltrack-v3` → `helltrack-v4`
-- **File**: `/index.html` (header markup + styles), `service-worker.js`, wordmark SVG
-- **Done when**: Header shows SVG wordmark (crisp at all densities) next to rounded icon, subtext unchanged, screen reader announces "Helltrack"
-
-**Flag to eyeball after PBI 3**: the icon and the wordmark both contain a chainsaw — check the header live with both side by side. If redundant, drop the separate icon and let the wordmark carry the header alone.
+**Eyeball check (post-PBI 3)**: `HT-Wordmark.svg` is plain white "HELLTRACK" lettering — no embedded chainsaw, no `#d4f500` accent. The rounded chainsaw icon (PBI 2) is the only chainsaw in the header, so there's no redundancy. Kept both icon and wordmark.
 
 ---
 
