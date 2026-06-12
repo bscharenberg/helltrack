@@ -83,12 +83,89 @@
 | 8 | ~~Rider search in results~~ | — | Done | ~~Filter results.json for a rider name, show rank/time/gap across all rounds~~ — new "Search" sub-view in RESULTS tab, diacritic-normalized lookup across all 16 seasons, picker for ambiguous matches, full history table sorted most recent first (2026-06-12, `69d5bc1`). |
 | 9 | Rider comparison | M | Low | Two rider searches side by side. Depends on #8 (done). |
 | 10 | Season standings / points table | M | Low | Points per round already in results.json. Aggregate into standings view by season. |
+| 42 | Rider-primary search: venue-grouped history cards | M | Medium | Builds on #8 (done). Group a rider's results by venue (most-recent visit first); finals rank is the visual headline (acid yellow for P1, gray otherwise) with a cross-year trajectory per venue (e.g. Leogang: 1 / 4 / 2). Q1/Q2/splits/points collapse behind a tap. DNF/DNS/DSQ shown as the headline with a red DNF badge — never substitute a better session. Full spec in "Pending PBIs — fantasy picking" below. |
+| 43 | Venue conditions tagging | S | Low | Hand-entered `conditions` tag (+ optional `conditionsNote`) per round in results.json, shown as a muted chip on the venue/year row. Data + display only, no filtering UI yet. **Open decision** — see notes below. Full spec in "Pending PBIs — fantasy picking" below. |
+| 44 | Venue cross-year view + rider↔venue loop | M | Medium | Depends on #42. Selecting a venue in Results adds a cross-year top-5 podium stack (respects gender/session toggles, reuses podium styling); the rider card's venue-name tap (from #42) deep-links into it, with back-navigation returning to the rider's search results. Full spec in "Pending PBIs — fantasy picking" below. |
 | 33b | ~~Thumbs-down filter feedback~~ | — | Dropped | Filter is clean enough. GA card_open provides sufficient signal. |
 
 ### Notes on backlog items
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
 - **#37/#38/#39**: Surfaced by the 2009–2024 DataRide backfill completeness audit (2026-06-10) — see `docs/historical-data.md` §9 for full detail.
 - **#41**: Confirm `maxresdefault.jpg` exists for most videos before building — falls back to `hqdefault.jpg` if not.
+- **#43**: Open decision — a structured `conditions` enum (`dry`/`wet`/`mixed`/`dusty`/`hot`) as the filterable field, plus optional `conditionsNote` free text for color, vs. pure free-form notes. The stated use case ("filter for wet races") only works with the structured option. Confirm before building.
+- **Tire/setup data** (research note, not a PBI) — no clean structured source exists; revisit only if one appears, otherwise too sparse/manual to be worth building.
+
+---
+
+## Pending PBIs — fantasy picking (rider/venue) batch
+
+Three sequenced PBIs aimed at the "fantasy team picking" use case: is this rider
+consistent across venues, and who performs well at a given venue. #42 and #44 are
+sequenced (#44 depends on #42); #43 is independent but has an open decision —
+see notes on #43 above.
+
+### PBI 1 (#42) — Rider-primary search: venue-grouped history cards
+
+**What:** Replace the flat session-list output of rider search with venue-grouped cards where finals rank is the visual headline.
+
+**Why:** Searching a rider is a fantasy-vetting move — "is this rider consistent across venues, or a one-track wonder?" A flat list of every session weights a Q2 run equally with a finals win, so nothing reads. Grouping by venue with finals rank as the loud element answers the real question at a glance.
+
+**Logic:**
+- Group a rider's results by venue, then sort visits within each venue most-recent-year first.
+- Per venue block: venue name header + visit count; one row per year showing finals rank (large, acid yellow `#d4f500` for a win/P1, gray `#ccc` otherwise) + session label + time (P1 absolute time, others gap `+x.xxx`).
+- Collapse Q1/Q2/splits/bib/points behind a tap — not shown on first render. Expand affordance is a chevron/details target on the row, distinct from the venue-name tap (see PBI 3/#44).
+- DNF/DNS/DSQ in finals: show as the headline with a red `DNF` badge — never substitute a better session. (Honesty principle; matches your audience.)
+- Default venue-block sort: most-recent-visit first.
+
+**File:** `index.html` (search render logic + CSS). No data changes — reads existing `public/results.json`.
+
+**Done when:**
+- Searching a rider returns venue-grouped cards, not a flat session list.
+- Finals rank is the dominant visual element; a P1 is acid yellow.
+- Each venue shows the rider's cross-year trajectory (e.g. Leogang: 1 / 4 / 2) readable without parsing dates.
+- Q1/Q2/splits are hidden until expanded.
+- A DNF season shows DNF as headline with red badge, no fabricated better number.
+
+### PBI 2 (#43) — Venue conditions tagging (structured tag + optional note)
+
+**What:** Add a hand-entered conditions field to each round so results can eventually be filtered by track state.
+
+**Why:** Fantasy picking needs "who's good in the mud / heat." This data isn't in the UCI API, but it's trivial to hand-tag (~10 rounds/year). Structured so it's filterable later; with a free-form note for human detail.
+
+**Decision to confirm:** see notes on #43 above — structured enum (`dry`, `wet`, `mixed`, `dusty`, `hot`) as the filterable field, plus an optional `conditionsNote` free-form string for texture, vs. pure free-form notes. Confirm before build.
+
+**Logic:**
+- Add to each round object in `results.json`: `conditions` (enum string) and optional `conditionsNote` (free string).
+- Both optional — absence renders nothing, no layout break.
+- Display: small muted condition chip on the venue/year row in both rider and venue views; note shown only in expanded state.
+- No filtering UI yet — this PBI only lands the data + display. Filtering is a follow-on once tags exist across enough rounds.
+
+**File:** `public/results.json` (schema + hand-entered values), `index.html` (chip display).
+
+**Done when:**
+- A round can carry a `conditions` tag and optional note.
+- Tagged rounds show a condition chip; untagged rounds render normally.
+- Data structure supports future filtering (enum, not free text, in the primary field).
+
+### PBI 3 (#44) — Venue cross-year view + the rider↔venue loop
+
+**What:** Extend the Results tab so a selected venue can show a cross-year podium stack, and wire the rider card's venue header to deep-link into it.
+
+**Why:** The other fantasy moment — "I'm filling the Leogang slot, who performs here?" The Results tab already answers single-year venue results; this adds the multi-season stack ("last 5 years at Leogang") and makes the rider→venue→rider round-trip fast, which is how someone actually picks a team.
+
+**Logic:**
+- In Results, when a venue is selected, add a cross-year view: for the active gender + session, stack each year's top 5 (reuse existing podium styling).
+- Respect existing gender + session toggles (this is why venue data lives in Results, not Search — it needs those controls).
+- Wire the rider card's venue-name tap (#42) to switch to Results, filtered to that venue, in cross-year view. The chevron/expand tap stays inline; the venue-name tap navigates. Two targets, two intents.
+- Back-navigation returns to the rider's search results so the picking loop is fast.
+
+**File:** `index.html` (Results tab render + nav state + cross-link wiring).
+
+**Done when:**
+- Selecting a venue in Results offers a cross-year podium stack for the active gender/session.
+- Tapping a venue name in a rider card lands on that venue's cross-year view.
+- Returning gets the user back to their rider search without re-typing.
+- Gender/session toggles work in the cross-year view.
 
 ---
 
