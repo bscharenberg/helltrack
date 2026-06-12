@@ -778,6 +778,27 @@ html, body {
 }
 .rs-view-btn.active { background:var(--acid-dim); color:var(--acid); }
 
+.rs-search-box { margin-bottom:12px; }
+.rs-search-input {
+  width:100%; box-sizing:border-box; appearance:none;
+  background:var(--bg-card); border:0.5px solid var(--border); border-radius:8px;
+  padding:10px 14px; font-family:'Barlow Condensed',sans-serif; font-size:15px;
+  color:var(--text-primary);
+}
+.rs-search-input::placeholder { color:var(--text-muted); }
+.rs-search-input:focus { outline:none; border-color:var(--acid-border); }
+.rs-search-pick {
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+  padding:12px 4px; border-bottom:0.5px solid #1a1a1a; cursor:pointer;
+}
+.rs-search-pick:last-child { border-bottom:none; }
+.rs-search-pick:active { background:var(--bg-card-hover); }
+.rs-search-back {
+  font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:0.12em; text-transform:uppercase; color:var(--acid);
+  margin-bottom:12px; cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+
 
   #bottom-nav {
     position: static;
@@ -1179,13 +1200,14 @@ html, body {
   <div id="results-nav" style="display:none; padding-bottom:6px">
     <div class="rs-nav-row" id="rs-year-bar"></div>
     <div class="rs-nav-row" id="rs-round-bar"></div>
-    <div class="rs-gender-toggle">
+    <div class="rs-gender-toggle" id="rs-gender-bar">
       <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
       <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
     </div>
     <div class="rs-view-toggle" id="rs-view-bar">
       <div class="rs-view-btn active" data-view="results" onclick="setResultsView('results')">Results</div>
       <div class="rs-view-btn" data-view="standings" onclick="setResultsView('standings')">Standings</div>
+      <div class="rs-view-btn" data-view="search" onclick="setResultsView('search')">Search</div>
     </div>
     <div class="rs-session-toggle" id="rs-session-bar">
       <div class="rs-session-btn active" data-session="finals" onclick="setSession('finals')">Finals</div>
@@ -1788,6 +1810,9 @@ let activeRound   = 0
 let activeGender  = 'men'
 let activeSession = 'finals'
 let activeView    = 'results'
+let riderIndex          = null
+let resultsSearchQuery  = ''
+let riderSearchSelected = null
 
 function formatName(raw) {
   return raw.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ')
@@ -1859,9 +1884,12 @@ function setResultsView(v) {
   document.querySelectorAll('.rs-view-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.view === v)
   })
-  const isStandings = v === 'standings'
-  document.getElementById('rs-round-bar').style.display  = isStandings ? 'none' : ''
-  document.getElementById('rs-session-bar').style.display = isStandings ? 'none' : ''
+  const isResults = v === 'results'
+  const isSearch  = v === 'search'
+  document.getElementById('rs-round-bar').style.display    = isResults ? '' : 'none'
+  document.getElementById('rs-session-bar').style.display  = isResults ? '' : 'none'
+  document.getElementById('rs-year-bar').style.display      = isSearch ? 'none' : ''
+  document.getElementById('rs-gender-bar').style.display    = isSearch ? 'none' : ''
   renderResults()
 }
 
@@ -1929,6 +1957,143 @@ function renderStandings() {
 </div>`
 }
 
+function escAttr(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
+}
+
+function normalizeName(name) {
+  return name.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim()
+}
+
+function sessionLabel(sk) {
+  if (sk.startsWith('qualifying-1')) return 'Qual 1'
+  if (sk.startsWith('qualifying-2')) return 'Qual 2'
+  if (sk.startsWith('qualifying'))   return 'Qualifying'
+  if (sk.startsWith('finals'))       return 'Finals'
+  return sk
+}
+
+const SESSION_ORDER = { 'finals-men':3, 'finals-women':3, 'qualifying-2-men':2, 'qualifying-2-women':2,
+  'qualifying-1-men':1, 'qualifying-1-women':1, 'qualifying-men':1, 'qualifying-women':1 }
+
+function buildRiderIndex() {
+  const idx = {}
+  const seasons = resultsData?.seasons || {}
+  for (const year of Object.keys(seasons)) {
+    for (const round of seasons[year].rounds || []) {
+      for (const sk of Object.keys(round.sessions || {})) {
+        for (const r of round.sessions[sk]) {
+          if (!r.name) continue
+          const key = normalizeName(r.name)
+          if (!idx[key]) idx[key] = { names: {}, nat: r.nat || '', entries: [] }
+          idx[key].names[r.name] = (idx[key].names[r.name] || 0) + 1
+          if (r.nat) idx[key].nat = r.nat
+          idx[key].entries.push({
+            year, venue: round.venue, date: round.date, session: sk,
+            rank: r.rank, time: r.time, gap: r.gap, points: r.points,
+            dnf: r.dnf, dsq: r.dsq, dns: r.dns
+          })
+        }
+      }
+    }
+  }
+  for (const key of Object.keys(idx)) {
+    const names = idx[key].names
+    idx[key].name = Object.keys(names).sort((a, b) => names[b] - names[a])[0]
+  }
+  return idx
+}
+
+function renderRiderSearch() {
+  const el = document.getElementById('rs-content')
+  el.innerHTML = `
+<div class="rs-section">
+  <div class="rs-section-label">Rider Search</div>
+  <div class="rs-search-box">
+    <input type="text" id="rider-search-input" class="rs-search-input"
+      placeholder="Search rider name..." autocomplete="off" autocapitalize="off" spellcheck="false"
+      oninput="onRiderSearchInput(this.value)" value="${escAttr(resultsSearchQuery)}">
+  </div>
+  <div id="rider-search-results"></div>
+</div>`
+  renderRiderSearchResults()
+}
+
+function onRiderSearchInput(value) {
+  resultsSearchQuery = value
+  riderSearchSelected = null
+  renderRiderSearchResults()
+}
+
+function selectSearchRider(el) {
+  riderSearchSelected = el.dataset.key
+  renderRiderSearchResults()
+}
+
+function clearSearchSelection() {
+  riderSearchSelected = null
+  renderRiderSearchResults()
+}
+
+function renderRiderSearchResults() {
+  const el = document.getElementById('rider-search-results')
+  if (!el) return
+  const q = normalizeName(resultsSearchQuery.trim())
+  if (q.length < 2) {
+    el.innerHTML = `<div class="rs-empty">Type at least 2 letters to search</div>`
+    return
+  }
+  if (!riderIndex) riderIndex = buildRiderIndex()
+  const matches = Object.entries(riderIndex)
+    .filter(([key]) => key.includes(q))
+    .map(([key, r]) => ({ key, ...r }))
+    .sort((a, b) => b.entries.length - a.entries.length || a.name.localeCompare(b.name))
+
+  if (!matches.length) {
+    el.innerHTML = `<div class="rs-empty">No riders found</div>`
+    return
+  }
+
+  let rider = riderSearchSelected ? matches.find(m => m.key === riderSearchSelected) : null
+  if (!rider && matches.length === 1) rider = matches[0]
+
+  if (!rider) {
+    const shown = matches.slice(0, 30)
+    el.innerHTML = shown.map(m => `
+<div class="rs-search-pick" data-key="${escAttr(m.key)}" onclick="selectSearchRider(this)">
+  <div class="rs-rider-info">
+    <div class="rs-rider-name">${formatName(m.name)}</div>
+    <div class="rs-rider-nat">${m.nat}</div>
+  </div>
+  <div class="rs-gap">${m.entries.length} result${m.entries.length !== 1 ? 's' : ''}</div>
+</div>`).join('') + (matches.length > 30
+      ? `<div class="rs-empty">Showing 30 of ${matches.length} — refine your search</div>` : '')
+    return
+  }
+
+  riderSearchSelected = rider.key
+  const sorted = [...rider.entries].sort((a, b) =>
+    b.date.localeCompare(a.date) || (SESSION_ORDER[b.session] || 0) - (SESSION_ORDER[a.session] || 0))
+
+  const rows = sorted.map(e => {
+    const status = e.dnf ? 'DNF' : e.dsq ? 'DSQ' : e.dns ? 'DNS' : null
+    return `<tr${status ? ' class="rs-row-dnf"' : ''}>
+  <td class="rs-td-rank">${status || e.rank}</td>
+  <td class="rs-td-name">${e.year} · ${e.venue}</td>
+  <td class="rs-td-nat">${sessionLabel(e.session)}</td>
+  <td class="rs-td-time">${status ? '—' : (e.time || '')}</td>
+  <td class="rs-td-gap">${e.gap || ''}</td>
+  <td class="rs-td-pts">${e.points || ''}</td>
+</tr>`
+  }).join('')
+
+  el.innerHTML = `
+${matches.length > 1 ? `<div class="rs-search-back" onclick="clearSearchSelection()">&larr; Back to results</div>` : ''}
+<div class="rs-rider-name" style="font-size:18px;margin-bottom:2px">${formatName(rider.name)}</div>
+<div class="rs-rider-nat" style="margin-bottom:12px">${rider.nat} · ${rider.entries.length} result${rider.entries.length !== 1 ? 's' : ''}</div>
+<table class="rs-table"><tbody>${rows}</tbody></table>`
+}
+
 function sessionKey() {
   const suffix = activeGender === 'men' ? 'men' : 'women'
   if (activeSession === 'finals') return `finals-${suffix}`
@@ -1953,6 +2118,7 @@ function updateSessionBar() {
 
 function renderResults() {
   if (activeView === 'standings') { renderStandings(); return }
+  if (activeView === 'search')    { renderRiderSearch(); return }
   const el     = document.getElementById('rs-content')
   const rounds = currentRounds()
   if (!rounds.length) {
