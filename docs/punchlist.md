@@ -84,7 +84,7 @@
 | 9 | Rider comparison | M | Low | Two rider searches side by side. Depends on #8 (done). |
 | 10 | Season standings / points table | M | Low | Points per round already in results.json. Aggregate into standings view by season. |
 | 42 | Rider-primary search: venue-grouped history cards | M | Medium | Builds on #8 (done). Group a rider's results by venue (most-recent visit first); finals rank is the visual headline (acid yellow for P1, gray otherwise) with a cross-year trajectory per venue (e.g. Leogang: 1 / 4 / 2). Q1/Q2/splits/points collapse behind a tap. DNF/DNS/DSQ shown as the headline with a red DNF badge — never substitute a better session. Full spec in "Pending PBIs — fantasy picking" below. |
-| 43 | Venue conditions tagging | S | Low | Hand-entered `conditions` tag (+ optional `conditionsNote`) per round in results.json, shown as a muted chip on the venue/year row. Data + display only, no filtering UI yet. **Open decision** — see notes below. Full spec in "Pending PBIs — fantasy picking" below. |
+| 43 | Venue conditions tagging | S | Low | Hand-entered `conditions` enum (`dry`/`wet`/`mixed`/`dusty`/`hot`) + optional `conditionsNote` free text per round in results.json, shown as a muted chip on the venue/year row. Data + display only, no filtering UI yet. Full spec in "Pending PBIs — fantasy picking" below. |
 | 44 | Venue cross-year view + rider↔venue loop | M | Medium | Depends on #42. Selecting a venue in Results adds a cross-year top-5 podium stack (respects gender/session toggles, reuses podium styling); the rider card's venue-name tap (from #42) deep-links into it, with back-navigation returning to the rider's search results. Full spec in "Pending PBIs — fantasy picking" below. |
 | 33b | ~~Thumbs-down filter feedback~~ | — | Dropped | Filter is clean enough. GA card_open provides sufficient signal. |
 
@@ -92,7 +92,6 @@
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
 - **#37/#38/#39**: Surfaced by the 2009–2024 DataRide backfill completeness audit (2026-06-10) — see `docs/historical-data.md` §9 for full detail.
 - **#41**: Confirm `maxresdefault.jpg` exists for most videos before building — falls back to `hqdefault.jpg` if not.
-- **#43**: Open decision — a structured `conditions` enum (`dry`/`wet`/`mixed`/`dusty`/`hot`) as the filterable field, plus optional `conditionsNote` free text for color, vs. pure free-form notes. The stated use case ("filter for wet races") only works with the structured option. Confirm before building.
 - **Tire/setup data** (research note, not a PBI) — no clean structured source exists; revisit only if one appears, otherwise too sparse/manual to be worth building.
 
 ---
@@ -101,8 +100,7 @@
 
 Three sequenced PBIs aimed at the "fantasy team picking" use case: is this rider
 consistent across venues, and who performs well at a given venue. #42 and #44 are
-sequenced (#44 depends on #42); #43 is independent but has an open decision —
-see notes on #43 above.
+sequenced (#44 depends on #42); #43 is independent.
 
 ### PBI 1 (#42) — Rider-primary search: venue-grouped history cards
 
@@ -132,10 +130,8 @@ see notes on #43 above.
 
 **Why:** Fantasy picking needs "who's good in the mud / heat." This data isn't in the UCI API, but it's trivial to hand-tag (~10 rounds/year). Structured so it's filterable later; with a free-form note for human detail.
 
-**Decision to confirm:** see notes on #43 above — structured enum (`dry`, `wet`, `mixed`, `dusty`, `hot`) as the filterable field, plus an optional `conditionsNote` free-form string for texture, vs. pure free-form notes. Confirm before build.
-
 **Logic:**
-- Add to each round object in `results.json`: `conditions` (enum string) and optional `conditionsNote` (free string).
+- Add to each round object in `results.json`: `conditions` (enum string, one of `dry`/`wet`/`mixed`/`dusty`/`hot`) and optional `conditionsNote` (free string for texture, e.g. "rained overnight, dried by finals").
 - Both optional — absence renders nothing, no layout break.
 - Display: small muted condition chip on the venue/year row in both rider and venue views; note shown only in expanded state.
 - No filtering UI yet — this PBI only lands the data + display. Filtering is a follow-on once tags exist across enough rounds.
@@ -143,9 +139,9 @@ see notes on #43 above.
 **File:** `public/results.json` (schema + hand-entered values), `index.html` (chip display).
 
 **Done when:**
-- A round can carry a `conditions` tag and optional note.
+- A round can carry a `conditions` enum value (`dry`/`wet`/`mixed`/`dusty`/`hot`) and an optional `conditionsNote`.
 - Tagged rounds show a condition chip; untagged rounds render normally.
-- Data structure supports future filtering (enum, not free text, in the primary field).
+- Enum (not free text) drives the chip, so future filtering can key off it directly.
 
 ### PBI 3 (#44) — Venue cross-year view + the rider↔venue loop
 
