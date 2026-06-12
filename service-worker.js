@@ -1,4 +1,4 @@
-const CACHE_NAME = 'helltrack-v3'
+const CACHE_NAME = 'helltrack-v4'
 const STATIC_ASSETS = [
   '/helltrack/',
   '/helltrack/index.html',
