@@ -71,13 +71,21 @@ html, body {
   margin-bottom: 12px;
 }
 #logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--acid);
+  color: var(--text-primary);
   line-height: 1;
+}
+#logo-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 #logo-sub {
   font-size: 9px;
@@ -85,6 +93,7 @@ html, body {
   text-transform: uppercase;
   color: var(--text-muted);
   margin-top: 3px;
+  margin-left: 48px;
 }
 #refresh-btn {
   background: none;
@@ -1123,7 +1132,7 @@ html, body {
 <div id="header">
   <div id="header-top">
     <div>
-      <div id="logo">Helltrack</div>
+      <div id="logo"><img id="logo-icon" src="icon-192.png" alt="">Helltrack</div>
       <div id="logo-sub">Downhill Racing</div>
     </div>
     <button id="refresh-btn" aria-label="Refresh feed" onclick="loadFeed(true)">↻</button>
