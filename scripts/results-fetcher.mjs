@@ -152,11 +152,14 @@ async function main() {
     const idx    = rounds.findIndex(r => r.slug === venueSlug)
     const existingRound = idx >= 0 ? rounds[idx] : null
 
-    // Guard: finals already written — skip to avoid spurious commits on polling runs.
-    // Once finals-men exists with results, the data is complete for this round.
-    if (existingRound?.sessions?.['finals-men']?.length > 0
-        && result.sessions?.['finals-men']?.length > 0) {
-      console.log(`\n✅ Finals already present for ${venueSlug} — no changes to write.`)
+    // Guard: round is complete only once BOTH elite finals are present.
+    // Keying on finals-men alone would lock out a later finals-women fetch when the
+    // women's results are posted a few minutes after the men's. Once both exist we
+    // can safely stop re-writing on the 30-min polling runs.
+    const haveBothFinals = obj =>
+      obj?.sessions?.['finals-men']?.length > 0 && obj?.sessions?.['finals-women']?.length > 0
+    if (haveBothFinals(existingRound) && haveBothFinals(result)) {
+      console.log(`\n✅ Both elite finals already present for ${venueSlug} — no changes to write.`)
       process.exit(0)
     }
 
