@@ -808,7 +808,12 @@ html, body {
   display:flex; justify-content:space-between; align-items:baseline;
   padding:10px 14px; border-bottom:0.5px solid var(--border);
 }
-.rvc-venue-name { font-size:14px; font-weight:600; color:var(--text-primary); }
+.rvc-venue-name {
+  font-size:14px; font-weight:600; color:var(--text-primary);
+  cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+.rvc-venue-name:active { color:var(--acid); }
+.rvc-venue-name::after { content:'\203A'; margin-left:6px; color:#555; font-weight:400; }
 .rvc-venue-count {
   font-family:'Barlow Condensed',sans-serif;
   font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
@@ -1893,6 +1898,7 @@ let activeView    = 'results'
 let riderIndex          = null
 let resultsSearchQuery  = ''
 let riderSearchSelected = null
+let selectedVenue       = null
 
 function formatName(raw) {
   return raw.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ')
@@ -1966,11 +1972,20 @@ function setResultsView(v) {
   })
   const isResults = v === 'results'
   const isSearch  = v === 'search'
+  const isVenue   = v === 'venue'
   document.getElementById('rs-round-bar').style.display    = isResults ? '' : 'none'
-  document.getElementById('rs-session-bar').style.display  = isResults ? '' : 'none'
-  document.getElementById('rs-year-bar').style.display      = isSearch ? 'none' : ''
+  document.getElementById('rs-session-bar').style.display  = (isResults || isVenue) ? '' : 'none'
+  document.getElementById('rs-year-bar').style.display      = (isSearch || isVenue) ? 'none' : ''
   document.getElementById('rs-gender-bar').style.display    = isSearch ? 'none' : ''
+  document.getElementById('rs-view-bar').style.display       = isVenue ? 'none' : ''
   renderResults()
+}
+
+// Cross-year venue view (from a rider card's venue-name tap) — drills into
+// every round held at this venue, stacked by year, for the active gender/session.
+function goToVenue(venueName) {
+  selectedVenue = venueName
+  setResultsView('venue')
 }
 
 function computeStandings(season, gender) {
@@ -2157,7 +2172,7 @@ function renderVenueCard(group) {
   return `
 <div class="rvc-venue-card">
   <div class="rvc-venue-header">
-    <div class="rvc-venue-name">${group.venue}</div>
+    <div class="rvc-venue-name" onclick="goToVenue('${escAttr(group.venue)}')">${group.venue}</div>
     <div class="rvc-venue-count">${group.visits.length} visit${group.visits.length !== 1 ? 's' : ''}</div>
   </div>
   <div class="rvc-visits">${group.visits.map(renderVisitRow).join('')}</div>
@@ -2268,9 +2283,78 @@ function updateSessionBar() {
   }
 }
 
+// Renders the top-5 (finals) or top-3 (qualifying) hero rows for a session —
+// shared by the single-round results view and the cross-year venue view.
+function renderHeroRows(session, isFinals) {
+  const top = isFinals ? session.slice(0, 5) : session.slice(0, 3)
+  return top.map(r => {
+    const status   = r.dnf ? 'DNF' : r.dsq ? 'DSQ' : r.dns ? 'DNS' : null
+    const posClass = isFinals ? `pos-${r.rank || 'x'}` : `pos-${r.rank && r.rank <= 3 ? r.rank : 4}`
+    const name     = formatName(r.name)
+    const gap      = status ? '' : (r.rank === 1 ? (isFinals ? 'Winner' : 'Fastest') : r.gap || '')
+    return `<div class="rs-hero-row ${posClass}">
+  <div class="rs-pos-num">${status || r.rank}</div>
+  <div class="rs-rider-info">
+    <div class="rs-rider-name">${name}</div>
+    <div class="rs-rider-nat">${r.nat || ''}</div>
+  </div>
+  <div class="rs-time-col">
+    <div class="rs-time">${status ? '—' : r.time}</div>
+    <div class="rs-gap">${gap}</div>
+  </div>
+</div>`
+  }).join('')
+}
+
+// All rounds ever held at a venue, across seasons, most-recent year first.
+function getVenueRounds(venueName) {
+  const seasons = resultsData?.seasons || {}
+  const rounds = []
+  for (const year of Object.keys(seasons)) {
+    for (const round of seasons[year].rounds || []) {
+      if (round.venue === venueName) rounds.push({ year, ...round })
+    }
+  }
+  return rounds.sort((a, b) => b.year.localeCompare(a.year))
+}
+
+function renderVenueCrossYear() {
+  const el = document.getElementById('rs-content')
+  const rounds    = getVenueRounds(selectedVenue)
+  const suffix    = activeGender === 'men' ? 'men' : 'women'
+  const isFinals  = activeSession === 'finals'
+  const key       = sessionKey()
+  const sessionLbl = activeSession === 'finals' ? 'Finals'
+    : activeSession === 'q1' ? 'Qualifying 1'
+    : 'Qualifying 2'
+  const genderLbl = activeGender === 'men' ? 'Elite Men' : 'Elite Women'
+
+  const yearBlocks = rounds.map(round => {
+    let session = round.sessions?.[key] || []
+    if (!session.length && activeSession === 'q1') {
+      session = round.sessions?.[`qualifying-${suffix}`] || []
+    }
+    if (!session.length) return ''
+    return `
+<div class="rs-section">
+  <div class="rs-section-label">${round.year}</div>
+  <div class="rs-top5">${renderHeroRows(session, isFinals)}</div>
+</div>`
+  }).filter(Boolean).join('')
+
+  el.innerHTML = `
+<div class="rs-section" style="padding-bottom:0">
+  <div class="rs-search-back" onclick="setResultsView('search')">&larr; Back to search</div>
+  <div class="rs-rider-name" style="font-size:18px;margin-bottom:2px">${selectedVenue}</div>
+  <div class="rs-rider-nat" style="margin-bottom:0">${genderLbl} · ${sessionLbl}</div>
+</div>
+${yearBlocks || `<div class="rs-section"><div class="rs-empty">No ${sessionLbl} data for ${genderLbl}</div></div>`}`
+}
+
 function renderResults() {
   if (activeView === 'standings') { renderStandings(); return }
   if (activeView === 'search')    { renderRiderSearch(); return }
+  if (activeView === 'venue')     { renderVenueCrossYear(); return }
   const el     = document.getElementById('rs-content')
   const rounds = currentRounds()
   if (!rounds.length) {
@@ -2292,26 +2376,8 @@ function renderResults() {
     return
   }
 
-  const top5 = isFinals ? session.slice(0, 5) : session.slice(0, 3)
-  const rest  = isFinals ? session.slice(5)   : session.slice(3)
-
-  const top5Html = top5.map(r => {
-    const status   = r.dnf ? 'DNF' : r.dsq ? 'DSQ' : r.dns ? 'DNS' : null
-    const posClass = isFinals ? `pos-${r.rank || 'x'}` : `pos-${r.rank && r.rank <= 3 ? r.rank : 4}`
-    const name     = formatName(r.name)
-    const gap      = status ? '' : (r.rank === 1 ? (isFinals ? 'Winner' : 'Fastest') : r.gap || '')
-    return `<div class="rs-hero-row ${posClass}">
-  <div class="rs-pos-num">${status || r.rank}</div>
-  <div class="rs-rider-info">
-    <div class="rs-rider-name">${name}</div>
-    <div class="rs-rider-nat">${r.nat || ''}</div>
-  </div>
-  <div class="rs-time-col">
-    <div class="rs-time">${status ? '—' : r.time}</div>
-    <div class="rs-gap">${gap}</div>
-  </div>
-</div>`
-  }).join('')
+  const rest     = isFinals ? session.slice(5) : session.slice(3)
+  const top5Html = renderHeroRows(session, isFinals)
 
   const tableRows = rest.map(r => {
     const status = r.dnf ? 'DNF' : r.dsq ? 'DSQ' : r.dns ? 'DNS' : null

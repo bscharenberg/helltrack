@@ -85,7 +85,7 @@
 | 10 | Season standings / points table | M | Low | Points per round already in results.json. Aggregate into standings view by season. |
 | 42 | ~~Rider-primary search: venue-grouped history cards~~ | — | Done | ~~Group a rider's results by venue~~ — search results now render as venue-grouped cards (most-recent visit first), finals rank as the headline (acid yellow for P1 w/ absolute time, gray + gap otherwise), DNF/DNS/DSQ as a red badge, Q1/Q2/points collapsed behind a tap-to-expand chevron (2026-06-14, `index.html`). |
 | 43 | Venue conditions tagging | S | Low | Hand-entered `conditions` enum (`dry`/`wet`/`mixed`/`dusty`/`hot`) + optional `conditionsNote` free text per round in results.json, shown as a muted chip on the venue/year row. Data + display only, no filtering UI yet. Full spec in "Pending PBIs — fantasy picking" below. |
-| 44 | Venue cross-year view + rider↔venue loop | M | Medium | Depends on #42. Selecting a venue in Results adds a cross-year top-5 podium stack (respects gender/session toggles, reuses podium styling); the rider card's venue-name tap (from #42) deep-links into it, with back-navigation returning to the rider's search results. Full spec in "Pending PBIs — fantasy picking" below. |
+| 44 | ~~Venue cross-year view + rider↔venue loop~~ | — | Done | ~~Depends on #42.~~ Selecting a venue in Results (via a rider card's venue-name tap) opens a cross-year podium stack for that venue — respects gender/session toggles, reuses existing podium styling, "← Back to search" returns to the rider's prior search results (2026-06-14, `index.html`). |
 | 33b | ~~Thumbs-down filter feedback~~ | — | Dropped | Filter is clean enough. GA card_open provides sufficient signal. |
 
 ### Notes on backlog items
@@ -147,9 +147,11 @@ sequenced (#44 depends on #42); #43 is independent.
 - Tagged rounds show a condition chip; untagged rounds render normally.
 - Enum (not free text) drives the chip, so future filtering can key off it directly.
 
-### PBI 3 (#44) — Venue cross-year view + the rider↔venue loop
+### PBI 3 (#44) — Venue cross-year view + the rider↔venue loop — done (2026-06-14)
 
 **What:** Extend the Results tab so a selected venue can show a cross-year podium stack, and wire the rider card's venue header to deep-link into it.
+
+**Shipped as:** new `activeView === 'venue'` sub-state with `goToVenue(venueName)`, `getVenueRounds()`, `renderVenueCrossYear()` in `index.html`. Hero-row markup extracted into a shared `renderHeroRows(session, isFinals)` helper, used by both the single-round Results view and the cross-year view (avoids duplicating podium markup). `setResultsView()` extended with venue-view nav-bar visibility rules (year/round/view bars hidden, gender/session bars shown, "← Back to search" link shown). `.rvc-venue-name` (from #42) now has an onclick → `goToVenue()` plus a `›` chevron affordance.
 
 **Why:** The other fantasy moment — "I'm filling the Leogang slot, who performs here?" The Results tab already answers single-year venue results; this adds the multi-season stack ("last 5 years at Leogang") and makes the rider→venue→rider round-trip fast, which is how someone actually picks a team.
 
@@ -162,10 +164,10 @@ sequenced (#44 depends on #42); #43 is independent.
 **File:** `index.html` (Results tab render + nav state + cross-link wiring).
 
 **Done when:**
-- Selecting a venue in Results offers a cross-year podium stack for the active gender/session.
-- Tapping a venue name in a rider card lands on that venue's cross-year view.
-- Returning gets the user back to their rider search without re-typing.
-- Gender/session toggles work in the cross-year view.
+- Selecting a venue in Results offers a cross-year podium stack for the active gender/session. ✅
+- Tapping a venue name in a rider card lands on that venue's cross-year view. ✅
+- Returning gets the user back to their rider search without re-typing. ✅
+- Gender/session toggles work in the cross-year view. ✅
 
 ---
 
