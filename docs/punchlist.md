@@ -83,7 +83,7 @@
 | 8 | ~~Rider search in results~~ | — | Done | ~~Filter results.json for a rider name, show rank/time/gap across all rounds~~ — new "Search" sub-view in RESULTS tab, diacritic-normalized lookup across all 16 seasons, picker for ambiguous matches, full history table sorted most recent first (2026-06-12, `69d5bc1`). |
 | 9 | Rider comparison | M | Low | Two rider searches side by side. Depends on #8 (done). |
 | 10 | Season standings / points table | M | Low | Points per round already in results.json. Aggregate into standings view by season. |
-| 42 | Rider-primary search: venue-grouped history cards | M | Medium | Builds on #8 (done). Group a rider's results by venue (most-recent visit first); finals rank is the visual headline (acid yellow for P1, gray otherwise) with a cross-year trajectory per venue (e.g. Leogang: 1 / 4 / 2). Q1/Q2/splits/points collapse behind a tap. DNF/DNS/DSQ shown as the headline with a red DNF badge — never substitute a better session. Full spec in "Pending PBIs — fantasy picking" below. |
+| 42 | ~~Rider-primary search: venue-grouped history cards~~ | — | Done | ~~Group a rider's results by venue~~ — search results now render as venue-grouped cards (most-recent visit first), finals rank as the headline (acid yellow for P1 w/ absolute time, gray + gap otherwise), DNF/DNS/DSQ as a red badge, Q1/Q2/points collapsed behind a tap-to-expand chevron (2026-06-14, `index.html`). |
 | 43 | Venue conditions tagging | S | Low | Hand-entered `conditions` enum (`dry`/`wet`/`mixed`/`dusty`/`hot`) + optional `conditionsNote` free text per round in results.json, shown as a muted chip on the venue/year row. Data + display only, no filtering UI yet. Full spec in "Pending PBIs — fantasy picking" below. |
 | 44 | Venue cross-year view + rider↔venue loop | M | Medium | Depends on #42. Selecting a venue in Results adds a cross-year top-5 podium stack (respects gender/session toggles, reuses podium styling); the rider card's venue-name tap (from #42) deep-links into it, with back-navigation returning to the rider's search results. Full spec in "Pending PBIs — fantasy picking" below. |
 | 33b | ~~Thumbs-down filter feedback~~ | — | Dropped | Filter is clean enough. GA card_open provides sufficient signal. |
@@ -102,9 +102,13 @@ Three sequenced PBIs aimed at the "fantasy team picking" use case: is this rider
 consistent across venues, and who performs well at a given venue. #42 and #44 are
 sequenced (#44 depends on #42); #43 is independent.
 
-### PBI 1 (#42) — Rider-primary search: venue-grouped history cards
+### PBI 1 (#42) — Rider-primary search: venue-grouped history cards — done (2026-06-14)
 
 **What:** Replace the flat session-list output of rider search with venue-grouped cards where finals rank is the visual headline.
+
+**Shipped as:** `groupRiderByVenue()`, `pickVisitHeadline()`, `renderVisitRow()`, `renderVenueCard()`, `toggleRvcVisit()` + `.rvc-*` CSS classes in `index.html`. `renderRiderSearchResults()` now calls `renderVenueCard()` per venue group instead of building a flat table.
+
+**Note for PBI 3 (#44):** the venue-name element in each card (`.rvc-venue-name`) is plain text with no click handler yet — #44's "wire the venue-name tap" step needs to add that onclick to navigate into the cross-year view.
 
 **Why:** Searching a rider is a fantasy-vetting move — "is this rider consistent across venues, or a one-track wonder?" A flat list of every session weights a Q2 run equally with a finals win, so nothing reads. Grouping by venue with finals rank as the loud element answers the real question at a glance.
 

@@ -799,6 +799,79 @@ html, body {
   margin-bottom:12px; cursor:pointer; -webkit-tap-highlight-color:transparent;
 }
 
+/* Rider search — venue-grouped history cards */
+.rvc-venue-card {
+  background:var(--bg-card); border:0.5px solid var(--border);
+  border-radius:10px; margin-bottom:10px; overflow:hidden;
+}
+.rvc-venue-header {
+  display:flex; justify-content:space-between; align-items:baseline;
+  padding:10px 14px; border-bottom:0.5px solid var(--border);
+}
+.rvc-venue-name { font-size:14px; font-weight:600; color:var(--text-primary); }
+.rvc-venue-count {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+  color:#666;
+}
+.rvc-visits { display:flex; flex-direction:column; }
+.rvc-visit { border-bottom:0.5px solid #1a1a1a; }
+.rvc-visit:last-child { border-bottom:none; }
+.rvc-visit-main {
+  display:flex; align-items:center; gap:12px;
+  padding:10px 14px; cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+.rvc-visit-main:active { background:var(--bg-card-hover); }
+
+.rvc-visit-rank-col { min-width:34px; text-align:center; }
+.rvc-rank {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:24px; font-weight:700; line-height:1; color:#ccc;
+}
+.rvc-rank-p1 { color:var(--acid); font-size:28px; }
+.rvc-badge {
+  display:inline-block;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; font-weight:700; letter-spacing:0.08em;
+  color:#ff5c5c; border:1px solid rgba(255,92,92,0.4);
+  border-radius:4px; padding:3px 6px;
+}
+
+.rvc-visit-info { flex:1; min-width:0; }
+.rvc-visit-year { font-size:13px; font-weight:500; color:var(--text-primary); line-height:1.3; }
+.rvc-visit-session {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#666;
+}
+
+.rvc-visit-time-col { text-align:right; }
+.rvc-visit-time {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px; font-variant-numeric:tabular-nums; color:#aaa;
+}
+.rvc-time-p1 { color:var(--acid); font-weight:600; }
+
+.rvc-chevron {
+  font-size:18px; font-weight:600; color:#555; min-width:12px; text-align:center;
+  transition: transform 0.15s;
+}
+.rvc-visit.expanded .rvc-chevron { transform:rotate(90deg); }
+
+.rvc-visit-detail {
+  display:none; flex-direction:column; gap:5px;
+  padding:0 14px 12px 60px;
+}
+.rvc-visit.expanded .rvc-visit-detail { display:flex; }
+.rvc-detail-row {
+  display:flex; align-items:center; gap:8px;
+  font-family:'Barlow Condensed',sans-serif; font-size:11px;
+}
+.rvc-detail-session { width:52px; letter-spacing:0.1em; text-transform:uppercase; color:#666; }
+.rvc-detail-rank { width:32px; text-align:center; color:#999; }
+.rvc-detail-time { flex:1; font-variant-numeric:tabular-nums; color:#aaa; }
+.rvc-detail-gap { width:64px; text-align:right; font-variant-numeric:tabular-nums; color:#666; }
+.rvc-detail-pts { width:50px; text-align:right; color:#666; }
+
 
   #bottom-nav {
     position: static;
@@ -2011,6 +2084,90 @@ function buildRiderIndex() {
   return idx
 }
 
+// Group a rider's entries by venue, then by year (most-recent visit first,
+// most-recent venue first) — feeds renderVenueCard().
+function groupRiderByVenue(rider) {
+  const venues = {}
+  for (const e of rider.entries) {
+    if (!venues[e.venue]) venues[e.venue] = {}
+    if (!venues[e.venue][e.year]) venues[e.venue][e.year] = []
+    venues[e.venue][e.year].push(e)
+  }
+  return Object.keys(venues).map(venue => {
+    const years = Object.keys(venues[venue]).sort((a, b) => b.localeCompare(a))
+    return { venue, visits: years.map(year => ({ year, entries: venues[venue][year] })) }
+  }).sort((a, b) => b.visits[0].year.localeCompare(a.visits[0].year) || a.venue.localeCompare(b.venue))
+}
+
+// Pick the headline entry for a venue visit: finals result if present
+// (acid yellow for P1), otherwise the best available qualifying session.
+// DNF/DSQ/DNS always wins — never substitute a better session.
+function pickVisitHeadline(entries) {
+  const finals = entries.find(e => e.session.startsWith('finals'))
+  const best = finals || [...entries].sort((a, b) => (SESSION_ORDER[b.session] || 0) - (SESSION_ORDER[a.session] || 0))[0]
+  const status = best.dnf ? 'DNF' : best.dsq ? 'DSQ' : best.dns ? 'DNS' : null
+  return {
+    entry: best,
+    status,
+    rank: status ? null : best.rank,
+    isP1: !status && !!finals && best.rank === 1,
+    time: status ? '—' : (best.rank === 1 ? (best.time || '—') : (best.gap || best.time || '—')),
+    sessionLbl: sessionLabel(best.session)
+  }
+}
+
+function renderVisitDetailRow(e) {
+  const status = e.dnf ? 'DNF' : e.dsq ? 'DSQ' : e.dns ? 'DNS' : null
+  return `<div class="rvc-detail-row">
+  <span class="rvc-detail-session">${sessionLabel(e.session)}</span>
+  <span class="rvc-detail-rank">${status || (e.rank != null ? '#' + e.rank : '—')}</span>
+  <span class="rvc-detail-time">${status ? '—' : (e.time || '')}</span>
+  <span class="rvc-detail-gap">${status ? '' : (e.gap || '')}</span>
+  <span class="rvc-detail-pts">${e.points != null ? e.points + ' pts' : ''}</span>
+</div>`
+}
+
+function renderVisitRow(visit) {
+  const h = pickVisitHeadline(visit.entries)
+  const rankHtml = h.status
+    ? `<span class="rvc-badge">${h.status}</span>`
+    : `<span class="rvc-rank${h.isP1 ? ' rvc-rank-p1' : ''}">${h.rank ?? '—'}</span>`
+  const detail = [...visit.entries]
+    .sort((a, b) => (SESSION_ORDER[b.session] || 0) - (SESSION_ORDER[a.session] || 0))
+    .map(renderVisitDetailRow).join('')
+
+  return `
+<div class="rvc-visit">
+  <div class="rvc-visit-main" onclick="toggleRvcVisit(this)">
+    <div class="rvc-visit-rank-col">${rankHtml}</div>
+    <div class="rvc-visit-info">
+      <div class="rvc-visit-year">${visit.year}</div>
+      <div class="rvc-visit-session">${h.sessionLbl}</div>
+    </div>
+    <div class="rvc-visit-time-col">
+      <div class="rvc-visit-time${h.isP1 ? ' rvc-time-p1' : ''}">${h.time}</div>
+    </div>
+    <div class="rvc-chevron">&rsaquo;</div>
+  </div>
+  <div class="rvc-visit-detail">${detail}</div>
+</div>`
+}
+
+function renderVenueCard(group) {
+  return `
+<div class="rvc-venue-card">
+  <div class="rvc-venue-header">
+    <div class="rvc-venue-name">${group.venue}</div>
+    <div class="rvc-venue-count">${group.visits.length} visit${group.visits.length !== 1 ? 's' : ''}</div>
+  </div>
+  <div class="rvc-visits">${group.visits.map(renderVisitRow).join('')}</div>
+</div>`
+}
+
+function toggleRvcVisit(el) {
+  el.closest('.rvc-visit').classList.toggle('expanded')
+}
+
 function renderRiderSearch() {
   const el = document.getElementById('rs-content')
   el.innerHTML = `
@@ -2079,26 +2236,14 @@ function renderRiderSearchResults() {
   }
 
   riderSearchSelected = rider.key
-  const sorted = [...rider.entries].sort((a, b) =>
-    b.date.localeCompare(a.date) || (SESSION_ORDER[b.session] || 0) - (SESSION_ORDER[a.session] || 0))
-
-  const rows = sorted.map(e => {
-    const status = e.dnf ? 'DNF' : e.dsq ? 'DSQ' : e.dns ? 'DNS' : null
-    return `<tr${status ? ' class="rs-row-dnf"' : ''}>
-  <td class="rs-td-rank">${status || e.rank}</td>
-  <td class="rs-td-name">${e.year} · ${e.venue}</td>
-  <td class="rs-td-nat">${sessionLabel(e.session)}</td>
-  <td class="rs-td-time">${status ? '—' : (e.time || '')}</td>
-  <td class="rs-td-gap">${e.gap || ''}</td>
-  <td class="rs-td-pts">${e.points || ''}</td>
-</tr>`
-  }).join('')
+  const venueGroups = groupRiderByVenue(rider)
+  const cardsHtml = venueGroups.map(renderVenueCard).join('')
 
   el.innerHTML = `
 ${matches.length > 1 ? `<div class="rs-search-back" onclick="clearSearchSelection()">&larr; Back to results</div>` : ''}
 <div class="rs-rider-name" style="font-size:18px;margin-bottom:2px">${formatName(rider.name)}</div>
-<div class="rs-rider-nat" style="margin-bottom:12px">${rider.nat} · ${rider.entries.length} result${rider.entries.length !== 1 ? 's' : ''}</div>
-<table class="rs-table"><tbody>${rows}</tbody></table>`
+<div class="rs-rider-nat" style="margin-bottom:12px">${rider.nat} · ${venueGroups.length} venue${venueGroups.length !== 1 ? 's' : ''} · ${rider.entries.length} result${rider.entries.length !== 1 ? 's' : ''}</div>
+${cardsHtml}`
 }
 
 function sessionKey() {
