@@ -2184,7 +2184,10 @@ function renderResults() {
   const sessionLabel = activeSession === 'finals' ? 'Finals'
     : activeSession === 'q1' ? 'Qualifying 1'
     : 'Qualifying 2'
-  const venueDate = new Date(round.date).toLocaleDateString('en-US', { month:'short', day:'numeric' })
+  // round.date is a date-only string (e.g. "2026-06-13"). new Date() on a date-only
+  // string parses as UTC midnight, which toLocaleDateString then renders as the
+  // previous day in timezones behind UTC. Appending T00:00:00 parses as local midnight.
+  const venueDate = new Date(round.date + 'T00:00:00').toLocaleDateString('en-US', { month:'short', day:'numeric' })
 
   el.innerHTML = `
 <div class="rs-section">
