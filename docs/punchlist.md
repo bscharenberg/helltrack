@@ -11,8 +11,8 @@
 - Shorts strip in feed with duration-based detection (≤60s); seen/dim state on all cards
 - PITS tab with TEAMS / MEDIA / PODCASTS / UCI / WATCH sub-tabs; real broadcaster data in watch.json
 - Email list via Kit.com (hello@helltrack.app)
-- R1 South Korea and R2 Loudenvielle results live
-- Results fetcher workflow: targeted crons for Leogang (14:30 UTC June 12 qualifying, 13:30 UTC June 13 finals)
+- R1 South Korea, R2 Loudenvielle, R3 Leogang results live
+- Results fetcher workflow: race-day crons + 30-min polling backstop. Auto-commit fixed 2026-06-14 (see `docs/decisions.md`) — the old commit step `git stash`/`pop`'d around the rebase, which unstaged the `git add`, so `git diff --staged --quiet` was always true and results were fetched then silently dropped. Now commits first, then rebase-and-push with retries.
 - Branding finalized: chainsaw icon (192×192/512×512), header icon + white wordmark lockup, OG/Twitter share card and meta tags live
 
 ---
@@ -181,7 +181,7 @@ All three PBIs shipped:
 |---|---|---|---|---|---|
 | R1 | Mona YongPyong | 2026-04-30 | 2026-05-01 | race-of-south-korea-2026 | ✅ |
 | R2 | Loudenvielle | 2026-05-23 | 2026-05-28 | loudenvielle-2026 | ✅ |
-| R3 | Leogang | 2026-06-12 | 2026-06-13 | leogang-2026 | Upcoming |
+| R3 | Leogang | 2026-06-12 | 2026-06-13 | leogang-2026 | ✅ |
 | R4 | Lenzerheide | 2026-06-20 | 2026-06-21 | lenzerheide-2026 | — |
 | R5 | La Thuile | 2026-07-04 | 2026-07-05 | la-thuile-2026 | — |
 | R6 | Pal Arinsal | 2026-07-11 | 2026-07-12 | pal-arinsal-2026 | — |

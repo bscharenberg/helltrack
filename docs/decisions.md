@@ -96,6 +96,13 @@
 - **Problems**: 30-60s spin-up time, flaky in CI, silent failures
 - **Decision**: Cloudflare Browser Rendering instead. Then later retired entirely in favor of the JSON API.
 
+### `git stash` around a rebase silently drops staged changes (results auto-commit, fixed 2026-06-14)
+- **Symptom**: Leogang (R3) results never appeared on the site even though the `fetch-results.yml` workflow ran on race day and every step reported "success." Run logs showed the fetcher pulling all 6 sessions correctly (Finn Iles, Valentina Höll, full podiums) and writing `results.json` — then the commit step printed `no changes added to commit` / `Everything up-to-date` and committed nothing. Happened on **every** race-day run.
+- **Root cause**: The commit step did `git add results.json` → `git stash` → `git pull --rebase` → `git stash pop` → `git diff --staged --quiet || git commit`. `git stash pop` restores changes to the working tree **unstaged**, so by the time `git diff --staged --quiet` ran there was nothing staged — it exited 0 (true), the `|| git commit` was skipped, and `git push` had nothing to push. The fetch worked perfectly and was thrown away at the last step. The job exited 0 throughout, so nothing alerted.
+- **Fix**: Commit *first*, then rebase. `git add` → bail early if `git diff --staged --quiet` → otherwise `git commit` → then a retry loop of `git pull --rebase origin main && git push`. Once the change is a real commit (not a working-tree change), rebase replays it cleanly on top of remote HEAD — no stash needed. The retry loop absorbs races with the hourly cache-refresh workflow pushing to the same branch (different files, so no content conflict).
+- **Also hardened**: the fetcher's "already complete, skip" guard keyed only on `finals-men`; it now requires **both** `finals-men` and `finals-women` before declaring a round done, so a women's final posted a few minutes after the men's still gets picked up on a later polling run.
+- **Lesson**: Never `git stash`/`pop` around a rebase to preserve a change you intend to commit — `pop` unstages it. Commit before you rebase. And a CI job exiting 0 is not proof it did its job; gate on the actual artifact (here, an absent commit) not the green check.
+
 ## Content Filter Learnings
 
 ### MIN_SCORE = 6 with tiered thresholds
