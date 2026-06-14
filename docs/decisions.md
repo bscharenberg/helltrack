@@ -138,6 +138,13 @@
 - Paddock figures / legends who post mixed content (Cathro, Minnaar, Kerr, Wyn Masters): weight 2 — requires supporting DH signal to pass
 - Ben Cathro was briefly in the +6 rule — caused knee pad product articles to pass (score 8 for RSS). Fixed by moving to +2 only.
 
+### UCI Shorts: per-video race-tag is in the description, not the title (fixed 2026-06-14)
+- **Problem**: UCI MTB World Series XCO Shorts were passing the filter and showing up in the Shorts strip. Titles are generic emoji captions ("Ride of the day 🤩") with zero discipline info — the `titleOnly: true` XCO exclude never matched. Meanwhile the description's generic "formats we cover" boilerplate (XCO/XCC/DHI/EDR, present on every UCI video) gave enough boost (trusted + venue + "dhi"/"world cup" terms) to clear the untrusted threshold of 10 on its own.
+- **The actual signal**: each Short's description has a per-video race-tag line, e.g. "📍 Saalfelden-Leogang, SalzburgerLand 🏁 Women's Elite XCO World Cup" — unlike the generic boilerplate, this is event-specific and safe to check against full text.
+- **Solution**: kept bare `xco`/`xcc`/etc. as `titleOnly: true` (weight 15, unchanged — boilerplate doesn't contain these as standalone terms in a way that matters), and added a second exclude rule for `'elite xco'` / `'elite xcc'` (weight 15, full-text). UCI's "Women's"/"Men's" uses a curly apostrophe (U+2019) which `normalise()` doesn't strip, so matching on "elite xco"/"elite xcc" (no apostrophe) reliably hits the race-tag without depending on normalization.
+- **Result**: 6 XCO shorts dropped from score 10 to -5; all 14 legit DHI shorts and the other 47 cached items unaffected.
+- **Lesson**: for UCI content, the title alone is not a reliable discipline signal on Shorts — the description's race-tag line is. `titleOnly` excludes guard against the generic boilerplate; full-text excludes catch the per-video tag. Both are needed.
+
 ## Design Decisions
 
 ### Option A (dark, acid yellow) was the right aesthetic

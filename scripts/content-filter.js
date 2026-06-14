@@ -107,10 +107,18 @@ const INCLUDE_KEYWORDS = [
 
 const EXCLUDE_KEYWORDS = [
   // Wrong disciplines — hard exclude (titleOnly: checked against title only,
-  // not description — UCI boilerplate descriptions mention XCO/XCC on all videos)
-  { terms: ['xco', 'xcc', 'cross country', 'cross-country', 'bmx', 'road cycling',
-            'elite xco', 'elite xcc', "men's elite xco",
-            "women's elite xco"], weight: 15, titleOnly: true },
+  // not description — UCI's generic "formats we cover" boilerplate mentions
+  // "Cross-country Olympic (XCO), Cross-country Short Track (XCC)... " on every video)
+  { terms: ['xco', 'xcc', 'cross country', 'cross-country', 'bmx', 'road cycling'],
+    weight: 15, titleOnly: true },
+
+  // Per-video race-tag excludes — UCI Shorts often carry a generic caption
+  // ("Ride of the day 🤩") with the actual discipline only in the description's
+  // race-tag line ("📍 Saalfelden-Leogang 🏁 Women's Elite XCO World Cup"). That
+  // tag is event-specific (unlike the generic boilerplate above) so it's safe to
+  // check against full text. "elite xco"/"elite xcc" avoids the unicode
+  // apostrophe in "Women's"/"Men's" in UCI descriptions.
+  { terms: ['elite xco', 'elite xcc'], weight: 15 },
   { terms: ['mtbws highlights'], weight: 8, titleOnly: true },
 
   // Enduro — out of scope for Helltrack (DH only)
