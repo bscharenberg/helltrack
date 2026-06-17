@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-06-17T20:24:36.463Z",
-  "totalItems": 143,
+  "builtAt": "2026-06-17T22:48:47.628Z",
+  "totalItems": 144,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "PAZYMRRCX20",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "The races are coming thick and fast 😮‍💨",
+          "description": "The races are coming thick and fasy 😮‍💨\n\n🇨🇭 Lenzerheide. One of the fastest and most iconic stops on the WHOOP UCI Mountain Bike World Series calendar. ⚡\n\nHuge jumps, technical features, breathtaking alpine scenery and high-speed sections make this a true rider and fan favourite. 👀\n\nWhen Loris Vergier speaks, you listen 👊\n\n🗓️ 19-21 JUNE\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/PAZYMRRCX20/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-17T20:44:29Z",
+          "url": "https://www.youtube.com/watch?v=PAZYMRRCX20",
+          "isShort": true,
+          "score": 16,
+          "category": "shorts"
+        },
         {
           "id": "JQ68LixAuko",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 15,
           "category": "shorts"
-        },
-        {
-          "id": "dgzDdHYQETM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "A podium shoey for the Women's Elite top 3 😅🥂",
-          "description": "🥇 Vali Höll\n🥈 Marine Cabirou \n🥉 Anna Newkirk\n\n📍Saalfelden-Leogang, Salzburgerland 🏁 Women’s Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/dgzDdHYQETM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-13T15:17:07Z",
-          "url": "https://www.youtube.com/watch?v=dgzDdHYQETM",
-          "isShort": true,
-          "score": 23,
-          "category": "shorts"
         }
       ]
     },
@@ -376,7 +376,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Rob Warner's Unfiltered Reactions to the Wild Leogang World Cup",
-          "description": "&#039;The Voice of Downhill&#039; returns alongside The Ride Companion crew for a chaotic, highlight-heavy watch-along party tracking the slick Austrian finals.( Comments: 40 )",
+          "description": "&#039;The Voice of Downhill&#039; returns alongside The Ride Companion crew for a chaotic, highlight-heavy watch-along party tracking the slick Austrian finals.( Comments: 43 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29876903/p2pb29876903.jpg",
           "publishedAt": "2026-06-16T23:50:00.000Z",
           "url": "https://www.pinkbike.com/news/best-of-warners-race-companion.html?trk=rss",
@@ -391,7 +391,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Is It Selfish to Want to Watch Your Heroes? Ben Cathro Tackles the World Cup's Deadliest Rule",
-          "description": "The &#039;World Cup Waffle&#039; dives into the controversial qualifying format that keeps the sport&#039;s most famous elite racers off the television screen on finals day.( Comments: 122 )",
+          "description": "The &#039;World Cup Waffle&#039; dives into the controversial qualifying format that keeps the sport&#039;s most famous elite racers off the television screen on finals day.( Comments: 126 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29876851/p2pb29876851.jpg",
           "publishedAt": "2026-06-16T23:47:00.000Z",
           "url": "https://www.pinkbike.com/news/is-it-selfish-to-want-to-watch-your-heroes--world-cup-waffle-with-ben-cathro.html?trk=rss",
@@ -1125,9 +1125,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Has Joe Breeden Solved Arm Pump? | Lenzerheide World Cup DH Tech",
-          "description": "Innes Graham explores the backstory, internal mechanics, and paddock feedback surrounding the innovative, arm-pump-reducing bar ends sweeping the World Cup circuit.( Comments: 68 )",
+          "description": "Innes Graham explores the backstory, internal mechanics, and paddock feedback surrounding the innovative, arm-pump-reducing bar ends sweeping the World Cup circuit.( Comments: 98 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29879516/p2pb29879516.jpg",
-          "publishedAt": "2026-06-17T20:24:36.429Z",
+          "publishedAt": "2026-06-17T22:48:47.587Z",
           "url": "https://www.pinkbike.com/news/has-this-racer-solved-arm-pump--dh-tech-lenzerheide.html?trk=rss",
           "categories": [],
           "score": 9,
