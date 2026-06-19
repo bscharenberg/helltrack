@@ -170,8 +170,12 @@ async function main() {
       process.exit(0)
     }
 
-    if (idx >= 0) rounds[idx] = result
-    else {
+    // Merge sessions by key rather than replacing the round wholesale — a session
+    // fetched earlier from a different source (e.g. a manual live-timing pull ahead
+    // of finals) must survive a later fetch that doesn't happen to return that key.
+    if (idx >= 0) {
+      rounds[idx] = { ...rounds[idx], ...result, sessions: { ...rounds[idx].sessions, ...result.sessions } }
+    } else {
       rounds.push(result)
       rounds.sort((a, b) => a.round - b.round)
     }

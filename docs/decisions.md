@@ -103,6 +103,14 @@
 - **Also hardened**: the fetcher's "already complete, skip" guard keyed only on `finals-men`; it now requires **both** `finals-men` and `finals-women` before declaring a round done, so a women's final posted a few minutes after the men's still gets picked up on a later polling run.
 - **Lesson**: Never `git stash`/`pop` around a rebase to preserve a change you intend to commit — `pop` unstages it. Commit before you rebase. And a CI job exiting 0 is not proof it did its job; gate on the actual artifact (here, an absent commit) not the green check.
 
+### Chronorace live timing as a qualifying-day data source (2026-06-19)
+- **Problem**: UCI's `race-results` JSON API had a backend outage on Lenzerheide qualifying day (every slug, including previously-working ones, returned `"Unexpected token '<' ... not valid JSON"` — confirmed via direct curl, not a Helltrack bug). Qualifying results are otherwise unavailable from UCI until well after the session, if at all before finals.
+- **Discovery**: A third-party fan site (gravitylab.live) renders live qualifying/finals leaderboards by polling **Chronorace** — the actual on-site timing vendor — through a same-origin Netlify function proxy (`/.netlify/functions/chronorace?event=<id>&key=<n>`) that adds CORS headers over Chronorace's raw feed. The proxy is public (no auth, `Access-Control-Allow-Origin: *`) and returns full live timing JSON: rider roster, on-track/next-to-start, and a `Results` array with split-by-split times.
+- **One-time manual pull**: fetched Lenzerheide Q1/Q2 (both genders) directly from that proxy with `event=20260619_mtb` and per-session `key` (2/5/91/92 — Chronorace's own session-key numbering, not stable round to round), converted `RaceTime` (ms) to the existing `M:SS.mmm` format, and merged into `results.json` with `points: null` (Chronorace carries no UCI ranking-points field).
+- **Caveat**: this was a one-off manual pull, not a standing pipeline. The site owner's Netlify function and any Chronorace credentials are server-side and not something we have a right to depend on without his explicit OK — useful as a future collaboration, not as a thing to silently scrape on a schedule.
+- **Hardened `results-fetcher.mjs` as a result**: it used to replace a round's `sessions` wholesale (`rounds[idx] = result`) on every fetch. That's fine when one source always supplies all 6 sessions atomically, but broke the moment a different source (Chronorace) supplied qualifying ahead of finals — a later UCI-sourced finals fetch that didn't also happen to return qualifying would have silently deleted it. Fixed to merge `sessions` per-key (`{ ...old.sessions, ...new.sessions }`) so a session missing from a given fetch survives.
+- **Lesson**: when a round can legitimately be assembled from more than one fetch/source over time, merge state per-field — never replace the whole record on each write.
+
 ## Content Filter Learnings
 
 ### MIN_SCORE = 6 with tiered thresholds
