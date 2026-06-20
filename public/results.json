@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T15:54:23.420Z",
+  "lastUpdated": "2026-06-20T02:51:27.992Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -282181,7 +282181,7 @@
                 "team": "MONDRAKER FACTORY RACING DH",
                 "time": "2:48.406",
                 "gap": null,
-                "points": null
+                "points": 50
               },
               {
                 "rank": 2,
@@ -282190,7 +282190,7 @@
                 "team": "TREK - UNBROKEN DH",
                 "time": "2:48.816",
                 "gap": "+0:00.410",
-                "points": null
+                "points": 40
               },
               {
                 "rank": 3,
@@ -282199,7 +282199,7 @@
                 "team": "SPECIALIZED GRAVITY",
                 "time": "2:48.966",
                 "gap": "+0:00.560",
-                "points": null
+                "points": 30
               },
               {
                 "rank": 4,
@@ -282208,7 +282208,7 @@
                 "team": "SCOTT DOWNHILL FACTORY",
                 "time": "2:48.974",
                 "gap": "+0:00.568",
-                "points": null
+                "points": 25
               },
               {
                 "rank": 5,
@@ -282217,7 +282217,7 @@
                 "team": "SCOTT DOWNHILL FACTORY",
                 "time": "2:48.996",
                 "gap": "+0:00.590",
-                "points": null
+                "points": 22
               },
               {
                 "rank": 6,
@@ -282226,7 +282226,7 @@
                 "team": "CANYON DH RACING",
                 "time": "2:48.999",
                 "gap": "+0:00.593",
-                "points": null
+                "points": 20
               },
               {
                 "rank": 7,
@@ -282235,7 +282235,7 @@
                 "team": null,
                 "time": "2:49.286",
                 "gap": "+0:00.880",
-                "points": null
+                "points": 18
               },
               {
                 "rank": 8,
@@ -282244,7 +282244,7 @@
                 "team": "CANYON DH RACING",
                 "time": "2:49.361",
                 "gap": "+0:00.955",
-                "points": null
+                "points": 17
               },
               {
                 "rank": 9,
@@ -282253,7 +282253,7 @@
                 "team": "PIVOT FACTORY RACING",
                 "time": "2:49.442",
                 "gap": "+0:01.036",
-                "points": null
+                "points": 16
               },
               {
                 "rank": 10,
@@ -282262,7 +282262,7 @@
                 "team": "YETI / FOX FACTORY RACE TEAM",
                 "time": "2:49.476",
                 "gap": "+0:01.070",
-                "points": null
+                "points": 15
               },
               {
                 "rank": 11,
@@ -282271,7 +282271,7 @@
                 "team": null,
                 "time": "2:49.477",
                 "gap": "+0:01.071",
-                "points": null
+                "points": 14
               },
               {
                 "rank": 12,
@@ -282280,7 +282280,7 @@
                 "team": "GIANT FACTORY OFF-ROAD TEAM - DH",
                 "time": "2:49.987",
                 "gap": "+0:01.581",
-                "points": null
+                "points": 13
               },
               {
                 "rank": 13,
@@ -282289,7 +282289,7 @@
                 "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
                 "time": "2:50.135",
                 "gap": "+0:01.729",
-                "points": null
+                "points": 12
               },
               {
                 "rank": 14,
@@ -282298,7 +282298,7 @@
                 "team": "NORCO X ADIDAS RACE DIVISION",
                 "time": "2:50.147",
                 "gap": "+0:01.741",
-                "points": null
+                "points": 11
               },
               {
                 "rank": 15,
@@ -282307,7 +282307,7 @@
                 "team": "SPECIALIZED GRAVITY",
                 "time": "2:50.384",
                 "gap": "+0:01.978",
-                "points": null
+                "points": 10
               },
               {
                 "rank": 16,
@@ -282316,7 +282316,7 @@
                 "team": "COMMENCAL SCHWALBE BY LES ORRES",
                 "time": "2:50.391",
                 "gap": "+0:01.985",
-                "points": null
+                "points": 9
               },
               {
                 "rank": 17,
@@ -282325,7 +282325,7 @@
                 "team": "SANTA CRUZ BURGTEC BY GOODMAN",
                 "time": "2:50.447",
                 "gap": "+0:02.041",
-                "points": null
+                "points": 8
               },
               {
                 "rank": 18,
@@ -282334,7 +282334,7 @@
                 "team": "CRESTLINE SPEED SHOP",
                 "time": "2:50.650",
                 "gap": "+0:02.244",
-                "points": null
+                "points": 7
               },
               {
                 "rank": 19,
@@ -282343,7 +282343,7 @@
                 "team": "CONTINENTAL ATHERTON",
                 "time": "2:50.811",
                 "gap": "+0:02.405",
-                "points": null
+                "points": 6
               },
               {
                 "rank": 20,
@@ -282352,7 +282352,7 @@
                 "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
                 "time": "2:51.147",
                 "gap": "+0:02.741",
-                "points": null
+                "points": 5
               },
               {
                 "rank": 21,
@@ -282428,7 +282428,7 @@
               },
               {
                 "rank": 29,
-                "name": "Fernando Juan Muñoz",
+                "name": "Fernando Juan MuÑoz",
                 "nat": "COL",
                 "team": "NUKEPROOF AXESS RACING",
                 "time": "2:51.689",
@@ -282923,7 +282923,7 @@
               },
               {
                 "rank": 84,
-                "name": "Matija Crnkovic",
+                "name": "Matija Crnković",
                 "nat": "CRO",
                 "team": null,
                 "time": "3:04.871",
@@ -283092,7 +283092,7 @@
                 "team": "FRAMEWORKS RACING / TRP",
                 "time": "3:14.640",
                 "gap": null,
-                "points": null
+                "points": 50
               },
               {
                 "rank": 2,
@@ -283101,7 +283101,7 @@
                 "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
                 "time": "3:14.842",
                 "gap": "+0:00.202",
-                "points": null
+                "points": 40
               },
               {
                 "rank": 3,
@@ -283110,7 +283110,7 @@
                 "team": "SANTA CRUZ SYNDICATE",
                 "time": "3:16.449",
                 "gap": "+0:01.809",
-                "points": null
+                "points": 30
               },
               {
                 "rank": 4,
@@ -283119,7 +283119,7 @@
                 "team": "CANYON DH RACING",
                 "time": "3:17.555",
                 "gap": "+0:02.915",
-                "points": null
+                "points": 25
               },
               {
                 "rank": 5,
@@ -283128,7 +283128,7 @@
                 "team": "TREK - UNBROKEN DH",
                 "time": "3:17.724",
                 "gap": "+0:03.084",
-                "points": null
+                "points": 20
               },
               {
                 "rank": 6,
@@ -283137,16 +283137,16 @@
                 "team": "YETI / FOX FACTORY RACE TEAM",
                 "time": "3:18.023",
                 "gap": "+0:03.383",
-                "points": null
+                "points": 16
               },
               {
                 "rank": 7,
-                "name": "Valentina Höll",
+                "name": "Valentina HÖll",
                 "nat": "AUT",
                 "team": "COMMENCAL SCHWALBE BY LES ORRES",
                 "time": "3:18.070",
                 "gap": "+0:03.430",
-                "points": null
+                "points": 14
               },
               {
                 "rank": 8,
@@ -283155,7 +283155,7 @@
                 "team": "COMMENCAL SCHWALBE BY LES ORRES",
                 "time": "3:18.827",
                 "gap": "+0:04.187",
-                "points": null
+                "points": 12
               },
               {
                 "rank": 9,
@@ -283164,7 +283164,7 @@
                 "team": "SANTA CRUZ SYNDICATE",
                 "time": "3:19.613",
                 "gap": "+0:04.973",
-                "points": null
+                "points": 10
               },
               {
                 "rank": 10,
@@ -283173,7 +283173,7 @@
                 "team": "MS-RACING",
                 "time": "3:21.074",
                 "gap": "+0:06.434",
-                "points": null
+                "points": 5
               },
               {
                 "rank": 11,
@@ -283276,7 +283276,7 @@
               },
               {
                 "rank": 22,
-                "name": "Frida Helena Rønning",
+                "name": "Frida Helena RØnning",
                 "nat": "NOR",
                 "team": "CRESTLINE SPEED SHOP",
                 "time": "3:30.335",
@@ -284189,7 +284189,7 @@
               },
               {
                 "rank": 12,
-                "name": "Frida Helena Rønning",
+                "name": "Frida Helena RØnning",
                 "nat": "NOR",
                 "team": "CRESTLINE SPEED SHOP",
                 "time": "3:28.814",
@@ -284306,7 +284306,7 @@
               }
             ]
           },
-          "fetchedAt": "2026-06-19T15:54:23.410Z",
+          "fetchedAt": "2026-06-20T02:51:27.948Z",
           "source": "chronorace-live"
         }
       ]
