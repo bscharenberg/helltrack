@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T10:10:46.558Z",
+  "lastUpdated": "2026-06-20T12:14:24.606Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -284304,9 +284304,146 @@
                 "gap": "+1:38.794",
                 "points": null
               }
+            ],
+            "finals-women": [
+              {
+                "rank": 1,
+                "name": "Anna Newkirk",
+                "nat": "USA",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": "3:12.917",
+                "gap": null,
+                "points": 200
+              },
+              {
+                "rank": 2,
+                "name": "Lisa Baumann",
+                "nat": "SUI",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "3:13.508",
+                "gap": "+0:00.591",
+                "points": 160
+              },
+              {
+                "rank": 3,
+                "name": "Gloria Scarsi",
+                "nat": "ITA",
+                "team": "MS-RACING",
+                "time": "3:14.321",
+                "gap": "+0:01.404",
+                "points": 140
+              },
+              {
+                "rank": 4,
+                "name": "Marine Cabirou",
+                "nat": "FRA",
+                "team": "CANYON DH RACING",
+                "time": "3:15.332",
+                "gap": "+0:02.415",
+                "points": 125
+              },
+              {
+                "rank": 5,
+                "name": "Harriet Harnden",
+                "nat": "GBR",
+                "team": "AON RACING",
+                "time": "3:15.570",
+                "gap": "+0:02.653",
+                "points": 110
+              },
+              {
+                "rank": 6,
+                "name": "Sacha Earnest",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": "3:16.875",
+                "gap": "+0:03.958",
+                "points": 95
+              },
+              {
+                "rank": 7,
+                "name": "Jess Blewitt",
+                "nat": "NZL",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": "3:17.013",
+                "gap": "+0:04.096",
+                "points": 80
+              },
+              {
+                "rank": 8,
+                "name": "Nina Hoffmann",
+                "nat": "GER",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "3:17.256",
+                "gap": "+0:04.339",
+                "points": 70
+              },
+              {
+                "rank": 9,
+                "name": "Eliana Hulsebosch",
+                "nat": "NZL",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "3:17.345",
+                "gap": "+0:04.428",
+                "points": 60
+              },
+              {
+                "rank": 10,
+                "name": "Valentina HÖll",
+                "nat": "AUT",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "3:17.853",
+                "gap": "+0:04.936",
+                "points": 55
+              },
+              {
+                "rank": 11,
+                "name": "Jenna Hastings",
+                "nat": "NZL",
+                "team": "PIVOT FACTORY RACING",
+                "time": "3:19.198",
+                "gap": "+0:06.281",
+                "points": 50
+              },
+              {
+                "rank": 12,
+                "name": "Phoebe Gale",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": "3:19.905",
+                "gap": "+0:06.988",
+                "points": 45
+              },
+              {
+                "rank": 13,
+                "name": "Matilda Melton",
+                "nat": "USA",
+                "team": "YETI / FOX FACTORY RACE TEAM",
+                "time": "3:20.086",
+                "gap": "+0:07.169",
+                "points": 40
+              },
+              {
+                "rank": 14,
+                "name": "Myriam Nicole",
+                "nat": "FRA",
+                "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
+                "time": "3:24.254",
+                "gap": "+0:11.337",
+                "points": 35
+              },
+              {
+                "rank": 15,
+                "name": "Veronika Widmann",
+                "nat": "ITA",
+                "team": "UNNO FACTORY RACING DH",
+                "time": "3:34.542",
+                "gap": "+0:21.625",
+                "points": 30
+              }
             ]
           },
-          "fetchedAt": "2026-06-20T10:10:46.515Z",
+          "fetchedAt": "2026-06-20T12:14:24.557Z",
           "source": "chronorace-live"
         }
       ]
