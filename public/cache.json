@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-23T08:33:08.712Z",
+  "builtAt": "2026-06-23T12:11:46.671Z",
   "totalItems": 200,
   "categories": {
     "shorts": {
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "bbVxIceiS8I",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Breakthroughs. Battles. Brilliance. | THE B LINE 🇨🇭| WHOOP UCI MTB World Series",
+          "description": "Lenzerheide delivered another unforgettable weekend of racing, packed with breakthrough performances, fierce battles and stories that stretched far beyond the finish line. 🇨🇭\n\nJoin Ashleigh Wilmot as she guides you through the biggest stories from the UCI Cross-country Olympic, Short Track and Downhill World Cups. Along the way, she sits down with Adrien Boichis, while Emma Stewart catches up with the biggest names from the Downhill paddock.\n\nFrom Luca Martin's Elite UCI XCO World Cup victory and Adrien Boichis continuing his remarkable rise, to Finn Iles claiming the third Elite UCI World Cup win of his career, we dive into the results, the emotions and what they mean for the rest of the season.\n\nAway from the racing, we get to know the riders beyond the helmet with plenty of behind-the-scenes stories, laughs and honest conversations.\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/bbVxIceiS8I/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-23T09:59:32Z",
+          "url": "https://www.youtube.com/watch?v=bbVxIceiS8I",
+          "isShort": false,
+          "score": 24,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/photo-epic-finals-day-at-the-lenzerheide-dh-world-cup.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -423,7 +440,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Lenzerheide DH World Cup Results: Elite Finals Breakdown",
-          "description": "An incredible end to a hectic week of racing at the Lenzerheide downhill World Cup.( Photos: 5, Comments: 209 )",
+          "description": "An incredible end to a hectic week of racing at the Lenzerheide downhill World Cup.( Photos: 5, Comments: 210 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-06-20T23:34:00.000Z",
           "url": "https://www.pinkbike.com/news/results-elite-finals-at-the-lenzerheide-dh-world-cup.html?trk=rss",
@@ -664,23 +681,6 @@
           "isShort": false,
           "score": 17,
           "category": "race-runs"
-        },
-        {
-          "id": "-OdidI36LVA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Asa Vermette with the backflip in practice 😮‍💨 🇨🇭 Bike Kingdom, Lenzerheide",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/-OdidI36LVA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-18T19:24:24Z",
-          "url": "https://www.youtube.com/watch?v=-OdidI36LVA",
-          "isShort": false,
-          "score": 16,
-          "category": "race-runs"
         }
       ]
     },
@@ -744,7 +744,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Race Analysis: Tight Margins &amp; Breakout Runs at the 2026 Lenzerheide DH World Cup",
-          "description": "We dive into the most important numbers from the exhilarating fourth round of the 2026 downhill World Cup series.( Photos: 4, Comments: 19 )",
+          "description": "We dive into the most important numbers from the exhilarating fourth round of the 2026 downhill World Cup series.( Photos: 4, Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29892694/p2pb29892694.jpg",
           "publishedAt": "2026-06-20T23:37:00.000Z",
           "url": "https://www.pinkbike.com/news/race-analysis-razor-thin-margins-and-breakout-runs-at-the-2026-lenzerheide-dh-world-cup.html?trk=rss",
@@ -1315,7 +1315,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "4 Things We Learned from the 2026 Lenzerheide DH World Cup",
-          "description": "A bad start to 2026 for French racers, record-setting wins and more things we spotted from the sidelines in Lenzerheide.( Photos: 5, Comments: 65 )",
+          "description": "A bad start to 2026 for French racers, record-setting wins and more things we spotted from the sidelines in Lenzerheide.( Photos: 5, Comments: 70 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29892734/p2pb29892734.jpg",
           "publishedAt": "2026-06-22T23:57:00.000Z",
           "url": "https://www.pinkbike.com/news/4-things-we-learned-from-the-2026-lenzerheide-dh-world-cup.html?trk=rss",
