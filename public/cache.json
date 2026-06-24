@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-24T17:10:46.017Z",
-  "totalItems": 182,
+  "builtAt": "2026-06-24T19:57:11.894Z",
+  "totalItems": 183,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -951,7 +951,7 @@
           "title": "Video: Behind the Scenes with Vali Höll at her Toughest World Cup Yet",
           "description": "Join Vali Höll for an inside look at the 2026 Lenzerheide downhill World Cup.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29892700/p2pb29892700.jpg",
-          "publishedAt": "2026-06-22T23:33:00.000Z",
+          "publishedAt": "2026-06-22T23:32:00.000Z",
           "url": "https://www.pinkbike.com/news/video-behind-the-scenes-with-vali-hll-at-her-toughest-world-cup-yet.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -1014,6 +1014,23 @@
       "id": "paddock",
       "label": "Pits",
       "items": [
+        {
+          "id": "_s3GP2vzHbA",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Scotty Laughland hosts The Setup: Lenzerheide! 🇨🇭",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/_s3GP2vzHbA/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-24T17:54:11Z",
+          "url": "https://www.youtube.com/watch?v=_s3GP2vzHbA",
+          "isShort": false,
+          "score": 6,
+          "category": "paddock"
+        },
         {
           "id": "D6dVxVffoPA",
           "type": "video",
@@ -1267,7 +1284,7 @@
           "title": "4 Things We Learned from the 2026 Lenzerheide DH World Cup",
           "description": "A bad start to 2026 for French racers, record-setting wins and more things we spotted from the sidelines in Lenzerheide.( Photos: 5, Comments: 112 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29892734/p2pb29892734.jpg",
-          "publishedAt": "2026-06-22T23:42:00.000Z",
+          "publishedAt": "2026-06-22T23:41:00.000Z",
           "url": "https://www.pinkbike.com/news/4-things-we-learned-from-the-2026-lenzerheide-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -1282,7 +1299,7 @@
           "title": "Video: Amaury Pierron's Wild 2nd Place POV from the 2026 Lenzerheide DH World Cup",
           "description": "Finn Iles&#039; run must have been truly flat-out to beat this by nearly half a second.( Comments: 16 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29901782/p2pb29901782.jpg",
-          "publishedAt": "2026-06-22T23:32:00.000Z",
+          "publishedAt": "2026-06-22T23:31:00.000Z",
           "url": "https://www.pinkbike.com/news/video-amaury-pierrons-wild-2nd-place-pov-from-the-2026-lenzerheide-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 16,
@@ -1297,7 +1314,7 @@
           "title": "Video: Rosa Marie Jensen's Journey from Flatlands to Downhill World Cup Racing",
           "description": "How does a downhill racer from one of the flattest countries in the world make it to the biggest stage?( Comments: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb28440492/p2pb28440492.jpg",
-          "publishedAt": "2026-06-22T23:31:00.000Z",
+          "publishedAt": "2026-06-22T23:30:00.000Z",
           "url": "https://www.pinkbike.com/news/video-rosa-marie-jensens-journey-from-flatlands-to-downhill-world-cup-racing.html?trk=rss",
           "categories": [],
           "score": 8,
