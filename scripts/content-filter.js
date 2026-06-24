@@ -133,10 +133,15 @@ const EXCLUDE_KEYWORDS = [
   { terms: ['nove mesto', 'nové město', 'nové mesto', 'albstadt', 'lenzerheide xco',
             'snowshoe xco', 'mont sainte anne xco'], weight: 10, titleOnly: true },
 
-  // XCO/road rider names (title only)
+  // XCO/road rider names (title only) — UCI posts "rider feature" shorts
+  // (e.g. "X loves the all-Swiss setup in Lenzerheide") with zero discipline
+  // text anywhere in title or description, only the rider's name to go on.
+  // Whack-a-mole list: add names here as XCO leakage is spotted.
   { terms: ['peter sagan', 'mathieu van der poel', 'tom pidcock', 'nino schurter',
             'ondrej cink', 'ondřej cink', 'jordan sarrou', 'victor koretzky',
-            'pauline ferrand prevot', 'loana lecomte'], weight: 10, titleOnly: true },
+            'pauline ferrand prevot', 'loana lecomte', 'paul schehl',
+            'alessandra keller', 'savilia blunk', 'luca martin',
+            'mathis guay'], weight: 10, titleOnly: true },
 
   // Freeride / slopestyle — not DH world cup
   { terms: ['crankworx slopestyle', 'rampage', 'redbull rampage',

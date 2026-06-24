@@ -153,6 +153,13 @@
 - **Result**: 6 XCO shorts dropped from score 10 to -5; all 14 legit DHI shorts and the other 47 cached items unaffected.
 - **Lesson**: for UCI content, the title alone is not a reliable discipline signal on Shorts — the description's race-tag line is. `titleOnly` excludes guard against the generic boilerplate; full-text excludes catch the per-video tag. Both are needed.
 
+### "Rider feature" Shorts have no discipline text at all — only a name (2026-06-23)
+- **Problem**: at dual-format venues (Lenzerheide hosts XCO/XCC and DHI the same weekend), UCI posts personality/reaction Shorts like "Alessandra Keller loves the all-Swiss setup in Lenzerheide" or "Digging Deep — Savilia Blunk's Reaction To Controversy in Leogang." No XCO/XCC term, no race-tag line, nothing but the rider's name and a venue — the venue alone is shared by both disciplines, so it boosts the score instead of excluding it.
+- **Confirmed via web search, not assumption**: every name added was independently verified as XCO/XCC-only before excluding (Paul Schehl, Alessandra Keller, Savilia Blunk, Luca Martin, Mathis Guay) — also cross-checked against Helltrack's own Chronorace-sourced Lenzerheide DH qualifying data (none of them appear in it). One WebSearch summary falsely claimed Luca Martin "came out on top" in DH qualifying; our own results data shows that's wrong — Luca Martin doesn't appear in the DH field at all. Don't trust an AI search summary over verified first-party data.
+- **Solution**: added the five names to the existing XCO/road rider names exclude list (`titleOnly: true`, weight 10) — the same whack-a-mole list that already held Sagan/Van der Poel/Pidcock/Schurter etc. There is no general-purpose fix here; a feature short with zero discipline text is only classifiable by knowing who the rider is.
+- **Remaining gap**: a handful of completely generic, nameless caption Shorts ("DRAMA! 😱", "WHAT A RACE 😮‍💨") passed through unverified — there is no text signal of any kind to check. Left as-is; revisit only if one is confirmed to be XCO.
+- **Lesson**: this list will need ongoing maintenance every season as new XCO/XCC stars come up, especially around shared-venue weekends. When checking a name's discipline, prefer Helltrack's own verified results data over a search engine's AI summary, which can be confidently wrong.
+
 ## Design Decisions
 
 ### Option A (dark, acid yellow) was the right aesthetic
