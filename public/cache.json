@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-25T14:47:00.923Z",
-  "totalItems": 178,
+  "builtAt": "2026-06-25T17:19:20.303Z",
+  "totalItems": 175,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1236,23 +1236,6 @@
           "isShort": false,
           "score": 14,
           "category": "paddock"
-        },
-        {
-          "id": "25sJHyhfCVg",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
-          "channelName": "Just Ride",
-          "title": "The Team NOBODY Saw Coming | Neko Mullaly on Finding Asa Vermette and Building Frameworks",
-          "description": "In this episode of Just Ride, Rob Warner and Eliot Jackson sit down with Neko Mulally to talk about building Frameworks Racing from the ground up, from homemade bike prototypes to one of the most talked-about teams in downhill mountain biking.\n\nNeko shares the story behind signing Asa Vermette, bringing Aaron Gwin onto the team, developing World Cup race bikes, and creating a team culture built around trust, performance, and progression. The conversation dives into bike setup, rider development, Hardline, American downhill racing, and what it really takes to compete at the highest level.\n\nThey also discuss the future of Frameworks, growing the sport in the U.S., and why simplicity, confidence, and passion still matter in modern downhill MTB.\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#podcast #redbull #justride \n\n00:00 - Neko Mulally Built a World Cup DH Team From Scratch\n02:34 - How Frameworks Racing Became a Top DH Team\n05:11 - How Neko Mulally Discovered Asa Vermette\n06:40 - Why Asa Vermette Is Different From Other Riders\n08:05 - How Frameworks Racing Kept Asa Vermette\n10:28 - Why Asa Vermette Stayed With Frameworks Racing\n12:17 - Asa Vermette’s Career-Changing Injury Story\n15:21 - How DH Teams Compete for Young Riders\n18:53 - How Frameworks Bikes Are Developed for Racing\n21:15 - Why Top DH Riders Don’t Overthink Bike Setup\n23:18 - What Aaron Gwin Brings to Frameworks Racing\n26:18 - Why Aaron Gwin Joined Frameworks Racing\n28:16 - Anna Newkirk’s Rise in Downhill Racing\n29:21 - Should Women Race Red Bull Hardline?\n33:17 - How DH Teams Balance Racing & Social Media\n34:22 - How Neko Mulally Built Frameworks Bikes\n36:32 - The Risk of Starting a Bike Company\n37:30 - How Frameworks Sold Out Bikes in 24 Hours\n38:11 - What Makes a Great DH Race Bike\n40:34 - Why Neko Mulally Refuses to Change the Bike\n42:15 - Why Riders Overthink Bike Setup\n43:57 - Neko Mulally’s Craziest World Cup Moments\n46:15 - The Mindset Needed to Win in DH Racing\n48:02 - Does Asa Vermette Even Need Training?\n50:32 - Can Asa Vermette Handle Elite Pressure?\n54:03 - Will Aaron Gwin Race More Hardlines?\n55:24 - How Neko Mulally Helped Revive American Downhill\n59:49 - Why American DH Racing Is Growing Again\n01:01:19 - Neko Mulally’s Vision for Frameworks Racing",
-          "thumbnail": "https://i.ytimg.com/vi/25sJHyhfCVg/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-05-26T15:22:21Z",
-          "url": "https://www.youtube.com/watch?v=25sJHyhfCVg",
-          "isShort": false,
-          "score": 27,
-          "category": "paddock"
         }
       ]
     },
@@ -1260,21 +1243,6 @@
       "id": "news",
       "label": "News",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/4-things-we-learned-from-the-2026-lenzerheide-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "4 Things We Learned from the 2026 Lenzerheide DH World Cup",
-          "description": "A bad start to 2026 for French racers, record-setting wins and more things we spotted from the sidelines in Lenzerheide.( Photos: 5, Comments: 114 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29892734/p2pb29892734.jpg",
-          "publishedAt": "2026-06-22T23:35:00.000Z",
-          "url": "https://www.pinkbike.com/news/4-things-we-learned-from-the-2026-lenzerheide-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 10,
-          "category": "news"
-        },
         {
           "id": "A5Z0bCe7Plo",
           "type": "video",
