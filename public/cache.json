@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-26T17:57:30.139Z",
-  "totalItems": 175,
+  "builtAt": "2026-06-26T20:03:14.765Z",
+  "totalItems": 174,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -918,23 +918,6 @@
           "isShort": false,
           "score": 8,
           "category": "results"
-        },
-        {
-          "id": "Wikjjb8m-OY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Time To Go Racing In Loudenvielle! - Up To Speed - Pre Race",
-          "description": "Ben Cathro is here to inform you of who to watch out for at the second round of the UCI Downhill Mountain Bike World Cup Series. All from the comfort of Pinkbike HQ.\n\nPlay the Pinkbike DH Fantasy League here - https://www.pinkbike.com/contest/fantasy/dh/\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/Wikjjb8m-OY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-05-27T18:00:37Z",
-          "url": "https://www.youtube.com/watch?v=Wikjjb8m-OY",
-          "isShort": false,
-          "score": 13,
-          "category": "results"
         }
       ]
     },
@@ -1006,9 +989,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Frameworks Tests the Loctite DH Bike Prototype with Adjustable Kinematics",
-          "description": "Neko Mulally provides more insights into the Frameworks testing process.( Comments: 24 )",
+          "description": "Neko Mulally provides more insights into the Frameworks testing process.( Comments: 25 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29920685/p2pb29920685.jpg",
-          "publishedAt": "2026-06-26T17:52:30.101Z",
+          "publishedAt": "2026-06-26T19:55:14.727Z",
           "url": "https://www.pinkbike.com/news/video-frameworks-tests-a-dh-bike-prototype-with-adjustable-kinematics.html?trk=rss",
           "categories": [],
           "score": 10,
