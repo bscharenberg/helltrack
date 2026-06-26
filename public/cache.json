@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-26T09:41:52.687Z",
-  "totalItems": 174,
+  "builtAt": "2026-06-26T12:18:04.448Z",
+  "totalItems": 175,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -999,6 +999,21 @@
       "id": "paddock",
       "label": "Pits",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/video-frameworks-tests-a-dh-bike-prototype-with-adjustable-kinematics.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Frameworks Tests the Loctite DH Bike Prototype with Adjustable Kinematics",
+          "description": "Neko Mulally provides more insights into the Frameworks testing process.( Comments: 3 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29920685/p2pb29920685.jpg",
+          "publishedAt": "2026-06-26T12:17:04.412Z",
+          "url": "https://www.pinkbike.com/news/video-frameworks-tests-a-dh-bike-prototype-with-adjustable-kinematics.html?trk=rss",
+          "categories": [],
+          "score": 10,
+          "category": "paddock"
+        },
         {
           "id": "_s3GP2vzHbA",
           "type": "video",
