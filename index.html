@@ -1286,8 +1286,8 @@ html, body {
     <div class="rs-nav-row" id="rs-year-bar"></div>
     <div class="rs-nav-row" id="rs-round-bar"></div>
     <div class="rs-gender-toggle" id="rs-gender-bar">
-      <div class="rs-gender-btn active" id="rs-men-btn" onclick="setGender('men')">Elite Men</div>
-      <div class="rs-gender-btn" id="rs-women-btn" onclick="setGender('women')">Elite Women</div>
+      <div class="rs-gender-btn active" id="rs-men-btn" data-gender="men" onclick="setGender('men')">Elite Men</div>
+      <div class="rs-gender-btn" id="rs-women-btn" data-gender="women" onclick="setGender('women')">Elite Women</div>
     </div>
     <div class="rs-view-toggle" id="rs-view-bar">
       <div class="rs-view-btn active" data-view="results" onclick="setResultsView('results')">Results</div>
@@ -1551,7 +1551,17 @@ function openSheet(item) {
     renderYouTubePlayer(thumbEl, videoId, item)
     ytLink.href = item.url || '#'
     ytLink.style.display = 'block'
-    ytLink.onclick = () => { markSeen(item.url); applySeenState() }
+    ytLink.onclick = () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'video_click', {
+          video_id:  item.id,
+          channel:   item.channelName,
+          category:  item.category,
+          source:    item.source,
+        })
+      }
+      markSeen(item.url); applySeenState()
+    }
     cta.style.display = 'none'
     // Opening the in-app player is the primary engagement now — mark seen immediately.
     markSeen(item.url)
@@ -1804,6 +1814,9 @@ function buildTabs() {
       activeTab = el.dataset.tab
       tabs.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
       el.classList.add('active')
+      if (typeof gtag === 'function') {
+        gtag('event', 'tab_view', { tab: activeTab })
+      }
       const isResults = activeTab === 'standings'
       const isRiders  = activeTab === 'riders'
       const isPits    = activeTab === 'pits'
@@ -1872,6 +1885,9 @@ window.addEventListener('beforeinstallprompt', e => {
 
 document.getElementById('install-btn').addEventListener('click', async () => {
   if (!deferredPrompt) return
+  if (typeof gtag === 'function') {
+    gtag('event', 'pwa_install', {})
+  }
   deferredPrompt.prompt()
   const { outcome } = await deferredPrompt.userChoice
   deferredPrompt = null
@@ -1900,6 +1916,21 @@ let resultsSearchQuery  = ''
 let riderSearchSelected = null
 let selectedVenue       = null
 
+document.getElementById('results-nav').addEventListener('click', e => {
+  const pill = e.target.closest('[data-year], [data-slug], [data-gender], [data-session]')
+  if (!pill) return
+  const type = pill.dataset.year ? 'year'
+             : pill.dataset.slug ? 'venue'
+             : pill.dataset.gender ? 'gender'
+             : 'session'
+  if (typeof gtag === 'function') {
+    gtag('event', 'results_drill', {
+      drill_type:  type,
+      drill_value: pill.dataset.year || pill.dataset.slug || pill.dataset.gender || pill.dataset.session,
+    })
+  }
+})
+
 function formatName(raw) {
   return raw.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ')
 }
@@ -1918,7 +1949,7 @@ function buildSeasonBar() {
   const roundBar = document.getElementById('rs-round-bar')
   if (yearBar) {
     yearBar.innerHTML = seasons.map(yr =>
-      `<div class="rs-round-pill${yr === activeSeason ? ' active' : ''}"
+      `<div class="rs-round-pill${yr === activeSeason ? ' active' : ''}" data-year="${yr}"
         onclick="setSeason('${yr}')">${yr}</div>`
     ).join('')
   }
@@ -1928,7 +1959,7 @@ function buildSeasonBar() {
       const label = (r.eventType === 'world-championship' || r.type === 'World Championships')
         ? `Worlds · ${r.venue.split(/[ ,]/)[0]}`
         : `R${r.round} · ${r.venue.split(/[ ,]/)[0]}`
-      return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}"
+      return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}" data-slug="${escAttr(r.slug)}"
         onclick="setRound(${i})">${label}</div>`
     }).join('')
   }
