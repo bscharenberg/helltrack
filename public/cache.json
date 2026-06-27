@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-27T16:12:38.288Z",
-  "totalItems": 169,
+  "builtAt": "2026-06-27T18:10:59.164Z",
+  "totalItems": 168,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1216,23 +1216,6 @@
           "url": "https://www.youtube.com/watch?v=vPRetXZRU_c",
           "isShort": false,
           "score": 17,
-          "category": "paddock"
-        },
-        {
-          "id": "N7AUuPFz14w",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Antidote is Pushing The Limits of DH Race Bikes | DH Tech | Loudenvielle - Day 1",
-          "description": "We’ve seen a few unique looking bikes at the world cups but this thing takes the biscuit. The crew at Antidote Solutions have set the thinking box on fire and shot it out a canon. Gearbox, check, adjustable everything, check, actual TELEMETRY, check! We caught up with the designers to find out just what they are trying to accomplish with this bike.\n\nhttps://antidote-solutions.com/ - Thanks to the team at Antidote Solutions for the riding footage.\n\n00:00 - Intro\n01:11 - Joe Breeden Prototype Nukeproof High Pivot\n02:01 - Jackson Goldstone's Santa Cruz V10\n02:25 - Antidotes WILD DH Bike \n04:15 - Suspension Design\n06:55 - The Gearbox\n07:16 - Carbon Fairing\n09:24 - The CONTROL ROOM!\n10:15 - How Does It Ride?\n11:22 - Outro\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/N7AUuPFz14w/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-05-28T17:30:14Z",
-          "url": "https://www.youtube.com/watch?v=N7AUuPFz14w",
-          "isShort": false,
-          "score": 14,
           "category": "paddock"
         }
       ]
