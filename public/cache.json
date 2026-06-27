@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-06-27T20:14:09.850Z",
+  "builtAt": "2026-06-27T22:09:36.278Z",
   "totalItems": 168,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "52bmTHMLItU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "Is there a more humble World Cup racer than Loris Vergier?",
+          "description": "Is there a more humble racer than @lorisvergier even if he might not believe it himself, the guy is the only Elite male racer left that has made every single final in the 13 World Cup races since the new Q1 Q2 format was brought in! This is the kind of rider every team wants consistently scoring points for them. 🔥🙌🏼Catch his full interview on my Lenzerheide Finals WynTV 🎥 @CharlieCoquillard",
+          "thumbnail": "https://i.ytimg.com/vi/52bmTHMLItU/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-27T20:35:45Z",
+          "url": "https://www.youtube.com/watch?v=52bmTHMLItU",
+          "isShort": true,
+          "score": 23,
+          "category": "shorts"
+        },
         {
           "id": "E720URifgak",
           "type": "video",
@@ -327,23 +344,6 @@
           "url": "https://www.youtube.com/watch?v=G9lUnYAN53I",
           "isShort": true,
           "score": 10,
-          "category": "shorts"
-        },
-        {
-          "id": "b0FYbiVEpvA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "“The best Finn Iles we’ve ever seen!” 🔥The team react to Finn Iles taking back-to-back wins! 👏",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/b0FYbiVEpvA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-20T15:21:47Z",
-          "url": "https://www.youtube.com/watch?v=b0FYbiVEpvA",
-          "isShort": true,
-          "score": 14,
           "category": "shorts"
         }
       ]
@@ -901,23 +901,6 @@
           "isShort": false,
           "score": 8,
           "category": "results"
-        },
-        {
-          "id": "GD4un0QDuiI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV LOUDENVIELLE TRACKWALK 2026",
-          "description": "It was a scorcher for trackwalk today in Loudenvielle, I caught up with all the riders I could find ahead of some wild racing this weekend!\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/checkout?s=674\n2.                      “I have a voucher”: WYN30\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/GD4un0QDuiI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-05-28T21:00:59Z",
-          "url": "https://www.youtube.com/watch?v=GD4un0QDuiI",
-          "isShort": false,
-          "score": 8,
-          "category": "results"
         }
       ]
     },
@@ -989,7 +972,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Frameworks Tests the Loctite DH Bike Prototype with Adjustable Kinematics",
-          "description": "Neko Mulally provides more insights into the Frameworks testing process.( Comments: 30 )",
+          "description": "Neko Mulally provides more insights into the Frameworks testing process.( Comments: 31 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29920685/p2pb29920685.jpg",
           "publishedAt": "2026-06-26T23:40:00.000Z",
           "url": "https://www.pinkbike.com/news/video-frameworks-tests-a-dh-bike-prototype-with-adjustable-kinematics.html?trk=rss",
