@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-28T18:10:38.902Z",
+  "builtAt": "2026-06-28T20:18:34.350Z",
   "totalItems": 166,
   "categories": {
     "shorts": {
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "kK5hMXJ06Jc",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "GENOVA RED BULL FINALS WITH THE KING!!",
+          "description": "What a day! Word's cannot desribe how happy I am for Roger, he's worked so hard for this and it's all payed off! It's been a crazy few days here in Genova in the blistering heat but what a journey!. We'll see you in La Thuile for the next World Cup round sports fans. Enjoy!\n\nshot on #sony & #dji \n\n#dji #mtb #bksport #downhill #mountainbike #pivot #mtblife #shimano #fox #darco #italy #streetrace",
+          "thumbnail": "https://i.ytimg.com/vi/kK5hMXJ06Jc/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-28T19:42:39Z",
+          "url": "https://www.youtube.com/watch?v=kK5hMXJ06Jc",
+          "isShort": false,
+          "score": 12,
+          "category": "race-runs"
+        },
+        {
           "id": "gYUH_Zg6OfU",
           "type": "video",
           "source": "youtube",
@@ -673,23 +690,6 @@
           "url": "https://www.youtube.com/watch?v=XKMxurSchpI",
           "isShort": false,
           "score": 10,
-          "category": "race-runs"
-        },
-        {
-          "id": "9fK7wrvPA-0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Exciting But Savage, Should DH Qualifying Change? | World Cup Waffle",
-          "description": "There is no perfect solution but it's always worth discussing ways to improve the things we love. World Cup DH qualifying has changed a lot in recent years which has made things more exciting but also opened up the possibility  of our favourite racers not making it to finals. This is great in some respects and terrible in others. Series Leader Luca Shaw shocked viewers when he failed to pass through qualifying into finals which has sparked debate about if the rules could be improved? Ben shares his thoughts on the matter.\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/9fK7wrvPA-0/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-16T23:19:46Z",
-          "url": "https://www.youtube.com/watch?v=9fK7wrvPA-0",
-          "isShort": false,
-          "score": 16,
           "category": "race-runs"
         }
       ]
