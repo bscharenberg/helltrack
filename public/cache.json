@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-28T16:19:15.085Z",
-  "totalItems": 167,
+  "builtAt": "2026-06-28T18:10:38.902Z",
+  "totalItems": 166,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -884,23 +884,6 @@
           "isShort": false,
           "score": 11,
           "category": "results"
-        },
-        {
-          "id": "0S51rpCcLZc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV \"ON TRACK WITH GARY\" LOUDENVIELLE DAY ONE!",
-          "description": "I got my back side trackside to witness all the action and the lack of traction here for timed training in Loudenvielle!\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/checkout?s=674\n2.                      “I have a voucher”: WYN30\n\n\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/0S51rpCcLZc/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-05-29T17:42:19Z",
-          "url": "https://www.youtube.com/watch?v=0S51rpCcLZc",
-          "isShort": false,
-          "score": 8,
-          "category": "results"
         }
       ]
     },
@@ -974,7 +957,7 @@
           "title": "Video: Frameworks Tests the Loctite DH Bike Prototype with Adjustable Kinematics",
           "description": "Neko Mulally provides more insights into the Frameworks testing process.( Comments: 31 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29920685/p2pb29920685.jpg",
-          "publishedAt": "2026-06-26T23:35:00.000Z",
+          "publishedAt": "2026-06-26T23:33:00.000Z",
           "url": "https://www.pinkbike.com/news/video-frameworks-tests-a-dh-bike-prototype-with-adjustable-kinematics.html?trk=rss",
           "categories": [],
           "score": 10,
