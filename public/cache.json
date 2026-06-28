@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-28T11:52:01.680Z",
-  "totalItems": 168,
+  "builtAt": "2026-06-28T14:04:52.986Z",
+  "totalItems": 167,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -974,7 +974,7 @@
           "title": "Video: Frameworks Tests the Loctite DH Bike Prototype with Adjustable Kinematics",
           "description": "Neko Mulally provides more insights into the Frameworks testing process.( Comments: 31 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29920685/p2pb29920685.jpg",
-          "publishedAt": "2026-06-26T23:38:00.000Z",
+          "publishedAt": "2026-06-26T23:37:00.000Z",
           "url": "https://www.pinkbike.com/news/video-frameworks-tests-a-dh-bike-prototype-with-adjustable-kinematics.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -1182,23 +1182,6 @@
           "url": "https://www.youtube.com/watch?v=KhLio3O7i9Q",
           "isShort": false,
           "score": 10,
-          "category": "paddock"
-        },
-        {
-          "id": "vPRetXZRU_c",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: SUCH A FUN COURSE! Jackson Goldstone 2026 DH World Series RD2 Course Preview",
-          "description": "We are back in beautiful Loudenvielle France for the second Round of the 2026 UCI DH MTB World Series and our one and only Jackson Goldstone is already having fun on his first run down the hill giving you a preview of this years track, enjoy!!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/vPRetXZRU_c/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-05-29T13:59:49Z",
-          "url": "https://www.youtube.com/watch?v=vPRetXZRU_c",
-          "isShort": false,
-          "score": 17,
           "category": "paddock"
         }
       ]
