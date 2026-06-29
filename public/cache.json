@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-06-29T11:20:27.877Z",
+  "builtAt": "2026-06-29T16:00:47.052Z",
   "totalItems": 163,
   "categories": {
     "shorts": {
@@ -359,9 +359,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Flat-Out Winning Run POV from the 2026 Red Bull Genova Cerro Abajo",
-          "description": "Join the Red Bull Genova Cerro Abajo race winner for a wild ride on the urban DH course.( Comments: 5 )",
+          "description": "Join the Red Bull Genova Cerro Abajo race winner for a wild ride on the urban DH course.( Comments: 10 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29933991/p2pb29933991.jpg",
-          "publishedAt": "2026-06-29T11:18:27.840Z",
+          "publishedAt": "2026-06-29T15:55:47.016Z",
           "url": "https://www.pinkbike.com/news/video-flat-out-winning-run-pov-from-the-2026-red-bull-genova-cerro-abajo.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -946,6 +946,23 @@
       "id": "paddock",
       "label": "Pits",
       "items": [
+        {
+          "id": "jrvp4wzMJ9M",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "Asa Vermette's PERFECT Bike Setup 👀",
+          "description": "Finding the perfect setup isn't a science, it's trial and error. Asa Vermette on dialing in his bike run by run 🚵\n\n#redbull    #JustRide\nThe most entertaining podcast in cycling, join Rob Warner and Eliot Jackson – the most entertaining voices on two wheels to discover new and exciting disciplines and captivating stories as they delve into an array of cycling adventures.",
+          "thumbnail": "https://i.ytimg.com/vi/jrvp4wzMJ9M/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-29T14:00:13Z",
+          "url": "https://www.youtube.com/watch?v=jrvp4wzMJ9M",
+          "isShort": false,
+          "score": 10,
+          "category": "paddock"
+        },
         {
           "id": "_s3GP2vzHbA",
           "type": "video",
