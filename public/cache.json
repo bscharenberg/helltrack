@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-06-29T16:00:47.052Z",
-  "totalItems": 163,
+  "builtAt": "2026-06-29T19:07:15.774Z",
+  "totalItems": 162,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,15 +353,30 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/white-noise-lachie-stevens-mcnab.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Capturing the Highs &amp; Lows of Lachie Stevens-Mcnab's Impressive Injury Comeback at the Lenzerheide World Cup",
+          "description": "Eight months and one week since his last full race run, Lachie managed to qualify in 2nd place.( Photos: 1, Comments: 1 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29934342/p2pb29934342.jpg",
+          "publishedAt": "2026-06-29T19:01:15.745Z",
+          "url": "https://www.pinkbike.com/news/white-noise-lachie-stevens-mcnab.html?trk=rss",
+          "categories": [],
+          "score": 8,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-flat-out-winning-run-pov-from-the-2026-red-bull-genova-cerro-abajo.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Flat-Out Winning Run POV from the 2026 Red Bull Genova Cerro Abajo",
-          "description": "Join the Red Bull Genova Cerro Abajo race winner for a wild ride on the urban DH course.( Comments: 10 )",
+          "description": "Join the Red Bull Genova Cerro Abajo race winner for a wild ride on the urban DH course.( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29933991/p2pb29933991.jpg",
-          "publishedAt": "2026-06-29T15:55:47.016Z",
+          "publishedAt": "2026-06-29T18:59:15.745Z",
           "url": "https://www.pinkbike.com/news/video-flat-out-winning-run-pov-from-the-2026-red-bull-genova-cerro-abajo.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -672,23 +687,6 @@
           "isShort": false,
           "score": 16,
           "category": "race-runs"
-        },
-        {
-          "id": "dDyP6VXLiaE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "BRUTAL TRACK - Vital RAW - Lenzerheide World Cup Downhill",
-          "description": "Fast, rough and unforgiving. The track at the 2026 UCI MTB World Series DH in Lenzerheide, Switzerland, challenged the fastest mountain bikers on the planet.",
-          "thumbnail": "https://i.ytimg.com/vi/dDyP6VXLiaE/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-18T18:26:45Z",
-          "url": "https://www.youtube.com/watch?v=dDyP6VXLiaE",
-          "isShort": false,
-          "score": 16,
-          "category": "race-runs"
         }
       ]
     },
@@ -864,23 +862,6 @@
           "url": "https://www.youtube.com/watch?v=zXJ8iGQQn2U",
           "isShort": false,
           "score": 12,
-          "category": "results"
-        },
-        {
-          "id": "MjVXZTFkOhY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV LOUDENVIELLE Q2 RAPID REACTION",
-          "description": "I caught up with everyone I could find following a wild Q2 session here in Loudenvielle! \n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/checkout?s=674\n2.                      “I have a voucher”: WYN30\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/MjVXZTFkOhY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-05-30T18:25:56Z",
-          "url": "https://www.youtube.com/watch?v=MjVXZTFkOhY",
-          "isShort": false,
-          "score": 11,
           "category": "results"
         }
       ]
