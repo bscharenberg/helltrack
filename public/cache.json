@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-06-29T05:57:36.030Z",
-  "totalItems": 162,
+  "builtAt": "2026-06-29T11:20:27.877Z",
+  "totalItems": 163,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "XWMTuQMnNXk",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Four in a row for Boost Bro 😎",
+          "description": "Back in action at La Thuile 🤩\n\nJackson Goldstone wasted no time getting to grips with the savage La Thuile course, claiming his fourth consecutive DHI World Cup victory in sensational style 😮‍💨\n\n🏁 2025 Men's Elite UCI DHI World Cup 📍 La Thuile",
+          "thumbnail": "https://i.ytimg.com/vi/XWMTuQMnNXk/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-29T10:39:00Z",
+          "url": "https://www.youtube.com/watch?v=XWMTuQMnNXk",
+          "isShort": true,
+          "score": 20,
+          "category": "shorts"
+        },
         {
           "id": "52bmTHMLItU",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 16,
           "category": "shorts"
-        },
-        {
-          "id": "G9lUnYAN53I",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Sweat and champagne! 🍾😆Anna Newkirk reacts to her win in Lenzerheide 👏",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/G9lUnYAN53I/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-20T15:51:05Z",
-          "url": "https://www.youtube.com/watch?v=G9lUnYAN53I",
-          "isShort": true,
-          "score": 10,
-          "category": "shorts"
         }
       ]
     },
@@ -352,6 +352,21 @@
       "id": "race-runs",
       "label": "Race runs",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/video-flat-out-winning-run-pov-from-the-2026-red-bull-genova-cerro-abajo.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Flat-Out Winning Run POV from the 2026 Red Bull Genova Cerro Abajo",
+          "description": "Join the Red Bull Genova Cerro Abajo race winner for a wild ride on the urban DH course.( Comments: 5 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29933991/p2pb29933991.jpg",
+          "publishedAt": "2026-06-29T11:18:27.840Z",
+          "url": "https://www.pinkbike.com/news/video-flat-out-winning-run-pov-from-the-2026-red-bull-genova-cerro-abajo.html?trk=rss",
+          "categories": [],
+          "score": 8,
+          "category": "race-runs"
+        },
         {
           "id": "kK5hMXJ06Jc",
           "type": "video",
@@ -674,23 +689,6 @@
           "isShort": false,
           "score": 16,
           "category": "race-runs"
-        },
-        {
-          "id": "XKMxurSchpI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "MTBWS TOP 6 MOMENTS 🇦🇹 | 2026 Leogang",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/XKMxurSchpI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-17T14:50:12Z",
-          "url": "https://www.youtube.com/watch?v=XKMxurSchpI",
-          "isShort": false,
-          "score": 10,
-          "category": "race-runs"
         }
       ]
     },
@@ -948,21 +946,6 @@
       "id": "paddock",
       "label": "Pits",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/video-frameworks-tests-a-dh-bike-prototype-with-adjustable-kinematics.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Frameworks Tests the Loctite DH Bike Prototype with Adjustable Kinematics",
-          "description": "Neko Mulally provides more insights into the Frameworks testing process.( Comments: 33 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29920685/p2pb29920685.jpg",
-          "publishedAt": "2026-06-26T23:33:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-frameworks-tests-a-dh-bike-prototype-with-adjustable-kinematics.html?trk=rss",
-          "categories": [],
-          "score": 10,
-          "category": "paddock"
-        },
         {
           "id": "_s3GP2vzHbA",
           "type": "video",
