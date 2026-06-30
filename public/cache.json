@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-06-30T08:33:40.208Z",
+  "builtAt": "2026-06-30T11:48:03.745Z",
   "totalItems": 157,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "FhK_wETD28g",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "What a weekend 🤩",
+          "description": "A perfect weekend for the Syndicate 👊\n\nNina Hoffman got the party started for the Santa Cruz Syndicate with an incredible victory in La Thuile in 2025 🤩\n\n🏁 Women's Elite UCI DHI World Cup 📍 La Thuile - Valle d’Aosta",
+          "thumbnail": "https://i.ytimg.com/vi/FhK_wETD28g/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-06-30T10:55:16Z",
+          "url": "https://www.youtube.com/watch?v=FhK_wETD28g",
+          "isShort": true,
+          "score": 14,
+          "category": "shorts"
+        },
         {
           "id": "XWMTuQMnNXk",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 12,
           "category": "shorts"
-        },
-        {
-          "id": "JPi_XDBTcHM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Sleeping off the nerves! 😴👏 Finn Iles delivered another huge performance to win in Lenzerheide! 🇨🇭",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/JPi_XDBTcHM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-20T20:22:53Z",
-          "url": "https://www.youtube.com/watch?v=JPi_XDBTcHM",
-          "isShort": true,
-          "score": 16,
-          "category": "shorts"
         }
       ]
     },
@@ -361,7 +361,7 @@
           "title": "Video: Capturing the Highs &amp; Lows of Lachie Stevens-McNab's Impressive Injury Comeback at the Lenzerheide World Cup",
           "description": "Eight months and one week since his last full race run, Lachie managed to qualify in 2nd place.( Photos: 1, Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29934342/p2pb29934342.jpg",
-          "publishedAt": "2026-06-29T23:50:00.000Z",
+          "publishedAt": "2026-06-29T23:49:00.000Z",
           "url": "https://www.pinkbike.com/news/white-noise-lachie-stevens-mcnab.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -374,9 +374,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Flat-Out Winning Run POV from the 2026 Red Bull Genova Cerro Abajo",
-          "description": "Join the Red Bull Genova Cerro Abajo race winner for a wild ride on the urban DH course.( Comments: 24 )",
+          "description": "Join the Red Bull Genova Cerro Abajo race winner for a wild ride on the urban DH course.( Comments: 25 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29933991/p2pb29933991.jpg",
-          "publishedAt": "2026-06-29T23:48:00.000Z",
+          "publishedAt": "2026-06-29T23:47:00.000Z",
           "url": "https://www.pinkbike.com/news/video-flat-out-winning-run-pov-from-the-2026-red-bull-genova-cerro-abajo.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -934,9 +934,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Gracey Hemstreet Recovers Race Pace in Norco's 'Just Getting Started' Ep. 4",
-          "description": "After a dominant 2025 season with three World Cup wins, Hemstreet navigates the slick, rutted Austrian mud and the physical process of regaining peak racing form.( Photos: 11, Comments: 4 )",
+          "description": "After a dominant 2025 season with three World Cup wins, Hemstreet navigates the slick, rutted Austrian mud and the physical process of regaining peak racing form.( Photos: 11, Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29935756/p2pb29935756.jpg",
-          "publishedAt": "2026-06-29T23:56:00.000Z",
+          "publishedAt": "2026-06-29T23:55:00.000Z",
           "url": "https://www.pinkbike.com/news/video-gracey-hemstreet-nothing-but-the-best--norco-adidas-race-divisions-just-getting-started-ep4.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -1169,6 +1169,21 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/2026-la-thuile-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "2026 La Thuile DH World Cup Preview: Who’s Racing, How to Watch &amp; What to Expect",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in La Thuile.( Photos: 7, Comments: 1 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29934602/p2pb29934602.jpg",
+          "publishedAt": "2026-06-30T11:48:03.709Z",
+          "url": "https://www.pinkbike.com/news/2026-la-thuile-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
+          "categories": [],
+          "score": 11,
+          "category": "news"
+        },
         {
           "id": "A5Z0bCe7Plo",
           "type": "video",
