@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-07-01T16:31:24.644Z",
+  "builtAt": "2026-07-01T19:02:23.714Z",
   "totalItems": 156,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "ab9W-KmCqL0",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "We're back in La Thuile 🇮🇹🤩",
+          "description": "Useful Links:We're back in La Thuile 🇮🇹🤩\n\nSteep, rough and unforgiving. The world’s fastest downhill riders are ready to take on one of the toughest tests on the WHOOP UCI Mountain Bike World Series calendar 💥\n\n\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/ab9W-KmCqL0/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-01T17:57:10Z",
+          "url": "https://www.youtube.com/watch?v=ab9W-KmCqL0",
+          "isShort": true,
+          "score": 10,
+          "category": "shorts"
+        },
         {
           "id": "FhK_wETD28g",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 12,
           "category": "shorts"
-        },
-        {
-          "id": "xsdCcN91YoU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Dakotah Norton discusses his race weekend in Lenzerheide",
-          "description": "More of this in our latest episode of THE SETUP",
-          "thumbnail": "https://i.ytimg.com/vi/xsdCcN91YoU/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-20T21:09:38Z",
-          "url": "https://www.youtube.com/watch?v=xsdCcN91YoU",
-          "isShort": true,
-          "score": 12,
-          "category": "shorts"
         }
       ]
     },
@@ -359,9 +359,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Velosolutions Launches App Contest to Win a Trip to the Pump Track World Championships",
-          "description": "Running through August 31, 2026, the global point challenge awards top male and female leaderboard riders a trip to the October finals in Beijing, China.( Photos: 4, Comments: 4 )",
+          "description": "Running through August 31, 2026, the global point challenge awards top male and female leaderboard riders a trip to the October finals in Beijing, China.( Photos: 4, Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29934143/p2pb29934143.jpg",
-          "publishedAt": "2026-07-01T16:22:24.608Z",
+          "publishedAt": "2026-07-01T18:49:23.676Z",
           "url": "https://www.pinkbike.com/news/win-a-trip-to-the-velosolutions-uci-pump-track-world-championships.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -697,6 +697,21 @@
       "label": "Results",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-wyntv-la-thuile-trackwalk-2026.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: WynTV Trackwalk 2026 La Thuile DH World Cup",
+          "description": "Wyn chats with riders as they check out the track in La Thuile.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29944550/p2pb29944550.jpg",
+          "publishedAt": "2026-07-01T19:00:23.676Z",
+          "url": "https://www.pinkbike.com/news/video-wyntv-la-thuile-trackwalk-2026.html?trk=rss",
+          "categories": [],
+          "score": 16,
+          "category": "results"
+        },
+        {
           "id": "https://www.pinkbike.com/news/tasting-mud-and-champagne.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -705,7 +720,7 @@
           "title": "Inside Priority's Muddy Leogang EDR: A Historic Gearbox Podium &amp; Trailside Freehub Fixes",
           "description": "Lief Rodgers jumps to second overall in the World Cup standings, while Evan Wall rallies from a broken hub to score back-to-back top-five stage finishes.",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29941406/p2pb29941406.jpg",
-          "publishedAt": "2026-07-01T16:21:24.608Z",
+          "publishedAt": "2026-07-01T18:48:23.676Z",
           "url": "https://www.pinkbike.com/news/tasting-mud-and-champagne.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -897,23 +912,6 @@
           "isShort": false,
           "score": 13,
           "category": "results"
-        },
-        {
-          "id": "zXJ8iGQQn2U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "30% Of Racers Hit The Deck | Story Of The Race | Loudenvielle - Day 4",
-          "description": "That was quite possibly the dustiest race we've ever experienced. Loudenvielle round 2 of the Downhill MTB World Cup was one for the record books with new winners, a crazy amount of mistakes and always great racing. Ben fires up the ghost machine for a janky yet insightful comparison.\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/zXJ8iGQQn2U/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-01T18:13:27Z",
-          "url": "https://www.youtube.com/watch?v=zXJ8iGQQn2U",
-          "isShort": false,
-          "score": 12,
-          "category": "results"
         }
       ]
     },
@@ -978,21 +976,6 @@
       "id": "paddock",
       "label": "Pits",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/video-gracey-hemstreet-nothing-but-the-best--norco-adidas-race-divisions-just-getting-started-ep4.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Gracey Hemstreet Recovers Race Pace in Norco's 'Just Getting Started' Ep. 4",
-          "description": "After a dominant 2025 season with three World Cup wins, Hemstreet navigates the slick, rutted Austrian mud and the physical process of regaining peak racing form.( Photos: 11, Comments: 7 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29935756/p2pb29935756.jpg",
-          "publishedAt": "2026-06-29T23:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-gracey-hemstreet-nothing-but-the-best--norco-adidas-race-divisions-just-getting-started-ep4.html?trk=rss",
-          "categories": [],
-          "score": 8,
-          "category": "paddock"
-        },
         {
           "id": "jrvp4wzMJ9M",
           "type": "video",
@@ -1229,7 +1212,7 @@
           "title": "Video: The Top Riders to Watch at the DH World Cup in La Thuile",
           "description": "Join Ben as he chats about the racers who could go well at round 5 of the 2026 Downhill World Cup in La Thuile.( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29941510/p2pb29941510.jpg",
-          "publishedAt": "2026-06-30T23:52:00.000Z",
+          "publishedAt": "2026-06-30T23:48:00.000Z",
           "url": "https://www.pinkbike.com/news/lets-go-racing-in-la-thuile-up-to-speed-with-ben-cathro.html?trk=rss",
           "categories": [],
           "score": 11,
@@ -1242,9 +1225,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 La Thuile DH World Cup Preview: Who’s Racing &amp; What to Expect from the Series' Steepest Track",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in La Thuile.( Photos: 7, Comments: 47 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in La Thuile.( Photos: 7, Comments: 49 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29934602/p2pb29934602.jpg",
-          "publishedAt": "2026-06-30T23:45:00.000Z",
+          "publishedAt": "2026-06-30T23:41:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-la-thuile-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
           "categories": [],
           "score": 11,
@@ -1257,9 +1240,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Build Your Team Ahead of Round 5 - 2026 La Thuile DH World Cup",
-          "description": "It&#039;s time to start building your team for round four of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 9 )",
+          "description": "It&#039;s time to start building your team for round four of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 10 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
-          "publishedAt": "2026-06-30T23:36:00.000Z",
+          "publishedAt": "2026-06-30T23:32:00.000Z",
           "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-5-2026-la-thuile-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 10,
