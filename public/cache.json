@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-07-01T23:22:02.807Z",
-  "totalItems": 153,
+  "builtAt": "2026-07-02T04:09:40.992Z",
+  "totalItems": 154,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "zE9ESJALL14",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "FOX service day in La Thuile!🇮🇹",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/zE9ESJALL14/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-02T03:32:24Z",
+          "url": "https://www.youtube.com/watch?v=zE9ESJALL14",
+          "isShort": true,
+          "score": 6,
+          "category": "shorts"
+        },
         {
           "id": "ab9W-KmCqL0",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 18,
           "category": "shorts"
-        },
-        {
-          "id": "kMPmRzzTxX8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Jackson Goldstone boosting in Lenzerheide in THE SETUP",
-          "description": "More of this in our new episode of THE SETUP!",
-          "thumbnail": "https://i.ytimg.com/vi/kMPmRzzTxX8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-21T07:32:22Z",
-          "url": "https://www.youtube.com/watch?v=kMPmRzzTxX8",
-          "isShort": true,
-          "score": 12,
-          "category": "shorts"
         }
       ]
     },
@@ -361,7 +361,7 @@
           "title": "Velosolutions Launches App Contest to Win a Trip to the Pump Track World Championships",
           "description": "Running through August 31, 2026, the global point challenge awards top male and female leaderboard riders a trip to the October finals in Beijing, China.( Photos: 4, Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29934143/p2pb29934143.jpg",
-          "publishedAt": "2026-07-01T23:08:02.772Z",
+          "publishedAt": "2026-07-01T23:45:00.000Z",
           "url": "https://www.pinkbike.com/news/win-a-trip-to-the-velosolutions-uci-pump-track-world-championships.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -703,9 +703,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV Trackwalk 2026 La Thuile DH World Cup",
-          "description": "Wyn chats with riders as they check out the track in La Thuile.( Comments: 1 )",
+          "description": "Wyn chats with riders as they check out the track in La Thuile.( Comments: 3 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29944550/p2pb29944550.jpg",
-          "publishedAt": "2026-07-01T23:19:02.772Z",
+          "publishedAt": "2026-07-01T23:56:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-la-thuile-trackwalk-2026.html?trk=rss",
           "categories": [],
           "score": 16,
@@ -720,7 +720,7 @@
           "title": "Inside Priority's Muddy Leogang EDR: A Historic Gearbox Podium &amp; Trailside Freehub Fixes",
           "description": "Lief Rodgers jumps to second overall in the World Cup standings, while Evan Wall rallies from a broken hub to score back-to-back top-five stage finishes.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29941406/p2pb29941406.jpg",
-          "publishedAt": "2026-07-01T23:07:02.772Z",
+          "publishedAt": "2026-07-01T23:44:00.000Z",
           "url": "https://www.pinkbike.com/news/tasting-mud-and-champagne.html?trk=rss",
           "categories": [],
           "score": 7,
