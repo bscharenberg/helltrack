@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-02T08:16:15.925Z",
-  "totalItems": 154,
+  "builtAt": "2026-07-02T11:39:35.977Z",
+  "totalItems": 156,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,6 +353,21 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/2026-la-thuile-downhill-world-cup-start-lists-whos-racing-this-weekend.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "2026 La Thuile Downhill World Cup Start Lists: Who's Racing This Weekend?",
+          "description": "249 riders are confirmed to be on the start line for qualifying at the 2026 La Thuile downhill World Cup.( Photos: 1, Comments: 3 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb21149893/p2pb21149893.jpg",
+          "publishedAt": "2026-07-02T11:39:35.941Z",
+          "url": "https://www.pinkbike.com/news/2026-la-thuile-downhill-world-cup-start-lists-whos-racing-this-weekend.html?trk=rss",
+          "categories": [],
+          "score": 13,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/win-a-trip-to-the-velosolutions-uci-pump-track-world-championships.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -361,7 +376,7 @@
           "title": "Velosolutions Launches App Contest to Win a Trip to the Pump Track World Championships",
           "description": "Running through August 31, 2026, the global point challenge awards top male and female leaderboard riders a trip to the October finals in Beijing, China.( Photos: 4, Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29934143/p2pb29934143.jpg",
-          "publishedAt": "2026-07-01T23:45:00.000Z",
+          "publishedAt": "2026-07-01T23:42:00.000Z",
           "url": "https://www.pinkbike.com/news/win-a-trip-to-the-velosolutions-uci-pump-track-world-championships.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -672,23 +687,6 @@
           "isShort": false,
           "score": 16,
           "category": "race-runs"
-        },
-        {
-          "id": "dDyP6VXLiaE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "BRUTAL TRACK - Vital RAW - Lenzerheide World Cup Downhill",
-          "description": "Fast, rough and unforgiving. The track at the 2026 UCI MTB World Series DH in Lenzerheide, Switzerland, challenged the fastest mountain bikers on the planet.",
-          "thumbnail": "https://i.ytimg.com/vi/dDyP6VXLiaE/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-18T18:26:45Z",
-          "url": "https://www.youtube.com/watch?v=dDyP6VXLiaE",
-          "isShort": false,
-          "score": 16,
-          "category": "race-runs"
         }
       ]
     },
@@ -703,9 +701,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV Trackwalk 2026 La Thuile DH World Cup",
-          "description": "Wyn chats with riders as they check out the track in La Thuile.( Comments: 7 )",
+          "description": "Wyn chats with riders as they check out the track in La Thuile.( Comments: 11 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29944550/p2pb29944550.jpg",
-          "publishedAt": "2026-07-01T23:56:00.000Z",
+          "publishedAt": "2026-07-01T23:53:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-la-thuile-trackwalk-2026.html?trk=rss",
           "categories": [],
           "score": 16,
@@ -720,7 +718,7 @@
           "title": "Inside Priority's Muddy Leogang EDR: A Historic Gearbox Podium &amp; Trailside Freehub Fixes",
           "description": "Lief Rodgers jumps to second overall in the World Cup standings, while Evan Wall rallies from a broken hub to score back-to-back top-five stage finishes.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29941406/p2pb29941406.jpg",
-          "publishedAt": "2026-07-01T23:44:00.000Z",
+          "publishedAt": "2026-07-01T23:40:00.000Z",
           "url": "https://www.pinkbike.com/news/tasting-mud-and-champagne.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -960,6 +958,23 @@
       "label": "Pits",
       "items": [
         {
+          "id": "u7eKosbk-nI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
+          "channelName": "GoPro Bike",
+          "title": "GoPro: BEST TRACK EVER! Jackson Goldstone 2026 DH World Series RD5 Course Preview",
+          "description": "5th WC Race of the season and we are back in La Thuile Italy for the second time! The sun is out and the track is fast, enjoy the first run down with @jacksongoldstone6453  \n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
+          "thumbnail": "https://i.ytimg.com/vi/u7eKosbk-nI/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-02T11:15:46Z",
+          "url": "https://www.youtube.com/watch?v=u7eKosbk-nI",
+          "isShort": false,
+          "score": 12,
+          "category": "paddock"
+        },
+        {
           "id": "jrvp4wzMJ9M",
           "type": "video",
           "source": "youtube",
@@ -1187,6 +1202,21 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-5-2026-la-thuile-dh-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "LAST CHANCE: Build Your Team Ahead of Round 5 - 2026 La Thuile DH World Cup",
+          "description": "It&#039;s time to start building your team for round four of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 11 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
+          "publishedAt": "2026-06-30T23:57:00.000Z",
+          "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-5-2026-la-thuile-dh-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 10,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/lets-go-racing-in-la-thuile-up-to-speed-with-ben-cathro.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -1195,7 +1225,7 @@
           "title": "Video: The Top Riders to Watch at the DH World Cup in La Thuile",
           "description": "Join Ben as he chats about the racers who could go well at round 5 of the 2026 Downhill World Cup in La Thuile.( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29941510/p2pb29941510.jpg",
-          "publishedAt": "2026-06-30T23:47:00.000Z",
+          "publishedAt": "2026-06-30T23:44:00.000Z",
           "url": "https://www.pinkbike.com/news/lets-go-racing-in-la-thuile-up-to-speed-with-ben-cathro.html?trk=rss",
           "categories": [],
           "score": 11,
@@ -1208,27 +1238,12 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 La Thuile DH World Cup Preview: Who’s Racing &amp; What to Expect from the Series' Steepest Track",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in La Thuile.( Photos: 7, Comments: 56 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in La Thuile.( Photos: 7, Comments: 57 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29934602/p2pb29934602.jpg",
-          "publishedAt": "2026-06-30T23:40:00.000Z",
+          "publishedAt": "2026-06-30T23:41:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-la-thuile-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
           "categories": [],
           "score": 11,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-5-2026-la-thuile-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Build Your Team Ahead of Round 5 - 2026 La Thuile DH World Cup",
-          "description": "It&#039;s time to start building your team for round four of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 10 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
-          "publishedAt": "2026-06-30T23:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-5-2026-la-thuile-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 10,
           "category": "news"
         },
         {
