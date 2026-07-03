@@ -2526,15 +2526,24 @@ function fmtShortDate(d) {
   return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
 }
 
+// Order-independent match key: normalized, diacritic-stripped, tokens sorted — so a rider
+// saved surname-first ("Vermette Asa", bookmarked before the given-first rename) still matches
+// results.json's given-first "Asa Vermette".
+function riderMatchKey(name) {
+  return normalizeName(name || '').split(/\s+/).filter(Boolean).sort().join(' ')
+}
+
 // A saved rider's most recent 2026 finals result (finishers get a rank; DNF/DNS/DSQ a status).
-function latestFinalsForRider(normName) {
+// Returns the canonical results.json name too, so display + tap-through use given-first order.
+function latestFinalsForRider(key) {
   const rounds = resultsData?.seasons?.['2026']?.rounds || []
   let best = null
   for (const round of rounds) {
-    for (const key of ['finals-men', 'finals-women']) {
-      const hit = (round.sessions?.[key] || []).find(r => r.name && normalizeName(r.name) === normName)
+    for (const sk of ['finals-men', 'finals-women']) {
+      const hit = (round.sessions?.[sk] || []).find(r => r.name && riderMatchKey(r.name) === key)
       if (!hit) continue
       const cand = {
+        name:   hit.name,
         rank:   hit.rank,
         status: hit.dnf ? 'DNF' : hit.dsq ? 'DSQ' : hit.dns ? 'DNS' : null,
         venue:  round.venue,
@@ -2558,7 +2567,8 @@ function renderMyRidersFeed() {
     : ''
 
   const cards = saved.map(r => {
-    const latest = latestFinalsForRider(normalizeName(r.name))
+    const latest = latestFinalsForRider(riderMatchKey(r.name))
+    const display = latest?.name || r.name   // canonical given-first name when we have a result
     let resultHtml
     if (!latest) {
       resultHtml = `<div class="mrf-none">No 2026 result yet</div>`
@@ -2568,9 +2578,9 @@ function renderMyRidersFeed() {
       const cls = latest.rank === 1 ? ' p1' : latest.rank <= 3 ? ' podium' : ''
       resultHtml = `<div class="mrf-result"><span class="mrf-rank${cls}">P${latest.rank}</span><span class="mrf-venue">${escHtml(latest.venue)}</span></div>`
     }
-    const nm = String(r.name || '').replace(/"/g, '&quot;')
+    const nm = String(display).replace(/"/g, '&quot;')
     return `<div class="mrf-card" data-name="${nm}" onclick="goToRiderHistory(this.dataset.name)">
-      <div class="mrf-card-top"><span class="mrf-flag">${r.flag || ''}</span><span class="mrf-name">${escHtml(r.name)}</span></div>
+      <div class="mrf-card-top"><span class="mrf-flag">${r.flag || ''}</span><span class="mrf-name">${escHtml(display)}</span></div>
       ${resultHtml}
     </div>`
   }).join('')
