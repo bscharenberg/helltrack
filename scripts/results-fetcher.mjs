@@ -73,19 +73,35 @@ async function fetchSession(uciSlug) {
     const data = await res.json()
     if (data.error || !Array.isArray(data.results) || data.results.length === 0) return null
 
-    // Filter out non-finishers (DNF / DSQ / DNS have a string resultPosition)
-    const riders = data.results.filter(r => typeof r.resultPosition === 'number')
+    // Keep non-finishers. The UCI API returns DNF/DNS/DSQ riders with a STRING
+    // resultPosition (e.g. "DNF", "DNS") and the same marker in resultTime; finishers
+    // have a numeric resultPosition. We keep them (flagged, no rank/time) so a crash in
+    // a final still shows on Helltrack and in that rider's history — matching the
+    // historical DataRide data and the UI's red DNF badges. API order is finishers
+    // first, then non-finishers, so downstream podium slicing is unaffected.
+    const mapStatus = pos => {
+      const s = String(pos || '').trim().toUpperCase()
+      if (s === 'DNS') return 'dns'
+      if (s === 'DSQ' || s === 'DQ') return 'dsq'
+      return 'dnf'   // DNF or any other non-numeric marker
+    }
+    const riders = data.results.map(r => {
+      const numeric = typeof r.resultPosition === 'number'
+      const status  = numeric ? null : mapStatus(r.resultPosition)
+      return {
+        rank:   numeric ? r.resultPosition : null,
+        name:   normalizeName(r.riderName),
+        nat:    r.riderNationality   || null,
+        team:   r.riderTeamName      || null,
+        time:   numeric ? (r.resultTime || null) : null,
+        gap:    numeric ? (r.resultGap  || null) : null,
+        points: typeof r.totalRacePoints === 'number' ? r.totalRacePoints : null,
+        ...(status && { [status]: true }),
+      }
+    })
     if (!riders.length) return null
 
-    return riders.map(r => ({
-      rank:   r.resultPosition,
-      name:   normalizeName(r.riderName),
-      nat:    r.riderNationality   || null,
-      team:   r.riderTeamName      || null,
-      time:   r.resultTime         || null,
-      gap:    r.resultGap          || null,
-      points: typeof r.totalRacePoints === 'number' ? r.totalRacePoints : null,
-    }))
+    return riders
   } catch (err) {
     return null
   }
@@ -129,7 +145,10 @@ async function fetchResults(venueSlug) {
 }
 
 async function main() {
-  const venueSlug = process.argv[2]
+  // First non-flag arg is the venue slug; --force re-writes a round even if both
+  // elite finals are already stored (used to backfill non-finishers into past rounds).
+  const venueSlug = process.argv.slice(2).find(a => !a.startsWith('--'))
+  const force     = process.argv.includes('--force')
 
   if (!venueSlug) {
     console.log('Usage: node scripts/results-fetcher.mjs <venue-slug>\n')
@@ -159,14 +178,16 @@ async function main() {
     // can safely stop re-writing on the 30-min polling runs.
     const haveBothFinals = obj =>
       obj?.sessions?.['finals-men']?.length > 0 && obj?.sessions?.['finals-women']?.length > 0
-    if (haveBothFinals(existingRound) && haveBothFinals(result)) {
-      console.log(`\n✅ Both elite finals already present for ${venueSlug} — no changes to write.`)
+    if (!force && haveBothFinals(existingRound) && haveBothFinals(result)) {
+      console.log(`\n✅ Both elite finals already present for ${venueSlug} — no changes to write. (use --force to re-write)`)
       process.exit(0)
     }
 
-    // Guard: don't overwrite existing data with empty result
-    if (Object.keys(result.sessions).length === 0 && idx >= 0 && Object.keys(rounds[idx].sessions || {}).length > 0) {
-      console.log('\n⚠️  0 sessions fetched — keeping existing data to avoid data loss.')
+    // Guard: a fetch that returned no sessions at all (e.g. a race-morning poll before
+    // any results are posted) must never create an empty round or bump lastUpdated —
+    // that just churns a commit every 30 min all race day. Bail before any write.
+    if (Object.keys(result.sessions).length === 0) {
+      console.log('\n⚠️  0 sessions fetched — nothing to write yet.')
       process.exit(0)
     }
 

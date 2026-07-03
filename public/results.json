@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T14:39:55.258Z",
+  "lastUpdated": "2026-07-02T23:46:50.499Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -275188,7 +275188,7 @@
           "slug": "race-of-south-korea-2026",
           "date": "2026-05-01",
           "round": 1,
-          "fetchedAt": "2026-06-03T20:13:20.104Z",
+          "fetchedAt": "2026-07-02T23:42:55.560Z",
           "sessions": {
             "finals-men": [
               {
@@ -276346,6 +276346,46 @@
                 "time": "07:25.800",
                 "gap": "+04:37.941",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Jinhyeong Lee",
+                "nat": "KOR",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Lachlan Stevens-mcnab",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Alden Pate",
+                "nat": "USA",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Wyn Masters",
+                "nat": "NZL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-1-women": [
@@ -276573,6 +276613,26 @@
                 "time": "07:18.406",
                 "gap": "+03:55.058",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Nina Hoffmann",
+                "nat": "GER",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Louise-Anna Ferguson",
+                "nat": "GBR",
+                "team": "NUKEPROOF AXESS RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-2-men": [
@@ -277106,6 +277166,46 @@
                 "time": "09:01.348",
                 "gap": "+00:08.610",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Bernard Kerr",
+                "nat": "GBR",
+                "team": "PIVOT FACTORY RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Oisin O Callaghan",
+                "nat": "IRL",
+                "team": "TREK - UNBROKEN DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Jinhyeong Lee",
+                "nat": "KOR",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Marcin Matuszny",
+                "nat": "POL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-2-women": [
@@ -277243,6 +277343,16 @@
                 "time": "04:34.187",
                 "gap": "+01:10.215",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Mille Johnset",
+                "nat": "NOR",
+                "team": "NUKEPROOF AXESS RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ]
           }
@@ -277252,7 +277362,7 @@
           "slug": "loudenvielle-2026",
           "date": "2026-05-28",
           "round": 2,
-          "fetchedAt": "2026-06-03T20:13:05.500Z",
+          "fetchedAt": "2026-07-02T23:42:26.556Z",
           "sessions": {
             "finals-men": [
               {
@@ -277497,6 +277607,36 @@
                 "time": "4:01.996",
                 "gap": "+0:34.359",
                 "points": 34
+              },
+              {
+                "rank": null,
+                "name": "Daniel Castellanos Liberal",
+                "nat": "ESP",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Asa Vermette",
+                "nat": "USA",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Thibaut Daprela",
+                "nat": "FRA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "finals-women": [
@@ -277625,6 +277765,16 @@
                 "time": "4:08.423",
                 "gap": "+0:16.503",
                 "points": 35
+              },
+              {
+                "rank": null,
+                "name": "Jess Blewitt",
+                "nat": "NZL",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-1-men": [
@@ -278491,6 +278641,86 @@
                 "time": "5:02.551",
                 "gap": "+1:34.084",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Neo Tielens",
+                "nat": "BEL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Lucas Lagneau",
+                "nat": "FRA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Kasper Woolley",
+                "nat": "CAN",
+                "team": "MS-RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Jackson Goldstone",
+                "nat": "CAN",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Lachlan Stevens-mcnab",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Sixten Lind",
+                "nat": "DEN",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Loic Bruni",
+                "nat": "FRA",
+                "team": "SPECIALIZED GRAVITY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Oscar Bausager",
+                "nat": "DEN",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-1-women": [
@@ -278817,6 +279047,46 @@
                 "time": "5:21.815",
                 "gap": "+1:26.164",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Anna Newkirk",
+                "nat": "USA",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Gloria Scarsi",
+                "nat": "ITA",
+                "team": "MS-RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Jenna Hastings",
+                "nat": "NZL",
+                "team": "PIVOT FACTORY RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Tahnee Seagrave",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-2-men": [
@@ -279440,6 +279710,116 @@
                 "time": "6:42.019",
                 "gap": "+3:10.567",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "William Arbogast",
+                "nat": "USA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Jules Troillet",
+                "nat": "SUI",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Jackson Goldstone",
+                "nat": "CAN",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Dakotah Norton",
+                "nat": "USA",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Dane Jewett",
+                "nat": "CAN",
+                "team": "GIANT FACTORY OFF-ROAD TEAM - DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Loris Schäpper",
+                "nat": "SUI",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Gavin Tomlinson",
+                "nat": "USA",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Neo Tielens",
+                "nat": "BEL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Kasper Woolley",
+                "nat": "CAN",
+                "team": "MS-RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Lucas Lagneau",
+                "nat": "FRA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Oisin O Callaghan",
+                "nat": "IRL",
+                "team": "TREK - UNBROKEN DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-2-women": [
@@ -279667,6 +280047,26 @@
                 "time": "5:14.738",
                 "gap": "+1:12.115",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Elise Empey",
+                "nat": "AUS",
+                "team": "CONTINENTAL ATHERTON",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Eleonora Farina",
+                "nat": "ITA",
+                "team": "MS-RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ]
           }
@@ -279676,7 +280076,7 @@
           "slug": "leogang-2026",
           "date": "2026-06-13",
           "round": 3,
-          "fetchedAt": "2026-06-14T14:08:42.042Z",
+          "fetchedAt": "2026-07-02T23:43:05.886Z",
           "sessions": {
             "finals-men": [
               {
@@ -281023,6 +281423,106 @@
                 "time": "9:19.739",
                 "gap": "+5:58.496",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Cole Suetos",
+                "nat": "USA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "William Pugh",
+                "nat": "GBR",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Matija Crnković",
+                "nat": "CRO",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Alexander Lein",
+                "nat": "USA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Erik Irmisch",
+                "nat": "GER",
+                "team": "YT RD",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Silvan Porchet",
+                "nat": "SUI",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Jed Stanton",
+                "nat": "AUS",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Lachlan Stevens-mcnab",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Joonas Jussila",
+                "nat": "FIN",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Jakob Jewett",
+                "nat": "CAN",
+                "team": "GIANT FACTORY OFF-ROAD TEAM - DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-1-women": [
@@ -281277,6 +281777,56 @@
                 "time": "5:05.161",
                 "gap": "+1:04.585",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Sacha Earnest",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Tahnee Seagrave",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Jess Blewitt",
+                "nat": "NZL",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Florencia Rodriguez Contardo",
+                "nat": "CHI",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Nina-Yves Cameron",
+                "nat": "GBR",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-2-men": [
@@ -282008,6 +282558,66 @@
                 "time": "7:49.806",
                 "gap": "+4:32.059",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Zac Bradley",
+                "nat": "AUS",
+                "team": "TEAM HIGH COUNTRY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Albertas Turba",
+                "nat": "LTU",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "William Pugh",
+                "nat": "GBR",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Carter Sloan",
+                "nat": "AUS",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Sebastian Kerl",
+                "nat": "CZE",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Igor Franek",
+                "nat": "POL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-2-women": [
@@ -282163,6 +282773,36 @@
                 "time": "5:22.942",
                 "gap": "+1:17.764",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Siel Van Der Velden",
+                "nat": "BEL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Eliana Hulsebosch",
+                "nat": "NZL",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Sacha Earnest",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ]
           }
@@ -283082,6 +283722,116 @@
                 "time": "4:57.837",
                 "gap": "+2:09.431",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Evan Medcalf",
+                "nat": "USA",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Noa Hirst Walker",
+                "nat": "GBR",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Hudson Tarling",
+                "nat": "AUS",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Lorenzo Mascherini",
+                "nat": "ITA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Anthony Shelly",
+                "nat": "CAN",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Bernard Kerr",
+                "nat": "GBR",
+                "team": "PIVOT FACTORY RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Cooper Northey",
+                "nat": "AUS",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Max Hartenstern",
+                "nat": "GER",
+                "team": "CUBE FACTORY RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Benny De Vall",
+                "nat": "CAN",
+                "team": "STOIC RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Drake Parker",
+                "nat": "USA",
+                "team": "OUTLAW INTENSE RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Joe Millington",
+                "nat": "NZL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-1-women": [
@@ -283390,6 +284140,26 @@
                 "time": "3:51.226",
                 "gap": "+0:36.586",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Veronika Widmann",
+                "nat": "ITA",
+                "team": "UNNO FACTORY RACING DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Bellah Birchall",
+                "nat": "NZL",
+                "team": "THE ALLIANCE",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-2-men": [
@@ -284085,6 +284855,86 @@
                 "time": "4:36.167",
                 "gap": "+1:47.794",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Sorley Swabey",
+                "nat": "GBR",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Matt Walker",
+                "nat": "GBR",
+                "team": "TREK - UNBROKEN DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Patrick Ward",
+                "nat": "AUS",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Fernando Juan MuÑoz",
+                "nat": "COL",
+                "team": "NUKEPROOF AXESS RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Richard Rude Jr",
+                "nat": "USA",
+                "team": "YETI / FOX FACTORY RACE TEAM",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Matija Crnković",
+                "nat": "CRO",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Hudson Tarling",
+                "nat": "AUS",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Gonçalo Bandeira",
+                "nat": "POR",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "qualifying-2-women": [
@@ -284303,6 +285153,16 @@
                 "time": "4:55.925",
                 "gap": "+1:38.794",
                 "points": null
+              },
+              {
+                "rank": null,
+                "name": "Siel Van Der Velden",
+                "nat": "BEL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ],
             "finals-women": [
@@ -284715,7 +285575,7 @@
               }
             ]
           },
-          "fetchedAt": "2026-06-20T14:39:55.210Z",
+          "fetchedAt": "2026-07-02T23:46:50.440Z",
           "source": "chronorace-live"
         }
       ]
