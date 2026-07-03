@@ -20,12 +20,8 @@ on:
           - lake-placid-2026
 
   schedule:
-    # Targeted runs: fire immediately after each session wraps (UTC).
-    # Leogang (Europe/Vienna = UTC+2 in June):
-    - cron: '30 14 12 6 *'   # Leogang qualifying  — after Q2 Women (~16:30 Vienna)
-    - cron: '30 13 13 6 *'   # Leogang finals      — after Women Elite (~15:30 Vienna)
-    # Fallback: poll every 30 min on race days. Date check below gates on race days
-    # only — non-race-day runs exit after the first step (no checkout, no npm ci).
+    # Poll every 30 min. The date check below gates on race days only — non-race-day
+    # runs exit after the first step (no checkout, no npm ci), so idle cost is one shell command.
     - cron: '*/30 * * * *'
 
 permissions:

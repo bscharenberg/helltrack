@@ -1,8 +1,8 @@
-const CACHE_NAME = 'helltrack-v5'
+const CACHE_NAME = 'helltrack-v6'
 const STATIC_ASSETS = [
-  '/helltrack/',
-  '/helltrack/index.html',
-  '/helltrack/manifest.json',
+  '/',
+  '/index.html',
+  '/manifest.json',
 ]
 
 self.addEventListener('install', event => {
