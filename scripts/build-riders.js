@@ -29,21 +29,42 @@ const NAT_FLAGS = {
   PRT:'🇵🇹', ROU:'🇷🇴', RSA:'🇿🇦', SRB:'🇷🇸', SUI:'🇨🇭', SVK:'🇸🇰',
   SVN:'🇸🇮', SLO:'🇸🇮', SWE:'🇸🇪', TUR:'🇹🇷', URU:'🇺🇾', USA:'🇺🇸',
   ZAF:'🇿🇦',
+  // IOC codes present in riders.csv that differ from the ISO-3166 alpha-3 codes above
+  POR:'🇵🇹', NED:'🇳🇱', DEN:'🇩🇰', VEN:'🇻🇪', INA:'🇮🇩',
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 /**
- * Format name from "BRUNI Loic" → "Loic Bruni"
- * Handles accented characters, compound names, apostrophes.
+ * Format name from "BRUNI Loic" → "Loic Bruni" (given-first, matches the Results tab).
+ * CSV is "SURNAME(S) Given...", surnames arriving ALL-CAPS. Move the caps tokens to the
+ * end and display-case them, so both "BRUNI Loic" and "A'HERN Kye" come out right.
  */
+function isCapsToken(w) {
+  return /\p{L}/u.test(w) && w === w.toLocaleUpperCase()
+}
+// Display-case a caps token, respecting hyphen/apostrophe subparts:
+//   "BRUNI"→"Bruni", "A'HERN"→"A'Hern", "MEIER-SMITH"→"Meier-Smith"
+function caseToken(w) {
+  return w.replace(/\p{L}+/gu, s => s.charAt(0).toLocaleUpperCase() + s.slice(1).toLocaleLowerCase())
+}
 function formatName(raw) {
-  return raw.trim().split(/\s+/).map(word => {
-    // Preserve mixed-case words (e.g. "McNeill", "O'Brien")
-    if (word !== word.toUpperCase()) return word
-    // Capitalize ALL-CAPS words
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-  }).join(' ')
+  const toks = raw.trim().split(/\s+/).filter(Boolean)
+  if (!toks.length) return ''
+  const surname = toks.filter(isCapsToken)
+  const given   = toks.filter(w => !isCapsToken(w))
+  // Given-first when we can tell them apart; otherwise keep source order, just re-case.
+  const parts = (surname.length && given.length)
+    ? [...given, ...surname.map(caseToken)]
+    : toks.map(w => isCapsToken(w) ? caseToken(w) : w)
+  return parts.join(' ')
+}
+
+// Surname sort key — the roster still reads like a phone book even though display is given-first.
+function surnameKey(raw) {
+  const toks = raw.trim().split(/\s+/).filter(Boolean)
+  const caps = toks.filter(isCapsToken)
+  return (caps.length ? caps : toks).join(' ').toLocaleLowerCase()
 }
 
 /**
@@ -100,18 +121,21 @@ function buildRiders() {
       nat,
       flag:      NAT_FLAGS[nat] || '',
       instagram,
+      _sort:     surnameKey(r.name || ''),
     }
 
     if (r.category === 'Women') women.push(rider)
     else men.push(rider)
   }
 
-  // Sort alphabetically
-  const byName = (a, b) => a.name.localeCompare(b.name)
-  men.sort(byName)
-  women.sort(byName)
+  // Sort by surname (display is given-first, e.g. "Loic Bruni"), then full name for stability.
+  const bySurname = (a, b) => a._sort.localeCompare(b._sort) || a.name.localeCompare(b.name)
+  men.sort(bySurname)
+  women.sort(bySurname)
 
-  const output = { men, women }
+  // Strip the temporary sort key so the JSON shape stays { name, nat, flag, instagram }.
+  const strip = ({ _sort, ...rider }) => rider
+  const output = { men: men.map(strip), women: women.map(strip) }
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf8')
 
   console.log(`✅ Wrote ${outPath}`)
