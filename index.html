@@ -148,7 +148,6 @@ html, body {
 #feed { padding: 0 0 calc(var(--safe-bottom) + 24px); }
 
 /* ── My Riders results strip (feed) ── */
-#my-riders-feed:empty { display: none; }
 #my-riders-feed { padding: 14px 0 4px; }
 .mrf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 0 16px 8px; }
 .mrf-label {
@@ -198,6 +197,25 @@ html, body {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);
 }
+
+.mrf-empty-card {
+  flex: 1 1 auto; min-width: 220px;
+  background: var(--bg-card);
+  border: 1px dashed var(--acid-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+.mrf-empty-card:hover { border-color: var(--acid); background: var(--bg-card-hover); }
+.mrf-empty-card:active { opacity: 0.85; }
+.mrf-empty-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--acid); margin-bottom: 3px;
+}
+.mrf-empty-sub { font-size: 12px; color: var(--text-secondary); }
 
 /* ── Section ── */
 .section {
@@ -2559,7 +2577,22 @@ function renderMyRidersFeed() {
   const el = document.getElementById('my-riders-feed')
   if (!el) return
   const saved = getMyRiders()
-  if (!saved.length || !resultsData) { el.innerHTML = ''; return }
+
+  // No followed riders yet — still show the section so first-time visitors discover the
+  // feature, with a prompt into the Riders tab instead of the results strip. Deliberately
+  // does not touch resultsData: this path must stay free for a brand-new visitor.
+  if (!saved.length) {
+    el.innerHTML = `<div class="mrf-head"><span class="mrf-label">Your Riders</span></div>
+    <div class="mrf-strip">
+      <div class="mrf-empty-card" onclick="goToRidersTab()">
+        <div class="mrf-empty-title">Pick your 6 →</div>
+        <div class="mrf-empty-sub">Follow riders to track their races here</div>
+      </div>
+    </div>`
+    return
+  }
+
+  if (!resultsData) { el.innerHTML = ''; return }
 
   const next = nextRound2026()
   const nextHtml = next
@@ -2590,12 +2623,18 @@ function renderMyRidersFeed() {
 }
 
 // Lazy-load results.json only for users who follow riders (keeps the feed cheap for everyone
-// else), then render the strip. Cached, so opening Results later reuses the same fetch.
+// else — a first-time visitor with no saved riders never fetches it), then render the strip.
+// Cached, so opening Results later reuses the same fetch.
 function hydrateMyRidersFeed() {
-  const el = document.getElementById('my-riders-feed')
-  if (!getMyRiders().length) { if (el) el.innerHTML = ''; return }
+  if (!getMyRiders().length) { renderMyRidersFeed(); return }
   if (resultsData) { renderMyRidersFeed(); return }
   loadResultsData().then(renderMyRidersFeed).catch(() => {})
+}
+
+// Empty-state prompt tap → Riders tab, so a first-time visitor can pick riders to follow.
+function goToRidersTab() {
+  const tab = [...document.querySelectorAll('#tabs .tab')].find(t => t.dataset.tab === 'riders')
+  if (tab) tab.click()
 }
 
 // Tap a rider card → their full cross-season history in the Results search view.
