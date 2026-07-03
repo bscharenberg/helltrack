@@ -85,14 +85,18 @@ date wins, and within a round finals > Qual 2 > Qual 1 (reuses the existing `SES
 Qualifying results get a small "Qual 1"/"Qual 2" tag and podium (silver) coloring, never the
 acid "P1" treatment reserved for an actual finals win. SW cache bumped v9→v10.
 
-**Related gap, not yet fixed:** `fetch-results.yml`'s date-gate assumed La Thuile qualifying
-would post 07-04, but it posted 07-03 — a day earlier than the workflow's case-statement
-expected, so neither the targeted nor the 30-min-poll path fetched it automatically; pulled
-in manually via `results-fetcher.mjs la-thuile-2026` this session. The case-statement's
-qual/finals date pairs are a guess at the UCI's actual per-round schedule and can be off by a
-day. Worth hardening later (e.g. widen the date-gate window, or stop gating on assumed dates
-entirely and let the 30-min poll always attempt the nearest upcoming round) — not done here
-since it's a CI/CD schedule change and wants a deliberate look, not a same-session patch.
+**Related gap — hardened same day:** `fetch-results.yml`'s date-gate assumed La Thuile
+qualifying would post 07-04, but it posted 07-03 — a day earlier than the workflow's
+case-statement expected, so neither the targeted nor the 30-min-poll path fetched it
+automatically; pulled in manually via `results-fetcher.mjs la-thuile-2026` this session.
+Widened every remaining 2026 round's window (La Thuile onward; past rounds left alone —
+functionally irrelevant now) from the old single qual/finals day-pair to
+`[finals date − 3 days, finals date + 1 day]` — e.g. La Thuile 07-05 finals now matches
+07-02 through 07-06, not just 07-04|07-05. Covers Q1/Q2 posting a few days early and a
+rain-delayed finals; a day outside every window is still a safe no-op (`slug=unknown` skips
+every remaining step), so the wider windows cost nothing on idle days. Verified the exact
+case-statement patterns against every window boundary (bash) and confirmed no bleed into
+adjacent rounds' windows before shipping.
 `index.html` + SW cache bump v6→v7. Followed riders are set via the existing Riders-tab bookmark.
 
 ### Codebase audit pass (2026-07-02)

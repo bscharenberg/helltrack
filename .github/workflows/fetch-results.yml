@@ -38,15 +38,26 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "slug=${{ github.event.inputs.venue_slug }}" >> $GITHUB_OUTPUT
           else
+            # Window = [finals date - 3 days, finals date + 1 day] for each round, not just
+            # the assumed qual/finals pair. Learned the hard way: La Thuile's Q1/Q2 posted
+            # 07-03, three days before finals (07-05), but the old case only matched
+            # 07-04|07-05 — the 30-min poller had "slug=unknown" on 07-03 and silently did
+            # nothing all day. The UCI's per-round qualifying schedule isn't perfectly
+            # consistent round to round, so give every round a few days of leading buffer
+            # (covers Q1/Q2 posting early) and one trailing day (covers a rain-delayed
+            # finals). A day matching no window is a safe no-op (slug=unknown skips every
+            # remaining step), so a wider window costs nothing on idle days.
             case "$(date -u +%m-%d)" in
               06-12|06-13) echo "slug=leogang-2026"      >> $GITHUB_OUTPUT ;;
               06-20|06-21) echo "slug=lenzerheide-2026"  >> $GITHUB_OUTPUT ;;
-              07-04|07-05) echo "slug=la-thuile-2026"    >> $GITHUB_OUTPUT ;;
-              07-11|07-12) echo "slug=pal-arinsal-2026"  >> $GITHUB_OUTPUT ;;
-              08-22|08-23) echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;
-              08-29|08-30) echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;
-              09-26|09-27) echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;
-              10-03|10-04) echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;
+              07-0[2-6])   echo "slug=la-thuile-2026"    >> $GITHUB_OUTPUT ;;  # finals 07-05
+              07-09|07-1[0-3])
+                           echo "slug=pal-arinsal-2026"  >> $GITHUB_OUTPUT ;;  # finals 07-12
+              08-2[0-4])   echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;  # finals 08-23
+              08-2[7-9]|08-3[0-1])
+                           echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;  # finals 08-30 (Worlds)
+              09-2[4-8])   echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;  # finals 09-27
+              10-0[1-5])   echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;  # finals 10-04
               *)            echo "slug=unknown"           >> $GITHUB_OUTPUT ;;
             esac
           fi
