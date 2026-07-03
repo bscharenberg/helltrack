@@ -878,31 +878,8 @@ html, body {
 .rvc-detail-pts { width:50px; text-align:right; color:#666; }
 
 
-  #bottom-nav {
-    position: static;
-    border-top: none;
-    border-bottom: 0.5px solid #222;
-    padding-bottom: 0;
-    max-width: 100%;
-    background: #0d0d0d;
-    order: -1;
-  }
-  .nav-btn {
-    flex-direction: row;
-    gap: 8px;
-    padding: 14px 24px;
-    flex: 0;
-  }
-  .nav-btn-icon { font-size: 18px; }
-  .nav-btn-label { font-size: 11px; letter-spacing: 0.1em; }
-  #main-area {
-    padding-bottom: 0;
-  }
-}
-
 /* ── Riders tab ── */
 #riders-view { display:none; padding:0 0 calc(var(--safe-bottom) + 24px); }
-#riders-view.active { display:block; }
 
 .riders-grid {
   display: flex;
@@ -911,19 +888,6 @@ html, body {
   padding: 10px 16px;
 }
 
-.rider-card {
-  background: var(--bg-card);
-  border: 0.5px solid #222;
-  border-radius: 10px;
-  display: flex; flex-direction: row; align-items: stretch;
-  overflow: hidden; height: 52px;
-  transition: border-color 0.15s, background 0.15s;
-  -webkit-tap-highlight-color: transparent;
-}
-.rider-card.saved {
-  border-color: rgba(212,245,0,0.25);
-  background: rgba(212,245,0,0.05);
-}
 .rider-card:hover { border-color: rgba(212,245,0,0.3); }
 
 .rider-flag {
@@ -1668,6 +1632,13 @@ sheet.addEventListener('touchend', e => {
   if (e.changedTouches[0].clientY - touchStartY > 80) closeSheet()
 }, { passive: true })
 
+// Escape HTML-significant chars in text interpolated into innerHTML. Feed titles come
+// from YouTube/Pinkbike (third parties), so a "<img src=x onerror=…>" title must render
+// literally, not execute.
+function escHtml(s) {
+  return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+}
+
 function renderHero(item, showBadge) {
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
@@ -1680,7 +1651,7 @@ function renderHero(item, showBadge) {
     <div class="source-pill ${sc}">${srcName(item)}</div>
   </div>
   <div class="hero-body">
-    <div class="card-title">${item.title}</div>
+    <div class="card-title">${escHtml(item.title)}</div>
     <div class="card-meta">
       <span class="meta-source ${sc}">${srcName(item)}</span>
       <div class="meta-dot"></div>
@@ -1709,7 +1680,7 @@ function renderRow(item, showBadge) {
     ${thumbContent}
   </div>
   <div class="row-body">
-    <div class="row-title">${item.title}</div>
+    <div class="row-title">${escHtml(item.title)}</div>
     <div class="card-meta" style="margin-top:4px">
       <span class="meta-source ${sc}">${srcName(item)}</span>
       <div class="meta-dot"></div>
@@ -2084,7 +2055,7 @@ function renderStandings() {
 }
 
 function escAttr(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;')
 }
 
 function normalizeName(name) {
@@ -2203,7 +2174,7 @@ function renderVenueCard(group) {
   return `
 <div class="rvc-venue-card">
   <div class="rvc-venue-header">
-    <div class="rvc-venue-name" onclick="goToVenue('${escAttr(group.venue)}')">${group.venue}</div>
+    <div class="rvc-venue-name" data-venue="${escAttr(group.venue)}" onclick="goToVenue(this.dataset.venue)">${escHtml(group.venue)}</div>
     <div class="rvc-venue-count">${group.visits.length} visit${group.visits.length !== 1 ? 's' : ''}</div>
   </div>
   <div class="rvc-visits">${group.visits.map(renderVisitRow).join('')}</div>
@@ -2445,7 +2416,7 @@ function renderResults() {
 
 async function loadResults() {
   try {
-    const res  = await fetch(RESULTS_URL + '?t=' + Date.now())
+    const res  = await fetch(RESULTS_URL)
     if (!res.ok) throw new Error('HTTP ' + res.status)
     resultsData = await res.json()
     const seasons = Object.keys(resultsData?.seasons || {}).filter(yr => {
@@ -2605,13 +2576,16 @@ function renderMyRiders() {
     strip.innerHTML = `<div class="my-riders-empty">Save up to 6 riders for quick access to their IG profiles</div>`
     return
   }
-  strip.innerHTML = `<div class="my-riders-chips">` + saved.map(r => `
+  strip.innerHTML = `<div class="my-riders-chips">` + saved.map(r => {
+    const nm   = String(r.name || '').replace(/"/g, '&quot;')
+    const last = String(r.name || '').split(' ').slice(-1)[0].toUpperCase()
+    return `
     <a class="rider-chip" href="${r.instagram || '#'}" target="_blank" rel="noopener" onclick="${r.instagram ? '' : 'event.preventDefault()'}">
       <span class="rider-chip-flag">${r.flag}</span>
-      <span class="rider-chip-name">${r.name.split(' ').slice(-1)[0].toUpperCase()}</span>
+      <span class="rider-chip-name">${last}</span>
     </a>
-    <button class="rider-chip-remove" onclick="event.preventDefault();event.stopPropagation();removeMyRider('${r.name.replace(/'/g,"\'")}')">✕</button>
-  `).join('') + `</div>`
+    <button class="rider-chip-remove" data-name="${nm}" onclick="event.preventDefault();event.stopPropagation();removeMyRider(this.dataset.name)">✕</button>
+  `}).join('') + `</div>`
 }
 
 // ── Rider card SVGs ───────────────────────────────────────────────────────────
@@ -2808,6 +2782,7 @@ function clearRiderSearch() {
   onRiderSearch('')
 }
 
+buildTabs()   // render tabs up front so Results/Riders/Pits stay reachable even if cache.json fails to load
 loadFeed()
 </script>
 
