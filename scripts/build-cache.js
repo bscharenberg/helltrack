@@ -88,6 +88,15 @@ async function buildCache() {
   const filtered = filterItems(unique)
   console.log(`✅ After filter: ${filtered.length} items passed`)
 
+  // Safety guard: a source outage (YouTube quota exhausted, RSS proxy down) makes the
+  // fetchers return [] silently, which would otherwise write an empty cache.json and
+  // blank the live feed for up to an hour. Refuse to overwrite when the yield is
+  // implausibly low — normal builds pass ~150–175 items. Leaves the existing cache intact.
+  if (filtered.length < 20) {
+    console.error(`\n💥 Only ${filtered.length} items passed — refusing to overwrite cache.json (likely a source outage). Existing cache left untouched.`)
+    process.exit(1)
+  }
+
   // 5. Group by category
   const grouped = groupByCategory(filtered)
   const capped  = capCategories(grouped)

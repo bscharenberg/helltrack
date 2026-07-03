@@ -64,17 +64,13 @@ async function parseRSS091(xmlText, feed) {
     if (!pubDate || !/\b00:00:00\b/.test(pubDate)) return pubDate
     const d = new Date(pubDate)
     if (isNaN(d.getTime())) return pubDate
-    const now = new Date()
-    // Compare calendar dates in UTC (midnight PDT = 07:00 UTC, still same UTC date)
-    const itemDay  = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())
-    const todayDay = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate())
-    if (itemDay >= todayDay) {
-      // Today: stamp at cache-build time so article appears fresh, preserve RSS order
-      return new Date(now.getTime() - index * 60000).toISOString()
-    } else {
-      // Past day: push to 23:59 of that UTC day, preserve RSS order within the day
-      return new Date(itemDay + (23 * 3600 + 59 * 60 - index * 60) * 1000).toISOString()
-    }
+    // Pinkbike stamps every item 00:00:00, so a day's articles collapse to one instant and
+    // sort arbitrarily. Give each a FIXED time-of-day on its own UTC calendar day (noon,
+    // minus a per-index second to preserve RSS feed order), computed only from the item's
+    // own date. Deterministic across builds — the same article always gets the same
+    // timestamp, so it no longer re-stamps "just now" every hour or reshuffles the feed.
+    const itemDay = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())
+    return new Date(itemDay + (12 * 3600 - index * 60) * 1000).toISOString()
   }
 
   return items.map((item, index) => {

@@ -79,7 +79,7 @@ const TEST_ITEMS = [
     id: '8',
     title: 'Pinkbike: 2025 Fort William DH World Cup Results — Who Won?',
     description: 'Full results and podium from the Fort William downhill World Cup.',
-    channelId: 'UC2GIHZpQiJy-8286f4lj_cg',
+    channelId: null,   // real Pinkbike RSS items have no channelId (RSS threshold = MIN_SCORE)
     publishedAt: daysAgo(1),
     source: 'rss',
   },
@@ -159,19 +159,21 @@ console.log('──────────────────────�
 console.log('  Helltrack content filter — test run')
 console.log('─────────────────────────────────────────\n')
 
+// Source of truth for PASS/DROP is filterItems itself, which applies the real tiered
+// threshold (RSS + trusted YT ≥ MIN_SCORE=6; untrusted YT ≥ 10) — not a flat cutoff.
+const filtered = filterItems(TEST_ITEMS)
+const passIds  = new Set(filtered.map(i => i.id))
+const grouped  = groupByCategory(filtered)
+
 console.log('INDIVIDUAL SCORES:\n')
 for (const item of TEST_ITEMS) {
   const score = scoreItem(item)
-  const recent = isRecent(item)
   let status
-  if (!recent)          status = '📅 STALE'
-  else if (score >= 4)  status = '✅ PASS '
-  else                  status = '❌ DROP '
+  if (!isRecent(item))            status = '📅 STALE'
+  else if (passIds.has(item.id))  status = '✅ PASS '
+  else                            status = '❌ DROP '
   console.log(`${status}  [${String(score).padStart(3)}]  ${item.title.slice(0, 60)}`)
 }
-
-const filtered = filterItems(TEST_ITEMS)
-const grouped = groupByCategory(filtered)
 
 console.log('\n─────────────────────────────────────────')
 console.log(`RESULTS: ${filtered.length} of ${TEST_ITEMS.length} items passed\n`)

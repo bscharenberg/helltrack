@@ -46,7 +46,7 @@ const INCLUDE_KEYWORDS = [
   // Downhill season recaps from UCI channel
   { terms: ['downhill season recap', 'dh season recap'], weight: 5 },
 
-  // Venues — weight 2 so venue alone cannot pass MIN_SCORE=4.
+  // Venues — weight 2 so venue alone cannot pass MIN_SCORE=6.
   // Requires at least one other signal to reach threshold.
   // Prevents trail rides, surveys, and FKT articles that mention venues from passing.
   { terms: ['fort william', 'leogang', 'val di sole', 'loudenvielle', 'les gets',
@@ -122,8 +122,9 @@ const EXCLUDE_KEYWORDS = [
   { terms: ['mtbws highlights'], weight: 8, titleOnly: true },
 
   // Enduro — out of scope for Helltrack (DH only)
+  // wordBoundary: 'ews'/'ewsr' must not match inside "news", "reviews", etc.
   { terms: ['enduro world cup', 'ews', 'enduro world series', 'uci enduro', 'uci edr',
-            'world cup enduro', 'ewsr', 'ixs edc', 'ixs european'], weight: 8, titleOnly: true },
+            'world cup enduro', 'ewsr', 'ixs edc', 'ixs european'], weight: 8, titleOnly: true, wordBoundary: true },
   { terms: ['enduro rider', 'ultimate enduro', 'edr rider', 'enduro world',
             'enduro series', 'enduro race', 'enduro invitational'], weight: 8, titleOnly: true },
   // Bare 'enduro' — lower weight so it can be overridden by strong DH signals
@@ -172,7 +173,8 @@ const EXCLUDE_KEYWORDS = [
             'suspension walkthrough', 'live stream'], weight: 6 },
 
   // Ski / snow content (Commencal posts ski content)
-  { terms: ['skiing', 'snowboard', 'ski', 'snow park'], weight: 6 },
+  // wordBoundary: bare 'ski' must not match inside "skills" ("skiing" is listed separately)
+  { terms: ['skiing', 'snowboard', 'ski', 'snow park'], weight: 6, wordBoundary: true },
 ]
 
 // ─── Category assignment ──────────────────────────────────────────────────────
@@ -244,6 +246,14 @@ function isRecent(item) {
   return ageDays <= MAX_AGE_DAYS
 }
 
+// Match a term against text. Word-boundary rules (e.g. 'ews', 'ski') avoid substring
+// false-positives like "news"/"skills"; the default is fast substring matching.
+function termMatches(text, term, wordBoundary) {
+  if (!wordBoundary) return text.includes(term)
+  const esc = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return new RegExp(`\\b${esc}\\b`).test(text)
+}
+
 function scoreItem(item) {
   const text      = normalise([item.title, item.description, item.tags?.join(' ')].join(' '))
   const titleOnly = normalise(item.title)
@@ -255,7 +265,7 @@ function scoreItem(item) {
 
   for (const rule of INCLUDE_KEYWORDS) {
     for (const term of rule.terms) {
-      if (text.includes(term)) {
+      if (termMatches(text, term, rule.wordBoundary)) {
         score += rule.weight
         break
       }
@@ -268,7 +278,7 @@ function scoreItem(item) {
     // XCO/XCC on every video, which would wrongly penalise DHI highlights.
     const matchText = rule.titleOnly ? titleOnly : text
     for (const term of rule.terms) {
-      if (matchText.includes(term)) {
+      if (termMatches(matchText, term, rule.wordBoundary)) {
         score -= rule.weight
         break
       }
