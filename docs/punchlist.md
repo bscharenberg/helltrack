@@ -66,6 +66,16 @@
 - watch.json: real broadcaster data (US, Canada, UK, Europe, Australia, New Zealand, Everywhere)
 - directory.json: factory teams, media outlets, podcasts, UCI official links
 
+### My Riders results feed (2026-07-03)
+Retention play — turns the saved-riders feature into a personal reason to return. A "Your
+Riders" strip at the top of the feed shows each followed rider's latest 2026 finals result
+(rank with podium/DNF styling) + the next race date ("Next · La Thuile · Jul 5"); tapping a
+card deep-links to that rider's full history in Results search. Only renders for users who
+follow riders (no clutter otherwise). `results.json` is lazy-loaded (promise-cached, shared
+with the Results tab) so the feed stays cheap for everyone else — this is the main reason
+**#46** (split results.json) is worth doing: it makes this strip's data load ~KB not 8.2 MB.
+`index.html` + SW cache bump v6→v7. Followed riders are set via the existing Riders-tab bookmark.
+
 ### Codebase audit pass (2026-07-02)
 360° audit + fixes. Shipped: service-worker paths fixed (`/helltrack/`→root, cache bumped
 v5→v6 — the SW never installed in production before this); build-cache min-items guard

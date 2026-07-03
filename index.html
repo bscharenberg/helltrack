@@ -147,6 +147,58 @@ html, body {
 /* ── Feed ── */
 #feed { padding: 0 0 calc(var(--safe-bottom) + 24px); }
 
+/* ── My Riders results strip (feed) ── */
+#my-riders-feed:empty { display: none; }
+#my-riders-feed { padding: 14px 0 4px; }
+.mrf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 0 16px 8px; }
+.mrf-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.mrf-next {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--acid); white-space: nowrap;
+}
+.mrf-strip {
+  display: flex; gap: 8px; overflow-x: auto; padding: 0 16px 6px;
+  scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;
+}
+.mrf-strip::-webkit-scrollbar { display: none; }
+.mrf-card {
+  flex: 0 0 auto; min-width: 128px; max-width: 168px;
+  background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+.mrf-card:hover { border-color: var(--border-mid); background: var(--bg-card-hover); }
+.mrf-card:active { opacity: 0.85; }
+.mrf-card-top { display: flex; align-items: center; gap: 6px; margin-bottom: 7px; min-width: 0; }
+.mrf-flag { font-size: 15px; line-height: 1; flex-shrink: 0; }
+.mrf-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mrf-result { display: flex; align-items: baseline; gap: 7px; min-width: 0; }
+.mrf-rank {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px; font-weight: 700; line-height: 1; color: var(--text-secondary); flex-shrink: 0;
+}
+.mrf-rank.p1 { color: var(--acid); }
+.mrf-rank.podium { color: #c0c0c0; }
+.mrf-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+  color: #ff5c5c; border: 1px solid rgba(255,92,92,0.4); border-radius: 4px; padding: 2px 6px; flex-shrink: 0;
+}
+.mrf-venue { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mrf-none {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);
+}
+
 /* ── Section ── */
 .section {
   padding: 20px 16px 4px;
@@ -1275,6 +1327,7 @@ html, body {
     <p>Failed to load feed</p>
     <button id="retry-btn" onclick="loadFeed(true)">Retry</button>
   </div>
+  <div id="my-riders-feed"></div>
   <div id="content"></div>
   <div class="signup-section">
     <h2 class="signup-headline">Make the Cut</h2>
@@ -1799,8 +1852,7 @@ function buildTabs() {
       document.getElementById('riders-nav').style.display               = isRiders  ? 'block' : 'none'
       document.getElementById('pits-view').style.display                = isPits    ? 'block' : 'none'
       if (isResults) {
-        if (!resultsData) loadResults()
-        else renderResults()
+        loadResults()
       } else if (isRiders) {
         if (!ridersData) loadRiders()
         else renderRiders()
@@ -1808,6 +1860,7 @@ function buildTabs() {
         loadPits()
       } else {
         renderFeed()
+        renderMyRidersFeed()
       }
       window.scrollTo({ top:0, behavior:'smooth' })
     })
@@ -1826,6 +1879,7 @@ async function loadFeed(force=false) {
     buildTabs()
     renderFeed()
     handleDeepLink()
+    hydrateMyRidersFeed()
   } catch(err) {
     console.error(err)
     document.getElementById('loading').style.display = 'none'
@@ -2414,17 +2468,29 @@ function renderResults() {
 </div>`
 }
 
-async function loadResults() {
-  try {
-    const res  = await fetch(RESULTS_URL)
+// results.json is large; load it once and cache the promise so the feed's "Your Riders"
+// strip and the Results tab share a single fetch (no cache-buster → browser-cacheable).
+let resultsLoadPromise = null
+async function loadResultsData() {
+  if (resultsData) return resultsData
+  if (resultsLoadPromise) return resultsLoadPromise
+  resultsLoadPromise = (async () => {
+    const res = await fetch(RESULTS_URL)
     if (!res.ok) throw new Error('HTTP ' + res.status)
     resultsData = await res.json()
     const seasons = Object.keys(resultsData?.seasons || {}).filter(yr => {
       const s = resultsData.seasons[yr]; return s.rounds && s.rounds.length > 0;
     }).sort()
-    activeSeason  = seasons[seasons.length - 1] || '2026'
-    const rounds  = currentRounds()
-    activeRound   = Math.max(0, rounds.length - 1)
+    activeSeason = seasons[seasons.length - 1] || '2026'
+    activeRound  = Math.max(0, currentRounds().length - 1)
+    return resultsData
+  })()
+  return resultsLoadPromise
+}
+
+async function loadResults() {
+  try {
+    await loadResultsData()
     buildSeasonBar()
     updateSessionBar()
     renderResults()
@@ -2433,6 +2499,102 @@ async function loadResults() {
     document.getElementById('rs-content').innerHTML =
       `<div class="rs-empty">Results unavailable</div>`
   }
+}
+
+// ── My Riders results strip (feed) ────────────────────────────────────────────
+// Personal retention hook: the riders a user follows, each with their latest DH finish
+// and the next race date, shown at the top of the feed (their daily-return surface).
+const CALENDAR_2026 = [
+  { round: 1,  venue: 'Mona YongPyong', date: '2026-05-01' },
+  { round: 2,  venue: 'Loudenvielle',   date: '2026-05-28' },
+  { round: 3,  venue: 'Leogang',        date: '2026-06-13' },
+  { round: 4,  venue: 'Lenzerheide',    date: '2026-06-21' },
+  { round: 5,  venue: 'La Thuile',      date: '2026-07-05' },
+  { round: 6,  venue: 'Pal Arinsal',    date: '2026-07-12' },
+  { round: 7,  venue: 'Les Gets',       date: '2026-08-23' },
+  { round: 8,  venue: 'Val di Sole',    date: '2026-08-30' },
+  { round: 9,  venue: 'Whistler',       date: '2026-09-27' },
+  { round: 10, venue: 'Lake Placid',    date: '2026-10-04' },
+]
+
+function nextRound2026() {
+  const today = new Date().toISOString().slice(0, 10)
+  return CALENDAR_2026.find(r => r.date >= today) || null
+}
+
+function fmtShortDate(d) {
+  return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+}
+
+// A saved rider's most recent 2026 finals result (finishers get a rank; DNF/DNS/DSQ a status).
+function latestFinalsForRider(normName) {
+  const rounds = resultsData?.seasons?.['2026']?.rounds || []
+  let best = null
+  for (const round of rounds) {
+    for (const key of ['finals-men', 'finals-women']) {
+      const hit = (round.sessions?.[key] || []).find(r => r.name && normalizeName(r.name) === normName)
+      if (!hit) continue
+      const cand = {
+        rank:   hit.rank,
+        status: hit.dnf ? 'DNF' : hit.dsq ? 'DSQ' : hit.dns ? 'DNS' : null,
+        venue:  round.venue,
+        date:   round.date || '',
+      }
+      if (!best || cand.date > best.date) best = cand
+    }
+  }
+  return best
+}
+
+function renderMyRidersFeed() {
+  const el = document.getElementById('my-riders-feed')
+  if (!el) return
+  const saved = getMyRiders()
+  if (!saved.length || !resultsData) { el.innerHTML = ''; return }
+
+  const next = nextRound2026()
+  const nextHtml = next
+    ? `<span class="mrf-next">Next · ${escHtml(next.venue)} · ${fmtShortDate(next.date)}</span>`
+    : ''
+
+  const cards = saved.map(r => {
+    const latest = latestFinalsForRider(normalizeName(r.name))
+    let resultHtml
+    if (!latest) {
+      resultHtml = `<div class="mrf-none">No 2026 result yet</div>`
+    } else if (latest.status) {
+      resultHtml = `<div class="mrf-result"><span class="mrf-badge">${latest.status}</span><span class="mrf-venue">${escHtml(latest.venue)}</span></div>`
+    } else {
+      const cls = latest.rank === 1 ? ' p1' : latest.rank <= 3 ? ' podium' : ''
+      resultHtml = `<div class="mrf-result"><span class="mrf-rank${cls}">P${latest.rank}</span><span class="mrf-venue">${escHtml(latest.venue)}</span></div>`
+    }
+    const nm = String(r.name || '').replace(/"/g, '&quot;')
+    return `<div class="mrf-card" data-name="${nm}" onclick="goToRiderHistory(this.dataset.name)">
+      <div class="mrf-card-top"><span class="mrf-flag">${r.flag || ''}</span><span class="mrf-name">${escHtml(r.name)}</span></div>
+      ${resultHtml}
+    </div>`
+  }).join('')
+
+  el.innerHTML = `<div class="mrf-head"><span class="mrf-label">Your Riders</span>${nextHtml}</div>
+    <div class="mrf-strip">${cards}</div>`
+}
+
+// Lazy-load results.json only for users who follow riders (keeps the feed cheap for everyone
+// else), then render the strip. Cached, so opening Results later reuses the same fetch.
+function hydrateMyRidersFeed() {
+  const el = document.getElementById('my-riders-feed')
+  if (!getMyRiders().length) { if (el) el.innerHTML = ''; return }
+  if (resultsData) { renderMyRidersFeed(); return }
+  loadResultsData().then(renderMyRidersFeed).catch(() => {})
+}
+
+// Tap a rider card → their full cross-season history in the Results search view.
+function goToRiderHistory(name) {
+  const tab = [...document.querySelectorAll('#tabs .tab')].find(t => t.dataset.tab === 'standings')
+  if (tab) tab.click()
+  resultsSearchQuery  = name
+  riderSearchSelected = normalizeName(name)
+  setResultsView('search')
 }
 
 
@@ -2552,6 +2714,7 @@ function toggleRider(r) {
   }
   renderMyRiders()
   renderRiders()
+  hydrateMyRidersFeed()
 }
 
 function removeMyRider(name) {
@@ -2559,6 +2722,7 @@ function removeMyRider(name) {
   saveMyRiders(saved)
   renderMyRiders()
   renderRiders()
+  hydrateMyRidersFeed()
 }
 
 function showRiderToast() {
