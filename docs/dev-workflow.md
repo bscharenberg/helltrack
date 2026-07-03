@@ -98,25 +98,28 @@ PINKBIKE_PROXY=https://helltrack-rss.scharenbergs.workers.dev
 Also set as GitHub Secrets for Actions.
 
 ## 2026 Race Calendar (for results-fetcher)
+Date = finals date (matches `CALENDAR_2026` in `scripts/results-fetcher.mjs`, the source of truth).
+
 | Round | Venue | Date | Slug |
 |---|---|---|---|
 | R1 | Mona YongPyong | 2026-05-01 | race-of-south-korea-2026 |
 | R2 | Loudenvielle | 2026-05-28 | loudenvielle-2026 |
-| R3 | Leogang | 2026-06-11 | leogang-2026 |
-| R4 | Lenzerheide | 2026-06-19 | lenzerheide-2026 |
-| R5 | La Thuile | 2026-07-03 | la-thuile-2026 |
-| R6 | Pal Arinsal | 2026-07-09 | pal-arinsal-2026 |
-| R7 | Les Gets | 2026-08-20 | les-gets-2026 |
-| Worlds | Val di Sole | 2026-08-26 | val-di-sole-2026 |
-| R8 | Whistler | 2026-09-25 | whistler-2026 |
-| R9 | Lake Placid | 2026-10-02 | lake-placid-2026 |
+| R3 | Leogang | 2026-06-13 | leogang-2026 |
+| R4 | Lenzerheide | 2026-06-21 | lenzerheide-2026 |
+| R5 | La Thuile | 2026-07-05 | la-thuile-2026 |
+| R6 | Pal Arinsal | 2026-07-12 | pal-arinsal-2026 |
+| R7 | Les Gets | 2026-08-23 | les-gets-2026 |
+| Worlds | Val di Sole | 2026-08-30 | val-di-sole-2026 |
+| R8 | Whistler | 2026-09-27 | whistler-2026 |
+| R9 | Lake Placid | 2026-10-04 | lake-placid-2026 |
 
 **When to run results-fetcher:**
 - After Q2 wraps on qualifying day (~1hr after last session)
 - After Women Elite finals on race day (~1hr after finish)
 - Run once per day — fetcher pulls all available sessions in one go
-- Leogang R3: workflow has targeted crons at 14:30 UTC June 12 (qualifying) and 13:30 UTC June 13 (finals)
+- On race days the fetch-results workflow polls every 30 min automatically (date-gated in the workflow); non-race-day runs exit after the first step
 - Can also trigger manually via GitHub Actions → workflow_dispatch with any venue slug
+- Backfill / re-write a completed round: `node scripts/results-fetcher.mjs <slug> --force` (bypasses the "both finals already present" guard)
 
 ## Debugging Tips
 
@@ -146,5 +149,5 @@ Then continue: `git rebase --continue` or `git stash pop && git push`
 
 ### Service worker caching stale content
 - Unregister in DevTools → Application → Service Workers
-- Service worker is currently at `helltrack-v2`
+- Service worker is currently at `helltrack-v6`
 - Bump the version string in service-worker.js when you need browsers to pick up new files

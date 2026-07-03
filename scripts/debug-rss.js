@@ -5,7 +5,6 @@
  */
 
 require('dotenv').config()
-const fetch  = require('node-fetch')
 const xml2js = require('xml2js')
 
 const PROXY = process.env.PINKBIKE_PROXY || 'https://helltrack-rss.scharenbergs.workers.dev'

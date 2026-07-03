@@ -27,22 +27,24 @@ Note: Cloudflare Workers Paid plan was retired after the results pipeline moved 
 - **Pinkbike RSS** via Cloudflare Worker proxy (direct fetch returns 403)
 
 ### YouTube Channels
+Source of truth is the `CHANNELS` array in `scripts/youtube-fetcher.js` — update there, then mirror here.
+
 | Channel | ID |
 |---|---|
 | UCI MTB World Series | UCWS4nfoou79mwo9nHew49fA |
-| Pinkbike | UCuGFMHThJdIwJRWHFN9lNvA |
-| Red Bull Bike | UCblfuW_4rakIf2h6aqoNnkQ |
-| GoPro Bike | UCqhnX4ZMpkCyozvguSEMtxg |
+| Pinkbike | UC2GIHZpQiJy-8286f4lj_cg |
+| Vital MTB | UCcX5xwMOCt92bi0dmspMFQw |
+| WynTV | UCtvJR7iamL8WFAbvpsC2HTw |
 | Sleeper Collective | UCuuLS5B9JraqXiKfYPIBNEw |
 | Bernard Kerr | UCOYc6SI_fVrNvoutot7D9IA |
 | Santa Cruz Syndicate | UCCb8I3PHEUFPV0Jds0-_eig |
-| WynTV | UCtvJR7iamL8WFAbvpsC2HTw |
+| Commencal | UCPUGv78-mvU6gaFBgjY67vA |
 | Fox Factory | UCN_B2-bdBtmAq-5TOEU63nQ |
 | Frameworks Bicycles | UCiCWNsaEx9swRaCe55XMAuw |
+| Red Bull Bike | UCXqlds5f7B2OOs9vQuevl4A |
+| GoPro Bike | UC-oqtSrbAwCIB98RZfsdreA |
+| Downtime Podcast | UCgwpS_N4DQDYsip73rsQ6iA |
 | Just Ride (Red Bull) | UCUjYvTWqwm7x6LU8uGLvdxQ |
-| Commencal | (in fetcher) |
-| Vital MTB | (in fetcher) |
-| Downtime Podcast | (in fetcher) |
 
 ### Scripts (in scripts/)
 - `youtube-fetcher.js` — uploads playlist approach, 1 unit/channel; duration-based Shorts detection via videos.list
@@ -189,7 +191,7 @@ Geographic streaming options for the PITS → WATCH section. Updated once per se
 
 ## Other PWA Files (root folder)
 - `manifest.json` — start_url: "/", scope: "/"
-- `service-worker.js` — cache-first static, network-first for cache.json; currently at helltrack-v2
+- `service-worker.js` — cache-first static, network-first for cache.json/riders.json; currently at helltrack-v6. Static assets are root-relative (`/`, `/index.html`, `/manifest.json`) — the site serves at the helltrack.app root, NOT a `/helltrack/` subpath.
 - `icon-192.png`, `icon-512.png` — placeholder HT icons (real design pending)
 
 ## Environment

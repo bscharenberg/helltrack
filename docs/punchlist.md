@@ -66,6 +66,22 @@
 - watch.json: real broadcaster data (US, Canada, UK, Europe, Australia, New Zealand, Everywhere)
 - directory.json: factory teams, media outlets, podcasts, UCI official links
 
+### Codebase audit pass (2026-07-02)
+360° audit + fixes. Shipped: service-worker paths fixed (`/helltrack/`→root, cache bumped
+v5→v6 — the SW never installed in production before this); build-cache min-items guard
+(refuses to write an empty cache.json on a source outage); content-filter word-boundary
+matching (`ews`⊂"news", `ski`⊂"skills" were silently dropping valid DH content);
+results-fetcher now keeps DNF/DNS/DSQ riders (was dropping them — recovered e.g. Asa
+Vermette DSQ + Daprela DNS at Loudenvielle) with all four 2026 rounds backfilled via a new
+`--force` flag; riders given-first display + surname sort + 5 missing flags + 4 de-duped
+rows; deterministic Pinkbike timestamps (no more hourly "just now" reshuffle); XSS-escape on
+feed titles; tabs render before feed load; hourly-refresh push retry; orphan sweep
+(`public/index.html`, stale manifest/icons, `teams.json`→`docs/team-rosters.archive.json`);
+docs synced (channel IDs, SW version, 2026 calendar dates). See git history for the full set.
+
+**Ongoing (F3):** the XCO/road rider-name exclude list in `content-filter.js` needs a top-up
+each shared-venue weekend as new XCO stars appear — no general fix, it's whack-a-mole.
+
 ---
 
 ## Active Backlog
@@ -86,7 +102,10 @@
 | 42 | ~~Rider-primary search: venue-grouped history cards~~ | — | Done | ~~Group a rider's results by venue~~ — search results now render as venue-grouped cards (most-recent visit first), finals rank as the headline (acid yellow for P1 w/ absolute time, gray + gap otherwise), DNF/DNS/DSQ as a red badge, Q1/Q2/points collapsed behind a tap-to-expand chevron (2026-06-14, `index.html`). |
 | 43 | Venue conditions tagging | S | Low | Hand-entered `conditions` enum (`dry`/`wet`/`mixed`/`dusty`/`hot`) + optional `conditionsNote` free text per round in results.json, shown as a muted chip on the venue/year row. Data + display only, no filtering UI yet. Full spec in "Pending PBIs — fantasy picking" below. |
 | 44 | ~~Venue cross-year view + rider↔venue loop~~ | — | Done | ~~Depends on #42.~~ Selecting a venue in Results (via a rider card's venue-name tap) opens a cross-year podium stack for that venue — respects gender/session toggles, reuses existing podium styling, "← Back to search" returns to the rider's prior search results (2026-06-14, `index.html`). |
+| 45 | Venue-primary search | M | Medium | The #44 cross-year venue view is currently only reachable via rider search → tap a venue name in their card. There's no way to search "Leogang" directly and land on its cross-year view. Needs a venue-name index alongside the existing rider-name index (`buildRiderIndex`) in the Search sub-view, plus a way to disambiguate rider vs. venue matches in the picker (e.g. a result-type label). Not yet speced — flagged for follow-up planning. |
 | 33b | ~~Thumbs-down filter feedback~~ | — | Dropped | Filter is clean enough. GA card_open provides sufficient signal. |
+| 46 | Split results.json per season | M | Medium | results.json is 8.2 MB and was fetched on every Results-tab open. Split into `results-index.json` (seasons/rounds/venues) + `results-<year>.json` lazy-loaded; current season by default. Unlocks proper caching (the `?t=` cache-buster is already removed) and moves `buildRiderIndex()`'s full-history walk off the main thread. Supersedes #37. |
+| 47 | Standings points-source audit | M | Low | `computeStandings()` sums finals `points` only; if UCI awards qualifying/semifinal points (2023+ format) the Standings view undercounts vs official. The `lastRank` tiebreak also stays 999 for anyone who missed the latest round. Verify against official season standings before changing. |
 
 ### Notes on backlog items
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
