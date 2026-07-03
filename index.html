@@ -187,6 +187,11 @@ html, body {
 }
 .mrf-rank.p1 { color: var(--acid); }
 .mrf-rank.podium { color: #c0c0c0; }
+.mrf-session-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted); flex-shrink: 0;
+}
 .mrf-badge {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
@@ -2551,23 +2556,35 @@ function riderMatchKey(name) {
   return normalizeName(name || '').split(/\s+/).filter(Boolean).sort().join(' ')
 }
 
-// A saved rider's most recent 2026 finals result (finishers get a rank; DNF/DNS/DSQ a status).
-// Returns the canonical results.json name too, so display + tap-through use given-first order.
-function latestFinalsForRider(key) {
+// A saved rider's single most recent 2026 result — whichever session actually has data,
+// finals or qualifying. A round's qualifying can be live for days before its finals post
+// (e.g. La Thuile Q1/Q2 up on Thursday, finals not until Saturday), so this must not wait
+// for finals to exist before surfacing what's already there. Ordering: latest round date
+// wins; within the same round, finals > Qual 2 > Qual 1 (via the existing SESSION_ORDER,
+// shared with the rider-search venue cards). Returns the canonical results.json name too,
+// so display + tap-through use given-first order.
+function latestResultForRider(key) {
   const rounds = resultsData?.seasons?.['2026']?.rounds || []
   let best = null
   for (const round of rounds) {
-    for (const sk of ['finals-men', 'finals-women']) {
-      const hit = (round.sessions?.[sk] || []).find(r => r.name && riderMatchKey(r.name) === key)
+    for (const sk of Object.keys(round.sessions || {})) {
+      const order = SESSION_ORDER[sk]
+      if (!order) continue   // skip non-elite keys (juniors etc.)
+      const hit = (round.sessions[sk] || []).find(r => r.name && riderMatchKey(r.name) === key)
       if (!hit) continue
       const cand = {
-        name:   hit.name,
-        rank:   hit.rank,
-        status: hit.dnf ? 'DNF' : hit.dsq ? 'DSQ' : hit.dns ? 'DNS' : null,
-        venue:  round.venue,
-        date:   round.date || '',
+        name:       hit.name,
+        rank:       hit.rank,
+        status:     hit.dnf ? 'DNF' : hit.dsq ? 'DSQ' : hit.dns ? 'DNS' : null,
+        venue:      round.venue,
+        date:       round.date || '',
+        isFinals:   sk.startsWith('finals'),
+        sessionLbl: sessionLabel(sk),
+        order,
       }
-      if (!best || cand.date > best.date) best = cand
+      if (!best || cand.date > best.date || (cand.date === best.date && cand.order > best.order)) {
+        best = cand
+      }
     }
   }
   return best
@@ -2600,16 +2617,22 @@ function renderMyRidersFeed() {
     : ''
 
   const cards = saved.map(r => {
-    const latest = latestFinalsForRider(riderMatchKey(r.name))
+    const latest = latestResultForRider(riderMatchKey(r.name))
     const display = latest?.name || r.name   // canonical given-first name when we have a result
     let resultHtml
     if (!latest) {
       resultHtml = `<div class="mrf-none">No 2026 result yet</div>`
-    } else if (latest.status) {
-      resultHtml = `<div class="mrf-result"><span class="mrf-badge">${latest.status}</span><span class="mrf-venue">${escHtml(latest.venue)}</span></div>`
     } else {
-      const cls = latest.rank === 1 ? ' p1' : latest.rank <= 3 ? ' podium' : ''
-      resultHtml = `<div class="mrf-result"><span class="mrf-rank${cls}">P${latest.rank}</span><span class="mrf-venue">${escHtml(latest.venue)}</span></div>`
+      // Tag qualifying results ("Qual 1"/"Qual 2") so they're never mistaken for a finals
+      // podium; finals stay untagged (unchanged from before). A qual P1 gets the podium
+      // (silver) treatment, not the acid "won it" color — that's reserved for a finals win.
+      const tag = latest.isFinals ? '' : `<span class="mrf-session-tag">${escHtml(latest.sessionLbl)}</span>`
+      if (latest.status) {
+        resultHtml = `<div class="mrf-result">${tag}<span class="mrf-badge">${latest.status}</span><span class="mrf-venue">${escHtml(latest.venue)}</span></div>`
+      } else {
+        const cls = (latest.isFinals && latest.rank === 1) ? ' p1' : (latest.rank <= 3 ? ' podium' : '')
+        resultHtml = `<div class="mrf-result">${tag}<span class="mrf-rank${cls}">P${latest.rank}</span><span class="mrf-venue">${escHtml(latest.venue)}</span></div>`
+      }
     }
     const nm = String(display).replace(/"/g, '&quot;')
     return `<div class="mrf-card" data-name="${nm}" onclick="goToRiderHistory(this.dataset.name)">

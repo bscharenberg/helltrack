@@ -68,12 +68,31 @@
 
 ### My Riders results feed (2026-07-03)
 Retention play — turns the saved-riders feature into a personal reason to return. A "Your
-Riders" strip at the top of the feed shows each followed rider's latest 2026 finals result
-(rank with podium/DNF styling) + the next race date ("Next · La Thuile · Jul 5"); tapping a
-card deep-links to that rider's full history in Results search. Only renders for users who
-follow riders (no clutter otherwise). `results.json` is lazy-loaded (promise-cached, shared
-with the Results tab) so the feed stays cheap for everyone else — this is the main reason
-**#46** (split results.json) is worth doing: it makes this strip's data load ~KB not 8.2 MB.
+Riders" strip at the top of the feed shows each followed rider's latest 2026 result + the
+next race date ("Next · La Thuile · Jul 5"); tapping a card deep-links to that rider's full
+history in Results search. Only renders for users who follow riders (no clutter otherwise).
+`results.json` is lazy-loaded (promise-cached, shared with the Results tab) so the feed
+stays cheap for everyone else — this is the main reason **#46** (split results.json) is
+worth doing: it makes this strip's data load ~KB not 8.2 MB.
+
+**Freshness fix (2026-07-03, same day):** originally only checked `finals-*` sessions, so a
+round's live qualifying was ignored until its finals posted — a rider's card kept showing
+their last completed round's finals days after a newer round's quals were already up (caught
+live: La Thuile Q1/Q2 posted 07-03, finals not until 07-05; Finn Iles's card was stuck on his
+old Lenzerheide finals result instead of his fresh La Thuile Q1 P17). `latestResultForRider()`
+now scans every session in every round and picks the single most recent one — latest round
+date wins, and within a round finals > Qual 2 > Qual 1 (reuses the existing `SESSION_ORDER`).
+Qualifying results get a small "Qual 1"/"Qual 2" tag and podium (silver) coloring, never the
+acid "P1" treatment reserved for an actual finals win. SW cache bumped v9→v10.
+
+**Related gap, not yet fixed:** `fetch-results.yml`'s date-gate assumed La Thuile qualifying
+would post 07-04, but it posted 07-03 — a day earlier than the workflow's case-statement
+expected, so neither the targeted nor the 30-min-poll path fetched it automatically; pulled
+in manually via `results-fetcher.mjs la-thuile-2026` this session. The case-statement's
+qual/finals date pairs are a guess at the UCI's actual per-round schedule and can be off by a
+day. Worth hardening later (e.g. widen the date-gate window, or stop gating on assumed dates
+entirely and let the 30-min poll always attempt the nearest upcoming round) — not done here
+since it's a CI/CD schedule change and wants a deliberate look, not a same-session patch.
 `index.html` + SW cache bump v6→v7. Followed riders are set via the existing Riders-tab bookmark.
 
 ### Codebase audit pass (2026-07-02)
