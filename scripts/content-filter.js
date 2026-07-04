@@ -118,7 +118,13 @@ const EXCLUDE_KEYWORDS = [
   // tag is event-specific (unlike the generic boilerplate above) so it's safe to
   // check against full text. "elite xco"/"elite xcc" avoids the unicode
   // apostrophe in "Women's"/"Men's" in UCI descriptions.
-  { terms: ['elite xco', 'elite xcc'], weight: 15 },
+  // 2026-07-05: UCI's caption template changed to insert "UCI" into the tag
+  // ("...Elite UCI XCC World Cup" instead of "...Elite XCC World Cup"), which
+  // silently broke the exact-phrase match above — 6 La Thuile XCC shorts leaked
+  // through at score 10 (right at the untrusted-channel threshold). Added the
+  // "uci" variant rather than replacing the original, in case some videos still
+  // use the old template or the wording shifts again.
+  { terms: ['elite xco', 'elite xcc', 'elite uci xco', 'elite uci xcc'], weight: 15 },
   { terms: ['mtbws highlights'], weight: 8, titleOnly: true },
 
   // Enduro — out of scope for Helltrack (DH only)
@@ -142,7 +148,8 @@ const EXCLUDE_KEYWORDS = [
             'ondrej cink', 'ondřej cink', 'jordan sarrou', 'victor koretzky',
             'pauline ferrand prevot', 'loana lecomte', 'paul schehl',
             'alessandra keller', 'savilia blunk', 'luca martin',
-            'mathis guay'], weight: 10, titleOnly: true },
+            'mathis guay', 'sina frei', 'jenny rissveds', 'evie richards',
+            'adrien boichis', 'charlie aldridge'], weight: 10, titleOnly: true },
 
   // Freeride / slopestyle — not DH world cup
   { terms: ['crankworx slopestyle', 'rampage', 'redbull rampage',

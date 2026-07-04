@@ -160,6 +160,13 @@
 - **Remaining gap**: a handful of completely generic, nameless caption Shorts ("DRAMA! 😱", "WHAT A RACE 😮‍💨") passed through unverified — there is no text signal of any kind to check. Left as-is; revisit only if one is confirmed to be XCO.
 - **Lesson**: this list will need ongoing maintenance every season as new XCO/XCC stars come up, especially around shared-venue weekends. When checking a name's discipline, prefer Helltrack's own verified results data over a search engine's AI summary, which can be confidently wrong.
 
+### Race-tag exact-phrase match broke when UCI changed the wording (2026-07-05)
+- **Problem**: 6 La Thuile XCC Shorts leaked into the feed at score 10 — right at the untrusted-channel threshold. Same "rider feature, no discipline text in the title" pattern as above (captions like "A new day, a new chance 👊", "Smiles all round 😄"), so the full-text race-tag exclude from 2026-06-14 should have caught them.
+- **Root cause**: UCI's caption template changed. The race-tag line used to read `"...Elite XCC World Cup"`; it now reads `"...Elite UCI XCC World Cup"` — an inserted "UCI" between "Elite" and the discipline code. The exact-phrase match on `'elite xcc'` no longer appears anywhere in `'elite uci xcc'`, so it silently stopped firing. DH Shorts kept passing regardless because the bare `dhi` include term (weight 4) still matches inside "UCI DHI World Cup" — the exclude side had no equivalent fallback.
+- **Solution**: added `'elite uci xco'` / `'elite uci xcc'` as additional terms on the same exclude rule, alongside the original `'elite xco'`/`'elite xcc'` (kept both rather than replacing, in case the template reverts or some videos still use the old wording). Also added the 5 riders named in the leaked captions to the rider-name exclude list (Sina Frei, Jenny Rissveds, Evie Richards, Adrien Boichis, Charlie Aldridge) as defense-in-depth, in case a future Short about them drops the race-tag line entirely.
+- **Result**: all 6 leaks now score -11; legit DH shorts and `test-filter.js` unaffected.
+- **Lesson**: an exact-phrase match on a third party's caption template is inherently fragile — it will break again the next time UCI tweaks wording, punctuation, or word order. When it does, the fix is additive (add the new phrasing as another term) rather than replacing the old one, since there's no guarantee old and new videos won't coexist.
+
 ## Design Decisions
 
 ### Option A (dark, acid yellow) was the right aesthetic

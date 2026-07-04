@@ -66,6 +66,21 @@
 - watch.json: real broadcaster data (US, Canada, UK, Europe, Australia, New Zealand, Everywhere)
 - directory.json: factory teams, media outlets, podcasts, UCI official links
 
+### XCC leak — UCI race-tag template changed (2026-07-05)
+6 La Thuile XCC Shorts leaked into the feed (scored exactly 10, the untrusted-channel
+threshold) despite having zero discipline text in the title — the giveaway pattern from
+`decisions.md`'s "rider feature Shorts" note. Root cause: UCI's per-video race-tag line
+changed from `"...Elite XCC World Cup"` to `"...Elite UCI XCC World Cup"` (an inserted
+"UCI"), which silently broke the exact-phrase exclude (`'elite xcc'`) added back on
+2026-06-14 for this exact leak pattern. Fixed in `content-filter.js`: added the `'elite uci
+xco'`/`'elite uci xcc'` variants alongside the originals (kept both in case the template
+shifts again or older videos use the old wording). Also added 5 newly-confirmed XCO/XCC
+rider names to the titleOnly name-exclude list as defense-in-depth (Sina Frei, Jenny
+Rissveds, Evie Richards, Adrien Boichis, Charlie Aldridge) — confirmed via their own race-tag
+line in the same leaked captions, not assumption. Verified against `test-filter.js` (no
+regressions) and a live cache rebuild (0 of 20 shorts match any race-tag term afterward).
+See `docs/decisions.md` for the full XCO-filtering history this extends.
+
 ### My Riders results feed (2026-07-03)
 Retention play — turns the saved-riders feature into a personal reason to return. A "Your
 Riders" strip at the top of the feed shows each followed rider's latest 2026 result + the
