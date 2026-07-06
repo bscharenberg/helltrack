@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-06T16:56:02.123Z",
-  "totalItems": 160,
+  "builtAt": "2026-07-06T19:01:36.889Z",
+  "totalItems": 161,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "lVS16KfbLkU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "MTBWS TOP 6 MOMENTS 🇮🇹 | 2026 La Thuile, Italy | WHOOP UCI MTB World Series",
+          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/lVS16KfbLkU/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-06T17:35:19Z",
+          "url": "https://www.youtube.com/watch?v=lVS16KfbLkU",
+          "isShort": false,
+          "score": 10,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/antoine-rogge-shares-injury-update-after-massive-slam-in-q1-at-the-la-thuile-dh-world-cup.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -374,7 +391,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Photo Epic: Wild Scenes from Finals Day at the 2026 La Thuile DH World Cup",
-          "description": "The 2026 La Thuile downhill World Cup did not disappoint.( Photos: 88, Comments: 13 )",
+          "description": "The 2026 La Thuile downhill World Cup did not disappoint.( Photos: 88, Comments: 15 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29958247/p2pb29958247.jpg",
           "publishedAt": "2026-07-05T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/photo-epic-wild-scenes-from-finals-day-at-the-2026-la-thuile-dh-world-cup.html?trk=rss",
@@ -659,23 +676,6 @@
           "url": "https://www.youtube.com/watch?v=58lT780ZduU",
           "isShort": false,
           "score": 10,
-          "category": "race-runs"
-        },
-        {
-          "id": "fCDqTobgPTQ",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Race Week in La Thuile with Jackson Goldstone, Jonty Williamson and Frameworks  – The Setup | FOX",
-          "description": "We’ve made it to the halfway point..\n \nIt’s Round 5 of the UCI Downhill World Cup, and if the first four rounds have taught us anything, it’s that this year’s field is deeper than ever and winning has never been harder. \n \nAnna Newkirk claimed her first career World Cup victory in Lenzerheide, Lina Frener has won the last two Junior Women’s rounds, and Jonty Williamson has been untouchable in Junior Men, taking victory at every round so far. Jackson Goldstone also looks to be hitting his stride again after finishing just 0.1 seconds shy of the podium last round.\n \nLa Thuile is no stranger to world-class bike racing. Tucked into the Italian Alps beneath the shadow of Mont Blanc, the valley has been a staple of the Enduro World Series for years, but it's still relatively new to the Downhill World Cup calendar.\n \nThis week, we’re checking in with riders from across the pits to hear how their seasons have unfolded so far, what they’re expecting from one of the calendar’s most demanding tracks, and how they’re preparing for race day. As always, FOX Factory is on the ground, working with its athletes to help them perform at their best when it matters most.\n \n#RIDEFOX #FOX #THESETUP #LATHUILE",
-          "thumbnail": "https://i.ytimg.com/vi/fCDqTobgPTQ/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-03T20:57:53Z",
-          "url": "https://www.youtube.com/watch?v=fCDqTobgPTQ",
-          "isShort": false,
-          "score": 27,
           "category": "race-runs"
         }
       ]
@@ -995,7 +995,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Sleeper Shreddit from the 2026 La Thuile DH World Cup",
-          "description": "The perfect way to end another action-packed World Cup weekend.( Comments: 18 )",
+          "description": "The perfect way to end another action-packed World Cup weekend.( Comments: 19 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29961673/p2pb29961673.jpg",
           "publishedAt": "2026-07-05T11:49:00.000Z",
           "url": "https://www.pinkbike.com/news/video-sleeper-shreddit-from-the-2026-la-thuile-dh-world-cup.html?trk=rss",
@@ -1326,7 +1326,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Asa Vermette's 2nd Place POV from the 2026 La Thuile DH World Cup",
-          "description": "Join Asa Vermette for the second-fastest run of the week in La Thuile.( Comments: 3 )",
+          "description": "Join Asa Vermette for the second-fastest run of the week in La Thuile.( Comments: 9 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29964842/p2pb29964842.jpg",
           "publishedAt": "2026-07-06T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/video-asa-vermettes-2nd-place-pov-from-the-2026-la-thuile-dh-world-cup.html?trk=rss",
@@ -1341,7 +1341,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Average Rider VS La Thuile's Extra Dusty &amp; Destroyed 2026 World Cup Track.",
-          "description": "Join Charlie Coquillard and Jackson Connelly for a lap of the 2026 La Thuile downhill World Cup course.( Comments: 12 )",
+          "description": "Join Charlie Coquillard and Jackson Connelly for a lap of the 2026 La Thuile downhill World Cup course.( Comments: 22 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29960055/p2pb29960055.jpg",
           "publishedAt": "2026-07-05T11:47:00.000Z",
           "url": "https://www.pinkbike.com/news/video-average-rider-vs-la-thuiles-extra-dusty-and-destroyed-2026-world-cup-track.html?trk=rss",
