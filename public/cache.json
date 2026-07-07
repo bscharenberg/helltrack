@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-07T20:52:44.772Z",
-  "totalItems": 163,
+  "builtAt": "2026-07-07T22:16:49.626Z",
+  "totalItems": 164,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1005,7 +1005,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Must Watch: Asa Vermette's Full Throttle Schladming 'Sound of Speed' Edit",
-          "description": "Shot and edited by Sleeper Co, featuring a high-speed cameo by Finn Iles, and some Schladming destruction, what&#039;s not to love.( Comments: 30 )",
+          "description": "Shot and edited by Sleeper Co, featuring a high-speed cameo by Finn Iles, and some Schladming destruction, what&#039;s not to love.( Comments: 33 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29968893/p2pb29968893.jpg",
           "publishedAt": "2026-07-07T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/must-watch-asa-vermettes-full-throttle-schladming-sound-of-speed-edit.html?trk=rss",
@@ -1020,7 +1020,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Rob Warner's Unfiltered Reactions to the La Thuile World Cup",
-          "description": "Some of the highlights from Rob Warner&#039;s Race Companion watch-a-long party for the La Thuile Downhill World Cup.( Comments: 10 )",
+          "description": "Some of the highlights from Rob Warner&#039;s Race Companion watch-a-long party for the La Thuile Downhill World Cup.( Comments: 12 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29969222/p2pb29969222.jpg",
           "publishedAt": "2026-07-07T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/rob-warners-unfiltered-reactions-to-the-la-thuile-world-cup2.html?trk=rss",
@@ -1107,7 +1107,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Bike Check: Gracey Hemstreet's Norco Team DH",
-          "description": "An adjustable idler pulley, cassette hacks and a switch to air shocks for the Canadian&#039;s prototype rig.( Photos: 12, Comments: 17 )",
+          "description": "An adjustable idler pulley, cassette hacks and a switch to air shocks for the Canadian&#039;s prototype rig.( Photos: 12, Comments: 18 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29968154/p2pb29968154.jpg",
           "publishedAt": "2026-07-07T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/bike-check-gracey-hemstreets-norco-team-dh.html?trk=rss",
@@ -1377,6 +1377,23 @@
       "label": "News",
       "items": [
         {
+          "id": "OW6ABkjKpjw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
+          "channelName": "GoPro Bike",
+          "title": "GoPro: The future is strong - Asa vs Jackson in La Thuile - 2026 UCI DH MTB World Cup",
+          "description": "The racing just keeps getting better and better.  Asa Vermette stays strong and consistent through the season while Jackson Goldstone looks to be returning to the form we all know him for.  Jump on board the 2nd and 3rd place runs from Round 5 of the UCI MTB World Cup in La Thuile, Italy.\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
+          "thumbnail": "https://i.ytimg.com/vi/OW6ABkjKpjw/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-07T22:16:07Z",
+          "url": "https://www.youtube.com/watch?v=OW6ABkjKpjw",
+          "isShort": false,
+          "score": 16,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/2026-andorra-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -1413,7 +1430,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Asa Vermette's 2nd Place POV from the 2026 La Thuile DH World Cup",
-          "description": "Join Asa Vermette for the second-fastest run of the week in La Thuile.( Comments: 35 )",
+          "description": "Join Asa Vermette for the second-fastest run of the week in La Thuile.( Comments: 36 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29964842/p2pb29964842.jpg",
           "publishedAt": "2026-07-06T11:47:00.000Z",
           "url": "https://www.pinkbike.com/news/video-asa-vermettes-2nd-place-pov-from-the-2026-la-thuile-dh-world-cup.html?trk=rss",
