@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-07-11T20:59:03.584Z",
+  "builtAt": "2026-07-11T22:00:02.256Z",
   "totalItems": 190,
   "categories": {
     "shorts": {
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "uRW4cBdotWs",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "MTBWS FULL RACE 🇦🇩 Men's Junior DHI | 2026 Pal Arinsal",
+          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/uRW4cBdotWs/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-11T21:03:29Z",
+          "url": "https://www.youtube.com/watch?v=uRW4cBdotWs",
+          "isShort": false,
+          "score": 20,
+          "category": "race-runs"
+        },
+        {
           "id": "JzlmFhWUjGA",
           "type": "video",
           "source": "youtube",
@@ -427,7 +444,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Results: Elite Finals at the Andorra DH World Cup",
-          "description": "The high-speed Andorra World Cup course delivered wild racing across the elite finals.( Photos: 5, Comments: 152 )",
+          "description": "The high-speed Andorra World Cup course delivered wild racing across the elite finals.( Photos: 5, Comments: 159 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-07-11T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/results-elite-finals-at-the-2026-andorra-dh-world-cup.html?trk=rss",
@@ -442,7 +459,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Elite Women's Winning Run from the 2026 Andorra DH World Cup",
-          "description": "Jump on board with this week&#039;s elite women&#039;s race winner in Andorra.( Comments: 1 )",
+          "description": "Jump on board with this week&#039;s elite women&#039;s race winner in Andorra.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29986305/p2pb29986305.jpg",
           "publishedAt": "2026-07-11T11:57:00.000Z",
           "url": "https://www.pinkbike.com/news/video-elite-womens-winning-run-from-the-2026-andorra-dh-world-cup.html?trk=rss",
@@ -457,7 +474,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Tech Randoms II: Andorra DH World Cup 2026",
-          "description": "A final lap of the downhill pits as riders and teams prepare for finals at the 2026 Andorra downhill World Cup.( Photos: 36, Comments: 20 )",
+          "description": "A final lap of the downhill pits as riders and teams prepare for finals at the 2026 Andorra downhill World Cup.( Photos: 36, Comments: 22 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29985562/p2pb29985562.jpg",
           "publishedAt": "2026-07-11T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/tech-randoms-ii-andorra-dh-world-cup-2026.html?trk=rss",
@@ -602,7 +619,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Andorra DH World Cup Elite Q1 Qualifying Results",
-          "description": "The fast, unpredictable Andorra track created a dramatic first qualifying session for the elite racers.( Photos: 5, Comments: 78 )",
+          "description": "The fast, unpredictable Andorra track created a dramatic first qualifying session for the elite racers.( Photos: 5, Comments: 79 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-07-10T11:40:00.000Z",
           "url": "https://www.pinkbike.com/news/results-elite-q1-qualifying-at-the-2026-andorra-dh-world-cup.html?trk=rss",
@@ -657,23 +674,6 @@
           "url": "https://www.youtube.com/watch?v=x5FRVCnkyH0",
           "isShort": false,
           "score": 24,
-          "category": "race-runs"
-        },
-        {
-          "id": "lVS16KfbLkU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "MTBWS TOP 6 MOMENTS 🇮🇹 | 2026 La Thuile, Italy | WHOOP UCI MTB World Series",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/lVS16KfbLkU/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-06T17:35:19Z",
-          "url": "https://www.youtube.com/watch?v=lVS16KfbLkU",
-          "isShort": false,
-          "score": 10,
           "category": "race-runs"
         }
       ]
@@ -736,7 +736,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Inside the Tape: Riders Blew Up The Track! It Fought Back - Andorra DH World Cup",
-          "description": "Ben Cathro and Innes Graham brave the incredibly dry and brutal slopes of Andorra to break down the intense lines, heavy crashes, and shifting strategies at Round 6.( Photos: 1, Comments: 12 )",
+          "description": "Ben Cathro and Innes Graham brave the incredibly dry and brutal slopes of Andorra to break down the intense lines, heavy crashes, and shifting strategies at Round 6.( Photos: 1, Comments: 13 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29983429/p2pb29983429.jpg",
           "publishedAt": "2026-07-10T11:48:00.000Z",
           "url": "https://www.pinkbike.com/news/inside-the-tape-riders-blew-up-the-track-it-fought-back-andorra-dh-world-cup.html?trk=rss",
@@ -944,7 +944,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Race Highlights: 2026 Andorra DH World Cup",
-          "description": "Catch up on the amazing racing from the sixth round of the 2026 downhill World Cup series.( Photos: 1, Comments: 5 )",
+          "description": "Catch up on the amazing racing from the sixth round of the 2026 downhill World Cup series.( Photos: 1, Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29980010/p2pb29980010.jpg",
           "publishedAt": "2026-07-11T11:55:00.000Z",
           "url": "https://www.pinkbike.com/news/race-highlights-2026-andorra-dh-world-cup.html?trk=rss",
