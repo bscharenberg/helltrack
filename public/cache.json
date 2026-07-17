@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-17T14:48:49.856Z",
-  "totalItems": 154,
+  "builtAt": "2026-07-17T16:20:53.497Z",
+  "totalItems": 153,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -724,7 +724,7 @@
           "title": "Video: WynTV Finding the Stars of the Future at the iXS Cup in Les Orres",
           "description": "The kids are alright. Wyn talks with some speedy junior racers at Les Orres.( Comments: 3 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30002487/p2pb30002487.jpg",
-          "publishedAt": "2026-07-14T11:33:00.000Z",
+          "publishedAt": "2026-07-14T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-finding-the-stars-of-the-future-at-the-ixs-cup-in-les-orres.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1166,23 +1166,6 @@
           "isShort": false,
           "score": 12,
           "category": "paddock"
-        },
-        {
-          "id": "IwdvYWVjbMM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "PIT BITS - Lenzerheide World Cup DH",
-          "description": "World Cup Downhill round 4 takes place in Lenzerheide, Switzerland this weekend. John Lawlor is there and he combed the pits to talk about downhill bike setup, spoke tension, tire choice and tools with the pro racers and factory mechanics.\n\n0:00 - RockShox Pits\n1:38 - Crestline Speedshop\n2:30 - Troy Brosnan\n3:38 - Pivot Factory Racing Spoke Tension\n4:18 - Norco Factory Racing Tire Selection\n5:13 - Trek Factory Racing Wheel Build\n6:34 - Mondraker Factory Racing Frame Stiffness\n7:49 - Specialized Factory Racing - Finn has 2 Bikes\n8:51 - Scott Factory Racing Tools\n10:50 - Santa Cruz Syndicate Bike Setup\n12:12 - Henri Kiefer\n13:11 - Canyon's Different Carbon Layups and Metal Plates for Frame Stiffness",
-          "thumbnail": "https://i.ytimg.com/vi/IwdvYWVjbMM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-17T15:53:07Z",
-          "url": "https://www.youtube.com/watch?v=IwdvYWVjbMM",
-          "isShort": false,
-          "score": 21,
-          "category": "paddock"
         }
       ]
     },
@@ -1197,9 +1180,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Eleonora Farina Announces Departure From MS Racing",
-          "description": "Eleonora will be racing as a privateer for the rest of the World Cup DH season.( Photos: 1, Comments: 30 )",
+          "description": "Eleonora will be racing as a privateer for the rest of the World Cup DH season.( Photos: 1, Comments: 32 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29788123/p2pb29788123.jpg",
-          "publishedAt": "2026-07-16T11:53:00.000Z",
+          "publishedAt": "2026-07-16T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/eleonora-farina-announces-departure-from-ms-racing.html?trk=rss",
           "categories": [],
           "score": 13,
