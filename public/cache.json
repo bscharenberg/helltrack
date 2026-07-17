@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-17T21:59:21.242Z",
-  "totalItems": 149,
+  "builtAt": "2026-07-17T23:00:18.866Z",
+  "totalItems": 150,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "FuZ5kLYs5YU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
+          "channelName": "GoPro Bike",
+          "title": "GoPro: These races are fast! Reece Wilson (2nd) vs Asa Vermette (4th) - Andorra - UCI Downhill MTB",
+          "description": "Reece Wilson is back up on the podium with an outstanding performance but holy moly the times are tight these days. Asa Vermette pulled time back in the final sector almost taking the podium but just getting beat out to take a 4th place finish. \n\nJump on board the GoPro POV to check all the action and compare runs. \n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
+          "thumbnail": "https://i.ytimg.com/vi/FuZ5kLYs5YU/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-17T22:21:06Z",
+          "url": "https://www.youtube.com/watch?v=FuZ5kLYs5YU",
+          "isShort": false,
+          "score": 15,
+          "category": "race-runs"
+        },
+        {
           "id": "ivUmmfRwW-E",
           "type": "video",
           "source": "youtube",
@@ -673,23 +690,6 @@
           "url": "https://www.youtube.com/watch?v=fRk85gsjsqo",
           "isShort": false,
           "score": 15,
-          "category": "race-runs"
-        },
-        {
-          "id": "_-Pt4x_R0IY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Valentina Höll winning run - La Thuile Italy - 2026 UCI MTB DH World Series",
-          "description": "„I AM SORRY“ Valentina Höll wins in La Thuile and apologizes to her team mate Lisa, only 0,2 seconds in between the first and second in the women elite final!\n \n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/_-Pt4x_R0IY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-04T17:56:59Z",
-          "url": "https://www.youtube.com/watch?v=_-Pt4x_R0IY",
-          "isShort": false,
-          "score": 10,
           "category": "race-runs"
         }
       ]
