@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-18T13:37:33.262Z",
-  "totalItems": 150,
+  "builtAt": "2026-07-18T15:01:51.648Z",
+  "totalItems": 151,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1125,6 +1125,21 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-head-to-head-povs-from-asa-vermette-and-reece-wilson-at-the-andorra-dh-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Head-to-Head POVs from Asa Vermette &amp; Reece Wilson at the Andorra DH World Cup",
+          "description": "Compare the fast laps of Reece Wilson and Asa Vermette at last weekend&#039;s Andorra downhill World Cup.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30017387/p2pb30017387.jpg",
+          "publishedAt": "2026-07-18T11:58:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-head-to-head-povs-from-asa-vermette-and-reece-wilson-at-the-andorra-dh-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 15,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/eleonora-farina-announces-departure-from-ms-racing.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -1133,7 +1148,7 @@
           "title": "Eleonora Farina Announces Departure From MS Racing",
           "description": "Eleonora will be racing as a privateer for the rest of the World Cup DH season.( Photos: 1, Comments: 36 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29788123/p2pb29788123.jpg",
-          "publishedAt": "2026-07-16T11:43:00.000Z",
+          "publishedAt": "2026-07-16T11:40:00.000Z",
           "url": "https://www.pinkbike.com/news/eleonora-farina-announces-departure-from-ms-racing.html?trk=rss",
           "categories": [],
           "score": 13,
