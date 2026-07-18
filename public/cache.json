@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-18T15:01:51.648Z",
-  "totalItems": 151,
+  "builtAt": "2026-07-18T17:04:04.597Z",
+  "totalItems": 150,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1146,7 +1146,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Eleonora Farina Announces Departure From MS Racing",
-          "description": "Eleonora will be racing as a privateer for the rest of the World Cup DH season.( Photos: 1, Comments: 36 )",
+          "description": "Eleonora will be racing as a privateer for the rest of the World Cup DH season.( Photos: 1, Comments: 37 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29788123/p2pb29788123.jpg",
           "publishedAt": "2026-07-16T11:40:00.000Z",
           "url": "https://www.pinkbike.com/news/eleonora-farina-announces-departure-from-ms-racing.html?trk=rss",
@@ -1220,23 +1220,6 @@
           "url": "https://www.youtube.com/watch?v=A5Z0bCe7Plo",
           "isShort": false,
           "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "VhSul7ht918",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Dakotah Norton getting dialed in - Leogang - '26 UCI DH MTB World Series",
-          "description": "Dakotah Norton is putting the laps in getting dialed for the 4th stop of the 2026 UCI DH MTB World Series round 10 in Lenzerheide.\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/VhSul7ht918/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-18T15:47:27Z",
-          "url": "https://www.youtube.com/watch?v=VhSul7ht918",
-          "isShort": false,
-          "score": 14,
           "category": "news"
         }
       ]
