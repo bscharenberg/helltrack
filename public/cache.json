@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-18T11:10:33.630Z",
-  "totalItems": 151,
+  "builtAt": "2026-07-18T13:37:33.262Z",
+  "totalItems": 150,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1117,23 +1117,6 @@
           "isShort": false,
           "score": 15,
           "category": "paddock"
-        },
-        {
-          "id": "PEn6H5TVUCc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: MISSION 1 PRO Course Preview with Jackson Goldstone - Lenzerheide - '26 UCI DH MTB WC",
-          "description": "We are back in beautiful and sunny Lenzerheide! the Track looks good and even better on the new GoPro MISSION 1 PRO!  Enjoy the 2026 Lenzerheide course preview with @jacksongoldstone6453 \n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/PEn6H5TVUCc/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-18T11:35:57Z",
-          "url": "https://www.youtube.com/watch?v=PEn6H5TVUCc",
-          "isShort": false,
-          "score": 17,
-          "category": "paddock"
         }
       ]
     },
@@ -1150,7 +1133,7 @@
           "title": "Eleonora Farina Announces Departure From MS Racing",
           "description": "Eleonora will be racing as a privateer for the rest of the World Cup DH season.( Photos: 1, Comments: 36 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29788123/p2pb29788123.jpg",
-          "publishedAt": "2026-07-16T11:44:00.000Z",
+          "publishedAt": "2026-07-16T11:43:00.000Z",
           "url": "https://www.pinkbike.com/news/eleonora-farina-announces-departure-from-ms-racing.html?trk=rss",
           "categories": [],
           "score": 13,
