@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-19T17:06:23.160Z",
-  "totalItems": 144,
+  "builtAt": "2026-07-19T19:15:56.286Z",
+  "totalItems": 142,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1186,23 +1186,6 @@
           "url": "https://www.youtube.com/watch?v=OW6ABkjKpjw",
           "isShort": false,
           "score": 16,
-          "category": "news"
-        },
-        {
-          "id": "A5Z0bCe7Plo",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "LENZERHEIDE IS STILL ON !",
-          "description": "Just because im down and out doesn't mean the team is! Come along for an action packed dually day!\n\nThanks for all the support and messages, it means a lot and we will be back!\n\nShot on #sony & #dji \n\n#dji #mtb #bksport #downhill #mountainbike #pivot #mtblife #shimano #fox #darco #france #Loudenvielle #worldcup",
-          "thumbnail": "https://i.ytimg.com/vi/A5Z0bCe7Plo/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-19T18:36:18Z",
-          "url": "https://www.youtube.com/watch?v=A5Z0bCe7Plo",
-          "isShort": false,
-          "score": 7,
           "category": "news"
         }
       ]
