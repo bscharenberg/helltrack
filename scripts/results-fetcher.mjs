@@ -28,7 +28,7 @@ const CALENDAR_2026 = [
   { slug: 'leogang-2026',             uciVenue: 'leogang',         name: 'Leogang',        date: '2026-06-13', round: 3 },
   { slug: 'lenzerheide-2026',         uciVenue: 'lenzerheide',     name: 'Lenzerheide',    date: '2026-06-21', round: 4 },
   { slug: 'la-thuile-2026',           uciVenue: 'la-thuile',       name: 'La Thuile',      date: '2026-07-05', round: 5 },
-  { slug: 'pal-arinsal-2026',         uciVenue: 'pal-arinsal',     name: 'Pal Arinsal',    date: '2026-07-12', round: 6 },
+  { slug: 'pal-arinsal-2026',         uciVenue: 'pal-arinsal-andorra', name: 'Pal Arinsal', date: '2026-07-12', round: 6 },
   { slug: 'les-gets-2026',            uciVenue: 'les-gets',        name: 'Les Gets',       date: '2026-08-23', round: 7 },
   { slug: 'val-di-sole-2026',         uciVenue: 'val-di-sole',     name: 'Val di Sole',    date: '2026-08-30', round: 8 },
   { slug: 'whistler-2026',            uciVenue: 'whistler',        name: 'Whistler',       date: '2026-09-27', round: 9 },
