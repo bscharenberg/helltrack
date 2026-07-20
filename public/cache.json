@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-19T22:04:06.098Z",
-  "totalItems": 139,
+  "builtAt": "2026-07-20T00:03:07.332Z",
+  "totalItems": 137,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1082,23 +1082,6 @@
           "url": "https://www.youtube.com/watch?v=D6dVxVffoPA",
           "isShort": false,
           "score": 17,
-          "category": "paddock"
-        },
-        {
-          "id": "ojP-vXvAEyU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Fast and Loose in Lenzerheide with Dakotah Norton and the SCOTT Factory DH Team – The Setup | FOX",
-          "description": "After the wet and wild conditions in Leogang, Lenzerheide rolls in a bit more predictable on paper, but World Cup race weekends never really are.\n\nThis week we’re with the SCOTT Factory DH Team in the pits, seeing how everything comes together when it’s time to dial the bikes in. From our side at FOX, We're checking in with the riders and mechanics to fine tune suspension setup so they’ve got grip, control and confidence when the track gets fast and unforgiving.\n\nJust 186km from SCOTT HQ, this one always feels a bit like a home race for the brand, which adds its own energy to the weekend. Remi couldn’t make it this time, so Scotty Laughland steps in to fill the gap, which feels pretty fitting.\n\nHost: Scotty Laughland\nVideo: Brooks Curran\n\n#RideFox #FOX #TheSetup #Lenzerheide",
-          "thumbnail": "https://i.ytimg.com/vi/ojP-vXvAEyU/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-19T23:30:19Z",
-          "url": "https://www.youtube.com/watch?v=ojP-vXvAEyU",
-          "isShort": false,
-          "score": 15,
           "category": "paddock"
         }
       ]
