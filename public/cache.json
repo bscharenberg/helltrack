@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-21T15:09:07.311Z",
-  "totalItems": 123,
+  "builtAt": "2026-07-21T17:36:31.604Z",
+  "totalItems": 121,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -890,23 +890,6 @@
           "isShort": false,
           "score": 7,
           "category": "films"
-        },
-        {
-          "id": "NyQEHyKKrbU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCuuLS5B9JraqXiKfYPIBNEw",
-          "channelName": "Sleeper Collective",
-          "title": "BEST DH MOMENTS FROM LENZERHEIDE WORLD CUP | SLEEPER SHREDDIT",
-          "description": "https://sleepermerch.com/",
-          "thumbnail": "https://i.ytimg.com/vi/NyQEHyKKrbU/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-21T17:10:07Z",
-          "url": "https://www.youtube.com/watch?v=NyQEHyKKrbU",
-          "isShort": false,
-          "score": 9,
-          "category": "films"
         }
       ]
     },
@@ -1065,7 +1048,7 @@
           "title": "Video: Vali Höll &amp; Gracey Hemstreet's Battle for 1st at the Andorra DH World Cup",
           "description": "Comparing the two fastest women&#039;s runs at the 2026 Andorra downhill World Cup.( Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30027816/p2pb30027816.jpg",
-          "publishedAt": "2026-07-20T11:57:00.000Z",
+          "publishedAt": "2026-07-20T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/video-vali-holl-and-gracey-hemstreets-battle-for-1st-at-the-andorra-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 15,
@@ -1080,7 +1063,7 @@
           "title": "Video: Head-to-Head POVs from Asa Vermette &amp; Reece Wilson at the Andorra DH World Cup",
           "description": "Compare the fast laps of Reece Wilson and Asa Vermette at last weekend&#039;s Andorra downhill World Cup.( Comments: 8 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30017387/p2pb30017387.jpg",
-          "publishedAt": "2026-07-18T11:39:00.000Z",
+          "publishedAt": "2026-07-18T11:34:00.000Z",
           "url": "https://www.pinkbike.com/news/video-head-to-head-povs-from-asa-vermette-and-reece-wilson-at-the-andorra-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 15,
