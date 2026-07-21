@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-07-21T21:18:15.725Z",
-  "totalItems": 122,
+  "builtAt": "2026-07-21T23:03:32.980Z",
+  "totalItems": 123,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "Q38G9V_x9gA",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Bernard Kerr walks us through his new FOX 40.🔥",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/Q38G9V_x9gA/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-21T21:42:14Z",
+          "url": "https://www.youtube.com/watch?v=Q38G9V_x9gA",
+          "isShort": true,
+          "score": 9,
+          "category": "shorts"
+        },
         {
           "id": "3azILA1bmv8",
           "type": "video",
@@ -327,23 +344,6 @@
           "url": "https://www.youtube.com/watch?v=gT3HCb3MdOk",
           "isShort": true,
           "score": 24,
-          "category": "shorts"
-        },
-        {
-          "id": "Tzo0nMuebmM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Take a bow 👏J",
-          "description": "Take a bow 👏\n\nJordan Williams throws down a blistering run to become the new rider to beat in Pal Arinsal 🤯\n\n📍Pal Arinsal, Andorra 🏁 Elite Men’s UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/Tzo0nMuebmM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-11T13:14:02Z",
-          "url": "https://www.youtube.com/watch?v=Tzo0nMuebmM",
-          "isShort": true,
-          "score": 21,
           "category": "shorts"
         }
       ]
@@ -1065,7 +1065,7 @@
           "title": "Video: Vali Höll &amp; Gracey Hemstreet's Battle for 1st at the Andorra DH World Cup",
           "description": "Comparing the two fastest women&#039;s runs at the 2026 Andorra downhill World Cup.( Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30027816/p2pb30027816.jpg",
-          "publishedAt": "2026-07-20T11:51:00.000Z",
+          "publishedAt": "2026-07-20T11:50:00.000Z",
           "url": "https://www.pinkbike.com/news/video-vali-holl-and-gracey-hemstreets-battle-for-1st-at-the-andorra-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 15,
@@ -1080,7 +1080,7 @@
           "title": "Video: Head-to-Head POVs from Asa Vermette &amp; Reece Wilson at the Andorra DH World Cup",
           "description": "Compare the fast laps of Reece Wilson and Asa Vermette at last weekend&#039;s Andorra downhill World Cup.( Comments: 8 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30017387/p2pb30017387.jpg",
-          "publishedAt": "2026-07-18T11:33:00.000Z",
+          "publishedAt": "2026-07-18T11:32:00.000Z",
           "url": "https://www.pinkbike.com/news/video-head-to-head-povs-from-asa-vermette-and-reece-wilson-at-the-andorra-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 15,
