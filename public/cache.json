@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-21T17:36:31.604Z",
-  "totalItems": 121,
+  "builtAt": "2026-07-21T19:41:41.337Z",
+  "totalItems": 122,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -897,6 +897,23 @@
       "id": "paddock",
       "label": "Pits",
       "items": [
+        {
+          "id": "99T5XcNLLZQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "The Truth About Rivalries in Downhill MTB | Just Ride",
+          "description": "In this episode of Just Ride, Rob Warner and Eliot Jackson sit down with Tahnee Seagrave to reflect on a career spent at the very top of downhill mountain biking. From battling some of the sport's greatest riders to overcoming serious setbacks, Tahnee opens up about the highs, the lows, and what continues to drive her today.\n\nThe conversation explores her rivalry with Rachel Atherton, recovering from concussion, rebuilding confidence after injury, and the mindset required to return to winning at the highest level. Tahnee also shares what life is like away from racing, how the sport has evolved throughout her career, and why she's still chasing the biggest prize in downhill racing.\n\nWhether you're a lifelong downhill fan or simply fascinated by what it takes to perform under pressure, this is an honest conversation about resilience, growth, and the pursuit of excellence.  \n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#dhmtb  #redbull #justride \n\n00:00 Intro\n01:48 What It Takes to Be an Elite Downhill Racer\n05:23 The Different Phases of Tahnee's Career\n10:34 Racing Against Rachel Atherton\n16:11 Finally Beating Rachel\n19:28 Injuries, Concussion & Finding Motivation Again\n23:22 Why Tahnee LOVES Competition\n27:02 The Most Intimidating World Cup Tracks\n32:27 Building a New Bike & Winning Again\n43:52 Chasing a World Title\n50:15 The Story Behind \"57\"\n52:23 Building a Team Around a Female Rider\n55:04 Life After Racing\n58:18 Life in British Columbia & Riding with Finn\n01:02:33 Final Thoughts",
+          "thumbnail": "https://i.ytimg.com/vi/99T5XcNLLZQ/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-21T18:39:29Z",
+          "url": "https://www.youtube.com/watch?v=99T5XcNLLZQ",
+          "isShort": false,
+          "score": 14,
+          "category": "paddock"
+        },
         {
           "id": "3Tjy_iOpr0k",
           "type": "video",
