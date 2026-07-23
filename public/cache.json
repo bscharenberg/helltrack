@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-22T22:10:38.487Z",
-  "totalItems": 122,
+  "builtAt": "2026-07-23T00:07:28.910Z",
+  "totalItems": 121,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1031,23 +1031,6 @@
           "url": "https://www.youtube.com/watch?v=_s3GP2vzHbA",
           "isShort": false,
           "score": 6,
-          "category": "paddock"
-        },
-        {
-          "id": "D6dVxVffoPA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "It's Winning World Cups, But It's $11,000! We Ride the Specialized Demo 11",
-          "description": "Specialized’s new Demo 11 downhill bike is a certified rocket ship. You don’t need us to tell you that. Jordan Williams, Loic Bruni, and Finn Iles have proven the platform's abilities over the past three years of development and this year two World Cup DH wins have been nabbed aboard the production version. The problem may be that it's complex, heavy and priced much higher than other DH bikes. \n\nSpecialized gave us the chance to ride the bike, and we took the opportunity to get all of your questions answered—no marketing BS. We then spun a few laps to see how it rides under a regular rider. Enjoy.  \n\nWatch our Prototype Specialized Demo test - https://youtu.be/Cs-TCkFZm_8\n\n0:00 - Intro\n1:04 - Why is the Demo 11 So Expensive?\n2:04 - Did Specialized consider NOT bringing it to production?\n2:36 - Based on the price, who is the Demo 11 for?\n3:02 - Will the previous alloy Demo still exist?\n3:13 - Why this new suspension layout compared to the original prototype?\n5:00 - How did you get one design to satisfy the needs for 3 different athletes? (Loic, Finn, Jordan)\n6:13 - Explain the Demo 11 leverage rate and axle path\n8:23 - Why not more travel?\n8:46 - Explain the crazy High Gear drive system\n10:17 - Can a mechanical drivetrain be used?\n10:55 - Why two chains inside the system?\n11:52 - What is the Demo 11 service interval? Are special tools required?\n12:25 - Is there added drag on the chain?\n13:22 - How as the BB height chosen?\n14:11 - The Demo 11 isn't light. Did that matter?\n14:50 - Discuss the frame stiffness and compliance\n15:37 - How does the suspension work? Self-aligning?\n16:35 - When will the ENDURO or Kenevo with this design come out?\n17:17 - Riding the Demo 11 - Setup\n18:21 - First Laps & Impressions\n21:43 - Drivetrain Drag Drama\n22:14 - More Laps and Impressions\n26:51 - Final Laps and Thoughts on Demo 11",
-          "thumbnail": "https://i.ytimg.com/vi/D6dVxVffoPA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-22T22:51:45Z",
-          "url": "https://www.youtube.com/watch?v=D6dVxVffoPA",
-          "isShort": false,
-          "score": 17,
           "category": "paddock"
         }
       ]
