@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-23T17:38:16.408Z",
-  "totalItems": 120,
+  "builtAt": "2026-07-23T19:36:09.386Z",
+  "totalItems": 119,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1039,21 +1039,6 @@
       "id": "news",
       "label": "News",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/video-vali-holl-and-gracey-hemstreets-battle-for-1st-at-the-andorra-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Vali Höll &amp; Gracey Hemstreet's Battle for 1st at the Andorra DH World Cup",
-          "description": "Comparing the two fastest women&#039;s runs at the 2026 Andorra downhill World Cup.( Comments: 7 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30027816/p2pb30027816.jpg",
-          "publishedAt": "2026-07-20T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-vali-holl-and-gracey-hemstreets-battle-for-1st-at-the-andorra-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 15,
-          "category": "news"
-        },
         {
           "id": "qfg1qcEYSTM",
           "type": "video",
