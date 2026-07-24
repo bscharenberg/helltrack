@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-24T17:44:22.514Z",
-  "totalItems": 119,
+  "builtAt": "2026-07-24T19:40:19.469Z",
+  "totalItems": 118,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1014,23 +1014,6 @@
           "url": "https://www.youtube.com/watch?v=jrvp4wzMJ9M",
           "isShort": false,
           "score": 10,
-          "category": "paddock"
-        },
-        {
-          "id": "_s3GP2vzHbA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Scotty Laughland hosts The Setup: Lenzerheide! 🇨🇭",
-          "description": "More of this in our new episode of THE SETUP!",
-          "thumbnail": "https://i.ytimg.com/vi/_s3GP2vzHbA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-24T17:54:11Z",
-          "url": "https://www.youtube.com/watch?v=_s3GP2vzHbA",
-          "isShort": false,
-          "score": 6,
           "category": "paddock"
         }
       ]
