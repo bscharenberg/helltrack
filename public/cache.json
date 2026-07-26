@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-26T14:41:29.207Z",
-  "totalItems": 117,
+  "builtAt": "2026-07-26T16:08:23.274Z",
+  "totalItems": 118,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1022,6 +1022,21 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/slack-randoms-racing-a-vintage-cannondale-at-the-megavalanche-dakotah-nortons-backyard-mx-track-and-more.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Slack Randoms: Racing a Vintage Cannondale at the Megavalanche, Dakotah Norton's Backyard MX Track &amp; More",
+          "description": "Videos and stories from all corners of the cycling world and beyond.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30055725/p2pb30055725.jpg",
+          "publishedAt": "2026-07-26T12:00:00.000Z",
+          "url": "https://www.pinkbike.com/news/slack-randoms-racing-a-vintage-cannondale-at-the-megavalanche-dakotah-nortons-backyard-mx-track-and-more.html?trk=rss",
+          "categories": [],
+          "score": 6,
+          "category": "news"
+        },
         {
           "id": "qfg1qcEYSTM",
           "type": "video",
