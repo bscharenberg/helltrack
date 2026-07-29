@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-29T15:12:00.295Z",
-  "totalItems": 115,
+  "builtAt": "2026-07-29T17:22:05.054Z",
+  "totalItems": 116,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,6 +353,21 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/troy-brosnan-remains-undefeated-as-mille-johnset-backs-up-last-years-victory-at-the-og-cdn-opn-dh.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Troy Brosnan Remains Undefeated as Mille Johnset Backs Up Last Year’s Victory at the OG Canadian Open DH",
+          "description": "The skies over Whistler cleared just in time for elite finals on the OG CDN OPN DH.( Photos: 2, Comments: 6 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30069128/p2pb30069128.jpg",
+          "publishedAt": "2026-07-29T11:58:00.000Z",
+          "url": "https://www.pinkbike.com/news/troy-brosnan-remains-undefeated-as-mille-johnset-backs-up-last-years-victory-at-the-og-cdn-opn-dh.html?trk=rss",
+          "categories": [],
+          "score": 6,
+          "category": "race-runs"
+        },
+        {
           "id": "m0wMPjiRAwk",
           "type": "video",
           "source": "youtube",
@@ -673,23 +688,6 @@
           "url": "https://www.youtube.com/watch?v=7wUxZ71cDcU",
           "isShort": false,
           "score": 12,
-          "category": "race-runs"
-        },
-        {
-          "id": "So43xdcyaB0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro:  Back on the podium! 3rd place POV run from Jackson Goldstone in La Thuile",
-          "description": "After a slower start to the 2026 season, Jackson Goldstone is back on track looking stronger every race. Jump on board for the podium finish 3rd place run by Jackson Goldstone. \n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/So43xdcyaB0/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-04T21:28:33Z",
-          "url": "https://www.youtube.com/watch?v=So43xdcyaB0",
-          "isShort": false,
-          "score": 11,
           "category": "race-runs"
         }
       ]
@@ -1014,7 +1012,7 @@
           "title": "Slack Randoms: Racing a Vintage Cannondale at the Megavalanche, Dakotah Norton's Backyard MX Track &amp; More",
           "description": "Videos and stories from all corners of the cycling world and beyond.( Comments: 26 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30055725/p2pb30055725.jpg",
-          "publishedAt": "2026-07-26T11:38:00.000Z",
+          "publishedAt": "2026-07-26T11:37:00.000Z",
           "url": "https://www.pinkbike.com/news/slack-randoms-racing-a-vintage-cannondale-at-the-megavalanche-dakotah-nortons-backyard-mx-track-and-more.html?trk=rss",
           "categories": [],
           "score": 6,
