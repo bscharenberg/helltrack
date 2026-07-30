@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-30T14:21:42.910Z",
-  "totalItems": 115,
+  "builtAt": "2026-07-30T16:41:21.342Z",
+  "totalItems": 114,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -361,7 +361,7 @@
           "title": "Troy Brosnan Remains Undefeated as Mille Johnset Backs Up Last Year’s Victory at the OG Canadian Open DH",
           "description": "The skies over Whistler cleared just in time for elite finals on the OG CDN OPN DH.( Photos: 2, Comments: 22 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30069128/p2pb30069128.jpg",
-          "publishedAt": "2026-07-29T11:52:00.000Z",
+          "publishedAt": "2026-07-29T11:49:00.000Z",
           "url": "https://www.pinkbike.com/news/troy-brosnan-remains-undefeated-as-mille-johnset-backs-up-last-years-victory-at-the-og-cdn-opn-dh.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1003,21 +1003,6 @@
       "id": "news",
       "label": "News",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/slack-randoms-racing-a-vintage-cannondale-at-the-megavalanche-dakotah-nortons-backyard-mx-track-and-more.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Slack Randoms: Racing a Vintage Cannondale at the Megavalanche, Dakotah Norton's Backyard MX Track &amp; More",
-          "description": "Videos and stories from all corners of the cycling world and beyond.( Comments: 26 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30055725/p2pb30055725.jpg",
-          "publishedAt": "2026-07-26T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/slack-randoms-racing-a-vintage-cannondale-at-the-megavalanche-dakotah-nortons-backyard-mx-track-and-more.html?trk=rss",
-          "categories": [],
-          "score": 6,
-          "category": "news"
-        },
         {
           "id": "qfg1qcEYSTM",
           "type": "video",
