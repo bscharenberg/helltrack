@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-30T20:19:14.142Z",
-  "totalItems": 115,
+  "builtAt": "2026-07-30T22:13:10.676Z",
+  "totalItems": 114,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -830,23 +830,6 @@
           "url": "https://www.youtube.com/watch?v=XuNCgz9bR_U",
           "isShort": false,
           "score": 11,
-          "category": "results"
-        },
-        {
-          "id": "7ykQdXlgSNM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "This One Will Be Exciting! | La Thuile DH - 2026",
-          "description": "Gloria Scarsi has had a fantastic season so far with multiple podium finishes. If she can finish on the top step she will claim the €100,000 Gates Prize Purse. Join Ben as he chats about the racers who could go well at round 5 of the 2026 Downhill World Cup in La Thuile.\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/7ykQdXlgSNM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-06-30T21:22:48Z",
-          "url": "https://www.youtube.com/watch?v=7ykQdXlgSNM",
-          "isShort": false,
-          "score": 14,
           "category": "results"
         }
       ]
