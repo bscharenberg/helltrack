@@ -112,19 +112,16 @@ const EXCLUDE_KEYWORDS = [
   { terms: ['xco', 'xcc', 'cross country', 'cross-country', 'bmx', 'road cycling'],
     weight: 15, titleOnly: true },
 
-  // Per-video race-tag excludes — UCI Shorts often carry a generic caption
-  // ("Ride of the day 🤩") with the actual discipline only in the description's
-  // race-tag line ("📍 Saalfelden-Leogang 🏁 Women's Elite XCO World Cup"). That
-  // tag is event-specific (unlike the generic boilerplate above) so it's safe to
-  // check against full text. "elite xco"/"elite xcc" avoids the unicode
-  // apostrophe in "Women's"/"Men's" in UCI descriptions.
-  // 2026-07-05: UCI's caption template changed to insert "UCI" into the tag
-  // ("...Elite UCI XCC World Cup" instead of "...Elite XCC World Cup"), which
-  // silently broke the exact-phrase match above — 6 La Thuile XCC shorts leaked
-  // through at score 10 (right at the untrusted-channel threshold). Added the
-  // "uci" variant rather than replacing the original, in case some videos still
-  // use the old template or the wording shifts again.
-  { terms: ['elite xco', 'elite xcc', 'elite uci xco', 'elite uci xcc'], weight: 15 },
+  // Per-video race-tag excludes — UCI Shorts carry a generic emoji caption
+  // ("Ride of the day 🤩") with the discipline only in the description's tag line.
+  // Tag format has changed repeatedly:
+  //   Original: "Women's Elite XCO World Cup"
+  //   2026-07-05: "Elite UCI XCC World Cup"  (UCI inserted before discipline)
+  //   2026-07-12: "Elite Women's UCI XCO World Cup"  (gender moved inside)
+  // "uci xco" / "uci xcc" match all known variants ("Elite UCI XCO", "UCI XCO World Cup",
+  // "Elite Women's UCI XCO") without matching the generic boilerplate footer, which says
+  // "Cross-country Olympic (XCO)" without "UCI" adjacent.
+  { terms: ['elite xco', 'elite xcc', 'elite uci xco', 'elite uci xcc', 'uci xco', 'uci xcc'], weight: 15 },
   { terms: ['mtbws highlights'], weight: 8, titleOnly: true },
 
   // Enduro — out of scope for Helltrack (DH only)
@@ -149,7 +146,14 @@ const EXCLUDE_KEYWORDS = [
             'pauline ferrand prevot', 'loana lecomte', 'paul schehl',
             'alessandra keller', 'savilia blunk', 'luca martin',
             'mathis guay', 'sina frei', 'jenny rissveds', 'evie richards',
-            'adrien boichis', 'charlie aldridge'], weight: 10, titleOnly: true },
+            'adrien boichis', 'charlie aldridge', 'chris blevins',
+            'christopher blevins', 'mathis azzaro', 'ronja blochlinger',
+            'ronja blöchlinger', 'martina berta'], weight: 10, titleOnly: true },
+
+  // Explicit XC discipline in title — catches "XC Racing", "XC World Cup" etc.
+  // Needed for trusted-source channels (e.g. Just Ride) that occasionally feature
+  // XCO athletes; their trust boost can carry an XCO video to threshold otherwise.
+  { terms: ['xc racing', 'xc world cup', 'xc rider'], weight: 10, titleOnly: true },
 
   // Freeride / slopestyle — not DH world cup
   { terms: ['crankworx slopestyle', 'rampage', 'redbull rampage',
