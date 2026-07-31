@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-07-30T22:13:10.676Z",
-  "totalItems": 114,
+  "builtAt": "2026-07-31T00:09:39.134Z",
+  "totalItems": 115,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -359,9 +359,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Troy Brosnan Remains Undefeated as Mille Johnset Backs Up Last Year’s Victory at the OG Canadian Open DH",
-          "description": "The skies over Whistler cleared just in time for elite finals on the OG CDN OPN DH.( Photos: 2, Comments: 22 )",
+          "description": "The skies over Whistler cleared just in time for elite finals on the OG CDN OPN DH.( Photos: 2, Comments: 23 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30069128/p2pb30069128.jpg",
-          "publishedAt": "2026-07-29T11:48:00.000Z",
+          "publishedAt": "2026-07-29T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/troy-brosnan-remains-undefeated-as-mille-johnset-backs-up-last-years-victory-at-the-og-cdn-opn-dh.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -696,6 +696,21 @@
       "id": "results",
       "label": "Results",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/seeding-update-locals-show-dominance-at-specialized-canadian-open-dh.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Gracey Hemstreet and Dane Jewett Fastest in Seeding at the 2026 Canadian Open DH",
+          "description": "Two speedy Canadians on top of the seeding results sheet.( Photos: 2, Comments: 4 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30076052/p2pb30076052.jpg",
+          "publishedAt": "2026-07-30T11:59:00.000Z",
+          "url": "https://www.pinkbike.com/news/seeding-update-locals-show-dominance-at-specialized-canadian-open-dh.html?trk=rss",
+          "categories": [],
+          "score": 10,
+          "category": "results"
+        },
         {
           "id": "qj7Fmshcr5g",
           "type": "video",
