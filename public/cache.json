@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-01T10:05:55.208Z",
-  "totalItems": 103,
+  "builtAt": "2026-08-01T12:05:49.016Z",
+  "totalItems": 102,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -940,23 +940,6 @@
           "url": "https://www.youtube.com/watch?v=SJxT6-dIQMM",
           "isShort": false,
           "score": 6,
-          "category": "paddock"
-        },
-        {
-          "id": "u7eKosbk-nI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: BEST TRACK EVER! Jackson Goldstone 2026 DH World Series RD5 Course Preview",
-          "description": "5th WC Race of the season and we are back in La Thuile Italy for the second time! The sun is out and the track is fast, enjoy the first run down with @jacksongoldstone6453  \n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/u7eKosbk-nI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-02T11:15:46Z",
-          "url": "https://www.youtube.com/watch?v=u7eKosbk-nI",
-          "isShort": false,
-          "score": 12,
           "category": "paddock"
         }
       ]
