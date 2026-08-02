@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-01T22:02:48.202Z",
-  "totalItems": 101,
+  "builtAt": "2026-08-02T00:02:36.625Z",
+  "totalItems": 100,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -361,7 +361,7 @@
           "title": "Race Replay: Crankworx Whistler Canadian Open Downhill Finals",
           "description": "Watch the action live from the Specialized Canadian Open Downhill at Crankworx Whistler.( Comments: 14 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26981513/p2pb26981513.jpg",
-          "publishedAt": "2026-07-31T11:51:00.000Z",
+          "publishedAt": "2026-07-31T11:50:00.000Z",
           "url": "https://www.pinkbike.com/news/race-replay-crankworx-whistler-canadian-open-downhill-finals.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -376,7 +376,7 @@
           "title": "Video: Crankworx Whistler Canadian Open DH Course POV",
           "description": "Join Nikolas Nestoroff for a lap of the 1199 track ahead of finals at the Specialized Canadian Open DH.( Comments: 28 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30078266/p2pb30078266.jpg",
-          "publishedAt": "2026-07-31T11:38:00.000Z",
+          "publishedAt": "2026-07-31T11:37:00.000Z",
           "url": "https://www.pinkbike.com/news/video-crankworx-whistler-canadian-open-dh-course-pov.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -703,7 +703,7 @@
           "title": "Gracey Hemstreet and Dane Jewett Fastest in Seeding at the 2026 Canadian Open DH",
           "description": "Two speedy Canadians on top of the seeding results sheet.( Photos: 2, Comments: 31 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30076052/p2pb30076052.jpg",
-          "publishedAt": "2026-07-30T11:36:00.000Z",
+          "publishedAt": "2026-07-30T11:35:00.000Z",
           "url": "https://www.pinkbike.com/news/seeding-update-locals-show-dominance-at-specialized-canadian-open-dh.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -847,7 +847,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Bike Check: Wes Lukens' Custom Frameworks 26/24\" Mullet",
-          "description": "Built to handle the abuse of an 11-year-old phenom, Neko Mulally shares the engineering tricks, reverse-engineered shock curves, and adjustable dropouts behind Frameworks&#039; custom kids&#039; bike.( Photos: 20, Comments: 23 )",
+          "description": "Built to handle the abuse of an 11-year-old phenom, Neko Mulally shares the engineering tricks, reverse-engineered shock curves, and adjustable dropouts behind Frameworks&#039; custom kids&#039; bike.( Photos: 20, Comments: 26 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30080127/p2pb30080127.jpg",
           "publishedAt": "2026-08-01T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/bike-check-wes-lukens-custom-frameworks-2624-mullet.html?trk=rss",
@@ -921,23 +921,6 @@
           "url": "https://www.youtube.com/watch?v=0N-JuYhP3Dc",
           "isShort": false,
           "score": 12,
-          "category": "paddock"
-        },
-        {
-          "id": "SJxT6-dIQMM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Practice day in La Thuile with Jordi Cortes 🤌",
-          "description": "More of this in our new episode of THE SETUP!",
-          "thumbnail": "https://i.ytimg.com/vi/SJxT6-dIQMM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-02T22:31:49Z",
-          "url": "https://www.youtube.com/watch?v=SJxT6-dIQMM",
-          "isShort": false,
-          "score": 6,
           "category": "paddock"
         }
       ]
