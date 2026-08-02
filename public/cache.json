@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-02T16:06:18.526Z",
-  "totalItems": 98,
+  "builtAt": "2026-08-02T18:04:24.167Z",
+  "totalItems": 93,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -361,23 +361,8 @@
           "title": "Race Replay: Crankworx Whistler Canadian Open Downhill Finals",
           "description": "Watch the action live from the Specialized Canadian Open Downhill at Crankworx Whistler.( Comments: 15 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26981513/p2pb26981513.jpg",
-          "publishedAt": "2026-07-31T11:47:00.000Z",
+          "publishedAt": "2026-07-31T11:43:00.000Z",
           "url": "https://www.pinkbike.com/news/race-replay-crankworx-whistler-canadian-open-downhill-finals.html?trk=rss",
-          "categories": [],
-          "score": 6,
-          "category": "race-runs"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-crankworx-whistler-canadian-open-dh-course-pov.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Crankworx Whistler Canadian Open DH Course POV",
-          "description": "Join Nikolas Nestoroff for a lap of the 1199 track ahead of finals at the Specialized Canadian Open DH.( Comments: 28 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30078266/p2pb30078266.jpg",
-          "publishedAt": "2026-07-31T11:34:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-crankworx-whistler-canadian-open-dh-course-pov.html?trk=rss",
           "categories": [],
           "score": 6,
           "category": "race-runs"
@@ -687,6 +672,23 @@
           "isShort": false,
           "score": 10,
           "category": "race-runs"
+        },
+        {
+          "id": "7wUxZ71cDcU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV ENDURO NIGHT STAGE AND DH FINAL PRACTICE “On track with Gary”",
+          "description": "Gary caught the chaos of the enduro night stage at near midnight and also the puzzling of the finals DH practice session from here in La Thuile",
+          "thumbnail": "https://i.ytimg.com/vi/7wUxZ71cDcU/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-07-05T06:48:42Z",
+          "url": "https://www.youtube.com/watch?v=7wUxZ71cDcU",
+          "isShort": false,
+          "score": 12,
+          "category": "race-runs"
         }
       ]
     },
@@ -694,21 +696,6 @@
       "id": "results",
       "label": "Results",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/seeding-update-locals-show-dominance-at-specialized-canadian-open-dh.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Gracey Hemstreet and Dane Jewett Fastest in Seeding at the 2026 Canadian Open DH",
-          "description": "Two speedy Canadians on top of the seeding results sheet.( Photos: 2, Comments: 31 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30076052/p2pb30076052.jpg",
-          "publishedAt": "2026-07-30T11:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/seeding-update-locals-show-dominance-at-specialized-canadian-open-dh.html?trk=rss",
-          "categories": [],
-          "score": 10,
-          "category": "results"
-        },
         {
           "id": "qj7Fmshcr5g",
           "type": "video",
@@ -776,23 +763,6 @@
           "isShort": false,
           "score": 9,
           "category": "results"
-        },
-        {
-          "id": "SJ40W_VrgiE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV LA THUILE Q2 RAPID REACTION",
-          "description": "You can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nI caught up with everyone following once again a wild Q2 session here in the dust of La Thuile!\n\nWatch the race live on MTBWS TV - except Europe, Canada and Australia with a 30% off discount WYN30\n1.                      Follow the link: https://watch.ucimtbworldseries.com/c...\n2.                      “I have a voucher”: WYN30\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/SJ40W_VrgiE/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-03T17:38:34Z",
-          "url": "https://www.youtube.com/watch?v=SJ40W_VrgiE",
-          "isShort": false,
-          "score": 11,
-          "category": "results"
         }
       ]
     },
@@ -849,7 +819,7 @@
           "title": "Bike Check: Wes Lukens' Custom Frameworks 26/24\" Mullet",
           "description": "Built to handle the abuse of an 11-year-old phenom, Neko Mulally shares the engineering tricks, reverse-engineered shock curves, and adjustable dropouts behind Frameworks&#039; custom kids&#039; bike.( Photos: 20, Comments: 43 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30080127/p2pb30080127.jpg",
-          "publishedAt": "2026-08-01T11:59:00.000Z",
+          "publishedAt": "2026-08-01T11:55:00.000Z",
           "url": "https://www.pinkbike.com/news/bike-check-wes-lukens-custom-frameworks-2624-mullet.html?trk=rss",
           "categories": [],
           "score": 6,
