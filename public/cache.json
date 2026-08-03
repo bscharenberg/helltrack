@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-03T15:47:50.560Z",
-  "totalItems": 87,
+  "builtAt": "2026-08-03T17:57:46.483Z",
+  "totalItems": 85,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -359,9 +359,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Luke Meier-Smith's Race Run POV from the Crankworx Whistler Canadian Open DH",
-          "description": "Jump on board with Luke Meier-Smith for his 3rd-place run on the 1199 course.( Comments: 5 )",
+          "description": "Jump on board with Luke Meier-Smith for his 3rd-place run on the 1199 course.( Comments: 8 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30091685/p2pb30091685.jpg",
-          "publishedAt": "2026-08-03T11:57:00.000Z",
+          "publishedAt": "2026-08-03T11:54:00.000Z",
           "url": "https://www.pinkbike.com/news/video-luke-meier-smiths-race-run-pov-from-the-crankworx-whistler-canadian-open-dh.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -374,9 +374,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Race Replay: Crankworx Whistler Canadian Open Downhill Finals",
-          "description": "Watch the action live from the Specialized Canadian Open Downhill at Crankworx Whistler.( Comments: 17 )",
+          "description": "Watch the action live from the Specialized Canadian Open Downhill at Crankworx Whistler.( Comments: 18 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26981513/p2pb26981513.jpg",
-          "publishedAt": "2026-07-31T11:35:00.000Z",
+          "publishedAt": "2026-07-31T11:32:00.000Z",
           "url": "https://www.pinkbike.com/news/race-replay-crankworx-whistler-canadian-open-downhill-finals.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -744,23 +744,6 @@
           "isShort": false,
           "score": 8,
           "category": "results"
-        },
-        {
-          "id": "8CT5ITyfzd4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "LA THUILE WORLD CUP MADNESS",
-          "description": "It's been a tough week here in La Thuile for team...but Roger is the man of the match once again.\n\nOverall the team is happy and healthy and stoked for Andorra before a well needed break!\n\nEnjoy sports fans!\n\n Shot on #sony & #dji \n\n#dji #mtb #bksport #downhill #mountainbike #pivot #mtblife #shimano #fox #darco #italy",
-          "thumbnail": "https://i.ytimg.com/vi/8CT5ITyfzd4/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-04T17:45:17Z",
-          "url": "https://www.youtube.com/watch?v=8CT5ITyfzd4",
-          "isShort": false,
-          "score": 9,
-          "category": "results"
         }
       ]
     },
@@ -817,7 +800,7 @@
           "title": "Bike Check: Wes Lukens' Custom Frameworks 26/24\" Mullet",
           "description": "Built to handle the abuse of an 11-year-old phenom, Neko Mulally shares the engineering tricks, reverse-engineered shock curves, and adjustable dropouts behind Frameworks&#039; custom kids&#039; bike.( Photos: 20, Comments: 50 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30080127/p2pb30080127.jpg",
-          "publishedAt": "2026-08-01T11:47:00.000Z",
+          "publishedAt": "2026-08-01T11:44:00.000Z",
           "url": "https://www.pinkbike.com/news/bike-check-wes-lukens-custom-frameworks-2624-mullet.html?trk=rss",
           "categories": [],
           "score": 6,
