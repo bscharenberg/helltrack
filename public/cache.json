@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-08-03T17:57:46.483Z",
+  "builtAt": "2026-08-03T19:49:19.903Z",
   "totalItems": 85,
   "categories": {
     "shorts": {
@@ -359,9 +359,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Luke Meier-Smith's Race Run POV from the Crankworx Whistler Canadian Open DH",
-          "description": "Jump on board with Luke Meier-Smith for his 3rd-place run on the 1199 course.( Comments: 8 )",
+          "description": "Jump on board with Luke Meier-Smith for his 3rd-place run on the 1199 course.( Comments: 9 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30091685/p2pb30091685.jpg",
-          "publishedAt": "2026-08-03T11:54:00.000Z",
+          "publishedAt": "2026-08-03T11:53:00.000Z",
           "url": "https://www.pinkbike.com/news/video-luke-meier-smiths-race-run-pov-from-the-crankworx-whistler-canadian-open-dh.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -376,7 +376,7 @@
           "title": "Race Replay: Crankworx Whistler Canadian Open Downhill Finals",
           "description": "Watch the action live from the Specialized Canadian Open Downhill at Crankworx Whistler.( Comments: 18 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26981513/p2pb26981513.jpg",
-          "publishedAt": "2026-07-31T11:32:00.000Z",
+          "publishedAt": "2026-07-31T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/race-replay-crankworx-whistler-canadian-open-downhill-finals.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -695,6 +695,23 @@
       "label": "Results",
       "items": [
         {
+          "id": "e6vFe-1qvVw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV AT ARDROCK 2026",
+          "description": "You can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nConti invited me to join them for Ardrock, whilst I couldnt race it was awesome to go check out the vibe of the event and catch up with some familiar faces and I can say its definitely on the calendar for next year, and its probably the biggest enduro I've ever seen!\n\nVideo by Joseph O'Brien\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/e6vFe-1qvVw/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-03T19:38:01Z",
+          "url": "https://www.youtube.com/watch?v=e6vFe-1qvVw",
+          "isShort": false,
+          "score": 10,
+          "category": "results"
+        },
+        {
           "id": "qj7Fmshcr5g",
           "type": "video",
           "source": "youtube",
@@ -800,7 +817,7 @@
           "title": "Bike Check: Wes Lukens' Custom Frameworks 26/24\" Mullet",
           "description": "Built to handle the abuse of an 11-year-old phenom, Neko Mulally shares the engineering tricks, reverse-engineered shock curves, and adjustable dropouts behind Frameworks&#039; custom kids&#039; bike.( Photos: 20, Comments: 50 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30080127/p2pb30080127.jpg",
-          "publishedAt": "2026-08-01T11:44:00.000Z",
+          "publishedAt": "2026-08-01T11:43:00.000Z",
           "url": "https://www.pinkbike.com/news/bike-check-wes-lukens-custom-frameworks-2624-mullet.html?trk=rss",
           "categories": [],
           "score": 6,
