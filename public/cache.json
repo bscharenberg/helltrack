@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-08-04T15:28:55.925Z",
-  "totalItems": 81,
+  "builtAt": "2026-08-04T17:55:53.325Z",
+  "totalItems": 83,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "pRdQAYx6KFY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Jackson Goldstone wins 1199 at Whistler Crankworx!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/pRdQAYx6KFY/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-04T17:31:47Z",
+          "url": "https://www.youtube.com/watch?v=pRdQAYx6KFY",
+          "isShort": true,
+          "score": 12,
+          "category": "shorts"
+        },
         {
           "id": "JIr0B-Pxl-M",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 21,
           "category": "shorts"
-        },
-        {
-          "id": "Yhkp3hqQB5k",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Tough as they come 👊",
-          "description": "Tough as they come 👊\n\nEthan Craik showed real grit after a heavy crash, remounting and finishing his run in Pal Arinsal 🤍\n\n📍Pal Arinsal, Andorra 🏁 Elite Men’s UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/Yhkp3hqQB5k/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-11T12:11:51Z",
-          "url": "https://www.youtube.com/watch?v=Yhkp3hqQB5k",
-          "isShort": true,
-          "score": 15,
-          "category": "shorts"
         }
       ]
     },
@@ -361,7 +361,7 @@
           "title": "Video: Luke Meier-Smith's Race Run POV from the Crankworx Whistler Canadian Open DH",
           "description": "Jump on board with Luke Meier-Smith for his 3rd-place run on the 1199 course.( Comments: 15 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30091685/p2pb30091685.jpg",
-          "publishedAt": "2026-08-03T11:50:00.000Z",
+          "publishedAt": "2026-08-03T11:48:00.000Z",
           "url": "https://www.pinkbike.com/news/video-luke-meier-smiths-race-run-pov-from-the-crankworx-whistler-canadian-open-dh.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -686,9 +686,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV at Ard Rock 2026",
-          "description": "Wyn heads to the UK to check out what might be the world&#039;s largest enduro event.( Comments: 8 )",
+          "description": "Wyn heads to the UK to check out what might be the world&#039;s largest enduro event.( Comments: 10 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30094546/p2pb30094546.jpg",
-          "publishedAt": "2026-08-03T11:57:00.000Z",
+          "publishedAt": "2026-08-03T11:55:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-at-ardrock-2026.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -792,6 +792,23 @@
       "label": "Pits",
       "items": [
         {
+          "id": "6c2DL2XPIdk",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "Why Kate Courtney Walked Away From the World Cup Grind | Just Ride",
+          "description": "Kate Courtney joins Rob Warner and Eliot Jackson for one of the most honest conversations we've had on Just Ride.\n\nFrom becoming a World Champion at a young age to questioning whether she should retire, Kate opens up about rebuilding her career, creating She Sends Racing, recovering from injury, winning Leadville, becoming Marathon World Champion, and why taking risks has transformed the way she races.\n\nIt's a conversation about purpose, resilience, and finding success on your own terms.\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#podcast #redbull #justride \n\n0:00:00 - Why Kate Courtney Switched to Road Cycling\n0:01:09 - How Kate Courtney Became World Champion\n0:05:07 - The Rise of Mountain Biking in the USA\n0:10:03 - How Kate Courtney Redefined Success\n0:11:07 - Why Kate Courtney Bet on Herself\n0:16:05 - Breaking Her Wrist Changed Everything\n0:20:09 - How She Sends Racing Supports Women in MTB\n0:22:25 - Why Women's Cycling Is Growing So Fast\n0:27:09 - Why Kate Courtney Nearly Retired\n0:31:11 - Why Leadville Changed Everything\n0:40:11 - Winning the Marathon World Championships\n0:50:13 - What It Was Like Working with Tom Cruise\n0:55:41 - Why Kate Courtney Races More Than One Discipline\n01:00:08 - Final Thoughts",
+          "thumbnail": "https://i.ytimg.com/vi/6c2DL2XPIdk/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-04T13:43:44Z",
+          "url": "https://www.youtube.com/watch?v=6c2DL2XPIdk",
+          "isShort": false,
+          "score": 9,
+          "category": "paddock"
+        },
+        {
           "id": "https://www.pinkbike.com/news/bike-check-wes-lukens-custom-frameworks-2624-mullet.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -800,7 +817,7 @@
           "title": "Bike Check: Wes Lukens' Custom Frameworks 26/24\" Mullet",
           "description": "Built to handle the abuse of an 11-year-old phenom, Neko Mulally shares the engineering tricks, reverse-engineered shock curves, and adjustable dropouts behind Frameworks&#039; custom kids&#039; bike.( Photos: 20, Comments: 50 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30080127/p2pb30080127.jpg",
-          "publishedAt": "2026-08-01T11:40:00.000Z",
+          "publishedAt": "2026-08-01T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/bike-check-wes-lukens-custom-frameworks-2624-mullet.html?trk=rss",
           "categories": [],
           "score": 6,
