@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-04T17:55:53.325Z",
-  "totalItems": 83,
+  "builtAt": "2026-08-04T19:47:17.465Z",
+  "totalItems": 82,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -686,7 +686,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV at Ard Rock 2026",
-          "description": "Wyn heads to the UK to check out what might be the world&#039;s largest enduro event.( Comments: 10 )",
+          "description": "Wyn heads to the UK to check out what might be the world&#039;s largest enduro event.( Comments: 11 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30094546/p2pb30094546.jpg",
           "publishedAt": "2026-08-03T11:55:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-at-ardrock-2026.html?trk=rss",
@@ -767,23 +767,6 @@
           "isShort": false,
           "score": 13,
           "category": "films"
-        },
-        {
-          "id": "5iJqrZdA8h4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCuuLS5B9JraqXiKfYPIBNEw",
-          "channelName": "Sleeper Collective",
-          "title": "INCREDIBLE DH RACING IN LA THUILE | SLEEPER SHREDDIT",
-          "description": "https://sleepermerch.com/",
-          "thumbnail": "https://i.ytimg.com/vi/5iJqrZdA8h4/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-05T19:39:14Z",
-          "url": "https://www.youtube.com/watch?v=5iJqrZdA8h4",
-          "isShort": false,
-          "score": 7,
-          "category": "films"
         }
       ]
     },
@@ -802,7 +785,7 @@
           "thumbnail": "https://i.ytimg.com/vi/6c2DL2XPIdk/maxresdefault.jpg",
           "thumbnailWidth": 1280,
           "thumbnailHeight": 720,
-          "publishedAt": "2026-08-04T13:43:44Z",
+          "publishedAt": "2026-08-04T19:00:06Z",
           "url": "https://www.youtube.com/watch?v=6c2DL2XPIdk",
           "isShort": false,
           "score": 9,
