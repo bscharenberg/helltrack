@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-05T15:20:23.281Z",
-  "totalItems": 82,
+  "builtAt": "2026-08-05T17:48:06.851Z",
+  "totalItems": 81,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -361,7 +361,7 @@
           "title": "Video: Luke Meier-Smith's Race Run POV from the Crankworx Whistler Canadian Open DH",
           "description": "Jump on board with Luke Meier-Smith for his 3rd-place run on the 1199 course.( Comments: 15 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30091685/p2pb30091685.jpg",
-          "publishedAt": "2026-08-03T11:43:00.000Z",
+          "publishedAt": "2026-08-03T11:41:00.000Z",
           "url": "https://www.pinkbike.com/news/video-luke-meier-smiths-race-run-pov-from-the-crankworx-whistler-canadian-open-dh.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -638,23 +638,6 @@
           "isShort": false,
           "score": 24,
           "category": "race-runs"
-        },
-        {
-          "id": "lVS16KfbLkU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "MTBWS TOP 6 MOMENTS 🇮🇹 | 2026 La Thuile, Italy | WHOOP UCI MTB World Series",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/lVS16KfbLkU/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-06T17:35:19Z",
-          "url": "https://www.youtube.com/watch?v=lVS16KfbLkU",
-          "isShort": false,
-          "score": 10,
-          "category": "race-runs"
         }
       ]
     },
@@ -688,7 +671,7 @@
           "title": "Video: WynTV at Ard Rock 2026",
           "description": "Wyn heads to the UK to check out what might be the world&#039;s largest enduro event.( Comments: 17 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30094546/p2pb30094546.jpg",
-          "publishedAt": "2026-08-03T11:50:00.000Z",
+          "publishedAt": "2026-08-03T11:48:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-at-ardrock-2026.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -798,9 +781,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Gypsy Tales Podcast: Greg Minnaar on Honda MTB, Almost Quitting &amp; The Cost of Winning",
-          "description": "2.5 hours of stories from Minnaar, covering everything from his first World Cup win at 19 to his World Champs victory at 39.( Comments: 24 )",
+          "description": "2.5 hours of stories from Minnaar, covering everything from his first World Cup win at 19 to his World Champs victory at 39.( Comments: 29 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30099307/p2pb30099307.jpg",
-          "publishedAt": "2026-08-04T11:54:00.000Z",
+          "publishedAt": "2026-08-04T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/gypsy-tales-podcast-greg-minnaar-on-honda-mtb-almost-quitting-and-the-cost-of-winning.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -815,7 +798,7 @@
           "title": "Bike Check: Wes Lukens' Custom Frameworks 26/24\" Mullet",
           "description": "Built to handle the abuse of an 11-year-old phenom, Neko Mulally shares the engineering tricks, reverse-engineered shock curves, and adjustable dropouts behind Frameworks&#039; custom kids&#039; bike.( Photos: 20, Comments: 50 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30080127/p2pb30080127.jpg",
-          "publishedAt": "2026-08-01T11:33:00.000Z",
+          "publishedAt": "2026-08-01T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/bike-check-wes-lukens-custom-frameworks-2624-mullet.html?trk=rss",
           "categories": [],
           "score": 6,
