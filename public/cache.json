@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-06T12:06:56.515Z",
-  "totalItems": 78,
+  "builtAt": "2026-08-06T15:20:25.419Z",
+  "totalItems": 77,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -361,7 +361,7 @@
           "title": "Video: Luke Meier-Smith's Race Run POV from the Crankworx Whistler Canadian Open DH",
           "description": "Jump on board with Luke Meier-Smith for his 3rd-place run on the 1199 course.( Comments: 15 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30091685/p2pb30091685.jpg",
-          "publishedAt": "2026-08-03T11:39:00.000Z",
+          "publishedAt": "2026-08-03T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/video-luke-meier-smiths-race-run-pov-from-the-crankworx-whistler-canadian-open-dh.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -652,9 +652,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV at Ard Rock 2026",
-          "description": "Wyn heads to the UK to check out what might be the world&#039;s largest enduro event.( Comments: 17 )",
+          "description": "Wyn heads to the UK to check out what might be the world&#039;s largest enduro event.( Comments: 18 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30094546/p2pb30094546.jpg",
-          "publishedAt": "2026-08-03T11:46:00.000Z",
+          "publishedAt": "2026-08-03T11:45:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-at-ardrock-2026.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -713,29 +713,6 @@
         }
       ]
     },
-    "films": {
-      "id": "films",
-      "label": "Films",
-      "items": [
-        {
-          "id": "jQriiKaKqWY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCXqlds5f7B2OOs9vQuevl4A",
-          "channelName": "Red Bull Bike",
-          "title": "Asa Vermette Tears Up Bikepark Schladming",
-          "description": "Asa Vermette tears up Bikepark Schladming for his inaugural Sound of Speed. Filmed by @Sleeper.collective during a Red Bull Downhill Training Camp, Vermette pushes his Frameworks DH frame to the limit on Schladming's iconic World Cup track in Austria.\n \nWith @finniles9204 for a lap that shows exactly why these two are at the top of their game this season.\n \n🚵 Riders: Asa Vermette, Finn Iles \n📍 Location: Bikepark Schladming, Austria \n🚲 Bike: Frameworks DH \n🎥 Filmed by: SLEEPER\n\n#downhill #redbullbike #downhillmtb \n----\nSubscribe to Red Bull Bike on Youtube: https://win.gs/SubRedBullBike\nGet the FREE Red Bull TV apps for all your devices: http://onelink.to/yfbct7\nWatch Red Bull TV: https://win.gs/WatchRBTVBike\n\nSee into our world: http://goo.gl/J49U\n\nFollow Red Bull Bike on:\nTiktok: https://www.tiktok.com/@redbullbike\nInstagram: https://www.instagram.com/redbullbike/\nFacebook: https://www.facebook.com/RedBullBike/",
-          "thumbnail": "https://i.ytimg.com/vi/jQriiKaKqWY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-07T14:00:38Z",
-          "url": "https://www.youtube.com/watch?v=jQriiKaKqWY",
-          "isShort": false,
-          "score": 13,
-          "category": "films"
-        }
-      ]
-    },
     "paddock": {
       "id": "paddock",
       "label": "Pits",
@@ -764,9 +741,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Gypsy Tales Podcast: Greg Minnaar on Honda MTB, Almost Quitting &amp; The Cost of Winning",
-          "description": "2.5 hours of stories from Minnaar, covering everything from his first World Cup win at 19 to his World Champs victory at 39.( Comments: 33 )",
+          "description": "2.5 hours of stories from Minnaar, covering everything from his first World Cup win at 19 to his World Champs victory at 39.( Comments: 36 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30099307/p2pb30099307.jpg",
-          "publishedAt": "2026-08-04T11:50:00.000Z",
+          "publishedAt": "2026-08-04T11:49:00.000Z",
           "url": "https://www.pinkbike.com/news/gypsy-tales-podcast-greg-minnaar-on-honda-mtb-almost-quitting-and-the-cost-of-winning.html?trk=rss",
           "categories": [],
           "score": 7,
