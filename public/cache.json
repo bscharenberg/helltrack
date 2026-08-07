@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-08-07T11:52:56.856Z",
-  "totalItems": 75,
+  "builtAt": "2026-08-07T13:18:43.327Z",
+  "totalItems": 76,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "TG8UvYoeh_M",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "No expectation. Just a Mindset 😤 How she WON the XC Marathon World Championship #mtb #redbull",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/TG8UvYoeh_M/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-07T11:56:33Z",
+          "url": "https://www.youtube.com/watch?v=TG8UvYoeh_M",
+          "isShort": true,
+          "score": 7,
+          "category": "shorts"
+        },
         {
           "id": "pRdQAYx6KFY",
           "type": "video",
@@ -325,23 +342,6 @@
           "thumbnailHeight": 720,
           "publishedAt": "2026-07-11T12:24:49Z",
           "url": "https://www.youtube.com/watch?v=t8ul5jghoCg",
-          "isShort": true,
-          "score": 21,
-          "category": "shorts"
-        },
-        {
-          "id": "LAzxNy7Xphc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Seeing what others don’t 🤯",
-          "description": "Seeing what others don’t 🤯\n\nAsa Vermette takes a different approach, carving out the fastest route down the mountain 🤩\n\n📍Pal Arinsal, Andorra 🏁 Elite Men’s UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/LAzxNy7Xphc/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-11T12:23:21Z",
-          "url": "https://www.youtube.com/watch?v=LAzxNy7Xphc",
           "isShort": true,
           "score": 21,
           "category": "shorts"
