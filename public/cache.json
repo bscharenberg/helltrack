@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-08T13:02:20.555Z",
-  "totalItems": 72,
+  "builtAt": "2026-08-08T14:38:07.624Z",
+  "totalItems": 71,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -764,23 +764,6 @@
           "thumbnailHeight": 720,
           "publishedAt": "2026-07-10T13:58:16Z",
           "url": "https://www.youtube.com/watch?v=3Tjy_iOpr0k",
-          "isShort": false,
-          "score": 15,
-          "category": "paddock"
-        },
-        {
-          "id": "5q2MaCJ66h0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: ROUND 6 Andorra course preview with Jackson Goldstone - 2026 UCI DH MTB World Series -",
-          "description": "\"We Are in Andorra and welcome back to the podcast\" press play and listen to the full course preview with Jackson Goldstone at the 6th Round of the 2026 UCI DH MTB world series in Andorra!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/5q2MaCJ66h0/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-09T13:18:22Z",
-          "url": "https://www.youtube.com/watch?v=5q2MaCJ66h0",
           "isShort": false,
           "score": 15,
           "category": "paddock"
