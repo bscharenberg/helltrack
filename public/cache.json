@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-08T22:36:28.940Z",
-  "totalItems": 68,
+  "builtAt": "2026-08-08T23:35:14.047Z",
+  "totalItems": 66,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -757,23 +757,6 @@
           "url": "https://www.youtube.com/watch?v=qfg1qcEYSTM",
           "isShort": false,
           "score": 14,
-          "category": "news"
-        },
-        {
-          "id": "1P8YjQ_rKRQ",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Fastest Qualifier Andorra Track Preview",
-          "description": "Wow is it dry in Andorra! Fastest qualifier in 2025, Juan Munoz straps the Pinkbike Preview cam to his helmet and tries his best to chase Joe Breeden down the dusty slopes of the Andorra World Cup Track. Take a lap and get ready for some action at round 6 of the 2026 World Cup Downhill Series.\n\nTrack Preview Presented By Leatt - https://int.leatt.com/collections/mtb\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.",
-          "thumbnail": "https://i.ytimg.com/vi/1P8YjQ_rKRQ/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-09T23:30:09Z",
-          "url": "https://www.youtube.com/watch?v=1P8YjQ_rKRQ",
-          "isShort": false,
-          "score": 11,
           "category": "news"
         }
       ]
