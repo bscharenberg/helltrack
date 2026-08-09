@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-09T19:39:14.906Z",
-  "totalItems": 51,
+  "builtAt": "2026-08-09T20:40:42.532Z",
+  "totalItems": 49,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -520,23 +520,6 @@
           "url": "https://www.youtube.com/watch?v=t83hD-vHfu8",
           "isShort": false,
           "score": 23,
-          "category": "race-runs"
-        },
-        {
-          "id": "hgTJtgIkQ2M",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Riders Blew Up The Track! It Fought Back.",
-          "description": "How many times can you say it's really dry before it loses all meaning? Ben and Innes will try a few more times as they break down the intense Andorran world cup race track. Big crashes, excellent riding, intriguing interviews and some awesome ghosted analysis of the best riders.\n\nInside The Tape Presented By 6D Helmets - https://www.6dhelmets.com/collections/bike\n\nQ1 - https://www.pinkbike.com/news/results-elite-q1-qualifying-at-the-2026-andorra-dh-world-cup.html\n\nQ2 - https://www.pinkbike.com/news/2026-andorra-dh-world-cup-elite-q2-qualifying-results.html\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/hgTJtgIkQ2M/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-10T20:17:33Z",
-          "url": "https://www.youtube.com/watch?v=hgTJtgIkQ2M",
-          "isShort": false,
-          "score": 15,
           "category": "race-runs"
         }
       ]
