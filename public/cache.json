@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-09T22:38:19.351Z",
-  "totalItems": 49,
+  "builtAt": "2026-08-09T23:37:50.844Z",
+  "totalItems": 48,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -504,23 +504,6 @@
           "isShort": false,
           "score": 12,
           "category": "race-runs"
-        },
-        {
-          "id": "t83hD-vHfu8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Flat out in Andorra with Nina Hoffman, Bodhi Kuhn and Jordi Cortes - The Setup | FOX",
-          "description": "The dust has barely settled on the La Thuile DH track, but we are already back at it. \n \nJust a few days between rounds to repack the trucks, cross Europe, and do it all over again. For the athletes, their teams, and of course FOX Factory, there is no switching off at this point in the season. You take what you learned last week and get back to work.\n \nAnd there was plenty to take from La Thuile. Asa Vermette, who kicked off the season with that rookie win in Korea, is back on the podium for the third time, finishing second and making it clear he's not going anywhere. Then there's Jackson Goldstone. After a slow start to 2026, he's finally looking like himself again. Third place in La Thuile is a strong signal that the Jackson who closed out 2025 on a tear might just be back.\n \nBut it wasn't just the front-runners making noise last round. Bodhi Kuhn, who has been building momentum over the last few races, picked up his first career top 10, while Nina Hoffmann backed up a solid Q1 performance with a season-best fifth place. The depth in this field is real. To keep progressing, the limits have to be pushed, and previous success guarantees nothing.\n \nNow we are in Pal Arinsal, Andorra, a tiny country in the Pyrenees that punches well above its weight in mountain sports. It's not the steepest track on the calendar, but it's one of the fastest, and with those high speeds, we expect to see some of the tightest margins of the season. Add in the hot weather we're experiencing, and the track should become dusty, blown out, and evolve rapidly from practice through to finals.\n\n#ANDORRA #RIDEFOX #THESETUP",
-          "thumbnail": "https://i.ytimg.com/vi/t83hD-vHfu8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-10T22:59:28Z",
-          "url": "https://www.youtube.com/watch?v=t83hD-vHfu8",
-          "isShort": false,
-          "score": 23,
-          "category": "race-runs"
         }
       ]
     },
@@ -628,7 +611,7 @@
           "title": "Gypsy Tales Podcast: Greg Minnaar on Honda MTB, Almost Quitting &amp; The Cost of Winning",
           "description": "2.5 hours of stories from Minnaar, covering everything from his first World Cup win at 19 to his World Champs victory at 39.( Comments: 41 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30099307/p2pb30099307.jpg",
-          "publishedAt": "2026-08-04T11:32:00.000Z",
+          "publishedAt": "2026-08-04T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/gypsy-tales-podcast-greg-minnaar-on-honda-mtb-almost-quitting-and-the-cost-of-winning.html?trk=rss",
           "categories": [],
           "score": 7,
