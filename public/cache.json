@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-09T13:04:44.963Z",
-  "totalItems": 65,
+  "builtAt": "2026-08-09T14:41:08.765Z",
+  "totalItems": 53,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -555,40 +555,6 @@
           "isShort": false,
           "score": 15,
           "category": "race-runs"
-        },
-        {
-          "id": "EqbWr018J9U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Oisin O`Callaghan is back in the finals! P11 in Q1 - 2026 UCI DH MTB world series",
-          "description": "Oisin O`Callaghan had a rough start of the 2026 DH world cup season with a lot of crashes. He is finally back in the main show tomorrow after finishing 11th in Q1 today, lets go Oisin!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/EqbWr018J9U/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-10T14:05:44Z",
-          "url": "https://www.youtube.com/watch?v=EqbWr018J9U",
-          "isShort": false,
-          "score": 11,
-          "category": "race-runs"
-        },
-        {
-          "id": "gu3E0kHA7z8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Asa Vermette P20 Q1 Andorra - 2026 UCI DH MTB world series",
-          "description": "Asa Vermette was shaking until the last rider has dropped in Q1 sitting in 20th place, he messed up the top section but it was just enough to go straight to tomorrows finals for round 6 of the UCI DH MTB world cup in Andorra!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/gu3E0kHA7z8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-10T13:58:40Z",
-          "url": "https://www.youtube.com/watch?v=gu3E0kHA7z8",
-          "isShort": false,
-          "score": 17,
-          "category": "race-runs"
         }
       ]
     },
@@ -717,23 +683,6 @@
           "url": "https://www.youtube.com/watch?v=99T5XcNLLZQ",
           "isShort": false,
           "score": 14,
-          "category": "paddock"
-        },
-        {
-          "id": "3Tjy_iOpr0k",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: ROUND 6 Andorra course preview with Jackson Goldstone - 2026 UCI DH MTB World Series -",
-          "description": "\"We Are in Andorra and welcome back to the podcast\" press play and listen to the full course preview with Jackson Goldstone at the 6th Round of the 2026 UCI DH MTB world series in Andorra!\n\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/3Tjy_iOpr0k/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-10T13:58:16Z",
-          "url": "https://www.youtube.com/watch?v=3Tjy_iOpr0k",
-          "isShort": false,
-          "score": 15,
           "category": "paddock"
         }
       ]
