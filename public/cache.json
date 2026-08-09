@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-09T14:41:08.765Z",
-  "totalItems": 53,
+  "builtAt": "2026-08-09T15:38:10.324Z",
+  "totalItems": 52,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -535,23 +535,6 @@
           "thumbnailHeight": 720,
           "publishedAt": "2026-07-10T20:17:33Z",
           "url": "https://www.youtube.com/watch?v=hgTJtgIkQ2M",
-          "isShort": false,
-          "score": 15,
-          "category": "race-runs"
-        },
-        {
-          "id": "T25xAKxC3hI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Dakotah Norton P18 in Q1 Andorra - 2026 UCI DH MTB world series -",
-          "description": "Dakotah Norton goes straight to the finals with a P18 finish at the qualifier 1 in Andorra. The track was loose and easy to make mistakes so he kept it consistend and secured him another spot in the finals in 2026.\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/T25xAKxC3hI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-10T15:31:05Z",
-          "url": "https://www.youtube.com/watch?v=T25xAKxC3hI",
           "isShort": false,
           "score": 15,
           "category": "race-runs"
