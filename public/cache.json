@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-10T17:00:07.849Z",
-  "totalItems": 26,
+  "builtAt": "2026-08-10T17:58:24.318Z",
+  "totalItems": 24,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -192,23 +192,6 @@
           "isShort": true,
           "score": 17,
           "category": "shorts"
-        },
-        {
-          "id": "WkRi7vK_BPE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "What a performance from Jordan Williams 🔥",
-          "description": "What a performance from Jordan Williams 🔥\n\nIt was all in the details to put down the winning run 🥇\n\n📍Pal Arinsal, Andorra 🏁 Men's Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/WkRi7vK_BPE/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-11T17:31:02Z",
-          "url": "https://www.youtube.com/watch?v=WkRi7vK_BPE",
-          "isShort": true,
-          "score": 20,
-          "category": "shorts"
         }
       ]
     },
@@ -223,9 +206,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Smoke Cancels Downhill Finals as Crankworx SilverStar 2026 Concludes",
-          "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 31 )",
+          "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 42 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30112085/p2pb30112085.jpg",
-          "publishedAt": "2026-08-10T11:59:00.000Z",
+          "publishedAt": "2026-08-10T11:57:00.000Z",
           "url": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -446,29 +429,6 @@
           "isShort": false,
           "score": 14,
           "category": "paddock"
-        }
-      ]
-    },
-    "news": {
-      "id": "news",
-      "label": "News",
-      "items": [
-        {
-          "id": "qfg1qcEYSTM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Reece Wilson second place run in andorra - 2026 UCI DH MTB world series -",
-          "description": "What a run from Reece Wilson in Pal Arinsal, Andorra securing him the second place at the 6th round of the 2026 UCI DH MTB world series.\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/qfg1qcEYSTM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-11T17:56:39Z",
-          "url": "https://www.youtube.com/watch?v=qfg1qcEYSTM",
-          "isShort": false,
-          "score": 14,
-          "category": "news"
         }
       ]
     }
