@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-10T17:58:24.318Z",
-  "totalItems": 24,
+  "builtAt": "2026-08-10T19:09:25.450Z",
+  "totalItems": 22,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -175,23 +175,6 @@
           "isShort": true,
           "score": 10,
           "category": "shorts"
-        },
-        {
-          "id": "J2XVoAPBuJU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Running a team and still taking podiums 🔥",
-          "description": "Running a team and still taking podiums 🔥\n\n📍Pal Arinsal, Andorra 🏁 Men's Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/J2XVoAPBuJU/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-11T18:00:57Z",
-          "url": "https://www.youtube.com/watch?v=J2XVoAPBuJU",
-          "isShort": true,
-          "score": 17,
-          "category": "shorts"
         }
       ]
     },
@@ -206,7 +189,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Smoke Cancels Downhill Finals as Crankworx SilverStar 2026 Concludes",
-          "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 42 )",
+          "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 50 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30112085/p2pb30112085.jpg",
           "publishedAt": "2026-08-10T11:57:00.000Z",
           "url": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
@@ -371,23 +354,6 @@
           "url": "https://www.youtube.com/watch?v=ZsnyLH2iPKw",
           "isShort": false,
           "score": 17,
-          "category": "results"
-        },
-        {
-          "id": "wR45CWnVbxA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "ANDORRA WORLDCUP WRAP UP!!",
-          "description": "Andorra was a roller coster! Overall we did really well with Jenna getting an overall 5th place and Roger hitting it hard with 13th, these results are their best ever!! Which makes me super proud after all the hard work wev'e been through to get here. Sadly Dylan had a big mistake in the top rock garden which set him back to 25th. We all know he's a top rider and has it in him to walk away with a podium so buckle up and we'll see you at the next round sports fans!! \n\nShot on #sony & #dji \n\n#dji #mtb #bksport #downhill #mountainbike #pivot #mtblife #continental #shimano #fox",
-          "thumbnail": "https://i.ytimg.com/vi/wR45CWnVbxA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-11T18:45:29Z",
-          "url": "https://www.youtube.com/watch?v=wR45CWnVbxA",
-          "isShort": false,
-          "score": 8,
           "category": "results"
         }
       ]
