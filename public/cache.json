@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-10T06:15:39.299Z",
-  "totalItems": 47,
+  "builtAt": "2026-08-10T08:44:45.239Z",
+  "totalItems": 46,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -600,21 +600,6 @@
           "url": "https://www.youtube.com/watch?v=6c2DL2XPIdk",
           "isShort": false,
           "score": 9,
-          "category": "paddock"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/gypsy-tales-podcast-greg-minnaar-on-honda-mtb-almost-quitting-and-the-cost-of-winning.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Gypsy Tales Podcast: Greg Minnaar on Honda MTB, Almost Quitting &amp; The Cost of Winning",
-          "description": "2.5 hours of stories from Minnaar, covering everything from his first World Cup win at 19 to his World Champs victory at 39.( Comments: 41 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30099307/p2pb30099307.jpg",
-          "publishedAt": "2026-08-04T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/gypsy-tales-podcast-greg-minnaar-on-honda-mtb-almost-quitting-and-the-cost-of-winning.html?trk=rss",
-          "categories": [],
-          "score": 7,
           "category": "paddock"
         },
         {
