@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-08-11T13:20:17.640Z",
+  "builtAt": "2026-08-11T19:11:15.164Z",
   "totalItems": 20,
   "categories": {
     "shorts": {
@@ -158,23 +158,6 @@
           "isShort": true,
           "score": 22,
           "category": "shorts"
-        },
-        {
-          "id": "PJm431stimc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "The real VIP has arrived 🐾",
-          "description": "The real VIP has arrived 🐾\n\nVictor Koretzky brought Pacha into the studio, and it's fair to say he was in an instant hit 🤩\n\n📍Pal Arinsal, Andorra 🏁 UCI Mountain Bike World Series\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/PJm431stimc/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-12T13:28:35Z",
-          "url": "https://www.youtube.com/watch?v=PJm431stimc",
-          "isShort": true,
-          "score": 10,
-          "category": "shorts"
         }
       ]
     },
@@ -183,15 +166,32 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "KoNARQpaabg",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "The Fight | THE GRIND - Episode 2 | A Monster Energy Documentary Series",
+          "description": "Nine rounds. Three riders. One season.\n\nThe races keep coming, the fatigue is growing, and the pressure is always there.\n\nFollow Luca Martin, Gwendalyn Gibson and Charlie Aldridge through the next chapter of the 2026 UCI Cross-Country World Cup season, as they take on Lenzerheide, La Thuile and Pal Arinsal.\n\nAt this stage of the season, the roles are beginning to take shape. Luca is fighting to defend the overall lead after an incredible run of results. Charlie is fighting his way back to his best after a difficult start to the season. Gwendalyn continues to deliver consistent results while facing the growing physical demands of the UCI World Cup circuit.\n\nFrom intense battles on the course to crashes, recovery, team briefings and the moments between races, Episode 2 goes beyond the results to explore what it takes to keep pushing when the season starts to take its toll.\n\nThree riders. Three different battles. One season that is only getting harder.\n\nMore than a race recap, The Grind explores the people behind the results, revealing the pressure, the fatigue, the setbacks, the rivalries and the reality of life on the UCI Cross-Country World Cup circuit.\n\nThe season is getting harder. The fight is just beginning.\n\nPresented by Monster Energy. 🟢\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/KoNARQpaabg/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-11T17:58:28Z",
+          "url": "https://www.youtube.com/watch?v=KoNARQpaabg",
+          "isShort": false,
+          "score": 10,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Smoke Cancels Downhill Finals as Crankworx SilverStar 2026 Concludes",
-          "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 86 )",
+          "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 93 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30112085/p2pb30112085.jpg",
-          "publishedAt": "2026-08-10T11:55:00.000Z",
+          "publishedAt": "2026-08-10T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -272,6 +272,23 @@
       "label": "Results",
       "items": [
         {
+          "id": "PK2QDxibaWY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "PRIVATEER PROJECT EP2 LA THUILE 2026",
+          "description": "The level of World Cup Downhill is currently maybe the highest its ever been, making it tough for Privateers and small teams like the Privateer Project but Luke is riding well and actually not far off, hopefully by the end of the season he can make it happen, here we follow him and the team through the race week in La Thuile.\n\nVideo by MCDMedia\n\n\nYou can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/PK2QDxibaWY/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-11T18:22:01Z",
+          "url": "https://www.youtube.com/watch?v=PK2QDxibaWY",
+          "isShort": false,
+          "score": 19,
+          "category": "results"
+        },
+        {
           "id": "e6vFe-1qvVw",
           "type": "video",
           "source": "youtube",
@@ -303,23 +320,6 @@
           "url": "https://www.youtube.com/watch?v=qj7Fmshcr5g",
           "isShort": false,
           "score": 13,
-          "category": "results"
-        },
-        {
-          "id": "ZsnyLH2iPKw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "His Peers Thought He Was Crazy Until This Race",
-          "description": "Downhill World Cup Round 6 in Pal Arinsal, Andorra is done and..... dusted. Ben Recaps the best moments, the wildest results, how the overall series is looking and gives his opinion on how Jordan Williams made up so much time on the lower slopes.\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/ZsnyLH2iPKw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-12T16:00:32Z",
-          "url": "https://www.youtube.com/watch?v=ZsnyLH2iPKw",
-          "isShort": false,
-          "score": 17,
           "category": "results"
         }
       ]
