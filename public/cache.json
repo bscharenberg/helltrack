@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-12T19:11:00.174Z",
-  "totalItems": 21,
+  "builtAt": "2026-08-12T20:54:07.278Z",
+  "totalItems": 20,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -141,23 +141,6 @@
           "isShort": true,
           "score": 12,
           "category": "shorts"
-        },
-        {
-          "id": "hdN7NbFFpvE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Built, backed and raced by Reece 👊",
-          "description": "Built, backed and raced by Reece 👊\n\nFrom a devastating injury to launching his own team and standing on the UCI Downhill World Cup podium, Reece Wilson's DHI journey is a brilliant story of perseverance 🤩",
-          "thumbnail": "https://i.ytimg.com/vi/hdN7NbFFpvE/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-13T20:01:20Z",
-          "url": "https://www.youtube.com/watch?v=hdN7NbFFpvE",
-          "isShort": true,
-          "score": 22,
-          "category": "shorts"
         }
       ]
     },
@@ -191,7 +174,7 @@
           "title": "Smoke Cancels Downhill Finals as Crankworx SilverStar 2026 Concludes",
           "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 98 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30112085/p2pb30112085.jpg",
-          "publishedAt": "2026-08-10T11:44:00.000Z",
+          "publishedAt": "2026-08-10T11:42:00.000Z",
           "url": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -229,23 +212,6 @@
           "url": "https://www.youtube.com/watch?v=FuZ5kLYs5YU",
           "isShort": false,
           "score": 15,
-          "category": "race-runs"
-        },
-        {
-          "id": "ivUmmfRwW-E",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Reece Returns. Riley Makes History. | THE B LINE 🇦🇩 | WHOOP UCI MTB World Series",
-          "description": "The racing in Pal Arinsal delivered breakthrough performances, emotional podiums and another weekend of unforgettable UCI World Cup action.\n\nJoin Ashleigh Wilmot and Emma Stewart as they look back on an action-packed weekend of UCI Cross-country Olympic, Short Track and Downhill World Cups, bringing you exclusive interviews with the riders behind the biggest stories.\n\nHear from Reece Wilson after his return to the UCI World Cup podium aboard the bike and team he built himself, Ryan Pinkerton following his first Elite UCI World Cup podium, and Vali Höll as she continues her incredible season with a fifth victory in six races.\n\nIn Cross-country, Ashleigh speaks with Adrien Boichis and Luca Schwarzbauer after an incredible weekend in Pal Arinsal, as the title battles continue to build and the season reaches its business end.\n\nGo beyond the results and get to know the stars behind the racing. From career-defining moments and honest reflections to behind-the-scenes insight you won't get anywhere else, this is everything you need to know from an unforgettable weekend in Andorra.\n\n⏰ Timestamps:\n0:00 - INTRO\n0:19 - HEADLINES\n02:20 - DOWNHILL\n13:26 - CROSS-COUNTRY\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/ivUmmfRwW-E/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-13T19:41:02Z",
-          "url": "https://www.youtube.com/watch?v=ivUmmfRwW-E",
-          "isShort": false,
-          "score": 27,
           "category": "race-runs"
         }
       ]
@@ -369,6 +335,21 @@
           "category": "news"
         },
         {
+          "id": "https://www.pinkbike.com/news/cypress-mountain-to-open-bike-park-operations-in-summer-2027.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Cypress Mountain Announces Bike Park Return for Summer 2027",
+          "description": "Following Grouse Mountain&#039;s recent opening and ahead of Red Bull Hardline, Cypress receives BC Parks approval to build a Gravity Logic-designed bike park 20 years after shutting down.( Photos: 1, Comments: 15 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30130806/p2pb30130806.jpg",
+          "publishedAt": "2026-08-12T12:00:00.000Z",
+          "url": "https://www.pinkbike.com/news/cypress-mountain-to-open-bike-park-operations-in-summer-2027.html?trk=rss",
+          "categories": [],
+          "score": 7,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-wyns-privateer-project-episode-2-la-thuile-world-cup-dh.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -377,7 +358,7 @@
           "title": "Video: Wyn's Privateer Project Episode 2 - La Thuile World Cup DH",
           "description": "It&#039;s a tough time to be a privateer in World Cup DH, but Luke Williamson is trying to make it happen.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30126691/p2pb30126691.jpg",
-          "publishedAt": "2026-08-12T11:56:00.000Z",
+          "publishedAt": "2026-08-12T11:54:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyns-privateer-project-episode-2-la-thuile-world-cup-dh.html?trk=rss",
           "categories": [],
           "score": 9,
