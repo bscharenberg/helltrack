@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-12T15:04:27.681Z",
-  "totalItems": 20,
+  "builtAt": "2026-08-12T17:03:10.482Z",
+  "totalItems": 21,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -191,7 +191,7 @@
           "title": "Smoke Cancels Downhill Finals as Crankworx SilverStar 2026 Concludes",
           "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 98 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30112085/p2pb30112085.jpg",
-          "publishedAt": "2026-08-10T11:46:00.000Z",
+          "publishedAt": "2026-08-10T11:44:00.000Z",
           "url": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -352,15 +352,32 @@
       "label": "News",
       "items": [
         {
+          "id": "AqJjMOIff7k",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "1199 | On Track with FOX",
+          "description": "1199 delivered. \n\nOn home soil, Jackson Goldstone put down a statement run to take the win at Crankworx Whistler, charging one of the most demanding tracks in the world.\n\nAnd that was just a sample. In September, the world’s best downhill racers return to 1199 for the UCI Downhill World Cup — September 25–27, 2026.\n\nThe stage is set. See you back on 1199.",
+          "thumbnail": "https://i.ytimg.com/vi/AqJjMOIff7k/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-12T16:09:12Z",
+          "url": "https://www.youtube.com/watch?v=AqJjMOIff7k",
+          "isShort": false,
+          "score": 20,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-wyns-privateer-project-episode-2-la-thuile-world-cup-dh.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Wyn's Privateer Project Episode 2 - La Thuile World Cup DH",
-          "description": "It&#039;s a tough time to be a privateer in World Cup DH, but Luke Williamson is trying to make it happen.( Comments: 1 )",
+          "description": "It&#039;s a tough time to be a privateer in World Cup DH, but Luke Williamson is trying to make it happen.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30126691/p2pb30126691.jpg",
-          "publishedAt": "2026-08-12T11:59:00.000Z",
+          "publishedAt": "2026-08-12T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyns-privateer-project-episode-2-la-thuile-world-cup-dh.html?trk=rss",
           "categories": [],
           "score": 9,
