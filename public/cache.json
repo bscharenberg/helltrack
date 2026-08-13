@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-08-13T08:26:06.594Z",
+  "builtAt": "2026-08-13T15:04:02.268Z",
   "totalItems": 20,
   "categories": {
     "shorts": {
@@ -124,23 +124,6 @@
           "isShort": true,
           "score": 7,
           "category": "shorts"
-        },
-        {
-          "id": "2SqbVOe1lWI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Success is a team effort 🤝",
-          "description": "Success is a team effort 🤝\n\nRyan Pinkerton explains why every podium is a reward for the team that backs him every step of the way. 👊\n\n📺 Watch the latest episode of The B Line now on the WHOOP UCI Mountain Bike World Series YouTube channel.",
-          "thumbnail": "https://i.ytimg.com/vi/2SqbVOe1lWI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-14T08:31:03Z",
-          "url": "https://www.youtube.com/watch?v=2SqbVOe1lWI",
-          "isShort": true,
-          "score": 12,
-          "category": "shorts"
         }
       ]
     },
@@ -174,7 +157,7 @@
           "title": "Smoke Cancels Downhill Finals as Crankworx SilverStar 2026 Concludes",
           "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 99 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30112085/p2pb30112085.jpg",
-          "publishedAt": "2026-08-10T11:37:00.000Z",
+          "publishedAt": "2026-08-10T11:32:00.000Z",
           "url": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -318,6 +301,21 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-luke-meier-smiths-race-run-pov-from-the-crankworx-silverstar-downhill.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Luke Meier-Smith's Winning POV from the Crankworx SilverStar Downhill",
+          "description": "Join Luke Meier-Smith for his winning ride at Crankworx SilverStar.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30133805/p2pb30133805.jpg",
+          "publishedAt": "2026-08-13T11:55:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-luke-meier-smiths-race-run-pov-from-the-crankworx-silverstar-downhill.html?trk=rss",
+          "categories": [],
+          "score": 7,
+          "category": "news"
+        },
+        {
           "id": "AqJjMOIff7k",
           "type": "video",
           "source": "youtube",
@@ -341,9 +339,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Cypress Mountain Announces Bike Park Return for Summer 2027",
-          "description": "Following Grouse Mountain&#039;s recent opening and ahead of Red Bull Hardline, Cypress receives BC Parks approval to build a Gravity Logic-designed bike park 20 years after shutting down.( Photos: 1, Comments: 40 )",
+          "description": "Following Grouse Mountain&#039;s recent opening and ahead of Red Bull Hardline, Cypress receives BC Parks approval to build a Gravity Logic-designed bike park 20 years after shutting down.( Photos: 1, Comments: 53 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30130806/p2pb30130806.jpg",
-          "publishedAt": "2026-08-12T11:57:00.000Z",
+          "publishedAt": "2026-08-12T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/cypress-mountain-to-open-bike-park-operations-in-summer-2027.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -358,7 +356,7 @@
           "title": "Video: Wyn's Privateer Project Episode 2 - La Thuile World Cup DH",
           "description": "It&#039;s a tough time to be a privateer in World Cup DH, but Luke Williamson is trying to make it happen.( Comments: 3 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30126691/p2pb30126691.jpg",
-          "publishedAt": "2026-08-12T11:49:00.000Z",
+          "publishedAt": "2026-08-12T11:44:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyns-privateer-project-episode-2-la-thuile-world-cup-dh.html?trk=rss",
           "categories": [],
           "score": 9,
