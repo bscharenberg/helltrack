@@ -78,7 +78,7 @@ const INCLUDE_KEYWORDS = [
 
   // DH-only WC athletes — pass on name alone (these riders only race DH)
   { terms: ['loic bruni', 'jackson goldstone', 'finn iles', 'reece wilson',
-            'nina hoffmann', 'vali holl', 'valentina holl', 'marine cabirou',
+            'nina hoffmann', 'vali holl', 'vali höll', 'valentina holl', 'valentina höll', 'marine cabirou',
             'amaury pierron', 'thibaut daprela', 'gracey hemstreet',
             'myriam nicole', 'tahnee seagrave', 'camille balanche',
             'monika hrastnik', 'eleonora farina',
@@ -121,7 +121,12 @@ const EXCLUDE_KEYWORDS = [
   // "uci xco" / "uci xcc" match all known variants ("Elite UCI XCO", "UCI XCO World Cup",
   // "Elite Women's UCI XCO") without matching the generic boilerplate footer, which says
   // "Cross-country Olympic (XCO)" without "UCI" adjacent.
-  { terms: ['elite xco', 'elite xcc', 'elite uci xco', 'elite uci xcc', 'uci xco', 'uci xcc'], weight: 15 },
+  // 'uci xco world cup' / 'uci xcc world cup' catch per-video race tags like
+  // "Elite Women's UCI XCO World Cup" without hitting DHI boilerplate that
+  // lists formats as "UCI XCO: cross-country Olympic" (no "World Cup" suffix).
+  { terms: ['elite xco', 'elite xcc', 'elite uci xco', 'elite uci xcc',
+            'uci xco world cup', 'uci xcc world cup',
+            "women's uci xco", "men's uci xco", "women's uci xcc", "men's uci xcc"], weight: 15 },
   { terms: ['mtbws highlights'], weight: 8, titleOnly: true },
 
   // Enduro — out of scope for Helltrack (DH only)

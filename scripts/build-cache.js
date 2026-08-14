@@ -91,8 +91,10 @@ async function buildCache() {
   // Safety guard: a source outage (YouTube quota exhausted, RSS proxy down) makes the
   // fetchers return [] silently, which would otherwise write an empty cache.json and
   // blank the live feed for up to an hour. Refuse to overwrite when the yield is
-  // implausibly low — normal builds pass ~150–175 items. Leaves the existing cache intact.
-  if (filtered.length < 20) {
+  // implausibly low. Threshold is intentionally low (< 10) to survive inter-round gaps
+  // (6+ weeks between some rounds) where the 30-day recency window has no race content
+  // to show — the real outage signal is approaching 0, not 18.
+  if (filtered.length < 10) {
     console.error(`\n💥 Only ${filtered.length} items passed — refusing to overwrite cache.json (likely a source outage). Existing cache left untouched.`)
     process.exit(1)
   }

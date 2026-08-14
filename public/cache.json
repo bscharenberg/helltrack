@@ -1,11 +1,45 @@
 {
-  "builtAt": "2026-08-13T15:04:02.268Z",
-  "totalItems": 20,
+  "builtAt": "2026-08-14T19:06:52.917Z",
+  "totalItems": 19,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "EqxixC8r2ps",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "On the hunt for stage wins! 💪",
+          "description": "Follow UCI EDR World Cup race winner Mélanie Pugin down Stage 2 in Morillon! 👀 Can she bring the fight to Ella Conolly this weekend to secure the Overall Title?\n\n📍Morillon, Haute-Savoie 🏁 UCI EDR World Cup Training Day 1\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/EqxixC8r2ps/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-13T17:19:22Z",
+          "url": "https://www.youtube.com/watch?v=EqxixC8r2ps",
+          "isShort": true,
+          "score": 11,
+          "category": "shorts"
+        },
+        {
+          "id": "XseWjws_PTs",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A truly unstoppable force! 💪 Vali Höll 👏",
+          "description": "A truly unstoppable force! 💪 Vali Höll 👏\n\nThe Austrian superstar has won 5 out of 6 UCI Downhill World Cups in 2026! 🤯",
+          "thumbnail": "https://i.ytimg.com/vi/XseWjws_PTs/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-08T09:56:19Z",
+          "url": "https://www.youtube.com/watch?v=XseWjws_PTs",
+          "isShort": true,
+          "score": 14,
+          "category": "shorts"
+        },
         {
           "id": "TG8UvYoeh_M",
           "type": "video",
@@ -149,21 +183,6 @@
           "category": "race-runs"
         },
         {
-          "id": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Smoke Cancels Downhill Finals as Crankworx SilverStar 2026 Concludes",
-          "description": "Wildfire smoke forces DH seeding runs to stand as final results, crowning Mille Johnset and Luke Meier-Smith while Ben Thompson and Alma Wiggberg take Slopestyle gold.( Photos: 4, Comments: 99 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30112085/p2pb30112085.jpg",
-          "publishedAt": "2026-08-10T11:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/crankworxsilverstar2026-delivers-historic-racing-and-good-vibes-smoke-cuts-dh.html?trk=rss",
-          "categories": [],
-          "score": 9,
-          "category": "race-runs"
-        },
-        {
           "id": "m0wMPjiRAwk",
           "type": "video",
           "source": "youtube",
@@ -236,23 +255,6 @@
           "isShort": false,
           "score": 10,
           "category": "results"
-        },
-        {
-          "id": "qj7Fmshcr5g",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYN TV LES ORRES IXS CUP 2026",
-          "description": "You can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nI headed to the IXS Cup in Les Orres, France to support the IXS Gravity Alliance and also learn more about the stars of the future, as the kids racing here have some insane talent and will be on the World Cup circuit soon.\n\nVideo by Linus Zettler\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/qj7Fmshcr5g/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-14T17:30:37Z",
-          "url": "https://www.youtube.com/watch?v=qj7Fmshcr5g",
-          "isShort": false,
-          "score": 13,
-          "category": "results"
         }
       ]
     },
@@ -307,9 +309,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Luke Meier-Smith's Winning POV from the Crankworx SilverStar Downhill",
-          "description": "Join Luke Meier-Smith for his winning ride at Crankworx SilverStar.",
+          "description": "Join Luke Meier-Smith for his winning ride at Crankworx SilverStar.( Comments: 10 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30133805/p2pb30133805.jpg",
-          "publishedAt": "2026-08-13T11:55:00.000Z",
+          "publishedAt": "2026-08-13T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/video-luke-meier-smiths-race-run-pov-from-the-crankworx-silverstar-downhill.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -339,27 +341,12 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Cypress Mountain Announces Bike Park Return for Summer 2027",
-          "description": "Following Grouse Mountain&#039;s recent opening and ahead of Red Bull Hardline, Cypress receives BC Parks approval to build a Gravity Logic-designed bike park 20 years after shutting down.( Photos: 1, Comments: 53 )",
+          "description": "Following Grouse Mountain&#039;s recent opening and ahead of Red Bull Hardline, Cypress receives BC Parks approval to build a Gravity Logic-designed bike park 20 years after shutting down.( Photos: 1, Comments: 73 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30130806/p2pb30130806.jpg",
-          "publishedAt": "2026-08-12T11:52:00.000Z",
+          "publishedAt": "2026-08-12T11:35:00.000Z",
           "url": "https://www.pinkbike.com/news/cypress-mountain-to-open-bike-park-operations-in-summer-2027.html?trk=rss",
           "categories": [],
           "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-wyns-privateer-project-episode-2-la-thuile-world-cup-dh.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Wyn's Privateer Project Episode 2 - La Thuile World Cup DH",
-          "description": "It&#039;s a tough time to be a privateer in World Cup DH, but Luke Williamson is trying to make it happen.( Comments: 3 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30126691/p2pb30126691.jpg",
-          "publishedAt": "2026-08-12T11:44:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-wyns-privateer-project-episode-2-la-thuile-world-cup-dh.html?trk=rss",
-          "categories": [],
-          "score": 9,
           "category": "news"
         }
       ]
