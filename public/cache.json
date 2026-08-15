@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-15T19:25:58.573Z",
-  "totalItems": 16,
+  "builtAt": "2026-08-15T20:29:53.932Z",
+  "totalItems": 17,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -285,6 +285,21 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/finn-iles-sidelined-after-fracturing-his-ankle.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Finn Iles Sidelined After Fracturing his Ankle",
+          "description": "Finn Iles says he is working to be back on the bike as soon as possible.( Photos: 1, Comments: 6 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29990042/p2pb29990042.jpg",
+          "publishedAt": "2026-08-15T11:59:00.000Z",
+          "url": "https://www.pinkbike.com/news/finn-iles-sidelined-after-fracturing-his-ankle.html?trk=rss",
+          "categories": [],
+          "score": 6,
+          "category": "news"
+        },
         {
           "id": "AqJjMOIff7k",
           "type": "video",
