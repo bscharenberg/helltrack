@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-15T15:27:49.392Z",
-  "totalItems": 17,
+  "builtAt": "2026-08-15T16:32:20.446Z",
+  "totalItems": 16,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -140,23 +140,6 @@
           "url": "https://www.youtube.com/watch?v=3azILA1bmv8",
           "isShort": true,
           "score": 8,
-          "category": "shorts"
-        },
-        {
-          "id": "oeuIBp83qVM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Service days in the FOX pit. Check out that wall of FOX 40s!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/oeuIBp83qVM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-16T16:08:09Z",
-          "url": "https://www.youtube.com/watch?v=oeuIBp83qVM",
-          "isShort": true,
-          "score": 7,
           "category": "shorts"
         }
       ]
