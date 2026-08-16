@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-16T22:28:00.654Z",
-  "totalItems": 16,
+  "builtAt": "2026-08-16T23:26:31.690Z",
+  "totalItems": 15,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -123,23 +123,6 @@
           "url": "https://www.youtube.com/watch?v=Q38G9V_x9gA",
           "isShort": true,
           "score": 9,
-          "category": "shorts"
-        },
-        {
-          "id": "3azILA1bmv8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Nina Hoffman and Remi Gauvin chat about her race run in Andorra!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/3azILA1bmv8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-17T23:09:54Z",
-          "url": "https://www.youtube.com/watch?v=3azILA1bmv8",
-          "isShort": true,
-          "score": 8,
           "category": "shorts"
         }
       ]
@@ -275,7 +258,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Finn Iles Sidelined After Fracturing his Ankle",
-          "description": "Finn Iles says he is working to be back on the bike as soon as possible.( Photos: 1, Comments: 32 )",
+          "description": "Finn Iles says he is working to be back on the bike as soon as possible.( Photos: 1, Comments: 33 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29990042/p2pb29990042.jpg",
           "publishedAt": "2026-08-15T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/finn-iles-sidelined-after-fracturing-his-ankle.html?trk=rss",
