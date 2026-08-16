@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-16T21:26:23.996Z",
-  "totalItems": 17,
+  "builtAt": "2026-08-16T22:28:00.654Z",
+  "totalItems": 16,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -180,23 +180,6 @@
           "url": "https://www.youtube.com/watch?v=m0wMPjiRAwk",
           "isShort": false,
           "score": 17,
-          "category": "race-runs"
-        },
-        {
-          "id": "FuZ5kLYs5YU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: These races are fast! Reece Wilson (2nd) vs Asa Vermette (4th) - Andorra - UCI Downhill MTB",
-          "description": "Reece Wilson is back up on the podium with an outstanding performance but holy moly the times are tight these days. Asa Vermette pulled time back in the final sector almost taking the podium but just getting beat out to take a 4th place finish. \n\nJump on board the GoPro POV to check all the action and compare runs. \n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/FuZ5kLYs5YU/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-17T22:21:06Z",
-          "url": "https://www.youtube.com/watch?v=FuZ5kLYs5YU",
-          "isShort": false,
-          "score": 15,
           "category": "race-runs"
         }
       ]
