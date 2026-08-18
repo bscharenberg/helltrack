@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-18T13:50:25.514Z",
-  "totalItems": 19,
+  "builtAt": "2026-08-18T14:40:16.169Z",
+  "totalItems": 21,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -172,6 +172,23 @@
       "label": "Results",
       "items": [
         {
+          "id": "2O9Yro_sHDk",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCXqlds5f7B2OOs9vQuevl4A",
+          "channelName": "Red Bull Bike",
+          "title": "The Fastest Man in Ireland (Ronan Dunne)",
+          "description": "Ronan Dunne races the clock on his home-built black track in Djouce Wood, Ireland. \nOne target: under 55 seconds.\n\nThe double Red Bull Hardline winner grew up riding these woods in County Wicklow. Now he returns to the track he built himself, treating it like a personal time trial lab: full commitment through roots, rock gardens and blind hits, run after run, shaving tenths where most riders just survive.\n\nSubscribe to Red Bull Bike on Youtube: https://win.gs/SubRedBullBike\nGet the FREE Red Bull TV apps for all your devices: http://onelink.to/yfbct7\nWatch Red Bull TV: https://win.gs/WatchRBTVBike\n\nSee into our world: http://goo.gl/J49U\n\nFollow Red Bull Bike on:\nTiktok: https://www.tiktok.com/@redbullbike\nInstagram: https://www.instagram.com/redbullbike/\nFacebook: https://www.facebook.com/RedBullBike/",
+          "thumbnail": "https://i.ytimg.com/vi/2O9Yro_sHDk/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-18T14:00:38Z",
+          "url": "https://www.youtube.com/watch?v=2O9Yro_sHDk",
+          "isShort": false,
+          "score": 12,
+          "category": "results"
+        },
+        {
           "id": "PK2QDxibaWY",
           "type": "video",
           "source": "youtube",
@@ -211,6 +228,23 @@
       "id": "paddock",
       "label": "Pits",
       "items": [
+        {
+          "id": "uVwpiFMX2Mg",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "The Rider Who Couldn't Qualify... Then Won a World Cup | Ronan Dunne on Just Ride",
+          "description": "Ronan Dunne joins Rob Warner and Eliot Jackson for one of the most honest conversations yet on Just Ride.\n\nFrom missing qualifications and battling serious injuries to winning UCI Downhill World Cups and Red Bull Hardline, Ronan shares how his mindset has evolved, why he still embraces risk, and what it really takes to compete at the very top of downhill racing.\n\nThey also dive into training, recovery, Red Bull Hardline, growing up in Ireland, and the journey from being known as the \"wild man\" to becoming one of the fastest riders in the sport.\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#hardline #redbull #justride \n\n00:00 - Ronan Dunne's Rise in Downhill MTB\n01:28 - How Ronan Dunne Broke His Leg\n03:14 - Dealing With Injuries in Downhill MTB\n05:29 - Recovering From a Red Bull Hardline Crash\n09:26 - How Growing Up on a Farm Shaped Ronan Dunne\n14:54 - How Ronan Dunne Started Mountain Biking\n17:25 - How Ronan Dunne Trains for Downhill Racing\n19:23 - Do Downhill MTB Riders Train Enough?\n21:07 - Can You Practice a Downhill Track Too Much?\n22:58 - How Many Downhill Runs Do Pro Riders Do?\n25:41 - Ronan Dunne's Wild Riding Style\n26:11 - Ronan Dunne's Journey From Junior to Pro\n28:46 - How Ronan Dunne Became a World Cup Contender\n33:04 - Ronan Dunne's Breakthrough at Snowshoe\n36:02 - Joining a Factory Downhill MTB Team\n38:02 - How Ronan Dunne Changed His Racing Mindset\n41:24 - Racing Against the World's Best Downhill Riders\n42:34 - Red Bull Hardline vs World Cup Downhill\n44:40 - What to Expect at Red Bull Hardline\n47:02 - Dealing With Pressure as a Top Downhill Racer\n48:44 - The Story Behind \"You Don't Know Me, Son\"\n49:53 - Why Ronan Dunne Embraces the \"Wild Man\" Reputation\n50:34 - The Next Generation of Downhill MTB\n52:07 - Ronan Dunne's Injury Comeback\n54:08 - Ronan Dunne's Plans for Next Season",
+          "thumbnail": "https://i.ytimg.com/vi/uVwpiFMX2Mg/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-18T14:00:28Z",
+          "url": "https://www.youtube.com/watch?v=uVwpiFMX2Mg",
+          "isShort": false,
+          "score": 26,
+          "category": "paddock"
+        },
         {
           "id": "6c2DL2XPIdk",
           "type": "video",
@@ -258,7 +292,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Les Gets DH World Cup Preview: Who’s Racing, How to Watch &amp; What to Expect",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in Les Gets.( Photos: 7, Comments: 2 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in Les Gets.( Photos: 7, Comments: 3 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26915516/p2pb26915516.jpg",
           "publishedAt": "2026-08-18T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-les-gets-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
@@ -273,7 +307,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Build Your Team Ahead of Round 7 - 2026 Les Gets DH World Cup",
-          "description": "It&#039;s time to start building your team for round seven of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 1 )",
+          "description": "It&#039;s time to start building your team for round seven of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
           "publishedAt": "2026-08-18T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-7-2026-les-gets-dh-world-cup.html?trk=rss",
