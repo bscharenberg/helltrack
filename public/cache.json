@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-08-19T07:45:01.147Z",
-  "totalItems": 24,
+  "builtAt": "2026-08-19T08:46:35.186Z",
+  "totalItems": 25,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "IuWtZbxRAsU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "One of the rides of the season 💥",
+          "description": "One of the rides of the season 💥\n\nGracey Hemstreet conquered the demanding conditions to take a brilliant Women Elite DHI victory in Les Gets in 2025 🚀",
+          "thumbnail": "https://i.ytimg.com/vi/IuWtZbxRAsU/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-19T08:17:50Z",
+          "url": "https://www.youtube.com/watch?v=IuWtZbxRAsU",
+          "isShort": true,
+          "score": 23,
+          "category": "shorts"
+        },
         {
           "id": "EqxixC8r2ps",
           "type": "video",
@@ -195,7 +212,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Finn Iles Is Out But Ronan Dunne Is Back | Up to Speed Les Gets 2026",
-          "description": "Ben Cathro covers the latest roster updates, injury news, and race predictions ahead of the Les Gets Downhill World Cup.( Comments: 3 )",
+          "description": "Ben Cathro covers the latest roster updates, injury news, and race predictions ahead of the Les Gets Downhill World Cup.( Comments: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30159219/p2pb30159219.jpg",
           "publishedAt": "2026-08-18T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/video-finn-iles-is-out-but-ronan-dunne-is-back--up-to-speed-les-gets-2026.html?trk=rss",
@@ -324,7 +341,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Ronan Dunne Unleashes Home-Built Track in 'Another Round'",
-          "description": "Up to 60 runs a week for Dunne on his own Irish downhill line with his mum helping out with shuttles.( Photos: 5, Comments: 30 )",
+          "description": "Up to 60 runs a week for Dunne on his own Irish downhill line with his mum helping out with shuttles.( Photos: 5, Comments: 32 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30156341/p2pb30156341.jpg",
           "publishedAt": "2026-08-18T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/video-ronan-dunne-unleashes-home-built-track-in-another-round.html?trk=rss",
@@ -339,7 +356,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Les Gets DH World Cup Preview: Rider List, How to Watch &amp; Race Favorites",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in Les Gets.( Photos: 7, Comments: 30 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Cup round in Les Gets.( Photos: 7, Comments: 32 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30156493/p2pb30156493.jpg",
           "publishedAt": "2026-08-18T11:55:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-les-gets-dh-world-cup-preview-whos-racing-how-to-watch-and-what-to-expect.html?trk=rss",
