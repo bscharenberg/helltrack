@@ -2,7 +2,6 @@
 
 ## Identity
 - **App name**: Helltrack
-- **Tagline**: "Me, I ride for me." — Cru Jones, RAD (1986)
 - **Domain**: helltrack.app (registered Porkbun, ~$15/yr renewal)
 - **Purpose**: UCI downhill race content aggregator + historical results database
 - **GitHub**: github.com/bscharenberg/helltrack
