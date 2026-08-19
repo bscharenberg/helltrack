@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-08-19T13:52:11.242Z",
+  "builtAt": "2026-08-19T14:40:40.491Z",
   "totalItems": 25,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "qzn3q3TzSxk",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A welcome return 🤩",
+          "description": "A welcome return 🤩\n\nAfter months on the sidelines with a broken tibia and fibula, Rónán Dunne is back racing at Les Gets, where he stood on the top step in 2025. 🏆\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/qzn3q3TzSxk/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-19T14:18:47Z",
+          "url": "https://www.youtube.com/watch?v=qzn3q3TzSxk",
+          "isShort": true,
+          "score": 10,
+          "category": "shorts"
+        },
         {
           "id": "IuWtZbxRAsU",
           "type": "video",
@@ -163,23 +180,6 @@
           "url": "https://www.youtube.com/watch?v=KoNARQpaabg",
           "isShort": false,
           "score": 10,
-          "category": "race-runs"
-        },
-        {
-          "id": "m0wMPjiRAwk",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Head 2 Head POV Comparison Elite Women - 1st vs 2nd - Vali Holl vs Gracey Hemstreet - Andorra",
-          "description": "Another GoPro POV Comparison head 2 head matchup for the ladies this time with Vali Holl vs Gracey Hemstreet in a tight matchup of the top riders taking 1st place and 2nd place at round 6 of the UCI DH MTB World Cup Finals.\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/m0wMPjiRAwk/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-07-20T14:29:12Z",
-          "url": "https://www.youtube.com/watch?v=m0wMPjiRAwk",
-          "isShort": false,
-          "score": 17,
           "category": "race-runs"
         }
       ]
@@ -341,7 +341,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Ronan Dunne Unleashes Home-Built Track in 'Another Round'",
-          "description": "Up to 60 runs a week for Dunne on his own Irish downhill line with his mum helping out with shuttles.( Photos: 5, Comments: 32 )",
+          "description": "Up to 60 runs a week for Dunne on his own Irish downhill line with his mum helping out with shuttles.( Photos: 5, Comments: 33 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30156341/p2pb30156341.jpg",
           "publishedAt": "2026-08-18T11:54:00.000Z",
           "url": "https://www.pinkbike.com/news/video-ronan-dunne-unleashes-home-built-track-in-another-round.html?trk=rss",
