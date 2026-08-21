@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-21T18:46:47.204Z",
-  "totalItems": 50,
+  "builtAt": "2026-08-21T19:30:14.435Z",
+  "totalItems": 51,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,13 +353,30 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "09GYAfQ3Mac",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "LET GETS WORDCUP MUD SLIDE!!!",
+          "description": "Well i wasn't even supposed to ride so what a day...a mechanical in Q1 and I thought we'd go for Q2 but it wasn't meant to be. So happy to see the speed is still there and we are leaving without hurting my knee!\n\nThe sqaud is on and finals day is on here in Les gets!\n\nLets go sports fans!\n\n#bksport #lesgets",
+          "thumbnail": "https://i.ytimg.com/vi/09GYAfQ3Mac/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-21T19:07:32Z",
+          "url": "https://www.youtube.com/watch?v=09GYAfQ3Mac",
+          "isShort": false,
+          "score": 9,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/reece-wallace-breaks-neck-and-hand-while-filming-in-alaska.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Reece Wallace Breaks Neck &amp; Hand While Filming in Alaska",
-          "description": "The Reece that didn&#039;t qualify for downhill finals in Les Gets.( Comments: 14 )",
+          "description": "The Reece that didn&#039;t qualify for downhill finals in Les Gets.( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30170794/p2pb30170794.jpg",
           "publishedAt": "2026-08-21T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/reece-wallace-breaks-neck-and-hand-while-filming-in-alaska.html?trk=rss",
@@ -374,7 +391,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Results: Elite Q2 Qualifying at the 2026 Les Gets DH World Cup",
-          "description": "The last-chance qualifier in Les Gets saw some of the sport&#039;s biggest names battle for a spot in finals.( Photos: 1, Comments: 57 )",
+          "description": "The last-chance qualifier in Les Gets saw some of the sport&#039;s biggest names battle for a spot in finals.( Photos: 1, Comments: 61 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-08-21T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/results-elite-q2-qualifying-at-the-2026-les-gets-dh-world-cup.html?trk=rss",
