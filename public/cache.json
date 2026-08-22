@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-22T19:27:31.826Z",
-  "totalItems": 84,
+  "builtAt": "2026-08-22T20:30:24.200Z",
+  "totalItems": 85,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -14,9 +14,9 @@
           "channelName": "UCI MTB World Series",
           "title": "World Cup winner problems 😂🏆",
           "description": "World Cup winner problems 😂🏆\n\nHattie Harnden was moments away from celebrating her first DHI World Cup victory on the podium. There was just one small problem... where was her helmet? 😭\n\n📍Les Gets, Haute-Savoie 🏁 Women’s Elite UCI DHI World Cup Final\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/iAbVUUjWUu8/hqdefault.jpg",
-          "thumbnailWidth": 480,
-          "thumbnailHeight": 360,
+          "thumbnail": "https://i.ytimg.com/vi/iAbVUUjWUu8/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
           "publishedAt": "2026-08-22T19:26:15Z",
           "url": "https://www.youtube.com/watch?v=iAbVUUjWUu8",
           "isShort": true,
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "ioPsZEwgSws",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Qualifying MADNESS in Les Gets! New episode of The Setup is live!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/ioPsZEwgSws/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-22T19:30:14Z",
+          "url": "https://www.youtube.com/watch?v=ioPsZEwgSws",
+          "isShort": false,
+          "score": 9,
+          "category": "race-runs"
+        },
+        {
           "id": "RJK2FwgXqTQ",
           "type": "video",
           "source": "youtube",
@@ -444,7 +461,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Results: 2026 Les Gets DH World Cup Elite Finals",
-          "description": "What a race! The 2026 Les Gets downhill World Cup delivered unbelievable racing.( Photos: 5, Comments: 154 )",
+          "description": "What a race! The 2026 Les Gets downhill World Cup delivered unbelievable racing.( Photos: 5, Comments: 168 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-08-22T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/results-2026-les-gets-dh-world-cup-elite-finals.html?trk=rss",
@@ -459,7 +476,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Elite Men's Winning Run from the 2026 Les Gets DH World Cup",
-          "description": "Another historic winning run in Les Gets.( Comments: 6 )",
+          "description": "Another historic winning run in Les Gets.( Comments: 14 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30174718/p2pb30174718.jpg",
           "publishedAt": "2026-08-22T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/video-elite-mens-winning-run-from-the-2026-les-gets-dh-world-cup.html?trk=rss",
@@ -658,23 +675,6 @@
           "isShort": false,
           "score": 14,
           "category": "race-runs"
-        },
-        {
-          "id": "3W8gYIAw3Fw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "VITAL RAW - LES GETS World Cup Downhill",
-          "description": "One of the craziest DH crashes we've ever seen opens up the Les Gets Vital RAW of 2026. The track is fast, the dirt was great (for now) and the riders were pinned. Get stoked! Filmed by John Lawlor",
-          "thumbnail": "https://i.ytimg.com/vi/3W8gYIAw3Fw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-20T18:07:18Z",
-          "url": "https://www.youtube.com/watch?v=3W8gYIAw3Fw",
-          "isShort": false,
-          "score": 16,
-          "category": "race-runs"
         }
       ]
     },
@@ -795,7 +795,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Race Highlights: 2026 Les Gets DH World Cup",
-          "description": "Full highlights from the elite races at the 2026 Les Gets downhill World Cup.( Photos: 1 )",
+          "description": "Full highlights from the elite races at the 2026 Les Gets downhill World Cup.( Photos: 1, Comments: 1 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30167793/p2pb30167793.jpg",
           "publishedAt": "2026-08-22T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/race-highlights-2026-les-gets-dh-world-cup.html?trk=rss",
