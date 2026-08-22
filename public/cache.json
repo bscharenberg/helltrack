@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-08-22T13:36:54.424Z",
-  "totalItems": 64,
+  "builtAt": "2026-08-22T14:28:03.728Z",
+  "totalItems": 65,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "JoRGGC2k7Vc",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Stolen at the death! 🇫🇷🤯",
+          "description": "Stolen at the death! 🇫🇷🤯\n\nMax Alran delivers when it matters most, snatching the victory from Andreas Kolb with a sensational late run in front of the French crowd. 🔥\n\n📍Les Gets, Haute-Savoie 🏁 Men Elite UCI DHI World Cup Final\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/JoRGGC2k7Vc/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-22T13:58:14Z",
+          "url": "https://www.youtube.com/watch?v=JoRGGC2k7Vc",
+          "isShort": true,
+          "score": 21,
+          "category": "shorts"
+        },
         {
           "id": "1jzINvjbuzs",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 17,
           "category": "shorts"
-        },
-        {
-          "id": "Vd60gWdutsE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "The riders are fighting just to stay upright in these brutal conditions 🤯",
-          "description": "A solid run from Marine Cabirou takes her through to the finals with a P2 in Q1 💪\n\n📍Les Gets, Haute-Savoie 🏁 Women’s Elite UCI DHI World Cup Qualification 1",
-          "thumbnail": "https://i.ytimg.com/vi/Vd60gWdutsE/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-21T11:50:33Z",
-          "url": "https://www.youtube.com/watch?v=Vd60gWdutsE",
-          "isShort": true,
-          "score": 23,
-          "category": "shorts"
         }
       ]
     },
@@ -358,8 +358,8 @@
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
-          "title": "Live Results: 2026 Les Gets DH World Cup Elite Finals",
-          "description": "Stay tuned for live results and updates from the 2026 Les Gets downhill World Cup.( Photos: 2, Comments: 72 )",
+          "title": "Results: 2026 Les Gets DH World Cup Elite Finals",
+          "description": "What a race! The 2026 Les Gets downhill World Cup delivered unbelievable racing.( Photos: 5, Comments: 102 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-08-22T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/results-2026-les-gets-dh-world-cup-elite-finals.html?trk=rss",
