@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-23T20:30:40.032Z",
-  "totalItems": 92,
+  "builtAt": "2026-08-23T21:28:13.568Z",
+  "totalItems": 93,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -693,7 +693,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Spectacular Race With A Chilling Warning | Story Of The Race from the 2026 Les Gets DH World Cup",
-          "description": "Ben recaps the most important stories from the 2026 Les Gets downhill World Cup.( Comments: 6 )",
+          "description": "Ben recaps the most important stories from the 2026 Les Gets downhill World Cup.( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30180345/p2pb30180345.jpg",
           "publishedAt": "2026-08-23T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/video-spectacular-race-with-a-chilling-warning--story-of-the-race-from-the-2026-les-gets-dh-world-cup.html?trk=rss",
@@ -840,6 +840,23 @@
       "label": "Films",
       "items": [
         {
+          "id": "IAID1_7wTsk",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "Is this the best we’ve ever seen Downhill racing?!",
+          "description": "Is that the best Downhill racing has ever looked?! I think so anyways, even the French president is posting it’s that epic! \n\nMassive shout out to @lesgetsofficiel for putting on the best @uci_mtbworldseries year after year and also for always keeping it free event entry, I really think other venues could learn from that too.. it does come with a couple of worries though with rumour that a few people were injured in amongst the crowd, we really want to avoid an injury to a rider like they had in the Tour de France this year, but how you control a crowd like that I really have no idea.. anyways all hail the King 👑 of Les Gets @max_alran_5 🙌🏼🙌🏼 \n\n\nshout out to the guys who got these visuals too #longlivedownhill 🎥 @sleeper.co @monsterenergy @lucas_stanus_videos",
+          "thumbnail": "https://i.ytimg.com/vi/IAID1_7wTsk/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-23T20:47:20Z",
+          "url": "https://www.youtube.com/watch?v=IAID1_7wTsk",
+          "isShort": false,
+          "score": 7,
+          "category": "films"
+        },
+        {
           "id": "M8gRPDbQtg8",
           "type": "video",
           "source": "youtube",
@@ -863,7 +880,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Must Watch: Sleeper Shreddit from the 2026 Les Gets DH World Cup",
-          "description": "Sleeper&#039;s race shreddit from Les Gets is another classic.( Comments: 13 )",
+          "description": "Sleeper&#039;s race shreddit from Les Gets is another classic.( Comments: 16 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30180031/p2pb30180031.jpg",
           "publishedAt": "2026-08-23T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/must-watch-sleeper-shreddit-from-the-2026-les-gets-dh-world-cup.html?trk=rss",
@@ -956,7 +973,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Pure Chaos: 2026 Les Gets DH World Cup Photo Epic",
-          "description": "Downhill World Cup racing doesn&#039;t get better than this.( Photos: 78, Comments: 29 )",
+          "description": "Downhill World Cup racing doesn&#039;t get better than this.( Photos: 78, Comments: 32 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30178059/p2pb30178059.jpg",
           "publishedAt": "2026-08-23T11:57:00.000Z",
           "url": "https://www.pinkbike.com/news/pure-chaos-2026-les-gets-dh-world-cup-photo-epic.html?trk=rss",
@@ -971,7 +988,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "\"The French Spirit\": Emmanuel Macron Comments on Racing at the Les Gets DH World Cup",
-          "description": "The President of France recognised yesterday&#039;s historic day of racing at the Les Gets downhill World Cup.( Photos: 1, Comments: 50 )",
+          "description": "The President of France recognised yesterday&#039;s historic day of racing at the Les Gets downhill World Cup.( Photos: 1, Comments: 51 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30178063/p2pb30178063.jpg",
           "publishedAt": "2026-08-23T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/the-french-spirit-emmanuel-macron-comments-on-racing-at-the-les-gets-dh-world-cup.html?trk=rss",
