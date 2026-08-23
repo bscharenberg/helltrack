@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-23T13:37:24.506Z",
-  "totalItems": 88,
+  "builtAt": "2026-08-23T14:29:42.426Z",
+  "totalItems": 89,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "tHrCxtx1Idw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCgwpS_N4DQDYsip73rsQ6iA",
+          "channelName": "Downtime Podcast",
+          "title": "Les Gets World Cup Breakdown | €100K Won & A French Fairytale",
+          "description": "Hattie Harnden just won the €100,000 Gates Belted Purse, Max Alran took his first Elite World Cup victory in front of an incredible home crowd, and Les Gets delivered another absolutely wild weekend of downhill racing.\n\nAfter a six-week break, Chris is joined by Olly Morris and Neko Mulally to break down everything that happened at the Les Gets UCI Downhill World Cup.\n\nAt the centre of the women's race was Hattie Harnden. In constantly changing conditions, Hattie found the speed and lines she needed to take her first Elite Downhill World Cup victory and, with it, finally secure the €100,000 Gates Belted Purse for AON Racing.\n\nIt's also a significant moment technically. Hattie's AON bike uses a belt-driven gearbox drivetrain and a radically different approach to weight distribution and setup. Winning at Les Gets proves that concept can deliver at the very highest level of World Cup downhill racing.\n\nWe dig into Hattie's run, the crucial line choices that made the difference and what the result means for AON, before looking across a stacked women's race that also saw Vali Höll secure the 2026 World Cup overall with two rounds still remaining.\n\nThen there's Max Alran.\n\nFastest in timed training, winner of Q1 and last man down the mountain at his home World Cup, Max delivered when it mattered. He crossed the line 1.650 seconds ahead of Andreas Kolb to claim his first Elite World Cup victory as the Les Gets hillside erupted around him.\n\nWe break down Max's incredible weekend alongside Andreas Kolb, Jackson Goldstone, Richie Rude, Antoine Pierron, Amaury Pierron, Jordan Williams and the developing men's overall battle.\n\nThere's plenty more too, including the extraordinary weather that transformed the track, brutal qualifying conditions, tyre and setup decisions, practice limitations, the rapidly changing lines riders faced during finals and standout performances across the Junior fields.\n\nFrom Hattie's €100k breakthrough and Max's home victory to Vali wrapping up the overall, this was another reminder of why Les Gets continues to produce some of the most memorable racing on the World Cup calendar.\n\nNext stop: the 2026 UCI Mountain Bike World Championships in Val di Sole.\n\n#DownhillMTB #UCIWorldCup #MountainBiking\n\nPhoto Credit - WHOOP UCI MTB World Series\n\nPodcast Stuff\n\nListener Offers\n\nDowntime listeners can now get 10% off of Stashed Space Rails. Stashed is the ultimate way to sort your bike storage. Their clever design means you can get way more bikes into the same space and easily access whichever one you want to ride that day. If you have 2 or more bikes in your garage, they are definitely worth checking out. Just head to https://www.stashedproducts.com/downtime and use the code DOWNTIME at the checkout for 10% off your entire order. And Just so you know, we get 10% of the sale too, so it’s a win win.\n\nPatreon\n\nYou can support the podcast to help it keep going and improving by heading over to https://www.patreon.com/downtimepodcast/\n\nMerch\n\nIf you want to support the podcast, and represent, then my webstore is the place to head. All products are 100% organic, shipped without plastics, and made with a supply chain that's using renewable energy. So check it out now over at https://downtimepodcast.teemill.com/\n\nNewsletter\n\nIf you want a bit more Downtime in your life, then you can join my newsletter where I’ll provide you with a bit of behind the scenes info on the podcast, interesting bits and pieces from around the mountain bike world, some mini-reviews of products that I’ve been using and like, partner offers and more. You can do that over at https://www.downtimepodcast.com/newsletter/\n\nAre you enjoying the podcast? If so, then don’t forget to follow it. Each episode will get delivered to your device as soon as it’s available and it's totally free. You'll find all the links you need at https://www.downtimepodcast.com/follow-podcast/ You can find us on Apple Podcast, Spotify, Google and most of the podcast apps out there. \n\nOur back catalogue of amazing episodes is available at https://www.downtimepodcast.com/episodes/\n\n#mountainbike #downtimepodcast #mtbpodcast",
+          "thumbnail": "https://i.ytimg.com/vi/tHrCxtx1Idw/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-23T14:00:32Z",
+          "url": "https://www.youtube.com/watch?v=tHrCxtx1Idw",
+          "isShort": false,
+          "score": 18,
+          "category": "race-runs"
+        },
+        {
           "id": "ioPsZEwgSws",
           "type": "video",
           "source": "youtube",
@@ -660,23 +677,6 @@
           "isShort": false,
           "score": 14,
           "category": "race-runs"
-        },
-        {
-          "id": "3W8gYIAw3Fw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "VITAL RAW - LES GETS World Cup Downhill",
-          "description": "One of the craziest DH crashes we've ever seen opens up the Les Gets Vital RAW of 2026. The track is fast, the dirt was great (for now) and the riders were pinned. Get stoked! Filmed by John Lawlor",
-          "thumbnail": "https://i.ytimg.com/vi/3W8gYIAw3Fw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-20T18:07:18Z",
-          "url": "https://www.youtube.com/watch?v=3W8gYIAw3Fw",
-          "isShort": false,
-          "score": 16,
-          "category": "race-runs"
         }
       ]
     },
@@ -691,7 +691,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Interviews: Les Gets DH World Cup Winner Reactions",
-          "description": "Dan Wolfe checks in with the elite race winners after a wild finale in Les Gets.( Photos: 1, Comments: 4 )",
+          "description": "Dan Wolfe checks in with the elite race winners after a wild finale in Les Gets.( Photos: 1, Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30174664/p2pb30174664.jpg",
           "publishedAt": "2026-08-23T11:54:00.000Z",
           "url": "https://www.pinkbike.com/news/interviews-les-gets-dh-world-cup-winner-reactions.html?trk=rss",
@@ -890,7 +890,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Pure Chaos: 2026 Les Gets DH World Cup Photo Epic",
-          "description": "Downhill World Cup racing doesn&#039;t get better than this.( Photos: 78, Comments: 7 )",
+          "description": "Downhill World Cup racing doesn&#039;t get better than this.( Photos: 78, Comments: 10 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30178059/p2pb30178059.jpg",
           "publishedAt": "2026-08-23T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/pure-chaos-2026-les-gets-dh-world-cup-photo-epic.html?trk=rss",
@@ -905,7 +905,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "\"The French Spirit\": Emmanuel Macron Comments on Racing at the Les Gets DH World Cup",
-          "description": "The President of France recognised yesterday&#039;s historic day of racing at the Les Gets downhill World Cup.( Photos: 1, Comments: 1 )",
+          "description": "The President of France recognised yesterday&#039;s historic day of racing at the Les Gets downhill World Cup.( Photos: 1, Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30178063/p2pb30178063.jpg",
           "publishedAt": "2026-08-23T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/the-french-spirit-emmanuel-macron-comments-on-racing-at-the-les-gets-dh-world-cup.html?trk=rss",
