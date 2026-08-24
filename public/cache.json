@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-24T01:46:32.769Z",
-  "totalItems": 93,
+  "builtAt": "2026-08-24T03:10:32.378Z",
+  "totalItems": 94,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -693,7 +693,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Spectacular Race With A Chilling Warning | Story Of The Race from the 2026 Les Gets DH World Cup",
-          "description": "Ben recaps the most important stories from the 2026 Les Gets downhill World Cup.( Comments: 55 )",
+          "description": "Ben recaps the most important stories from the 2026 Les Gets downhill World Cup.( Comments: 61 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30180345/p2pb30180345.jpg",
           "publishedAt": "2026-08-23T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/video-spectacular-race-with-a-chilling-warning--story-of-the-race-from-the-2026-les-gets-dh-world-cup.html?trk=rss",
@@ -967,6 +967,23 @@
       "label": "News",
       "items": [
         {
+          "id": "uiwf6AuyRxw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "WATCH 'EM FLEX",
+          "description": "What crazy things did you see?\n\nWatch the downhill bikes at the 2026 Les Gets World Cup Downhill flex under maximum compression as they fly through the mud.\n\n#MTB #DH",
+          "thumbnail": "https://i.ytimg.com/vi/uiwf6AuyRxw/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-24T02:28:41Z",
+          "url": "https://www.youtube.com/watch?v=uiwf6AuyRxw",
+          "isShort": false,
+          "score": 13,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/pure-chaos-2026-les-gets-dh-world-cup-photo-epic.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -988,7 +1005,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "\"The French Spirit\": Emmanuel Macron Comments on Racing at the Les Gets DH World Cup",
-          "description": "The President of France recognised yesterday&#039;s historic day of racing at the Les Gets downhill World Cup.( Photos: 1, Comments: 56 )",
+          "description": "The President of France recognised yesterday&#039;s historic day of racing at the Les Gets downhill World Cup.( Photos: 1, Comments: 57 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30178063/p2pb30178063.jpg",
           "publishedAt": "2026-08-23T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/the-french-spirit-emmanuel-macron-comments-on-racing-at-the-les-gets-dh-world-cup.html?trk=rss",
