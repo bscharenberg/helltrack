@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-08-25T09:41:56.076Z",
-  "totalItems": 94,
+  "builtAt": "2026-08-25T10:39:24.778Z",
+  "totalItems": 95,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "aPxlZ6owZCw",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "“I can’t see myself racing another 10 years” 😲",
+          "description": "“I can’t see myself racing another 10 years” 😲\n\nVali Höll admits the intensity of racing at the highest level takes its toll after securing another UCI DHI World Cup overall, while sharing her delight at Hattie Harnden’s maiden World Cup win. 🏆❤️",
+          "thumbnail": "https://i.ytimg.com/vi/aPxlZ6owZCw/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-25T10:10:38Z",
+          "url": "https://www.youtube.com/watch?v=aPxlZ6owZCw",
+          "isShort": true,
+          "score": 18,
+          "category": "shorts"
+        },
         {
           "id": "iAbVUUjWUu8",
           "type": "video",
@@ -327,23 +344,6 @@
           "url": "https://www.youtube.com/watch?v=hrFFiG_9tIk",
           "isShort": true,
           "score": 14,
-          "category": "shorts"
-        },
-        {
-          "id": "xE2Pdy7dfsc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "A solid run from Lisa Baumann to go fastest! 💪",
-          "description": "Teammate Vali Höll is still to come 👀\n\n📍Les Gets, Haute-Savoie 🏁 Women’s UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/xE2Pdy7dfsc/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T11:34:49Z",
-          "url": "https://www.youtube.com/watch?v=xE2Pdy7dfsc",
-          "isShort": true,
-          "score": 20,
           "category": "shorts"
         }
       ]
@@ -699,7 +699,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Spectacular Race With A Chilling Warning | Story Of The Race from the 2026 Les Gets DH World Cup",
-          "description": "Ben recaps the most important stories from the 2026 Les Gets downhill World Cup.( Comments: 180 )",
+          "description": "Ben recaps the most important stories from the 2026 Les Gets downhill World Cup.( Comments: 181 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30180345/p2pb30180345.jpg",
           "publishedAt": "2026-08-23T11:50:00.000Z",
           "url": "https://www.pinkbike.com/news/video-spectacular-race-with-a-chilling-warning--story-of-the-race-from-the-2026-les-gets-dh-world-cup.html?trk=rss",
@@ -1011,7 +1011,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Pure Chaos: 2026 Les Gets DH World Cup Photo Epic",
-          "description": "Downhill World Cup racing doesn&#039;t get better than this.( Photos: 78, Comments: 47 )",
+          "description": "Downhill World Cup racing doesn&#039;t get better than this.( Photos: 78, Comments: 48 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30178059/p2pb30178059.jpg",
           "publishedAt": "2026-08-23T11:47:00.000Z",
           "url": "https://www.pinkbike.com/news/pure-chaos-2026-les-gets-dh-world-cup-photo-epic.html?trk=rss",
