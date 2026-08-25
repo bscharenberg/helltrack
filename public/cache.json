@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-08-25T13:58:10.152Z",
-  "totalItems": 96,
+  "builtAt": "2026-08-25T14:55:46.115Z",
+  "totalItems": 97,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -916,6 +916,23 @@
       "label": "Pits",
       "items": [
         {
+          "id": "li4mfxTeo-o",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "Mountain Bikers Don't Train HARD ENOUGH 🥵 Ronan Dunne on Just Ride",
+          "description": "Does mountain biking have a training problem?\n\nIn this clip from the Just Ride podcast, Ronan Dunne compares downhill mountain biking and motocross, arguing that riders often don't spend enough time on the bike and that the sport could benefit from a stronger training culture.\n\nAlongside Rob Warner and Eliot Jackson, Ronan discusses training volume, bike park habits, recovering from injury, and whether too much practice can actually hurt race performance.\n\n🎙️ Watch the full Just Ride podcast episode with Ronan Dunne for more insights into downhill racing, Red Bull Hardline, UCI Mountain Bike World Cup racing, training, and progression at the highest level of the sport.\n\n#JustRidePodcast #RonanDunne #DownhillMTB #MountainBiking #RobWarner #EliotJackson #MTB #DHMTB #MountainBikeWorldCup #training \n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#podcast #redbull #justride",
+          "thumbnail": "https://i.ytimg.com/vi/li4mfxTeo-o/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-25T14:00:38Z",
+          "url": "https://www.youtube.com/watch?v=li4mfxTeo-o",
+          "isShort": false,
+          "score": 20,
+          "category": "paddock"
+        },
+        {
           "id": "a1w898zNA00",
           "type": "video",
           "source": "youtube",
@@ -979,7 +996,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Val di Sole DH World Championships Preview: Rider List, Event Schedule &amp; Race Favorites",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Championships in Val di Sole.( Photos: 6, Comments: 9 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Championships in Val di Sole.( Photos: 6, Comments: 22 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb21216373/p2pb21216373.jpg",
           "publishedAt": "2026-08-25T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-val-di-sole-dh-world-championships-preview-rider-list-event-schedule-and-race-favorites.html?trk=rss",
@@ -994,7 +1011,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Build Your Team Ahead of Round 8 - 2026 Val di Sole DH World Championships",
-          "description": "It&#039;s time to start building your team for round eight of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 1 )",
+          "description": "It&#039;s time to start building your team for round eight of Pinkbike&#039;s DH Fantasy League.( Photos: 2, Comments: 3 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
           "publishedAt": "2026-08-25T11:57:00.000Z",
           "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-8-2026-val-di-sole-dh-world-championships.html?trk=rss",
@@ -1056,7 +1073,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "\"The French Spirit\": Emmanuel Macron Comments on Racing at the Les Gets DH World Cup",
-          "description": "The President of France recognised yesterday&#039;s historic day of racing at the Les Gets downhill World Cup.( Photos: 1, Comments: 96 )",
+          "description": "The President of France recognised yesterday&#039;s historic day of racing at the Les Gets downhill World Cup.( Photos: 1, Comments: 97 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30178063/p2pb30178063.jpg",
           "publishedAt": "2026-08-23T11:42:00.000Z",
           "url": "https://www.pinkbike.com/news/the-french-spirit-emmanuel-macron-comments-on-racing-at-the-les-gets-dh-world-cup.html?trk=rss",
