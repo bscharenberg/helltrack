@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-08-26T10:40:48.428Z",
-  "totalItems": 92,
+  "builtAt": "2026-08-26T11:35:39.211Z",
+  "totalItems": 93,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "eJhvELUd3PA",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "“Les Gets ripped one” 🔥",
+          "description": "“Les Gets ripped one” 🔥\n\nJackson Goldstone hailed the incredible Les Gets crowd after another huge ride put him back on the World Cup podium. 🤩",
+          "thumbnail": "https://i.ytimg.com/vi/eJhvELUd3PA/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-26T11:18:45Z",
+          "url": "https://www.youtube.com/watch?v=eJhvELUd3PA",
+          "isShort": true,
+          "score": 13,
+          "category": "shorts"
+        },
         {
           "id": "vVHYSxrmIsA",
           "type": "video",
@@ -327,23 +344,6 @@
           "url": "https://www.youtube.com/watch?v=DRFq_DyjarE",
           "isShort": true,
           "score": 15,
-          "category": "shorts"
-        },
-        {
-          "id": "JhdSvEuuKHI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "CONFIRMED: Hattie Harnden goes well in the mud! 💪🥇",
-          "description": "Hattie takes the hot seat in Les Gets!\n\n📍Les Gets, Haute-Savoie 🏁 Women’s Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/JhdSvEuuKHI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T11:58:40Z",
-          "url": "https://www.youtube.com/watch?v=JhdSvEuuKHI",
-          "isShort": true,
-          "score": 14,
           "category": "shorts"
         }
       ]
@@ -881,7 +881,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Spotted: Martin Maes To Race World Champs On A 32\" / 27.5” Orbea Rallon DH - Val Di Sole 2026",
-          "description": "Martin Maes Mega-Mullet is set to take on the Black Snake( Photos: 14, Comments: 55 )",
+          "description": "Martin Maes Mega-Mullet is set to take on the Black Snake( Photos: 14, Comments: 78 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30193009/p2pb30193009.jpg",
           "publishedAt": "2026-08-26T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/spotted-martin-maes-to-race-world-champs-on-a-32--29-orbea-rallon-dh-val-di-sole-2026.html?trk=rss",
@@ -987,7 +987,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Val di Sole DH World Championships Preview: Rider List, Event Schedule &amp; Race Favorites",
-          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Championships in Val di Sole.( Photos: 6, Comments: 49 )",
+          "description": "Everything you need to know about this weekend&#039;s 2026 Downhill World Championships in Val di Sole.( Photos: 6, Comments: 51 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb21216373/p2pb21216373.jpg",
           "publishedAt": "2026-08-25T11:53:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-val-di-sole-dh-world-championships-preview-rider-list-event-schedule-and-race-favorites.html?trk=rss",
