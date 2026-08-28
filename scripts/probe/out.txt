@@ -1,48 +1,20 @@
-══ full mtbwch competition object:
-{
- "code": "mtbwch",
- "start": "2026-08-26",
- "end": "2026-08-30",
- "name": "2026 UCI Mountain Bike World Championships",
- "sport": "MTB",
- "status": "Live",
- "logo": "https://tissottiming.z6.web.core.windows.net/events/2026/mtbwch/Logo.png",
- "logoBanner": "https://tissottiming.z6.web.core.windows.net/events/2026/mtbwch/Logo_banner.png",
- "location": "Val di Sole, ITA",
- "noc": "ITA",
- "type": "MultiEvents",
- "summaries": [],
- "priority": 0,
- "picture": "https://tissottiming.z6.web.core.windows.net/events/default/eventbg_mtb.jpg",
- "utcOffset": 2,
- "alert": ""
-}
+bundle bytes: 779898
 
-══ id-form attempts
+──── occurrence 1 of "/competitions/${" @628749
+mat:"json",...n})};competitions={competitionsList:(e,n={})=>this.http.request({path:"/competitions",method:"GET",query:e,format:"json",...n}),searchList:(e,n={})=>this.http.request({path:"/competitions/search",method:"GET",query:e,format:"json",...n}),livelinkList:(e,n={})=>this.http.request({path:"/competitions/livelink",method:"GET",query:e,format:"json",...n}),competitionsDetail:(e,n={})=>this.http.request({path:`/competitions/${e}`,method:"GET",format:"json",...n}),scheduleList:(e,n={})=>this.http.request({path:`/competitions/${e}/schedule`,method:"GET",format:"json",...n}),summariesList:(e,n={})=>this.ht
 
-   /competitions/mtbwch?year=2026 → 404 len=162
-     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-dddde7de85e03c9eddd93020bcadc7e6-277f898529423785-00"}
+──── occurrence 2 of "/competitions/${" @628851
+thod:"GET",query:e,format:"json",...n}),searchList:(e,n={})=>this.http.request({path:"/competitions/search",method:"GET",query:e,format:"json",...n}),livelinkList:(e,n={})=>this.http.request({path:"/competitions/livelink",method:"GET",query:e,format:"json",...n}),competitionsDetail:(e,n={})=>this.http.request({path:`/competitions/${e}`,method:"GET",format:"json",...n}),scheduleList:(e,n={})=>this.http.request({path:`/competitions/${e}/schedule`,method:"GET",format:"json",...n}),summariesList:(e,n={})=>this.http.request({path:`/competitions/${e}/summaries`,method:"GET",format:"json",...n}),reportsList:(e,n={})
 
-   /competitions/2026/mtbwch → 404 len=0
-     
+──── occurrence 3 of "/competitions/${" @628963
+od:"GET",query:e,format:"json",...n}),livelinkList:(e,n={})=>this.http.request({path:"/competitions/livelink",method:"GET",query:e,format:"json",...n}),competitionsDetail:(e,n={})=>this.http.request({path:`/competitions/${e}`,method:"GET",format:"json",...n}),scheduleList:(e,n={})=>this.http.request({path:`/competitions/${e}/schedule`,method:"GET",format:"json",...n}),summariesList:(e,n={})=>this.http.request({path:`/competitions/${e}/summaries`,method:"GET",format:"json",...n}),reportsList:(e,n={})=>this.http.request({path:`/competitions/${e}/reports`,method:"GET",format:"json",...n}),recordsList:(e,n={})=>t
 
-   /competitions/2026/mtbwch/events → 404 len=0
-     
+──── occurrence 4 of "/competitions/${" @629074
+ethod:"GET",query:e,format:"json",...n}),competitionsDetail:(e,n={})=>this.http.request({path:`/competitions/${e}`,method:"GET",format:"json",...n}),scheduleList:(e,n={})=>this.http.request({path:`/competitions/${e}/schedule`,method:"GET",format:"json",...n}),summariesList:(e,n={})=>this.http.request({path:`/competitions/${e}/summaries`,method:"GET",format:"json",...n}),reportsList:(e,n={})=>this.http.request({path:`/competitions/${e}/reports`,method:"GET",format:"json",...n}),recordsList:(e,n={})=>this.http.request({path:`/competitions/${e}/records`,method:"GET",format:"json",...n}),hasliveList:(e,n={})=>thi
 
-   /competitions/2026mtbwch/events → 404 len=162
-     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-9dc76c9d6917532014bf28dc9533c6f8-7365e758a054cb1b-00"}
+──── "/competitions?": not found
 
-   /competitions/mtbwch/events → 404 len=162
-     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-c7a00d5909437ffb9d6137de2c3d8407-e758d48695c8fb59-00"}
+──── "competitionId": not found
 
-   /competitions/mtbwch/schedule?year=2026 → 404 len=162
-     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-f02b0dbb159646b642f1051b4bb9d26c-1f5d74b1a4a26711-00"}
-
-   /competitions/mtbwch/haslive?year=2026 → 404 len=162
-     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-8a9ca984b9a1e1e806f100d415d29b11-17d1b023601e0d82-00"}
-
-   /competitions/mtbwch/summaries?year=2026 → 404 len=162
-     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-da119a8dfe6acef422db6c82c303b571-58a7f112f8dd7fb5-00"}
-
-   /competitions/mtbwch/live?year=2026 → 404 len=162
-     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-f5a6d8cdb84e04b29fbbe3ae4331962f-4b9c3063213d69de-00"}
+──── occurrence 1 of "/competitions\"" @628414
+his.http=e}athletes={palmaresDetail:(e,n={})=>this.http.request({path:`/athletes/palmares/${e}`,method:"GET",format:"json",...n}),infosDetail:(e,n,o,r={})=>this.http.request({path:`/athletes/infos/${e}/${n}/${o}`,method:"GET",format:"json",...r}),searchList:(e,n={})=>this.http.request({path:"/athletes/search",method:"GET",query:e,format:"json",...n})};competitions={competitionsList:(e,n={})=>this.http.request({path:"/competitions",method:"GET",query:e,format:"json",...n}),searchList:(e,n={})=>this.http.request({path:"/competitions/search",method:"GET",query:e,format:"json",...n}),livelinkList:(e,n={})=>this
