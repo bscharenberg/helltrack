@@ -1,54 +1,32 @@
-══ search / livelink — these should reveal the real identifier
+══ /competitions/mtbwch2026/events → 200
+   {"number":1,"name":"Men Elite Cross-country Olympic"}
+   {"number":2,"name":"Men Elite Cross-country Short Track"}
+   {"number":3,"name":"Men Elite Downhill"}
+   {"number":4,"name":"Men Elite E-MTB Cross-country"}
+   {"number":5,"name":"Men Junior Cross-country Olympic"}
+   {"number":6,"name":"Men Junior Downhill"}
+   {"number":7,"name":"Men U23 Cross-country Short Track"}
+   {"number":8,"name":"Men Under 23 Cross-country Olympic"}
+   {"number":10,"name":"Women Elite Cross-country Olympic"}
+   {"number":11,"name":"Women Elite Cross-country Short Track"}
+   {"number":12,"name":"Women Elite Downhill"}
+   {"number":13,"name":"Women Elite E-MTB Cross-country"}
+   {"number":14,"name":"Women Junior Cross-country Olympic"}
+   {"number":15,"name":"Women Junior Downhill"}
+   {"number":16,"name":"Women U23 Cross-country Short Track"}
+   {"number":17,"name":"Women Under 23 Cross-country Olympic"}
+   {"number":9,"name":"Mixed Team Relay"}
 
-   /competitions/search?query=mtbwch → 500 len=3223
-     System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at System.String.IndexOf(String value, Int32 startIndex, Int32 count, StringComparison comparisonType)
-   at System.String.Contains(String value, StringComparison comparisonType)
-   at LiveTiming.Server.Controllers.CompetitionController.<>c__DisplayClass8_0.<SearchCompetitions>b__0(RealNode c) in D:\a\1\s\DRC64App\LiveTiming\Sources\LiveTiming.Server\Controllers\CompetitionController.cs:line 71
-   at System.Linq.Enumerable.WhereSelectListIterator`2.ToArray()
-   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
-   at System.Linq.OrderedEnumerable`1.ToList()
-   at LiveTiming.Server.Controllers.CompetitionController.SearchCompetitions(String search) in D:\a\1\s\DRC64App\LiveTiming\Sources\LiveTiming.Server\Controllers\CompetitionController.cs:line 72
-   at lambda_method39969(Closure, Object, Object[])
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvok
+══ 4 downhill event(s)
 
-   /competitions/search?query=mountain%20bike → 500 len=3239
-     System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at System.String.IndexOf(String value, Int32 startIndex, Int32 count, StringComparison comparisonType)
-   at System.String.Contains(String value, StringComparison comparisonType)
-   at LiveTiming.Server.Controllers.CompetitionController.<>c__DisplayClass8_0.<SearchCompetitions>b__0(RealNode c) in D:\a\1\s\DRC64App\LiveTiming\Sources\LiveTiming.Server\Controllers\CompetitionController.cs:line 71
-   at System.Linq.Enumerable.WhereSelectListIterator`2.ToArray()
-   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
-   at System.Linq.OrderedEnumerable`1.ToList()
-   at LiveTiming.Server.Controllers.CompetitionController.SearchCompetitions(String search) in D:\a\1\s\DRC64App\LiveTiming\Sources\LiveTiming.Server\Controllers\CompetitionController.cs:line 72
-   at lambda_method403(Closure, Object, Object[])
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+── undefined phases → 400
+   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"number":["The value 'undefined' is not valid."]},"traceId":"00-ccec213b9b14cb8669218f3c7420edc6-2b2a7229e60b13e7-00"}
 
-   /competitions/search?query=mountain%20bike&year=2026 → 500 len=3261
-     System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at System.String.IndexOf(String value, Int32 startIndex, Int32 count, StringComparison comparisonType)
-   at System.String.Contains(String value, StringComparison comparisonType)
-   at LiveTiming.Server.Controllers.CompetitionController.<>c__DisplayClass8_0.<SearchCompetitions>b__0(RealNode c) in D:\a\1\s\DRC64App\LiveTiming\Sources\LiveTiming.Server\Controllers\CompetitionController.cs:line 71
-   at System.Linq.Enumerable.WhereSelectListIterator`2.ToArray()
-   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
-   at System.Linq.OrderedEnumerable`1.ToList()
-   at LiveTiming.Server.Controllers.CompetitionController.SearchCompetitions(String search) in D:\a\1\s\DRC64App\LiveTiming\Sources\LiveTiming.Server\Controllers\CompetitionController.cs:line 72
-   at lambda_method39969(Closure, Object, Object[])
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvok
+── undefined phases → 400
+   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"number":["The value 'undefined' is not valid."]},"traceId":"00-0c3bbbb92876bba2327c3840b1cd4ec5-200c2ce5fdfcc31f-00"}
 
-   /competitions/livelink → 200 len=1602
-     [{"code":"dtt","start":"2026-08-19","end":"2026-08-23","name":"Deutschland Tour","sport":"CRD","status":"Previous","logo":"https://tissottiming.z6.web.core.windows.net/events/2026/dtt/Logo.png","location":"GER","noc":"GER","type":"GrandTour","summaries":[{"key":"competition_summary_winner","value":"DEL TORO Isaac"}],"priority":0,"picture":"https://tissottiming.z6.web.core.windows.net/events/2026/dtt/eventbg.png","utcOffset":2,"alert":"","routeUrl":"https://tissottiming.z6.web.core.windows.net/events/2026/dtt/stageprofile/kmz/route.kmz"},{"code":"vue","start":"2026-08-22","end":"2026-09-13","name":"La Vuelta","sport":"CRD","status":"Live","logo":"https://tissottiming.z6.web.core.windows.net/events/2026/vue/Logo.png","location":"ESP","noc":"ESP","type":"GrandTour","summaries":[{"key":"competition_summary_current_leader","value":"POGACAR Tadej"}],"priority":0,"picture":"https://tissottiming.z6.web.core.windows.net/events/2026/vue/eventbg.png","utcOffset":2,"alert":"","routeUrl":"https://tissottiming.z6.web.core.windows.net/events/2026/vue/stageprofile/kmz/route.kmz"},{"code":"mtbwch","start":"2026-08-26","end":"2026-08-30","name":"2026 UCI Mountain Bike World Championships","sport":"M
+── undefined phases → 400
+   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"number":["The value 'undefined' is not valid."]},"traceId":"00-d54f9a4904ae46a65107d2f2d688f29e-fab3f40836d3473c-00"}
 
-   /competitions/livelink?year=2026 → 200 len=1602
-     [{"code":"dtt","start":"2026-08-19","end":"2026-08-23","name":"Deutschland Tour","sport":"CRD","status":"Previous","logo":"https://tissottiming.z6.web.core.windows.net/events/2026/dtt/Logo.png","location":"GER","noc":"GER","type":"GrandTour","summaries":[{"key":"competition_summary_winner","value":"DEL TORO Isaac"}],"priority":0,"picture":"https://tissottiming.z6.web.core.windows.net/events/2026/dtt/eventbg.png","utcOffset":2,"alert":"","routeUrl":"https://tissottiming.z6.web.core.windows.net/events/2026/dtt/stageprofile/kmz/route.kmz"},{"code":"vue","start":"2026-08-22","end":"2026-09-13","name":"La Vuelta","sport":"CRD","status":"Live","logo":"https://tissottiming.z6.web.core.windows.net/events/2026/vue/Logo.png","location":"ESP","noc":"ESP","type":"GrandTour","summaries":[{"key":"competition_summary_current_leader","value":"POGACAR Tadej"}],"priority":0,"picture":"https://tissottiming.z6.web.core.windows.net/events/2026/vue/eventbg.png","utcOffset":2,"alert":"","routeUrl":"https://tissottiming.z6.web.core.windows.net/events/2026/vue/stageprofile/kmz/route.kmz"},{"code":"mtbwch","start":"2026-08-26","end":"2026-08-30","name":"2026 UCI Mountain Bike World Championships","sport":"M
-
-══ id forms for competitionsDetail (only non-404 shown)
-   mtbwch2026 → 200 {"code":"mtbwch","start":"2026-08-26","end":"2026-08-30","name":"2026 UCI Mountain Bike World Championships","sport":"MTB","status":"Live","logo":"https://tissottiming.z6.web.core.windows.net/events/2026/mtbwch/Logo.png","logoBanner":"https://tissottiming.z6.web.core.windows.net/events/2026/mtbwch/Logo_banner.png","location":"Val di Sole, ITA","noc":"ITA","type":"MultiEvents","summaries":[],"prior
-   MTBWCH2026 → 200 {"code":"mtbwch","start":"2026-08-26","end":"2026-08-30","name":"2026 UCI Mountain Bike World Championships","sport":"MTB","status":"Live","logo":"https://tissottiming.z6.web.core.windows.net/events/2026/mtbwch/Logo.png","logoBanner":"https://tissottiming.z6.web.core.windows.net/events/2026/mtbwch/Logo_banner.png","location":"Val di Sole, ITA","noc":"ITA","type":"MultiEvents","summaries":[],"prior
-   (done)
+── undefined phases → 400
+   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"number":["The value 'undefined' is not valid."]},"traceId":"00-b3116bfce9609c62c35e27122c03d74a-1475892db9c13848-00"}
