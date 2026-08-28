@@ -1,0 +1,63 @@
+══ bundle → 200 (779898b)
+   49 path templates:
+     /images/lang/${c}.png
+     /athletes/palmares/${e}
+     /athletes/infos/${e}/${n}/${o}
+     /competitions/${e}
+     /competitions/${e}/schedule
+     /competitions/${e}/summaries
+     /competitions/${e}/reports
+     /competitions/${e}/records
+     /competitions/${e}/haslive
+     /competitions/${e}/live
+     /competitions/${e}/rider/${n}/events
+     /competitions/${e}/stages/${n}/tabs
+     /competitions/${e}/stages
+     /competitions/${e}/stages/${n}
+     /competitions/${e}/stages/${n}/tracking
+     /competitions/${e}/stages/${n}/teams
+     /competitions/${e}/stages/${n}/startlist
+     /competitions/${e}/stages/${n}/live
+     /competitions/${e}/stages/${n}/liverankings
+     /competitions/${e}/stages/${n}/jerseys/stage
+     /competitions/${e}/stages/${n}/jerseys/overall
+     /competitions/${e}/stages/${n}/sprint/${o}/${r}
+     /competitions/${e}/stages/${n}/rankings/stage
+     /competitions/${e}/stages/${n}/rankings/overall
+     /competitions/${e}/stages/${n}/timeline
+     /competitions/${e}/stages/${n}/reports
+     /competitions/${e}/stages/${n}/rider/${o}
+     /competitions/${e}/events
+     /competitions/${e}/years
+     /competitions/${e}/events/${n}/phases
+     /competitions/${e}/events/${n}/phases/${o}
+     /competitions/${e}/events/${n}/phases/${o}/tabs
+     /competitions/${e}/events/${n}/phases/${o}/teams
+     /competitions/${e}/events/${n}/phases/${o}/startlist
+     /competitions/${e}/events/${n}/phases/${o}/live
+     /competitions/${e}/events/${n}/phases/${o}/livett
+     /competitions/${e}/events/${n}/phases/${o}/liverankings
+     /competitions/${e}/events/${n}/phases/${o}/results
+     /competitions/${e}/events/${n}/phases/${o}/statsrank
+     /competitions/${e}/events/${n}/phases/${o}/statsgap
+     /competitions/${e}/events/${n}/phases/${o}/tracking
+     /competitions/${e}/events/${n}/phases/${o}/reports
+     /competitions/${e}/events/${n}/phases/${o}/report/${r}
+     /competitions/${e}/events/${n}/omnium
+     /competitions/${e}/events/${n}/worldcup
+     /multisports/${e}/${n}/schedule
+     /multisports/${e}/${n}/competitions
+     /multisports/${e}/${n}/details
+     /multisports/${e}/${n}/medals
+
+══ listing-route candidates
+   /events              → 404  len=0  
+   /events/list         → 404  len=0  
+   /events/current      → 404  len=0  
+   /events/live         → 404  len=0  
+   /events/active       → 404  len=0  
+   /calendar            → 404  len=0  
+   /sports              → 404  len=0  
+   /seasons             → 404  len=0  
+   /events/2026         → 404  len=0  
+   /events/upcoming     → 404  len=0  
