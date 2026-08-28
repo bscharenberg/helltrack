@@ -105,6 +105,17 @@ function normalizeRow(row) {
   return out
 }
 
+// WBD sometimes gives a REGION rather than the venue — Les Gets is reported as
+// "Haute Savoie". scripts/canon/venues.json already maps those, but under hyphenated keys
+// ("haute-savoie") while canon's looseKey only collapses whitespace, so "Haute Savoie"
+// misses. Try the hyphenated form too; without this Les Gets resolves to its own
+// `haute-savoie-2026` slug and silently duplicates the round instead of matching it.
+function resolveVenue(ev) {
+  const raw = ev.VenueLocation || ''
+  const hit = canonVenue(raw) || canonVenue(raw.trim().replace(/\s+/g, '-'))
+  return hit || { name: raw, slug: slugify(raw), country: ev.Country || null }
+}
+
 // ─── Assemble a season ────────────────────────────────────────────────────────
 async function fetchSeason(year, { onLog = () => {} } = {}) {
   const events = await api(`/discovery/event-list?season=${encodeURIComponent(year)}`)
@@ -120,7 +131,11 @@ async function fetchSeason(year, { onLog = () => {} } = {}) {
 
   const rounds = []
   for (const [i, ev] of dhEvents.entries()) {
-    const comps = (await api(`/discovery/competition-list/${ev.EventId}`)) || []
+    // One bad event must not abort the season — wbd-2026-13 currently 500s, and a future
+    // round will always be the newest/least-baked record in the feed.
+    let comps
+    try { comps = (await api(`/discovery/competition-list/${ev.EventId}`)) || [] }
+    catch (err) { onLog(`  ! ${ev.VenueLocation} (${ev.EventId}): ${err.message} — skipped`); continue }
     const dhi = comps.filter(c => c.Discipline === 'DHI' && GENDER[c.CategoryCode])
     if (!dhi.length) { onLog(`  – ${ev.VenueLocation}: no elite DHI competitions yet`); continue }
 
@@ -159,8 +174,7 @@ async function fetchSeason(year, { onLog = () => {} } = {}) {
     }
     if (!Object.keys(sessions).length) { onLog(`  – ${ev.VenueLocation}: no published results yet`); continue }
 
-    const venue = canonVenue(ev.VenueLocation)
-      || { name: ev.VenueLocation, slug: slugify(ev.VenueLocation), country: ev.Country || null }
+    const venue = resolveVenue(ev)
     rounds.push({
       round:     i + 1,
       eventType: 'world-cup',
