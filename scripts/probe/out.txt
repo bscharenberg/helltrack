@@ -1,32 +1,26 @@
-══ /competitions/mtbwch2026/events → 200
-   {"number":1,"name":"Men Elite Cross-country Olympic"}
-   {"number":2,"name":"Men Elite Cross-country Short Track"}
-   {"number":3,"name":"Men Elite Downhill"}
-   {"number":4,"name":"Men Elite E-MTB Cross-country"}
-   {"number":5,"name":"Men Junior Cross-country Olympic"}
-   {"number":6,"name":"Men Junior Downhill"}
-   {"number":7,"name":"Men U23 Cross-country Short Track"}
-   {"number":8,"name":"Men Under 23 Cross-country Olympic"}
-   {"number":10,"name":"Women Elite Cross-country Olympic"}
-   {"number":11,"name":"Women Elite Cross-country Short Track"}
-   {"number":12,"name":"Women Elite Downhill"}
-   {"number":13,"name":"Women Elite E-MTB Cross-country"}
-   {"number":14,"name":"Women Junior Cross-country Olympic"}
-   {"number":15,"name":"Women Junior Downhill"}
-   {"number":16,"name":"Women U23 Cross-country Short Track"}
-   {"number":17,"name":"Women Under 23 Cross-country Olympic"}
-   {"number":9,"name":"Mixed Team Relay"}
 
-══ 4 downhill event(s)
+══ event 3 phases → 200
+   {"number":1,"name":"Qualification","id":"0003190001010801FFFFFFFFFFFFFFFF","currentTab":0,"current":false,"start":"2026-08-28T13:30:00"}
+   {"number":2,"name":"Final","id":"0003190001010802FFFFFFFFFFFFFFFF","currentTab":0,"current":true,"start":"2026-08-29T13:00:00"}
 
-── undefined phases → 400
-   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"number":["The value 'undefined' is not valid."]},"traceId":"00-ccec213b9b14cb8669218f3c7420edc6-2b2a7229e60b13e7-00"}
+   ▸ 3/1 results → 200, 90 rows
+     {"resultType":"Time","key":"20","rider":{"key":"20","bib":20,"name":"STEVENS-MCNAB Lachlan","nation":"NZL","uciRiderId":"10110184506","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"27.807","rank":6,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2
+     {"resultType":"Time","key":"35","rider":{"key":"35","bib":35,"name":"DAVIS Oliver","nation":"AUS","uciRiderId":"10110838143","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"28.316","rank":26,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resul
+     {"resultType":"Time","key":"1","rider":{"key":"1","bib":1,"name":"GOLDSTONE Jackson","nation":"CAN","uciRiderId":"10053812449","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"27.974","rank":13,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","res
+     {"resultType":"Time","key":"6","rider":{"key":"6","bib":6,"name":"PINKERTON Kenneth","nation":"USA","uciRiderId":"10063826182","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"27.776","rank":5,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resu
 
-── undefined phases → 400
-   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"number":["The value 'undefined' is not valid."]},"traceId":"00-0c3bbbb92876bba2327c3840b1cd4ec5-200c2ce5fdfcc31f-00"}
+   ▸ 3/2 results → 404, 0 rows
+     raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-2394be9251ce75d219fc2130f6037d71-1a2c8c955a1a52f6-00"}
 
-── undefined phases → 400
-   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"number":["The value 'undefined' is not valid."]},"traceId":"00-d54f9a4904ae46a65107d2f2d688f29e-fab3f40836d3473c-00"}
+══ event 12 phases → 200
+   {"number":1,"name":"Qualification","id":"0003190001020801FFFFFFFFFFFFFFFF","currentTab":0,"current":false,"start":"2026-08-28T13:30:00"}
+   {"number":2,"name":"Final","id":"0003190001020802FFFFFFFFFFFFFFFF","currentTab":0,"current":true,"start":"2026-08-29T11:10:00"}
 
-── undefined phases → 400
-   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"number":["The value 'undefined' is not valid."]},"traceId":"00-b3116bfce9609c62c35e27122c03d74a-1475892db9c13848-00"}
+   ▸ 12/1 results → 200, 41 rows
+     {"resultType":"Time","key":"3","rider":{"key":"3","bib":3,"name":"BAUMANN Lisa","nation":"SUI","uciRiderId":"10034782059","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"30.240","rank":2,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resultTyp
+     {"resultType":"Time","key":"12","rider":{"key":"12","bib":12,"name":"HARNDEN Harriet","nation":"GBR","uciRiderId":"10023959384","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"30.867","rank":6,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","res
+     {"resultType":"Time","key":"1","rider":{"key":"1","bib":1,"name":"HÖLL Valentina","nation":"AUT","uciRiderId":"10035131663","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"30.562","rank":4,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resultT
+     {"resultType":"Time","key":"7","rider":{"key":"7","bib":7,"name":"EARNEST Sacha","nation":"NZL","uciRiderId":"10064068278","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"31.247","rank":11,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resultT
+
+   ▸ 12/2 results → 404, 0 rows
+     raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-27a17519f28e7c1e90a319a41d0a95d5-561a37f2a41faf91-00"}
