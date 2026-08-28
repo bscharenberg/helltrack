@@ -1,12 +1,13 @@
 /**
- * Temporary probe: tissottiming.com serves event assets from an Azure static-website
- * storage account (tissottiming.z6.web.core.windows.net/events/{code}/...). If the
- * container lists, every event folder — including Val di Sole Worlds — is enumerable,
- * and static JSON on blob storage is a far better source than an SPA. Deleted before merge.
+ * Temporary probe: tissottiming.com's bundle names a REST API at
+ * prod.server.tissottiming.com (/events/{id}/phases/{phase}/results, plus a SignalR
+ * /livehub). Find the event-listing route and the Val di Sole 2026 Worlds event id.
+ * Deleted before merge.
  */
-const UA = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
+const UA  = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
+const API = 'https://prod.server.tissottiming.com'
 
-async function get(url, accept = 'text/html,application/json,application/xml,*/*') {
+async function get(url, accept = 'application/json,text/html,*/*') {
   try {
     const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: accept } })
     const txt = await res.text()
@@ -14,34 +15,17 @@ async function get(url, accept = 'text/html,application/json,application/xml,*/*
   } catch (e) { return { status: 0, ct: '', txt: 'THREW ' + e.message } }
 }
 
-// ── 1. Try to list the blob container behind the static site ─────────────────
-for (const u of [
-  'https://tissottiming.blob.core.windows.net/$web?restype=container&comp=list&maxresults=2000',
-  'https://tissottiming.blob.core.windows.net/$web?restype=container&comp=list&prefix=events/&delimiter=/&maxresults=2000',
-  'https://tissottiming.z6.web.core.windows.net/events/',
-]) {
-  const r = await get(u)
-  console.log(`\n══ ${u}\n   → ${r.status} ${r.ct} len=${r.txt.length}`)
-  if (r.status === 200 && r.txt.length) {
-    const names = [...new Set([...r.txt.matchAll(/<(?:Name|BlobPrefix>\s*<Name)>([^<]+)</g)].map(m => m[1]))]
-    if (names.length) { console.log(`   ${names.length} entries:`); names.slice(0, 200).forEach(n => console.log('     ' + n)) }
-    else console.log('   ' + r.txt.slice(0, 600))
-  } else console.log('   ' + r.txt.slice(0, 300))
-}
+// ── 1. Every path-shaped template literal in the bundle ──────────────────────
+const bundle = await get('https://www.tissottiming.com/assets/index-bc679bf1.js')
+console.log(`══ bundle → ${bundle.status} (${bundle.txt.length}b)`)
+const paths = [...new Set([...bundle.txt.matchAll(/`(\/[A-Za-z0-9_\-${}/.]+)`/g)].map(m => m[1]))]
+console.log(`   ${paths.length} path templates:`)
+paths.slice(0, 150).forEach(p => console.log('     ' + p))
 
-// ── 2. Does the site's own JS name an API host / event-code scheme? ──────────
-const page = await get('https://www.tissottiming.com/')
-const mods = [...new Set([...page.txt.matchAll(/(?:src|href)="([^"]*\.js[^"]*)"/g)].map(m => m[1]))]
-console.log(`\n══ tissottiming.com scripts (${mods.length}):`, mods.join(' ') || '(none — check inline)')
-const inline = [...page.txt.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]).join('\n')
-console.log('   inline script bytes:', inline.length)
-const hosts = [...new Set([...page.txt.matchAll(/https?:\/\/([a-z0-9.-]+\.[a-z]{2,})/gi)].map(m => m[1]))]
-console.log('   hosts referenced:', hosts.join(' '))
-
-for (const m of mods.slice(0, 8)) {
-  const url = m.startsWith('http') ? m : 'https://www.tissottiming.com' + (m.startsWith('/') ? m : '/' + m)
-  const js = await get(url)
-  const api = [...new Set([...js.txt.matchAll(/https?:\/\/[a-z0-9.-]+\.[a-z]{2,}[A-Za-z0-9_\-/.$]*|\/(?:api|data|events|results)\/[A-Za-z0-9_\-{}/.$+]*/gi)].map(m2 => m2[0]))]
-  console.log(`\n── ${url} → ${js.status} (${js.txt.length}b)`)
-  api.slice(0, 80).forEach(a => console.log('     ' + a))
+// ── 2. Candidate listing routes ──────────────────────────────────────────────
+console.log('\n══ listing-route candidates')
+for (const p of ['/events', '/events/list', '/events/current', '/events/live', '/events/active',
+                 '/calendar', '/sports', '/seasons', '/events/2026', '/events/upcoming']) {
+  const r = await get(API + p)
+  console.log(`   ${p.padEnd(20)} → ${r.status} ${r.ct} len=${r.txt.length}  ${r.txt.slice(0, 200)}`)
 }
