@@ -1,7 +1,6 @@
 /**
- * Temporary probe: tissottiming.com's bundle names a REST API at
- * prod.server.tissottiming.com (/events/{id}/phases/{phase}/results, plus a SignalR
- * /livehub). Find the event-listing route and the Val di Sole 2026 Worlds event id.
+ * Temporary probe: Tissot API is /competitions/{c}/events/{e}/phases/{p}/results on
+ * prod.server.tissottiming.com. Find the competition id for MTB / Val di Sole 2026 Worlds.
  * Deleted before merge.
  */
 const UA  = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
@@ -15,17 +14,24 @@ async function get(url, accept = 'application/json,text/html,*/*') {
   } catch (e) { return { status: 0, ct: '', txt: 'THREW ' + e.message } }
 }
 
-// ── 1. Every path-shaped template literal in the bundle ──────────────────────
-const bundle = await get('https://www.tissottiming.com/assets/index-bc679bf1.js')
-console.log(`══ bundle → ${bundle.status} (${bundle.txt.length}b)`)
-const paths = [...new Set([...bundle.txt.matchAll(/`(\/[A-Za-z0-9_\-${}/.]+)`/g)].map(m => m[1]))]
-console.log(`   ${paths.length} path templates:`)
-paths.slice(0, 150).forEach(p => console.log('     ' + p))
+// ── 1. The Vue router table names the URL scheme the site itself uses ────────
+const b = (await get('https://www.tissottiming.com/assets/index-bc679bf1.js')).txt
+const routes = [...new Set([...b.matchAll(/path\s*:\s*["'`]([^"'`]{2,80})["'`]/g)].map(m => m[1]))]
+console.log(`══ router paths (${routes.length})`)
+routes.slice(0, 80).forEach(r => console.log('   ' + r))
 
-// ── 2. Candidate listing routes ──────────────────────────────────────────────
-console.log('\n══ listing-route candidates')
-for (const p of ['/events', '/events/list', '/events/current', '/events/live', '/events/active',
-                 '/calendar', '/sports', '/seasons', '/events/2026', '/events/upcoming']) {
+// Any hardcoded competition-ish identifiers
+const ids = [...new Set([...b.matchAll(/["'`]([a-z0-9]+(?:-[a-z0-9]+){1,5})["'`]/g)].map(m => m[1]))]
+  .filter(x => /mtb|bike|cycl|uci|world|champ|dh|downhill/i.test(x))
+console.log(`\n══ competition-ish literals (${ids.length})`)
+ids.slice(0, 60).forEach(x => console.log('   ' + x))
+
+// ── 2. Listing routes at the competition level ──────────────────────────────
+console.log('\n══ listing candidates')
+for (const p of ['/competitions', '/competitions/list', '/sports/competitions',
+                 '/competitions/mtb', '/competitions/mtb/years', '/competitions/mtb/events',
+                 '/competitions/MTB/years', '/competitions/uci-mtb/years',
+                 '/competitions/mountainbike/years', '/competitions/cycling/years']) {
   const r = await get(API + p)
-  console.log(`   ${p.padEnd(20)} → ${r.status} ${r.ct} len=${r.txt.length}  ${r.txt.slice(0, 200)}`)
+  console.log(`   ${p.padEnd(34)} → ${r.status} len=${r.txt.length}  ${r.txt.slice(0, 220)}`)
 }
