@@ -259,7 +259,7 @@ All three PBIs shipped:
 | R4 | Lenzerheide | 2026-06-20 | 2026-06-21 | lenzerheide-2026 | — |
 | R5 | La Thuile | 2026-07-04 | 2026-07-05 | la-thuile-2026 | — |
 | R6 | Pal Arinsal | 2026-07-11 | 2026-07-12 | pal-arinsal-2026 | — |
-| R7 | Les Gets | 2026-08-22 | 2026-08-23 | les-gets-2026 | — |
+| R7 | Les Gets | 2026-08-21 | 2026-08-22 | les-gets-2026 | ✅ (DataRide — race-results API outage) |
 | Worlds | Val di Sole | 2026-08-29 | 2026-08-30 | val-di-sole-2026 | — |
 | R8 | Whistler | 2026-09-26 | 2026-09-27 | whistler-2026 | — |
 | R9 | Lake Placid | 2026-10-03 | 2026-10-04 | lake-placid-2026 | — |

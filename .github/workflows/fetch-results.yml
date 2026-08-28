@@ -53,7 +53,7 @@ jobs:
               07-0[2-6])   echo "slug=la-thuile-2026"    >> $GITHUB_OUTPUT ;;  # finals 07-05
               07-09|07-1[0-3])
                            echo "slug=pal-arinsal-2026"  >> $GITHUB_OUTPUT ;;  # finals 07-12
-              08-2[0-4])   echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;  # finals 08-23
+              08-2[0-4])   echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;  # finals 08-22
               08-2[7-9]|08-3[0-1])
                            echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;  # finals 08-30 (Worlds)
               09-2[4-8])   echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;  # finals 09-27
@@ -82,6 +82,8 @@ jobs:
 
       - name: Fetch and parse results
         if: steps.venue.outputs.slug != 'unknown'
+        env:
+          DEBUG_RESULTS: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
         run: node scripts/results-fetcher.mjs ${{ steps.venue.outputs.slug }}
 
       - name: Commit updated results

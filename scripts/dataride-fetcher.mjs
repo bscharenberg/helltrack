@@ -293,16 +293,48 @@ async function main() {
   const merge    = process.argv.includes('--merge')
   const replace  = process.argv.includes('--replace-season')
   const validate = process.argv.includes('--validate')
-  if (!year) { console.log('Usage: node scripts/dataride-fetcher.mjs <year> [--merge|--replace-season|--validate]'); process.exit(0) }
+  // --only=slug[,slug] limits the write to specific rounds. The season is still walked in
+  // full (round numbers are derived from date-position across ALL World Cup competitions,
+  // so filtering earlier would mis-number), then narrowed just before staging/merge. Use it
+  // to pull a single round without re-writing sibling rounds that came from another source.
+  const onlyArg = process.argv.find(a => a.startsWith('--only='))
+  const only    = onlyArg ? onlyArg.slice('--only='.length).split(',').map(s => s.trim()).filter(Boolean) : null
+  if (!year) { console.log('Usage: node scripts/dataride-fetcher.mjs <year> [--merge|--replace-season|--validate] [--only=slug,slug]'); process.exit(0) }
+  if (only && replace) { console.error('💥 --only cannot be combined with --replace-season (it would drop every round not listed)'); process.exit(1) }
 
-  const { rounds, reviewNames } = await fetchSeason(year, { onLog: s => console.log(s) })
+  let { rounds, reviewNames } = await fetchSeason(year, { onLog: s => console.log(s) })
   console.log(`\n${year}: ${rounds.length} rounds assembled`)
+
+  if (only) {
+    const found = rounds.filter(r => only.includes(r.slug))
+    const missing = only.filter(s => !rounds.some(r => r.slug === s))
+    if (missing.length) {
+      console.error(`\n💥 --only requested ${missing.length} slug(s) DataRide has no results for: ${missing.join(', ')}`)
+      console.error(`   Season ${year} offers: ${rounds.map(r => r.slug).join(', ') || '(none)'}`)
+      process.exit(1)
+    }
+    rounds = found
+    console.log(`--only → narrowed to ${rounds.length} round(s): ${rounds.map(r => r.slug).join(', ')}`)
+  }
 
   fs.mkdirSync(STAGING_DIR, { recursive: true })
   const stagePath = path.join(STAGING_DIR, `dataride-${year}.json`)
   fs.writeFileSync(stagePath, JSON.stringify({ year: String(year), rounds }, null, 2))
   console.log(`staging → ${path.relative(ROOT, stagePath)}`)
   if (reviewNames.length) console.log(`review names: ${reviewNames.join('; ')}`)
+
+  // Podiums for every assembled round. `data/` is gitignored, so on CI the staging file is
+  // discarded with the runner — this log is the only chance to eyeball that the numbers are
+  // right (not merely present) before they reach results.json.
+  for (const r of rounds) {
+    console.log(`\n── ${r.venue} (${r.slug}) — ${r.date} ──`)
+    for (const key of Object.keys(r.sessions)) {
+      const riders = r.sessions[key]
+      const podium = riders.filter(x => x.rank != null).slice(0, 3)
+        .map(x => `${x.rank}. ${x.name} ${x.time}`).join('   ')
+      console.log(`  ${key.padEnd(20)} ${String(riders.length).padStart(3)} riders   ${podium}`)
+    }
+  }
 
   if (validate) await validateAgainstExisting(year, rounds)
   if (merge || replace) mergeIntoResults(year, rounds, { replace })

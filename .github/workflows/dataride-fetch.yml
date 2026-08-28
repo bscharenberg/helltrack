@@ -1,0 +1,95 @@
+name: DataRide Fetch
+
+# Manual counterpart to fetch-results.yml. That workflow reads the
+# ucimtbworldseries.com JSON API (current season, auto-polled on race days); this one reads
+# the UCI's own DataRide platform on a separate host, which is where every season from
+# 2009–2025 in results.json came from. Two uses:
+#   1. Historical backfill (the 2015–2023 gap noted in docs/decisions.md).
+#   2. Fallback when ucimtbworldseries.com is down — DataRide is a different origin and
+#      has stayed up through outages that took the race-results API offline.
+# Always dispatch with mode=validate first: it prints podiums and diffs against the current
+# results.json without writing anything.
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Season year (e.g. 2026)'
+        required: true
+        type: string
+      mode:
+        description: 'validate = read-only diff. merge = upsert rounds into results.json and push.'
+        required: true
+        type: choice
+        options:
+          - validate
+          - merge
+        default: validate
+      only:
+        description: 'Optional comma-separated round slugs (e.g. les-gets-2026). Empty = every round in the season.'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  dataride:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch from DataRide
+        # Inputs go through env, never string-interpolated into the script — `only` and `year`
+        # are free-text and would otherwise be a shell-injection vector.
+        env:
+          YEAR: ${{ inputs.year }}
+          MODE: ${{ inputs.mode }}
+          ONLY: ${{ inputs.only }}
+        run: |
+          args=("$YEAR" "--$MODE")
+          if [ -n "$ONLY" ]; then args+=("--only=$ONLY"); fi
+          echo "Running: node scripts/dataride-fetcher.mjs ${args[*]}"
+          node scripts/dataride-fetcher.mjs "${args[@]}"
+
+      - name: Commit updated results
+        if: inputs.mode == 'merge'
+        run: |
+          git config user.name "Helltrack Bot"
+          git config user.email "helltrack-bot@users.noreply.github.com"
+
+          # Only results.json — data/ (raw cache + staging) is gitignored and regenerable.
+          git add public/results.json
+
+          if git diff --staged --quiet; then
+            echo "No changes to results.json — nothing to commit."
+            exit 0
+          fi
+
+          # Commit before rebasing: a staged-only change would be silently unstaged by a
+          # stash/pop around the rebase (see docs/decisions.md, 2026-06-14).
+          git commit -m "results: ${{ inputs.year }} from DataRide $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          # Push back to whichever ref this was dispatched on — NOT a hardcoded main. Dispatching
+          # from a feature branch and pushing to main rebases the whole branch onto main, which
+          # under actions/checkout's shallow clone conflicts on every changed file.
+          BRANCH="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && { echo "Pushed to $BRANCH on attempt $attempt."; exit 0; }
+            echo "Push attempt $attempt failed (likely a concurrent push) — retrying in 10s..."
+            sleep 10
+          done
+
+          echo "::error::Failed to push results after 5 attempts."
+          exit 1
