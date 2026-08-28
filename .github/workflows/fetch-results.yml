@@ -80,6 +80,12 @@ jobs:
         if: steps.venue.outputs.slug != 'unknown'
         run: npm ci
 
+      # TEMPORARY (remove before merge): dispatch-only hook to develop the ChronoRace
+      # fetcher. chronorace-fetch.yml can't be dispatched until it is on the default branch.
+      - name: TEMP ChronoRace probe
+        if: github.event_name == 'workflow_dispatch'
+        run: node scripts/chronorace-fetcher.mjs --probe --raw
+
       - name: Fetch and parse results
         if: steps.venue.outputs.slug != 'unknown'
         env:
