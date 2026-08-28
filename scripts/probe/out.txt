@@ -1,2 +1,48 @@
-══ /competitions/mtbwch/events?year=2026 → 404
-   raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-61dda407b91e2403a71b94691a33d747-130a8aacd27c14f2-00"}
+══ full mtbwch competition object:
+{
+ "code": "mtbwch",
+ "start": "2026-08-26",
+ "end": "2026-08-30",
+ "name": "2026 UCI Mountain Bike World Championships",
+ "sport": "MTB",
+ "status": "Live",
+ "logo": "https://tissottiming.z6.web.core.windows.net/events/2026/mtbwch/Logo.png",
+ "logoBanner": "https://tissottiming.z6.web.core.windows.net/events/2026/mtbwch/Logo_banner.png",
+ "location": "Val di Sole, ITA",
+ "noc": "ITA",
+ "type": "MultiEvents",
+ "summaries": [],
+ "priority": 0,
+ "picture": "https://tissottiming.z6.web.core.windows.net/events/default/eventbg_mtb.jpg",
+ "utcOffset": 2,
+ "alert": ""
+}
+
+══ id-form attempts
+
+   /competitions/mtbwch?year=2026 → 404 len=162
+     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-dddde7de85e03c9eddd93020bcadc7e6-277f898529423785-00"}
+
+   /competitions/2026/mtbwch → 404 len=0
+     
+
+   /competitions/2026/mtbwch/events → 404 len=0
+     
+
+   /competitions/2026mtbwch/events → 404 len=162
+     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-9dc76c9d6917532014bf28dc9533c6f8-7365e758a054cb1b-00"}
+
+   /competitions/mtbwch/events → 404 len=162
+     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-c7a00d5909437ffb9d6137de2c3d8407-e758d48695c8fb59-00"}
+
+   /competitions/mtbwch/schedule?year=2026 → 404 len=162
+     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-f02b0dbb159646b642f1051b4bb9d26c-1f5d74b1a4a26711-00"}
+
+   /competitions/mtbwch/haslive?year=2026 → 404 len=162
+     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-8a9ca984b9a1e1e806f100d415d29b11-17d1b023601e0d82-00"}
+
+   /competitions/mtbwch/summaries?year=2026 → 404 len=162
+     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-da119a8dfe6acef422db6c82c303b571-58a7f112f8dd7fb5-00"}
+
+   /competitions/mtbwch/live?year=2026 → 404 len=162
+     {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-f5a6d8cdb84e04b29fbbe3ae4331962f-4b9c3063213d69de-00"}
