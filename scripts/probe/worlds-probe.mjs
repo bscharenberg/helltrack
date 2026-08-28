@@ -1,36 +1,23 @@
 /**
- * Temporary probe: /competitions/mtbwch/events?year=2026 404s, so the competition
- * identifier isn't a bare code. Print the full mtbwch object and try id forms.
- * Deleted before merge.
+ * Temporary probe: extract from the Tissot bundle how the {competition} path param is
+ * built, since the bare code 404s. Deleted before merge.
  */
-const UA  = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
-const API = 'https://prod.server.tissottiming.com'
+const UA = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
+const b = await (await fetch('https://www.tissottiming.com/assets/index-bc679bf1.js',
+  { headers: { 'User-Agent': UA } })).text()
+console.log('bundle bytes:', b.length)
 
-async function j(path) {
-  try {
-    const res = await fetch(API + path, { headers: { 'User-Agent': UA, Accept: 'application/json' } })
-    const txt = await res.text()
-    try { return { status: res.status, data: JSON.parse(txt), txt } }
-    catch { return { status: res.status, data: null, txt } }
-  } catch (e) { return { status: 0, data: null, txt: 'THREW ' + e.message } }
+function ctx(needle, before = 420, after = 180, max = 4) {
+  let i = -1, n = 0
+  while ((i = b.indexOf(needle, i + 1)) !== -1 && n < max) {
+    n++
+    console.log(`\n──── occurrence ${n} of ${JSON.stringify(needle)} @${i}\n` +
+      b.slice(Math.max(0, i - before), i + needle.length + after).replace(/\n/g, ' '))
+  }
+  if (!n) console.log(`\n──── ${JSON.stringify(needle)}: not found`)
 }
 
-const all = await j('/competitions?year=2026')
-const mtb = (Array.isArray(all.data) ? all.data : []).find(c => c.code === 'mtbwch')
-console.log('══ full mtbwch competition object:\n' + JSON.stringify(mtb, null, 1))
-
-console.log('\n══ id-form attempts')
-for (const p of [
-  '/competitions/mtbwch?year=2026',
-  '/competitions/2026/mtbwch',
-  '/competitions/2026/mtbwch/events',
-  '/competitions/2026mtbwch/events',
-  '/competitions/mtbwch/events',
-  '/competitions/mtbwch/schedule?year=2026',
-  '/competitions/mtbwch/haslive?year=2026',
-  '/competitions/mtbwch/summaries?year=2026',
-  '/competitions/mtbwch/live?year=2026',
-]) {
-  const r = await j(p)
-  console.log(`\n   ${p} → ${r.status} len=${r.txt.length}\n     ${r.txt.slice(0, 700)}`)
-}
+ctx('/competitions/${')
+ctx('/competitions?')
+ctx('competitionId')
+ctx('/competitions"')
