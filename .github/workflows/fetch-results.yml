@@ -55,7 +55,7 @@ jobs:
                            echo "slug=pal-arinsal-2026"  >> $GITHUB_OUTPUT ;;  # finals 07-12
               08-2[0-4])   echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;  # finals 08-22
               08-2[7-9]|08-3[0-1])
-                           echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;  # finals 08-30 (Worlds)
+                           echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;  # finals 08-29 (Worlds)
               09-2[4-8])   echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;  # finals 09-27
               10-0[1-5])   echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;  # finals 10-04
               *)            echo "slug=unknown"           >> $GITHUB_OUTPUT ;;
@@ -86,8 +86,6 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         run: |
           node scripts/probe/worlds-probe.mjs
-          echo '════════ DataRide 2026 ════════'
-          node scripts/dataride-fetcher.mjs 2026 --validate || true
 
       - name: Fetch and parse results
         if: steps.venue.outputs.slug != 'unknown'
