@@ -361,6 +361,26 @@ async function validateAgainstExisting(year, rounds) {
   }
 }
 
+// Identify the stored round a DataRide round refers to. Matching on slug alone is not
+// enough: sources disagree on venue naming. DataRide calls 2026 round 1 "mona-yongpyong-2026"
+// while results.json stores it as "race-of-south-korea-2026" (the same divergence
+// results-fetcher.mjs already carries as uciVenue). A slug-only match treats that as a new
+// round and appends a duplicate round 1 — which is exactly what happened on the first
+// fill-gaps test run. Fall back to round number within the same event type, then to a close
+// date, before concluding a round is genuinely new.
+function findExistingRound(target, r) {
+  const type = x => x.eventType || 'world-cup'
+  const days = (a, b) => Math.abs(new Date(a) - new Date(b)) / 86400000
+
+  let idx = target.findIndex(x => x.slug === r.slug)
+  if (idx >= 0) return idx
+
+  idx = target.findIndex(x => type(x) === type(r) && x.round != null && x.round === r.round)
+  if (idx >= 0) return idx
+
+  return target.findIndex(x => x.date && r.date && days(x.date, r.date) <= 3)
+}
+
 function mergeIntoResults(year, rounds, { replace = false, fillGaps = false } = {}) {
   const data = fs.existsSync(RESULTS_PATH)
     ? JSON.parse(fs.readFileSync(RESULTS_PATH, 'utf8'))
@@ -384,7 +404,7 @@ function mergeIntoResults(year, rounds, { replace = false, fillGaps = false } = 
     const target = data.seasons[year].rounds
     let addedRounds = 0, addedSessions = 0
     for (const r of rounds) {
-      const idx = target.findIndex(x => x.slug === r.slug)
+      const idx = findExistingRound(target, r)
       if (idx < 0) {
         target.push(r)
         addedRounds++
@@ -396,7 +416,7 @@ function mergeIntoResults(year, rounds, { replace = false, fillGaps = false } = 
         if (have[key]?.length > 0) continue
         have[key] = riders
         addedSessions++
-        console.log(`  ➕ ${r.slug} ${key} (${riders.length} riders)`)
+        console.log(`  ➕ ${target[idx].slug} ${key} (${riders.length} riders, DataRide calls this round ${r.slug})`)
       }
     }
     if (!addedRounds && !addedSessions) {
@@ -419,6 +439,6 @@ function mergeIntoResults(year, rounds, { replace = false, fillGaps = false } = 
   return true
 }
 
-export { fetchSeason }
+export { fetchSeason, findExistingRound }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) main().catch(e => { console.error('💥', e.message); process.exit(1) })
