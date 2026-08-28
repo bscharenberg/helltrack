@@ -1,7 +1,6 @@
 /**
- * Temporary probe: /competitions?year=2026 is the Tissot listing route. Find the MTB
- * World Championships competition, then walk events → phases → results for Val di Sole.
- * Deleted before merge.
+ * Temporary probe: walk Tissot mtbwch 2026 → events → phases → results and find the
+ * elite DH sessions for Val di Sole. Deleted before merge.
  */
 const UA  = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
 const API = 'https://prod.server.tissottiming.com'
@@ -14,15 +13,22 @@ async function j(path) {
     catch { return { status: res.status, data: null, txt } }
   } catch (e) { return { status: 0, data: null, txt: 'THREW ' + e.message } }
 }
+const arr = d => Array.isArray(d) ? d : (d?.events || d?.phases || d?.items || d?.results || [])
 
-const sports = await j('/competitions/sports')
-console.log('══ /competitions/sports →', sports.status, JSON.stringify(sports.data ?? sports.txt).slice(0, 900))
+const ev = await j('/competitions/mtbwch/events?year=2026')
+console.log('══ /competitions/mtbwch/events?year=2026 →', ev.status)
+const events = arr(ev.data)
+if (!events.length) console.log('   raw:', JSON.stringify(ev.data ?? ev.txt).slice(0, 1500))
+for (const e of events) console.log('   ' + JSON.stringify(e).slice(0, 300))
 
-for (const qs of ['?year=2026', '?year=2026&sport=MTB']) {
-  const r = await j('/competitions' + qs)
-  console.log(`\n══ /competitions${qs} → ${r.status}`)
-  const list = Array.isArray(r.data) ? r.data : (r.data?.competitions || r.data?.items || [])
-  if (!list.length) { console.log('   ', JSON.stringify(r.data ?? r.txt).slice(0, 900)); continue }
-  console.log(`   ${list.length} competitions`)
-  for (const c of list) console.log('   ' + JSON.stringify(c).slice(0, 260))
+// Walk phases for anything downhill-ish
+for (const e of events) {
+  const id = e.code ?? e.id ?? e.key
+  if (!id) continue
+  if (!/dh|down/i.test(JSON.stringify(e))) continue
+  const ph = await j(`/competitions/mtbwch/events/${id}/phases?year=2026`)
+  console.log(`\n── phases for event ${id} → ${ph.status}`)
+  const phases = arr(ph.data)
+  if (!phases.length) { console.log('   raw:', JSON.stringify(ph.data ?? ph.txt).slice(0, 800)); continue }
+  for (const p of phases) console.log('   ' + JSON.stringify(p).slice(0, 300))
 }
