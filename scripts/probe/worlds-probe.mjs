@@ -1,32 +1,42 @@
 /**
- * Temporary probe: competitionsDetail takes a single opaque id and no query, so the id
- * must be globally unique (i.e. carry the year). Try id forms + the search/livelink
- * routes, which should hand back whatever identifier the site actually uses.
- * Deleted before merge.
+ * Temporary probe: competition id is code+year -> mtbwch2026. Walk events -> phases ->
+ * results and find the elite DH sessions. Deleted before merge.
  */
 const UA  = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
 const API = 'https://prod.server.tissottiming.com'
+const C   = 'mtbwch2026'
 
 async function j(p) {
   try {
     const res = await fetch(API + p, { headers: { 'User-Agent': UA, Accept: 'application/json' } })
-    return { status: res.status, txt: await res.text() }
-  } catch (e) { return { status: 0, txt: 'THREW ' + e.message } }
+    const txt = await res.text()
+    try { return { status: res.status, data: JSON.parse(txt), txt } } catch { return { status: res.status, data: null, txt } }
+  } catch (e) { return { status: 0, data: null, txt: 'THREW ' + e.message } }
 }
+const arr = d => Array.isArray(d) ? d : (d?.events || d?.phases || d?.items || d?.results || [])
 
-console.log('══ search / livelink — these should reveal the real identifier')
-for (const p of ['/competitions/search?query=mtbwch', '/competitions/search?query=mountain%20bike',
-                 '/competitions/search?query=mountain%20bike&year=2026', '/competitions/livelink',
-                 '/competitions/livelink?year=2026']) {
-  const r = await j(p)
-  console.log(`\n   ${p} → ${r.status} len=${r.txt.length}\n     ${r.txt.slice(0, 1200)}`)
-}
+const ev = await j(`/competitions/${C}/events`)
+console.log(`══ /competitions/${C}/events → ${ev.status}`)
+const events = arr(ev.data)
+if (!events.length) console.log('   raw:', (ev.txt || '').slice(0, 1200))
+for (const e of events) console.log('   ' + JSON.stringify(e).slice(0, 220))
 
-console.log('\n══ id forms for competitionsDetail (only non-404 shown)')
-const forms = ['mtbwch2026','mtbwch-2026','mtbwch_2026','2026-mtbwch','2026_mtbwch','MTBWCH2026',
-               'MTBWCH','mtbwch.2026','26mtbwch','mtbwch26','mtb2026wch','2026mtbwch']
-for (const f of forms) {
-  const r = await j('/competitions/' + f)
-  if (r.status !== 404) console.log(`   ${f} → ${r.status} ${r.txt.slice(0, 400)}`)
+const dh = events.filter(e => /dhi|downhill|\bdh\b/i.test(JSON.stringify(e)))
+console.log(`\n══ ${dh.length} downhill event(s)`)
+for (const e of dh) {
+  const id = e.code ?? e.id ?? e.key ?? e.eventCode
+  const ph = await j(`/competitions/${C}/events/${id}/phases`)
+  console.log(`\n── ${id} phases → ${ph.status}`)
+  const phases = arr(ph.data)
+  if (!phases.length) { console.log('   raw:', (ph.txt || '').slice(0, 900)); continue }
+  for (const p of phases) console.log('   ' + JSON.stringify(p).slice(0, 260))
+
+  for (const p of phases) {
+    const pid = p.code ?? p.id ?? p.key ?? p.phaseCode
+    const r = await j(`/competitions/${C}/events/${id}/phases/${pid}/results`)
+    const rows = arr(r.data)
+    console.log(`\n   ▸ results ${id}/${pid} → ${r.status}, ${rows.length} rows`)
+    if (!rows.length) { console.log('     raw:', (r.txt || '').slice(0, 400)); continue }
+    rows.slice(0, 5).forEach(x => console.log('     ' + JSON.stringify(x).slice(0, 300)))
+  }
 }
-console.log('   (done)')
