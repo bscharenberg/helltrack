@@ -1,26 +1,298 @@
+top-level type: object
+top-level keys: [ 'heats', 'event', 'results', 'resultType', 'hasQualificationMark' ]
 
-══ event 3 phases → 200
-   {"number":1,"name":"Qualification","id":"0003190001010801FFFFFFFFFFFFFFFF","currentTab":0,"current":false,"start":"2026-08-28T13:30:00"}
-   {"number":2,"name":"Final","id":"0003190001010802FFFFFFFFFFFFFFFF","currentTab":0,"current":true,"start":"2026-08-29T13:00:00"}
+══ row 1 (full)
+{
+ "resultType": "Time",
+ "key": "20",
+ "rider": {
+  "key": "20",
+  "bib": 20,
+  "name": "STEVENS-MCNAB Lachlan",
+  "nation": "NZL",
+  "uciRiderId": "10110184506",
+  "young": false,
+  "picture": "https://tissottiming.z6.web.core.windows.net/riders/default/empty.png",
+  "teamJersey": ""
+ },
+ "isGapGreen": false,
+ "splits": [
+  {
+   "key": "UCI 1",
+   "name": "UCI 1",
+   "resultType": "Time",
+   "value": "27.807",
+   "rank": 6,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 2",
+   "name": "UCI 2",
+   "resultType": "Time",
+   "value": "1:41.268",
+   "rank": 4,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 3",
+   "name": "UCI 3",
+   "resultType": "Time",
+   "value": "2:14.684",
+   "rank": 2,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 4",
+   "name": "UCI 4",
+   "resultType": "Time",
+   "value": "2:57.876",
+   "rank": 2,
+   "isGapGreen": false
+  }
+ ],
+ "rank": 1,
+ "value": "3:34.010",
+ "time": "3:34.010",
+ "gap": "",
+ "speed": "56.414",
+ "speedRank": 0,
+ "progression": 0,
+ "approaching": false
+}
 
-   ▸ 3/1 results → 200, 90 rows
-     {"resultType":"Time","key":"20","rider":{"key":"20","bib":20,"name":"STEVENS-MCNAB Lachlan","nation":"NZL","uciRiderId":"10110184506","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"27.807","rank":6,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2
-     {"resultType":"Time","key":"35","rider":{"key":"35","bib":35,"name":"DAVIS Oliver","nation":"AUS","uciRiderId":"10110838143","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"28.316","rank":26,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resul
-     {"resultType":"Time","key":"1","rider":{"key":"1","bib":1,"name":"GOLDSTONE Jackson","nation":"CAN","uciRiderId":"10053812449","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"27.974","rank":13,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","res
-     {"resultType":"Time","key":"6","rider":{"key":"6","bib":6,"name":"PINKERTON Kenneth","nation":"USA","uciRiderId":"10063826182","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"27.776","rank":5,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resu
+══ row 2 (full)
+{
+ "resultType": "Time",
+ "key": "35",
+ "rider": {
+  "key": "35",
+  "bib": 35,
+  "name": "DAVIS Oliver",
+  "nation": "AUS",
+  "uciRiderId": "10110838143",
+  "young": false,
+  "picture": "https://tissottiming.z6.web.core.windows.net/riders/default/empty.png",
+  "teamJersey": ""
+ },
+ "isGapGreen": false,
+ "splits": [
+  {
+   "key": "UCI 1",
+   "name": "UCI 1",
+   "resultType": "Time",
+   "value": "28.316",
+   "rank": 26,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 2",
+   "name": "UCI 2",
+   "resultType": "Time",
+   "value": "1:41.612",
+   "rank": 5,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 3",
+   "name": "UCI 3",
+   "resultType": "Time",
+   "value": "2:14.669",
+   "rank": 1,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 4",
+   "name": "UCI 4",
+   "resultType": "Time",
+   "value": "2:57.332",
+   "rank": 1,
+   "isGapGreen": false
+  }
+ ],
+ "rank": 2,
+ "value": "+0.331",
+ "time": "+0.331",
+ "gap": "",
+ "speed": "58.393",
+ "speedRank": 0,
+ "progression": 0,
+ "approaching": false
+}
 
-   ▸ 3/2 results → 404, 0 rows
-     raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-2394be9251ce75d219fc2130f6037d71-1a2c8c955a1a52f6-00"}
+══ union of row keys: resultType, key, rider, isGapGreen, splits, rank, value, time, gap, speed, speedRank, progression, approaching
+══ union of rider keys: key, bib, name, nation, uciRiderId, young, picture, teamJersey
+══ distinct resultType: Time, IRM
+══ distinct status-ish: (none)
 
-══ event 12 phases → 200
-   {"number":1,"name":"Qualification","id":"0003190001020801FFFFFFFFFFFFFFFF","currentTab":0,"current":false,"start":"2026-08-28T13:30:00"}
-   {"number":2,"name":"Final","id":"0003190001020802FFFFFFFFFFFFFFFF","currentTab":0,"current":true,"start":"2026-08-29T11:10:00"}
-
-   ▸ 12/1 results → 200, 41 rows
-     {"resultType":"Time","key":"3","rider":{"key":"3","bib":3,"name":"BAUMANN Lisa","nation":"SUI","uciRiderId":"10034782059","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"30.240","rank":2,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resultTyp
-     {"resultType":"Time","key":"12","rider":{"key":"12","bib":12,"name":"HARNDEN Harriet","nation":"GBR","uciRiderId":"10023959384","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"30.867","rank":6,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","res
-     {"resultType":"Time","key":"1","rider":{"key":"1","bib":1,"name":"HÖLL Valentina","nation":"AUT","uciRiderId":"10035131663","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"30.562","rank":4,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resultT
-     {"resultType":"Time","key":"7","rider":{"key":"7","bib":7,"name":"EARNEST Sacha","nation":"NZL","uciRiderId":"10064068278","young":false,"picture":"https://tissottiming.z6.web.core.windows.net/riders/default/empty.png","teamJersey":""},"isGapGreen":false,"splits":[{"key":"UCI 1","name":"UCI 1","resultType":"Time","value":"31.247","rank":11,"isGapGreen":false},{"key":"UCI 2","name":"UCI 2","resultT
-
-   ▸ 12/2 results → 404, 0 rows
-     raw: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-27a17519f28e7c1e90a319a41d0a95d5-561a37f2a41faf91-00"}
+══ last 3 rows (full)
+{
+ "resultType": "IRM",
+ "key": "80",
+ "rider": {
+  "key": "80",
+  "bib": 80,
+  "name": "CARO LABBE Maximiliano",
+  "nation": "CHI",
+  "uciRiderId": "10082385619",
+  "young": false,
+  "picture": "https://tissottiming.z6.web.core.windows.net/riders/default/empty.png",
+  "teamJersey": ""
+ },
+ "isGapGreen": false,
+ "splits": [
+  {
+   "key": "UCI 1",
+   "name": "UCI 1",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 2",
+   "name": "UCI 2",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 3",
+   "name": "UCI 3",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 4",
+   "name": "UCI 4",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  }
+ ],
+ "rank": 0,
+ "value": "DNS",
+ "time": "DNS",
+ "gap": "",
+ "speed": "",
+ "speedRank": 0,
+ "progression": 0,
+ "approaching": false
+}
+{
+ "resultType": "IRM",
+ "key": "54",
+ "rider": {
+  "key": "54",
+  "bib": 54,
+  "name": "DELESALLE Michael",
+  "nation": "CAN",
+  "uciRiderId": "10137291659",
+  "young": false,
+  "picture": "https://tissottiming.z6.web.core.windows.net/riders/default/empty.png",
+  "teamJersey": ""
+ },
+ "isGapGreen": false,
+ "splits": [
+  {
+   "key": "UCI 1",
+   "name": "UCI 1",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 2",
+   "name": "UCI 2",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 3",
+   "name": "UCI 3",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 4",
+   "name": "UCI 4",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  }
+ ],
+ "rank": 0,
+ "value": "DNS",
+ "time": "DNS",
+ "gap": "",
+ "speed": "",
+ "speedRank": 0,
+ "progression": 0,
+ "approaching": false
+}
+{
+ "resultType": "IRM",
+ "key": "37",
+ "rider": {
+  "key": "37",
+  "bib": 37,
+  "name": "HARTENSTERN Max",
+  "nation": "GER",
+  "uciRiderId": "10011213584",
+  "young": false,
+  "picture": "https://tissottiming.z6.web.core.windows.net/riders/default/empty.png",
+  "teamJersey": ""
+ },
+ "isGapGreen": false,
+ "splits": [
+  {
+   "key": "UCI 1",
+   "name": "UCI 1",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 2",
+   "name": "UCI 2",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 3",
+   "name": "UCI 3",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  },
+  {
+   "key": "UCI 4",
+   "name": "UCI 4",
+   "resultType": "Points",
+   "value": "",
+   "rank": 0,
+   "isGapGreen": false
+  }
+ ],
+ "rank": 0,
+ "value": "DNS",
+ "time": "DNS",
+ "gap": "",
+ "speed": "",
+ "speedRank": 0,
+ "progression": 0,
+ "approaching": false
+}
