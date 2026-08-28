@@ -84,7 +84,7 @@ jobs:
       # fetcher. chronorace-fetch.yml can't be dispatched until it is on the default branch.
       - name: TEMP ChronoRace probe
         if: github.event_name == 'workflow_dispatch'
-        run: node scripts/chronorace-fetcher.mjs --probe --raw
+        run: node scripts/chronorace-fetcher.mjs 2026 --validate
 
       - name: Fetch and parse results
         if: steps.venue.outputs.slug != 'unknown'
