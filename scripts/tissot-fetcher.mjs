@@ -82,12 +82,49 @@ function nonFinisherStatus(row) {
   return 'dnf'
 }
 
-function mapRider(row) {
+// Tissot gives an absolute time only to the leader; every other finisher's `time` field is
+// the gap ("+0.331") and `gap` is empty. results.json stores an absolute time per rider, so
+// reconstruct it as leader + gap. Cross-checked against the Val di Sole men's qualifying
+// published elsewhere: leader 3:34.010, second +0.331 → 3:34.341. ✓
+function parseClock(str) {
+  const m = /^(?:(\d+):)?(?:(\d+):)?(\d+)(?:\.(\d{1,3}))?$/.exec(String(str || '').trim().replace(/^\+/, ''))
+  if (!m) return null
+  const [, a, b, sec, frac] = m
+  const h   = b ? Number(a) : 0
+  const min = b ? Number(b) : (a ? Number(a) : 0)
+  return ((h * 3600 + min * 60 + Number(sec)) * 1000) + Number((frac || '0').padEnd(3, '0'))
+}
+
+function formatClock(ms) {
+  if (!Number.isFinite(ms) || ms < 0) return null
+  const h   = Math.floor(ms / 3600000)
+  const min = Math.floor((ms % 3600000) / 60000)
+  const sec = Math.floor((ms % 60000) / 1000)
+  const mil = ms % 1000
+  const tail = `${String(sec).padStart(2, '0')}.${String(mil).padStart(3, '0')}`
+  return h ? `${h}:${String(min).padStart(2, '0')}:${tail}` : `${min}:${tail}`
+}
+
+function mapRider(row, leaderMs) {
   const status = nonFinisherStatus(row)
   const rank   = Number(row.rank)
   const splits = (row.splits || [])
     .filter(s => s.value)
     .map(s => ({ name: s.name, time: s.value, rank: s.rank || null }))
+
+  const raw      = String(row.time || row.value || '').trim()
+  const isGapForm = raw.startsWith('+')
+  let time = null, gap = null
+  if (!status) {
+    if (isGapForm) {
+      gap = raw
+      const gapMs = parseClock(raw)
+      // No leader time (e.g. the leader is an IRM row) → leave time null rather than guess.
+      if (leaderMs != null && gapMs != null) time = formatClock(leaderMs + gapMs)
+    } else {
+      time = raw || null
+    }
+  }
 
   return {
     rank:   status ? null : (Number.isFinite(rank) && rank > 0 ? rank : null),
@@ -95,8 +132,9 @@ function mapRider(row) {
     nat:    row.rider?.nation || null,
     // Worlds is raced in national colours, so there is no trade team to record.
     team:   null,
-    time:   status ? null : (row.time || row.value || null),
-    gap:    status ? null : (row.gap || null),
+    time,
+    gap,
+    ...(row.rider?.bib != null && { bib: String(row.rider.bib) }),
     // No World Cup points are awarded at a World Championship.
     points: null,
     ...(row.rider?.uciRiderId && { uciId: row.rider.uciRiderId }),
@@ -143,6 +181,15 @@ async function fetchYear(year, { onLog = () => {} } = {}) {
         const key = sessionKey(p, e.gender)
         if (!key) { onLog(`  ⚠️  unmapped phase "${p.name}" on ${e.name}`); continue }
 
+        // The finals date comes from the schedule, which exists before the race does.
+        // Deriving it from results instead would leave the round dated by the competition's
+        // end date on any poll taken before finals — that is how the hardcoded calendar
+        // ended up a day late for both Les Gets and Val di Sole.
+        if (key.startsWith('finals-') && p.start) {
+          const d = p.start.slice(0, 10)
+          if (!earliestFinal || d < earliestFinal) earliestFinal = d
+        }
+
         let payload
         try {
           payload = await get(`/competitions/${compId}/events/${e.number}/phases/${p.number}/results`)
@@ -154,12 +201,9 @@ async function fetchYear(year, { onLog = () => {} } = {}) {
 
         const rows = payload.results || []
         if (!rows.length) continue
-        sessions[key] = rows.map(mapRider)
-
-        if (key.startsWith('finals-') && p.start) {
-          const d = p.start.slice(0, 10)
-          if (!earliestFinal || d < earliestFinal) earliestFinal = d
-        }
+        const leader   = rows.find(r => Number(r.rank) === 1 && String(r.resultType).toUpperCase() !== 'IRM')
+        const leaderMs = leader ? parseClock(leader.time || leader.value) : null
+        sessions[key] = rows.map(r => mapRider(r, leaderMs))
       }
     }
 
