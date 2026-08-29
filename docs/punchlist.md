@@ -298,3 +298,30 @@ rewrite the calendar. Fix these by hand once, then the fetchers will leave them 
 
 ChronoRace also labels round 1 "Race of South Korea" where the site stores the venue
 "Mona YongPyong". Both are used by the UCI; the stored one wins until someone decides.
+
+## Results pipeline, as it stands
+
+Three same-day sources, each covering what the others cannot, plus a delayed backstop:
+
+| Source | Covers | Wired into |
+|---|---|---|
+| `results-fetcher.mjs` (ucimtbworldseries.com) | World Series | fetch-results.yml, every 10 min on race days |
+| `tissot-fetcher.mjs` (prod.server.tissottiming.com) | **World Championships** | same |
+| `chronorace-fetcher.mjs` (results.chronorace.be) | World Series | same |
+| `dataride-fetcher.mjs` (dataride.uci.ch) | everything, days late | dataride-fetch.yml, 6-hourly, `--fill-gaps` only |
+
+ucimtbworldseries.com has served its SPA shell instead of JSON since before Les Gets 2026 and
+has not recovered. The pipeline no longer depends on it.
+
+`preflight.yml` runs Mondays 12:00 UTC and opens an issue if a round inside a two-week horizon
+has no reachable same-day source. Check by hand any time:
+
+```
+node scripts/preflight-check.mjs --year=2026            # what the weekly alarm sees
+node scripts/preflight-check.mjs --year=2026 --all      # every round
+node scripts/chronorace-fetcher.mjs 2026 --preflight    # ChronoRace detail
+```
+
+Known: Whistler (wbd-2026-13) and Lake Placid (wbd-2026-14) return 500 from ChronoRace's
+competition-list as of 2026-08-29. Expected for rounds weeks out — every past round is READY —
+but re-check inside race week.
