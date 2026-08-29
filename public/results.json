@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-29T02:29:13.559Z",
+  "lastUpdated": "2026-08-29T15:05:41.921Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -297801,6 +297801,1227 @@
                 "bib": "4",
                 "points": null,
                 "uciId": "10094351072",
+                "dns": true
+              }
+            ],
+            "finals-women": [
+              {
+                "rank": 1,
+                "name": "Valentina Höll",
+                "nat": "AUT",
+                "team": null,
+                "time": "4:01.558",
+                "gap": null,
+                "bib": "1",
+                "points": null,
+                "uciId": "10035131663",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.111",
+                    "rank": 2
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:52.722",
+                    "rank": 1
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:31.927",
+                    "rank": 1
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:20.873",
+                    "rank": 1
+                  }
+                ]
+              },
+              {
+                "rank": 2,
+                "name": "Lisa Baumann",
+                "nat": "SUI",
+                "team": null,
+                "time": "4:03.286",
+                "gap": "+1.728",
+                "bib": "3",
+                "points": null,
+                "uciId": "10034782059",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.993",
+                    "rank": 1
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:56.660",
+                    "rank": 5
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:35.900",
+                    "rank": 5
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:23.543",
+                    "rank": 2
+                  }
+                ]
+              },
+              {
+                "rank": 3,
+                "name": "Harriet Harnden",
+                "nat": "GBR",
+                "team": null,
+                "time": "4:03.604",
+                "gap": "+2.046",
+                "bib": "12",
+                "points": null,
+                "uciId": "10023959384",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.945",
+                    "rank": 14
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:56.848",
+                    "rank": 6
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:35.793",
+                    "rank": 4
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:23.584",
+                    "rank": 3
+                  }
+                ]
+              },
+              {
+                "rank": 4,
+                "name": "Nina Hoffmann",
+                "nat": "GER",
+                "team": null,
+                "time": "4:04.905",
+                "gap": "+3.347",
+                "bib": "8",
+                "points": null,
+                "uciId": "10015887065",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.421",
+                    "rank": 5
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:55.850",
+                    "rank": 4
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:35.201",
+                    "rank": 2
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:25.000",
+                    "rank": 4
+                  }
+                ]
+              },
+              {
+                "rank": 5,
+                "name": "Eliana Hulsebosch",
+                "nat": "NZL",
+                "team": null,
+                "time": "4:06.625",
+                "gap": "+5.067",
+                "bib": "19",
+                "points": null,
+                "uciId": "10143332234",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.391",
+                    "rank": 4
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:55.792",
+                    "rank": 3
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:35.501",
+                    "rank": 3
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:25.399",
+                    "rank": 5
+                  }
+                ]
+              },
+              {
+                "rank": 6,
+                "name": "Lisa Bouladou",
+                "nat": "FRA",
+                "team": null,
+                "time": "4:07.015",
+                "gap": "+5.457",
+                "bib": "13",
+                "points": null,
+                "uciId": "10068920201",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.694",
+                    "rank": 11
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:57.547",
+                    "rank": 9
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:37.677",
+                    "rank": 8
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:26.357",
+                    "rank": 6
+                  }
+                ]
+              },
+              {
+                "rank": 7,
+                "name": "Tahnee Seagrave",
+                "nat": "GBR",
+                "team": null,
+                "time": "4:07.606",
+                "gap": "+6.048",
+                "bib": "15",
+                "points": null,
+                "uciId": "10007414016",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.662",
+                    "rank": 9
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:56.997",
+                    "rank": 7
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:37.064",
+                    "rank": 6
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:26.397",
+                    "rank": 7
+                  }
+                ]
+              },
+              {
+                "rank": 8,
+                "name": "Kate Hastings",
+                "nat": "NZL",
+                "team": null,
+                "time": "4:08.132",
+                "gap": "+6.574",
+                "bib": "18",
+                "points": null,
+                "uciId": "10121790857",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.340",
+                    "rank": 17
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:58.978",
+                    "rank": 12
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:38.296",
+                    "rank": 9
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:27.748",
+                    "rank": 9
+                  }
+                ]
+              },
+              {
+                "rank": 9,
+                "name": "Marine Cabirou",
+                "nat": "FRA",
+                "team": null,
+                "time": "4:09.382",
+                "gap": "+7.824",
+                "bib": "2",
+                "points": null,
+                "uciId": "10009563069",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.491",
+                    "rank": 6
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:03.034",
+                    "rank": 19
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:41.596",
+                    "rank": 13
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:29.864",
+                    "rank": 11
+                  }
+                ]
+              },
+              {
+                "rank": 10,
+                "name": "Anna Newkirk",
+                "nat": "USA",
+                "team": null,
+                "time": "4:09.962",
+                "gap": "+8.404",
+                "bib": "9",
+                "points": null,
+                "uciId": "10034793173",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.930",
+                    "rank": 13
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:57.847",
+                    "rank": 10
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:38.488",
+                    "rank": 10
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:27.876",
+                    "rank": 10
+                  }
+                ]
+              },
+              {
+                "rank": 11,
+                "name": "Valentina Roa Sanchez",
+                "nat": "COL",
+                "team": null,
+                "time": "4:11.940",
+                "gap": "+10.382",
+                "bib": "11",
+                "points": null,
+                "uciId": "10035298886",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.572",
+                    "rank": 7
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:59.055",
+                    "rank": 13
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:40.311",
+                    "rank": 12
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:30.057",
+                    "rank": 12
+                  }
+                ]
+              },
+              {
+                "rank": 12,
+                "name": "Frida Helena Rønning",
+                "nat": "NOR",
+                "team": null,
+                "time": "4:12.949",
+                "gap": "+11.391",
+                "bib": "35",
+                "points": null,
+                "uciId": "10008084326",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.219",
+                    "rank": 3
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:57.347",
+                    "rank": 8
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:39.092",
+                    "rank": 11
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:31.265",
+                    "rank": 13
+                  }
+                ]
+              },
+              {
+                "rank": 13,
+                "name": "Maylei Leaneagh",
+                "nat": "USA",
+                "team": null,
+                "time": "4:15.120",
+                "gap": "+13.562",
+                "bib": "31",
+                "points": null,
+                "uciId": "10118762942",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.688",
+                    "rank": 10
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:00.486",
+                    "rank": 14
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:42.316",
+                    "rank": 14
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:33.860",
+                    "rank": 14
+                  }
+                ]
+              },
+              {
+                "rank": 14,
+                "name": "Sacha Earnest",
+                "nat": "NZL",
+                "team": null,
+                "time": "4:15.433",
+                "gap": "+13.875",
+                "bib": "7",
+                "points": null,
+                "uciId": "10064068278",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.855",
+                    "rank": 12
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:57.983",
+                    "rank": 11
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:37.193",
+                    "rank": 7
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:26.401",
+                    "rank": 8
+                  }
+                ]
+              },
+              {
+                "rank": 15,
+                "name": "Veronika Widmann",
+                "nat": "ITA",
+                "team": null,
+                "time": "4:16.277",
+                "gap": "+14.719",
+                "bib": "16",
+                "points": null,
+                "uciId": "10007423312",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.140",
+                    "rank": 16
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:01.664",
+                    "rank": 16
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:43.876",
+                    "rank": 16
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:34.855",
+                    "rank": 15
+                  }
+                ]
+              },
+              {
+                "rank": 16,
+                "name": "Elleni Turkovic",
+                "nat": "AUS",
+                "team": null,
+                "time": "4:18.133",
+                "gap": "+16.575",
+                "bib": "39",
+                "points": null,
+                "uciId": "10132146316",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.380",
+                    "rank": 26
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:01.369",
+                    "rank": 15
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:43.453",
+                    "rank": 15
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:35.220",
+                    "rank": 16
+                  }
+                ]
+              },
+              {
+                "rank": 17,
+                "name": "Mille Johnset",
+                "nat": "NOR",
+                "team": null,
+                "time": "4:20.385",
+                "gap": "+18.827",
+                "bib": "20",
+                "points": null,
+                "uciId": "10020727264",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.230",
+                    "rank": 25
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:02.824",
+                    "rank": 18
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:46.460",
+                    "rank": 18
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:39.176",
+                    "rank": 17
+                  }
+                ]
+              },
+              {
+                "rank": 18,
+                "name": "Lais Bonnaure",
+                "nat": "FRA",
+                "team": null,
+                "time": "4:22.849",
+                "gap": "+21.291",
+                "bib": "21",
+                "points": null,
+                "uciId": "10120126501",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.651",
+                    "rank": 19
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:05.926",
+                    "rank": 21
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:49.240",
+                    "rank": 20
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:40.088",
+                    "rank": 18
+                  }
+                ]
+              },
+              {
+                "rank": 19,
+                "name": "Luana-Maria Chereches",
+                "nat": "ROU",
+                "team": null,
+                "time": "4:23.843",
+                "gap": "+22.285",
+                "bib": "23",
+                "points": null,
+                "uciId": "10080569594",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.764",
+                    "rank": 22
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:02.575",
+                    "rank": 17
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:47.230",
+                    "rank": 19
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:40.888",
+                    "rank": 19
+                  }
+                ]
+              },
+              {
+                "rank": 20,
+                "name": "Cristina Menendez Gonzalez",
+                "nat": "ESP",
+                "team": null,
+                "time": "4:26.309",
+                "gap": "+24.751",
+                "bib": "38",
+                "points": null,
+                "uciId": "10041592873",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.602",
+                    "rank": 29
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:08.567",
+                    "rank": 26
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:51.491",
+                    "rank": 22
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:43.619",
+                    "rank": 20
+                  }
+                ]
+              },
+              {
+                "rank": 21,
+                "name": "Phoebe Gale",
+                "nat": "GBR",
+                "team": null,
+                "time": "4:27.199",
+                "gap": "+25.641",
+                "bib": "14",
+                "points": null,
+                "uciId": "10083936609",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.622",
+                    "rank": 8
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:55.682",
+                    "rank": 2
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:53.567",
+                    "rank": 26
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:44.639",
+                    "rank": 22
+                  }
+                ]
+              },
+              {
+                "rank": 22,
+                "name": "Sacha Mills",
+                "nat": "AUS",
+                "team": null,
+                "time": "4:27.541",
+                "gap": "+25.983",
+                "bib": "17",
+                "points": null,
+                "uciId": "10063056448",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.991",
+                    "rank": 23
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:07.481",
+                    "rank": 23
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:52.555",
+                    "rank": 23
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:44.984",
+                    "rank": 23
+                  }
+                ]
+              },
+              {
+                "rank": 23,
+                "name": "Emily Carrick-Anderson",
+                "nat": "GBR",
+                "team": null,
+                "time": "4:27.698",
+                "gap": "+26.140",
+                "bib": "34",
+                "points": null,
+                "uciId": "10084270752",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.438",
+                    "rank": 27
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:09.120",
+                    "rank": 29
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:54.138",
+                    "rank": 28
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:45.477",
+                    "rank": 24
+                  }
+                ]
+              },
+              {
+                "rank": 24,
+                "name": "Siel Van der Velden",
+                "nat": "BEL",
+                "team": null,
+                "time": "4:27.940",
+                "gap": "+26.382",
+                "bib": "27",
+                "points": null,
+                "uciId": "10056714062",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.685",
+                    "rank": 21
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:06.564",
+                    "rank": 22
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:50.850",
+                    "rank": 21
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:44.243",
+                    "rank": 21
+                  }
+                ]
+              },
+              {
+                "rank": 25,
+                "name": "Vicky Clavel",
+                "nat": "FRA",
+                "team": null,
+                "time": "4:31.607",
+                "gap": "+30.049",
+                "bib": "24",
+                "points": null,
+                "uciId": "10071506764",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "33.080",
+                    "rank": 34
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:08.529",
+                    "rank": 25
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:54.515",
+                    "rank": 29
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:47.652",
+                    "rank": 27
+                  }
+                ]
+              },
+              {
+                "rank": 26,
+                "name": "Eleonora Farina",
+                "nat": "ITA",
+                "team": null,
+                "time": "4:31.632",
+                "gap": "+30.074",
+                "bib": "32",
+                "points": null,
+                "uciId": "10010007855",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.732",
+                    "rank": 31
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:09.576",
+                    "rank": 31
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:53.401",
+                    "rank": 25
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:47.415",
+                    "rank": 26
+                  }
+                ]
+              },
+              {
+                "rank": 27,
+                "name": "Paz Gallo Fuentes",
+                "nat": "CHI",
+                "team": null,
+                "time": "4:32.772",
+                "gap": "+31.214",
+                "bib": "33",
+                "points": null,
+                "uciId": "10054327559",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.798",
+                    "rank": 32
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:08.265",
+                    "rank": 24
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:53.224",
+                    "rank": 24
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:46.764",
+                    "rank": 25
+                  }
+                ]
+              },
+              {
+                "rank": 28,
+                "name": "Maria Pomes Garcia",
+                "nat": "ESP",
+                "team": null,
+                "time": "4:33.235",
+                "gap": "+31.677",
+                "bib": "25",
+                "points": null,
+                "uciId": "10114880518",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.665",
+                    "rank": 30
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:09.087",
+                    "rank": 28
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:54.656",
+                    "rank": 30
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:49.104",
+                    "rank": 28
+                  }
+                ]
+              },
+              {
+                "rank": 29,
+                "name": "Emma Bindhammer",
+                "nat": "AUT",
+                "team": null,
+                "time": "4:34.815",
+                "gap": "+33.257",
+                "bib": "37",
+                "points": null,
+                "uciId": "10145311034",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "34.010",
+                    "rank": 36
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:10.417",
+                    "rank": 32
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:57.316",
+                    "rank": 33
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:50.806",
+                    "rank": 30
+                  }
+                ]
+              },
+              {
+                "rank": 30,
+                "name": "Fernanda Gildemeister Menzel",
+                "nat": "CHI",
+                "team": null,
+                "time": "4:37.668",
+                "gap": "+36.110",
+                "bib": "42",
+                "points": null,
+                "uciId": "10092032772",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.438",
+                    "rank": 28
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:09.493",
+                    "rank": 30
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:55.872",
+                    "rank": 31
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:50.718",
+                    "rank": 29
+                  }
+                ]
+              },
+              {
+                "rank": 31,
+                "name": "Lauren Rosser",
+                "nat": "CAN",
+                "team": null,
+                "time": "4:38.606",
+                "gap": "+37.048",
+                "bib": "36",
+                "points": null,
+                "uciId": "10007400878",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "33.048",
+                    "rank": 33
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:10.832",
+                    "rank": 33
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:57.256",
+                    "rank": 32
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:54.207",
+                    "rank": 32
+                  }
+                ]
+              },
+              {
+                "rank": 32,
+                "name": "Catalina Calderon",
+                "nat": "ARG",
+                "team": null,
+                "time": "4:38.941",
+                "gap": "+37.383",
+                "bib": "28",
+                "points": null,
+                "uciId": "10120222891",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "32.076",
+                    "rank": 24
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:08.671",
+                    "rank": 27
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:53.631",
+                    "rank": 27
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:51.642",
+                    "rank": 31
+                  }
+                ]
+              },
+              {
+                "rank": 33,
+                "name": "Gloria Scarsi",
+                "nat": "ITA",
+                "team": null,
+                "time": "4:40.776",
+                "gap": "+39.218",
+                "bib": "5",
+                "points": null,
+                "uciId": "10029881337",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.673",
+                    "rank": 20
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:27.040",
+                    "rank": 36
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "3:07.569",
+                    "rank": 36
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:57.903",
+                    "rank": 34
+                  }
+                ]
+              },
+              {
+                "rank": 34,
+                "name": "Florencia Rodriguez Contardo",
+                "nat": "CHI",
+                "team": null,
+                "time": "4:42.723",
+                "gap": "+41.165",
+                "bib": "40",
+                "points": null,
+                "uciId": "10084002283",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "34.968",
+                    "rank": 37
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:15.634",
+                    "rank": 35
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "3:01.048",
+                    "rank": 34
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:57.233",
+                    "rank": 33
+                  }
+                ]
+              },
+              {
+                "rank": 35,
+                "name": "Kira Zamora Novales",
+                "nat": "ESP",
+                "team": null,
+                "time": "4:48.684",
+                "gap": "+47.126",
+                "bib": "30",
+                "points": null,
+                "uciId": "10080546255",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "33.374",
+                    "rank": 35
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:14.838",
+                    "rank": 34
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "3:04.178",
+                    "rank": 35
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "4:02.621",
+                    "rank": 36
+                  }
+                ]
+              },
+              {
+                "rank": 36,
+                "name": "Matilda Melton",
+                "nat": "USA",
+                "team": null,
+                "time": "4:59.143",
+                "gap": "+57.585",
+                "bib": "22",
+                "points": null,
+                "uciId": "10130948768",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.545",
+                    "rank": 18
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:03.087",
+                    "rank": 20
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:44.138",
+                    "rank": 17
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:58.453",
+                    "rank": 35
+                  }
+                ]
+              },
+              {
+                "rank": null,
+                "name": "Jess Blewitt",
+                "nat": "NZL",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "bib": "26",
+                "points": null,
+                "uciId": "10088307366",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.984",
+                    "rank": 15
+                  }
+                ],
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Myriam Nicole",
+                "nat": "FRA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "bib": "6",
+                "points": null,
+                "uciId": "10004535237",
                 "dns": true
               }
             ]
