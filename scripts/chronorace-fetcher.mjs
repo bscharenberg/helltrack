@@ -123,30 +123,49 @@ function resolveVenue(ev) {
 // chain is live and the fetcher will pick the round up automatically. Worth having because
 // Whistler (wbd-2026-13) returned a 500 from competition-list well ahead of its race weekend
 // — a future round is always the least-baked record in the feed.
-async function preflight(year) {
+// Structured form, so the weekly alarm can act on it instead of scraping console text.
+async function preflightReport(year) {
   const events = await api(`/discovery/event-list?season=${encodeURIComponent(year)}`)
   if (!Array.isArray(events)) throw new Error('event-list did not return an array')
   const dhEvents = events
     .filter(e => Array.isArray(e.Disciplines) && e.Disciplines.includes('DHI'))
     .sort((a, b) => String(a.StartDate).localeCompare(String(b.StartDate)))
 
-  console.log(`\n── ChronoRace preflight, ${year} — ${dhEvents.length} DHI events\n`)
-  let notReady = 0
+  const out = []
   for (const [i, ev] of dhEvents.entries()) {
-    const label = `R${String(i + 1).padStart(2)}  ${String(ev.VenueLocation).padEnd(26)} ${String(ev.StartDate).slice(0, 10)}`
+    const base = {
+      round:     i + 1,
+      venue:     ev.VenueLocation,
+      eventId:   ev.EventId,
+      startDate: String(ev.StartDate || '').slice(0, 10),
+    }
     let comps
     try { comps = (await api(`/discovery/competition-list/${ev.EventId}`)) || [] }
-    catch (err) { console.log(`  ❌ ${label}  competition-list → ${err.message}`); notReady++; continue }
+    catch (err) { out.push({ ...base, ready: false, reason: `competition-list → ${err.message}` }); continue }
 
     const dhi = comps.filter(c => c.Discipline === 'DHI' && GENDER[c.CategoryCode])
-    if (!dhi.length) { console.log(`  ⏳ ${label}  event exists, no elite DHI competitions listed yet`); notReady++; continue }
-
-    const keys = dhi.map(c => sessionKey(c.Phase, c.PhaseName, GENDER[c.CategoryCode])).filter(Boolean)
-    const dates = [...new Set(dhi.map(c => String(c.Date || '').slice(0, 10)).filter(Boolean))].sort()
-    console.log(`  ✅ ${label}  READY — ${dhi.length} competitions, sessions: ${[...new Set(keys)].join(', ')}`)
-    console.log(`      dates: ${dates.join(', ')}`)
+    if (!dhi.length) {
+      out.push({ ...base, ready: false, reason: 'event exists but lists no elite DHI competitions yet' })
+      continue
+    }
+    const sessions = [...new Set(dhi.map(c => sessionKey(c.Phase, c.PhaseName, GENDER[c.CategoryCode])).filter(Boolean))]
+    const dates    = [...new Set(dhi.map(c => String(c.Date || '').slice(0, 10)).filter(Boolean))].sort()
+    out.push({ ...base, ready: true, competitions: dhi.length, sessions, dates })
     await sleep(120)
   }
+  return out
+}
+
+async function preflight(year) {
+  const rows = await preflightReport(year)
+  console.log(`\n── ChronoRace preflight, ${year} — ${rows.length} DHI events\n`)
+  for (const r of rows) {
+    const label = `R${String(r.round).padStart(2)}  ${String(r.venue).padEnd(26)} ${r.startDate}`
+    if (!r.ready) { console.log(`  ❌ ${label}  ${r.reason}`); continue }
+    console.log(`  ✅ ${label}  READY — ${r.competitions} competitions, sessions: ${r.sessions.join(', ')}`)
+    console.log(`      dates: ${r.dates.join(', ')}`)
+  }
+  const notReady = rows.filter(r => !r.ready).length
   console.log(notReady
     ? `\n⚠️  ${notReady} event(s) not ready yet. That is expected for a round weeks out; re-run closer to the race.`
     : '\n✅ every DHI event is reachable.')
@@ -378,7 +397,7 @@ async function main() {
   if (process.argv.includes('--merge')) merge(year, rounds)
 }
 
-export { fetchSeason, mergeSession, preserveFilled, preflight }
+export { fetchSeason, mergeSession, preserveFilled, preflight, preflightReport }
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch(e => { console.error('💥', e.message); process.exit(1) })
 }

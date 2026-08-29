@@ -1,0 +1,94 @@
+name: Source Preflight
+
+# Early warning for the results pipeline.
+#
+# fetch-results.yml is unattended, and its failure mode is silent: on a race weekend it polls,
+# finds nothing, and correctly no-ops. That is what happened at Les Gets 2026 — the round
+# simply never appeared and it was days before anyone noticed.
+#
+# A source's discovery chain comes up well before any result exists, so it can be checked in
+# advance. This runs weekly, looks at rounds inside a two-week horizon, and opens an issue if
+# the source that would have to serve one is not reachable yet. Quiet when everything is fine.
+
+on:
+  schedule:
+    # Mondays 12:00 UTC — a full race week of lead time before a typical Fri–Sun round.
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Horizon in days (default 14)'
+        required: false
+        type: string
+      all:
+        description: 'Ignore the horizon and report every round'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Check upcoming rounds
+        id: check
+        continue-on-error: true          # a failure here is the signal, not an error
+        env:
+          DAYS: ${{ inputs.days }}
+          ALL:  ${{ inputs.all }}
+        run: |
+          args=(--write-report)
+          [ -n "$DAYS" ] && args+=("--days=$DAYS")
+          [ "$ALL" = "true" ] && args+=(--all)
+          node scripts/preflight-check.mjs "${args[@]}"
+
+      - name: Open or update an issue when a source is not ready
+        if: steps.check.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Results source not ready for an upcoming round"
+          BODY_FILE=preflight-report.md
+          {
+            echo
+            echo "---"
+            echo "_Opened automatically by \`.github/workflows/preflight.yml\`. It will comment again"
+            echo "each week while the problem persists; close it once preflight passes._"
+          } >> "$BODY_FILE"
+
+          EXISTING=$(gh issue list --state open --label preflight --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            echo "Updating existing issue #$EXISTING"
+            gh issue comment "$EXISTING" --body-file "$BODY_FILE"
+          else
+            # The label may not exist yet on a fresh repo; create it, ignoring "already exists".
+            gh label create preflight --color FBCA04 --description "Automated source-readiness warning" 2>/dev/null || true
+            gh issue create --title "$TITLE" --label preflight --body-file "$BODY_FILE"
+          fi
+
+      - name: Close the issue once every source is ready again
+        if: steps.check.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          EXISTING=$(gh issue list --state open --label preflight --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "Preflight passes — every source for the upcoming round is reachable. Closing."
+            gh issue close "$EXISTING"
+          else
+            echo "Preflight clean, no open issue."
+          fi
