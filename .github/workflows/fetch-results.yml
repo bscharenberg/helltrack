@@ -108,20 +108,6 @@ jobs:
         continue-on-error: true
         run: node scripts/chronorace-fetcher.mjs "$(date -u +%Y)" --merge
 
-      # TEMP (remove before merge): surface preflight output for review
-      - name: TEMP preflight
-        if: github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        run: |
-          mkdir -p scripts/probe
-          node scripts/chronorace-fetcher.mjs 2026 --preflight 2>&1 | tee scripts/probe/out.txt
-          git config user.name "Helltrack Bot"
-          git config user.email "helltrack-bot@users.noreply.github.com"
-          git add -f scripts/probe/out.txt
-          git diff --staged --quiet && exit 0
-          git commit -m 'temp: preflight output'
-          git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME"
-
       - name: Commit updated results
         if: steps.venue.outputs.slug != 'unknown'
         run: |

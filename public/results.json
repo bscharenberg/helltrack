@@ -275186,7 +275186,7 @@
         {
           "venue": "Mona YongPyong",
           "slug": "race-of-south-korea-2026",
-          "date": "2026-05-01",
+          "date": "2026-05-02",
           "round": 1,
           "fetchedAt": "2026-07-02T23:42:55.560Z",
           "sessions": {
@@ -282816,7 +282816,7 @@
         {
           "venue": "Lenzerheide",
           "slug": "lenzerheide-2026",
-          "date": "2026-06-21",
+          "date": "2026-06-20",
           "round": 4,
           "sessions": {
             "qualifying-1-men": [
@@ -285591,7 +285591,7 @@
         {
           "venue": "La Thuile",
           "slug": "la-thuile-2026",
-          "date": "2026-07-05",
+          "date": "2026-07-04",
           "round": 5,
           "fetchedAt": "2026-07-04T14:02:49.880Z",
           "sessions": {
@@ -288350,7 +288350,7 @@
         {
           "venue": "Pal Arinsal",
           "slug": "pal-arinsal-2026",
-          "date": "2026-07-12",
+          "date": "2026-07-11",
           "round": 6,
           "fetchedAt": "2026-07-20T15:43:10.971Z",
           "sessions": {
