@@ -1,0 +1,43 @@
+### default horizon (should be quiet today)
+Helltrack source preflight — 2026
+
+Horizon: rounds starting within 14 days (checked 2026-08-29).
+
+No World Series round is due in this window — nothing to check.
+exit=0
+
+### --all (should flag Whistler + Lake Placid)
+Helltrack source preflight — 2026
+
+Horizon: all rounds.
+
+| Round | Venue | Starts | In | ChronoRace |
+|---|---|---|---|---|
+| R1 | Race of South Korea | 2026-05-01 | -120d | ✅ ready |
+| R2 | Loudenvielle-Peyragudes | 2026-05-28 | -93d | ✅ ready |
+| R3 | Saalfelden-Leogang Salzburgerland | 2026-06-11 | -79d | ✅ ready |
+| R4 | Lenzerheide | 2026-06-19 | -71d | ✅ ready |
+| R5 | La Thuile - Val d'Aosta | 2026-07-03 | -57d | ✅ ready |
+| R6 | Pal Arinsal - Andorra | 2026-07-08 | -52d | ✅ ready |
+| R7 | Haute Savoie | 2026-08-21 | -8d | ✅ ready |
+| R8 | Whistler Mountain Bike Park, British Columbia | 2026-09-25 | 27d | ❌ competition-list → GET /discovery/competition-list/wbd-2026-13 → 500 |
+| R9 | Lake Placid Olympic Sites, New York | 2026-10-02 | 34d | ❌ competition-list → GET /discovery/competition-list/wbd-2026-14 → 500 |
+
+World Championships (2026 UCI Mountain Bike World Championships, 2026-08-26 → 2026-08-30, in -3 days)
+  ✅ Tissot ready — Men Elite Downhill, Women Elite Downhill
+
+---
+
+**A round is coming up that no same-day source can serve yet.**
+
+- R8 Whistler Mountain Bike Park, British Columbia (2026-09-25, in 27 days) — ChronoRace: competition-list → GET /discovery/competition-list/wbd-2026-13 → 500
+- R9 Lake Placid Olympic Sites, New York (2026-10-02, in 34 days) — ChronoRace: competition-list → GET /discovery/competition-list/wbd-2026-14 → 500
+
+A 500 or an empty competition list weeks out is normal — the feed is populated closer to
+the race. Treat this as urgent only inside about a week of the round.
+
+If it is still failing close to race day, the round will not appear live. The DataRide
+sweep (`dataride-fetch.yml`, every 6h, additive-only) will still pick it up afterwards,
+so nothing is lost permanently — it just will not be there on the day.
+
+Check by hand with: `node scripts/chronorace-fetcher.mjs 2026 --preflight`
