@@ -23,6 +23,7 @@
  *   node scripts/chronorace-fetcher.mjs <year> --validate       # diff against results.json
  *   node scripts/chronorace-fetcher.mjs <year> --merge          # upsert into results.json
  *   node scripts/chronorace-fetcher.mjs <year> --only=les-gets-2026
+ *   node scripts/chronorace-fetcher.mjs <year> --preflight     # is each round reachable yet?
  */
 
 import fs from 'fs'
@@ -114,6 +115,41 @@ function resolveVenue(ev) {
   const raw = ev.VenueLocation || ''
   const hit = canonVenue(raw) || canonVenue(raw.trim().replace(/\s+/g, '-'))
   return hit || { name: raw, slug: slugify(raw), country: ev.Country || null }
+}
+
+// ─── Preflight ────────────────────────────────────────────────────────────────
+// Answers "will this actually work on race day?" ahead of the race, without needing results
+// to exist. Run it a few days out from a round: if the venue reports READY, the discovery
+// chain is live and the fetcher will pick the round up automatically. Worth having because
+// Whistler (wbd-2026-13) returned a 500 from competition-list well ahead of its race weekend
+// — a future round is always the least-baked record in the feed.
+async function preflight(year) {
+  const events = await api(`/discovery/event-list?season=${encodeURIComponent(year)}`)
+  if (!Array.isArray(events)) throw new Error('event-list did not return an array')
+  const dhEvents = events
+    .filter(e => Array.isArray(e.Disciplines) && e.Disciplines.includes('DHI'))
+    .sort((a, b) => String(a.StartDate).localeCompare(String(b.StartDate)))
+
+  console.log(`\n── ChronoRace preflight, ${year} — ${dhEvents.length} DHI events\n`)
+  let notReady = 0
+  for (const [i, ev] of dhEvents.entries()) {
+    const label = `R${String(i + 1).padStart(2)}  ${String(ev.VenueLocation).padEnd(26)} ${String(ev.StartDate).slice(0, 10)}`
+    let comps
+    try { comps = (await api(`/discovery/competition-list/${ev.EventId}`)) || [] }
+    catch (err) { console.log(`  ❌ ${label}  competition-list → ${err.message}`); notReady++; continue }
+
+    const dhi = comps.filter(c => c.Discipline === 'DHI' && GENDER[c.CategoryCode])
+    if (!dhi.length) { console.log(`  ⏳ ${label}  event exists, no elite DHI competitions listed yet`); notReady++; continue }
+
+    const keys = dhi.map(c => sessionKey(c.Phase, c.PhaseName, GENDER[c.CategoryCode])).filter(Boolean)
+    const dates = [...new Set(dhi.map(c => String(c.Date || '').slice(0, 10)).filter(Boolean))].sort()
+    console.log(`  ✅ ${label}  READY — ${dhi.length} competitions, sessions: ${[...new Set(keys)].join(', ')}`)
+    console.log(`      dates: ${dates.join(', ')}`)
+    await sleep(120)
+  }
+  console.log(notReady
+    ? `\n⚠️  ${notReady} event(s) not ready yet. That is expected for a round weeks out; re-run closer to the race.`
+    : '\n✅ every DHI event is reachable.')
 }
 
 // ─── Assemble a season ────────────────────────────────────────────────────────
@@ -310,6 +346,7 @@ function merge(year, rounds) {
 
 async function main() {
   const year = process.argv[2]
+  if (year && process.argv.includes('--preflight')) { await preflight(year); return }
   if (!year || year.startsWith('--')) {
     console.log('Usage: node scripts/chronorace-fetcher.mjs <year> [--validate|--merge] [--only=slug,slug]')
     process.exit(0)
@@ -341,7 +378,7 @@ async function main() {
   if (process.argv.includes('--merge')) merge(year, rounds)
 }
 
-export { fetchSeason, mergeSession, preserveFilled }
+export { fetchSeason, mergeSession, preserveFilled, preflight }
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch(e => { console.error('💥', e.message); process.exit(1) })
 }
