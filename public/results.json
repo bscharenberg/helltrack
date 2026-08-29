@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-29T15:05:41.921Z",
+  "lastUpdated": "2026-08-29T18:22:47.829Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -299022,6 +299022,2582 @@
                 "bib": "6",
                 "points": null,
                 "uciId": "10004535237",
+                "dns": true
+              }
+            ],
+            "finals-men": [
+              {
+                "rank": 1,
+                "name": "Jackson Goldstone",
+                "nat": "CAN",
+                "team": null,
+                "time": "3:28.785",
+                "gap": null,
+                "bib": "1",
+                "points": null,
+                "uciId": "10053812449",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.517",
+                    "rank": 8
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:39.821",
+                    "rank": 4
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:12.159",
+                    "rank": 2
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:54.040",
+                    "rank": 1
+                  }
+                ]
+              },
+              {
+                "rank": 2,
+                "name": "Lachlan Stevens-McNab",
+                "nat": "NZL",
+                "team": null,
+                "time": "3:29.480",
+                "gap": "+0.695",
+                "bib": "20",
+                "points": null,
+                "uciId": "10110184506",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.294",
+                    "rank": 4
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:39.360",
+                    "rank": 1
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:11.749",
+                    "rank": 1
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:54.559",
+                    "rank": 2
+                  }
+                ]
+              },
+              {
+                "rank": 3,
+                "name": "Jordan Williams",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:29.487",
+                "gap": "+0.702",
+                "bib": "4",
+                "points": null,
+                "uciId": "10083936306",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.708",
+                    "rank": 17
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:39.992",
+                    "rank": 7
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:12.963",
+                    "rank": 5
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:54.601",
+                    "rank": 3
+                  }
+                ]
+              },
+              {
+                "rank": 4,
+                "name": "Asa Vermette",
+                "nat": "USA",
+                "team": null,
+                "time": "3:30.293",
+                "gap": "+1.508",
+                "bib": "8",
+                "points": null,
+                "uciId": "10130091229",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.146",
+                    "rank": 31
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:39.684",
+                    "rank": 2
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:12.522",
+                    "rank": 3
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:54.746",
+                    "rank": 4
+                  }
+                ]
+              },
+              {
+                "rank": 5,
+                "name": "Andreas Kolb",
+                "nat": "AUT",
+                "team": null,
+                "time": "3:31.407",
+                "gap": "+2.622",
+                "bib": "12",
+                "points": null,
+                "uciId": "10009187092",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.587",
+                    "rank": 10
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:40.304",
+                    "rank": 8
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:13.400",
+                    "rank": 6
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:55.613",
+                    "rank": 5
+                  }
+                ]
+              },
+              {
+                "rank": 6,
+                "name": "Luca Shaw",
+                "nat": "USA",
+                "team": null,
+                "time": "3:31.927",
+                "gap": "+3.142",
+                "bib": "3",
+                "points": null,
+                "uciId": "10008813442",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.607",
+                    "rank": 11
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:39.749",
+                    "rank": 3
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:12.774",
+                    "rank": 4
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:55.846",
+                    "rank": 6
+                  }
+                ]
+              },
+              {
+                "rank": 7,
+                "name": "Antoine Pierron",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:32.348",
+                "gap": "+3.563",
+                "bib": "25",
+                "points": null,
+                "uciId": "10011102844",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.394",
+                    "rank": 36
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:40.600",
+                    "rank": 10
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:13.588",
+                    "rank": 7
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:56.083",
+                    "rank": 7
+                  }
+                ]
+              },
+              {
+                "rank": 8,
+                "name": "Henri Kiefer",
+                "nat": "GER",
+                "team": null,
+                "time": "3:32.767",
+                "gap": "+3.982",
+                "bib": "10",
+                "points": null,
+                "uciId": "10080400048",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.563",
+                    "rank": 9
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:39.875",
+                    "rank": 5
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:13.950",
+                    "rank": 8
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:56.537",
+                    "rank": 8
+                  }
+                ]
+              },
+              {
+                "rank": 9,
+                "name": "Amaury Pierron",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:33.734",
+                "gap": "+4.949",
+                "bib": "5",
+                "points": null,
+                "uciId": "10008827283",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.274",
+                    "rank": 33
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:40.603",
+                    "rank": 11
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:14.331",
+                    "rank": 10
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:57.514",
+                    "rank": 10
+                  }
+                ]
+              },
+              {
+                "rank": 10,
+                "name": "Oliver Davis",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:33.736",
+                "gap": "+4.951",
+                "bib": "35",
+                "points": null,
+                "uciId": "10110838143",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.012",
+                    "rank": 26
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.638",
+                    "rank": 16
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:14.353",
+                    "rank": 11
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:57.250",
+                    "rank": 9
+                  }
+                ]
+              },
+              {
+                "rank": 11,
+                "name": "Luke Wayman",
+                "nat": "NZL",
+                "team": null,
+                "time": "3:33.905",
+                "gap": "+5.120",
+                "bib": "30",
+                "points": null,
+                "uciId": "10122961426",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.107",
+                    "rank": 29
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.311",
+                    "rank": 13
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:14.253",
+                    "rank": 9
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:58.188",
+                    "rank": 12
+                  }
+                ]
+              },
+              {
+                "rank": 12,
+                "name": "Juan Muñoz",
+                "nat": "COL",
+                "team": null,
+                "time": "3:34.613",
+                "gap": "+5.828",
+                "bib": "89",
+                "points": null,
+                "uciId": "10083364208",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "26.917",
+                    "rank": 1
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:39.970",
+                    "rank": 6
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:14.758",
+                    "rank": 12
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:57.901",
+                    "rank": 11
+                  }
+                ]
+              },
+              {
+                "rank": 13,
+                "name": "Jackson Connelly",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:34.862",
+                "gap": "+6.077",
+                "bib": "34",
+                "points": null,
+                "uciId": "10114106942",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.433",
+                    "rank": 6
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.866",
+                    "rank": 17
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:15.600",
+                    "rank": 18
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:58.294",
+                    "rank": 13
+                  }
+                ]
+              },
+              {
+                "rank": 14,
+                "name": "Matt Walker",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:34.880",
+                "gap": "+6.095",
+                "bib": "39",
+                "points": null,
+                "uciId": "10011016756",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.699",
+                    "rank": 15
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.492",
+                    "rank": 15
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:15.164",
+                    "rank": 14
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:58.389",
+                    "rank": 14
+                  }
+                ]
+              },
+              {
+                "rank": 15,
+                "name": "Danny Hart",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:34.901",
+                "gap": "+6.116",
+                "bib": "42",
+                "points": null,
+                "uciId": "10005470073",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.308",
+                    "rank": 5
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:40.596",
+                    "rank": 9
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:14.894",
+                    "rank": 13
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:58.541",
+                    "rank": 15
+                  }
+                ]
+              },
+              {
+                "rank": 16,
+                "name": "Loris Vergier",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:35.473",
+                "gap": "+6.688",
+                "bib": "11",
+                "points": null,
+                "uciId": "10008723112",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.884",
+                    "rank": 21
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.034",
+                    "rank": 21
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:15.904",
+                    "rank": 20
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:58.741",
+                    "rank": 16
+                  }
+                ]
+              },
+              {
+                "rank": 17,
+                "name": "Till Alran",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:35.673",
+                "gap": "+6.888",
+                "bib": "17",
+                "points": null,
+                "uciId": "10067316162",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.907",
+                    "rank": 22
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.437",
+                    "rank": 23
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:16.777",
+                    "rank": 22
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:59.831",
+                    "rank": 21
+                  }
+                ]
+              },
+              {
+                "rank": 18,
+                "name": "Martin Maes",
+                "nat": "BEL",
+                "team": null,
+                "time": "3:35.757",
+                "gap": "+6.972",
+                "bib": "21",
+                "points": null,
+                "uciId": "10009453945",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.967",
+                    "rank": 25
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.930",
+                    "rank": 20
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:15.574",
+                    "rank": 16
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:58.915",
+                    "rank": 17
+                  }
+                ]
+              },
+              {
+                "rank": 19,
+                "name": "Oisin O'Callaghan",
+                "nat": "IRL",
+                "team": null,
+                "time": "3:35.864",
+                "gap": "+7.079",
+                "bib": "36",
+                "points": null,
+                "uciId": "10017486353",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.640",
+                    "rank": 13
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.906",
+                    "rank": 19
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:16.125",
+                    "rank": 21
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:59.716",
+                    "rank": 19
+                  }
+                ]
+              },
+              {
+                "rank": 20,
+                "name": "Oli Clark",
+                "nat": "NZL",
+                "team": null,
+                "time": "3:36.010",
+                "gap": "+7.225",
+                "bib": "44",
+                "points": null,
+                "uciId": "10099750538",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.663",
+                    "rank": 14
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.338",
+                    "rank": 14
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:15.441",
+                    "rank": 15
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:59.084",
+                    "rank": 18
+                  }
+                ]
+              },
+              {
+                "rank": 21,
+                "name": "Max Alran",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:36.114",
+                "gap": "+7.329",
+                "bib": "16",
+                "points": null,
+                "uciId": "10067315657",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.865",
+                    "rank": 20
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.326",
+                    "rank": 22
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:16.891",
+                    "rank": 24
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:00.362",
+                    "rank": 24
+                  }
+                ]
+              },
+              {
+                "rank": 22,
+                "name": "Charlie Hatton",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:36.863",
+                "gap": "+8.078",
+                "bib": "31",
+                "points": null,
+                "uciId": "10009897014",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.391",
+                    "rank": 35
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:43.218",
+                    "rank": 32
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:16.886",
+                    "rank": 23
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:00.142",
+                    "rank": 22
+                  }
+                ]
+              },
+              {
+                "rank": 23,
+                "name": "Tuhoto-Ariki Pene",
+                "nat": "NZL",
+                "team": null,
+                "time": "3:36.917",
+                "gap": "+8.132",
+                "bib": "40",
+                "points": null,
+                "uciId": "10022183274",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.005",
+                    "rank": 2
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.065",
+                    "rank": 12
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:15.742",
+                    "rank": 19
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "2:59.819",
+                    "rank": 20
+                  }
+                ]
+              },
+              {
+                "rank": 24,
+                "name": "Loris Revelli",
+                "nat": "ITA",
+                "team": null,
+                "time": "3:36.949",
+                "gap": "+8.164",
+                "bib": "22",
+                "points": null,
+                "uciId": "10009443942",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.811",
+                    "rank": 19
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.913",
+                    "rank": 27
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.287",
+                    "rank": 30
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:00.276",
+                    "rank": 23
+                  }
+                ]
+              },
+              {
+                "rank": 25,
+                "name": "Kenneth Pinkerton",
+                "nat": "USA",
+                "team": null,
+                "time": "3:37.051",
+                "gap": "+8.266",
+                "bib": "6",
+                "points": null,
+                "uciId": "10063826182",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.468",
+                    "rank": 7
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:44.741",
+                    "rank": 38
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.976",
+                    "rank": 33
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:00.665",
+                    "rank": 28
+                  }
+                ]
+              },
+              {
+                "rank": 26,
+                "name": "Dylan Maples",
+                "nat": "USA",
+                "team": null,
+                "time": "3:37.265",
+                "gap": "+8.480",
+                "bib": "14",
+                "points": null,
+                "uciId": "10114296696",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.014",
+                    "rank": 27
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.948",
+                    "rank": 28
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.094",
+                    "rank": 25
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:00.877",
+                    "rank": 29
+                  }
+                ]
+              },
+              {
+                "rank": 27,
+                "name": "Henry Kerr",
+                "nat": "IRL",
+                "team": null,
+                "time": "3:37.453",
+                "gap": "+8.668",
+                "bib": "48",
+                "points": null,
+                "uciId": "10023914524",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.944",
+                    "rank": 23
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.800",
+                    "rank": 25
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.148",
+                    "rank": 26
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:00.466",
+                    "rank": 25
+                  }
+                ]
+              },
+              {
+                "rank": 28,
+                "name": "Zachariah Bradley-Hudson",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:37.488",
+                "gap": "+8.703",
+                "bib": "26",
+                "points": null,
+                "uciId": "10138167184",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.639",
+                    "rank": 12
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.668",
+                    "rank": 24
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.225",
+                    "rank": 28
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:00.635",
+                    "rank": 27
+                  }
+                ]
+              },
+              {
+                "rank": 29,
+                "name": "Stefano Introzzi",
+                "nat": "ITA",
+                "team": null,
+                "time": "3:37.797",
+                "gap": "+9.012",
+                "bib": "27",
+                "points": null,
+                "uciId": "10032121027",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.965",
+                    "rank": 24
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:43.025",
+                    "rank": 30
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.190",
+                    "rank": 27
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:00.634",
+                    "rank": 26
+                  }
+                ]
+              },
+              {
+                "rank": 30,
+                "name": "Richard Rude Jr",
+                "nat": "USA",
+                "team": null,
+                "time": "3:38.218",
+                "gap": "+9.433",
+                "bib": "43",
+                "points": null,
+                "uciId": "10007546378",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.646",
+                    "rank": 42
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.977",
+                    "rank": 29
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.411",
+                    "rank": 31
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:01.490",
+                    "rank": 30
+                  }
+                ]
+              },
+              {
+                "rank": 31,
+                "name": "Roger Vieira",
+                "nat": "BRA",
+                "team": null,
+                "time": "3:38.497",
+                "gap": "+9.712",
+                "bib": "24",
+                "points": null,
+                "uciId": "10009164258",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.317",
+                    "rank": 34
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:44.056",
+                    "rank": 34
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:18.255",
+                    "rank": 34
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:01.735",
+                    "rank": 33
+                  }
+                ]
+              },
+              {
+                "rank": 32,
+                "name": "George Madley",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:38.632",
+                "gap": "+9.847",
+                "bib": "29",
+                "points": null,
+                "uciId": "10144670026",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.801",
+                    "rank": 18
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:42.879",
+                    "rank": 26
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.261",
+                    "rank": 29
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:01.609",
+                    "rank": 31
+                  }
+                ]
+              },
+              {
+                "rank": 33,
+                "name": "Dane Jewett",
+                "nat": "CAN",
+                "team": null,
+                "time": "3:39.391",
+                "gap": "+10.606",
+                "bib": "66",
+                "points": null,
+                "uciId": "10094193347",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.107",
+                    "rank": 30
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:43.124",
+                    "rank": 31
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:17.514",
+                    "rank": 32
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:01.636",
+                    "rank": 32
+                  }
+                ]
+              },
+              {
+                "rank": 34,
+                "name": "Christian Hauser",
+                "nat": "ITA",
+                "team": null,
+                "time": "3:39.909",
+                "gap": "+11.124",
+                "bib": "67",
+                "points": null,
+                "uciId": "10093968631",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.715",
+                    "rank": 43
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:44.235",
+                    "rank": 35
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:18.398",
+                    "rank": 35
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:02.612",
+                    "rank": 34
+                  }
+                ]
+              },
+              {
+                "rank": 35,
+                "name": "Oliver Zwar",
+                "nat": "SWE",
+                "team": null,
+                "time": "3:40.009",
+                "gap": "+11.224",
+                "bib": "50",
+                "points": null,
+                "uciId": "10008106857",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.434",
+                    "rank": 38
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:44.393",
+                    "rank": 36
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:18.724",
+                    "rank": 36
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:02.903",
+                    "rank": 35
+                  }
+                ]
+              },
+              {
+                "rank": 36,
+                "name": "James Macdermid",
+                "nat": "NZL",
+                "team": null,
+                "time": "3:40.549",
+                "gap": "+11.764",
+                "bib": "62",
+                "points": null,
+                "uciId": "10022172766",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.492",
+                    "rank": 40
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:44.403",
+                    "rank": 37
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:19.232",
+                    "rank": 38
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:03.163",
+                    "rank": 36
+                  }
+                ]
+              },
+              {
+                "rank": 37,
+                "name": "Daniel Castellanos Liberal",
+                "nat": "ESP",
+                "team": null,
+                "time": "3:40.854",
+                "gap": "+12.069",
+                "bib": "38",
+                "points": null,
+                "uciId": "10081562028",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.938",
+                    "rank": 52
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:45.632",
+                    "rank": 42
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:20.113",
+                    "rank": 41
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:04.178",
+                    "rank": 38
+                  }
+                ]
+              },
+              {
+                "rank": 38,
+                "name": "Johnathan Helly",
+                "nat": "CAN",
+                "team": null,
+                "time": "3:41.093",
+                "gap": "+12.308",
+                "bib": "71",
+                "points": null,
+                "uciId": "10063920960",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.747",
+                    "rank": 46
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:44.830",
+                    "rank": 40
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:19.153",
+                    "rank": 37
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:03.308",
+                    "rank": 37
+                  }
+                ]
+              },
+              {
+                "rank": 39,
+                "name": "Yannick Baechler",
+                "nat": "SUI",
+                "team": null,
+                "time": "3:42.147",
+                "gap": "+13.362",
+                "bib": "86",
+                "points": null,
+                "uciId": "10034811159",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.751",
+                    "rank": 47
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:44.792",
+                    "rank": 39
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:19.608",
+                    "rank": 40
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:04.556",
+                    "rank": 40
+                  }
+                ]
+              },
+              {
+                "rank": 40,
+                "name": "Evan Medcalf",
+                "nat": "USA",
+                "team": null,
+                "time": "3:42.432",
+                "gap": "+13.647",
+                "bib": "60",
+                "points": null,
+                "uciId": "10117081004",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.164",
+                    "rank": 58
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:45.493",
+                    "rank": 41
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:20.522",
+                    "rank": 42
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:05.012",
+                    "rank": 41
+                  }
+                ]
+              },
+              {
+                "rank": 41,
+                "name": "Joe Breeden",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:42.568",
+                "gap": "+13.783",
+                "bib": "53",
+                "points": null,
+                "uciId": "10011005743",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.193",
+                    "rank": 32
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:43.754",
+                    "rank": 33
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:19.439",
+                    "rank": 39
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:04.485",
+                    "rank": 39
+                  }
+                ]
+              },
+              {
+                "rank": 42,
+                "name": "Davide Palazzari",
+                "nat": "ITA",
+                "team": null,
+                "time": "3:43.504",
+                "gap": "+14.719",
+                "bib": "58",
+                "points": null,
+                "uciId": "10010022205",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.791",
+                    "rank": 49
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:45.689",
+                    "rank": 43
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:20.959",
+                    "rank": 43
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:05.445",
+                    "rank": 42
+                  }
+                ]
+              },
+              {
+                "rank": 43,
+                "name": "Marco Lamaris",
+                "nat": "GER",
+                "team": null,
+                "time": "3:43.725",
+                "gap": "+14.940",
+                "bib": "56",
+                "points": null,
+                "uciId": "10128344623",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.241",
+                    "rank": 60
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:46.555",
+                    "rank": 47
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:21.684",
+                    "rank": 45
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:06.638",
+                    "rank": 43
+                  }
+                ]
+              },
+              {
+                "rank": 44,
+                "name": "Sebastian Holguin Villa",
+                "nat": "COL",
+                "team": null,
+                "time": "3:44.136",
+                "gap": "+15.351",
+                "bib": "63",
+                "points": null,
+                "uciId": "10035267059",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.468",
+                    "rank": 39
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:45.807",
+                    "rank": 44
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:21.289",
+                    "rank": 44
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:06.703",
+                    "rank": 44
+                  }
+                ]
+              },
+              {
+                "rank": 45,
+                "name": "Jed Stanton",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:45.323",
+                "gap": "+16.538",
+                "bib": "70",
+                "points": null,
+                "uciId": "10113898087",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.775",
+                    "rank": 48
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:46.001",
+                    "rank": 46
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:22.753",
+                    "rank": 46
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:07.779",
+                    "rank": 46
+                  }
+                ]
+              },
+              {
+                "rank": 46,
+                "name": "Gonzalo Gajdosech",
+                "nat": "ARG",
+                "team": null,
+                "time": "3:45.350",
+                "gap": "+16.565",
+                "bib": "51",
+                "points": null,
+                "uciId": "10050665205",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.736",
+                    "rank": 45
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:47.551",
+                    "rank": 50
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:23.150",
+                    "rank": 48
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:07.488",
+                    "rank": 45
+                  }
+                ]
+              },
+              {
+                "rank": 47,
+                "name": "Jack Menzies",
+                "nat": "CAN",
+                "team": null,
+                "time": "3:45.962",
+                "gap": "+17.177",
+                "bib": "68",
+                "points": null,
+                "uciId": "10059300326",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.400",
+                    "rank": 61
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:48.113",
+                    "rank": 55
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:23.293",
+                    "rank": 49
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:08.160",
+                    "rank": 47
+                  }
+                ]
+              },
+              {
+                "rank": 48,
+                "name": "Riko Mäeuibo",
+                "nat": "EST",
+                "team": null,
+                "time": "3:46.241",
+                "gap": "+17.456",
+                "bib": "45",
+                "points": null,
+                "uciId": "10096620064",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.729",
+                    "rank": 44
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:47.697",
+                    "rank": 52
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:23.731",
+                    "rank": 52
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:08.785",
+                    "rank": 49
+                  }
+                ]
+              },
+              {
+                "rank": 49,
+                "name": "Ronan Dunne",
+                "nat": "IRL",
+                "team": null,
+                "time": "3:46.556",
+                "gap": "+17.771",
+                "bib": "19",
+                "points": null,
+                "uciId": "10017006104",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.532",
+                    "rank": 62
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:46.995",
+                    "rank": 48
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:22.991",
+                    "rank": 47
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:08.554",
+                    "rank": 48
+                  }
+                ]
+              },
+              {
+                "rank": 50,
+                "name": "Henry Sherry",
+                "nat": "CAN",
+                "team": null,
+                "time": "3:46.671",
+                "gap": "+17.886",
+                "bib": "55",
+                "points": null,
+                "uciId": "10079938791",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.949",
+                    "rank": 67
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:48.587",
+                    "rank": 57
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:23.974",
+                    "rank": 54
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:09.001",
+                    "rank": 51
+                  }
+                ]
+              },
+              {
+                "rank": 51,
+                "name": "Elias Verstad Stubergh",
+                "nat": "NOR",
+                "team": null,
+                "time": "3:47.433",
+                "gap": "+18.648",
+                "bib": "96",
+                "points": null,
+                "uciId": "10062464647",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.192",
+                    "rank": 59
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:47.277",
+                    "rank": 49
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:23.453",
+                    "rank": 50
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:08.967",
+                    "rank": 50
+                  }
+                ]
+              },
+              {
+                "rank": 52,
+                "name": "Roee Ostfeld",
+                "nat": "ISR",
+                "team": null,
+                "time": "3:47.820",
+                "gap": "+19.035",
+                "bib": "100",
+                "points": null,
+                "uciId": "10117608541",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.070",
+                    "rank": 57
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:48.917",
+                    "rank": 60
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:25.054",
+                    "rank": 56
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:09.837",
+                    "rank": 53
+                  }
+                ]
+              },
+              {
+                "rank": 53,
+                "name": "Oliver Vogl",
+                "nat": "AUT",
+                "team": null,
+                "time": "3:47.825",
+                "gap": "+19.040",
+                "bib": "81",
+                "points": null,
+                "uciId": "10077541578",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.877",
+                    "rank": 50
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:47.719",
+                    "rank": 53
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:23.880",
+                    "rank": 53
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:09.701",
+                    "rank": 52
+                  }
+                ]
+              },
+              {
+                "rank": 54,
+                "name": "Kryštof Húšt",
+                "nat": "CZE",
+                "team": null,
+                "time": "3:48.489",
+                "gap": "+19.704",
+                "bib": "83",
+                "points": null,
+                "uciId": "10064191651",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.745",
+                    "rank": 66
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:47.692",
+                    "rank": 51
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:23.482",
+                    "rank": 51
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:10.100",
+                    "rank": 54
+                  }
+                ]
+              },
+              {
+                "rank": 55,
+                "name": "Julian Steiner",
+                "nat": "GER",
+                "team": null,
+                "time": "3:48.648",
+                "gap": "+19.863",
+                "bib": "64",
+                "points": null,
+                "uciId": "10008123732",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.920",
+                    "rank": 51
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:47.825",
+                    "rank": 54
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:24.490",
+                    "rank": 55
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:10.130",
+                    "rank": 55
+                  }
+                ]
+              },
+              {
+                "rank": 56,
+                "name": "Marius-Achim Popovici",
+                "nat": "ROU",
+                "team": null,
+                "time": "3:49.621",
+                "gap": "+20.836",
+                "bib": "69",
+                "points": null,
+                "uciId": "10132885940",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.973",
+                    "rank": 68
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:49.906",
+                    "rank": 63
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:25.983",
+                    "rank": 61
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:11.522",
+                    "rank": 57
+                  }
+                ]
+              },
+              {
+                "rank": 57,
+                "name": "Kelian Vanreusel",
+                "nat": "BEL",
+                "team": null,
+                "time": "3:49.718",
+                "gap": "+20.933",
+                "bib": "74",
+                "points": null,
+                "uciId": "10107412225",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.541",
+                    "rank": 41
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:48.847",
+                    "rank": 58
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:25.087",
+                    "rank": 57
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:11.042",
+                    "rank": 56
+                  }
+                ]
+              },
+              {
+                "rank": 59,
+                "name": "Patrick Ward",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:50.295",
+                "gap": "+21.510",
+                "bib": "78",
+                "points": null,
+                "uciId": "10138304301",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.947",
+                    "rank": 54
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:49.324",
+                    "rank": 62
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:26.301",
+                    "rank": 62
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:12.200",
+                    "rank": 60
+                  }
+                ]
+              },
+              {
+                "rank": 58,
+                "name": "Ondrej Kolecík",
+                "nat": "CZE",
+                "team": null,
+                "time": "3:50.295",
+                "gap": "+21.510",
+                "bib": "72",
+                "points": null,
+                "uciId": "10094113121",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.737",
+                    "rank": 65
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:49.265",
+                    "rank": 61
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:25.734",
+                    "rank": 59
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:11.856",
+                    "rank": 59
+                  }
+                ]
+              },
+              {
+                "rank": 60,
+                "name": "Sokratis Aris Zotos",
+                "nat": "GRE",
+                "team": null,
+                "time": "3:50.939",
+                "gap": "+22.154",
+                "bib": "97",
+                "points": null,
+                "uciId": "10116743625",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.010",
+                    "rank": 55
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:48.373",
+                    "rank": 56
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:25.440",
+                    "rank": 58
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:11.656",
+                    "rank": 58
+                  }
+                ]
+              },
+              {
+                "rank": 61,
+                "name": "Denis Kohút",
+                "nat": "SVK",
+                "team": null,
+                "time": "3:51.785",
+                "gap": "+23.000",
+                "bib": "61",
+                "points": null,
+                "uciId": "10010008360",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.222",
+                    "rank": 71
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:50.385",
+                    "rank": 64
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:27.132",
+                    "rank": 63
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:13.406",
+                    "rank": 61
+                  }
+                ]
+              },
+              {
+                "rank": 62,
+                "name": "Reece Wilson",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:52.878",
+                "gap": "+24.093",
+                "bib": "32",
+                "points": null,
+                "uciId": "10009563271",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.270",
+                    "rank": 3
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:45.870",
+                    "rank": 45
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:30.254",
+                    "rank": 66
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:14.587",
+                    "rank": 62
+                  }
+                ]
+              },
+              {
+                "rank": 63,
+                "name": "Troy Brosnan",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:54.212",
+                "gap": "+25.427",
+                "bib": "7",
+                "points": null,
+                "uciId": "10007307417",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.432",
+                    "rank": 37
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:41.904",
+                    "rank": 18
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:15.584",
+                    "rank": 17
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:17.261",
+                    "rank": 64
+                  }
+                ]
+              },
+              {
+                "rank": 64,
+                "name": "Hans Pulgar Diaz",
+                "nat": "CHI",
+                "team": null,
+                "time": "3:55.646",
+                "gap": "+26.861",
+                "bib": "57",
+                "points": null,
+                "uciId": "10075670791",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.392",
+                    "rank": 76
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:52.252",
+                    "rank": 67
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:29.974",
+                    "rank": 65
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:16.562",
+                    "rank": 63
+                  }
+                ]
+              },
+              {
+                "rank": 65,
+                "name": "Kaito Miguel Roldan Fragoso",
+                "nat": "MEX",
+                "team": null,
+                "time": "4:00.335",
+                "gap": "+31.550",
+                "bib": "73",
+                "points": null,
+                "uciId": "10145301132",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.268",
+                    "rank": 73
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:50.910",
+                    "rank": 66
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:27.643",
+                    "rank": 64
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:18.775",
+                    "rank": 65
+                  }
+                ]
+              },
+              {
+                "rank": 66,
+                "name": "Raymundo Fournier Gomez",
+                "nat": "MEX",
+                "team": null,
+                "time": "4:00.954",
+                "gap": "+32.169",
+                "bib": "91",
+                "points": null,
+                "uciId": "10140010790",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.197",
+                    "rank": 69
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:53.659",
+                    "rank": 71
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:32.660",
+                    "rank": 71
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:20.165",
+                    "rank": 66
+                  }
+                ]
+              },
+              {
+                "rank": 67,
+                "name": "Igor Franek",
+                "nat": "POL",
+                "team": null,
+                "time": "4:01.254",
+                "gap": "+32.469",
+                "bib": "85",
+                "points": null,
+                "uciId": "10152237844",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.547",
+                    "rank": 63
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:52.680",
+                    "rank": 68
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:31.559",
+                    "rank": 67
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:20.589",
+                    "rank": 67
+                  }
+                ]
+              },
+              {
+                "rank": 68,
+                "name": "Jan Pajak",
+                "nat": "POL",
+                "team": null,
+                "time": "4:01.684",
+                "gap": "+32.899",
+                "bib": "95",
+                "points": null,
+                "uciId": "10107271977",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.245",
+                    "rank": 72
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:53.293",
+                    "rank": 70
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:31.645",
+                    "rank": 68
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:21.389",
+                    "rank": 68
+                  }
+                ]
+              },
+              {
+                "rank": 69,
+                "name": "Lucio Vellutino Malaga",
+                "nat": "PER",
+                "team": null,
+                "time": "4:03.358",
+                "gap": "+34.573",
+                "bib": "90",
+                "points": null,
+                "uciId": "10084357345",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.213",
+                    "rank": 70
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:53.046",
+                    "rank": 69
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:33.182",
+                    "rank": 72
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:22.867",
+                    "rank": 70
+                  }
+                ]
+              },
+              {
+                "rank": 70,
+                "name": "João Baptista",
+                "nat": "POR",
+                "team": null,
+                "time": "4:03.480",
+                "gap": "+34.695",
+                "bib": "94",
+                "points": null,
+                "uciId": "10054875409",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.350",
+                    "rank": 75
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:54.539",
+                    "rank": 72
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:32.550",
+                    "rank": 70
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:21.721",
+                    "rank": 69
+                  }
+                ]
+              },
+              {
+                "rank": 71,
+                "name": "Karolis Krukauskas",
+                "nat": "LTU",
+                "team": null,
+                "time": "4:03.732",
+                "gap": "+34.947",
+                "bib": "82",
+                "points": null,
+                "uciId": "10090877361",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.680",
+                    "rank": 64
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:54.977",
+                    "rank": 73
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:34.145",
+                    "rank": 73
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:23.731",
+                    "rank": 71
+                  }
+                ]
+              },
+              {
+                "rank": 72,
+                "name": "Jose Ignacio Fabian",
+                "nat": "ARG",
+                "team": null,
+                "time": "4:09.938",
+                "gap": "+41.153",
+                "bib": "75",
+                "points": null,
+                "uciId": "10090109243",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "30.320",
+                    "rank": 74
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:56.458",
+                    "rank": 74
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:37.436",
+                    "rank": 74
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:27.522",
+                    "rank": 72
+                  }
+                ]
+              },
+              {
+                "rank": 73,
+                "name": "Benoit Coulanges",
+                "nat": "FRA",
+                "team": null,
+                "time": "4:18.063",
+                "gap": "+49.278",
+                "bib": "13",
+                "points": null,
+                "uciId": "10008194359",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.081",
+                    "rank": 28
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:50.612",
+                    "rank": 65
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:32.258",
+                    "rank": 69
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "3:28.117",
+                    "rank": 73
+                  }
+                ]
+              },
+              {
+                "rank": 74,
+                "name": "Roberto Mieres Cabrera",
+                "nat": "CHI",
+                "team": null,
+                "time": "5:02.604",
+                "gap": "+1:33.819",
+                "bib": "99",
+                "points": null,
+                "uciId": "10007875168",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "31.970",
+                    "rank": 77
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:57.753",
+                    "rank": 75
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:38.706",
+                    "rank": 75
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "4:12.558",
+                    "rank": 74
+                  }
+                ]
+              },
+              {
+                "rank": 75,
+                "name": "Luke Meier-Smith",
+                "nat": "AUS",
+                "team": null,
+                "time": "6:37.825",
+                "gap": "+3:09.040",
+                "bib": "2",
+                "points": null,
+                "uciId": "10049212326",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "27.708",
+                    "rank": 16
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "2:15.850",
+                    "rank": 76
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "3:35.298",
+                    "rank": 76
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "4:55.342",
+                    "rank": 75
+                  }
+                ]
+              },
+              {
+                "rank": null,
+                "name": "Rory Kirk",
+                "nat": "RSA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "bib": "76",
+                "points": null,
+                "uciId": "10104783323",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "28.942",
+                    "rank": 53
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "5:03.235",
+                    "rank": 77
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "6:05.434",
+                    "rank": 77
+                  },
+                  {
+                    "name": "UCI 4",
+                    "time": "7:11.181",
+                    "rank": 76
+                  }
+                ],
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Benny De Vall",
+                "nat": "CAN",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "bib": "77",
+                "points": null,
+                "uciId": "10105223358",
+                "splits": [
+                  {
+                    "name": "UCI 1",
+                    "time": "29.045",
+                    "rank": 56
+                  },
+                  {
+                    "name": "UCI 2",
+                    "time": "1:48.915",
+                    "rank": 59
+                  },
+                  {
+                    "name": "UCI 3",
+                    "time": "2:25.809",
+                    "rank": 60
+                  }
+                ],
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Jakob Jewett",
+                "nat": "CAN",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "bib": "65",
+                "points": null,
+                "uciId": "10061612663",
+                "dsq": true
+              },
+              {
+                "rank": null,
+                "name": "Angel Suarez Alonso",
+                "nat": "ESP",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "bib": "41",
+                "points": null,
+                "uciId": "10008831529",
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Nathan Pontvianne",
+                "nat": "FRA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "bib": "18",
+                "points": null,
+                "uciId": "10057982944",
                 "dns": true
               }
             ]
