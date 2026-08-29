@@ -1,0 +1,21 @@
+
+── ChronoRace preflight, 2026 — 9 DHI events
+
+  ✅ R 1  Race of South Korea        2026-05-01  READY — 6 competitions, sessions: qualifying-1-men, finals-men, qualifying-1-women, finals-women, qualifying-2-men, qualifying-2-women
+      dates: 2026-05-01, 2026-05-02
+  ✅ R 2  Loudenvielle-Peyragudes    2026-05-28  READY — 6 competitions, sessions: qualifying-1-men, finals-men, qualifying-1-women, finals-women, qualifying-2-men, qualifying-2-women
+      dates: 2026-05-30, 2026-05-31
+  ✅ R 3  Saalfelden-Leogang Salzburgerland 2026-06-11  READY — 6 competitions, sessions: qualifying-1-men, finals-men, qualifying-1-women, finals-women, qualifying-2-men, qualifying-2-women
+      dates: 2026-06-12, 2026-06-13
+  ✅ R 4  Lenzerheide                2026-06-19  READY — 6 competitions, sessions: qualifying-1-men, finals-men, qualifying-1-women, finals-women, qualifying-2-men, qualifying-2-women
+      dates: 2026-06-19, 2026-06-20
+  ✅ R 5  La Thuile - Val d'Aosta    2026-07-03  READY — 6 competitions, sessions: qualifying-1-men, finals-men, qualifying-1-women, finals-women, qualifying-2-men, qualifying-2-women
+      dates: 2026-07-03, 2026-07-04
+  ✅ R 6  Pal Arinsal - Andorra      2026-07-08  READY — 6 competitions, sessions: qualifying-1-men, finals-men, qualifying-1-women, finals-women, qualifying-2-men, qualifying-2-women
+      dates: 2026-07-10, 2026-07-11
+  ✅ R 7  Haute Savoie               2026-08-21  READY — 6 competitions, sessions: qualifying-1-men, finals-men, qualifying-1-women, finals-women, qualifying-2-men, qualifying-2-women
+      dates: 2026-08-21, 2026-08-22
+  ❌ R 8  Whistler Mountain Bike Park, British Columbia 2026-09-25  competition-list → GET /discovery/competition-list/wbd-2026-13 → 500
+  ❌ R 9  Lake Placid Olympic Sites, New York 2026-10-02  competition-list → GET /discovery/competition-list/wbd-2026-14 → 500
+
+⚠️  2 event(s) not ready yet. That is expected for a round weeks out; re-run closer to the race.
