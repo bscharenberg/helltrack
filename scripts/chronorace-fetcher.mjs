@@ -270,7 +270,26 @@ function merge(year, rounds) {
     for (const [key, rows] of Object.entries(r.sessions)) {
       sessions[key] = mergeSession(sessions[key], rows)
     }
-    target[i] = preserveFilled(target[i], { ...r, sessions })
+
+    // ChronoRace's authority is the RESULT — times, ranks, names, gaps, DNF/DSQ. It is the
+    // UCI's timing vendor, so it wins those outright, and it demonstrably should: it fixed a
+    // duplicated rider row and a set of arithmetically wrong gaps (a rider 41.139s down was
+    // stored as +5.108).
+    //
+    // Round-level calendar metadata is a different matter and is only filled in where
+    // missing, never overwritten. ChronoRace derives the round date from the last DHI
+    // competition of the weekend, which disagrees with DataRide for Loudenvielle (05-31 vs
+    // 05-30), and it names round 1 by its event title ("Race of South Korea") where the site
+    // stores the venue ("Mona YongPyong"). Neither is clearly more correct than what is
+    // stored, and silently rewriting six round dates and a venue label on an unattended poll
+    // is not a call this fetcher should make. See docs/punchlist.md.
+    const merged = { ...target[i] }
+    for (const [k, v] of Object.entries(r)) {
+      if (k === 'sessions' || v == null) continue
+      if (merged[k] == null) merged[k] = v
+    }
+    merged.sessions = sessions
+    target[i] = merged
   }
 
   target.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
