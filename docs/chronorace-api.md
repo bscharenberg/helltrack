@@ -55,6 +55,20 @@ Serves a Swagger UI at `/swagger` (Microsoft-IIS/10.0 + ASP.NET, i.e. Swashbuckl
 
 Fetch those specs for the authoritative, current contract rather than trusting this file.
 
+### ⚠️ WBD covers the World Series only — not the World Championships
+
+Confirmed 2026-08-28: `discovery/event-list` returns 14 events for 2026 and the list goes
+straight from Les Gets (08-21) to Soldier Hollow (09-19). Val di Sole Worlds is absent. WBD is
+the broadcaster's World Series feed; a UCI World Championship is a different competition and
+is not in it. Use `tissot-fetcher.mjs` for Worlds — see `docs/tissot-api.md`.
+
+Also corrected: `/api/results/generic/raw/{customer}/…` returns **200 with a zero-length
+body** rather than 204, for every parameter combination tried including a known-good race
+weekend. The 200 is not a hit — `raw` and `get` are equally empty, so the earlier note that
+"only the parameter vocabulary is wrong" is unproven either way. And `results.chronorace.be/`
+itself is a 1.4 KB placeholder with no JS bundle, so there is no front-end there to learn the
+call shape from.
+
 ### 2a. WBD World Series API — the one to build on
 
 WBD = Warner Bros. Discovery, the UCI MTB World Series broadcaster. This is a proper

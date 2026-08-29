@@ -11,6 +11,7 @@
  * Usage:
  *   node scripts/dataride-fetcher.mjs <year>                   # fetch + normalize → staging file (NO merge)
  *   node scripts/dataride-fetcher.mjs <year> --merge           # upsert rounds (by slug) into public/results.json
+ *   node scripts/dataride-fetcher.mjs <year> --fill-gaps       # add ONLY missing rounds/sessions — never overwrites
  *   node scripts/dataride-fetcher.mjs <year> --replace-season  # replace ALL of a season's rounds with DataRide's
  *   node scripts/dataride-fetcher.mjs 2025 --validate           # fetch + diff against existing results.json
  *
@@ -292,6 +293,7 @@ async function main() {
   const year = process.argv[2]
   const merge    = process.argv.includes('--merge')
   const replace  = process.argv.includes('--replace-season')
+  const fillGaps = process.argv.includes('--fill-gaps')
   const validate = process.argv.includes('--validate')
   // --only=slug[,slug] limits the write to specific rounds. The season is still walked in
   // full (round numbers are derived from date-position across ALL World Cup competitions,
@@ -299,7 +301,7 @@ async function main() {
   // to pull a single round without re-writing sibling rounds that came from another source.
   const onlyArg = process.argv.find(a => a.startsWith('--only='))
   const only    = onlyArg ? onlyArg.slice('--only='.length).split(',').map(s => s.trim()).filter(Boolean) : null
-  if (!year) { console.log('Usage: node scripts/dataride-fetcher.mjs <year> [--merge|--replace-season|--validate] [--only=slug,slug]'); process.exit(0) }
+  if (!year) { console.log('Usage: node scripts/dataride-fetcher.mjs <year> [--merge|--fill-gaps|--replace-season|--validate] [--only=slug,slug]'); process.exit(0) }
   if (only && replace) { console.error('💥 --only cannot be combined with --replace-season (it would drop every round not listed)'); process.exit(1) }
 
   let { rounds, reviewNames } = await fetchSeason(year, { onLog: s => console.log(s) })
@@ -337,7 +339,7 @@ async function main() {
   }
 
   if (validate) await validateAgainstExisting(year, rounds)
-  if (merge || replace) mergeIntoResults(year, rounds, { replace })
+  if (merge || replace || fillGaps) mergeIntoResults(year, rounds, { replace, fillGaps })
 }
 
 // Diff DataRide finals winners/podiums vs what's already in results.json (correctness check).
@@ -359,7 +361,27 @@ async function validateAgainstExisting(year, rounds) {
   }
 }
 
-function mergeIntoResults(year, rounds, { replace = false } = {}) {
+// Identify the stored round a DataRide round refers to. Matching on slug alone is not
+// enough: sources disagree on venue naming. DataRide calls 2026 round 1 "mona-yongpyong-2026"
+// while results.json stores it as "race-of-south-korea-2026" (the same divergence
+// results-fetcher.mjs already carries as uciVenue). A slug-only match treats that as a new
+// round and appends a duplicate round 1 — which is exactly what happened on the first
+// fill-gaps test run. Fall back to round number within the same event type, then to a close
+// date, before concluding a round is genuinely new.
+function findExistingRound(target, r) {
+  const type = x => x.eventType || 'world-cup'
+  const days = (a, b) => Math.abs(new Date(a) - new Date(b)) / 86400000
+
+  let idx = target.findIndex(x => x.slug === r.slug)
+  if (idx >= 0) return idx
+
+  idx = target.findIndex(x => type(x) === type(r) && x.round != null && x.round === r.round)
+  if (idx >= 0) return idx
+
+  return target.findIndex(x => x.date && r.date && days(x.date, r.date) <= 3)
+}
+
+function mergeIntoResults(year, rounds, { replace = false, fillGaps = false } = {}) {
   const data = fs.existsSync(RESULTS_PATH)
     ? JSON.parse(fs.readFileSync(RESULTS_PATH, 'utf8'))
     : { lastUpdated: '', seasons: {} }
@@ -370,6 +392,38 @@ function mergeIntoResults(year, rounds, { replace = false } = {}) {
     const before = data.seasons[year].rounds.length
     data.seasons[year].rounds = [...rounds]
     console.log(`\n♻️  replaced season ${year}: ${before} existing round(s) → ${rounds.length} from DataRide`)
+  } else if (fillGaps) {
+    // Additive only: add rounds we don't have, and within a round we do have, add only
+    // the session keys that are missing. Never replaces a stored session.
+    //
+    // This is what makes an unattended scheduled run safe. A plain --merge replaces the
+    // whole round, and DataRide is not always right: it reports Lenzerheide 2026 men's
+    // finals as a 112-rider field won by Ryan Pinkerton (that's the qualifying race,
+    // mislabelled) when the real final is 30 riders won by Finn Iles. An automated
+    // --merge would silently overwrite the correct result with that. --fill-gaps cannot.
+    const target = data.seasons[year].rounds
+    let addedRounds = 0, addedSessions = 0
+    for (const r of rounds) {
+      const idx = findExistingRound(target, r)
+      if (idx < 0) {
+        target.push(r)
+        addedRounds++
+        console.log(`  🆕 round ${r.slug} (${Object.keys(r.sessions || {}).join(', ')})`)
+        continue
+      }
+      const have = target[idx].sessions || (target[idx].sessions = {})
+      for (const [key, riders] of Object.entries(r.sessions || {})) {
+        if (have[key]?.length > 0) continue
+        have[key] = riders
+        addedSessions++
+        console.log(`  ➕ ${target[idx].slug} ${key} (${riders.length} riders, DataRide calls this round ${r.slug})`)
+      }
+    }
+    if (!addedRounds && !addedSessions) {
+      console.log(`\n✅ nothing missing for ${year} — no changes written`)
+      return false
+    }
+    console.log(`\n✅ fill-gaps ${year}: +${addedRounds} round(s), +${addedSessions} session(s)`)
   } else {
     const target = data.seasons[year].rounds
     for (const r of rounds) {
@@ -382,8 +436,9 @@ function mergeIntoResults(year, rounds, { replace = false } = {}) {
   data.seasons[year].rounds.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
   data.lastUpdated = new Date().toISOString()
   fs.writeFileSync(RESULTS_PATH, JSON.stringify(data, null, 2))
+  return true
 }
 
-export { fetchSeason }
+export { fetchSeason, findExistingRound }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) main().catch(e => { console.error('💥', e.message); process.exit(1) })

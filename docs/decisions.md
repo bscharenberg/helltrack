@@ -215,6 +215,46 @@
 - FREE badge: `background: transparent; border: 1px solid #d4f500; color: #d4f500` — earns the acid accent
 - PAID badge: `background: transparent; border: 1px solid #888; color: #888` — muted, factual, no alarm
 
+## Results Sources
+
+### An unattended merge must never be able to overwrite a stored result (2026-08-28)
+- `dataride-fetcher.mjs --merge` replaces a whole round: `target[idx] = r`. Fine when a human
+  reads the validate output first; unsafe on a schedule.
+- DataRide is not always right. It reports Lenzerheide 2026 men's finals as a 112-rider field
+  won by Ryan Pinkerton — that is the qualifying race, mislabelled. A real elite final is 30
+  riders (Finn Iles won it). An automated `--merge` would have silently replaced the correct
+  round with that.
+- Hence `--fill-gaps`: adds a missing round, or a missing session key inside a round we
+  already have, and nothing else. It is the only mode the 6-hourly sweep is allowed to use.
+
+### Matching a round across sources needs more than the slug (2026-08-28)
+- The first live `--fill-gaps` run appended a **second round 1** to season 2026. DataRide
+  names it `mona-yongpyong-2026`; results.json stores it as `race-of-south-korea-2026`.
+  `findIndex(x => x.slug === r.slug)` missed, so it looked like a brand-new round.
+- This is the same divergence `results-fetcher.mjs` already carries as `uciVenue` — two of
+  the 2026 venues have a different name in every source.
+- `findExistingRound()` now tries slug → round-number-within-event-type → date within 3 days
+  before deciding a round is new. Covered by a table of cases including Val di Sole Worlds
+  and a future Whistler round, which must still read as new.
+- Lesson: test a new write mode against the real results.json on a branch before scheduling it.
+  This bug only surfaced because the first run was a live dispatch, not a dry run.
+
+### ucimtbworldseries.com stayed down; the fix is more sources, not a better retry (2026-08-28)
+- `/api/race-results` has served the SPA's HTML shell instead of JSON for every slug since
+  before Les Gets (08-22) and still does six days later. Not anti-scraping — identical
+  requests with full browser headers get the same HTML, and it is a CloudFront origin error.
+- Two independent origins now cover it: DataRide (`dataride.uci.ch`, already the source for
+  2009–2025) and ChronoRace (`results.chronorace.be`, the UCI's own timing vendor).
+
+### Hardcoded race dates have been wrong twice in two rounds (2026-08-28)
+- Les Gets finals were stored as 08-23, actually 08-22. Val di Sole was stored as 08-30,
+  actually 08-29.
+- Both fetchers that *discover* their calendar (DataRide, ChronoRace) got the dates right on
+  their own. The hardcoded `CALENDAR_2026` in `results-fetcher.mjs` is the only place that
+  can be wrong, and the cron's date windows depend on it.
+- Keep the cron windows wide (they cost one shell command on an idle day) and prefer a
+  discovery-based fetcher wherever one exists.
+
 ## Deployment Learnings
 
 ### Always stash before pull

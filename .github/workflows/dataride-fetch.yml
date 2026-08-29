@@ -11,6 +11,17 @@ name: DataRide Fetch
 # results.json without writing anything.
 
 on:
+  # Unattended safety net. fetch-results.yml polls ucimtbworldseries.com, which was down for
+  # the whole Les Gets weekend and never recovered — that round only landed after a manual
+  # DataRide pull days later. This sweep runs on its own so a missed round self-heals.
+  #
+  # Scheduled runs are ALWAYS fill-gaps, never merge: fill-gaps can add a missing round or a
+  # missing session but can never replace one that is already stored. That matters because
+  # DataRide is not always right (it reports Lenzerheide 2026 men's finals as the 112-rider
+  # qualifying field), and an unattended job must not be able to overwrite verified results.
+  schedule:
+    - cron: '25 */6 * * *'
+
   workflow_dispatch:
     inputs:
       year:
@@ -18,11 +29,12 @@ on:
         required: true
         type: string
       mode:
-        description: 'validate = read-only diff. merge = upsert rounds into results.json and push.'
+        description: 'validate = read-only diff. fill-gaps = add missing rounds/sessions only. merge = upsert whole rounds (can overwrite).'
         required: true
         type: choice
         options:
           - validate
+          - fill-gaps
           - merge
         default: validate
       only:
@@ -58,13 +70,16 @@ jobs:
           MODE: ${{ inputs.mode }}
           ONLY: ${{ inputs.only }}
         run: |
+          # On a scheduled run there are no inputs: sweep the current season, additive only.
+          [ -n "$YEAR" ] || YEAR=$(date -u +%Y)
+          [ -n "$MODE" ] || MODE=fill-gaps
           args=("$YEAR" "--$MODE")
           if [ -n "$ONLY" ]; then args+=("--only=$ONLY"); fi
           echo "Running: node scripts/dataride-fetcher.mjs ${args[*]}"
           node scripts/dataride-fetcher.mjs "${args[@]}"
 
       - name: Commit updated results
-        if: inputs.mode == 'merge'
+        if: inputs.mode != 'validate'
         run: |
           git config user.name "Helltrack Bot"
           git config user.email "helltrack-bot@users.noreply.github.com"
@@ -79,7 +94,7 @@ jobs:
 
           # Commit before rebasing: a staged-only change would be silently unstaged by a
           # stash/pop around the rebase (see docs/decisions.md, 2026-06-14).
-          git commit -m "results: ${{ inputs.year }} from DataRide $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git commit -m "results: ${{ inputs.year || 'current season' }} from DataRide $(date -u '+%Y-%m-%d %H:%M UTC')"
 
           # Push back to whichever ref this was dispatched on — NOT a hardcoded main. Dispatching
           # from a feature branch and pushing to main rebases the whole branch onto main, which

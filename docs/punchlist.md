@@ -260,7 +260,7 @@ All three PBIs shipped:
 | R5 | La Thuile | 2026-07-04 | 2026-07-05 | la-thuile-2026 | — |
 | R6 | Pal Arinsal | 2026-07-11 | 2026-07-12 | pal-arinsal-2026 | — |
 | R7 | Les Gets | 2026-08-21 | 2026-08-22 | les-gets-2026 | ✅ (DataRide — race-results API outage) |
-| Worlds | Val di Sole | 2026-08-29 | 2026-08-30 | val-di-sole-2026 | — |
+| Worlds | Val di Sole | 2026-08-28 | 2026-08-29 | val-di-sole-2026 | — |
 | R8 | Whistler | 2026-09-26 | 2026-09-27 | whistler-2026 | — |
 | R9 | Lake Placid | 2026-10-03 | 2026-10-04 | lake-placid-2026 | — |
 
@@ -273,3 +273,55 @@ When ready to build, write:
 - **Logic**: exact change needed
 - **File**: which file(s)
 - **Done when**: specific, testable criteria
+
+## Open: 2026 round dates disagree across sources
+
+Three sources give three answers for some 2026 rounds. The hardcoded `CALENDAR_2026` in
+`results-fetcher.mjs` is the least trustworthy — it has already been proven a day wrong for
+Les Gets (08-23 → 08-22) and Val di Sole (08-30 → 08-29, confirmed against Tissot's phase
+schedule).
+
+| Round | stored | DataRide | ChronoRace |
+|---|---|---|---|
+| race-of-south-korea | 2026-05-01 | 2026-05-02 | 2026-05-02 |
+| loudenvielle | 2026-05-28 | 2026-05-30 | 2026-05-31 |
+| lenzerheide | 2026-06-21 | 2026-06-20 | 2026-06-20 |
+| la-thuile | 2026-07-05 | 2026-07-04 | 2026-07-04 |
+| pal-arinsal | 2026-07-12 | 2026-07-11 | 2026-07-11 |
+
+Where DataRide and ChronoRace agree against the hardcoded calendar, they are almost certainly
+right. Loudenvielle is the one where they disagree with each other and needs a look.
+
+Deliberately NOT auto-corrected: `chronorace-fetcher.mjs --merge` fills round metadata only
+where it is missing and never overwrites a stored date or venue, so an unattended poll cannot
+rewrite the calendar. Fix these by hand once, then the fetchers will leave them alone.
+
+ChronoRace also labels round 1 "Race of South Korea" where the site stores the venue
+"Mona YongPyong". Both are used by the UCI; the stored one wins until someone decides.
+
+## Results pipeline, as it stands
+
+Three same-day sources, each covering what the others cannot, plus a delayed backstop:
+
+| Source | Covers | Wired into |
+|---|---|---|
+| `results-fetcher.mjs` (ucimtbworldseries.com) | World Series | fetch-results.yml, every 10 min on race days |
+| `tissot-fetcher.mjs` (prod.server.tissottiming.com) | **World Championships** | same |
+| `chronorace-fetcher.mjs` (results.chronorace.be) | World Series | same |
+| `dataride-fetcher.mjs` (dataride.uci.ch) | everything, days late | dataride-fetch.yml, 6-hourly, `--fill-gaps` only |
+
+ucimtbworldseries.com has served its SPA shell instead of JSON since before Les Gets 2026 and
+has not recovered. The pipeline no longer depends on it.
+
+`preflight.yml` runs Mondays 12:00 UTC and opens an issue if a round inside a two-week horizon
+has no reachable same-day source. Check by hand any time:
+
+```
+node scripts/preflight-check.mjs --year=2026            # what the weekly alarm sees
+node scripts/preflight-check.mjs --year=2026 --all      # every round
+node scripts/chronorace-fetcher.mjs 2026 --preflight    # ChronoRace detail
+```
+
+Known: Whistler (wbd-2026-13) and Lake Placid (wbd-2026-14) return 500 from ChronoRace's
+competition-list as of 2026-08-29. Expected for rounds weeks out — every past round is READY —
+but re-check inside race week.

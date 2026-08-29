@@ -20,9 +20,9 @@ on:
           - lake-placid-2026
 
   schedule:
-    # Poll every 30 min. The date check below gates on race days only — non-race-day
+    # Poll every 10 min. The date check below gates on race days only — non-race-day
     # runs exit after the first step (no checkout, no npm ci), so idle cost is one shell command.
-    - cron: '*/30 * * * *'
+    - cron: '*/10 * * * *'
 
 permissions:
   contents: write
@@ -55,9 +55,10 @@ jobs:
                            echo "slug=pal-arinsal-2026"  >> $GITHUB_OUTPUT ;;  # finals 07-12
               08-2[0-4])   echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;  # finals 08-22
               08-2[7-9]|08-3[0-1])
-                           echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;  # finals 08-30 (Worlds)
-              09-2[4-8])   echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;  # finals 09-27
-              10-0[1-5])   echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;  # finals 10-04
+                           echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;  # finals 08-29 (Worlds)
+              09-2[3-9])   echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;  # finals 09-27
+              09-30|10-0[1-6])
+                           echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;  # finals 10-04
               *)            echo "slug=unknown"           >> $GITHUB_OUTPUT ;;
             esac
           fi
@@ -86,6 +87,27 @@ jobs:
           DEBUG_RESULTS: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
         run: node scripts/results-fetcher.mjs ${{ steps.venue.outputs.slug }}
 
+      # World Championships. The UCI World Series API above does not carry them, and neither
+      # does ChronoRace's WBD document (its 2026 event list goes straight from Les Gets to
+      # Soldier Hollow). Tissot is the official UCI timekeeper and publishes Worlds live, so
+      # this is the only same-day source for a Worlds round. Self-no-ops when there is
+      # nothing new, so it does not churn a commit on every poll.
+      - name: Fetch World Championships results (Tissot)
+        if: steps.venue.outputs.slug != 'unknown'
+        continue-on-error: true
+        run: node scripts/tissot-fetcher.mjs "$(date -u +%Y)" --merge
+
+      # World Series rounds. ucimtbworldseries.com (the step above) has served its SPA shell
+      # instead of JSON since before Les Gets and has not recovered, so for Whistler and Lake
+      # Placid this is the only same-day source — Tissot carries World Championships only, and
+      # DataRide runs days behind. ChronoRace is the UCI's timing vendor, i.e. upstream of
+      # both. Self-no-ops when nothing changed, and never deletes a value another source
+      # supplied.
+      - name: Fetch World Series results (ChronoRace)
+        if: steps.venue.outputs.slug != 'unknown'
+        continue-on-error: true
+        run: node scripts/chronorace-fetcher.mjs "$(date -u +%Y)" --merge
+
       - name: Commit updated results
         if: steps.venue.outputs.slug != 'unknown'
         run: |
@@ -107,11 +129,16 @@ jobs:
 
           # The hourly cache-refresh workflow pushes to the same branch, so a push can
           # race. Rebase-and-push with retries; different files means rebase won't conflict.
+          # Push back to whichever ref this ran on — NOT a hardcoded main. The scheduled run is
+          # on main; a workflow_dispatch from a feature branch would otherwise rebase that
+          # branch onto main and conflict on every file under checkout's shallow clone.
+          BRANCH="${GITHUB_REF_NAME}"
           for attempt in 1 2 3 4 5; do
-            git pull --rebase origin main && git push origin main && { echo "Pushed on attempt $attempt."; exit 0; }
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && { echo "Pushed to $BRANCH on attempt $attempt."; exit 0; }
             echo "Push attempt $attempt failed (likely a concurrent push) — retrying in 10s..."
             sleep 10
           done
 
           echo "::error::Failed to push results after 5 attempts."
           exit 1
+
