@@ -56,8 +56,9 @@ jobs:
               08-2[0-4])   echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;  # finals 08-22
               08-2[7-9]|08-3[0-1])
                            echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;  # finals 08-29 (Worlds)
-              09-2[4-8])   echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;  # finals 09-27
-              10-0[1-5])   echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;  # finals 10-04
+              09-2[3-9])   echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;  # finals 09-27
+              09-30|10-0[1-6])
+                           echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;  # finals 10-04
               *)            echo "slug=unknown"           >> $GITHUB_OUTPUT ;;
             esac
           fi
@@ -95,6 +96,17 @@ jobs:
         if: steps.venue.outputs.slug != 'unknown'
         continue-on-error: true
         run: node scripts/tissot-fetcher.mjs "$(date -u +%Y)" --merge
+
+      # World Series rounds. ucimtbworldseries.com (the step above) has served its SPA shell
+      # instead of JSON since before Les Gets and has not recovered, so for Whistler and Lake
+      # Placid this is the only same-day source — Tissot carries World Championships only, and
+      # DataRide runs days behind. ChronoRace is the UCI's timing vendor, i.e. upstream of
+      # both. Self-no-ops when nothing changed, and never deletes a value another source
+      # supplied.
+      - name: Fetch World Series results (ChronoRace)
+        if: steps.venue.outputs.slug != 'unknown'
+        continue-on-error: true
+        run: node scripts/chronorace-fetcher.mjs "$(date -u +%Y)" --merge
 
       - name: Commit updated results
         if: steps.venue.outputs.slug != 'unknown'

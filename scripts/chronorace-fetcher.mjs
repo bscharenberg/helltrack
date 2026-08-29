@@ -217,22 +217,76 @@ function validate(year, rounds) {
   }
 }
 
+// Incoming wins, except where it carries nothing and the stored value has something. A
+// source must be able to correct a value but never to delete one another source supplied —
+// ChronoRace has no World Cup points, so a naive spread would blank every `points` field.
+const STATUS_KEYS = ['dnf', 'dns', 'dsq']
+function preserveFilled(existing, incoming) {
+  const out = { ...existing, ...incoming }
+  for (const [k, v] of Object.entries(incoming)) {
+    if ((v === null || v === undefined) && existing?.[k] != null) out[k] = existing[k]
+  }
+  // A rider promoted to a finishing rank must lose a stale DNF/DNS/DSQ flag from the
+  // previous source — a provisional result that was later corrected is exactly the case
+  // this fetcher exists to pick up.
+  if (incoming.rank != null) for (const k of STATUS_KEYS) if (!incoming[k]) delete out[k]
+  return out
+}
+
+function mergeSession(existingRows, incomingRows) {
+  if (!Array.isArray(existingRows) || !existingRows.length) return incomingRows
+  const byRank = new Map(existingRows.filter(r => r.rank != null).map(r => [r.rank, r]))
+  const byName = new Map(existingRows.map(r => [r.name, r]))
+  return incomingRows.map(r => {
+    const ex = (r.rank != null ? byRank.get(r.rank) : null) || byName.get(r.name)
+    if (!ex) return r
+
+    // A rider who has picked up a DNF/DNS/DSQ is a correction, and the incoming row wins
+    // outright: rank, time, gap and points must all clear together. Field-wise preservation
+    // would keep the old finishing rank alongside the new flag — precisely the Val di Sole
+    // case where a rider was shown 39th and then disqualified.
+    if (STATUS_KEYS.some(k => r[k])) {
+      return { ...r, ...(ex.bib != null && r.bib == null && { bib: ex.bib }),
+                     ...(ex.uciId != null && r.uciId == null && { uciId: ex.uciId }) }
+    }
+    return preserveFilled(ex, r)
+  })
+}
+
 function merge(year, rounds) {
   const data = loadResults()
   if (!data.seasons) data.seasons = {}
   if (!data.seasons[year]) data.seasons[year] = { rounds: [] }
   const target = data.seasons[year].rounds
+  const before = JSON.stringify(target)
+
   for (const r of rounds) {
     const i = target.findIndex(x => x.slug === r.slug)
+    if (i < 0) { target.push(r); continue }
+
     // Merge sessions per key rather than replacing the round: a session supplied earlier by
     // another source must survive a fetch that doesn't happen to include it.
-    if (i >= 0) target[i] = { ...target[i], ...r, sessions: { ...target[i].sessions, ...r.sessions } }
-    else target.push(r)
+    const sessions = { ...target[i].sessions }
+    for (const [key, rows] of Object.entries(r.sessions)) {
+      sessions[key] = mergeSession(sessions[key], rows)
+    }
+    target[i] = preserveFilled(target[i], { ...r, sessions })
   }
+
   target.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
+
+  // Nothing actually changed → do not touch the file. Without this the fetcher rewrites
+  // lastUpdated on every poll and the results workflow commits every 10 minutes, all race
+  // weekend, for no new data.
+  if (JSON.stringify(target) === before) {
+    console.log('\n✅ nothing new from ChronoRace — no changes written')
+    return false
+  }
+
   data.lastUpdated = new Date().toISOString()
   fs.writeFileSync(RESULTS_PATH, JSON.stringify(data, null, 2))
   console.log(`\n✅ merged ${rounds.length} round(s) into public/results.json`)
+  return true
 }
 
 async function main() {
@@ -268,7 +322,7 @@ async function main() {
   if (process.argv.includes('--merge')) merge(year, rounds)
 }
 
-export { fetchSeason }
+export { fetchSeason, mergeSession, preserveFilled }
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch(e => { console.error('💥', e.message); process.exit(1) })
 }
