@@ -361,6 +361,15 @@ override, not the primary motion. Cache v18.
 19 of 20 clips are embeddable; one UCI clip returns error 150 (owner disabled embedding).
 The skip path handles it — with a bare iframe that clip would be a dead black slide.
 
+### Fixed on first real-device use (v20)
+`.sp-tap` — the invisible full-slide play/pause layer — was `z-index: 2` while `.sp-overlay`
+had none, so the tap layer sat on top and swallowed the "Watch on YouTube" link. The overlay
+is now `z-index: 3`; it stays transparent to taps, only its children take them. Caught only
+on a phone, because the failure is a tap that silently does nothing.
+
+Also: a dead slide has no player, so its tap layer had nothing to toggle. Tapping anywhere on
+an embed-blocked clip now opens it on YouTube, and the message says so.
+
 ### Not verified in the preview pane
 Whether playback actually starts on a real user tap. The pane blocks autoplay and synthetic
 clicks grant no user activation, so `playerState` stays -1 there. **Needs a check on a real

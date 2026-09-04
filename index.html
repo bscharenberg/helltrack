@@ -469,7 +469,10 @@ html, body {
   position: absolute; left: 0; right: 0;
   bottom: calc(var(--safe-bottom) + 20px);
   padding: 0 20px;
-  pointer-events: none;   /* taps fall through to the play/pause layer */
+  /* Above .sp-tap, or the invisible play/pause layer swallows the YouTube link. The overlay
+     itself stays transparent to taps; only its children take them. */
+  z-index: 3;
+  pointer-events: none;
 }
 .sp-overlay > * { pointer-events: auto; }
 .sp-source {
@@ -2119,7 +2122,7 @@ function spMarkDead(i, code) {
   const frame = document.querySelector(`.sp-slide[data-i="${i}"] .sp-frame`)
   if (frame) {
     frame.style.aspectRatio = 'auto'
-    frame.innerHTML = `<div class="sp-dead">Can't play here — open on YouTube</div>`
+    frame.innerHTML = `<div class="sp-dead">Can't play here — tap to open on YouTube</div>`
   }
   if (i === spIndex) spAdvance('skip')
 }
@@ -2182,7 +2185,17 @@ function spOnReachEnd() {
   if (typeof gtag === 'function') gtag('event', 'shorts_complete', { pool: spItems.length })
 }
 
+function spOpenOnYouTube(i) {
+  const item = spItems[i]
+  if (!item || !item.url) return
+  spTrackOut(i)
+  window.open(item.url, '_blank', 'noopener')
+}
+
 function spTogglePlay(i) {
+  // A clip that refused to embed has no player to toggle, and YouTube is the only place it
+  // can be watched — so on those slides the whole frame becomes the way out.
+  if (spDead.has(i)) { spOpenOnYouTube(i); return }
   const p = spPlayers[i]
   if (!p || typeof p.getPlayerState !== 'function') return
   try {
