@@ -268,6 +268,34 @@ anyone following riders. `scripts/split-results.js` now derives `public/results/
   genuinely need every season) — shown partial-then-repainted, without stealing search focus.
 - Year bar comes from the index, so every season is tappable before its file exists locally.
 - Both results workflows run the split and commit `public/results/` alongside results.json.
+- Stale-first paint is paired with `revalidateSeason()` / `revalidateResultsIndex()`, so a
+  round that lands mid-session repaints instead of waiting for the next app open. Guarded:
+  only repaints the view in front of the user, and only follows a new round for someone
+  already on the latest one.
+
+---
+
+## Open — cache-buster defeats offline for three feeds (reported, not changed)
+
+Found while verifying the results caching strategy. `riders.json`, `directory.json` and
+`watch.json` are always fetched with `?t=` + timestamp:
+
+```js
+fetch(RIDERS_URL + '?t=' + Date.now())        // index.html
+fetch(DIRECTORY_URL + '?t=' + Date.now())
+fetch(WATCH_URL     + '?t=' + Date.now())
+```
+
+A fresh URL every load never matches a cached entry, so:
+- **riders.json** is in the service worker's revalidate list, but nothing ever reads back the
+  clean-path copy it writes. Its cache is write-only and the **Riders tab is offline-broken**.
+- **directory.json / watch.json** match no branch and fall through to cache-first, which the
+  buster turns into network-only. The **Pits tab is offline-broken** (`.catch(() => null)`).
+
+Freshness is fine in all three cases; only offline is affected. The fix would mirror what the
+feed and results shards now do: drop the buster on the initial fetch and let the worker serve
+stale-first, with an explicit `?t=` revalidate afterwards. Low churn data, so this is a product
+call on whether offline matters for these tabs — not urgent.
 
 ---
 

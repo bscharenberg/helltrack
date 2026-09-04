@@ -2168,6 +2168,7 @@ async function setSeason(yr) {
     }
     if (activeSeason !== yr) return   // user moved on while this was in flight
   }
+  revalidateSeason(yr)
   activeRound = Math.max(0, currentRounds().length - 1)
   buildSeasonBar()
   updateSessionBar()
@@ -2727,10 +2728,69 @@ function loadResultsData() {
       activeSeason = idx.current
       await loadSeason(activeSeason)
       activeRound = Math.max(0, currentRounds().length - 1)
+      revalidateResultsIndex()
+      revalidateSeason(activeSeason)   // fire-and-forget; repaints itself if the data moved
       return resultsData
     })().catch(err => { resultsBootPromise = null; throw err })
   }
   return resultsBootPromise
+}
+
+// ── Revalidation ───────────────────────────────────────────────────────────────
+// The service worker serves results stale-first, so what loadSeason() resolved with can be
+// a race behind — on a weekend that is a whole round. Fetch past the cache (the ?t= buster
+// takes the worker's network path, which also refreshes its cached copy) and repaint.
+// Deliberately NOT wired into loadSeason(): the cross-season archive load would turn one
+// repaint into eighteen refetches. Only the boot season and seasons the user opens.
+
+const revalidatedSeasons = {}
+async function revalidateSeason(year) {
+  if (revalidatedSeasons[year]) return
+  revalidatedSeasons[year] = true
+  try {
+    const res = await fetch(seasonUrl(year) + '?t=' + Date.now())
+    if (!res.ok) return
+    const fresh = await res.json()
+    const current = resultsData?.seasons?.[year]
+    if (!current) return
+    if (JSON.stringify(fresh.rounds || []) === JSON.stringify(current.rounds || [])) return
+
+    // Whether they were sitting on the latest round has to be read before the swap.
+    const prevCount    = (current.rounds || []).length
+    const wasOnLatest  = activeRound >= prevCount - 1
+    resultsData.seasons[year] = { rounds: fresh.rounds || [] }
+    riderIndex = null
+
+    if (year === currentSeason()) renderMyRidersFeed()
+    if (activeTab !== 'standings') return       // Results isn't on screen; it'll paint fresh when opened
+    if (activeView === 'search')   { renderRiderSearchResults(); return }
+    if (activeView === 'venue')    { renderVenueCrossYear();     return }
+    if (year !== activeSeason)     return
+
+    // Follow a newly posted round only for someone already on the latest one. Anyone reading
+    // an earlier round stays put — the results under them must not swap for a different race.
+    const last = Math.max(0, currentRounds().length - 1)
+    activeRound = wasOnLatest ? last : Math.min(activeRound, last)
+    buildSeasonBar()
+    updateSessionBar()
+    renderResults()
+  } catch {}
+}
+
+// A stale index hides a whole new season from the year bar, so refresh it too (under 1 KB).
+let indexRevalidated = false
+async function revalidateResultsIndex() {
+  if (indexRevalidated) return
+  indexRevalidated = true
+  try {
+    const res = await fetch(RESULTS_INDEX_URL + '?t=' + Date.now())
+    if (!res.ok) return
+    const fresh = await res.json()
+    const same = JSON.stringify((fresh.seasons || []).map(s => s.year)) ===
+                 JSON.stringify((resultsIndex?.seasons || []).map(s => s.year))
+    resultsIndex = fresh
+    if (!same && activeTab === 'standings') buildSeasonBar()
+  } catch {}
 }
 
 async function loadResults() {
