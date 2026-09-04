@@ -2091,7 +2091,12 @@ function dismissInstall() {
 
 // ── Results tab ──────────────────────────────────────────────────────────────
 
-const RESULTS_URL = 'public/results.json'
+// Results are sharded per season (see scripts/split-results.js). The index is a few
+// hundred bytes; a season is ~300 KB. Opening the app pulls the index + current season
+// only — the full 8 MB set is fetched lazily, and only for cross-season views.
+const RESULTS_INDEX_URL = 'public/results/index.json'
+const seasonUrl = yr => `public/results/${yr}.json`
+let resultsIndex  = null
 let resultsData   = null
 let activeSeason  = '2026'
 let activeRound   = 0
@@ -2129,9 +2134,8 @@ function currentRounds() {
 }
 
 function buildSeasonBar() {
-  const seasons = Object.keys(resultsData?.seasons || {}).filter(yr => {
-    const s = resultsData.seasons[yr]; return s.rounds && s.rounds.length > 0;
-  }).sort().reverse()
+  // From the index, so every season is tappable before its file has been fetched.
+  const seasons = (resultsIndex?.seasons || []).map(s => s.year).sort().reverse()
   const yearBar  = document.getElementById('rs-year-bar')
   const roundBar = document.getElementById('rs-round-bar')
   if (yearBar) {
@@ -2152,9 +2156,19 @@ function buildSeasonBar() {
   }
 }
 
-function setSeason(yr) {
+async function setSeason(yr) {
   activeSeason = yr
-  activeRound  = Math.max(0, currentRounds().length - 1)
+  buildSeasonBar()          // repaint the year pills immediately, before the fetch
+  if (!resultsData?.seasons?.[yr]) {
+    document.getElementById('rs-content').innerHTML = `<div class="rs-empty">Loading ${yr}…</div>`
+    try { await loadSeason(yr) }
+    catch {
+      document.getElementById('rs-content').innerHTML = `<div class="rs-empty">Couldn't load ${yr}</div>`
+      return
+    }
+    if (activeSeason !== yr) return   // user moved on while this was in flight
+  }
+  activeRound = Math.max(0, currentRounds().length - 1)
   buildSeasonBar()
   updateSessionBar()
   renderResults()
@@ -2196,7 +2210,27 @@ function setResultsView(v) {
   document.getElementById('rs-year-bar').style.display      = (isSearch || isVenue) ? 'none' : ''
   document.getElementById('rs-gender-bar').style.display    = isSearch ? 'none' : ''
   document.getElementById('rs-view-bar').style.display       = isVenue ? 'none' : ''
+  if (isSearch || isVenue) { renderCrossSeasonView(); return }
   renderResults()
+}
+
+// Rider search and venue history are the only views that need the full archive. Show what
+// we already have, pull the remaining seasons in the background, then repaint once complete.
+async function renderCrossSeasonView() {
+  const wanted = activeView
+  renderResults()
+  if (allSeasonsLoaded()) return
+  try { await loadAllSeasons() } catch { return }
+  if (activeView !== wanted) return
+  // Repaint only the inner list: a full renderResults() would rebuild the search box and
+  // steal focus from anyone already typing while the archive was loading.
+  if (wanted === 'search') renderRiderSearchResults()
+  else renderVenueCrossYear()
+}
+
+function allSeasonsLoaded() {
+  const listed = resultsIndex?.seasons || []
+  return listed.length > 0 && listed.every(s => resultsData?.seasons?.[s.year])
 }
 
 // Cross-year venue view (from a rider card's venue-name tap) — drills into
@@ -2630,24 +2664,73 @@ function renderResults() {
 </div>`
 }
 
-// results.json is large; load it once and cache the promise so the feed's "Your Riders"
-// strip and the Results tab share a single fetch (no cache-buster → browser-cacheable).
-let resultsLoadPromise = null
-async function loadResultsData() {
-  if (resultsData) return resultsData
-  if (resultsLoadPromise) return resultsLoadPromise
-  resultsLoadPromise = (async () => {
-    const res = await fetch(RESULTS_URL)
-    if (!res.ok) throw new Error('HTTP ' + res.status)
-    resultsData = await res.json()
-    const seasons = Object.keys(resultsData?.seasons || {}).filter(yr => {
-      const s = resultsData.seasons[yr]; return s.rounds && s.rounds.length > 0;
-    }).sort()
-    activeSeason = seasons[seasons.length - 1] || '2026'
-    activeRound  = Math.max(0, currentRounds().length - 1)
-    return resultsData
-  })()
-  return resultsLoadPromise
+// ── Results loading ────────────────────────────────────────────────────────────
+// Every fetch below is memoised on its promise, so the feed's "Your Riders" strip and
+// the Results tab share one request per file. No cache-busters → browser-cacheable.
+
+let indexPromise = null
+function loadResultsIndex() {
+  if (!indexPromise) {
+    indexPromise = fetch(RESULTS_INDEX_URL)
+      .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json() })
+      .then(idx => {
+        resultsIndex = idx
+        // The shared store every render path reads. Seasons land in it as they arrive,
+        // so the existing resultsData.seasons[yr].rounds shape stays untouched.
+        resultsData = resultsData || { lastUpdated: idx.lastUpdated, seasons: {} }
+        return idx
+      })
+      .catch(err => { indexPromise = null; throw err })
+  }
+  return indexPromise
+}
+
+const seasonPromises = {}
+async function loadSeason(year) {
+  await loadResultsIndex()
+  if (resultsData.seasons[year]) return resultsData.seasons[year]
+  if (!seasonPromises[year]) {
+    seasonPromises[year] = fetch(seasonUrl(year))
+      .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json() })
+      .then(s => {
+        resultsData.seasons[year] = { rounds: s.rounds || [] }
+        riderIndex = null   // a newly arrived season invalidates the cross-season search index
+        return resultsData.seasons[year]
+      })
+      .catch(err => { delete seasonPromises[year]; throw err })
+  }
+  return seasonPromises[year]
+}
+
+// Cross-season views (rider search, venue history) genuinely need every season.
+let allSeasonsPromise = null
+function loadAllSeasons() {
+  if (!allSeasonsPromise) {
+    allSeasonsPromise = loadResultsIndex()
+      .then(idx => Promise.all(idx.seasons.map(s => loadSeason(s.year))))
+      .catch(err => { allSeasonsPromise = null; throw err })
+  }
+  return allSeasonsPromise
+}
+
+// The season the app opens on, and the one "Your Riders" reads for latest finishes.
+function currentSeason() {
+  return resultsIndex?.current || '2026'
+}
+
+// Boot: index + current season. This is the whole cost of opening Results or the feed strip.
+let resultsBootPromise = null
+function loadResultsData() {
+  if (!resultsBootPromise) {
+    resultsBootPromise = (async () => {
+      const idx = await loadResultsIndex()
+      activeSeason = idx.current
+      await loadSeason(activeSeason)
+      activeRound = Math.max(0, currentRounds().length - 1)
+      return resultsData
+    })().catch(err => { resultsBootPromise = null; throw err })
+  }
+  return resultsBootPromise
 }
 
 async function loadResults() {
@@ -2703,7 +2786,7 @@ function riderMatchKey(name) {
 // shared with the rider-search venue cards). Returns the canonical results.json name too,
 // so display + tap-through use given-first order.
 function latestResultForRider(key) {
-  const rounds = resultsData?.seasons?.['2026']?.rounds || []
+  const rounds = resultsData?.seasons?.[currentSeason()]?.rounds || []
   let best = null
   for (const round of rounds) {
     for (const sk of Object.keys(round.sessions || {})) {
@@ -2748,7 +2831,7 @@ function renderMyRidersFeed() {
     return
   }
 
-  if (!resultsData) { el.innerHTML = ''; return }
+  if (!resultsData?.seasons?.[currentSeason()]) { el.innerHTML = ''; return }
 
   const next = nextRound2026()
   const nextHtml = next
@@ -2784,9 +2867,9 @@ function renderMyRidersFeed() {
     <div class="mrf-strip">${cards}</div>`
 }
 
-// Lazy-load results.json only for users who follow riders (keeps the feed cheap for everyone
-// else — a first-time visitor with no saved riders never fetches it), then render the strip.
-// Cached, so opening Results later reuses the same fetch.
+// Lazy-load the current season only for users who follow riders (keeps the feed cheap for
+// everyone else — a first-time visitor with no saved riders fetches no results at all), then
+// render the strip. Memoised, so opening Results later reuses the same fetch.
 function hydrateMyRidersFeed() {
   if (!getMyRiders().length) { renderMyRidersFeed(); return }
   if (resultsData) { renderMyRidersFeed(); return }

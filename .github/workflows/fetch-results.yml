@@ -108,13 +108,19 @@ jobs:
         continue-on-error: true
         run: node scripts/chronorace-fetcher.mjs "$(date -u +%Y)" --merge
 
+      # results.json is the canonical artifact; public/results/ is what the app fetches.
+      # Must run after every merge above, or the app serves last run's results.
+      - name: Rebuild per-season result shards
+        if: steps.venue.outputs.slug != 'unknown'
+        run: node scripts/split-results.js
+
       - name: Commit updated results
         if: steps.venue.outputs.slug != 'unknown'
         run: |
           git config user.name "Helltrack Bot"
           git config user.email "helltrack-bot@users.noreply.github.com"
 
-          git add public/results.json
+          git add public/results.json public/results/
 
           # Nothing changed (e.g. finals already committed on an earlier run) → done.
           if git diff --staged --quiet; then

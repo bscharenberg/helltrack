@@ -11,7 +11,7 @@ Full reference docs are in `/docs/`:
 ## Stack
 - Frontend: single `index.html` at repo root (vanilla JS, no framework)
 - Scripts: Node.js in `/scripts/`
-- Data: `public/cache.json` (feed) + `public/results.json` (race results)
+- Data: `public/cache.json` (feed) + `public/results.json` (race results, canonical) + `public/results/` (per-season shards the app fetches)
 - CI/CD: GitHub Actions hourly cache refresh
 - Workers: Cloudflare Workers (RSS proxy + Browser Rendering for results)
 
@@ -39,6 +39,12 @@ git checkout --theirs public/cache.json && git add public/cache.json
 ```
 
 **Commit messages** — always single quotes: `git commit -m 'message'`
+
+**Results changes** — `public/results.json` is canonical, but the app reads `public/results/`.
+Re-derive the shards after any merge into results.json, or the app serves stale results:
+```bash
+node scripts/split-results.js
+```
 
 ## Known gotchas
 - Results tab is `id='standings'` internally — never `id='results'` (collision with feed category key)

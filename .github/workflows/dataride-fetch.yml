@@ -78,14 +78,19 @@ jobs:
           echo "Running: node scripts/dataride-fetcher.mjs ${args[*]}"
           node scripts/dataride-fetcher.mjs "${args[@]}"
 
+      # results.json is the canonical artifact; public/results/ is what the app fetches.
+      - name: Rebuild per-season result shards
+        if: inputs.mode != 'validate'
+        run: node scripts/split-results.js
+
       - name: Commit updated results
         if: inputs.mode != 'validate'
         run: |
           git config user.name "Helltrack Bot"
           git config user.email "helltrack-bot@users.noreply.github.com"
 
-          # Only results.json — data/ (raw cache + staging) is gitignored and regenerable.
-          git add public/results.json
+          # results.json + the derived shards — data/ (raw cache + staging) is gitignored.
+          git add public/results.json public/results/
 
           if git diff --staged --quiet; then
             echo "No changes to results.json — nothing to commit."

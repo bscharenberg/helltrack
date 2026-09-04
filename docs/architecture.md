@@ -63,7 +63,8 @@ Source of truth is the `CHANNELS` array in `scripts/youtube-fetcher.js` — upda
 
 ### Architecture (current)
 1. `results-fetcher.mjs` calls the **UCI JSON API** directly for structured race result data
-2. Results are written to `public/results.json`
+2. Results are written to `public/results.json` (canonical; what every fetcher reads and merges into)
+3. `split-results.js` derives `public/results/` — the per-season shards the app actually fetches
 
 No Cloudflare Worker or PDF parsing is involved. The old Browser Rendering Worker (`helltrack-results`) has been retired and deleted.
 
@@ -114,6 +115,20 @@ Multi-season structure:
 Each round: venue, slug, date, round, year, type, sessions{}
 Sessions: finals-men, finals-women, qualifying-1-men, qualifying-1-women, qualifying-2-men, qualifying-2-women, finals-junior-men, finals-junior-women
 Each result: rank, bib, name, nat, team, time, gap, points, splits{s1-s4}, dnf/dns/dsq flags
+
+### public/results/ (app-facing shards)
+Derived from results.json by `scripts/split-results.js` — run it after any merge, or the app
+serves the previous run's results. `npm run split-results`.
+
+- `index.json` — `{ lastUpdated, current, seasons: [{year, rounds, bytes}] }`, under 1 KB.
+  Drives the year bar, so every season is tappable before its file is fetched.
+- `<year>.json` — `{ year, rounds: [...] }`, minified, ~100–350 KB each.
+
+Why: results.json is 8.8 MB pretty-printed, and the app used to download and `JSON.parse` all
+of it to show one round. Now opening the app costs index + current season (~314 KB). Other
+seasons load when tapped; the full archive loads only on entering rider search or venue
+history, which genuinely need every season. Only seasons with rounds are emitted, and shards
+for seasons that vanish from results.json are deleted.
 
 ### public/riders.json
 Generated from scripts/riders.csv by build-riders.js. Structure:

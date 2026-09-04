@@ -250,28 +250,24 @@ All three PBIs shipped:
 
 ---
 
-## Open — split results.json (cold-start perf)
+## Results perf — done (2026-09-03)
 
-**What**: `public/results.json` is 8.3 MB (910 KB gzipped) and is fetched whole.
+**Boot path** (`f81d0eb`→): ConvertKit script deferred (it was a sync script above the app
+script, so `loadFeed()` could not start until their CDN answered), `cache.json` prefetched from
+`<head>`, Google Fonts `@font-face` inlined (the stylesheet was render-blocking), gtag moved to
+the `load` event, service worker switched to stale-while-revalidate for feed data.
 
-**Why**: it's the last remaining boot-path stall. It loads on the Results tab, and also right
-after the feed for anyone who follows riders (`hydrateMyRidersFeed`). The download plus a
-multi-hundred-ms `JSON.parse` blocks the main thread — measured ~2s to render the Results tab
-even from localhost.
+**results.json split**: was 8.8 MB pretty-printed, downloaded and parsed in full to show one
+round — ~2s to paint the Results tab even from localhost, and it also fired on the feed for
+anyone following riders. `scripts/split-results.js` now derives `public/results/index.json`
+(under 1 KB) + `public/results/<year>.json` (minified, ~100–350 KB).
 
-**Logic**: either (a) emit one file per season (`results-2026.json` etc.) plus a small index,
-loading only the active season, or (b) emit a small `results-latest.json` holding just the most
-recent finishes, enough for the feed's "Your Riders" strip, and keep the full file for the
-Results tab only.
-
-**File**: `scripts/` builder that writes results.json; `loadResultsData()` / `hydrateMyRidersFeed()`
-in `index.html`.
-
-**Done when**: opening the feed with saved riders fetches < 100 KB, and the Results tab renders
-without a visible parse stall.
-
-*(Boot-path items 1–5 — deferred ConvertKit, head prefetch of cache.json, inlined @font-face,
-SW stale-while-revalidate, deferred gtag — shipped 2026-09-03.)*
+- Opening the app: index + current season only, **8.8 MB → 314 KB**.
+- Tapping an older year: that season alone, on demand.
+- Rider search / venue history: full archive, loaded on entering those views only (they
+  genuinely need every season) — shown partial-then-repainted, without stealing search focus.
+- Year bar comes from the index, so every season is tappable before its file exists locally.
+- Both results workflows run the split and commit `public/results/` alongside results.json.
 
 ---
 
