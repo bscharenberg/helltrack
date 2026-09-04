@@ -1,4 +1,4 @@
-const CACHE_NAME = 'helltrack-v18'
+const CACHE_NAME = 'helltrack-v19'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -59,7 +59,37 @@ self.addEventListener('fetch', event => {
     return
   }
 
-  // Static assets: cache first
+  // App shell: network-first with a short timeout, falling back to cache.
+  //
+  // This was cache-first, which left every deploy one launch behind — including the launch
+  // where someone opens the app looking for the change that just shipped. Worse, the lag is
+  // invisible: the app looks fine, it is just old. 31KB gzipped is worth paying to know you
+  // are running current code, and the timeout means a bad connection still opens instantly
+  // from cache rather than hanging on the network.
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      caches.open(CACHE_NAME).then(async cache => {
+        const cached = await cache.match('/index.html')
+        try {
+          const res = await Promise.race([
+            fetch(event.request),
+            new Promise((_, reject) => setTimeout(() => reject(new Error('slow')), 2500)),
+          ])
+          if (res && res.ok) {
+            cache.put('/index.html', res.clone())
+            cache.put('/', res.clone())
+          }
+          return res
+        } catch (err) {
+          if (cached) return cached
+          throw err
+        }
+      })
+    )
+    return
+  }
+
+  // Everything else static: cache first
   event.respondWith(
     caches.match(event.request).then(cached => cached || fetch(event.request))
   )

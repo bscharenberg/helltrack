@@ -378,6 +378,32 @@ close/restore, error skip, sound persistence — is verified.
 
 ---
 
+## App shell network-first — fixed (2026-09-03)
+
+The Shorts player shipped and the installed PWA still showed the old bottom sheet. The
+deployed HTML was correct; the phone was running a cached shell.
+
+`/` and `/index.html` were precached **cache-first**, so every deploy was one launch behind —
+including the launch where you open the app to look at the thing that just shipped. The
+failure is invisible: the app looks fine, it is just old. It also cost several misleading
+test cycles during the player build, where fixes appeared not to work because the old shell
+was being measured.
+
+Navigations are now network-first with a 2.5s timeout falling back to cache (v19). Online you
+are always on current code; offline still opens instantly from cache. Costs one ~31KB gzipped
+round trip at launch — data still paints immediately from its own stale-while-revalidate
+caches, so the perceived change is small.
+
+Verified: edit a file, reload with the worker still installed and controlling, change appears
+— no unregister, no cache clear, no version bump. Then with the server stopped, the full
+shell still loads from cache.
+
+Note this does not retroactively fix a device already holding the old cache-first worker:
+that worker serves its cached shell one last time, and the new one takes over on the launch
+after. One close-and-reopen, then permanent.
+
+---
+
 ## Race Calendar 2026 (reference)
 | Round | Venue | Qual | Finals | Slug | Results |
 |---|---|---|---|---|---|
