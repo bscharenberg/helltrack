@@ -298,6 +298,37 @@ See `revalidateFeed()`, `revalidateSeason()`, `revalidateResultsIndex()`, `reval
 
 ---
 
+## Provisional results state — shipped (2026-09-03)
+
+The pipeline records `status` and `fetchedAt` per round, and the UI read neither — every
+`.status` in index.html was an HTTP response code. A round captured mid-session rendered
+identically to a signed-off one.
+
+`roundState()` + `.rs-state` now badge the results header:
+- `status: 'Live'`, round date today or later → **In progress**
+- `status: 'Live'`, round date past → **Provisional** (captured mid-session, never confirmed)
+- Anything else → **no badge**. 136 of 143 rounds have no status; labelling the 7 `Confirmed`
+  ones would imply something false about the rest. Silence is the honest default.
+
+Both carry a "Last updated <local time>" from `fetchedAt`.
+
+### Pipeline gap this exposed
+Val di Sole 2026-08-29 (Worlds) is committed with `status: 'Live'` and `fetchedAt`
+2026-08-28 — captured mid-session by the Tissot fetcher and never re-fetched to confirm.
+The badge is correct and will stay until something re-runs the fetcher for that round
+(`node scripts/tissot-fetcher.mjs 2026 --merge`, then `node scripts/split-results.js`).
+
+Worth deciding: nothing currently re-fetches a round after race day to pick up protests,
+DSQs or timing corrections. `fetch-results.yml` is keyed to race days, so a round that
+finishes in a `Live` state stays that way. A follow-up pass a day or two after each round
+would close it.
+
+### Not covered
+Standings and the venue cross-year view compute from the same rounds but show no state.
+If a provisional round feeds the championship table, that table is provisional too.
+
+---
+
 ## Race Calendar 2026 (reference)
 | Round | Venue | Qual | Finals | Slug | Results |
 |---|---|---|---|---|---|

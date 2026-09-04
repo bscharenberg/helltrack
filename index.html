@@ -849,6 +849,22 @@ html, body {
 }
 .rs-section-label::after { content:''; flex:1; height:1px; background:var(--border); }
 
+/* Provisional/in-progress results state. Reuses the existing orange token rather than
+   introducing a colour: it reads as caution without competing with the acid accent. */
+.rs-state {
+  display:inline-flex; align-items:center; flex-wrap:wrap; gap:8px;
+  margin:-4px 0 14px; padding:7px 11px;
+  border:0.5px solid rgba(224,90,30,0.4); border-radius:6px;
+  background:var(--pb-dim);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--pb-orange);
+}
+.rs-state-note {
+  font-weight:400; letter-spacing:0.06em; text-transform:none;
+  color:var(--text-secondary);
+}
+
 /* Top 5 — visual weight by position */
 .rs-top5 { display:flex; flex-direction:column; gap:6px; margin-bottom:16px; }
 
@@ -2653,9 +2669,15 @@ function renderResults() {
   // previous day in timezones behind UTC. Appending T00:00:00 parses as local midnight.
   const venueDate = new Date(round.date + 'T00:00:00').toLocaleDateString('en-US', { month:'short', day:'numeric' })
 
+  const state = roundState(round)
+  const stateHtml = state
+    ? `<div class="rs-state">${state.label}${state.note ? `<span class="rs-state-note">${escHtml(state.note)}</span>` : ''}</div>`
+    : ''
+
   el.innerHTML = `
 <div class="rs-section">
   <div class="rs-section-label">${round.venue} · ${venueDate} · ${sessionLabel}</div>
+  ${stateHtml}
   <div class="rs-top5">${top5Html}</div>
   ${rest.length ? `
   <div class="rs-section-label">Full results</div>
@@ -2825,6 +2847,30 @@ const CALENDAR_2026 = [
 function nextRound2026() {
   const today = new Date().toISOString().slice(0, 10)
   return CALENDAR_2026.find(r => r.date >= today) || null
+}
+
+// Timestamp for "as of" lines — local time, since a rider checking results mid-weekend
+// cares what time it was for them, not UTC.
+function fmtStamp(iso) {
+  const d = new Date(iso)
+  if (isNaN(d.getTime())) return ''
+  return d.toLocaleString('en-US', { month:'short', day:'numeric', hour:'numeric', minute:'2-digit' })
+}
+
+// A round the pipeline captured mid-session carries status 'Live'. Those standings can still
+// move — protests, DSQs, riders still to drop — so they must not render identically to a
+// signed-off result. Rounds with no status are historical imports that make no claim either
+// way, and get no badge: silence is the honest default, and a label on 7 of 143 rounds would
+// imply something false about the other 136.
+function roundState(round) {
+  if (!round || round.status !== 'Live') return null
+  const today = new Date().toISOString().slice(0, 10)
+  return {
+    // Still on or before race day → genuinely in progress. Past it → we captured a partial
+    // session and never saw a confirmation, which is provisional, not live.
+    label: (round.date || '') >= today ? 'In progress' : 'Provisional',
+    note:  round.fetchedAt ? `Last updated ${fmtStamp(round.fetchedAt)}` : '',
+  }
 }
 
 function fmtShortDate(d) {
