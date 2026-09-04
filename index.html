@@ -3163,15 +3163,36 @@ function renderRiders() {
 
 async function loadRiders() {
   try {
-    const res = await fetch(RIDERS_URL + '?t=' + Date.now())
+    // No cache-buster here: a fresh URL every load never matches a cached entry, which is
+    // what left this tab broken offline. The worker serves riders.json stale-first; freshness
+    // comes from the revalidate below instead.
+    const res = await fetch(RIDERS_URL)
     if (!res.ok) throw new Error('HTTP ' + res.status)
     ridersData = await res.json()
     renderRiders()
+    revalidateRiders()
   } catch(err) {
     console.error('Riders load failed:', err)
     document.getElementById('riders-content').innerHTML =
       '<div class="rs-empty">Riders unavailable</div>'
   }
+}
+
+// The roster changes rarely, but a stale-first paint still has to be corrected. Fetch past
+// the worker (the ?t= also refreshes its cached copy) and repaint only if it actually moved.
+// The search box lives in the header, not in the rendered list, so a repaint can't steal focus.
+let ridersRevalidated = false
+async function revalidateRiders() {
+  if (ridersRevalidated) return
+  ridersRevalidated = true
+  try {
+    const res = await fetch(RIDERS_URL + '?t=' + Date.now())
+    if (!res.ok) return
+    const fresh = await res.json()
+    if (JSON.stringify(fresh) === JSON.stringify(ridersData)) return
+    ridersData = fresh
+    if (activeTab === 'riders') renderRiders()
+  } catch {}
 }
 
 // ── Pits tab ──────────────────────────────────────────────────────────────────

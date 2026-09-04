@@ -1,4 +1,4 @@
-const CACHE_NAME = 'helltrack-v14'
+const CACHE_NAME = 'helltrack-v15'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -6,6 +6,7 @@ const STATIC_ASSETS = [
   '/icon-round-192.png',
   '/public/cache.json',
   '/public/results/index.json',
+  '/public/riders.json',
 ]
 
 self.addEventListener('install', event => {

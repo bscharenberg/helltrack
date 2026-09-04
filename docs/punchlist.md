@@ -275,27 +275,21 @@ anyone following riders. `scripts/split-results.js` now derives `public/results/
 
 ---
 
-## Open — cache-buster defeats offline for three feeds (reported, not changed)
+## Riders tab offline — fixed (2026-09-03)
 
-Found while verifying the results caching strategy. `riders.json`, `directory.json` and
-`watch.json` are always fetched with `?t=` + timestamp:
+`riders.json` was fetched with `?t=` + timestamp on every load. A fresh URL never matches a
+cached entry, so the service worker's copy was write-only and the tab showed "Riders
+unavailable" offline. Now fetched clean (worker serves it stale-first) with an explicit
+`revalidateRiders()` afterwards, the same shape as the feed and results shards. Also added to
+`STATIC_ASSETS`, so it works offline even for someone who never opened the tab. Cache v15.
 
-```js
-fetch(RIDERS_URL + '?t=' + Date.now())        // index.html
-fetch(DIRECTORY_URL + '?t=' + Date.now())
-fetch(WATCH_URL     + '?t=' + Date.now())
-```
+## Open — Pits tab is offline-only-broken (product call, deliberately left)
 
-A fresh URL every load never matches a cached entry, so:
-- **riders.json** is in the service worker's revalidate list, but nothing ever reads back the
-  clean-path copy it writes. Its cache is write-only and the **Riders tab is offline-broken**.
-- **directory.json / watch.json** match no branch and fall through to cache-first, which the
-  buster turns into network-only. The **Pits tab is offline-broken** (`.catch(() => null)`).
-
-Freshness is fine in all three cases; only offline is affected. The fix would mirror what the
-feed and results shards now do: drop the buster on the initial fetch and let the worker serve
-stale-first, with an explicit `?t=` revalidate afterwards. Low churn data, so this is a product
-call on whether offline matters for these tabs — not urgent.
+Same root cause, not fixed: `directory.json` and `watch.json` are still fetched with `?t=`,
+which turns the cache-first default into network-only. Freshness is fine; the Pits tab just
+won't render offline (`.catch(() => null)`). Deliberate — low-churn data and a secondary tab.
+The fix is the pattern now used three times over: drop the buster, let the worker serve
+stale-first, revalidate after. Roughly a two-line change per file if it ever matters.
 
 ---
 

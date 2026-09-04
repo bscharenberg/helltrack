@@ -205,7 +205,7 @@ Geographic streaming options for the PITS → WATCH section. Updated once per se
 
 ## Other PWA Files (root folder)
 - `manifest.json` — start_url: "/", scope: "/"
-- `service-worker.js` — cache-first static; stale-while-revalidate for cache.json, riders.json and `public/results/`; currently at helltrack-v14. Stale-first means the page can paint a race-old shard, so `index.html` re-fetches past the worker (`?t=`) and repaints — see `revalidateFeed()` / `revalidateSeason()`. Bump `CACHE_NAME` for ANY index.html change: the shell is cache-first, so existing installs won't see it otherwise. Static assets are root-relative (`/`, `/index.html`, `/manifest.json`) — the site serves at the helltrack.app root, NOT a `/helltrack/` subpath.
+- `service-worker.js` — cache-first static; stale-while-revalidate for cache.json, riders.json and `public/results/`; currently at helltrack-v15. Stale-first means the page can paint a race-old shard, so `index.html` re-fetches past the worker (`?t=`) and repaints — see `revalidateFeed()` / `revalidateSeason()`. Bump `CACHE_NAME` for ANY index.html change: the shell is cache-first, so existing installs won't see it otherwise. Static assets are root-relative (`/`, `/index.html`, `/manifest.json`) — the site serves at the helltrack.app root, NOT a `/helltrack/` subpath.
 - `icon-192.png`, `icon-512.png` — placeholder HT icons (real design pending)
 
 ## Environment
