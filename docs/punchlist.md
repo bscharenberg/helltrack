@@ -250,6 +250,31 @@ All three PBIs shipped:
 
 ---
 
+## Open — split results.json (cold-start perf)
+
+**What**: `public/results.json` is 8.3 MB (910 KB gzipped) and is fetched whole.
+
+**Why**: it's the last remaining boot-path stall. It loads on the Results tab, and also right
+after the feed for anyone who follows riders (`hydrateMyRidersFeed`). The download plus a
+multi-hundred-ms `JSON.parse` blocks the main thread — measured ~2s to render the Results tab
+even from localhost.
+
+**Logic**: either (a) emit one file per season (`results-2026.json` etc.) plus a small index,
+loading only the active season, or (b) emit a small `results-latest.json` holding just the most
+recent finishes, enough for the feed's "Your Riders" strip, and keep the full file for the
+Results tab only.
+
+**File**: `scripts/` builder that writes results.json; `loadResultsData()` / `hydrateMyRidersFeed()`
+in `index.html`.
+
+**Done when**: opening the feed with saved riders fetches < 100 KB, and the Results tab renders
+without a visible parse stall.
+
+*(Boot-path items 1–5 — deferred ConvertKit, head prefetch of cache.json, inlined @font-face,
+SW stale-while-revalidate, deferred gtag — shipped 2026-09-03.)*
+
+---
+
 ## Race Calendar 2026 (reference)
 | Round | Venue | Qual | Finals | Slug | Results |
 |---|---|---|---|---|---|

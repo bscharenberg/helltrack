@@ -19,19 +19,130 @@
 <meta name="twitter:title" content="Helltrack · UCI Downhill Racing Results & Video">
 <meta name="twitter:description" content="UCI downhill results, race videos, and rider profiles. Everything downhill, nothing else.">
 <meta name="twitter:image" content="https://helltrack.app/og-image.png">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4EY22R6D2J"></script>
+<!-- Start the feed fetch during head parse, so cache.json is in flight before the app script parses. -->
+<script>
+  window.__cachePrefetch = fetch('public/cache.json')
+    .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)));
+  window.__cachePrefetch.catch(() => {});
+</script>
+<!-- Google tag (gtag.js) — library loads after first paint so it never competes with cache.json -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4EY22R6D2J');
+  addEventListener('load', () => {
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4EY22R6D2J';
+    document.head.appendChild(s);
+  });
 </script>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Barlow + Barlow Condensed @font-face inlined from Google Fonts (latin + latin-ext).
+   Inlined rather than <link>ed: the fonts.googleapis.com stylesheet was render-blocking,
+   costing a whole extra origin handshake before the loading spinner could paint.
+   To refresh, re-fetch the css2 URL for these families and keep the latin subsets. */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_Ass5ynghnQci.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5ynghnQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs6Vostz0rdom9.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51ostz0rdg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowcondensed/v13/HTx3L3I-JCGChYJ8VI-L6OO_au7B6x_T2lv0tKk7aw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowcondensed/v13/HTx3L3I-JCGChYJ8VI-L6OO_au7B6xHT2lv0tKk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3jWuYMBYrp0xg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3bWuYMBYro.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3jWuYMBYrp0xg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuYMBYro.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3jWuYMBYrp0xg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuYMBYro.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1355,7 +1466,7 @@ html, body {
   <div class="signup-section">
     <h2 class="signup-headline">Make the Cut</h2>
     <p class="signup-subhead">First on course when new features drop</p>
-    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script><form action="https://app.kit.com/forms/9481228/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9481228" data-uid="513bdca50f" data-format="inline" data-version="5" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"></div><div class="formkit-field"><div role="button" tabindex="0"><fieldset data-group="checkboxes" class="formkit-3413" group="field" type="Custom" order="2" save_as="Tag"><legend style="color: rgb(255, 255, 255); font-weight: 700;">What are you interested in?</legend><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773114" type="checkbox" name="tags[]" value="19773114"><label for="tag-3413-19773114">Downhill (DH)</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773117" type="checkbox" name="tags[]" value="19773117"><label for="tag-3413-19773117">Enduro</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773118" type="checkbox" name="tags[]" value="19773118"><label for="tag-3413-19773118">XCO</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773119" type="checkbox" name="tags[]" value="19773119"><label for="tag-3413-19773119">BMX</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773120" type="checkbox" name="tags[]" value="19773120"><label for="tag-3413-19773120">Road</label></div></fieldset></div></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(17, 17, 17); background-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">MAKE THE CUT</span></button></div></div></form>
+    <script defer src="https://f.convertkit.com/ckjs/ck.5.js"></script><form action="https://app.kit.com/forms/9481228/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9481228" data-uid="513bdca50f" data-format="inline" data-version="5" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"></div><div class="formkit-field"><div role="button" tabindex="0"><fieldset data-group="checkboxes" class="formkit-3413" group="field" type="Custom" order="2" save_as="Tag"><legend style="color: rgb(255, 255, 255); font-weight: 700;">What are you interested in?</legend><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773114" type="checkbox" name="tags[]" value="19773114"><label for="tag-3413-19773114">Downhill (DH)</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773117" type="checkbox" name="tags[]" value="19773117"><label for="tag-3413-19773117">Enduro</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773118" type="checkbox" name="tags[]" value="19773118"><label for="tag-3413-19773118">XCO</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773119" type="checkbox" name="tags[]" value="19773119"><label for="tag-3413-19773119">BMX</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773120" type="checkbox" name="tags[]" value="19773120"><label for="tag-3413-19773120">Road</label></div></fieldset></div></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(17, 17, 17); background-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">MAKE THE CUT</span></button></div></div></form>
   </div>
 
   <div id="updated"></div>
@@ -1894,22 +2005,50 @@ async function loadFeed(force=false) {
   const btn = document.getElementById('refresh-btn')
   btn.classList.add('spinning')
   try {
-    const res = await fetch(force ? CACHE_URL+'?t='+Date.now() : CACHE_URL)
-    if (!res.ok) throw new Error('HTTP '+res.status)
-    data = await res.json()
+    // A normal load reuses the <head> prefetch, already in flight since before this script parsed.
+    if (!force && window.__cachePrefetch) {
+      data = await window.__cachePrefetch
+    } else {
+      const res = await fetch(force ? CACHE_URL+'?t='+Date.now() : CACHE_URL)
+      if (!res.ok) throw new Error('HTTP '+res.status)
+      data = await res.json()
+    }
     document.getElementById('loading').style.display = 'none'
     document.getElementById('error-state').style.display = 'none'
     buildTabs()
     renderFeed()
     handleDeepLink()
     hydrateMyRidersFeed()
+    if (!force) revalidateFeed()
   } catch(err) {
     console.error(err)
+    window.__cachePrefetch = null   // don't let Retry re-await a rejected prefetch
     document.getElementById('loading').style.display = 'none'
     document.getElementById('error-state').style.display = 'block'
   } finally {
     btn.classList.remove('spinning')
   }
+}
+
+// The service worker serves cache.json stale-first so the feed paints instantly. Quietly
+// fetch past it once and swap in fresh content — but only while the reader is still at the
+// top of the feed, so a live update never yanks the page out from under them.
+let revalidated = false
+async function revalidateFeed() {
+  if (revalidated) return
+  revalidated = true
+  try {
+    const res = await fetch(CACHE_URL + '?t=' + Date.now())
+    if (!res.ok) return
+    const fresh = await res.json()
+    if (JSON.stringify(fresh) === JSON.stringify(data)) return
+    data = fresh
+    if (activeTab === 'feed' && window.scrollY < 200) {
+      buildTabs()
+      renderFeed()
+      hydrateMyRidersFeed()
+    }
+  } catch {}
 }
 
 if ('serviceWorker' in navigator) {
