@@ -63,6 +63,12 @@ fetch('public/cache.json?t=' + Date.now()).then(r => r.json()).then(d => {
 ```
 
 ### Force browser to reload fresh cache (bypass service worker)
+
+> **Do this after EVERY index.html edit.** `/` and `/index.html` are precached cache-first,
+> so once a service worker is registered the browser keeps serving the shell it installed —
+> your edit is invisible and testing silently measures the OLD build. Bumping `CACHE_NAME`
+> fixes it for users but NOT for a tab that already has the old worker. Unregister + clear
+> caches, then reload.
 1. DevTools → Application → Service Workers → Unregister both
 2. Cmd+Shift+R (hard refresh)
 
@@ -149,5 +155,5 @@ Then continue: `git rebase --continue` or `git stash pop && git push`
 
 ### Service worker caching stale content
 - Unregister in DevTools → Application → Service Workers
-- Service worker is currently at `helltrack-v17`
+- Service worker is currently at `helltrack-v18`
 - Bump the version string in service-worker.js when you need browsers to pick up new files

@@ -433,6 +433,104 @@ html, body {
   -webkit-box-orient: vertical;
 }
 
+/* ── Shorts player ── full-screen vertical continuation player.
+   dvh not vh: mobile browser chrome collapsing on scroll would otherwise clip slides. */
+#shorts-player {
+  display: none;
+  position: fixed; inset: 0; z-index: 400;
+  background: #000;
+}
+#shorts-player.open { display: block; }
+#shorts-scroll {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+#shorts-scroll::-webkit-scrollbar { display: none; }
+.sp-slide {
+  height: 100dvh;
+  /* scroll-snap-stop:always — without it a fast flick skips several clips at once */
+  scroll-snap-align: start; scroll-snap-stop: always;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+/* Orientation of the source clip is unknown (YouTube always reports a landscape
+   thumbnail), so letterbox 16:9 on black — portrait clips render portrait inside it. */
+.sp-frame { width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.sp-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.sp-dead {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-muted); text-align: center; padding: 0 32px;
+}
+.sp-overlay {
+  position: absolute; left: 0; right: 0;
+  bottom: calc(var(--safe-bottom) + 20px);
+  padding: 0 20px;
+  pointer-events: none;   /* taps fall through to the play/pause layer */
+}
+.sp-overlay > * { pointer-events: auto; }
+.sp-source {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--acid); margin-bottom: 5px;
+}
+.sp-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px; font-weight: 500; line-height: 1.25; color: #fff;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.8);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.sp-yt {
+  display: inline-block; margin-top: 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-secondary); text-decoration: none;
+  border: 0.5px solid var(--border-mid); border-radius: 14px; padding: 5px 11px;
+}
+/* Invisible layer over the iframe so a tap toggles play/pause. The iframe swallows
+   its own clicks, so this sits above it. */
+.sp-tap { position: absolute; inset: 0; z-index: 2; }
+#shorts-close, #shorts-sound {
+  position: fixed; z-index: 5;
+  top: calc(var(--safe-top) + 12px);
+  background: rgba(0,0,0,0.5); border: 0.5px solid rgba(255,255,255,0.18);
+  color: #fff; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+#shorts-close {
+  right: 14px; width: 34px; height: 34px; border-radius: 17px;
+  font-size: 17px; line-height: 1; padding: 0;
+}
+#shorts-sound {
+  left: 14px; height: 34px; border-radius: 17px; padding: 0 12px;
+  display: flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+}
+#shorts-sound-label { transition: opacity 0.3s, max-width 0.3s; white-space: nowrap; }
+#shorts-sound.on #shorts-sound-label { opacity: 0; max-width: 0; overflow: hidden; }
+.sp-end {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 18px; text-align: center; padding: 0 32px;
+}
+.sp-end-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #fff;
+}
+.sp-end-sub {
+  font-size: 13px; color: var(--text-secondary); margin-top: -10px;
+}
+.sp-end-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  background: var(--acid); color: #111; border: none; border-radius: 20px;
+  padding: 11px 22px; cursor: pointer;
+}
+
 .cat-badge {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
@@ -1809,6 +1907,340 @@ function shareItem() {
   }
 }
 
+// ── Shorts player ─────────────────────────────────────────────────────────────
+// A full-screen vertical continuation player over the Shorts strip. The point is the
+// loop: a clip ends, the next one arrives without you asking. Swiping is the override.
+//
+// Uses YT.Player rather than bare <iframe> for three things a plain iframe cannot do:
+// detect embed-disabled videos (onError), fire on playback end (onStateChange → ENDED,
+// which IS the auto-advance), and tear down cleanly (destroy() — clearing src leaves the
+// audio context alive).
+
+const SHORTS_UNMUTED_KEY = 'helltrack-shorts-unmuted'
+const SP_WINDOW = 1          // keep players for active ±1; at most 3 alive at once
+
+let spItems     = []
+let spIndex     = 0
+let spOpen      = false
+let spPlayers   = {}         // index → YT.Player
+let spDead      = new Set()  // indices whose video refused to embed
+let spObserver  = null
+let spReturnY   = 0
+let spUnmuted   = false
+let spLastError = null   // diagnostic: last onError {i, code}
+try { spUnmuted = localStorage.getItem(SHORTS_UNMUTED_KEY) === '1' } catch {}
+
+function openShorts(index) {
+  if (!spItems.length) return
+  spIndex   = Math.max(0, Math.min(index, spItems.length - 1))
+  spOpen    = true
+  spReturnY = window.scrollY
+  spDead    = new Set()
+
+  spBindGestures()
+  spBuildSlides()
+  document.getElementById('shorts-player').classList.add('open')
+  document.body.style.overflow = 'hidden'
+  spSyncSoundButton()
+
+  // Jump to the tapped clip before observing, so the observer's first callback is the
+  // one we want rather than slide 0 flashing past.
+  spScrollToSlide(spIndex, true)
+  spObserve()
+  spSetActive(spIndex)
+
+  // Own a history entry so Android back and browser back exit the player, not the app.
+  history.pushState({ shorts: true }, '', '')
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'shorts_open', { index: spIndex, pool: spItems.length })
+  }
+}
+
+function closeShorts() {
+  if (!spOpen) return
+  spOpen = false
+  spStopAnim(document.getElementById('shorts-scroll'))
+  if (spObserver) { spObserver.disconnect(); spObserver = null }
+  Object.keys(spPlayers).forEach(i => spUnmount(i))
+  spPlayers = {}
+  document.getElementById('shorts-player').classList.remove('open')
+  document.getElementById('shorts-scroll').innerHTML = ''
+  document.body.style.overflow = ''
+  applySeenState()
+  window.scrollTo(0, spReturnY)
+  // Drop our history entry unless popstate is what brought us here.
+  if (history.state && history.state.shorts) history.back()
+}
+
+function spBuildSlides() {
+  const scroller = document.getElementById('shorts-scroll')
+  const slides = spItems.map((item, i) => `
+<div class="sp-slide" data-i="${i}">
+  <div class="sp-frame"><div id="sp-frame-${i}"></div></div>
+  <div class="sp-tap" onclick="spTogglePlay(${i})"></div>
+  <div class="sp-overlay">
+    <div class="sp-source">${escHtml(srcName(item))}</div>
+    <div class="sp-title">${escHtml(item.title || '')}</div>
+    ${item.url ? `<a class="sp-yt" href="${escHtml(item.url)}" target="_blank" rel="noopener"
+       onclick="spTrackOut(${i})">Watch on YouTube</a>` : ''}
+  </div>
+</div>`).join('')
+
+  // The end card is a real slide, so reaching it is the same snap gesture as any other.
+  // Finite and finishable by design — an endless loop would be inbox behaviour.
+  const end = `
+<div class="sp-slide sp-end" data-i="end">
+  <div class="sp-end-title">That's all the Shorts</div>
+  <div class="sp-end-sub">Check back after the next race weekend</div>
+  <button class="sp-end-btn" onclick="closeShorts()">Back to feed</button>
+</div>`
+
+  scroller.innerHTML = slides + end
+}
+
+function spObserve() {
+  const scroller = document.getElementById('shorts-scroll')
+  spObserver = new IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (!e.isIntersecting || e.intersectionRatio < 0.5) continue
+      const raw = e.target.dataset.i
+      if (raw === 'end') { spOnReachEnd(); continue }
+      const i = Number(raw)
+      if (i !== spIndex) spSetActive(i)
+    }
+  }, { root: scroller, threshold: 0.5 })
+  scroller.querySelectorAll('.sp-slide').forEach(el => spObserver.observe(el))
+}
+
+// Becoming the active slide: mount a player here and one ahead, drop anything further
+// away, start this one, pause the neighbours.
+function spSetActive(i) {
+  spIndex = i
+  spMountWindow()
+  for (const key of Object.keys(spPlayers)) {
+    const p = spPlayers[key]
+    if (!p || typeof p.pauseVideo !== 'function') continue
+    if (Number(key) === i) {
+      spStart(p, i)
+    } else {
+      try { p.pauseVideo() } catch {}
+    }
+  }
+  const item = spItems[i]
+  if (item) { markSeen(item.url) }
+  if (typeof gtag === 'function') {
+    gtag('event', 'shorts_view', { index: i, video_id: item?.id, channel: item?.channelName })
+  }
+}
+
+function spMountWindow() {
+  for (let i = spIndex - SP_WINDOW; i <= spIndex + SP_WINDOW; i++) {
+    if (i < 0 || i >= spItems.length) continue
+    if (!spPlayers[i] && !spDead.has(i)) spMount(i)
+  }
+  for (const key of Object.keys(spPlayers)) {
+    if (Math.abs(Number(key) - spIndex) > SP_WINDOW) spUnmount(key)
+  }
+}
+
+function spMount(i) {
+  const host = document.getElementById(`sp-frame-${i}`)
+  const item = spItems[i]
+  if (!host || !item) return
+  const videoId = getYouTubeId(item)
+  if (!videoId) { spMarkDead(i); return }
+
+  spPlayers[i] = 'pending'   // claim the slot so a second callback can't double-mount
+  loadYouTubeAPI(() => {
+    if (!spOpen || spPlayers[i] !== 'pending') return
+    if (!document.getElementById(`sp-frame-${i}`)) { delete spPlayers[i]; return }
+    spPlayers[i] = new YT.Player(`sp-frame-${i}`, {
+      videoId,
+      // mute:1 is mandatory — browsers block unmuted autoplay before a user gesture, and
+      // playsinline:1 stops iOS Safari taking over the screen with its native player.
+      playerVars: { autoplay: i === spIndex ? 1 : 0, mute: 1, playsinline: 1, rel: 0, modestbranding: 1 },
+      events: {
+        onReady: e => {
+          if (i !== spIndex) { try { e.target.pauseVideo() } catch {}; return }
+          spStart(e.target, i)
+        },
+        onStateChange: e => {
+          if (e.data === YT.PlayerState.ENDED && i === spIndex) spAdvance('auto')
+        },
+        onError: e => spMarkDead(i, e && e.data),
+      },
+    })
+  })
+}
+
+// Start playback, preferring the user's sound setting but never at the cost of playing at
+// all: if the browser refuses unmuted autoplay (no user activation carried into this load),
+// fall back to muted rather than leaving the reader on a frozen first frame.
+function spStart(player, i) {
+  try { spUnmuted ? player.unMute() : player.mute() } catch {}
+  try { player.playVideo() } catch {}
+  if (!spUnmuted) return
+  setTimeout(() => {
+    if (!spOpen || i !== spIndex) return
+    let state = -1
+    try { state = player.getPlayerState() } catch { return }
+    if (state === YT.PlayerState.PLAYING || state === YT.PlayerState.BUFFERING) return
+    try { player.mute() } catch {}
+    try { player.playVideo() } catch {}
+    // Reflect reality in the control — claiming sound is on while it is muted is worse
+    // than the silence itself.
+    spUnmuted = false
+    try { localStorage.setItem(SHORTS_UNMUTED_KEY, '0') } catch {}
+    spSyncSoundButton()
+  }, 1000)
+}
+
+function spUnmount(key) {
+  const p = spPlayers[key]
+  if (p && typeof p.destroy === 'function') { try { p.destroy() } catch {} }
+  delete spPlayers[key]
+  const host = document.getElementById(`sp-frame-${key}`)
+  // destroy() replaces the node with a fresh div; restore the id so the slide can remount.
+  if (!host) {
+    const slide = document.querySelector(`.sp-slide[data-i="${key}"] .sp-frame`)
+    if (slide) slide.innerHTML = `<div id="sp-frame-${key}"></div>`
+  }
+}
+
+// A clip whose owner disabled embedding cannot play here. Skip it rather than parking the
+// user on a dead black slide, and remember it so scrolling back does not bounce them in.
+function spMarkDead(i, code) {
+  // 101/150 = owner disabled embedding, 100 = removed, 5 = HTML5 player error, 2 = bad id.
+  console.warn('[shorts] clip', i, 'failed with code', code)
+  spLastError = { i, code }
+  spDead.add(i)
+  spUnmount(i)
+  const frame = document.querySelector(`.sp-slide[data-i="${i}"] .sp-frame`)
+  if (frame) {
+    frame.style.aspectRatio = 'auto'
+    frame.innerHTML = `<div class="sp-dead">Can't play here — open on YouTube</div>`
+  }
+  if (i === spIndex) spAdvance('skip')
+}
+
+// Native smooth scrolling is unreliable inside a mandatory-snap container — scrollIntoView
+// and scrollTo({behavior:'smooth'}) are both no-ops there — so animate scrollTop ourselves.
+// Timer-driven rather than requestAnimationFrame: rAF is throttled to nothing in a
+// backgrounded or offscreen webview, and a stalled animation used to latch spAnimating true
+// and wedge every later advance. A timer always drains, and finish() is idempotent.
+// Snap is switched off for the duration or it fights the animation, then restored with the
+// final position pinned exactly on the slide boundary.
+let spAnimating = false
+let spAnimTimer = null
+
+function spStopAnim(sc) {
+  if (spAnimTimer) { clearInterval(spAnimTimer); spAnimTimer = null }
+  spAnimating = false
+  if (sc) sc.style.scrollSnapType = ''
+}
+
+function spScrollToSlide(i, instant) {
+  const sc = document.getElementById('shorts-scroll')
+  if (!sc) return
+  const target = i * sc.clientHeight
+  spStopAnim(sc)
+  if (instant) { sc.scrollTop = target; return }
+  const from = sc.scrollTop
+  const dist = target - from
+  if (!dist) return
+  const t0 = Date.now()
+  spAnimating = true
+  sc.style.scrollSnapType = 'none'
+  spAnimTimer = setInterval(() => {
+    if (!spOpen) { spStopAnim(sc); return }
+    const p = Math.min(1, (Date.now() - t0) / 320)
+    sc.scrollTop = from + dist * (1 - Math.pow(1 - p, 3))   // ease-out cubic
+    if (p >= 1) {
+      sc.scrollTop = target
+      spStopAnim(sc)
+      // Don't wait on the IntersectionObserver to report a move we made ourselves — it can
+      // lag badly in a backgrounded webview. The observer's job is user swipes.
+      if (i < spItems.length && i !== spIndex) spSetActive(i)
+    }
+  }, 16)
+}
+
+function spAdvance(reason) {
+  if (spAnimating) return
+  const next = spIndex + 1
+  if (next > spItems.length) return          // already on the end card
+  spScrollToSlide(next)
+  if (typeof gtag === 'function') gtag('event', 'shorts_advance', { reason, to: next })
+}
+
+function spOnReachEnd() {
+  for (const key of Object.keys(spPlayers)) {
+    const p = spPlayers[key]
+    if (p && typeof p.pauseVideo === 'function') { try { p.pauseVideo() } catch {} }
+  }
+  if (typeof gtag === 'function') gtag('event', 'shorts_complete', { pool: spItems.length })
+}
+
+function spTogglePlay(i) {
+  const p = spPlayers[i]
+  if (!p || typeof p.getPlayerState !== 'function') return
+  try {
+    if (p.getPlayerState() === YT.PlayerState.PLAYING) p.pauseVideo()
+    else p.playVideo()
+  } catch {}
+}
+
+function spToggleSound() {
+  spUnmuted = !spUnmuted
+  try { localStorage.setItem(SHORTS_UNMUTED_KEY, spUnmuted ? '1' : '0') } catch {}
+  const p = spPlayers[spIndex]
+  if (p && typeof p.unMute === 'function') {
+    try { spUnmuted ? p.unMute() : p.mute() } catch {}
+    try { if (spUnmuted) p.playVideo() } catch {}
+  }
+  spSyncSoundButton()
+}
+
+function spSyncSoundButton() {
+  const btn = document.getElementById('shorts-sound')
+  if (!btn) return
+  btn.classList.toggle('on', spUnmuted)
+  document.getElementById('shorts-sound-icon').textContent = spUnmuted ? '🔊' : '🔇'
+}
+
+function spTrackOut(i) {
+  const item = spItems[i]
+  if (!item) return
+  markSeen(item.url)
+  if (typeof gtag === 'function') {
+    gtag('event', 'video_click', {
+      video_id: item.id, channel: item.channelName, category: 'shorts', source: item.source,
+    })
+  }
+}
+
+// Back button exits the player instead of the app.
+window.addEventListener('popstate', () => { if (spOpen) closeShorts() })
+
+// Swipe down to dismiss, matching the sheet's existing 80px threshold. Only fires at the
+// top of a slide, so it can't hijack a normal upward swipe between clips.
+// Bound on first open, not at parse time: the player markup sits after this script block.
+let spGesturesBound = false
+function spBindGestures() {
+  if (spGesturesBound) return
+  const sp = document.getElementById('shorts-player')
+  if (!sp) return
+  spGesturesBound = true
+  let spTouchY = 0
+  sp.addEventListener('touchstart', e => { spTouchY = e.touches[0].clientY }, { passive: true })
+  sp.addEventListener('touchend', e => {
+    const scroller = document.getElementById('shorts-scroll')
+    if (!scroller || scroller.scrollTop > 2) return   // only from the top of the first slide
+    if (e.changedTouches[0].clientY - spTouchY > 80) closeShorts()
+  }, { passive: true })
+}
+
 function handleDeepLink() {
   const v = new URLSearchParams(window.location.search).get('v')
   if (!v || !data) return
@@ -1825,7 +2257,10 @@ function handleDeepLink() {
   // If not found (aged out of cache), silently ignore — app loads normally
 }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet() })
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return
+  if (spOpen) closeShorts(); else closeSheet()
+})
 
 // Swipe down to dismiss
 let touchStartY = 0
@@ -1899,13 +2334,16 @@ let activeTab = 'feed'
 
 function renderShortsStrip(items) {
   if (!items || !items.length) return ''
-  const cards = items.map(item => {
+  // The player indexes into this same list, so strip order is player order — you get the
+  // clip you tapped, and the ones after it, in the order you were already looking at.
+  spItems = items
+  const cards = items.map((item, i) => {
     const thumb = item.thumbnail
       ? `<img src="${item.thumbnail}" class="short-card-img loading" loading="lazy"
            onerror="this.style.display='none'"
            onload="this.classList.remove('loading');this.classList.add('loaded')">`
       : ''
-    return `<div class="short-card" data-url="${item.url || ''}" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
+    return `<div class="short-card" data-url="${item.url || ''}" onclick="openShorts(${i})">
       ${thumb}
       <div class="short-card-overlay">
         <div class="short-card-source">${srcName(item)}</div>
@@ -3394,6 +3832,15 @@ function clearRiderSearch() {
 buildTabs()   // render tabs up front so Results/Riders/Pits stay reachable even if cache.json fails to load
 loadFeed()
 </script>
+
+<!-- Shorts player -->
+<div id="shorts-player">
+  <div id="shorts-scroll"></div>
+  <button id="shorts-sound" aria-label="Toggle sound" onclick="spToggleSound()">
+    <span id="shorts-sound-icon">🔇</span><span id="shorts-sound-label">Tap for sound</span>
+  </button>
+  <button id="shorts-close" aria-label="Close shorts" onclick="closeShorts()">✕</button>
+</div>
 
 <!-- iOS install tip -->
 <div id="ios-install-tip" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:190;

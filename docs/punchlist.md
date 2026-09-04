@@ -329,6 +329,55 @@ If a provisional round feeds the championship table, that table is provisional t
 
 ---
 
+## Shorts player — shipped (2026-09-03)
+
+Full-screen vertical continuation player over the Shorts strip. Tap a card → fullscreen at
+that clip → it plays → **when it ends the next one arrives on its own**. Swiping is the
+override, not the primary motion. Cache v18.
+
+### Decisions
+- **Finite, not infinite.** Slide 21 is an end card ("That's all the Shorts" → back to feed).
+  Looping is inbox behaviour; ending is newspaper behaviour. This also made the 20-clip pool
+  shippable now, so pool depth became a tunable rather than a blocker.
+- **Sound: dedicated speaker button.** Tap the video = play/pause; tap the speaker = sound.
+  Two gestures, two meanings. Preference persists in localStorage.
+- **YT.Player, not raw <iframe>.** Required for onError (embed-blocked clips), onStateChange
+  → ENDED (which IS the auto-advance), and destroy() (clearing src leaves audio alive).
+
+### What the code had to work around
+- **Native smooth scrolling is a no-op inside a mandatory-snap container.** Both
+  `scrollIntoView({behavior:'smooth'})` and `scrollTo({behavior:'smooth'})` do nothing.
+  `spScrollToSlide()` animates scrollTop on a timer with snap disabled for the duration.
+- **requestAnimationFrame never fires in a backgrounded/offscreen webview**, which latched
+  the animation flag and wedged every later advance. Hence a timer, and an idempotent
+  `spStopAnim()`.
+- **Don't wait on IntersectionObserver for a scroll you initiated** — it can lag badly.
+  Auto-advance calls `spSetActive()` directly; the observer only handles user swipes.
+- **Unmuted autoplay can be refused** even with a stored preference. `spStart()` falls back
+  to muted playback and resets the control, rather than showing a frozen first frame or
+  claiming sound is on when it isn't.
+
+### Measured
+19 of 20 clips are embeddable; one UCI clip returns error 150 (owner disabled embedding).
+The skip path handles it — with a bare iframe that clip would be a dead black slide.
+
+### Not verified in the preview pane
+Whether playback actually starts on a real user tap. The pane blocks autoplay and synthetic
+clicks grant no user activation, so `playerState` stays -1 there. **Needs a check on a real
+phone.** Everything else — advance, 3-player windowing, teardown, seen state, end card,
+close/restore, error skip, sound persistence — is verified.
+
+### Follow-ups
+- Store `durationSeconds` in cache.json. `youtube-fetcher.js` already fetches it to compute
+  `isShort` and throws the number away. Would allow a progress hint and filtering the
+  ~3-minute UCI clips out of the swipe loop.
+- Pool is 20, capped by `MAX_ITEMS_PER_CATEGORY` (not the age window — see the PBI 1 review).
+  A shorts-specific cap is the one-line unlock if the player proves worth deepening.
+- `shorts_open` / `shorts_view` / `shorts_advance` / `shorts_complete` gtag events are wired,
+  so the engagement question is answerable rather than a guess.
+
+---
+
 ## Race Calendar 2026 (reference)
 | Round | Venue | Qual | Finals | Slug | Results |
 |---|---|---|---|---|---|
