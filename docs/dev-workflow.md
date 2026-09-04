@@ -149,5 +149,5 @@ Then continue: `git rebase --continue` or `git stash pop && git push`
 
 ### Service worker caching stale content
 - Unregister in DevTools → Application → Service Workers
-- Service worker is currently at `helltrack-v15`
+- Service worker is currently at `helltrack-v16`
 - Bump the version string in service-worker.js when you need browsers to pick up new files

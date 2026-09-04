@@ -3218,18 +3218,42 @@ function setPitsPill(panel, btn) {
   document.getElementById('pits-panel-' + panel).classList.add('active')
 }
 
-async function loadPits() {
-  const [d, w] = await Promise.all([
-    dirData   ? Promise.resolve(dirData)   : fetch(DIRECTORY_URL + '?t=' + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
-    watchData ? Promise.resolve(watchData) : fetch(WATCH_URL     + '?t=' + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
-  ])
-  if (d) dirData   = d
-  if (w) watchData = w
+function renderPitsAll() {
   renderPitsWatch()
   renderPitsTeams()
   renderPitsMedia()
   renderPitsPodcasts()
   renderPitsUCI()
+}
+
+async function loadPits() {
+  // No cache-busters: a fresh URL every load never matches a cached entry, which is what left
+  // this tab broken offline. The worker serves both stale-first; freshness comes from the
+  // revalidate below instead.
+  const [d, w] = await Promise.all([
+    dirData   ? Promise.resolve(dirData)   : fetch(DIRECTORY_URL).then(r => r.ok ? r.json() : null).catch(() => null),
+    watchData ? Promise.resolve(watchData) : fetch(WATCH_URL).then(r => r.ok ? r.json() : null).catch(() => null),
+  ])
+  if (d) dirData   = d
+  if (w) watchData = w
+  renderPitsAll()
+  revalidatePits()
+}
+
+// Low-churn data, but a stale-first paint still has to be corrected. Fetches past the worker
+// (the ?t= also refreshes its cached copies) and repaints only if something actually moved.
+let pitsRevalidated = false
+async function revalidatePits() {
+  if (pitsRevalidated) return
+  pitsRevalidated = true
+  try {
+    const fresh = u => fetch(u + '?t=' + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null)
+    const [d, w] = await Promise.all([fresh(DIRECTORY_URL), fresh(WATCH_URL)])
+    let changed = false
+    if (d && JSON.stringify(d) !== JSON.stringify(dirData))   { dirData   = d; changed = true }
+    if (w && JSON.stringify(w) !== JSON.stringify(watchData)) { watchData = w; changed = true }
+    if (changed && activeTab === 'pits') renderPitsAll()
+  } catch {}
 }
 
 function renderPitsWatch() {

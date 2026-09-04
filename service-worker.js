@@ -1,4 +1,4 @@
-const CACHE_NAME = 'helltrack-v15'
+const CACHE_NAME = 'helltrack-v16'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -7,6 +7,8 @@ const STATIC_ASSETS = [
   '/public/cache.json',
   '/public/results/index.json',
   '/public/riders.json',
+  '/public/directory.json',
+  '/public/watch.json',
 ]
 
 self.addEventListener('install', event => {
@@ -32,12 +34,13 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url)
 
-  // Feed and results data: stale-while-revalidate. Paint instantly from cache, refresh in the
+  // All app data: stale-while-revalidate. Paint instantly from cache, refresh in the
   // background — a returning user no longer waits on the network to see anything.
   // A cache-busted request (?t=, from Retry or the background revalidate) skips the
   // stale copy, but still stores under the clean path so it refreshes the same entry
   // rather than piling up one copy per app open.
   if (url.pathname.endsWith('cache.json') || url.pathname.endsWith('riders.json') ||
+      url.pathname.endsWith('directory.json') || url.pathname.endsWith('watch.json') ||
       url.pathname.includes('/public/results/')) {
     const cacheKey = url.origin + url.pathname
     const wantsFresh = url.search !== ''

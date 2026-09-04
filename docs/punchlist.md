@@ -283,13 +283,18 @@ unavailable" offline. Now fetched clean (worker serves it stale-first) with an e
 `revalidateRiders()` afterwards, the same shape as the feed and results shards. Also added to
 `STATIC_ASSETS`, so it works offline even for someone who never opened the tab. Cache v15.
 
-## Open — Pits tab is offline-only-broken (product call, deliberately left)
+## Pits tab offline — fixed (2026-09-03)
 
-Same root cause, not fixed: `directory.json` and `watch.json` are still fetched with `?t=`,
-which turns the cache-first default into network-only. Freshness is fine; the Pits tab just
-won't render offline (`.catch(() => null)`). Deliberate — low-churn data and a secondary tab.
-The fix is the pattern now used three times over: drop the buster, let the worker serve
-stale-first, revalidate after. Roughly a two-line change per file if it ever matters.
+Same root cause as Riders: `directory.json` and `watch.json` were fetched with `?t=` +
+timestamp, so the cache-first default degraded to network-only and the tab rendered its
+"Loading…" placeholders forever with no network. Both now fetched clean, added to the
+worker's stale-while-revalidate list and to `STATIC_ASSETS`, with `revalidatePits()` fetching
+past the worker afterwards. Cache v16.
+
+Every app data file now follows one pattern: fetch clean → worker serves stale-first →
+explicit `?t=` revalidate → repaint only if the data moved and only if that view is on screen.
+See `revalidateFeed()`, `revalidateSeason()`, `revalidateResultsIndex()`, `revalidateRiders()`,
+`revalidatePits()`. The whole app is now usable offline.
 
 ---
 
