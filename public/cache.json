@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-04T18:14:40.377Z",
-  "totalItems": 116,
+  "builtAt": "2026-09-04T21:20:25.027Z",
+  "totalItems": 117,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -699,6 +699,23 @@
       "label": "Results",
       "items": [
         {
+          "id": "gdJlcMDsU9U",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV “On track with Gary” REDBULL CERRO ABAJO STUTTGART DAY 1",
+          "description": "Day one here at Redbull Cerro Abajo Stuttgart was a good one, a little bit of testing and course walk went down and Gary was on track to catch the action!",
+          "thumbnail": "https://i.ytimg.com/vi/gdJlcMDsU9U/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-04T20:29:57Z",
+          "url": "https://www.youtube.com/watch?v=gdJlcMDsU9U",
+          "isShort": false,
+          "score": 13,
+          "category": "results"
+        },
+        {
           "id": "Oh7wTlHS_Rw",
           "type": "video",
           "source": "youtube",
@@ -1150,7 +1167,7 @@
           "title": "Mass Dampers on XC Bikes, 32\" Wheels on DH Bikes, &amp; Exciting Racing at World Champs",
           "description": "Would you rather finish 2nd or 4th at World Champs?( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30210748/p2pb30210748.jpg",
-          "publishedAt": "2026-09-03T11:47:00.000Z",
+          "publishedAt": "2026-09-03T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/pinkbike-podcast-world-champs-chat.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -1165,7 +1182,7 @@
           "title": "Video: Head-to-Head POVs from Jackson Goldstone &amp; Lachlan Stevens-McNab at the Val di Sole DH World Champs",
           "description": "Head-to-Head runs from the gold and silver medalists at this year&#039;s downhill World Championships.( Comments: 16 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30228239/p2pb30228239.jpg",
-          "publishedAt": "2026-09-03T11:46:00.000Z",
+          "publishedAt": "2026-09-03T11:45:00.000Z",
           "url": "https://www.pinkbike.com/news/video-head-to-head-povs-from-jackson-goldstone-and-lachlan-stevens-mcnab-at-the-val-di-sole-dh-world-champs.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -1195,9 +1212,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Jessie-May's All-MTB Randoms - 2026 Val di Sole World Championships",
-          "description": "A 200 mm travel XC bike, actual DH bike weights, sick paint jobs and holy tires( Photos: 39, Comments: 67 )",
+          "description": "A 200 mm travel XC bike, actual DH bike weights, sick paint jobs and holy tires( Photos: 39, Comments: 68 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30220114/p2pb30220114.jpg",
-          "publishedAt": "2026-09-01T11:35:00.000Z",
+          "publishedAt": "2026-09-01T11:34:00.000Z",
           "url": "https://www.pinkbike.com/news/jessie-mays-dh-tech-randoms-ii-2026-val-di-sole-world-championships.html?trk=rss",
           "categories": [],
           "score": 9,
