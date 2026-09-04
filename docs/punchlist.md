@@ -370,6 +370,22 @@ on a phone, because the failure is a tap that silently does nothing.
 Also: a dead slide has no player, so its tap layer had nothing to toggle. Tapping anywhere on
 an embed-blocked clip now opens it on YouTube, and the message says so.
 
+### YouTube chrome removed (v21)
+Second device report: YouTube's own controls rendered but did nothing — no fullscreen, no
+scrubbing, no audio menu. Same root cause as the link bug one layer deeper. The `.sp-tap`
+layer is what keeps vertical swiping working; without it the iframe captures the gesture and
+you cannot move between clips at all. So YouTube's controls can never receive a tap while
+that layer exists.
+
+Rendering dead controls is worse than rendering none, so `controls: 0` (plus `fs: 0`,
+`disablekb: 1`, `iv_load_policy: 3`). We supply play/pause, sound and a slim read-only
+progress bar; full controls live behind "Watch on YouTube".
+
+**Trade-off worth revisiting:** scrubbing and native fullscreen are gone inside the player.
+The alternative is dropping the tap layer and losing swipe-between-clips, which would remove
+the entire point of the feature. A draggable scrub on our own progress bar is possible later
+if it's missed — horizontal drag doesn't conflict with the vertical snap.
+
 ### Not verified in the preview pane
 Whether playback actually starts on a real user tap. The pane blocks autoplay and synthetic
 clicks grant no user activation, so `playerState` stays -1 there. **Needs a check on a real

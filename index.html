@@ -459,6 +459,16 @@ html, body {
 /* Orientation of the source clip is unknown (YouTube always reports a landscape
    thumbnail), so letterbox 16:9 on black — portrait clips render portrait inside it. */
 .sp-frame { width: 100%; aspect-ratio: 16 / 9; background: #000; }
+/* Read-only progress — replaces the one genuinely useful thing YouTube's hidden control
+   bar was showing. Scrubbing stays on YouTube itself. */
+.sp-progress {
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: rgba(255,255,255,0.14); z-index: 4;
+}
+.sp-progress-fill {
+  height: 100%; width: 0;
+  background: var(--acid); transition: width 0.25s linear;
+}
 .sp-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 .sp-dead {
   font-family: 'Barlow Condensed', sans-serif;
@@ -1942,6 +1952,7 @@ function openShorts(index) {
 
   spBindGestures()
   spBuildSlides()
+  spStartProgress()
   document.getElementById('shorts-player').classList.add('open')
   document.body.style.overflow = 'hidden'
   spSyncSoundButton()
@@ -1963,6 +1974,7 @@ function openShorts(index) {
 function closeShorts() {
   if (!spOpen) return
   spOpen = false
+  spStopProgress()
   spStopAnim(document.getElementById('shorts-scroll'))
   if (spObserver) { spObserver.disconnect(); spObserver = null }
   Object.keys(spPlayers).forEach(i => spUnmount(i))
@@ -1980,6 +1992,7 @@ function spBuildSlides() {
   const scroller = document.getElementById('shorts-scroll')
   const slides = spItems.map((item, i) => `
 <div class="sp-slide" data-i="${i}">
+  <div class="sp-progress"><div class="sp-progress-fill" id="sp-prog-${i}"></div></div>
   <div class="sp-frame"><div id="sp-frame-${i}"></div></div>
   <div class="sp-tap" onclick="spTogglePlay(${i})"></div>
   <div class="sp-overlay">
@@ -2062,7 +2075,14 @@ function spMount(i) {
       videoId,
       // mute:1 is mandatory — browsers block unmuted autoplay before a user gesture, and
       // playsinline:1 stops iOS Safari taking over the screen with its native player.
-      playerVars: { autoplay: i === spIndex ? 1 : 0, mute: 1, playsinline: 1, rel: 0, modestbranding: 1 },
+      // controls:0 — the .sp-tap layer above the iframe is what keeps vertical swiping
+      // working, which means YouTube's controls can never receive a tap. Rendering them
+      // dead is worse than not rendering them, so they're off and we supply our own
+      // play/pause, sound and progress. Full controls live behind "Watch on YouTube".
+      playerVars: {
+        autoplay: i === spIndex ? 1 : 0, mute: 1, playsinline: 1,
+        controls: 0, fs: 0, disablekb: 1, iv_load_policy: 3, rel: 0, modestbranding: 1,
+      },
       events: {
         onReady: e => {
           if (i !== spIndex) { try { e.target.pauseVideo() } catch {}; return }
@@ -2190,6 +2210,27 @@ function spOpenOnYouTube(i) {
   if (!item || !item.url) return
   spTrackOut(i)
   window.open(item.url, '_blank', 'noopener')
+}
+
+// A single ticker for the whole player rather than one per slide — the inactive players are
+// paused anyway, and this stops cleanly on close.
+let spProgTimer = null
+function spStartProgress() {
+  if (spProgTimer) return
+  spProgTimer = setInterval(() => {
+    if (!spOpen) { spStopProgress(); return }
+    const bar = document.getElementById(`sp-prog-${spIndex}`)
+    const p = spPlayers[spIndex]
+    if (!bar || !p || typeof p.getDuration !== 'function') return
+    try {
+      const dur = p.getDuration()
+      if (!dur) return
+      bar.style.width = Math.min(100, (p.getCurrentTime() / dur) * 100) + '%'
+    } catch {}
+  }, 250)
+}
+function spStopProgress() {
+  if (spProgTimer) { clearInterval(spProgTimer); spProgTimer = null }
 }
 
 function spTogglePlay(i) {
