@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-05T08:55:06.166Z",
+  "builtAt": "2026-09-05T12:32:58.239Z",
   "totalItems": 117,
   "categories": {
     "shorts": {
@@ -353,6 +353,21 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-wet-and-wild-dh-seeding-run-pov-from-crankworx-mont-sainte-anne.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Wet &amp; Wild DH Seeding Run POV from Crankworx Mont-Sainte-Anne",
+          "description": "Riders faced challenging conditions for seeding on a revised Mont-Sainte-Anne downhill course.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30234753/p2pb30234753.jpg",
+          "publishedAt": "2026-09-05T11:59:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-wet-and-wild-dh-seeding-run-pov-from-crankworx-mont-sainte-anne.html?trk=rss",
+          "categories": [],
+          "score": 9,
+          "category": "race-runs"
+        },
+        {
           "id": "5t4NDIx4UTg",
           "type": "video",
           "source": "youtube",
@@ -671,23 +686,6 @@
           "thumbnailHeight": 720,
           "publishedAt": "2026-08-22T09:26:44Z",
           "url": "https://www.youtube.com/watch?v=K119tc8kv7o",
-          "isShort": false,
-          "score": 17,
-          "category": "race-runs"
-        },
-        {
-          "id": "DBkcXQX5H7w",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Jackson Goldstone finishes 6th in Les Gets mud Quali  |  26 UCI DH MTB World Series  |",
-          "description": "Jackson Goldstone goes straight to the finals in Les Gets finishing 6th  in Qualifier 1. Non stop rain made for some unpredictable conditions, so the main goal was to avoid Q2 and he did!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/DBkcXQX5H7w/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T09:26:42Z",
-          "url": "https://www.youtube.com/watch?v=DBkcXQX5H7w",
           "isShort": false,
           "score": 17,
           "category": "race-runs"
@@ -1167,7 +1165,7 @@
           "title": "Mass Dampers on XC Bikes, 32\" Wheels on DH Bikes, &amp; Exciting Racing at World Champs",
           "description": "Would you rather finish 2nd or 4th at World Champs?( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30210748/p2pb30210748.jpg",
-          "publishedAt": "2026-09-03T11:45:00.000Z",
+          "publishedAt": "2026-09-03T11:42:00.000Z",
           "url": "https://www.pinkbike.com/news/pinkbike-podcast-world-champs-chat.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -1182,7 +1180,7 @@
           "title": "Video: Head-to-Head POVs from Jackson Goldstone &amp; Lachlan Stevens-McNab at the Val di Sole DH World Champs",
           "description": "Head-to-Head runs from the gold and silver medalists at this year&#039;s downhill World Championships.( Comments: 16 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30228239/p2pb30228239.jpg",
-          "publishedAt": "2026-09-03T11:44:00.000Z",
+          "publishedAt": "2026-09-03T11:41:00.000Z",
           "url": "https://www.pinkbike.com/news/video-head-to-head-povs-from-jackson-goldstone-and-lachlan-stevens-mcnab-at-the-val-di-sole-dh-world-champs.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -1203,21 +1201,6 @@
           "url": "https://www.youtube.com/watch?v=a5icLd0pwB4",
           "isShort": false,
           "score": 11,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/jessie-mays-dh-tech-randoms-ii-2026-val-di-sole-world-championships.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Jessie-May's All-MTB Randoms - 2026 Val di Sole World Championships",
-          "description": "A 200 mm travel XC bike, actual DH bike weights, sick paint jobs and holy tires( Photos: 39, Comments: 68 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30220114/p2pb30220114.jpg",
-          "publishedAt": "2026-09-01T11:33:00.000Z",
-          "url": "https://www.pinkbike.com/news/jessie-mays-dh-tech-randoms-ii-2026-val-di-sole-world-championships.html?trk=rss",
-          "categories": [],
-          "score": 9,
           "category": "news"
         },
         {
