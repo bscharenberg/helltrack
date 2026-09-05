@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-05T21:04:30.306Z",
-  "totalItems": 119,
+  "builtAt": "2026-09-05T23:43:56.745Z",
+  "totalItems": 120,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -378,7 +378,7 @@
           "title": "Video: Wet &amp; Wild DH Seeding Run POV from Crankworx Mont-Sainte-Anne",
           "description": "Riders faced challenging conditions for seeding on a revised Mont-Sainte-Anne downhill course.( Comments: 7 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30234753/p2pb30234753.jpg",
-          "publishedAt": "2026-09-05T11:56:00.000Z",
+          "publishedAt": "2026-09-05T11:55:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wet-and-wild-dh-seeding-run-pov-from-crankworx-mont-sainte-anne.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -696,6 +696,23 @@
       "id": "results",
       "label": "Results",
       "items": [
+        {
+          "id": "-tU7bHYKakQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV “On track with Gary” REDBULL STUTTGART CERRO ABAJO DAY 2",
+          "description": "Day two had all the riders on track sending all the gaps and doing full laps too, Gary was out there towing the girls through the jumps and sending it on the Focus Sam ebb ⚡️ 🙌🏼",
+          "thumbnail": "https://i.ytimg.com/vi/-tU7bHYKakQ/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-05T21:06:34Z",
+          "url": "https://www.youtube.com/watch?v=-tU7bHYKakQ",
+          "isShort": false,
+          "score": 10,
+          "category": "results"
+        },
         {
           "id": "gdJlcMDsU9U",
           "type": "video",
@@ -1182,7 +1199,7 @@
           "title": "Mass Dampers on XC Bikes, 32\" Wheels on DH Bikes, &amp; Exciting Racing at World Champs",
           "description": "Would you rather finish 2nd or 4th at World Champs?( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30210748/p2pb30210748.jpg",
-          "publishedAt": "2026-09-03T11:39:00.000Z",
+          "publishedAt": "2026-09-03T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/pinkbike-podcast-world-champs-chat.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -1197,7 +1214,7 @@
           "title": "Video: Head-to-Head POVs from Jackson Goldstone &amp; Lachlan Stevens-McNab at the Val di Sole DH World Champs",
           "description": "Head-to-Head runs from the gold and silver medalists at this year&#039;s downhill World Championships.( Comments: 16 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30228239/p2pb30228239.jpg",
-          "publishedAt": "2026-09-03T11:38:00.000Z",
+          "publishedAt": "2026-09-03T11:37:00.000Z",
           "url": "https://www.pinkbike.com/news/video-head-to-head-povs-from-jackson-goldstone-and-lachlan-stevens-mcnab-at-the-val-di-sole-dh-world-champs.html?trk=rss",
           "categories": [],
           "score": 13,
