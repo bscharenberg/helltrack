@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-05T18:04:36.668Z",
-  "totalItems": 118,
+  "builtAt": "2026-09-05T21:04:30.306Z",
+  "totalItems": 119,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,15 +353,32 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "QaZXKSP9X3c",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "SHREDDING THE URBAN JUNGLE OF STUTGARD!!",
+          "description": "Stutgard is amazing! Honestly this is the craziest crowed I've ever seen, everone's showed up haha. The energy's insane and we're riding good sports fans. Lets see it tomorrow for finals!!\n\n@RedBullBike  #cerroabajo #streetrace  \n \nShot on #sony & #dji \n\n#dji #mtb #bksport #downhill #mountainbike #pivot #mtblife #continental #shimano #fox #germany #urban #streetrace #needforspeed",
+          "thumbnail": "https://i.ytimg.com/vi/QaZXKSP9X3c/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-05T19:06:26Z",
+          "url": "https://www.youtube.com/watch?v=QaZXKSP9X3c",
+          "isShort": false,
+          "score": 8,
+          "category": "race-runs"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-wet-and-wild-dh-seeding-run-pov-from-crankworx-mont-sainte-anne.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Wet &amp; Wild DH Seeding Run POV from Crankworx Mont-Sainte-Anne",
-          "description": "Riders faced challenging conditions for seeding on a revised Mont-Sainte-Anne downhill course.( Comments: 6 )",
+          "description": "Riders faced challenging conditions for seeding on a revised Mont-Sainte-Anne downhill course.( Comments: 7 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30234753/p2pb30234753.jpg",
-          "publishedAt": "2026-09-05T11:57:00.000Z",
+          "publishedAt": "2026-09-05T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wet-and-wild-dh-seeding-run-pov-from-crankworx-mont-sainte-anne.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -671,23 +688,6 @@
           "url": "https://www.youtube.com/watch?v=tPwHVuWmrFo",
           "isShort": false,
           "score": 12,
-          "category": "race-runs"
-        },
-        {
-          "id": "K119tc8kv7o",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Max Alran crashes and wins Qualifier 1 in Les Gets!  |  26 UCI DH MTB World Series |",
-          "description": "Crazy conditions in Les Gets at the Qualifying for Round 7 of the 2026 UCI DH MTB World Series. Max Alran went all in from top to bottom, he crashed mid Run but still got away with the Q1 win, insane!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/K119tc8kv7o/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T09:26:44Z",
-          "url": "https://www.youtube.com/watch?v=K119tc8kv7o",
-          "isShort": false,
-          "score": 17,
           "category": "race-runs"
         }
       ]
@@ -1182,7 +1182,7 @@
           "title": "Mass Dampers on XC Bikes, 32\" Wheels on DH Bikes, &amp; Exciting Racing at World Champs",
           "description": "Would you rather finish 2nd or 4th at World Champs?( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30210748/p2pb30210748.jpg",
-          "publishedAt": "2026-09-03T11:40:00.000Z",
+          "publishedAt": "2026-09-03T11:39:00.000Z",
           "url": "https://www.pinkbike.com/news/pinkbike-podcast-world-champs-chat.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -1197,7 +1197,7 @@
           "title": "Video: Head-to-Head POVs from Jackson Goldstone &amp; Lachlan Stevens-McNab at the Val di Sole DH World Champs",
           "description": "Head-to-Head runs from the gold and silver medalists at this year&#039;s downhill World Championships.( Comments: 16 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30228239/p2pb30228239.jpg",
-          "publishedAt": "2026-09-03T11:39:00.000Z",
+          "publishedAt": "2026-09-03T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/video-head-to-head-povs-from-jackson-goldstone-and-lachlan-stevens-mcnab-at-the-val-di-sole-dh-world-champs.html?trk=rss",
           "categories": [],
           "score": 13,
