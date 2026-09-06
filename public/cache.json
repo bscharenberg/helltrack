@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-09-06T09:16:03.173Z",
+  "builtAt": "2026-09-06T13:31:43.620Z",
   "totalItems": 120,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "cjuFcT5QNCY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Newkirk's 2026 breakout win! 🔥🥇",
+          "description": "Newkirk's 2026 breakout win! 🔥🥇\n\nWill Anna Newkirk challenge on North American soil in the last two DHI rounds of the season?! 🇨🇦🇺🇸\n\n📍Bike Kingdom - Lenzerheide 🇨🇭 🏁 Women's Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/cjuFcT5QNCY/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-06T12:56:20Z",
+          "url": "https://www.youtube.com/watch?v=cjuFcT5QNCY",
+          "isShort": true,
+          "score": 14,
+          "category": "shorts"
+        },
         {
           "id": "IXhu7LSwcKE",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 20,
           "category": "shorts"
-        },
-        {
-          "id": "LMNNPzS-_jg",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Not a great day on the bike for Amaury Pierron 🇫🇷💥",
-          "description": "📍Les Gets, Haute-Savoie 🏁 Men’s Elite UCI DHI World Cup",
-          "thumbnail": "https://i.ytimg.com/vi/LMNNPzS-_jg/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T14:34:42Z",
-          "url": "https://www.youtube.com/watch?v=LMNNPzS-_jg",
-          "isShort": true,
-          "score": 20,
-          "category": "shorts"
         }
       ]
     },
@@ -378,7 +378,7 @@
           "title": "Video: Wet &amp; Wild DH Seeding Run POV from Crankworx Mont-Sainte-Anne",
           "description": "Riders faced challenging conditions for seeding on a revised Mont-Sainte-Anne downhill course.( Comments: 8 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30234753/p2pb30234753.jpg",
-          "publishedAt": "2026-09-05T11:53:00.000Z",
+          "publishedAt": "2026-09-05T11:49:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wet-and-wild-dh-seeding-run-pov-from-crankworx-mont-sainte-anne.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -1199,7 +1199,7 @@
           "title": "Mass Dampers on XC Bikes, 32\" Wheels on DH Bikes, &amp; Exciting Racing at World Champs",
           "description": "Would you rather finish 2nd or 4th at World Champs?( Comments: 20 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30210748/p2pb30210748.jpg",
-          "publishedAt": "2026-09-03T11:36:00.000Z",
+          "publishedAt": "2026-09-03T11:32:00.000Z",
           "url": "https://www.pinkbike.com/news/pinkbike-podcast-world-champs-chat.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -1214,7 +1214,7 @@
           "title": "Video: Head-to-Head POVs from Jackson Goldstone &amp; Lachlan Stevens-McNab at the Val di Sole DH World Champs",
           "description": "Head-to-Head runs from the gold and silver medalists at this year&#039;s downhill World Championships.( Comments: 16 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30228239/p2pb30228239.jpg",
-          "publishedAt": "2026-09-03T11:35:00.000Z",
+          "publishedAt": "2026-09-03T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/video-head-to-head-povs-from-jackson-goldstone-and-lachlan-stevens-mcnab-at-the-val-di-sole-dh-world-champs.html?trk=rss",
           "categories": [],
           "score": 13,
