@@ -456,9 +456,14 @@ html, body {
   position: relative;
   display: flex; align-items: center; justify-content: center;
 }
-/* Orientation of the source clip is unknown (YouTube always reports a landscape
-   thumbnail), so letterbox 16:9 on black — portrait clips render portrait inside it. */
-.sp-frame { width: 100%; aspect-ratio: 16 / 9; background: #000; }
+/* Fill the slide rather than boxing to 16:9. Orientation is unknown (YouTube always reports
+   a landscape thumbnail) but we don't need to know it: the player fits the clip to whatever
+   box it is given, preserving aspect. A 16:9 box was only ~210px tall on a phone, so portrait
+   clips were being fitted to THAT height — a postage stamp in a sea of black. */
+.sp-frame {
+  width: 100%; height: 100dvh; background: #000;
+  display: flex; align-items: center; justify-content: center;
+}
 /* Read-only progress — replaces the one genuinely useful thing YouTube's hidden control
    bar was showing. Scrubbing stays on YouTube itself. */
 .sp-progress {
@@ -519,12 +524,27 @@ html, body {
   font-size: 17px; line-height: 1; padding: 0;
 }
 #shorts-sound {
-  left: 14px; height: 34px; border-radius: 17px; padding: 0 12px;
-  display: flex; align-items: center; gap: 7px;
-  font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  left: 14px; width: 44px; height: 44px; border-radius: 22px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px;
 }
-#shorts-sound-label { transition: opacity 0.3s, max-width 0.3s; white-space: nowrap; }
-#shorts-sound.on #shorts-sound-label { opacity: 0; max-width: 0; overflow: hidden; }
+#shorts-close { font-size: 19px; }
+
+/* The muted state needs to be impossible to miss — the first run of this player, the sound
+   control read as a caption and went unnoticed. Purely informational: a tap anywhere works,
+   so this takes no pointer events of its own. */
+#shorts-unmute {
+  position: fixed; z-index: 5; pointer-events: none;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  display: none; align-items: center; gap: 10px;
+  padding: 14px 22px; border-radius: 28px;
+  background: rgba(0,0,0,0.62); border: 1px solid rgba(212,245,0,0.5);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--acid);
+}
+#shorts-player.muted #shorts-unmute { display: flex; }
+#shorts-unmute-icon { font-size: 18px; }
 .sp-end {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 18px; text-align: center; padding: 0 32px;
@@ -1994,7 +2014,7 @@ function spBuildSlides() {
 <div class="sp-slide" data-i="${i}">
   <div class="sp-progress"><div class="sp-progress-fill" id="sp-prog-${i}"></div></div>
   <div class="sp-frame"><div id="sp-frame-${i}"></div></div>
-  <div class="sp-tap" onclick="spTogglePlay(${i})"></div>
+  <div class="sp-tap" onclick="spTapSlide(${i})"></div>
   <div class="sp-overlay">
     <div class="sp-source">${escHtml(srcName(item))}</div>
     <div class="sp-title">${escHtml(item.title || '')}</div>
@@ -2111,10 +2131,9 @@ function spStart(player, i) {
     if (state === YT.PlayerState.PLAYING || state === YT.PlayerState.BUFFERING) return
     try { player.mute() } catch {}
     try { player.playVideo() } catch {}
-    // Reflect reality in the control — claiming sound is on while it is muted is worse
-    // than the silence itself.
-    spUnmuted = false
-    try { localStorage.setItem(SHORTS_UNMUTED_KEY, '0') } catch {}
+    // Keep the stored preference: the intent was real, the browser just would not honour it
+    // without a fresh gesture. spSyncSoundButton reads the player, so the prompt reappears
+    // on its own and one tap retries.
     spSyncSoundButton()
   }, 1000)
 }
@@ -2141,7 +2160,6 @@ function spMarkDead(i, code) {
   spUnmount(i)
   const frame = document.querySelector(`.sp-slide[data-i="${i}"] .sp-frame`)
   if (frame) {
-    frame.style.aspectRatio = 'auto'
     frame.innerHTML = `<div class="sp-dead">Can't play here — tap to open on YouTube</div>`
   }
   if (i === spIndex) spAdvance('skip')
@@ -2219,6 +2237,7 @@ function spStartProgress() {
   if (spProgTimer) return
   spProgTimer = setInterval(() => {
     if (!spOpen) { spStopProgress(); return }
+    spSyncSoundButton()
     const bar = document.getElementById(`sp-prog-${spIndex}`)
     const p = spPlayers[spIndex]
     if (!bar || !p || typeof p.getDuration !== 'function') return
@@ -2233,16 +2252,16 @@ function spStopProgress() {
   if (spProgTimer) { clearInterval(spProgTimer); spProgTimer = null }
 }
 
-function spTogglePlay(i) {
-  // A clip that refused to embed has no player to toggle, and YouTube is the only place it
-  // can be watched — so on those slides the whole frame becomes the way out.
+// Tapping the clip toggles sound rather than play/pause. Two reasons, both learned on a
+// phone: sound was the thing people reached for and could not find, and pausing summons
+// YouTube's own paused overlay — title, share, YouTube logo — which controls:0 does not
+// suppress and which we cannot dismiss. Not pausing keeps that chrome off screen entirely.
+// Stopping a clip is what the swipe and the ✕ are for.
+function spTapSlide(i) {
+  // A clip that refused to embed has no player at all, and YouTube is the only place it can
+  // be watched — so on those slides the whole frame becomes the way out.
   if (spDead.has(i)) { spOpenOnYouTube(i); return }
-  const p = spPlayers[i]
-  if (!p || typeof p.getPlayerState !== 'function') return
-  try {
-    if (p.getPlayerState() === YT.PlayerState.PLAYING) p.pauseVideo()
-    else p.playVideo()
-  } catch {}
+  spToggleSound()
 }
 
 function spToggleSound() {
@@ -2256,11 +2275,18 @@ function spToggleSound() {
   spSyncSoundButton()
 }
 
+// Driven by what the player is ACTUALLY doing, not by what we asked for. A browser can
+// refuse to unmute, and a control claiming sound is on while the clip is silent is worse
+// than the silence — so the prompt comes back and another tap retries with a fresh gesture.
 function spSyncSoundButton() {
   const btn = document.getElementById('shorts-sound')
   if (!btn) return
-  btn.classList.toggle('on', spUnmuted)
-  document.getElementById('shorts-sound-icon').textContent = spUnmuted ? '🔊' : '🔇'
+  const p = spPlayers[spIndex]
+  let muted = !spUnmuted
+  try { if (p && typeof p.isMuted === 'function') muted = p.isMuted() } catch {}
+  btn.classList.toggle('on', !muted)
+  document.getElementById('shorts-sound-icon').textContent = muted ? '🔇' : '🔊'
+  document.getElementById('shorts-player').classList.toggle('muted', muted)
 }
 
 function spTrackOut(i) {
@@ -3891,8 +3917,9 @@ loadFeed()
 <div id="shorts-player">
   <div id="shorts-scroll"></div>
   <button id="shorts-sound" aria-label="Toggle sound" onclick="spToggleSound()">
-    <span id="shorts-sound-icon">🔇</span><span id="shorts-sound-label">Tap for sound</span>
+    <span id="shorts-sound-icon">🔇</span>
   </button>
+  <div id="shorts-unmute"><span id="shorts-unmute-icon">🔇</span>Tap for sound</div>
   <button id="shorts-close" aria-label="Close shorts" onclick="closeShorts()">✕</button>
 </div>
 

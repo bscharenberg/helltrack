@@ -386,6 +386,37 @@ The alternative is dropping the tap layer and losing swipe-between-clips, which 
 the entire point of the feature. A draggable scrub on our own progress bar is possible later
 if it's missed — horizontal drag doesn't conflict with the vertical snap.
 
+### Interaction model — settled (v22)
+Three device reports drove this: sound was undiscoverable, the video rendered postage-stamp
+sized, and YouTube's chrome kept reappearing.
+
+| Gesture | Does |
+|---|---|
+| Tap anywhere on the clip | Toggle sound |
+| Swipe up / down | Previous / next clip |
+| Swipe down at the top of the first slide | Close |
+| Speaker button (top left, 44px) | Toggle sound |
+| ✕ (top right) | Close |
+| "Watch on YouTube" (bottom left) | Open on YouTube |
+| Clip ends | Auto-advance |
+
+**Tap is sound, not play/pause.** Pausing summons YouTube's paused overlay — title, share
+arrow, YouTube logo — which `controls:0` does not suppress and we cannot dismiss. Never
+pausing keeps that chrome off screen. Stopping is what the swipe and ✕ are for.
+**Trade-off:** there is no pause. Revisit if it is missed.
+
+**Frame fills the viewport.** It was `aspect-ratio: 16/9`, i.e. ~210px tall on a phone — and
+YouTube then fitted the *portrait* clip inside that short box, so a Short rendered about
+290px wide adrift in black. Nested letterboxing. The player fits a clip to whatever box it is
+given, so a full-screen box needs no orientation detection: portrait clips run near
+full-height, landscape full-width and centred.
+
+**Sound state is read from the player, not from our intent.** A browser can refuse to unmute;
+a control claiming sound is on over a silent clip is worse than the silence. The 250ms ticker
+syncs the icon and the prompt from `player.isMuted()`, so a refused unmute brings the prompt
+back and one more tap retries with a fresh gesture. The stored preference is no longer
+discarded when that happens.
+
 ### Not verified in the preview pane
 Whether playback actually starts on a real user tap. The pane blocks autoplay and synthetic
 clicks grant no user activation, so `playerState` stays -1 there. **Needs a check on a real
