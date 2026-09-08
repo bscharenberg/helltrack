@@ -2118,7 +2118,10 @@ function spMount(i) {
           // autoplay is refused before any gesture), so the unmute has to be re-applied —
           // and it only reliably takes once the clip is actually playing.
           if (i === spIndex && spUnmuted) {
-            try { if (e.target.isMuted()) e.target.unMute() } catch {}
+            // Unconditional: isMuted() can report false immediately after a muted start, so
+            // gating on it left the clip silent and cost a second tap on every short.
+            try { e.target.unMute() } catch {}
+            try { e.target.setVolume(100) } catch {}
             spSyncSoundButton()
           }
         },
@@ -2140,6 +2143,16 @@ function spStart(player, i) {
   // Cancelled by onStateChange the moment the clip actually plays. A blind 1s snapshot was
   // muting clips merely for being slow to buffer, which is why sound kept dropping on every
   // new short.
+  // A player mounted as a neighbour can ignore the first playVideo() if it arrives before
+  // it is fully cued. One cheap retry, well before the mute fallback below.
+  setTimeout(() => {
+    if (!spOpen || i !== spIndex) return
+    try {
+      const s = player.getPlayerState()
+      if (s !== YT.PlayerState.PLAYING && s !== YT.PlayerState.BUFFERING) player.playVideo()
+    } catch {}
+  }, 700)
+
   if (spStartTimers[i]) clearTimeout(spStartTimers[i])
   spStartTimers[i] = setTimeout(() => {
     delete spStartTimers[i]
@@ -2612,6 +2625,14 @@ async function revalidateFeed() {
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js').catch(console.error)
 }
+
+// Warm the YouTube IFrame API once the feed is up. iOS only grants autoplay to a player
+// created synchronously inside a user gesture; if the API script is still downloading when
+// a Shorts card is tapped, the player gets built in an async callback, the gesture is gone
+// and the clip arrives paused. Deferred past load so it never competes with cache.json.
+addEventListener('load', () => {
+  setTimeout(() => { try { loadYouTubeAPI(() => {}) } catch {} }, 1200)
+})
 
 
 // ── Install banner ──

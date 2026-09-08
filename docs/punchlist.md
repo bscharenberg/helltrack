@@ -432,6 +432,30 @@ Three causes, all in the same loop:
    only reliably takes once the clip is actually playing. `onStateChange` → `PLAYING` now
    re-applies it.
 
+### Autoplay and the second tap (v24)
+Report: each short arrived paused — tap once to play, again for sound.
+
+Root cause of the paused arrival: **the YouTube API was loaded lazily**. `loadYouTubeAPI`
+calls back synchronously only once the script is in; on a fresh app open the first Shorts tap
+went through an async script download, so the player was constructed in a later callback with
+the user gesture already gone — and iOS only grants autoplay to a player created synchronously
+inside a gesture. Every later mount happens in a scroll callback, which has no gesture at all,
+so nothing ever autoplayed.
+
+Fixes:
+- Warm the API 1.2s after `load`, so a tap creates its player synchronously. Verified: right
+  after the click `spPlayers[0]` is a real player object, where it used to be the string
+  `'pending'`.
+- `onStateChange` → `PLAYING` now unmutes **unconditionally** when sound is on. It was gated
+  on `isMuted()`, which can report false immediately after a muted start — that gate was the
+  second tap.
+- One `playVideo()` retry at 700ms for a neighbour player that ignored an early call, well
+  ahead of the 2.5s mute fallback.
+
+**Still device-dependent.** If clips remain paused, the browser is refusing muted autoplay
+outright — check Low Power Mode (disables all autoplay) and Settings → Safari → Auto-Play.
+In that case one tap per clip is the floor, and it should now be one tap, not two.
+
 ### Not verified in the preview pane
 Whether playback actually starts on a real user tap. The pane blocks autoplay and synthetic
 clicks grant no user activation, so `playerState` stays -1 there. **Needs a check on a real
