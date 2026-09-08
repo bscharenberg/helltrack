@@ -417,6 +417,21 @@ syncs the icon and the prompt from `player.isMuted()`, so a refused unmute bring
 back and one more tap retries with a fresh gesture. The stored preference is no longer
 discarded when that happens.
 
+### Sound carry-over across clips (v23)
+Sound would not persist to the next short, and took two taps to restore on each one.
+
+Three causes, all in the same loop:
+1. `spToggleSound` flipped our stored *intent*. After a refused unmute, intent said "on"
+   while the player was muted — so the first tap muted something already silent and only the
+   second turned sound on. It now derives the new state from `player.isMuted()`, so one tap
+   always does the obvious thing.
+2. The mute fallback was a blind 1s snapshot, so a clip that was merely slow to buffer got
+   muted for it. It is now cancelled by the `PLAYING` state event and given 2.5s.
+3. Nothing re-applied the setting to a new clip. Every player is created muted — unmuted
+   autoplay is refused before a gesture — so the unmute has to be redone per clip, and it
+   only reliably takes once the clip is actually playing. `onStateChange` → `PLAYING` now
+   re-applies it.
+
 ### Not verified in the preview pane
 Whether playback actually starts on a real user tap. The pane blocks autoplay and synthetic
 clicks grant no user activation, so `playerState` stays -1 there. **Needs a check on a real

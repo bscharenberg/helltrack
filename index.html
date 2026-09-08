@@ -1994,6 +1994,7 @@ function openShorts(index) {
 function closeShorts() {
   if (!spOpen) return
   spOpen = false
+  Object.keys(spStartTimers).forEach(k => { clearTimeout(spStartTimers[k]); delete spStartTimers[k] })
   spStopProgress()
   spStopAnim(document.getElementById('shorts-scroll'))
   if (spObserver) { spObserver.disconnect(); spObserver = null }
@@ -2109,7 +2110,17 @@ function spMount(i) {
           spStart(e.target, i)
         },
         onStateChange: e => {
-          if (e.data === YT.PlayerState.ENDED && i === spIndex) spAdvance('auto')
+          if (e.data === YT.PlayerState.ENDED && i === spIndex) { spAdvance('auto'); return }
+          if (e.data !== YT.PlayerState.PLAYING) return
+          // It started, so the mute fallback must not fire for slowness.
+          if (spStartTimers[i]) { clearTimeout(spStartTimers[i]); delete spStartTimers[i] }
+          // Carry sound across clips. A fresh player is always created muted (unmuted
+          // autoplay is refused before any gesture), so the unmute has to be re-applied —
+          // and it only reliably takes once the clip is actually playing.
+          if (i === spIndex && spUnmuted) {
+            try { if (e.target.isMuted()) e.target.unMute() } catch {}
+            spSyncSoundButton()
+          }
         },
         onError: e => spMarkDead(i, e && e.data),
       },
@@ -2120,11 +2131,18 @@ function spMount(i) {
 // Start playback, preferring the user's sound setting but never at the cost of playing at
 // all: if the browser refuses unmuted autoplay (no user activation carried into this load),
 // fall back to muted rather than leaving the reader on a frozen first frame.
+const spStartTimers = {}
+
 function spStart(player, i) {
   try { spUnmuted ? player.unMute() : player.mute() } catch {}
   try { player.playVideo() } catch {}
   if (!spUnmuted) return
-  setTimeout(() => {
+  // Cancelled by onStateChange the moment the clip actually plays. A blind 1s snapshot was
+  // muting clips merely for being slow to buffer, which is why sound kept dropping on every
+  // new short.
+  if (spStartTimers[i]) clearTimeout(spStartTimers[i])
+  spStartTimers[i] = setTimeout(() => {
+    delete spStartTimers[i]
     if (!spOpen || i !== spIndex) return
     let state = -1
     try { state = player.getPlayerState() } catch { return }
@@ -2135,7 +2153,7 @@ function spStart(player, i) {
     // without a fresh gesture. spSyncSoundButton reads the player, so the prompt reappears
     // on its own and one tap retries.
     spSyncSoundButton()
-  }, 1000)
+  }, 2500)
 }
 
 function spUnmount(key) {
@@ -2265,12 +2283,18 @@ function spTapSlide(i) {
 }
 
 function spToggleSound() {
-  spUnmuted = !spUnmuted
-  try { localStorage.setItem(SHORTS_UNMUTED_KEY, spUnmuted ? '1' : '0') } catch {}
   const p = spPlayers[spIndex]
+  // Derive the new state from what the player is ACTUALLY doing, not from our stored intent.
+  // After a refused unmute the two diverge, and flipping the intent made the first tap a
+  // no-op — it muted a clip that was already silent, so every new short took two taps.
+  let muted = !spUnmuted
+  try { if (p && typeof p.isMuted === 'function') muted = p.isMuted() } catch {}
+  const wantSound = muted
+  spUnmuted = wantSound
+  try { localStorage.setItem(SHORTS_UNMUTED_KEY, wantSound ? '1' : '0') } catch {}
   if (p && typeof p.unMute === 'function') {
-    try { spUnmuted ? p.unMute() : p.mute() } catch {}
-    try { if (spUnmuted) p.playVideo() } catch {}
+    try { wantSound ? p.unMute() : p.mute() } catch {}
+    try { if (wantSound) p.playVideo() } catch {}
   }
   spSyncSoundButton()
 }
