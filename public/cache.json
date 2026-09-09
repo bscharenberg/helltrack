@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-09T04:31:12.846Z",
-  "totalItems": 124,
+  "builtAt": "2026-09-09T09:33:29.653Z",
+  "totalItems": 123,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -378,7 +378,7 @@
           "title": "Video: WynTV Finals Day - Red Bull Stuttgart Cerro Abajo 2026",
           "description": "Wyn Masters chats with racers after the first edition of the Red Bull Cerro Abajo Stuttgart.( Comments: 7 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30245041/p2pb30245041.jpg",
-          "publishedAt": "2026-09-07T11:50:00.000Z",
+          "publishedAt": "2026-09-07T11:49:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-finals-day-red-bull-stuttgart-cerro-abajo-2026.html?trk=rss",
           "categories": [],
           "score": 11,
@@ -416,21 +416,6 @@
           "url": "https://www.youtube.com/watch?v=QaZXKSP9X3c",
           "isShort": false,
           "score": 8,
-          "category": "race-runs"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-wet-and-wild-dh-seeding-run-pov-from-crankworx-mont-sainte-anne.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Wet &amp; Wild DH Seeding Run POV from Crankworx Mont-Sainte-Anne",
-          "description": "Riders faced challenging conditions for seeding on a revised Mont-Sainte-Anne downhill course.( Comments: 9 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30234753/p2pb30234753.jpg",
-          "publishedAt": "2026-09-05T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-wet-and-wild-dh-seeding-run-pov-from-crankworx-mont-sainte-anne.html?trk=rss",
-          "categories": [],
-          "score": 9,
           "category": "race-runs"
         },
         {
@@ -687,6 +672,23 @@
           "isShort": false,
           "score": 12,
           "category": "race-runs"
+        },
+        {
+          "id": "X7_pAgSS3lY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
+          "channelName": "GoPro Bike",
+          "title": "GoPro: Max Alrans insane Les Gets winning run!  |  26 UCI DH MTB World Series  |",
+          "description": "First elite win for Max Alran and there was no better place to do it then in front of his insane home crowd in Les Gets!\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
+          "thumbnail": "https://i.ytimg.com/vi/X7_pAgSS3lY/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-22T16:38:37Z",
+          "url": "https://www.youtube.com/watch?v=X7_pAgSS3lY",
+          "isShort": false,
+          "score": 18,
+          "category": "race-runs"
         }
       ]
     },
@@ -703,7 +705,7 @@
           "title": "Race Report: 4X ProTour Round 3 - Val Di Sole, Italy",
           "description": "Round 3 of the 2026 4X ProTour was held alongside the DH &amp;amp; XC World Champs in Val di Sole.( Photos: 14, Comments: 26 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30244216/p2pb30244216.jpg",
-          "publishedAt": "2026-09-07T11:47:00.000Z",
+          "publishedAt": "2026-09-07T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/race-report-4x-protour-round-3-val-di-sole-italy.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1244,9 +1246,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Gracey Hemstreet Announces Details for 'Project 17' - A Women's Pre-Hardline Event at Coast Gravity Park on September 17th",
-          "description": "Hemstreet says that she felt unprepared showing up for Hardline Tasmania in 2024.( Photos: 2, Comments: 16 )",
+          "description": "Hemstreet says that she felt unprepared showing up for Hardline Tasmania in 2024.( Photos: 2, Comments: 17 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26256275/p2pb26256275.jpg",
-          "publishedAt": "2026-09-08T11:59:00.000Z",
+          "publishedAt": "2026-09-08T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/gracey-hemstreet-announces-details-for-project-17-a-womens-pre-hardline-event-at-coast-gravity-park-on-september-17th.html?trk=rss",
           "categories": [],
           "score": 13,
