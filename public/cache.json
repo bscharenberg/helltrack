@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-09T18:27:35.153Z",
-  "totalItems": 123,
+  "builtAt": "2026-09-09T21:36:42.869Z",
+  "totalItems": 122,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -378,7 +378,7 @@
           "title": "Video: WynTV Finals Day - Red Bull Stuttgart Cerro Abajo 2026",
           "description": "Wyn Masters chats with racers after the first edition of the Red Bull Cerro Abajo Stuttgart.( Comments: 7 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30245041/p2pb30245041.jpg",
-          "publishedAt": "2026-09-07T11:44:00.000Z",
+          "publishedAt": "2026-09-07T11:42:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-finals-day-red-bull-stuttgart-cerro-abajo-2026.html?trk=rss",
           "categories": [],
           "score": 11,
@@ -416,23 +416,6 @@
           "url": "https://www.youtube.com/watch?v=QaZXKSP9X3c",
           "isShort": false,
           "score": 8,
-          "category": "race-runs"
-        },
-        {
-          "id": "5t4NDIx4UTg",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "World Champs Brings Out The Fire | Story Of The Race",
-          "description": "Val Di Sole + World Championships is a match made in heaven. It was an amazing race with so much mesmerising riding it was hard to pick the best moment. Ben re=caps the top rides of the day then chats about how the top 3 elite men were all race winning runs.\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/5t4NDIx4UTg/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-30T18:43:12Z",
-          "url": "https://www.youtube.com/watch?v=5t4NDIx4UTg",
-          "isShort": false,
-          "score": 16,
           "category": "race-runs"
         },
         {
@@ -689,6 +672,23 @@
           "isShort": false,
           "score": 18,
           "category": "race-runs"
+        },
+        {
+          "id": "dvtNEP7LRvY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "MTBWS FULL RACE 🇫🇷 Women's Junior DHI | 2026 Les Gets",
+          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/dvtNEP7LRvY/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-22T16:20:22Z",
+          "url": "https://www.youtube.com/watch?v=dvtNEP7LRvY",
+          "isShort": false,
+          "score": 20,
+          "category": "race-runs"
         }
       ]
     },
@@ -705,7 +705,7 @@
           "title": "Race Report: 4X ProTour Round 3 - Val Di Sole, Italy",
           "description": "Round 3 of the 2026 4X ProTour was held alongside the DH &amp;amp; XC World Champs in Val di Sole.( Photos: 14, Comments: 28 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30244216/p2pb30244216.jpg",
-          "publishedAt": "2026-09-07T11:41:00.000Z",
+          "publishedAt": "2026-09-07T11:39:00.000Z",
           "url": "https://www.pinkbike.com/news/race-report-4x-protour-round-3-val-di-sole-italy.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1248,7 +1248,7 @@
           "title": "Gracey Hemstreet Announces Details for 'Project 17' - A Women's Pre-Hardline Event at Coast Gravity Park on September 17th",
           "description": "Hemstreet says that she felt unprepared showing up for Hardline Tasmania in 2024.( Photos: 2, Comments: 18 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26256275/p2pb26256275.jpg",
-          "publishedAt": "2026-09-08T11:53:00.000Z",
+          "publishedAt": "2026-09-08T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/gracey-hemstreet-announces-details-for-project-17-a-womens-pre-hardline-event-at-coast-gravity-park-on-september-17th.html?trk=rss",
           "categories": [],
           "score": 13,
