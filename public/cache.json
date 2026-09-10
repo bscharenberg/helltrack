@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-10T16:14:31.757Z",
-  "totalItems": 123,
+  "builtAt": "2026-09-10T19:30:29.625Z",
+  "totalItems": 119,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -370,21 +370,6 @@
           "category": "race-runs"
         },
         {
-          "id": "https://www.pinkbike.com/news/video-wyntv-finals-day-red-bull-stuttgart-cerro-abajo-2026.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: WynTV Finals Day - Red Bull Stuttgart Cerro Abajo 2026",
-          "description": "Wyn Masters chats with racers after the first edition of the Red Bull Cerro Abajo Stuttgart.( Comments: 7 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30245041/p2pb30245041.jpg",
-          "publishedAt": "2026-09-07T11:35:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-wyntv-finals-day-red-bull-stuttgart-cerro-abajo-2026.html?trk=rss",
-          "categories": [],
-          "score": 11,
-          "category": "race-runs"
-        },
-        {
           "id": "C92y74Ko6tA",
           "type": "video",
           "source": "youtube",
@@ -689,6 +674,23 @@
           "isShort": false,
           "score": 20,
           "category": "race-runs"
+        },
+        {
+          "id": "tPwHVuWmrFo",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "MTBWS HIGHLIGHTS 🇫🇷 Men’s Elite DHI | 2026 Les Gets",
+          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/tPwHVuWmrFo/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-08-22T16:14:04Z",
+          "url": "https://www.youtube.com/watch?v=tPwHVuWmrFo",
+          "isShort": false,
+          "score": 12,
+          "category": "race-runs"
         }
       ]
     },
@@ -696,21 +698,6 @@
       "id": "results",
       "label": "Results",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/race-report-4x-protour-round-3-val-di-sole-italy.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Race Report: 4X ProTour Round 3 - Val Di Sole, Italy",
-          "description": "Round 3 of the 2026 4X ProTour was held alongside the DH &amp;amp; XC World Champs in Val di Sole.( Photos: 14, Comments: 29 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30244216/p2pb30244216.jpg",
-          "publishedAt": "2026-09-07T11:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/race-report-4x-protour-round-3-val-di-sole-italy.html?trk=rss",
-          "categories": [],
-          "score": 6,
-          "category": "results"
-        },
         {
           "id": "imGTq5Ez_2c",
           "type": "video",
@@ -947,23 +934,6 @@
           "url": "https://www.youtube.com/watch?v=2O9Yro_sHDk",
           "isShort": false,
           "score": 12,
-          "category": "results"
-        },
-        {
-          "id": "PK2QDxibaWY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "PRIVATEER PROJECT EP2 LA THUILE 2026",
-          "description": "The level of World Cup Downhill is currently maybe the highest its ever been, making it tough for Privateers and small teams like the Privateer Project but Luke is riding well and actually not far off, hopefully by the end of the season he can make it happen, here we follow him and the team through the race week in La Thuile.\n\nVideo by MCDMedia\n\n\nYou can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/PK2QDxibaWY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-11T18:22:01Z",
-          "url": "https://www.youtube.com/watch?v=PK2QDxibaWY",
-          "isShort": false,
-          "score": 19,
           "category": "results"
         }
       ]
@@ -1248,7 +1218,7 @@
           "title": "Video: Vali Höll Coaches the Future of Downhill at her 2026 Performance Camp",
           "description": "A behind-the-scenes look at Vali Höll&#039;s 2026 Performance Camp.( Comments: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30259015/p2pb30259015.jpg",
-          "publishedAt": "2026-09-10T11:57:00.000Z",
+          "publishedAt": "2026-09-10T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/video-vali-holl-coaches-the-future-of-downhill-at-her-2026-performance-camp.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -1263,7 +1233,7 @@
           "title": "Gracey Hemstreet Announces Details for 'Project 17' - A Women's Pre-Hardline Event at Coast Gravity Park on September 17th",
           "description": "Hemstreet says that she felt unprepared showing up for Hardline Tasmania in 2024.( Photos: 2, Comments: 19 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26256275/p2pb26256275.jpg",
-          "publishedAt": "2026-09-08T11:43:00.000Z",
+          "publishedAt": "2026-09-08T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/gracey-hemstreet-announces-details-for-project-17-a-womens-pre-hardline-event-at-coast-gravity-park-on-september-17th.html?trk=rss",
           "categories": [],
           "score": 13,
