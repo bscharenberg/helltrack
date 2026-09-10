@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-09-10T19:30:29.625Z",
-  "totalItems": 119,
+  "builtAt": "2026-09-10T22:24:44.387Z",
+  "totalItems": 120,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "3TZVYgZE8TQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Asa Vermette discusses his qualifying run in Les Gets!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/3TZVYgZE8TQ/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-10T22:14:59Z",
+          "url": "https://www.youtube.com/watch?v=3TZVYgZE8TQ",
+          "isShort": true,
+          "score": 19,
+          "category": "shorts"
+        },
         {
           "id": "cjuFcT5QNCY",
           "type": "video",
@@ -325,23 +342,6 @@
           "thumbnailHeight": 720,
           "publishedAt": "2026-08-22T15:11:13Z",
           "url": "https://www.youtube.com/watch?v=Vjh4GNektYw",
-          "isShort": true,
-          "score": 20,
-          "category": "shorts"
-        },
-        {
-          "id": "D9yzbIHCYaY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Amaury Pierron GOES DOWN 🫣",
-          "description": "What will this mean for the Overall Title? 🏆\n\n📍Les Gets, Haute-Savoie 🏁 Men’s Elite UCI DHI World Cup Final",
-          "thumbnail": "https://i.ytimg.com/vi/D9yzbIHCYaY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T14:35:03Z",
-          "url": "https://www.youtube.com/watch?v=D9yzbIHCYaY",
           "isShort": true,
           "score": 20,
           "category": "shorts"
@@ -1216,7 +1216,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Vali Höll Coaches the Future of Downhill at her 2026 Performance Camp",
-          "description": "A behind-the-scenes look at Vali Höll&#039;s 2026 Performance Camp.( Comments: 4 )",
+          "description": "A behind-the-scenes look at Vali Höll&#039;s 2026 Performance Camp.( Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30259015/p2pb30259015.jpg",
           "publishedAt": "2026-09-10T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/video-vali-holl-coaches-the-future-of-downhill-at-her-2026-performance-camp.html?trk=rss",
