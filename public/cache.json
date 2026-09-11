@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-11T16:18:19.829Z",
-  "totalItems": 119,
+  "builtAt": "2026-09-11T19:31:13.942Z",
+  "totalItems": 120,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1227,6 +1227,23 @@
       "label": "News",
       "items": [
         {
+          "id": "snM5Aqg95CI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "DYFI BEFORE WHISTLER DUO",
+          "description": "We are back lapping the best at Dyfi bike park with the Red bull terra abajo CHAMP Roger viewer before we head off to whistler bike park!\n\nWe also discuss testing the phone duo...\n\nEnjoy sports fans!\n\n#bksport",
+          "thumbnail": "https://i.ytimg.com/vi/snM5Aqg95CI/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-11T16:50:57Z",
+          "url": "https://www.youtube.com/watch?v=snM5Aqg95CI",
+          "isShort": false,
+          "score": 6,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-vali-holl-coaches-the-future-of-downhill-at-her-2026-performance-camp.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -1235,7 +1252,7 @@
           "title": "Video: Vali Höll Coaches the Future of Downhill at her 2026 Performance Camp",
           "description": "A behind-the-scenes look at Vali Höll&#039;s 2026 Performance Camp.( Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30259015/p2pb30259015.jpg",
-          "publishedAt": "2026-09-10T11:43:00.000Z",
+          "publishedAt": "2026-09-10T11:42:00.000Z",
           "url": "https://www.pinkbike.com/news/video-vali-holl-coaches-the-future-of-downhill-at-her-2026-performance-camp.html?trk=rss",
           "categories": [],
           "score": 7,
