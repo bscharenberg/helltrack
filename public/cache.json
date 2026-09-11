@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-11T11:02:32.263Z",
-  "totalItems": 120,
+  "builtAt": "2026-09-11T16:18:19.829Z",
+  "totalItems": 119,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -699,6 +699,23 @@
       "label": "Results",
       "items": [
         {
+          "id": "ZYUZFZpceWY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "\"Why I Raced 100 Miles With A Broken Wrist\" Kate Courtney on Just Ride",
+          "description": "Kate Courtney explains how a wrist injury unexpectedly led her to one of the biggest breakthroughs of her career.\n\nAfter stepping away from World Cup racing, Kate took on the iconic Leadville 100, a 100-mile mountain bike race at high altitude, despite having limited preparation and recovering from injury.\n\nShe reflects on how removing expectations, embracing a completely different challenge, and focusing on learning rather than results helped her rediscover her motivation and ultimately chase a record-setting ride.\n\n🎙️ Watch the full conversation on the Just Ride podcast.\n\n#KateCourtney #Leadville100 #MountainBike #MTB #CrossCountryMTB #Cycling #BikeRacing #EnduranceCycling #JustRidePodcast #RedBullBike\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!",
+          "thumbnail": "https://i.ytimg.com/vi/ZYUZFZpceWY/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-11T15:00:27Z",
+          "url": "https://www.youtube.com/watch?v=ZYUZFZpceWY",
+          "isShort": false,
+          "score": 6,
+          "category": "results"
+        },
+        {
           "id": "imGTq5Ez_2c",
           "type": "video",
           "source": "youtube",
@@ -1218,25 +1235,10 @@
           "title": "Video: Vali Höll Coaches the Future of Downhill at her 2026 Performance Camp",
           "description": "A behind-the-scenes look at Vali Höll&#039;s 2026 Performance Camp.( Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30259015/p2pb30259015.jpg",
-          "publishedAt": "2026-09-10T11:49:00.000Z",
+          "publishedAt": "2026-09-10T11:43:00.000Z",
           "url": "https://www.pinkbike.com/news/video-vali-holl-coaches-the-future-of-downhill-at-her-2026-performance-camp.html?trk=rss",
           "categories": [],
           "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/gracey-hemstreet-announces-details-for-project-17-a-womens-pre-hardline-event-at-coast-gravity-park-on-september-17th.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Gracey Hemstreet Announces Details for 'Project 17' - A Women's Pre-Hardline Event at Coast Gravity Park on September 17th",
-          "description": "Hemstreet says that she felt unprepared showing up for Hardline Tasmania in 2024.( Photos: 2, Comments: 19 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb26256275/p2pb26256275.jpg",
-          "publishedAt": "2026-09-08T11:35:00.000Z",
-          "url": "https://www.pinkbike.com/news/gracey-hemstreet-announces-details-for-project-17-a-womens-pre-hardline-event-at-coast-gravity-park-on-september-17th.html?trk=rss",
-          "categories": [],
-          "score": 13,
           "category": "news"
         },
         {
@@ -1373,23 +1375,6 @@
           "url": "https://www.youtube.com/watch?v=VUgH4BQrl-Y",
           "isShort": false,
           "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "AqJjMOIff7k",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "1199 | On Track with FOX",
-          "description": "1199 delivered. \n\nOn home soil, Jackson Goldstone put down a statement run to take the win at Crankworx Whistler, charging one of the most demanding tracks in the world.\n\nAnd that was just a sample. In September, the world’s best downhill racers return to 1199 for the UCI Downhill World Cup — September 25–27, 2026.\n\nThe stage is set. See you back on 1199.",
-          "thumbnail": "https://i.ytimg.com/vi/AqJjMOIff7k/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-12T16:09:12Z",
-          "url": "https://www.youtube.com/watch?v=AqJjMOIff7k",
-          "isShort": false,
-          "score": 20,
           "category": "news"
         }
       ]
