@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-09-12T05:40:17.363Z",
-  "totalItems": 120,
+  "builtAt": "2026-09-12T10:31:17.249Z",
+  "totalItems": 121,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "-iHh6GYTRVU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "The moment we all knew, VALI WAS BACK! 🔥🥇",
+          "description": "The moment we all knew, VALI WAS BACK! 🔥🥇\n\n5x UCI World Champion Vali Höll meant business from the very first race of the season in Mona Yongpyong, claiming the first of multiple UCI DHI World Cup wins in 2026! 💥\n\nHaving already wrapped up the Overall Title, Vali will be turning race runs into party laps for the final two rounds of the season! 💪😎",
+          "thumbnail": "https://i.ytimg.com/vi/-iHh6GYTRVU/sddefault.jpg",
+          "thumbnailWidth": 640,
+          "thumbnailHeight": 480,
+          "publishedAt": "2026-09-12T10:25:15Z",
+          "url": "https://www.youtube.com/watch?v=-iHh6GYTRVU",
+          "isShort": true,
+          "score": 26,
+          "category": "shorts"
+        },
         {
           "id": "3TZVYgZE8TQ",
           "type": "video",
@@ -327,23 +344,6 @@
           "url": "https://www.youtube.com/watch?v=AiP0DYyS_NU",
           "isShort": true,
           "score": 23,
-          "category": "shorts"
-        },
-        {
-          "id": "Vjh4GNektYw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Les Gets belongs to Max Alran 🇫🇷🏆",
-          "description": "One year after winning here as a Junior, Max Alran returns in his first Elite season and takes a sensational victory once again. 🤯\n\n📍Les Gets, Haute-Savoie 🏁 Men’s Elite UCI DHI World Cup Final",
-          "thumbnail": "https://i.ytimg.com/vi/Vjh4GNektYw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T15:11:13Z",
-          "url": "https://www.youtube.com/watch?v=Vjh4GNektYw",
-          "isShort": true,
-          "score": 20,
           "category": "shorts"
         }
       ]
@@ -1252,7 +1252,7 @@
           "title": "Video: Vali Höll Coaches the Future of Downhill at her 2026 Performance Camp",
           "description": "A behind-the-scenes look at Vali Höll&#039;s 2026 Performance Camp.( Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30259015/p2pb30259015.jpg",
-          "publishedAt": "2026-09-10T11:40:00.000Z",
+          "publishedAt": "2026-09-10T11:37:00.000Z",
           "url": "https://www.pinkbike.com/news/video-vali-holl-coaches-the-future-of-downhill-at-her-2026-performance-camp.html?trk=rss",
           "categories": [],
           "score": 7,
