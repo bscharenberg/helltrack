@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-13T05:53:37.294Z",
-  "totalItems": 119,
+  "builtAt": "2026-09-13T11:34:40.564Z",
+  "totalItems": 120,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -698,6 +698,21 @@
       "id": "results",
       "label": "Results",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/aaron-gwin-and-gloria-scarsi-win-the-2026-us-open-downhill.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Aaron Gwin &amp; Gloria Scarsi Win the 2026 US Open Downhill",
+          "description": "The results are in from the 2026 Fox US Open, where $15,000 was on the line for each pro race winner.( Comments: 8 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
+          "publishedAt": "2026-09-13T12:00:00.000Z",
+          "url": "https://www.pinkbike.com/news/aaron-gwin-and-gloria-scarsi-win-the-2026-us-open-downhill.html?trk=rss",
+          "categories": [],
+          "score": 10,
+          "category": "results"
+        },
         {
           "id": "ZYUZFZpceWY",
           "type": "video",
