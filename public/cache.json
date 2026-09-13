@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-13T16:03:00.959Z",
-  "totalItems": 120,
+  "builtAt": "2026-09-13T19:16:38.929Z",
+  "totalItems": 121,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "1NqmrEGSuX8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "RACE DAY REACTIONS - U.S. Open of Mountain Biking at Deer Valley",
+          "description": "It was an anything-goes kind of day in Deer Valley, Utah, for the 2026 U.S. Open downhill race. In the end, Aaron Gwin and Gloria Scarsi took home $15,000 each with their victories. Luca Cometti gets the scoop at the finish line.",
+          "thumbnail": "https://i.ytimg.com/vi/1NqmrEGSuX8/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-13T17:49:19Z",
+          "url": "https://www.youtube.com/watch?v=1NqmrEGSuX8",
+          "isShort": false,
+          "score": 11,
+          "category": "race-runs"
+        },
+        {
           "id": "1-rUQwOtquA",
           "type": "video",
           "source": "youtube",
@@ -674,23 +691,6 @@
           "isShort": false,
           "score": 20,
           "category": "race-runs"
-        },
-        {
-          "id": "tPwHVuWmrFo",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "MTBWS HIGHLIGHTS 🇫🇷 Men’s Elite DHI | 2026 Les Gets",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/tPwHVuWmrFo/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T16:14:04Z",
-          "url": "https://www.youtube.com/watch?v=tPwHVuWmrFo",
-          "isShort": false,
-          "score": 12,
-          "category": "race-runs"
         }
       ]
     },
@@ -705,9 +705,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Aaron Gwin &amp; Gloria Scarsi Win the 2026 US Open Downhill",
-          "description": "The results are in from the 2026 Fox US Open, where $15,000 was on the line for each pro race winner.( Comments: 30 )",
+          "description": "The results are in from the 2026 Fox US Open, where $15,000 was on the line for each pro race winner.( Comments: 45 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
-          "publishedAt": "2026-09-13T12:00:00.000Z",
+          "publishedAt": "2026-09-13T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/aaron-gwin-and-gloria-scarsi-win-the-2026-us-open-downhill.html?trk=rss",
           "categories": [],
           "score": 10,
